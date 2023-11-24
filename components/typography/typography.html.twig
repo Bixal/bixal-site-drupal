@@ -4,13 +4,51 @@
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
+
+<div
+  class="bix-piped-title"
+  style="
+    border-left-color: rgb(5, 197, 187);
+    border-right-color: rgb(5, 197, 187);
+  "
+>
+  Piped title
+</div>
+
 <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id dolore illum repellat corrupti saepe pariatur ducimus
-  unde. Voluptas, perferendis!
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id dolore illum
+  repellat corrupti saepe pariatur ducimus unde. Voluptas, perferendis!
 </p>
-<p>
-  List available here: https://www.bixal.com/contract-vehicles/
-</p>
+
+<div class="section-overview">
+  <div class="section-overview__text">
+    <h2>
+      Section overview text, possible H3 (if logo is H1)
+      <div
+        class="section-overview__decoration-divider"
+        style="background-color: rgb(5, 197, 187)"
+      ></div>
+    </h2>
+    <p>
+      ⚠️ Need to create a section heading component. Font size can be any, but must have border.
+    </p>
+  </div>
+</div>
+
+<div class="section-overview">
+  <div class="section-overview__text" style="font-size: 35px">
+    <h2>
+      How can we help?<br>We'd love to hear from you.
+      <div
+        class="section-overview__decoration-divider"
+        style="background-color: rgb(5, 197, 187)"
+      ></div>
+    </h2>
+  </div>
+
+</div>
+
+<p>List available here: https://www.bixal.com/contract-vehicles/</p>
 <ul>
   <li>Unordered item 1</li>
   <li>Unordered item 2</li>
@@ -18,8 +56,8 @@
     Unordered item 3
     <ul>
       <li>Nested item 1</li>
-      <li>Nested item 2
-      <li>
+      <li>Nested item 2</li>
+      <li></li>
       <li>Nested item 3</li>
     </ul>
   </li>
@@ -28,8 +66,9 @@
   <li>Unordered item 6</li>
 </ul>
 <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis exercitationem iure id quod, molestias sit placeat
-  quisquam. Excepturi doloremque cum veritatis dolore tempora. In, reiciendis!
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+  exercitationem iure id quod, molestias sit placeat quisquam. Excepturi
+  doloremque cum veritatis dolore tempora. In, reiciendis!
 </p>
 <ol>
   <li>Ordered item 1</li>
@@ -46,3 +85,31 @@
   <li>Ordered item 5</li>
   <li>Ordered item 6</li>
 </ol>
+
+<style>
+  .bix-piped-title {
+    border-left: 2px solid #03c5bc;
+    border-right: 2px solid #03c5bc;
+    color: #000;
+    display: inline-flex;
+    font-family:
+      proxima-nova,
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 14px 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+
+  .section-overview__decoration-divider {
+      border-bottom: 2px solid #03c5bc;
+      margin-top: 20px;
+      /* Using clamp to avoid width override hacks. */
+      width: clamp(200px, 8em, 35%);
+  }
+</style>
