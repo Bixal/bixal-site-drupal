@@ -1,10 +1,54 @@
+@use "uswds-core" as *;
+
 .bix-hero {
-  background-position: top;
-  background-repeat: no-repeat;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
   padding: 40px 0;
-  padding: 80px 0; // Desktop
+  padding: 80px 0 90px; // Desktop
+
+  &__container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    color: inherit;
+  }
+
+  &__body p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.bix-hero--primary {
+.bix-hero--image-bg {
+  background-position: top;
+  background-repeat: no-repeat;
+  color: color("white");
+}
+
+.bix-hero--image-inline {
   background-color: #162d6a;
+  color: color("white");
+
+  @include at-media("tablet-lg") {
+    .bix-hero__container {
+      display: grid;
+      grid-template-columns: minmax(400px, 1fr) 4fr;
+      column-gap: units(8);
+      align-items: last baseline;
+    }
+
+    .bix-hero__media img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+
+  .bix-hero__title {
+    font-size: 72px;
+    letter-spacing: -2.4px;
+  }
 }

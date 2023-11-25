@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { join } from "node:path";
 import twig from "vite-plugin-twig-drupal";
 
 export default defineConfig({
@@ -9,6 +10,10 @@ export default defineConfig({
       },
     },
   },
-  plugins: [twig()],
+  plugins: [
+    twig({
+      components: join(__dirname, "./components"),
+    }),
+  ],
   framework: "react",
 });
