@@ -1,0 +1,67 @@
+@use "uswds-core" as *;
+
+// Modern normalize - CSS Reset.
+@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css");
+
+// Novel pro fontface.
+@import url("https://use.typekit.net/wfu7yyr.css");
+
+//
+// Typography
+//
+
+body {
+  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    "novel-pro",
+    Georgia,
+    Times,
+    Times New Roman,
+    serif;
+  font-weight: 800;
+  font-weight: font-weight(800);
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3,
+h4 {
+  font-size: 22px;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  padding: 0;
+
+  ul,
+  ol {
+    padding-left: units(3);
+  }
+}
+
+p {
+  &[lang="en"] {
+    hyphens: auto;
+  }
+}
