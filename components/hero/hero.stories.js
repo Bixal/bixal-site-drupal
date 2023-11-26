@@ -36,19 +36,3 @@ export const InlineImage = {
     },
   },
 };
-
-export const Callout = {
-  args: {
-    has_logo: true,
-    image:
-      "https://www.bixal.com/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
-    prefix: "What we do",
-    title: "TODO: Create callout component",
-    description:
-      "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.",
-    cta: {
-      label: "Explore Case Studies",
-      href: "javascript:void(0)",
-    },
-  },
-};
