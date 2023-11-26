@@ -1,5 +1,26 @@
 @use "uswds-core" as *;
 
+// @TODO: Move to color partial
+$c-blue--dark: #162d6a;
+$c-blue--light: #bee9f7;
+$c-teal: #05c5bc;
+$c-purple: #7d0096;
+$c-green: #deec1c;
+$c-maroon: #0b0b0b;
+$c-orange: #fda307;
+$c-red-orange: #e02f00;
+
+:root {
+  --c-primary: #{$c-blue--dark};
+  --c-primary-alt: #{$c-purple};
+  --c-accent-cool: #{$c-blue--light};
+  --c-accent-cool-alt: #{$c-teal};
+  --c-accent-warm: #{$c-orange};
+  --c-accent-warm-alt: #{$c-red-orange};
+  --c-accent-warm-dark: #{$c-maroon};
+  --c-highlight: #{$c-green};
+}
+
 // Modern normalize - CSS Reset.
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css");
 
