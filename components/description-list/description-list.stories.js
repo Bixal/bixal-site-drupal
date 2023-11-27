@@ -1,7 +1,7 @@
 import DescriptionList from "./description-list.html.twig";
 
 export default {
-  title: "Components/Typography/Description List",
+  title: "Components/Description List",
   component: DescriptionList,
 };
 
