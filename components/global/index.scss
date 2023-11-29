@@ -10,6 +10,9 @@ $c-maroon: #0b0b0b;
 $c-orange: #fda307;
 $c-red-orange: #e02f00;
 
+$font-ui: "Proxima Nova", Arial, Helvetica, sans-serif;
+$font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
+
 :root {
   --c-primary: #{$c-blue--dark};
   --c-primary-alt: #{$c-purple};
@@ -18,7 +21,9 @@ $c-red-orange: #e02f00;
   --c-accent-warm: #{$c-orange};
   --c-accent-warm-alt: #{$c-red-orange};
   --c-accent-warm-dark: #{$c-maroon};
-  --c-highlight: #{$c-green};
+  --c-accent-vivid: #{$c-green};
+  --font-heading: #{$font-heading};
+  --font-ui: #{$font-ui};
 }
 
 // Modern normalize - CSS Reset.
@@ -32,7 +37,8 @@ $c-red-orange: #e02f00;
 //
 
 body {
-  font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  color: color("ink");
+  font-family: $font-ui;
   font-size: 20px;
   line-height: 1.6;
 }
@@ -43,12 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:
-    "novel-pro",
-    Georgia,
-    Times,
-    Times New Roman,
-    serif;
+  font-family: $font-heading;
   font-weight: 800;
   font-weight: font-weight(800);
   line-height: 1.2;
@@ -62,21 +63,57 @@ h1 {
 }
 
 h2 {
-  font-size: 35px;
-
-  &::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid #03c5bc;
-    margin-top: 20px;
-    /* Using clamp to avoid width override hacks. */
-    width: clamp(200px, 8em, 35%);
-  }
+  font-size: 47px;
+  font-weight: 700;
+  letter-spacing: -2.4px;
 }
 
-h3,
+h3 {
+  font-size: 43px;
+  letter-spacing: -0.75px;
+}
+
 h4 {
+  font-size: 30px;
+  line-height: -0.75px;
+}
+
+h5 {
   font-size: 22px;
+  line-height: -0.5px;
+}
+
+.bix-piped-title {
+  border-left: 2px solid var(--c-accent-cool-alt);
+  border-right: 2px solid var(--c-accent-cool-alt);
+  display: inline-flex;
+  font-family: $font-ui;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 14px 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+dl {
+  margin-top: units(2);
+  margin-bottom: units(2);
+}
+
+dt,
+dd {
+  margin-left: 0;
+  padding-left: units(3);
+}
+
+dt {
+  font-family: var(--font-heading);
+}
+
+dd {
+  font-size: 1rem;
 }
 
 ul,
@@ -90,8 +127,21 @@ ol {
   }
 }
 
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 p {
   &[lang="en"] {
     hyphens: auto;
   }
+
+  margin-top: 0;
+  margin-bottom: units("205");
+}
+
+img {
+  vertical-align: middle; // Remove extra space from images.
 }
