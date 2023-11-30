@@ -265,7 +265,7 @@ $settings['config_sync_directory'] = '../config/sync';
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '6VPpvJUkxfAnMEEStUOuDNny8mj-HJe7tDEHCmddvUij7VFN6WZAomFctnfUQES_vs-2E2aDZg';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -873,3 +873,15 @@ if (getenv('LANDO_INFO') !== FALSE) {
   }
   include $settings_local_php;
 }
+$databases['default']['default'] = array (
+  'database' => 'main',
+  'username' => 'user',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'database.internal',
+  'port' => 3306,
+  'isolation_level' => 'READ COMMITTED',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'driver' => 'mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
