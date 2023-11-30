@@ -1,12 +1,27 @@
-<button
-  type="button"
-  class="bix-button"
-  aria-label="Join our team">
-  <div class="bix-button-content">
-    Join our team
+{% set is_link = link | default(false) %}
+{% set has_icon = has_icon | default(false) %}
 
-    <svg class="icon right-arrow" width="20px" fill="#000" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
+{% set button_classes = "bix-button" ~ (modifier ? " " ~ modifier : "")  %}
+
+
+{% if is_link %}
+  <a href="javascript:void(0)" class="{{ button_classes }}">
+    {{ label | default("Join our team")}}
+
+    {% if has_icon %}
+      <svg class="icon right-arrow" width="20px" fill="#000" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
         <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
+      </svg>
+    {% endif %}
+  </a>
+{% else %}
+  <button type="button" class="{{ button_classes }}">
+    {{ label | default("Join our team")}}
+
+    {% if has_icon %}
+    <svg class="icon right-arrow" width="20px" fill="#000" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
+      <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
     </svg>
-  </div>
-</button>
+    {% endif %}
+  </button>
+{% endif %}

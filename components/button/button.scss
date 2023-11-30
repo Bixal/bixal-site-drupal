@@ -1,0 +1,38 @@
+@use "uswds-core" as *;
+
+.bix-button {
+  align-items: first baseline;
+  background-color: transparent;
+  border-radius: units(1);
+  border: 1px solid currentColor;
+  color: color("ink");
+  column-gap: units(1);
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 1;
+  padding: units(2) units(3);
+  text-decoration: none;
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: color("ink");
+    color: color("white");
+    outline-offset: 3px;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.bix-button--inverse {
+  color: color("white");
+
+  &:hover,
+  &:focus {
+    background-color: color("white");
+    color: color("ink");
+    outline-offset: 3px;
+  }
+}
