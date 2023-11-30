@@ -55,15 +55,15 @@
                     "path": "scaffolding/drupal_config/settings.php",
                     "overwrite": true
                 },
-                "[web-root]/sites/default/settings.local.php": {
+                "[web-root]/sites/example.settings.local.php": {
                     "mode": "replace",
-                    "path": "scaffolding/drupal_config/settings.local.php",
-                    "overwrite": false
+                    "path": "scaffolding/drupal_config/example.settings.local.php",
+                    "overwrite": true
                 },
                 "[web-root]/sites/default/settings.platformsh.php": {
                     "mode": "replace",
                     "path": "scaffolding/drupal_config/settings.platformsh.php",
-                    "overwrite": false
+                    "overwrite": true
                 },
                 "[web-root]/sites/development.services.yml": {
                     "mode": "replace",

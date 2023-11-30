@@ -212,9 +212,9 @@ dist
 #/web/themes/custom
 #/web/profiles/custom
 #/web/sites/development.services.yml
+#/web/sites/example.settings.local.php
 #/web/sites/default/services.yml
 #/web/sites/default/settings.php
-# This is created by Bixal scaffolding.
 #/web/sites/default/settings.platformsh.php
 # Don't include !/
                 #/*
@@ -224,6 +224,7 @@ dist
 !/web/sites/
 /web/sites/*
 !/web/sites/development.services.yml
+!/web/sites/example.settings.local.php
 !/web/themes/
 /web/themes/*
 !/web/modules/
