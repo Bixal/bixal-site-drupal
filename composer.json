@@ -39,8 +39,7 @@
     },
     "scripts": {
         "post-drupal-scaffold-cmd": [
-            "echo 'Allowing orchestration files to be executed...' & chmod +x orch/*.sh composer.sh php.sh",
-            "echo 'Create config/sync directory if it does not exist...' & mkdir -p config/sync && touch config/sync/.gitkeep"
+            "echo 'Allowing orchestration files to be executed...' & chmod +x orch/*.sh composer.sh php.sh"
         ]
     },
     "extra": {
