@@ -864,12 +864,12 @@ include $app_root . '/' . $site_path . '/settings.platformsh.php';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-// Create the settings.local.php from example.settings.local.php if
+// Create the settings.local.php from updated.settings.local.php if
 // settings.local.php does not exist yet and this is a local environment.
 if (getenv('LANDO_INFO') !== FALSE) {
   $settings_local_php = $app_root . '/' . $site_path . '/settings.local.php';
   if (!file_exists($settings_local_php)) {
-    copy(DRUPAL_ROOT . '/sites/example.settings.local.php', $settings_local_php);
+    copy(DRUPAL_ROOT . '/sites/updated.settings.local.php', $settings_local_php);
   }
   include $settings_local_php;
 }

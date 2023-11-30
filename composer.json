@@ -55,9 +55,9 @@
                     "path": "scaffolding/drupal_config/settings.php",
                     "overwrite": true
                 },
-                "[web-root]/sites/example.settings.local.php": {
+                "[web-root]/sites/updated.settings.local.php": {
                     "mode": "replace",
-                    "path": "scaffolding/drupal_config/example.settings.local.php",
+                    "path": "scaffolding/drupal_config/updated.settings.local.php",
                     "overwrite": true
                 },
                 "[web-root]/sites/default/settings.platformsh.php": {
@@ -65,9 +65,9 @@
                     "path": "scaffolding/drupal_config/settings.platformsh.php",
                     "overwrite": true
                 },
-                "[web-root]/sites/development.services.yml": {
+                "[web-root]/sites/updated.development.services.yml": {
                     "mode": "replace",
-                    "path": "scaffolding/drupal_config/development.services.yml",
+                    "path": "scaffolding/drupal_config/updated.development.services.yml",
                     "overwrite": true
                 },
                 "[project-root]/.gitignore": {

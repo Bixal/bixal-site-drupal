@@ -33,8 +33,8 @@
 #/web/modules/custom
 #/web/themes/custom
 #/web/profiles/custom
-#/web/sites/development.services.yml
-#/web/sites/example.settings.local.php
+#/web/sites/updated.development.services.yml
+#/web/sites/updated.settings.local.php
 #/web/sites/default/services.yml
 #/web/sites/default/settings.php
 #/web/sites/default/settings.platformsh.php
@@ -45,8 +45,8 @@
 /web/*
 !/web/sites/
 /web/sites/*
-!/web/sites/development.services.yml
-!/web/sites/example.settings.local.php
+!/web/sites/updated.development.services.yml
+!/web/sites/updated.settings.local.php
 !/web/themes/
 /web/themes/*
 !/web/modules/
