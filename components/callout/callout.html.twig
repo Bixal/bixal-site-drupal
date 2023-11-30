@@ -10,16 +10,18 @@
     </div>
     {% if description %}
     <div class="bix-callout__body">
-      {{ description }}
+      <p>
+        {{ description }}
+      </p>
     </div>
     {% endif %}
     {% if cta.href and cta.label %}
       <div class="bix-callout__footer">
-        <a
-          href="{{ cta.href }}"
-          class="bix-callout__cta">
-            {{ cta.label }}
-        </a>
+        {% include "components/button/button.html.twig" with {
+          label: cta.label,
+          modifier: "bix-button--inverse",
+          has_icon: true
+        } %}
       </div>
     {% endif %}
   </div>
