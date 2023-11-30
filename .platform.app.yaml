@@ -99,13 +99,17 @@ build:
 hooks:
   # The build hook runs after Composer to finish preparing up your code.
   # No services are available but the disk is writeable.
-  build: $PLATFORM_APP_DIR/orch/build.sh
+  build: |
+    # Exit the hook on any failure
+    set -e
+    $PLATFORM_APP_DIR/orch/build.sh
 
   # The deploy hook runs after your application has been deployed and started.
   # Code cannot be modified at this point but the database is available.
   # The site is not accepting requests while this script runs so keep it
   # fast.
-  deploy: $PLATFORM_APP_DIR/orch/deploy.sh
+  deploy: |
+    $PLATFORM_APP_DIR/orch/deploy.sh
 
   # The post deploy hook runs after the application has been deployed and is
   # running.
