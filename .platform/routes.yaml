@@ -5,7 +5,7 @@
 
 "https://{default}/":
   type: upstream
-  upstream: "drupalcom:http"
+  upstream: "bixalcom:http"
   tls:
     # https://docs.platform.sh/define-routes/https.html#stricttransportsecurity
     strict_transport_security:
