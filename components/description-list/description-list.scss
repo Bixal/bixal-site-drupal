@@ -1,0 +1,60 @@
+@use "uswds-core" as *;
+
+.bix-description-list {
+  --_description-color: var(--description-color, currentColor);
+
+  &__heading {
+    margin-top: units("05");
+    margin-bottom: units("05");
+    min-height: units(6);
+  }
+
+  dd {
+    position: relative;
+
+    &::before {
+      content: "•";
+      color: var(--_description-color);
+      position: absolute;
+      left: 8px;
+    }
+  }
+
+  &__media {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: units(1);
+      width: 1px;
+      height: 120%;
+      background: var(--_description-color);
+      left: 11px;
+    }
+  }
+}
+
+.bix-description-list--primary-alt {
+  --description-color: var(--c-primary-alt);
+}
+
+.bix-description-list--accent-cool {
+  --description-color: var(--c-accent-cool);
+}
+
+.bix-description-list--accent-cool-alt {
+  --description-color: var(--c-accent-cool-alt);
+}
+
+.bix-description-list--accent-cool {
+  --description-color: var(--c-accent-cool);
+}
+
+.bix-description-list--accent-warm {
+  --description-color: var(--c-accent-warm);
+}
+
+.bix-description-list--accent-vivid {
+  --description-color: var(--c-accent-vivid);
+}
