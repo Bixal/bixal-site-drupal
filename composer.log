@@ -1,2 +1,2 @@
-8f02d6da01320a9d4daa6dd38f86cfdc|Matt Poole|feature/BSD-3-local-env|Thu Nov 30 19:50:12 EST 2023|./composer.sh update
-a437a55af587086e18507e0ab16d4f13|Matt Poole|feature/BSD-3-local-env|Thu Nov 30 19:59:02 EST 2023|./composer.sh update
+1c7f940e094aec6b5109c63c5063899d|Matt Poole|feature/BSD-3-local-env|Thu Nov 30 20:18:27 EST 2023|./composer.sh require drupal/core-dev --dev --ansi
+1818a9aefc2cdc91b3e263611a9f3a18|Matt Poole|feature/BSD-3-local-env|Thu Nov 30 20:54:33 EST 2023|./composer.sh require mattsqd/robovalidate:@alpha platformsh/config-reader drupal/admin_toolbar drupal/devel drupal/disable_user_1_edit drupal/menu_admin_per_menu drupal/redis drupal/role_delegation drupal/search_api_solr drupal/twig_tweak drupal/twig_field_value --ansi
