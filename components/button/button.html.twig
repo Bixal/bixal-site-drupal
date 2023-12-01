@@ -15,7 +15,7 @@
     {% endif %}
   </a>
 {% else %}
-  <button type="button" class="{{ button_classes }}">
+  <button type="{{ type | default("button") }}" class="{{ button_classes }}">
     {{ label | default("Join our team")}}
 
     {% if has_icon %}

@@ -1,5 +1,5 @@
-<section id="contact" class="section-container bg-image contact">
-  <div class="contact__container">
+<section id="contact" class="bix-contact bix-section bix-section--primary">
+  <div class="bix-container">
     <div class="contact__content">
       <div
         class="section-overview section-overview--white-text contact__overview"
@@ -15,15 +15,8 @@
       </div>
       <div class="email-form__container">
         <form data-test-id="email-contact-form" id="emailContactForm">
-          <div style="display: none" class="spinner">
-            <div class="spinner__ring"></div>
-            <div class="spinner__text">Submitting…</div>
-          </div>
           <div class="email-form__controls">
-            <div
-              data-test-id="first-name"
-              class="email-form__control email-form__control--half"
-            >
+            <div data-test-id="first-name">
               <input
                 type="text"
                 required=""
@@ -34,10 +27,7 @@
                 value=""
               />
             </div>
-            <div
-              data-test-id="last-name"
-              class="email-form__control email-form__control--half"
-            >
+            <div data-test-id="last-name">
               <input
                 type="text"
                 required=""
@@ -48,10 +38,7 @@
                 value=""
               />
             </div>
-            <div
-              data-test-id="email"
-              class="email-form__control email-form__control--half"
-            >
+            <div data-test-id="email">
               <input
                 type="text"
                 required=""
@@ -62,10 +49,7 @@
                 value=""
               />
             </div>
-            <div
-              data-test-id="company"
-              class="email-form__control email-form__control--half"
-            >
+            <div data-test-id="company">
               <input
                 type="text"
                 aria-label="company"
@@ -89,48 +73,17 @@
               ></textarea>
             </div>
             <div class="email-form__control">
-              <!-- @TODO replace with new button component. -->
-              <button
-                data-test-id="email-form-submit"
-                aria-label="submit"
-                type="submit"
-                htmltype="submit"
-                class="email-submit-button"
-              >
-                <div class="bixal-button-content">
-                  Submit
-                  <div class="icon-container" aria-hidden="true">
-                    <svg
-                      class="icon right-arrow"
-                      width="20px"
-                      fill="#fff"
-                      version="1.1"
-                      id=""
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 24 12"
-                      style="enable-background: new 0 0 24 12"
-                    >
-                      <polygon
-                        class="st0"
-                        points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "
-                      ></polygon>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+              {% include "components/button/button.html.twig" with {
+                modifier: "bix-button--inverse",
+                label: "Submit",
+                type: "submit",
+                has_icon: "true"
+              } %}
             </div>
           </div>
           <div></div>
         </form>
       </div>
-    </div>
-    <div class="contact__visual-accent" role="presentation" aria-hidden="true">
-      <img
-        src="https://bixal.com/static/feb82e7f58a2d6a8537f0e4ce331c61a/b-blue.svg"
-        alt="Blue Bixal B logo"
-      />
     </div>
   </div>
 </section>
