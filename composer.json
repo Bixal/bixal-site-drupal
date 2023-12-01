@@ -64,7 +64,7 @@
                 "project-root": "./"
             },
             "allowed-packages": [
-                "mpbixal/drupal-platform-lando"
+                "DISABLEmpbixal/drupal-platform-lando"
             ]
         },
         "installer-paths": {
