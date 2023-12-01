@@ -235,12 +235,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-if (!is_dir('../config/sync')) {
-  $settings['config_sync_directory'] = '';
-}
-else {
-  $settings['config_sync_directory'] = '../config/sync';
-}
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
