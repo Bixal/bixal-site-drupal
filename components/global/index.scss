@@ -156,3 +156,14 @@ address {
   max-width: 1350px;
   width: 85%;
 }
+
+// Form elements
+
+.bix-input {
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-size: px-to-rem(14px);
+  margin-bottom: units(1);
+  outline-offset: 2px;
+  padding: units(1);
+}
