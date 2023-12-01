@@ -6,12 +6,31 @@
   background-repeat: no-repeat;
   padding: 100px 0;
 }
+
 .bix-section--primary {
   background-color: var(--c-primary);
   color: color("white");
+
+  .bix-input {
+    background-color: transparent;
+    color: inherit;
+
+    &::placeholder {
+      color: rgba(white, 0.6);
+    }
+  }
 }
 
 .bix-section--primary-alt {
   background-color: var(--c-primary-alt);
   color: color("white");
+
+  .bix-input {
+    background-color: transparent;
+    color: inherit;
+
+    &::placeholder {
+      color: rgba(white, 0.6);
+    }
+  }
 }
