@@ -6,7 +6,7 @@ $c-blue--light: #bee9f7;
 $c-teal: #05c5bc;
 $c-purple: #7d0096;
 $c-green: #deec1c;
-$c-maroon: #0b0b0b;
+$c-maroon: #55052a;
 $c-orange: #fda307;
 $c-red-orange: #e02f00;
 
@@ -75,12 +75,12 @@ h3 {
 
 h4 {
   font-size: 30px;
-  line-height: -0.75px;
+  letter-spacing: -0.75px;
 }
 
 h5 {
   font-size: 22px;
-  line-height: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 .bix-piped-title {
@@ -144,4 +144,15 @@ p {
 
 img {
   vertical-align: middle; // Remove extra space from images.
+}
+
+address {
+  font-style: normal;
+}
+
+.bix-container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1350px;
+  width: 85%;
 }
