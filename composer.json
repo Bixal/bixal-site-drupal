@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:mpbixal/drupal-platform-lando.git"
         }
     ],
     "require": {
@@ -20,6 +24,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drush/drush": "*",
+        "mpbixal/drupal-platform-lando": "dev-main",
         "platformsh/config-reader": "^2.4"
     },
     "conflict": {
@@ -48,112 +53,9 @@
                 "web-root": "web/",
                 "project-root": "./"
             },
-            "file-mapping": {
-                "[web-root]/sites/default/settings.php": {
-                    "mode": "replace",
-                    "path": "scaffolding/drupal_config/settings.php",
-                    "overwrite": true
-                },
-                "[web-root]/sites/updated.settings.local.php": {
-                    "mode": "replace",
-                    "path": "scaffolding/drupal_config/updated.settings.local.php",
-                    "overwrite": true
-                },
-                "[web-root]/sites/default/settings.platformsh.php": {
-                    "mode": "replace",
-                    "path": "scaffolding/drupal_config/settings.platformsh.php",
-                    "overwrite": true
-                },
-                "[web-root]/sites/updated.development.services.yml": {
-                    "mode": "replace",
-                    "path": "scaffolding/drupal_config/updated.development.services.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.gitignore": {
-                    "append": "scaffolding/gitignore-additions.txt",
-                    "force-append": true
-                },
-                "[project-root]/.environment": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/environment",
-                    "overwrite": true
-                },
-                "[project-root]/.lando.yml": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/lando.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.platform.app.yaml": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/platform.app.yaml",
-                    "overwrite": true
-                },
-                "[project-root]/.platform/routes.yaml": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/routes.yaml",
-                    "overwrite": true
-                },
-                "[project-root]/.platform/services.yaml": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/services.yaml",
-                    "overwrite": true
-                },
-                "[project-root]/.nvmrc": {
-                    "mode": "replace",
-                    "path": "scaffolding/environment_config/nvmrc",
-                    "overwrite": true
-                },
-                "[project-root]/orch/build.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/build.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/build_fe_shared.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/build_fe_shared.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/deploy.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/deploy.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/deploy_generate_drush_yml.php": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/deploy_generate_drush_yml.php",
-                    "overwrite": true
-                },
-                "[project-root]/orch/deploy_shared_install.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/deploy_shared_install.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/deploy_shared_update.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/deploy_shared_update.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/post_deploy.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/post_deploy.sh",
-                    "overwrite": true
-                },
-                "[project-root]/orch/post_deploy_shared.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/orch/post_deploy_shared.sh",
-                    "overwrite": true
-                },
-                "[project-root]/composer.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/shortcuts/composer.sh",
-                    "overwrite": true
-                },
-                "[project-root]/php.sh": {
-                    "mode": "replace",
-                    "path": "scaffolding/shortcuts/php.sh",
-                    "overwrite": true
-                }
-            }
+            "allowed-packages": [
+                "mpbixal/drupal-platform-lando"
+            ]
         },
         "installer-paths": {
             "web/core": [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "863dd9cddaed6b0a14a04c104505008c",
+    "content-hash": "2e249412fcbc53e26790205a8660378e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2313,6 +2313,158 @@
                 "source": "https://github.com/mck89/peast/tree/v1.15.4"
             },
             "time": "2023-08-12T08:29:29+00:00"
+        },
+        {
+            "name": "mpbixal/drupal-platform-lando",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpbixal/drupal-platform-lando.git",
+                "reference": "95571cc768ea5eac600a6bb51092333a35bde598"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpbixal/drupal-platform-lando/zipball/95571cc768ea5eac600a6bb51092333a35bde598",
+                "reference": "95571cc768ea5eac600a6bb51092333a35bde598",
+                "shasum": ""
+            },
+            "require": {
+                "consolidation/robo": "^3.0.9 || ^4.0.1",
+                "drupal/core-composer-scaffold": "^10.0",
+                "php": ">=8.0.17"
+            },
+            "default-branch": true,
+            "type": "robo-tasks",
+            "extra": {
+                "drupal-scaffold": {
+                    "file-mapping": {
+                        "[web-root]/sites/default/settings.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/updated.settings.local.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/updated.settings.local.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.platformsh.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.platformsh.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/updated.development.services.yml": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/updated.development.services.yml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.gitignore": {
+                            "append": "scaffolding/gitignore-additions.txt",
+                            "force-append": true
+                        },
+                        "[project-root]/.environment": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/environment",
+                            "overwrite": true
+                        },
+                        "[project-root]/.lando.yml": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/lando.yml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.platform.app.yaml": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/platform.app.yaml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.platform/routes.yaml": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/routes.yaml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.platform/services.yaml": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/services.yaml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.nvmrc": {
+                            "mode": "replace",
+                            "path": "scaffolding/environment_config/nvmrc",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/build.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/build.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/build_fe_shared.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/build_fe_shared.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy_generate_drush_yml.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy_generate_drush_yml.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy_shared_install.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy_shared_install.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy_shared_update.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy_shared_update.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/post_deploy.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/post_deploy.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/post_deploy_shared.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/post_deploy_shared.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/composer.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/composer.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/php.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/php.sh",
+                            "overwrite": true
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DrupalPlatformLando\\": "src"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mpbixal",
+                    "email": "mattsqd@users.noreply.github.com"
+                }
+            ],
+            "description": "Creates a Drupal environment that can be deployed to Platform.sh and run locally on Lando.",
+            "support": {
+                "source": "https://github.com/mpbixal/drupal-platform-lando/tree/main",
+                "issues": "https://github.com/mpbixal/drupal-platform-lando/issues"
+            },
+            "time": "2023-11-30T21:54:41+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6061,7 +6213,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mpbixal/drupal-platform-lando": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
