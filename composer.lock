@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e249412fcbc53e26790205a8660378e",
+    "content-hash": "2f9cac87b44d4c75d3cdbcb77ef15aeb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2320,12 +2320,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpbixal/drupal-platform-lando.git",
-                "reference": "95571cc768ea5eac600a6bb51092333a35bde598"
+                "reference": "75f402ffe5bbe6b5e83e82012016ef0b15c9881d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpbixal/drupal-platform-lando/zipball/95571cc768ea5eac600a6bb51092333a35bde598",
-                "reference": "95571cc768ea5eac600a6bb51092333a35bde598",
+                "url": "https://api.github.com/repos/mpbixal/drupal-platform-lando/zipball/75f402ffe5bbe6b5e83e82012016ef0b15c9881d",
+                "reference": "75f402ffe5bbe6b5e83e82012016ef0b15c9881d",
                 "shasum": ""
             },
             "require": {
@@ -2464,7 +2464,7 @@
                 "source": "https://github.com/mpbixal/drupal-platform-lando/tree/main",
                 "issues": "https://github.com/mpbixal/drupal-platform-lando/issues"
             },
-            "time": "2023-11-30T21:54:41+00:00"
+            "time": "2023-12-01T00:49:41+00:00"
         },
         {
             "name": "nikic/php-parser",

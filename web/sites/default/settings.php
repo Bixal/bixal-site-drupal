@@ -270,7 +270,7 @@ else {
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'pHJBlrG1MSjXZl126Ko0vWy48xZ_tYQjJ7YiaBEdncYMV6mn6YOPc5GDIp-tGVLylFGLDIIrgA';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -878,27 +878,3 @@ if (getenv('LANDO_INFO') !== FALSE) {
   }
   include $settings_local_php;
 }
-$databases['default']['default'] = array (
-  'database' => 'main',
-  'username' => 'user',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'database.internal',
-  'port' => 3306,
-  'isolation_level' => 'READ COMMITTED',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
-$databases['default']['default'] = array (
-  'database' => 'main',
-  'username' => 'user',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'database.internal',
-  'port' => 3306,
-  'isolation_level' => 'READ COMMITTED',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
