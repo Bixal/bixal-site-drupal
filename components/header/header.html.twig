@@ -1,44 +1,60 @@
-<header class="site-header site-header--fixed">
-  <div class="site-header__content">
-    <div class="site-header__logo">
-      <a aria-current="page" class="nav-link" href="/">
-        <!-- @TODO: Use usa-sr-only. -->
-        <span class="visually-hidden">Bixal</span>
-        <img src="https://bixal.com/static/e90efae7e816749d805876341ba16f9a/bixal-logo-full.svg" alt="Bixal Logo">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li class="main-nav__item">
-          <a class="nav-link" href="/our-work/">
-            <span class="nav-link__inner"
-            >Our
-              Work</span></a></li>
-        <li class="main-nav__item">
-          <a class="nav-link" href="/contract-vehicles/">
-            <span class="nav-link__inner">Contract Vehicles</span>
+<header class="bix-site-header">
+  <div class="bix-site-header__inner bix-container">
+    <a
+      href="javascript:void(0)"
+      title="Bixal"
+      class="bix-site-header__logo">
+      <img
+        src="https://bixal.com/static/e90efae7e816749d805876341ba16f9a/bixal-logo-full.svg"
+        alt="Bixal Logo"
+        width="120px"
+        height="24px"
+        >
+    </a>
+    <button
+      type="button"
+      data-menu-toggle
+      aria-controls="site-nav"
+      class="bix-site-nav__toggle">
+      <div class="bix-toggle-icon">
+        <span class="bix-toggle-icon__line"></span>
+        <span class="bix-toggle-icon__line"></span>
+      </div>
+      <span class="bix-toggle-icon__text">MENU</span>
+    </button>
+    <nav id="site-nav" class="bix-site-nav" data-menu-target>
+      <ul class="bix-site-nav__items">
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="/our-work/">
+            Our Work
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="nav-link" href="/careers/">
-            <span class="nav-link__inner">Careers</span>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="/contract-vehicles/">
+            Contract Vehicles
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="nav-link" href="/blog/">
-            <span class="nav-link__inner">Blog</span>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="/careers/">
+            Careers
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="nav-link" href="/about/">
-            <span class="nav-link__inner">About Bixal</span>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="/blog/">
+            Blog
           </a>
         </li>
-        <li class="main-nav__item">
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="/about/">
+            About Bixal
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
           <!-- @TODO: Refactor this button -->
-          <a href="https://jobs.lever.co/bixal" class="nav-link nav-link--btn">
-            <button data-test-id="contact">Join Us</button>
-          </a>
+          {% include "components/button/button.html.twig" with {
+            label: "Join Us",
+            modifier: "bix-button--inverse"
+          } %}
         </li>
       </ul>
     </nav>
