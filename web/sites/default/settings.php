@@ -849,7 +849,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 /**
  * Load configuration for the environment.
  */
-include $app_root . '/' . $site_path . '/settings.platformsh.php';
+if (getenv('LANDO_INFO') !== FALSE) {
+  include $app_root . '/' . $site_path . '/settings.lando.php';
+}
+else {
+  include $app_root . '/' . $site_path . '/settings.platformsh.php';
+}
 
 /**
  * Load local development override configuration, if available.

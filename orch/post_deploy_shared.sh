@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -e
 
 if [ -n "$(drush status --fields=bootstrap)" ]; then
   echo "Drupal is installed, continuing."

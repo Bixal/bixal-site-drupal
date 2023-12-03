@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -e
 
 # Drupal must be installed to update it.
 if [ -n "$(drush status --fields=bootstrap)" ]; then

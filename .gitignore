@@ -237,6 +237,7 @@ dist
 /web/sites/default/*
 !/web/sites/default/services.yml
 !/web/sites/default/settings.php
+!/web/sites/default/settings.lando.php
 !/web/sites/default/settings.platformsh.php
 !/web/profiles/custom
 
