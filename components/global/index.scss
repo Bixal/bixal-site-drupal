@@ -98,6 +98,7 @@ h5 {
 }
 
 dl {
+  line-height: 1.75;
   margin-top: units(2);
   margin-bottom: units(2);
 }
@@ -119,10 +120,14 @@ dd {
 ul,
 ol {
   list-style-position: inside;
+  margin-top: units(2);
+  margin-bottom: units(2);
   padding: 0;
 
   ul,
   ol {
+    margin-top: 0;
+    margin-bottom: units(1);
     padding-left: units(3);
   }
 }
@@ -143,6 +148,7 @@ p {
 }
 
 img {
+  max-width: 100%;
   vertical-align: middle; // Remove extra space from images.
 }
 
