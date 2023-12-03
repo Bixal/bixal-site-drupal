@@ -1,0 +1,43 @@
+@use "uswds-core" as *;
+
+.bix-profile {
+  @include at-media("desktop") {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: units(5);
+  }
+
+  &__main,
+  &__aside {
+    padding-top: units(5);
+    padding-bottom: units(5);
+  }
+
+  &__intro {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: units(2);
+  }
+
+  &__aside {
+    background-color: color("gray-4");
+    padding-left: units(10);
+    padding-right: units(10);
+  }
+
+  &__heading {
+    font-size: px-to-rem(25px);
+    letter-spacing: -0.35px;
+    margin-top: units(5);
+    margin-bottom: units(2);
+  }
+
+  &__heading::after {
+    background-color: var(--c-accent-warm);
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: units(2);
+    width: px-to-rem(200px);
+  }
+}
