@@ -21,6 +21,12 @@
       "bucketlist": "To attend a World Cup final game."
     },
     {
+      "name": "Brianna Naolu",
+      "role": "UX Designer",
+      "specialties": ["User Experience (UX)", "User Research", "Visual Design"],
+      "bucketlist": "To see the northern lights in all their magnificent glory."
+    },
+    {
       "name": "Clay Marshall",
       "role": "Director, Web Development",
       "specialties": [
@@ -29,6 +35,12 @@
         "Team Development and Leadership"
       ],
       "bucketlist": "To locate about 10 acres of land and build a house or cabin from the ground up."
+    },
+    {
+      "name": "Buddy Harlow",
+      "role": "Associate Software Engineer",
+      "specialties": ["CSS", "Drupal", "React", "Wordpress"],
+      "bucketlist": "To ride the Steel Vengeance roller coaster at Cedar Point in Sandusky, Ohio."
     }
   ]
 }

@@ -85,34 +85,33 @@
       </div>
     </div>
 
-    <ul class="people-list">
-      {% for person in people %}
-        <li class="person" id="">
-          <a
-            class="person__link"
-            href="javascript:void(0)">
-            <div class="person__image-container">
-              <img src="https://placehold.co/325x325" alt="">
-            </div>
-            <div class="person__details">
-              <h3 class="person__name">
-                {{ person.name | default("Full name") }}
-              </h3>
-              <div class="person__job-title">
-                {{ person.role | default("Role") }}
+    <div class="bix-container">
+      <ul class="bix-people-list">
+        {% for person in people %}
+          <!-- @TODO: Fix for A11Y -->
+          <li class="bix-person">
+            <a
+              class="bix-person__link"
+              href="javascript:void(0)">
+              <div class="bix-person__media">
+                <img src="https://placehold.co/325x325" alt="">
+                <div class="bix-person__overlay">
+                  View all
+                  <svg class="bix-icon bix-icon--right-arrow" width="20px" fill="#fff" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12"><polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon></svg>
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <div class="people-list__view-more">
-      <button class="button bixal-button button--inverted">
-        <div data-test-id="view-more" class="bixal-button-content">
-          <div>View All</div>
-        </div>
-      </button>
+              <div class="bix-person__details">
+                <h3 class="bix-person__name">
+                  {{ person.name | default("Full name") }}
+                </h3>
+                <div class="bix-person__role">
+                  {{ person.role | default("Role") }}
+                </div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
