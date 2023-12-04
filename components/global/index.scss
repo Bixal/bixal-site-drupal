@@ -58,7 +58,6 @@ h6 {
 
 h1 {
   font-size: 64px;
-  line-height: 1;
   text-wrap: balance;
 }
 
@@ -71,6 +70,7 @@ h2 {
 h3 {
   font-size: 43px;
   letter-spacing: -0.75px;
+  line-height: 1;
 }
 
 h4 {
@@ -143,7 +143,7 @@ p {
     hyphens: auto;
   }
 
-  margin-top: 0;
+  margin-top: units("205");
   margin-bottom: units("205");
 }
 
