@@ -8,12 +8,6 @@ export default {
 
 export const Default = {};
 
-export const AccentVivid = {
-  args: {
-    variant: "accent-vivid",
-  },
-};
-
 export const AccentCool = {
   args: {
     variant: "accent-cool",
@@ -23,6 +17,12 @@ export const AccentCool = {
 export const AccentCoolAlt = {
   args: {
     variant: "accent-cool-alt",
+  },
+};
+
+export const AccentVivid = {
+  args: {
+    variant: "accent-vivid",
   },
 };
 

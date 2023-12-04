@@ -1,0 +1,40 @@
+{
+  "flip_cards": [
+    {
+      "image": "https://bixal.com/static/70c83fe2301aa83b70edbba2e3c15f5d/services-strategy-communications.svg",
+      "variant": "accent-warm",
+      "title": "Strategic Communications",
+      "description": "We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients."
+    },
+    {
+      "image": "https://www.bixal.com/static/7306ff2914d443d0e4c22813c07e74d1/services-customer-experience.svg",
+      "variant": "accent-cool",
+      "title": "Human-Centered Design",
+      "description": "We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users."
+    },
+    {
+      "image": "https://www.bixal.com/static/bf47c31ffbc3920f635494924f8faf76/services-agile.svg",
+      "variant": "primary",
+      "title": "Agile Development",
+      "description": "We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way."
+    },
+    {
+      "image": "https://www.bixal.com/static/c1be6f601fe9895fc3f2b892d4ab0041/services-elearning.svg",
+      "variant": "accent-cool-alt",
+      "title": "Modernized Learning",
+      "description": "Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society."
+    },
+    {
+      "image": "https://www.bixal.com/static/268be43303d10a23bde150d7def880ac/services-data.svg",
+      "variant": "primary-alt",
+      "title": "Data Science and Analytics",
+      "description": "We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making."
+    },
+    {
+      "image": "https://www.bixal.com/static/b1ca45958aa45c3e436d0e405eaa1243/services-cloud.svg",
+      "variant": "accent-warm-dark",
+      "title": "Cloud Computing",
+      "description": "A client-focused approach to successfully migrate to the cloud and modernize the technology infrastructure to improve performance and security while reducing costs."
+    }
+  ]
+}

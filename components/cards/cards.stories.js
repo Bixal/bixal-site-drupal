@@ -1,13 +1,18 @@
-import Cards from "./cards.html.twig";
+import FlipCardGroup from "./flip-card-group.html.twig";
 import ClickableCard from "./card-clickable.html.twig";
+import FlipCardContent from "./flip-card.content.json";
+
+import "./cards.scss";
 
 export default {
   title: "Components/Cards",
   tags: ["autodocs"],
-  component: Cards,
+  component: FlipCardGroup,
+  args: FlipCardContent,
 };
 
-export const Default = {};
+// @TODO: Create individual card components.
+export const FlipCards = {};
 
 export const Clickable = {
   render: ClickableCard,
