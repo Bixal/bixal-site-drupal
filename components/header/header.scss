@@ -106,22 +106,19 @@
 
     @include at-media("desktop") {
       align-items: center;
-      column-gap: units(2.5);
+      column-gap: units(4);
       display: flex;
       flex-flow: row nowrap;
       font-size: px-to-rem(14px);
     }
-    // @TODO: Replace with USWDS media query. Will need to enable widescreen.
-    @media (min-width: 1000px) {
-      font-size: px-to-rem(16px);
-    }
     @media (min-width: 1300px) {
-      column-gap: units(4);
-      font-size: px-to-rem(16px);
+      column-gap: units(8);
     }
   }
 
   &__item {
+    margin-bottom: 0;
+
     @include at-media-max("desktop") {
       border-top: 1px solid rgba(white, 0.2);
       padding: units(2) 7vw;
@@ -139,6 +136,18 @@
       &:focus {
         color: var(--c-primary-alt);
       }
+    }
+  }
+
+  .bix-button--inverse {
+    @include at-media("desktop") {
+      display: none;
+    }
+  }
+
+  .bix-button.desktop-only {
+    @include at-media-max("desktop") {
+      display: none;
     }
   }
 }

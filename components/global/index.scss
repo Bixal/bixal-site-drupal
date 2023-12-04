@@ -119,16 +119,30 @@ dd {
 
 ul,
 ol {
-  list-style-position: inside;
+  list-style-position: outside;
   margin-top: units(2);
   margin-bottom: units(2);
-  padding: 0;
+  padding-left: units(3);
 
   ul,
   ol {
     margin-top: 0;
     margin-bottom: units(1);
     padding-left: units(3);
+  }
+}
+
+li {
+  margin-bottom: units(1);
+}
+
+.bix-list {
+  column-gap: units(4);
+}
+
+.bix-list--thirds {
+  @include at-media("tablet-lg") {
+    columns: 3;
   }
 }
 

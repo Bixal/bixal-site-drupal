@@ -53,7 +53,13 @@
           <!-- @TODO: Refactor this button -->
           {% include "components/button/button.html.twig" with {
             label: "Join Us",
-            modifier: "bix-button--inverse"
+            modifier: "bix-button--inverse",
+            link: true
+          } %}
+          {% include "components/button/button.html.twig" with {
+            label: "Join Us",
+            modifier: "desktop-only",
+            link: true
           } %}
         </li>
       </ul>
