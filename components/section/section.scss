@@ -7,6 +7,10 @@
   padding: 100px 0;
 }
 
+.bix-section--base {
+  background-color: color("gray-4");
+}
+
 .bix-section--primary {
   background-color: var(--c-primary);
   color: color("white");
