@@ -132,10 +132,30 @@
     text-decoration: none;
 
     @include at-media("desktop") {
+      padding-top: units(1);
+      padding-bottom: units(1);
+
       &:hover,
       &:focus {
         color: var(--c-primary-alt);
       }
+    }
+  }
+
+  &__link.is-current {
+    position: relative;
+  }
+
+  &__link.is-current::after {
+    @include at-media("desktop") {
+      background-color: var(--c-accent-cool-alt);
+      content: "";
+      height: 2px;
+      width: 52px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
