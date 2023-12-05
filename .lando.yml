@@ -1,0 +1,80 @@
+name: bixalcom
+recipe: drupal10
+config:
+  webroot: web
+  via: nginx
+  php: '8.1'
+  database: mariadb:10.3
+  xdebug: true
+
+services:
+  appserver:
+    build:
+      - "./orch/build.sh"
+    overrides:
+      environment:
+        # Required in order to enable CLI debug.
+        # https://docs.lando.dev/guides/lando-phpstorm.html.
+        #XDEBUG_SESSION_START: lando
+        # This is equivalent to setting drush/drush.yml options.uri.
+        # Handy so one does not need to set --uri on drush calls, like uli.
+        DRUSH_OPTIONS_URI: 'http://bixalcom.lndo.site'
+
+  # https://docs.lando.dev/redis/config.html
+  # Ensure configured at /admin/reports/redis.
+  cache:
+    type:
+      redis:6
+
+  # (Optional) Install PHPMyAdmin.
+  # Go to http://phpmyadmin.bixalcom.lndo.site/index.php?route=/database/structure&db=main
+  phpmyadmin:
+    type: phpmyadmin
+
+  # (optional) Install Mailhog service for testing emails sent from Drupal.
+  # No addl. config required elsewhere to use; SMTP contrib is not required.
+  mailhog:
+    type: mailhog
+    portforward: false
+    hogfrom:
+      - appserver
+
+  node:
+    build:
+      - "./orch/build_fe_shared.sh"
+    type: 'node:18'
+    scanner: false
+    ssl: true
+    sslExpose: false
+    globals:
+      gulp-cli: latest
+
+tooling:
+  build:
+    description: "Install Dependencies"
+    cmd:
+      - appserver: './orch/build.sh'
+      - node: './orch/build_fe_shared.sh'
+  # Run composer commands through composer.sh so composer.log is generated.
+  composer:
+    service: appserver
+    description: Run composer inside lando. Defaults to composer 1 if composer install has not run yet...
+    cmd:
+      - "./composer.sh"
+  drush:
+    service: appserver
+  si:
+    service: appserver
+    description: Install a fresh Drupal site from configuration.
+    cmd:
+      - "./orch/deploy_shared_install.sh"
+      - "./orch/post_deploy_shared.sh"
+      - "drush uli"
+proxy:
+  phpmyadmin:
+    - phpmyadmin.bixalcom.lndo.site
+  mailhog:
+    - mailhog.bixalcom.lndo.site
+  # Explicitly set so if 'name' is overridden (for multiple local environments) the URL does not change.
+  #appserver:
+  #  - bixalcom.lndo.site
