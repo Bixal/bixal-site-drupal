@@ -41,13 +41,17 @@ services:
 
   node:
     build:
+      # The Drupal reqs.
       - "./orch/build_fe_shared.sh"
+      # Storybook.
+      - npm install
     type: 'node:18'
     scanner: false
     ssl: true
     sslExpose: false
     globals:
       gulp-cli: latest
+    command: npm start
 
 tooling:
   build:
@@ -75,6 +79,8 @@ proxy:
     - phpmyadmin.bixalcom.lndo.site
   mailhog:
     - mailhog.bixalcom.lndo.site
+  node:
+    - storybook.bixalcom.lndo.site
   # Explicitly set so if 'name' is overridden (for multiple local environments) the URL does not change.
   #appserver:
   #  - bixalcom.lndo.site
