@@ -21,11 +21,6 @@
           {% set button_class = "bix-button--inverse" %}
         {% endif %}
 
-        {% include "components/button/button.html.twig" with {
-          label: cta.label,
-          modifier: button_class | default(""),
-          has_icon: true
-        } %}
       </div>
     {% endif %}
   </div>

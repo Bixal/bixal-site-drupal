@@ -8,14 +8,14 @@
             alt="Bixal Logo letter B silhouette around a photo of a smiling child."
             src="https://bixal.com/static/8fb0fe7a56370262b76be5bda8d68737/d409d/img-b-footer.png">
         </div>
-        {% include "components/social-nav/social-nav.html.twig" %}
+        {% include "@components/social-nav/social-nav.html.twig" %}
       </div>
       <div class="bix-site-footer__column bix-site-footer__column--collab">
         <h4 class="bix-site-footer__title">
           Work With Us
         </h4>
         <p>Looking to join our team? Check out our openings.</p>
-        {% include "components/button/button.html.twig" with {
+        {% include "@components/button/button.html.twig" with {
           modifier: "bix-button--inverse",
           label: "Learn more",
           link: true,
@@ -125,7 +125,7 @@
         <a class="privacy" href="/privacy/">Privacy Policy</a>
         <span class="copyright">Copyright &copy; 2023 Bixal</span>
       </div>
-      {% include "components/social-nav/social-nav.html.twig" %}
+      {% include "@components/social-nav/social-nav.html.twig" %}
     </div>
   </section>
 </footer>

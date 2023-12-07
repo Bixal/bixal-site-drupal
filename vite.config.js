@@ -12,7 +12,10 @@ export default defineConfig({
   },
   plugins: [
     twig({
-      components: join(__dirname, "./components"),
+      namespaces: {
+        components: join(__dirname, "./stories/components"),
+        pages: join(__dirname, "./stories/pages"),
+      },
     }),
   ],
   framework: "react",
