@@ -11,6 +11,7 @@ export default {
 
 export const BackgroundImage = {
   args: {
+    variant: "image-bg",
     image:
       "https://www.bixal.com/static/0a66c21e57fc6b5c25b6a4b9055bf84f/landing-hero.jpg",
     image_inline: false,

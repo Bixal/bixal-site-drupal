@@ -2,14 +2,13 @@
 
 .bix-hero {
   align-items: center;
-  background-position: top;
-  background-repeat: no-repeat;
-  color: color("white");
   display: grid;
   justify-content: center;
-  min-height: 400px;
   padding: 40px 0;
-  padding: 80px 0 90px; // Desktop
+
+  @include at-media("desktop") {
+    padding: 80px 0 90px;
+  }
 
   &__container {
     max-width: 1400px;
@@ -26,6 +25,19 @@
   }
 }
 
+.bix-hero--image-bg {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  color: color("white");
+  overflow: hidden;
+
+  @include at-media("desktop") {
+    min-height: 600px;
+  }
+}
+
 .bix-hero--image-inline {
   background-color: #162d6a;
   color: color("white");
@@ -35,7 +47,8 @@
       display: grid;
       grid-template-columns: minmax(400px, 1fr) 4fr;
       column-gap: units(8);
-      align-items: last baseline;
+      align-items: end;
+      width: 85%;
     }
 
     .bix-hero__media img {
