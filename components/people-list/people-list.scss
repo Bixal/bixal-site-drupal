@@ -1,0 +1,100 @@
+@use "uswds-core" as *;
+
+.bix-people-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 244px));
+  list-style: none;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.bix-person {
+  --_overlay-color: var(--overlay-color, gray);
+  --_text-color: var(--text-color, #000);
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    .bix-person__overlay {
+      opacity: 1;
+    }
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__overlay {
+    align-items: center;
+    background-color: var(--_overlay-color);
+    bottom: 0;
+    color: var(--_text-color);
+    column-gap: units(1);
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.25s ease-in-out;
+    width: 100%;
+  }
+
+  &__overlay .bix-icon {
+    fill: var(--_text-color);
+  }
+
+  &__details {
+    padding-top: units(2);
+    padding-right: units(2);
+  }
+
+  &__name {
+    font-size: px-to-rem(24px);
+    letter-spacing: -0.33px;
+    margin-bottom: units("05");
+  }
+
+  &__role {
+    font-size: px-to-rem(20px);
+    line-height: 1.2;
+  }
+}
+
+.bix-people-list li:nth-child(8n + 1) {
+  --overlay-color: #fda307;
+}
+
+.bix-people-list li:nth-child(8n + 2) {
+  --overlay-color: #7d0196;
+  --text-color: #fff;
+}
+
+.bix-people-list li:nth-child(8n + 3) {
+  --overlay-color: #03c5bc;
+}
+
+.bix-people-list li:nth-child(8n + 4) {
+  --overlay-color: #55052a;
+  --text-color: #fff;
+}
+
+.bix-people-list li:nth-child(8n + 5) {
+  --overlay-color: #deec1c;
+}
+
+.bix-people-list li:nth-child(8n + 6) {
+  --overlay-color: #e03000;
+}
+
+.bix-people-list li:nth-child(8n + 7) {
+  --overlay-color: #172d6a;
+  --text-color: #fff;
+}
+
+.bix-people-list li:nth-child(8n + 8) {
+  --overlay-color: #bee9f6;
+}

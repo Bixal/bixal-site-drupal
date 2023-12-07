@@ -1,0 +1,46 @@
+@use "uswds-core" as *;
+
+.bix-callout {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: units(15);
+  padding-bottom: units(15);
+}
+
+.bix-callout__title {
+  font-size: 43px;
+  letter-spacing: -0.75px;
+  margin-bottom: units(5);
+  text-wrap: balance;
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #03c5bc;
+    margin-top: units(5);
+    /* Using clamp to avoid width override hacks. */
+    width: clamp(200px, 8em, 35%);
+  }
+}
+
+.bix-callout__body {
+  max-width: 78ex;
+}
+
+.bix-callout--inverse {
+  color: color("white");
+}
+
+.bix-callout--centered {
+  text-align: center;
+
+  .bix-callout__title::after {
+    content: none;
+  }
+
+  .bix-callout__body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

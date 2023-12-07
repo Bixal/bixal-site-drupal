@@ -1,0 +1,46 @@
+{
+  "people": [
+    {
+      "name": "Alex Hull",
+      "role": "Digital Accessibility Specialist",
+      "social": [],
+      "specialties": ["Behavioral Science", "Behavioral Science"],
+      "languages": ["English", "American Sign Language (ASL)"],
+      "bucketlist": "To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course)."
+    },
+    {
+      "name": "Amie Nisler",
+      "role": "Senior Communications Strategist",
+      "specialties": [
+        "Behavioral Science",
+        "Data Systems",
+        "Emergency and Risk Communications",
+        "Health Communications",
+        "Plain Language"
+      ],
+      "bucketlist": "To attend a World Cup final game."
+    },
+    {
+      "name": "Brianna Naolu",
+      "role": "UX Designer",
+      "specialties": ["User Experience (UX)", "User Research", "Visual Design"],
+      "bucketlist": "To see the northern lights in all their magnificent glory."
+    },
+    {
+      "name": "Clay Marshall",
+      "role": "Director, Web Development",
+      "specialties": [
+        "Drupal CMS Architecture and Development",
+        "Graphic Design",
+        "Team Development and Leadership"
+      ],
+      "bucketlist": "To locate about 10 acres of land and build a house or cabin from the ground up."
+    },
+    {
+      "name": "Buddy Harlow",
+      "role": "Associate Software Engineer",
+      "specialties": ["CSS", "Drupal", "React", "Wordpress"],
+      "bucketlist": "To ride the Steel Vengeance roller coaster at Cedar Point in Sandusky, Ohio."
+    }
+  ]
+}

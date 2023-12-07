@@ -1,0 +1,27 @@
+@use "uswds-core" as *;
+
+.bix-contact__content {
+  @include at-media("tablet-lg") {
+    max-width: 60%;
+  }
+}
+
+.bix-contact__form {
+  @include at-media("tablet-lg") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: units(1);
+  }
+
+  .bix-input {
+    width: 100%;
+  }
+
+  .bix-input--textarea {
+    grid-column: 1 / -1;
+  }
+}
+
+.bix-contact__actions {
+  grid-row-start: 4;
+}

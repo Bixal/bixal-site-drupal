@@ -1,0 +1,32 @@
+<section
+  class="bix-callout bix-callout--{{ variant }}"
+  style="background-image: url('{{ image }}')">
+  <div class="bix-container">
+    <div class="bix-callout__header">
+      <div class="bix-callout__prefix bix-piped-title">
+        {{ prefix }}
+      </div>
+      <h2 class="bix-callout__title">{{ title }}</h2>
+    </div>
+    {% if description %}
+    <div class="bix-callout__body">
+      <p>
+        {{ description }}
+      </p>
+    </div>
+    {% endif %}
+    {% if cta.href and cta.label %}
+      <div class="bix-callout__footer">
+        {% if variant == "inverse" %}
+          {% set button_class = "bix-button--inverse" %}
+        {% endif %}
+
+        {% include "components/button/button.html.twig" with {
+          label: cta.label,
+          modifier: button_class | default(""),
+          has_icon: true
+        } %}
+      </div>
+    {% endif %}
+  </div>
+</section>

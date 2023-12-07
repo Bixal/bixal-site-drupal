@@ -41,13 +41,23 @@ services:
 
   node:
     build:
+      # The Drupal reqs.
       - "./orch/build_fe_shared.sh"
+      # Storybook.
+      - npm install
     type: 'node:18'
     scanner: false
     ssl: true
     sslExpose: false
     globals:
       gulp-cli: latest
+    command: npm start
+    overrides:
+      environment:
+        # Storybook was crashing because of lack of memory which was shown in the logs
+        # lando logs -s node. Upped the limit to 8gb of ram from the default of 2.
+        # https://stackoverflow.com/questions/53230823/fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javas
+        NODE_OPTIONS: "--max-old-space-size=8192"
 
 tooling:
   build:
@@ -75,6 +85,8 @@ proxy:
     - phpmyadmin.bixalcom.lndo.site
   mailhog:
     - mailhog.bixalcom.lndo.site
+  node:
+    - storybook.bixalcom.lndo.site
   # Explicitly set so if 'name' is overridden (for multiple local environments) the URL does not change.
   #appserver:
   #  - bixalcom.lndo.site
