@@ -5,7 +5,7 @@ export default {
   component: BlogPost,
 };
 
-export const All = {
+export const Default = {
   args: {
     hero: {
       variant: "image-bg",
