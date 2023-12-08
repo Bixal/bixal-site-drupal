@@ -1,11 +1,11 @@
 {% include "@components/header/header.html.twig" %}
 {% include "@components/hero/hero.html.twig" with hero %}
 
-{% block content %}
-  <main>
+<main>
+  {% block content %}
     Content block.
-  </main>
-{% endblock %}
+  {% endblock %}
+</main>
 
 {% include "@components/contact-us/contact-us.html.twig" %}
 {% include "@components/footer/footer.html.twig" %}

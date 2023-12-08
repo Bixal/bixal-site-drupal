@@ -16,10 +16,6 @@
     margin-right: auto;
   }
 
-  &__title {
-    color: inherit;
-  }
-
   &__body p:last-child {
     margin-bottom: 0;
   }
@@ -30,8 +26,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
-  color: color("white");
   overflow: hidden;
+
+  .bix-hero__title {
+    color: color("white");
+  }
 
   @include at-media("desktop") {
     min-height: 600px;
