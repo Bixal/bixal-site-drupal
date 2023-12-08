@@ -4,11 +4,10 @@ import BlurbCollectionContent from "../../components/blurb/blurb-collection.cont
 
 export default {
   title: "Pages/Blog/Landing",
-  tags: ["autodocs"],
   component: BlogLanding,
 };
 
-export const All = {
+export const Default = {
   args: {
     hero: {
       variant: "image-bg",
