@@ -7,14 +7,15 @@ import "./blurb.scss";
 export default {
   title: "Components/Blurb",
   component: Blurb,
+};
+
+export const Default = {
   args: {
     title: "Key Learnings for a More Inclusive Global Health Landscape",
     description: null,
     date: "November 30, 2023",
   },
 };
-
-export const Default = {};
 
 export const BlurbCollection = {
   args: BlurbCollectionContent,
