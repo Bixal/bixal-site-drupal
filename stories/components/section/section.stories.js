@@ -62,3 +62,21 @@ export const BackgroundImage = {
     },
   },
 };
+
+export const Tall = {
+  args: {
+    variant: "centered",
+    additional_classes: "bix-section--tall",
+    image:
+      "https://www.bixal.com/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
+    prefix: "What we do",
+    title:
+      "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
+    description: null,
+    cta: {
+      href: "javascript:void(0)",
+      label: "Explore case studies",
+      has_icon: true,
+    },
+  },
+};
