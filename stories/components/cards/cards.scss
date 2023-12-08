@@ -2,7 +2,7 @@
 
 .bix-flip-card-group {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 450px));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
   gap: units(2);
   justify-content: center;
 }
