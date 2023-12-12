@@ -36,6 +36,7 @@
         "drupal/role_delegation": "^1.2",
         "drupal/search_api_solr": "^4.3",
         "drupal/seckit": "^2.0",
+        "drupal/stable": "^2.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/xmlsitemap": "^1.5",

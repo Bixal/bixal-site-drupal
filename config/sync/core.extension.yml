@@ -62,4 +62,6 @@ theme:
   stark: 0
   olivero: 0
   claro: 0
+  stable: 0
+  bixal_uswds: 0
 profile: minimal
