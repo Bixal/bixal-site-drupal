@@ -8,33 +8,33 @@ NC='\033[0m'
 echo "Front end can be built by using the file ./orch/build_fe_shared.sh, it is Node 18"
 
 echo "Updating storybook components in theme"
-source_dir="./components"
+source_dir="./stories"
 components_target_dir="./web/themes/custom/bixal_uswds/templates/components/storybook_components"
 sass_target_dir="./web/themes/custom/bixal_uswds/src/sass/storybook_sass"
 js_target_dir="./web/themes/custom/bixal_uswds/src/js/storybook_js"
 
-if [ -d $source_dir ] 
+if [ -d $source_dir ]
 then
-    
+
     if [ -d $components_target_dir ]
     then
         echo -e "${green}Removing theme components folder${NC}"
         rm -R $components_target_dir
-    else 
+    else
         echo ""
     fi
     if [ -d $sass_target_dir ]
     then
         echo -e "${green}Removing theme sass folder${NC}"
         rm -R $sass_target_dir
-    else 
+    else
         echo ""
     fi
     if [ -d $js_target_dir ]
     then
         echo -e "${green}Removing theme js folder${NC}"
         rm -R $js_target_dir
-    else 
+    else
         echo ""
     fi
 
@@ -45,7 +45,8 @@ then
     find "$source_dir" -name '*.js' -exec cp {} "$js_target_dir" \;
     find "$js_target_dir" -name '*.stories.js' -delete
 else
-    echo ""
+    echo "The storybook components directory, $source_dir, did not exist."
+    exit 1
 fi
 
 cd web/themes/custom/bixal_uswds
