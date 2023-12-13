@@ -1,0 +1,12 @@
+{% extends "@pages/base/base.html.twig" %}
+
+{% block content %}
+  <div class="bix-section">
+    <div class="bix-container">
+      <h2>
+        Explore the latest Bixal news and insights from our thought leaders.
+      </h2>
+      {% include "@components/blurb/blurb-collection.html.twig" with blurbs %}
+    </div>
+  </div>
+{% endblock %}

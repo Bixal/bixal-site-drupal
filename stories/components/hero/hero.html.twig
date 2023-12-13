@@ -1,0 +1,27 @@
+{% set cta_exists = cta.label and cta.href %}
+
+<!-- @TODO: Make section a landmark for screen readers. -->
+<section
+  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}"
+  {% if not image_inline %}
+    style="
+      background-image: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0.48) 0%,
+          rgba(0, 0, 0, 0) 100%
+        ),
+        url('{{ image }}')"
+  {% endif %}
+>
+
+{% if image_inline %}
+  {% include "@components/hero/hero--image-inline.html.twig" %}
+{% else %}
+  <div class="bix-hero__container">
+    <h1 class="bix-hero__title">
+      {{ title }}
+    </h1>
+  </div>
+{% endif %}
+
+</section>
