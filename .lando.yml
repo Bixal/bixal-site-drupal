@@ -51,13 +51,10 @@ services:
     sslExpose: false
     globals:
       gulp-cli: latest
-    command: npm start
-    overrides:
-      environment:
-        # Storybook was crashing because of lack of memory which was shown in the logs
-        # lando logs -s node. Upped the limit to 8gb of ram from the default of 2.
-        # https://stackoverflow.com/questions/53230823/fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javas
-        NODE_OPTIONS: "--max-old-space-size=8192"
+    # This starts storybook as the node user, it's root by default here.
+    # If this dies (sometimes it runs out of memory), run lando restart.
+    # To see the output of why it dies lando ssh -s node -c 'cat /tmp/story_book_start.log'.
+    command: ./orch/start_storty_book_docker.js
 
 tooling:
   build:
