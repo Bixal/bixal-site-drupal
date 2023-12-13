@@ -1,0 +1,68 @@
+<header class="bix-site-header">
+  <div class="bix-site-header__inner bix-container">
+    <a
+      href="javascript:void(0)"
+      title="Bixal"
+      class="bix-site-header__logo">
+      <img
+        src="https:bixal.com/static/e90efae7e816749d805876341ba16f9a/bixal-logo-full.svg"
+        alt="Bixal Logo"
+        width="120px"
+        height="24px"
+        >
+    </a>
+    <button
+      type="button"
+      data-menu-toggle
+      aria-controls="site-nav"
+      class="bix-site-nav__toggle">
+      <div class="bix-toggle-icon">
+        <span class="bix-toggle-icon__line"></span>
+        <span class="bix-toggle-icon__line"></span>
+      </div>
+      <span class="bix-toggle-icon__text">MENU</span>
+    </button>
+    <nav id="site-nav" class="bix-site-nav" data-menu-target>
+      <ul class="bix-site-nav__items">
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="javascript:void(0)">
+            Our Work
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="javascript:void(0)">
+            Contract Vehicles
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="javascript:void(0)">
+            Careers
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link is-current" href="javascript:void(0)">
+            Blog
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
+          <a class="bix-site-nav__link" href="javascript:void(0)">
+            About Bixal
+          </a>
+        </li>
+        <li class="bix-site-nav__item">
+          <!-- @TODO: Refactor this button -->
+          {% include "@components/button/button.html.twig" with {
+            label: "Join Us",
+            modifier: "bix-button--inverse",
+            link: true
+          } %}
+          {% include "@components/button/button.html.twig" with {
+            label: "Join Us",
+            modifier: "desktop-only",
+            link: true
+          } %}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
