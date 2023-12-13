@@ -1,0 +1,40 @@
+uuid: ae95d02d-d7ec-445d-81b8-af87d3c48523
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_banner_image
+    - field.field.node.blog.field_date
+    - node.type.blog
+  module:
+    - datetime
+    - user
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  field_banner_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
