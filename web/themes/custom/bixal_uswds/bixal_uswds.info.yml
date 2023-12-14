@@ -9,6 +9,10 @@ dependencies:
   - drupal:twig_field_value
   - drupal:admin_toolbar
 
+components:
+  namespaces:
+    components: components
+
 libraries:
   - bixal_uswds/global
 
