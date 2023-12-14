@@ -2,8 +2,6 @@
 
 // @TODO Create mixin.
 .bix-section {
-  background-position: top;
-  background-repeat: no-repeat;
   padding: 100px 0;
 }
 
@@ -18,6 +16,11 @@
   .bix-input {
     background-color: transparent;
     color: inherit;
+
+    &:focus,
+    &:active {
+      background-color: color-mix(in srgb, var(--c-primary) 5%, black 30%);
+    }
 
     &::placeholder {
       color: rgba(white, 0.6);

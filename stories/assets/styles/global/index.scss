@@ -65,6 +65,17 @@ h2 {
   font-size: 47px;
   font-weight: 700;
   letter-spacing: -2.4px;
+  margin-bottom: units(4);
+
+  // @TODO: Combine into mixin to avoid duplicating in callout.scss.
+  &::after {
+    border-bottom: 2px solid var(--c-accent-cool-alt);
+    content: "";
+    display: block;
+    margin-top: units(4);
+    /* Using clamp to avoid width override hacks. */
+    width: clamp(200px, 8em, 35%);
+  }
 }
 
 h3 {
@@ -83,7 +94,7 @@ h5 {
   letter-spacing: -0.5px;
 }
 
-.bix-piped-title {
+.bix-title-prefix {
   border-left: 2px solid var(--c-accent-cool-alt);
   border-right: 2px solid var(--c-accent-cool-alt);
   display: inline-flex;
@@ -185,5 +196,17 @@ address {
   font-size: px-to-rem(14px);
   margin-bottom: units(1);
   outline-offset: 2px;
-  padding: units(1);
+  padding: units(2) units(1);
+  transition: background-color 0.2s ease-in-out;
+
+  &::placeholder {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    word-spacing: 2px;
+  }
+}
+
+.bix-input--textarea {
+  min-height: px-to-rem(120px);
 }
