@@ -11,7 +11,8 @@ dependencies:
 
 components:
   namespaces:
-    components: components
+    pages: storybook_components/stories/pages
+    components: storybook_components/stories/components
 
 libraries:
   - bixal_uswds/global

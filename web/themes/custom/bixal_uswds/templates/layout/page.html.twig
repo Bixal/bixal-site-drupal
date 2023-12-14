@@ -39,4 +39,11 @@
 */
 #}
 
-{% include '@components/base.html.twig' %}
+{% include '@pages/base/base.html.twig' %}
+
+HEADER AGAIN:
+
+{% include "@components/hero/hero.html.twig" with {
+  variant: "image-bg",
+  title: "My NEW HEADER AGAIN",
+} %}
