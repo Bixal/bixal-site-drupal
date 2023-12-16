@@ -12,6 +12,14 @@ export default {
     description:
       "Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.",
   },
+  argTypes: {
+    prefix: {
+      description: "Title prefix with borders on the side.",
+    },
+    description: {
+      description: "Accepts markup, like paragraphs.",
+    },
+  },
 };
 
 export const Default = {};
@@ -48,7 +56,8 @@ export const Centered = {
 
 export const BackgroundImage = {
   args: {
-    variant: "primary",
+    variant: "image-bg",
+    additional_classes: "bix-section--primary",
     image:
       "https://www.bixal.com/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
     prefix: "What we do",
@@ -65,8 +74,8 @@ export const BackgroundImage = {
 
 export const Tall = {
   args: {
-    variant: "centered",
-    additional_classes: "bix-section--tall",
+    variant: "tall",
+    additional_classes: "bix-section--centered",
     image:
       "https://www.bixal.com/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
     prefix: "What we do",
