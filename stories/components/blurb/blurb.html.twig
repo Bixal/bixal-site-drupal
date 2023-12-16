@@ -1,4 +1,6 @@
-<a class="bix-blurb" href="{{ href | default("javascript:void(0)") }}">
+{% set container_element = href ? "a"  : "div" %}
+
+{% set blurb_inner %}
   <div class="bix-blurb__media">
     <img
     src="{{ image | default("https://bixal.com/static/ff0d561dd14923cd599238ab42a7745e/4e534/people-first.webp ") }}"
@@ -16,4 +18,13 @@
     {{ description }}
   </p>
   {% endif %}
-</a>
+{% endset %}
+
+
+<{{ container_element }}
+  {% if container_element == "a" %}
+    href="{{ href | default("javascript:void(0)")}}"
+  {% endif %}
+class="bix-blurb">
+  {{ blurb_inner }}
+</{{ container_element }}>
