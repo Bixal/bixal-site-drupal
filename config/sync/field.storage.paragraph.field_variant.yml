@@ -1,0 +1,27 @@
+uuid: 885cebdc-8c17-405e-9fa2-da5aa03f4eb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_variant
+field_name: field_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: inverse
+      label: inverse
+    -
+      value: centered
+      label: centered
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
