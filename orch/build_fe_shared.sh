@@ -10,8 +10,8 @@ echo "Front end can be built by using the file ./orch/build_fe_shared.sh, it is 
 echo "Updating storybook components in theme"
 source_dir="./stories"
 components_target_dir="./web/themes/custom/bixal_uswds/storybook_components"
-sass_target_dir="./web/themes/custom/bixal_uswds/src/sass/storybook_sass"
-js_target_dir="./web/themes/custom/bixal_uswds/src/js/storybook_js"
+sass_target_dir="./web/themes/custom/bixal_uswds/src/sass/storybook-sass"
+js_target_dir="./web/themes/custom/bixal_uswds/src/js/storybook-js"
 
 if [ -d $source_dir ]
 then
@@ -42,6 +42,8 @@ then
     mkdir $components_target_dir $sass_target_dir $js_target_dir
     cp -r "$source_dir" "$components_target_dir"
     find "$components_target_dir" -type f \( -name "*.scss" -o -name "*.js" -o -name "*.json" \) -exec rm -f {} \;
+    find "$source_dir" -name '*.scss' -exec cp {} "$sass_target_dir" \;
+    find "$source_dir" -name '*.js' -exec cp {} "$js_target_dir" \;
     find "$js_target_dir" -name '*.stories.js' -delete
 else
     echo "The storybook components directory, $source_dir, did not exist."
