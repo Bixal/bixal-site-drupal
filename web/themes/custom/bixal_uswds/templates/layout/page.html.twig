@@ -39,11 +39,11 @@
 */
 #}
 
-{% include '@pages/base/base.html.twig' %}
+{% include "@components/header/header.html.twig" %}
 
-HEADER AGAIN:
+{% block content %}
+  {{ page.content }}
+{% endblock %}
 
-{% include "@components/hero/hero.html.twig" with {
-  variant: "image-bg",
-  title: "My NEW HEADER AGAIN",
-} %}
+{% include "@components/contact-us/contact-us.html.twig" %}
+{% include "@components/footer/footer.html.twig" %}
