@@ -1,0 +1,7 @@
+node_modules
+dist
+src/js/storybook_js
+src/sass/storybook_sass
+templates/components/storybook_components
+*.DS_Store
+

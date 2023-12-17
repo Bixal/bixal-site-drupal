@@ -1,0 +1,4 @@
+# Schema for the configuration files of the Bartik theme.
+bixal_uswds.settings:
+  type: theme_settings
+  label: 'Bixal USWDS settings'
