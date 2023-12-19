@@ -1,18 +1,41 @@
-<section class="bix-section bix-section--{{ variant }}">
+<section class="bix-section {{ variant ? "bix-section--" ~ variant : "" }} {{ additional_classes }}" {% if image %}
+  style="background-image: url('{{ image }}')"
+{% endif %}>
   <div class="bix-container">
-    <div class="bix-section__overview">
-      <div class="bix-piped-title">
-        Who we are
+    {% block header %}
+      {% if prefix %}
+      <div class="bix-title-prefix">
+        {{ prefix }}
       </div>
-      <h2>
-        Bixal is a diverse group of strategists, designers, engineers, and
-        thinkers.
+      {% endif %}
+      {% if title %}
+      <h2 class="bix-section__title">
+        {{ title }}
       </h2>
-    </div>
-    <div class="who-we-are__description">
-      <p>
-        Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.
-      </p>
-    </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block body %}
+      {% if description %}
+      <div class="who-we-are__description">
+        <p>
+          {{ description }}
+        </p>
+      </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block footer %}
+      {% if cta.label %}
+        <div class="bix-section__footer">
+          {% include "@components/button/button.html.twig" with {
+            modifier: cta.modifier,
+            label: cta.label,
+            href: cta.href,
+            has_icon: cta.has_icon
+          } %}
+        </div>
+      {% endif %}
+    {% endblock %}
   </div>
 </section>

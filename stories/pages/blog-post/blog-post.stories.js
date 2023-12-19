@@ -5,6 +5,12 @@ export default {
   component: BlogPost,
 };
 
+import "../../components/header/header.stories";
+import "../../components/button/button.stories";
+import "../../components/hero/hero.stories";
+import "../../components/contact-us/contact-us.stories";
+import "../../components/footer/footer.stories";
+
 export const Default = {
   args: {
     hero: {

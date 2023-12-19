@@ -20,7 +20,7 @@ export const BackgroundImage = {
 
 export const InlineImage = {
   args: {
-    variant: "primary",
+    variant: "image-inline",
     image:
       "https://www.bixal.com/static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
     image_inline: true,

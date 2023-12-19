@@ -38,7 +38,7 @@
 }
 
 .bix-hero--image-inline {
-  background-color: #162d6a;
+  background-color: var(--c-primary);
   color: color("white");
 
   @include at-media("tablet-lg") {
