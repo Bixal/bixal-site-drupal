@@ -1,11 +1,11 @@
 <header class="bix-site-header">
   <div class="bix-site-header__inner bix-container">
     <a
-      href="javascript:void(0)"
+      href="{{ logo.href }}"
       title="Bixal"
       class="bix-site-header__logo">
       <img
-        src="https:bixal.com/static/e90efae7e816749d805876341ba16f9a/bixal-logo-full.svg"
+        src="{{ logo.image }}"
         alt="Bixal Logo"
         width="120px"
         height="24px"
@@ -24,44 +24,31 @@
     </button>
     <nav id="site-nav" class="bix-site-nav" data-menu-target>
       <ul class="bix-site-nav__items">
-        <li class="bix-site-nav__item">
-          <a class="bix-site-nav__link" href="javascript:void(0)">
-            Our Work
-          </a>
-        </li>
-        <li class="bix-site-nav__item">
-          <a class="bix-site-nav__link" href="javascript:void(0)">
-            Contract Vehicles
-          </a>
-        </li>
-        <li class="bix-site-nav__item">
-          <a class="bix-site-nav__link" href="javascript:void(0)">
-            Careers
-          </a>
-        </li>
-        <li class="bix-site-nav__item">
-          <a class="bix-site-nav__link is-current" href="javascript:void(0)">
-            Blog
-          </a>
-        </li>
-        <li class="bix-site-nav__item">
-          <a class="bix-site-nav__link" href="javascript:void(0)">
-            About Bixal
-          </a>
-        </li>
-        <li class="bix-site-nav__item">
-          <!-- @TODO: Refactor this button -->
-          {% include "@components/button/button.html.twig" with {
-            label: "Join Us",
-            modifier: "bix-button--inverse",
-            link: true
-          } %}
-          {% include "@components/button/button.html.twig" with {
-            label: "Join Us",
-            modifier: "desktop-only",
-            link: true
-          } %}
-        </li>
+        {% for item in nav %}
+          <li class="bix-site-nav__item">
+            <a
+              class="bix-site-nav__link {{ item.current ? "is-current" }}"
+              href="{{ item.href | default("javascript:void(0)") }}">
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+
+        {% if cta %}
+          <li class="bix-site-nav__item">
+            <!-- @TODO: Refactor this button -->
+            {% include "@components/button/button.html.twig" with {
+              label: "Join Us",
+              modifier: "bix-button--inverse",
+              link: true
+            } %}
+            {% include "@components/button/button.html.twig" with {
+              label: "Join Us",
+              modifier: "desktop-only",
+              link: true
+            } %}
+          </li>
+        {% endif %}
       </ul>
     </nav>
   </div>

@@ -1,5 +1,6 @@
 import Homepage from "./homepage.html.twig";
 
+import HeaderContent from "../../components/header/header.content.json";
 import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
@@ -19,6 +20,7 @@ export default {
 
 export const Default = {
   args: {
+    header: HeaderContent,
     hero: {
       variant: "image-inline",
       image:

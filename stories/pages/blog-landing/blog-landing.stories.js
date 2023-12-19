@@ -1,5 +1,6 @@
 import BlogLanding from "./blog-landing.html.twig";
 
+import HeaderContent from "../../components/header/header.content.json";
 import BlurbCollectionContent from "../../components/blurb/blurb-collection.content.json";
 
 import "../../components/header/header.stories";
@@ -15,6 +16,7 @@ export default {
 
 export const Default = {
   args: {
+    header: HeaderContent,
     hero: {
       variant: "image-bg",
       title: "Blog and News",
