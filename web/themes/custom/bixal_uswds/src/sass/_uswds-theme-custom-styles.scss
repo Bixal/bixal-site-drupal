@@ -11,6 +11,6 @@ For example a custom component that is not part of USWDS.
 @use "custom-components";
 @use "uswds-overrides";
 @use "drupal-system";
-@use "storybook-sass/_index.scss"
+@use "storybook-sass"
 
 // ****** Do not write any custom CSS on this file ****** //
