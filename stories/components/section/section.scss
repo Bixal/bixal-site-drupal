@@ -3,6 +3,10 @@
 // @TODO Create mixin.
 .bix-section {
   padding: 100px 0;
+
+  &__footer {
+    margin-top: units(6);
+  }
 }
 
 .bix-section--base {
@@ -40,4 +44,16 @@
       color: rgba(white, 0.6);
     }
   }
+}
+
+.bix-section--centered {
+  text-align: center;
+
+  .bix-section__title::after {
+    content: none;
+  }
+}
+
+.bix-section--tall {
+  min-height: px-to-rem(800px);
 }

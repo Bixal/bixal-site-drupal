@@ -1,17 +1,23 @@
 <dl class="bix-description-list bix-description-list--{{ variant }}">
   <div class="bix-description-list__media">
-    <img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">
+    <img src="{{ image | default("https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp") }}" height="155px" alt="">
   </div>
-  <dt class="bix-description-list__heading">Health</dt>
-  <dd>
-    United States Department of Agriculture
-  </dd>
-  <dd>
-    Department of Health and Human Services
-  </dd>
-  <dd>
-    Centers for Medicare & Medicaid Services
-  </dd>
-  <dd>National Institutes of Health</dd>
-  <dd>National Library of Medicine</dd>
+  <dt class="bix-description-list__heading">
+    {{ title | default("Health") }}
+  </dt>
+
+  {% if items %}
+    {% for item in items %}
+      <dd>
+        {{ item }}
+      </dd>
+    {% endfor %}
+
+  {% else %}
+    <dd>Department of Health and Human Services</dd>
+    <dd>Centers for Medicare & Medicaid Services</dd>
+    <dd>National Institutes of Health</dd>
+    <dd>National Library of Medicine</dd>
+  {% endif %}
+
 </dl>

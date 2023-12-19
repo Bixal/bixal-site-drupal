@@ -1,0 +1,43 @@
+{
+  "collections": [
+    {
+      "variant": "accent-vivid",
+      "image": "https://www.bixal.com/static/a6bfea2de9dc56a0d366e250f78b098a/09633/health.webp",
+      "title": "Health",
+      "items": [
+        "Department of Health and Human Services",
+        "Centers for Medicare & Medicaid Services",
+        "National Institutes of Health",
+        "National Library of Medicine"
+      ]
+    },
+    {
+      "variant": "accent-cool-alt",
+      "image": "https://www.bixal.com/static/00c17f077e6046c2065a20cb466e1049/09633/international.webp",
+      "title": "International Development",
+      "items": ["United States Agency for International Development"]
+    },
+    {
+      "variant": "accent-warm",
+      "image": "https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp",
+      "title": "Business & Finance",
+      "items": [
+        "Securities and Exchange Commission",
+        "General Services Administration",
+        "Small Business Administration"
+      ]
+    },
+    {
+      "variant": "primary-alt",
+      "image": "https://www.bixal.com/static/bf6bcea0e576be6edfabd1229410fc97/09633/other.webp",
+      "title": "Other",
+      "items": [
+        "Federal Emergency Management Agency",
+        "United States Department of Agriculture",
+        "Department of Defense",
+        "Department of Transportation",
+        "Social Security Administration"
+      ]
+    }
+  ]
+}

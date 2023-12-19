@@ -1,4 +1,7 @@
 import DescriptionList from "./description-list.html.twig";
+import DescriptionListCollection from "./description-list-collection.html.twig";
+import DescriptionListCollectionContent from "./description-list-collection.content.json";
+
 import "./description-list.scss";
 
 export default {
@@ -17,6 +20,8 @@ export const AccentCool = {
 export const AccentCoolAlt = {
   args: {
     variant: "accent-cool-alt",
+    title: "International Devleopment",
+    items: ["United States Agency for International Development"],
   },
 };
 
@@ -36,4 +41,9 @@ export const PrimaryAlt = {
   args: {
     variant: "primary-alt",
   },
+};
+
+export const DescriptionCollection = {
+  args: DescriptionListCollectionContent,
+  render: DescriptionListCollection,
 };

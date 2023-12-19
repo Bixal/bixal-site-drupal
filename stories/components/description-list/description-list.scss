@@ -1,5 +1,13 @@
 @use "uswds-core" as *;
 
+.bix-description-list-collection {
+  @include at-media("desktop") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: units(2);
+  }
+}
+
 .bix-description-list {
   --_description-color: var(--description-color, currentColor);
 
