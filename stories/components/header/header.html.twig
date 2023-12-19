@@ -38,14 +38,14 @@
           <li class="bix-site-nav__item">
             <!-- @TODO: Refactor this button -->
             {% include "@components/button/button.html.twig" with {
-              label: "Join Us",
+              label: cta.label,
               modifier: "bix-button--inverse",
-              link: true
+              href: cta.href
             } %}
             {% include "@components/button/button.html.twig" with {
-              label: "Join Us",
+              label: cta.label,
               modifier: "desktop-only",
-              link: true
+              href: cta.href
             } %}
           </li>
         {% endif %}
