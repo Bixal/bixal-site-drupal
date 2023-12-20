@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# Exit the hook on any failure
 set -e
+
+./orch/show_file.sh $0
 
 green='\033[0;32m'
 NC='\033[0m'
@@ -49,19 +50,24 @@ else
     exit 1
 fi
 
-cd web/themes/custom/bixal_uswds
 
-if [ -d "node_modules" ]
-then
-    echo "Directory node_modules exists."
-    echo -e "${green}Removing node_modules folder${NC}"
-    rm -R node_modules
-else
-    echo ""
-fi
+# Run in sub-shell so CWD is preserved.
+(
+  cd web/themes/custom/bixal_uswds
 
-echo -e "${green}Installing NPMs${NC}"
-npm install
+  if [ -d "node_modules" ]
+  then
+      echo "Directory node_modules exists."
+      echo -e "${green}Removing node_modules folder${NC}"
+      rm -R node_modules
+  else
+      echo ""
+  fi
 
-echo -e "${yellow}Gulp Build${NC}"
-gulp
+  echo -e "${green}Installing NPMs${NC}"
+  npm install
+
+  echo -e "${yellow}Gulp Build${NC}"
+  gulp
+)
+./orch/show_file.sh $0 end
