@@ -41,12 +41,31 @@
 
 {% extends  "paragraph--default.html.twig" %}
 
+{% set variant = content.field_section_variant['#items'].getString() %}
+{% set bg_image = file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString())%}
+
+{% if variant == 'tall' %}
+  {% set variant = 'centered' %}
+  {% set additional_classes = 'bix-section--tall'%}
+{% elseif variant == 'background-image' %}
+  {% set variant = 'primary' %}
+{% endif %}
+
+{% set cta = [] %}
+{% set cta = cta|merge(
+  { 'link': content.field_button.0['#paragraph'].field_link.uri,
+    'label': content.field_button.0['#paragraph'].field_link.title,
+    'has_icon': content.field_button.0['#paragraph'].field_has_icon.value,
+    'modifier': content.field_button.0['#paragraph'].field_modifier.value,
+  }
+) %}
+
 {% block paragraph %}
-  {{ dd(content) }}
   {% include '@components/section/section.html.twig' with {
-    'content': TRUE,
     'title': content.field_title | field_value,
     'prefix': content.field_prefix_title | field_value,
     'description': content.field_description | field_value,
+    'cta': cta,
+    'image': bg_image
   } %}
 {% endblock paragraph %}
