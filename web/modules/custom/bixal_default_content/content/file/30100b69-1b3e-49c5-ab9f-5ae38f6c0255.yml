@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 30100b69-1b3e-49c5-ab9f-5ae38f6c0255
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: services-data.svg
+  uri:
+    -
+      value: 'public://2023-12/services-data_1.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 3529
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1702751817

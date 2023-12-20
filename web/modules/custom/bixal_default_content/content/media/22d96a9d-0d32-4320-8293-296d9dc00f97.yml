@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 22d96a9d-0d32-4320-8293-296d9dc00f97
+  bundle: image
+  default_langcode: en
+  depends:
+    8f014d49-2117-4876-98a4-d2fdbd6adb11: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-elearning.svg
+  created:
+    -
+      value: 1702751803
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 8f014d49-2117-4876-98a4-d2fdbd6adb11
+      alt: 'Elearning Icon'
+      title: ''
+      width: 0
+      height: 0

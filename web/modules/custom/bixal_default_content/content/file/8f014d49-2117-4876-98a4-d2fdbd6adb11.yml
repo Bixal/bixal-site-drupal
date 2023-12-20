@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 8f014d49-2117-4876-98a4-d2fdbd6adb11
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: services-elearning.svg
+  uri:
+    -
+      value: 'public://2023-12/services-elearning_1.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 4660
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1702751803

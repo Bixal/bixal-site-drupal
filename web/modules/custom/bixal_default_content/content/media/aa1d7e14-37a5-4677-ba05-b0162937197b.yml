@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: aa1d7e14-37a5-4677-ba05-b0162937197b
+  bundle: image
+  default_langcode: en
+  depends:
+    865a5386-71ab-4f9e-9e36-d180b8a84338: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: whatwedo_banner.jpeg
+  created:
+    -
+      value: 1702645422
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 865a5386-71ab-4f9e-9e36-d180b8a84338
+      alt: 'what we do'
+      title: ''
+      width: 2000
+      height: 1012

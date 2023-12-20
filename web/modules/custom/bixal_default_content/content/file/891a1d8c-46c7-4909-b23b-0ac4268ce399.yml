@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 891a1d8c-46c7-4909-b23b-0ac4268ce399
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: services-customer-experience.svg
+  uri:
+    -
+      value: 'public://2023-12/services-customer-experience_1.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 3496
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1702751740
