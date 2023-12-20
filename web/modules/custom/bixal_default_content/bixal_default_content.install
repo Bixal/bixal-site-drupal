@@ -11,7 +11,7 @@ use Drupal\Core\StreamWrapper\PublicStream;
 /**
  * Implements hook_install().
  */
-function drglinks_default_content_install() {
+function bixal_default_content_install() {
   // When default content installs files, it will start adding _0, _1 to the
   // ends of the files. Instead, delete all files on install so they don't get
   // updated and so new default content exports will not change their file name.
