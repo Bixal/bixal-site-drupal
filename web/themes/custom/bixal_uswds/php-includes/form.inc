@@ -62,7 +62,7 @@ function bixal_uswds_preprocess_form_element(&$vars): void {
  */
 function bixal_uswds_preprocess_form_element_label(&$vars): void {
   // Define the label for element.
-  if ($vars["element"]["#form_element_type"]) {
+  if (!empty($vars["element"]["#form_element_type"])) {
     $type = $vars["element"]["#form_element_type"];
     $vars['attributes']['class'][] = 'form-item__label usa-' . $type . '__label';
   }
