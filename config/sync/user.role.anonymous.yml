@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - media
+    - paragraphs_type_permissions
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -14,3 +15,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'view media'
+  - 'view paragraph content button'
+  - 'view paragraph content flip_card'
+  - 'view paragraph content flip_cards'
+  - 'view paragraph content section'

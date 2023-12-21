@@ -1,0 +1,27 @@
+uuid: 9c772557-12a5-4e0b-9fcb-ad22db6f0748
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_hero_variant
+field_name: field_hero_variant
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image-inline
+      label: 'Image Inline'
+    -
+      value: image-bg
+      label: 'Image Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

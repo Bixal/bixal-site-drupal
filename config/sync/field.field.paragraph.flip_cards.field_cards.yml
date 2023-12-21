@@ -1,0 +1,40 @@
+uuid: b4ec2415-d3d8-4567-923b-a6d403330b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.flip_card
+    - paragraphs.paragraphs_type.flip_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.flip_cards.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: flip_cards
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      flip_card: flip_card
+    negate: 0
+    target_bundles_drag_drop:
+      callout:
+        weight: 5
+        enabled: false
+      flip_card:
+        weight: 6
+        enabled: true
+      flip_cards:
+        weight: 7
+        enabled: false
+      section:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

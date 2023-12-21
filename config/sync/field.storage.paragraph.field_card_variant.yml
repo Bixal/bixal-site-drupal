@@ -1,0 +1,39 @@
+uuid: b80db05a-3964-47c8-8d38-5d5ed7db4fcc
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_card_variant
+field_name: field_card_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: accent-warm
+      label: accent-warm
+    -
+      value: accent-cool
+      label: accent-cool
+    -
+      value: primary
+      label: primary
+    -
+      value: accent-cool-alt
+      label: accent-cool-alt
+    -
+      value: primary-alt
+      label: primary-alt
+    -
+      value: accent-warm-dark
+      label: accent-warm-dark
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

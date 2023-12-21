@@ -1,0 +1,40 @@
+uuid: 010cc08e-d581-4db4-97db-0a47d1a9d3ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: section
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      button: button
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 5
+        enabled: true
+      flip_card:
+        weight: 6
+        enabled: false
+      flip_cards:
+        weight: 7
+        enabled: false
+      section:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions
