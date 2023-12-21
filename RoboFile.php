@@ -12,6 +12,13 @@ use Symfony\Component\Yaml\Yaml;
  */
 class RoboFile extends Tasks {
 
+  /**
+   * The path to the .lando.local.yml.
+   *
+   * @var string
+   */
+    protected string $lando_local_yml_path = '.lando.local.yml';
+
     /**
      * Add the server required to make Xdebug work in PhpStorm.
      *
@@ -110,11 +117,9 @@ class RoboFile extends Tasks {
    * @command xdebug:on-by-default
    */
     public function xdebugOnByDefault() {
-      $file_path = '.lando.local.yml';
-      $this->taskFilesystemStack()->touch($file_path)->run();
-      $yml_file = Yaml::parse(file_get_contents($file_path));
+      $yml_file = $this->getLandoLocalYml();
       $yml_value =& $yml_file['config']['xdebug'];
-      if (($yml_file['config']['xdebug'] ?? false) === true) {
+      if ($yml_value === true) {
         $this->yell('Xdebug is enabled by default, disabling now.');
         $yml_value = false;
         $this->_exec('lando xdebug-off');
@@ -124,7 +129,43 @@ class RoboFile extends Tasks {
         $yml_value = true;
         $this->_exec('lando xdebug-on');
       }
-      file_put_contents($file_path,  Yaml::dump($yml_file, 5));
+      $this->saveLandoLocalYml($yml_file);
+    }
+
+  /**
+   * Always have Xdebug try to connect to your IDE when any PHP script is run.
+   *
+   * This is handy if you want to debug CLI or not have to worry about
+   * triggering Xdebug to connect.
+   *
+   * https://xdebug.org/docs/step_debug
+   *
+   * @command xdebug:always-connect
+   */
+    public function xdebugAlwaysConnect() {
+      $yml_file = $this->getLandoLocalYml();
+      $yml_value =& $yml_file['services']['appserver']['overrides']['environment']['XDEBUG_SESSION'];
+      if ($yml_value === 1) {
+        $this->yell('Xdebug is is already connecting by default, disabling so trigger must be passed.');
+        unset($yml_file['services']['appserver']['overrides']['environment']);
+      }
+      else {
+        $this->yell('Allowing Xdebug to connect automatically. Warning: You will see "Step Debug" warnings about Xdebug not being able to connect when running CLI commands if you IDE is not listening.');
+        $yml_value = 1;
+      }
+      $this->saveLandoLocalYml($yml_file);
+      if ($this->confirm('You must rebuild lando in order for this to take effect. Rebuild?')) {
+        $this->_exec('lando rebuild -y');
+      }
+    }
+
+    protected function getLandoLocalYml(): array {
+      $this->taskFilesystemStack()->touch($this->lando_local_yml_path)->run();
+      return Yaml::parse(file_get_contents($this->lando_local_yml_path));
+    }
+
+    protected function saveLandoLocalYml(array $file_contents): bool {
+      return (bool) file_put_contents($this->lando_local_yml_path,  Yaml::dump($file_contents, 5));
     }
 
 }

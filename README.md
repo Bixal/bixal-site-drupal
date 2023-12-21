@@ -72,11 +72,19 @@ To enable Xdebug, you simply need to run:
 lando xdebug-on
 ```
 
-By default, xdebug will not be enabled when lando is built. To make the default enabled, run:
+By default, the Xdebug PHP module will not be enabled when lando is built. To make the default enabled, run:
 
 ```
 vendor/bin/robo xdebug:on-by-default
 ```
+
+Even when the Xdebug PHP module is enabled, it will not automatically connect to your IDE. To do so:
+
+```
+vendor/bin/robo xdebug:always-connect
+```
+
+This is handy if you want to debug CLI commands (Drush) or use the trigger method below.
 
 To turn it back off:
 ```
@@ -97,3 +105,19 @@ Then in the toolbar choose 'appserver' for your debug configuration.
 Install this plugin https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug.
 
 `.vscode/launch.json` takes care of the configuration.
+
+#### How do I trigger Xdebug?
+
+If you did not use the `xdebug:always-connect` command, you will need to trigger Xdebug to connect to your IDE. Do so by using one of the [Xdebug Extensions](https://xdebug.org/docs/step_debug#browser-extensions). Another option is to append ?XDEBUG_SESSION=1(This value does not matter) to the query string. This option is only for the CURRENT REQUEST. If you would like Xdebug to be enabled until the cookie is deleted, pass ?XDEBUG_SESSION_START=1(This value does not matter).
+
+If you want to debug CLI commands but you don't want Xdebug on always, you can do:
+`lando ssh -c 'export XDEBUG_SESSION=1 && drush status (or whatever command)'`
+
+#### Troubleshoot Xdebug
+
+There 2 minimum things that are required to make Xdebug work:
+* The Xdebug PHP module must be enabled, confirm with `lando ssh -c 'php -m | grep xdebug'`. It should print 'xdebug'
+   * If not see 'Enabling Xdebug' section above.
+* Your IDE must be listening for Xdebug connections. See the 'Configure Xdebug for X' sections. `lando drush eval 'print_r(getenv());' | grep XDEBUG_SESSION`
+
+Once those are in place, you now have to make sure Xdebug is trying to connect to your IDE. See the 'How do I trigger Xdebug?' section above.
