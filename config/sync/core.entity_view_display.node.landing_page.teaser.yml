@@ -1,0 +1,26 @@
+uuid: 026a88f8-cef2-4c9b-8820-3089ef3783ea
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_banner_image
+    - field.field.node.landing_page.field_paragraphs
+    - node.type.landing_page
+  module:
+    - user
+id: node.landing_page.teaser
+targetEntityType: node
+bundle: landing_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_paragraphs: true
+  langcode: true
+  search_api_excerpt: true
