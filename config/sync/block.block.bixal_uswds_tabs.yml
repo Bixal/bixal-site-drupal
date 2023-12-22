@@ -1,15 +1,13 @@
-uuid: 09ebab2f-a24e-44e5-a8d2-561d1da322b2
+uuid: 057d1786-617e-496a-a23c-07700c916bae
 langcode: en
 status: true
 dependencies:
   theme:
     - bixal_uswds
-_core:
-  default_config_hash: ezVrmCOm0kkrQu3AkWTHOJo9DOQPkTDQcpUqjCx3QIQ
-id: bixal_uswds_local_tasks
+id: bixal_uswds_tabs
 theme: bixal_uswds
-region: help
-weight: -5
+region: content
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:
