@@ -6,15 +6,16 @@ export default {
 };
 
 import "../base/base.stories";
-import BlurbCollectionContent from "../../components/blurb/blurb-collection.content.json";
 import "../../components/blurb/blurb.stories";
 
+import HeaderContent from "../../components/header/header.content.json";
 import EmphasisBlockCollectionContent from "../../components/emphasis-block/emphasis-block-collection.content.json";
 import "../../components/emphasis-block/emphasis-block.stories";
 
 // @TODO: Hero images should be webp.
 export const Default = {
   args: {
+    header: HeaderContent,
     hero: {
       variant: "image-bg",
       title: "Careers",
