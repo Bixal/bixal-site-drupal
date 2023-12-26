@@ -1,0 +1,14 @@
+@use "uswds-core" as *;
+
+.bix-social-nav {
+  margin-top: units(3);
+
+  &__items {
+    display: flex;
+    column-gap: units("05");
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}

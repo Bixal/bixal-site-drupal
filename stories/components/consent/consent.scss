@@ -1,0 +1,13 @@
+@use "uswds-core" as *;
+
+.bix-consent {
+  background-color: var(--c-accent-cool-alt);
+  color: color("ink");
+  padding: units(2);
+
+  @include at-media("tablet-lg") {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: units(4);
+  }
+}

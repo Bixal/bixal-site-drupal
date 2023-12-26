@@ -1,0 +1,11 @@
+name: 'Bixal Default Content Install'
+type: module
+description: 'Install this module to install the default content for the Bixal Site'
+package: Bixal default content
+dependencies:
+  - default_content:default_content
+core_version_requirement:  ^8 || ^9 || ^10
+# Information added by Drupal.org packaging script on 2022-08-02
+version: '2.0.0-alpha2'
+project: 'default_content'
+datestamp: 1659466708

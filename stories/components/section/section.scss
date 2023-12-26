@@ -1,0 +1,59 @@
+@use "uswds-core" as *;
+
+// @TODO Create mixin.
+.bix-section {
+  padding: 100px 0;
+
+  &__footer {
+    margin-top: units(6);
+  }
+}
+
+.bix-section--base {
+  background-color: color("gray-4");
+}
+
+.bix-section--primary {
+  background-color: var(--c-primary);
+  color: color("white");
+
+  .bix-input {
+    background-color: transparent;
+    color: inherit;
+
+    &:focus,
+    &:active {
+      background-color: color-mix(in srgb, var(--c-primary) 5%, black 30%);
+    }
+
+    &::placeholder {
+      color: rgba(white, 0.6);
+    }
+  }
+}
+
+.bix-section--primary-alt {
+  background-color: var(--c-primary-alt);
+  color: color("white");
+
+  .bix-input {
+    background-color: transparent;
+    color: inherit;
+
+    &::placeholder {
+      color: rgba(white, 0.6);
+    }
+  }
+}
+
+.bix-section--centered {
+  text-align: center;
+
+  .bix-section__title::after {
+    content: none;
+  }
+}
+
+.bix-section--tall {
+  min-height: px-to-rem(800px);
+}

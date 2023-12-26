@@ -1,0 +1,39 @@
+uuid: 5519643f-79d7-4805-806e-55a729b53470
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_section_variant
+field_name: field_section_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: base
+      label: Base
+    -
+      value: primary
+      label: Primary
+    -
+      value: background-image
+      label: 'Background Image'
+    -
+      value: centered
+      label: Centered
+    -
+      value: tall
+      label: Tall
+    -
+      value: primary-alt
+      label: Primary-alt
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

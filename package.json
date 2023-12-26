@@ -5,7 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run storybook",
+    "storybook": "storybook dev -p 80",
+    "storybook:local": "storybook dev -p 5050",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,21 @@
     "url": "https://github.com/Bixal/bixal-site-drupal/issues"
   },
   "homepage": "https://github.com/Bixal/bixal-site-drupal#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/html": "^7.5.3",
+    "@storybook/html-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@uswds/uswds": "^3.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.5",
+    "storybook": "^7.5.3",
+    "stylelint": "^15.11.0",
+    "stylelint-prettier": "^4.1.0",
+    "vite-plugin-twig-drupal": "^1.0.2"
+  }
 }

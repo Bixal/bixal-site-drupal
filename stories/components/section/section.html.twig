@@ -1,0 +1,41 @@
+<section class="bix-section {{ variant ? "bix-section--" ~ variant : "" }} {{ additional_classes }}" {% if image %}
+  style="background-image: url('{{ image }}')"
+{% endif %}>
+  <div class="bix-container">
+    {% block header %}
+      {% if prefix %}
+      <div class="bix-title-prefix">
+        {{ prefix }}
+      </div>
+      {% endif %}
+      {% if title %}
+      <h2 class="bix-section__title">
+        {{ title }}
+      </h2>
+      {% endif %}
+    {% endblock %}
+
+    {% block body %}
+      {% if description %}
+      <div class="who-we-are__description">
+        <p>
+          {{ description }}
+        </p>
+      </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block footer %}
+      {% if cta.label %}
+        <div class="bix-section__footer">
+          {% include "@components/button/button.html.twig" with {
+            modifier: cta.modifier,
+            label: cta.label,
+            href: cta.href,
+            has_icon: cta.has_icon
+          } %}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section id="contact" class="bix-contact bix-section bix-section--primary">
+  <div class="bix-container">
+    <div class="bix-contact__content">
+      <div class="contact__overview">
+        <div class="bix-title-prefix">Contact</div>
+        <h2>
+          How can we help?<br />
+          We'd love to hear from you.
+        </h2>
+      </div>
+      <form class="bix-contact__form" id="emailContactForm">
+        <div data-test-id="first-name">
+          <input
+            type="text"
+            required=""
+            aria-label="first name"
+            class="bix-input"
+            placeholder="First Name *"
+            name="first_name"
+            value=""
+          />
+        </div>
+        <div data-test-id="last-name">
+          <input
+            type="text"
+            required=""
+            aria-label="last name"
+            class="bix-input"
+            placeholder="Last Name *"
+            name="last_name"
+            value=""
+          />
+        </div>
+        <div data-test-id="email">
+          <input
+            type="text"
+            required=""
+            aria-label="email"
+            class="bix-input"
+            placeholder="Email *"
+            name="email"
+            value=""
+          />
+        </div>
+        <div data-test-id="company">
+          <input
+            type="text"
+            aria-label="company"
+            class="bix-input"
+            placeholder="Company"
+            name="company"
+            value=""
+          />
+        </div>
+        <textarea
+            required=""
+            aria-label="message"
+            class="bix-input bix-input--textarea"
+            type="text"
+            placeholder="Want to find out more or interested in doing business with us? type message here... *"
+            name="message"
+        ></textarea>
+        <div class="bix-contact__actions">
+          {% include "@components/button/button.html.twig" with {
+            modifier: "bix-button--inverse",
+            label: "Submit",
+            type: "submit",
+            has_icon: "true"
+          } %}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

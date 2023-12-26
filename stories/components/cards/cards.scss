@@ -1,0 +1,102 @@
+@use "uswds-core" as *;
+
+.bix-flip-card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+  gap: units(2);
+  justify-content: center;
+}
+
+.bix-card-flip {
+  --_card-primary-color: var(--card-primary-color, var(--c-accent-warm));
+  --_card-accent-color: var(--card-accent-color, var(--c-primary-alt));
+
+  height: 450px;
+  max-width: 450px;
+  position: relative;
+
+  &__face {
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: var(--_card-primary-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: units(3);
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: ease-in-out 450ms;
+    width: 100%;
+  }
+
+  &__face--front {
+  }
+
+  &__face--front .bix-icon {
+    fill: var(--_card-accent-color);
+    margin: units(3);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__face--back {
+    transform: rotateY(180deg);
+
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: var(--_card-accent-color);
+      position: absolute;
+      bottom: units(3);
+      left: units(3);
+      right: units(3);
+    }
+  }
+
+  &:hover &__face--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__face--back {
+    transform: rotateY(0deg);
+  }
+
+  &__title {
+    color: var(--_card-accent-color);
+    font-size: px-to-rem(26px);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    margin-top: units(6);
+    letter-spacing: -0.5px;
+  }
+}
+
+.bix-card-flip--accent-cool {
+  --card-primary-color: var(--c-accent-cool);
+  --card-accent-color: var(--c-accent-warm-dark);
+}
+
+.bix-card-flip--primary {
+  --card-primary-color: var(--c-primary);
+  --card-accent-color: var(--c-accent-vivid);
+  color: color("white");
+}
+
+.bix-card-flip--accent-cool-alt {
+  --card-primary-color: var(--c-accent-cool-alt);
+  --card-accent-color: var(--c-primary);
+}
+
+.bix-card-flip--primary-alt {
+  --card-primary-color: var(--c-primary-alt);
+  --card-accent-color: var(--c-accent-warm);
+  color: color("white");
+}
+
+.bix-card-flip--accent-warm-dark {
+  --card-primary-color: var(--c-accent-warm-dark);
+  --card-accent-color: var(--c-accent-cool-alt);
+  color: color("white");
+}

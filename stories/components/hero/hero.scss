@@ -1,0 +1,63 @@
+@use "uswds-core" as *;
+
+.bix-hero {
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  padding: 40px 0;
+
+  @include at-media("desktop") {
+    padding: 80px 0 90px;
+  }
+
+  &__container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__body p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bix-hero--image-bg {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  overflow: hidden;
+
+  .bix-hero__title {
+    color: color("white");
+  }
+
+  @include at-media("desktop") {
+    min-height: 600px;
+  }
+}
+
+.bix-hero--image-inline {
+  background-color: var(--c-primary);
+  color: color("white");
+
+  @include at-media("tablet-lg") {
+    .bix-hero__container {
+      display: grid;
+      grid-template-columns: minmax(400px, 1fr) 4fr;
+      column-gap: units(8);
+      align-items: end;
+      width: 85%;
+    }
+
+    .bix-hero__media img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+
+  .bix-hero__title {
+    font-size: 72px;
+    letter-spacing: -2.4px;
+  }
+}
