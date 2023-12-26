@@ -1,0 +1,23 @@
+uuid: 9b8424d9-f95c-4e86-98db-ff563c735200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_variant
+    - paragraphs.paragraphs_type.section
+  module:
+    - options
+id: paragraph.section.field_section_variant
+field_name: field_section_variant
+entity_type: paragraph
+bundle: section
+label: 'Section Variant'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: base
+default_value_callback: ''
+settings: {  }
+field_type: list_string

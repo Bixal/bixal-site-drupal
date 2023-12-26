@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a13cc299-6c78-432f-9dda-d838d488f2e2
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: work_with_us.jpeg
+  uri:
+    -
+      value: 'public://2023-12/work_with_us.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 265946
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703100587

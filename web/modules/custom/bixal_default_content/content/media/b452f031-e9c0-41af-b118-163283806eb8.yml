@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b452f031-e9c0-41af-b118-163283806eb8
+  bundle: image
+  default_langcode: en
+  depends:
+    a13cc299-6c78-432f-9dda-d838d488f2e2: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: work_with_us.jpeg
+  created:
+    -
+      value: 1703100587
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: a13cc299-6c78-432f-9dda-d838d488f2e2
+      alt: 'People working together'
+      title: ''
+      width: 2000
+      height: 1012

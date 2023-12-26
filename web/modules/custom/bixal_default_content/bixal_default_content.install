@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Bixal USWDS module/theme.
+ */
+
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\StreamWrapper\PublicStream;
+
+/**
+ * Implements hook_install().
+ */
+function bixal_default_content_install() {
+  // When default content installs files, it will start adding _0, _1 to the
+  // ends of the files. Instead, delete all files on install so they don't get
+  // updated and so new default content exports will not change their file name.
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $public_path = PublicStream::basePath();
+  $file_system->deleteRecursive($public_path);
+  $file_system->prepareDirectory($public_path, FileSystemInterface::CREATE_DIRECTORY);
+}

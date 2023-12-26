@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 640588a2-9696-4017-8381-37232afe0939
+  bundle: image
+  default_langcode: en
+  depends:
+    4d203474-0fc8-43cf-9279-07e97cd450ca: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-agile.svg
+  created:
+    -
+      value: 1702751771
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 4d203474-0fc8-43cf-9279-07e97cd450ca
+      alt: 'Agile Icon'
+      title: ''
+      width: 0
+      height: 0

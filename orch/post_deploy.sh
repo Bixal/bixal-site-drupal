@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Post deploy hook is NOT called locally (on Lando).
-# Exit the hook on any failure and show execution.
-set -ex
+set -e
+
+./orch/show_file.sh $0
 
 # Clear the post deploy log.
 echo "" > /var/log/post-deploy.log
@@ -13,3 +13,4 @@ echo "Environment Type: ${PLATFORM_ENVIRONMENT_TYPE}"
 echo 'POST DEPLOY LOG:'
 tail -n100 /var/log/post-deploy.log
 
+./orch/show_file.sh $0 end

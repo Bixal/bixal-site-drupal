@@ -1,0 +1,25 @@
+uuid: 873a6658-c2c4-4c88-8602-6aae428fa9ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flip_cards.field_cards
+    - paragraphs.paragraphs_type.flip_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.flip_cards.default
+targetEntityType: paragraph
+bundle: flip_cards
+mode: default
+content:
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

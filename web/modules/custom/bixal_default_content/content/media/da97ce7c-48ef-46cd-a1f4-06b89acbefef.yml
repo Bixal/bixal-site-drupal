@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: da97ce7c-48ef-46cd-a1f4-06b89acbefef
+  bundle: image
+  default_langcode: en
+  depends:
+    30100b69-1b3e-49c5-ab9f-5ae38f6c0255: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-data.svg
+  created:
+    -
+      value: 1702751817
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 30100b69-1b3e-49c5-ab9f-5ae38f6c0255
+      alt: 'Data icon'
+      title: ''
+      width: 0
+      height: 0

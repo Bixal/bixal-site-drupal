@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5e7444ea-3cf5-42e9-b873-8ff4c4d73405
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: img-b-hero-7.webp
+  uri:
+    -
+      value: 'public://2023-12/img-b-hero-7.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 50514
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703104931

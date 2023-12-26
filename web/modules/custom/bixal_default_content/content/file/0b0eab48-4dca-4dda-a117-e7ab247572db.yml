@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0b0eab48-4dca-4dda-a117-e7ab247572db
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: drupal-govcon-1.png
+  uri:
+    -
+      value: 'public://2023-12/drupal-govcon-1_1_1.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 3016297
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1702645340
