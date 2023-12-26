@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Exit the hook on any failure
 set -e
+
+./orch/show_file.sh $0
+
 # If this was not built on lando (local), then
 if [ -z "${LANDO_INFO}" ]; then
   # Don't install dev dependencies remotely.
@@ -32,3 +34,5 @@ fi
 #    pip install futures
 #    pip install awscli --upgrade --user 2>/dev/null
 #fi
+
+./orch/show_file.sh $0 end

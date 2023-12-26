@@ -2,6 +2,8 @@
 
 set -e
 
+./orch/show_file.sh $0
+
 # Drupal must be installed to update it.
 if [ -n "$(drush status --fields=bootstrap)" ]; then
   echo "Ensure site is up to date from code"
@@ -15,3 +17,5 @@ else
   echo "Drupal is not installed, cannot update. Installing instead"
   ./orch/deploy_install.sh
 fi
+
+./orch/show_file.sh $0 end

@@ -2,6 +2,8 @@
 
 set -e
 
+./orch/show_file.sh $0
+
 if [ -n "$(drush status --fields=bootstrap)" ]; then
   echo "Drupal is installed, continuing."
   drush core-cron
@@ -25,3 +27,4 @@ else
   echo "Drupal is not installed, this should not be the case in post deploy."
 fi
 
+./orch/show_file.sh $0 end
