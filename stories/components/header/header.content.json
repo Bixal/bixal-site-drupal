@@ -1,0 +1,29 @@
+{
+  "logo": {
+    "href": "#",
+    "image": "https://www.bixal.com/static/e90efae7e816749d805876341ba16f9a/bixal-logo-full.svg"
+  },
+  "nav": [
+    {
+      "label": "Our work",
+      "href": "javascript:void(0)"
+    },
+    {
+      "label": "Contract Vehicles"
+    },
+    {
+      "label": "Careers"
+    },
+    {
+      "label": "Blog",
+      "current": true
+    },
+    {
+      "label": "About Bixal"
+    }
+  ],
+  "cta": {
+    "label": "Join Us",
+    "href": "javascript:void(0)"
+  }
+}

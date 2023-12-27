@@ -1,4 +1,4 @@
-{% set is_link = link | default(false) %}
+{% set is_link = href | default(false) %}
 {% set has_icon = has_icon | default(false) %}
 
 {% set button_classes = "bix-button" ~ (modifier ? " " ~ modifier : "")  %}
