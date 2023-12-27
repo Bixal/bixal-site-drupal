@@ -11,6 +11,9 @@ use Drupal\node\NodeInterface;
  * Implements hook_preprocess_page().
  */
 function bixal_uswds_preprocess_page(&$vars) {
+  $vars['header'] = [
+    '#theme' => 'site_wrapper_header',
+  ];
   // Define the node.
   $node = \Drupal::routeMatch()->getParameter('node');
   // Add the module handler service.

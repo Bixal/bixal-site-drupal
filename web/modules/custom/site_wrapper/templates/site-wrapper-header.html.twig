@@ -1,0 +1,7 @@
+{# Attributes is only used for the contextual links. This will put an extra wrapper around the header, that's why
+  it's not going around the header.html.twig.
+#}
+{{ main_nav_cl }}
+{% include "@components/header/header.html.twig" with {nav, cta, logo} %}
+{{ main_nav_cta_cl }}
+
