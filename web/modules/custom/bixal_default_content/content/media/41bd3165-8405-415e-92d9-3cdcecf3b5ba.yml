@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: e79ab8aa-8785-40e3-9bdf-593f73ced382
+  uuid: 41bd3165-8405-415e-92d9-3cdcecf3b5ba
   bundle: image
   default_langcode: en
   depends:
-    0b0eab48-4dca-4dda-a117-e7ab247572db: file
+    84ff3d21-f2c5-43d4-9f80-d9068e041025: file
 default:
   status:
     -
@@ -15,10 +15,10 @@ default:
       target_id: 1
   name:
     -
-      value: drupal-govcon-1.png
+      value: human-centered.png
   created:
     -
-      value: 1702645340
+      value: 1703789026
   revision_translation_affected:
     -
       value: true
@@ -40,8 +40,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: 0b0eab48-4dca-4dda-a117-e7ab247572db
-      alt: 'USAID Banner'
+      entity: 84ff3d21-f2c5-43d4-9f80-d9068e041025
+      alt: 'Human Centered Design article'
       title: ''
-      width: 4032
-      height: 3024
+      width: 3840
+      height: 1745

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b127fb33-c9c2-4c87-b970-9f189b32b537
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: blog-and-news-header.png
+  uri:
+    -
+      value: 'public://2023-12/blog-and-news-header.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 190062
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703793737

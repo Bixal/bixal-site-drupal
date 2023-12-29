@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: e79ab8aa-8785-40e3-9bdf-593f73ced382
+  uuid: 56c08cd5-180c-4bf4-9288-8c3195d4213b
   bundle: image
   default_langcode: en
   depends:
-    0b0eab48-4dca-4dda-a117-e7ab247572db: file
+    b127fb33-c9c2-4c87-b970-9f189b32b537: file
 default:
   status:
     -
@@ -15,10 +15,10 @@ default:
       target_id: 1
   name:
     -
-      value: drupal-govcon-1.png
+      value: blog-and-news-header.png
   created:
     -
-      value: 1702645340
+      value: 1703793737
   revision_translation_affected:
     -
       value: true
@@ -40,8 +40,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: 0b0eab48-4dca-4dda-a117-e7ab247572db
-      alt: 'USAID Banner'
+      entity: b127fb33-c9c2-4c87-b970-9f189b32b537
+      alt: 'Blog and News Banner'
       title: ''
-      width: 4032
-      height: 3024
+      width: 1376
+      height: 778

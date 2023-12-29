@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: e79ab8aa-8785-40e3-9bdf-593f73ced382
+  uuid: 4103e217-a4a4-4b2a-a3db-806dfe467da3
   bundle: image
   default_langcode: en
   depends:
-    0b0eab48-4dca-4dda-a117-e7ab247572db: file
+    14fbcfce-fdc0-4c73-89c7-0baa62f162f3: file
 default:
   status:
     -
@@ -15,10 +15,10 @@ default:
       target_id: 1
   name:
     -
-      value: drupal-govcon-1.png
+      value: bridging-the-digital-health-divide.png
   created:
     -
-      value: 1702645340
+      value: 1703259533
   revision_translation_affected:
     -
       value: true
@@ -40,8 +40,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: 0b0eab48-4dca-4dda-a117-e7ab247572db
-      alt: 'USAID Banner'
+      entity: 14fbcfce-fdc0-4c73-89c7-0baa62f162f3
+      alt: 'Banner Image'
       title: ''
-      width: 4032
-      height: 3024
+      width: 3840
+      height: 1745

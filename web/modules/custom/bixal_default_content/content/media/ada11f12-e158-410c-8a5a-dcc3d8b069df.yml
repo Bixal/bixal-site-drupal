@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: e79ab8aa-8785-40e3-9bdf-593f73ced382
+  uuid: ada11f12-e158-410c-8a5a-dcc3d8b069df
   bundle: image
   default_langcode: en
   depends:
-    0b0eab48-4dca-4dda-a117-e7ab247572db: file
+    262700c3-b480-47dc-8cba-2a754ed19367: file
 default:
   status:
     -
@@ -15,10 +15,10 @@ default:
       target_id: 1
   name:
     -
-      value: drupal-govcon-1.png
+      value: localization.png
   created:
     -
-      value: 1702645340
+      value: 1703789340
   revision_translation_affected:
     -
       value: true
@@ -40,8 +40,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: 0b0eab48-4dca-4dda-a117-e7ab247572db
-      alt: 'USAID Banner'
+      entity: 262700c3-b480-47dc-8cba-2a754ed19367
+      alt: 'Localization Banner'
       title: ''
-      width: 4032
-      height: 3024
+      width: 3840
+      height: 1745
