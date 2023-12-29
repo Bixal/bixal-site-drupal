@@ -1,0 +1,17 @@
+{#
+ /**
+  * @file
+  * Theme override to display a paragraph - View embed.
+  *
+  * Drupal variables:
+  * - field_view_name: (taxonomy reference: views) Required - Term for Views Vocab
+  *
+  */
+#}
+
+{% set display_name = content.field_view_name.0['#entity'].field_display_name.0.value %}
+{% set machine_name = content.field_view_name.0['#entity'].field_machine_name.0.value %}
+
+{% block content %}
+  {{ drupal_view(machine_name, display_name) }}
+{% endblock %}
