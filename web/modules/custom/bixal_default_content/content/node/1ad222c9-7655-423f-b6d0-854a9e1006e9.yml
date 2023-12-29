@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Key Learnings for a More Inclusive Global Health Landscape | Drush Site-Install'
+        content: 'Key Learnings for a More Inclusive Global Health Landscape | Drupal'
     -
       tag: meta
       attributes:

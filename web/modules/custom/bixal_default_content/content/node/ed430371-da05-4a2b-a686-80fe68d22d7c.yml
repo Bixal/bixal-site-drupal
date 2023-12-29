@@ -43,7 +43,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'This is Bixal | Drush Site-Install'
+        content: 'This is Bixal | Drupal'
     -
       tag: link
       attributes:

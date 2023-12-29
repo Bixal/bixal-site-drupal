@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Insights and Expertise: Bixal’s Impactful Presentations at Drupal GovCon 2023 | Drush Site-Install'
+        content: 'Insights and Expertise: Bixal’s Impactful Presentations at Drupal GovCon 2023 | Drupal'
     -
       tag: meta
       attributes:

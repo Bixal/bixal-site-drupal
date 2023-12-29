@@ -24,7 +24,6 @@
   display: inline-block;
   height: 40px;
   margin: 0;
-  outline: none;
   padding: 0;
   position: relative;
   text-transform: uppercase;
@@ -62,22 +61,31 @@
 
   &__line:first-child {
     transform: translate3d(0, -3px, 0) rotate(0);
+
+    .is-active & {
+      transform: rotate(-45deg);
+    }
   }
 
   &__line:last-child {
     transform: translate3d(0, 3px, 0);
+
+    .is-active & {
+      transform: rotate(45deg);
+    }
   }
 
   &__text {
-    bottom: 5px;
+    bottom: 2px;
     color: #000;
-    font-size: 10px;
+    font-size: px-to-rem(10px);
+    font-weight: 700;
     left: 0;
     line-height: 1;
     position: absolute;
     text-align: center;
-    transform: translateZ(0);
     transform-origin: center;
+    transform: translateZ(0);
     transition:
       color 0.2s ease-out,
       transform 0.2s ease-out;
@@ -103,6 +111,7 @@
     margin-top: 0;
     margin-bottom: 0;
     list-style: none;
+    padding-left: 0;
 
     @include at-media("desktop") {
       align-items: center;

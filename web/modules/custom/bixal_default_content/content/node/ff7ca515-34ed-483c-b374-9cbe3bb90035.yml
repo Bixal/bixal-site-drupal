@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'The Evolving Role of Human-Centered Technology, Key Strategies for Effectively Leveraging the Potential of AI and More: A Q&A With Bixal VP of Technology, Erica Stephens. | Drush Site-Install'
+        content: 'The Evolving Role of Human-Centered Technology, Key Strategies for Effectively Leveraging the Potential of AI and More: A Q&A With Bixal VP of Technology, Erica Stephens. | Drupal'
     -
       tag: meta
       attributes:

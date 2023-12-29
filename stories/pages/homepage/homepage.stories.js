@@ -1,5 +1,6 @@
 import Homepage from "./homepage.html.twig";
 
+import HeaderContent from "../../components/header/header.content.json";
 import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
@@ -19,6 +20,7 @@ export default {
 
 export const Default = {
   args: {
+    header: HeaderContent,
     hero: {
       variant: "image-inline",
       image:
@@ -48,6 +50,7 @@ export const Default = {
         label: "Explore case studies",
         modifier: "bix-button--inverse",
         has_icon: true,
+        href: "#",
       },
     },
     flipCards: FlipCardContent,
@@ -67,6 +70,7 @@ export const Default = {
         "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.",
       cta: {
         label: "Join our team",
+        href: "#",
         has_icon: true,
       },
     },

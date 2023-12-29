@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Influencing UX Stakeholder Values | Drush Site-Install'
+        content: 'Influencing UX Stakeholder Values | Drupal'
     -
       tag: meta
       attributes:

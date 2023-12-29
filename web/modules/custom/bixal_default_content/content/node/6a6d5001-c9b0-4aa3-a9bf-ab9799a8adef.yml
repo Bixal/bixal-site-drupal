@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'What Is Localization, Anyway? Four Ways To Put Local People Front and Center in International Development | Drush Site-Install'
+        content: 'What Is Localization, Anyway? Four Ways To Put Local People Front and Center in International Development | Drupal'
     -
       tag: meta
       attributes:

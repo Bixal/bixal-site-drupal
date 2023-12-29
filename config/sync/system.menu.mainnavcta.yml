@@ -1,0 +1,8 @@
+uuid: 6b851949-fa4b-4fcd-92be-ef511f04e8ed
+langcode: en
+status: true
+dependencies: {  }
+id: mainnavcta
+label: 'Main Navigation CTA'
+description: 'Add only only a single menu link to be shown as CTA button.'
+locked: false

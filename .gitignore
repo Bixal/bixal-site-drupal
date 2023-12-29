@@ -216,6 +216,7 @@ dist
 #/web/sites/default/services.yml
 #/web/sites/default/settings.php
 #/web/sites/default/settings.platformsh.php
+#.vscode/launch.json
 # Don't include !/
                 #/*
 # As that will ignore things at the top level that aren't added.
@@ -240,5 +241,7 @@ dist
 !/web/sites/default/settings.lando.php
 !/web/sites/default/settings.platformsh.php
 !/web/profiles/custom
-
+.vscode/*
+!.vscode/
+!.vscode/launch.json
 #### End added by Bixal project scaffolding ####

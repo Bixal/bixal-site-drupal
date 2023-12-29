@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: c63d8f1b-e774-4f01-8226-94fa5f55be96
+  uuid: c36ec7cf-71b6-42c9-855a-8d1939f2632c
   bundle: menu_link_content
   default_langcode: en
 default:
@@ -10,13 +10,13 @@ default:
       value: true
   title:
     -
-      value: 'Contract Vehicles'
+      value: 'Join Us'
   menu_name:
     -
-      value: main
+      value: mainnavcta
   link:
     -
-      uri: 'https://google.com'
+      uri: 'internal:/'
       title: ''
       options: {  }
   external:
@@ -24,10 +24,10 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
-      value: -50
+      value: 0
   expanded:
     -
       value: false
@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: '| Drush Site-Install'
+        content: '| Drupal'
     -
       tag: link
       attributes:

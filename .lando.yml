@@ -5,20 +5,33 @@ config:
   via: nginx
   php: '8.1'
   database: mariadb:10.3
-  xdebug: true
+  # Off by default, enabled with lando xdebug-on.
+  xdebug: false
 
 services:
   appserver:
     build:
       - "./orch/build.sh"
+    config:
+      php: lando-config/php.ini
     overrides:
       environment:
-        # Required in order to enable CLI debug.
-        # https://docs.lando.dev/guides/lando-phpstorm.html.
-        #XDEBUG_SESSION_START: lando
         # This is equivalent to setting drush/drush.yml options.uri.
         # Handy so one does not need to set --uri on drush calls, like uli.
         DRUSH_OPTIONS_URI: 'http://bixalcom.lndo.site'
+        # Allows path mapping in PhpStorm and CLI debugging.
+        # https://docs.lando.dev/guides/lando-phpstorm.html#debugging-cli-commands.
+        PHP_IDE_CONFIG: "serverName=appserver"
+        # Set debug mode here, instead of in config: xdebug so it can be toggled off and on.
+        # Develop allows additional features, like html in var_dump.
+        # https://xdebug.org/docs/develop.
+        # Debug allows step debugging.
+        # https://xdebug.org/docs/remote.
+        XDEBUG_MODE: 'debug,develop'
+        # DO NOT USE XDEBUG_CONFIG, instead set these in lando-config/php.ini.
+        # If you set them here, they unset the magic lando does for xdebug.client_host.
+        # You can see these by: lando drush eval 'print_r(getenv());' | grep XDEBUG_CONFIG
+        #XDEBUG_CONFIG: 'log_level=0'
 
   # https://docs.lando.dev/redis/config.html
   # Ensure configured at /admin/reports/redis.
@@ -84,6 +97,21 @@ tooling:
       - "./orch/deploy_shared_install.sh"
       - "./orch/post_deploy_shared.sh"
       - "drush uli"
+  xdebug-on:
+    service: appserver
+    description: Enable Xdebug.
+    user: root
+    cmd:
+      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
+  xdebug-off:
+    service: appserver
+    description: Disable Xdebug.
+    user: root
+    cmd:
+      - "[ -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini ]] && { rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload; } || { echo 'Xdebug is already disabled.'; }"
+      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo
+
 proxy:
   phpmyadmin:
     - phpmyadmin.bixalcom.lndo.site

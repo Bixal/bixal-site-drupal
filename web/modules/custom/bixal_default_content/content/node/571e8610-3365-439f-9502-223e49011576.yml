@@ -36,7 +36,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Improving UX for Content Managers in Drupal: 5 Practical Tips for Success | Drush Site-Install'
+        content: 'Improving UX for Content Managers in Drupal: 5 Practical Tips for Success | Drupal'
     -
       tag: meta
       attributes:

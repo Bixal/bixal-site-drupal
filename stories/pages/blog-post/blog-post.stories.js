@@ -5,6 +5,7 @@ export default {
   component: BlogPost,
 };
 
+import HeaderContent from "../../components/header/header.content.json";
 import "../../components/header/header.stories";
 import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
@@ -13,6 +14,7 @@ import "../../components/footer/footer.stories";
 
 export const Default = {
   args: {
+    ...HeaderContent,
     hero: {
       variant: "image-bg",
       title: "Blog and News",

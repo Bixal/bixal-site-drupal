@@ -27,7 +27,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: '| Drush Site-Install'
+        content: '| Drupal'
     -
       tag: link
       attributes:
