@@ -1,0 +1,29 @@
+uuid: 2b7dc07c-6247-4154-87e3-6b700cb15dd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_name
+    - paragraphs.paragraphs_type.view_embed
+    - taxonomy.vocabulary.view_embed
+id: paragraph.view_embed.field_view_name
+field_name: field_view_name
+entity_type: paragraph
+bundle: view_embed
+label: 'View Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      view_embed: view_embed
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
