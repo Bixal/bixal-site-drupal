@@ -4,6 +4,11 @@
 .bix-section {
   padding: 100px 0;
 
+  &__body p {
+    max-width: px-to-rem(725px);
+    widows: 3;
+  }
+
   &__footer {
     margin-top: units(6);
   }
@@ -49,6 +54,10 @@
 .bix-section--centered {
   text-align: center;
 
+  .bix-section__body p {
+    max-width: none;
+  }
+
   .bix-section__title::after {
     content: none;
   }
@@ -56,4 +65,12 @@
 
 .bix-section--tall {
   min-height: px-to-rem(800px);
+}
+
+.bix-section--image-bg {
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-top: px-to-rem(160px);
+  padding-bottom: px-to-rem(160px);
 }

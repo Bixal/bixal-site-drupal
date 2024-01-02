@@ -1,0 +1,13 @@
+<div class="bix-emphasis-blocks">
+  <div class="bix-emphasis-blocks__body">
+    {% for block in blocks %}
+    {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}
+  {% endfor %}
+  </div>
+
+  <div class="bix-emphasis-blocks__footer">
+    {% if cta.label %}
+      {% include "@components/button/button.html.twig" with cta %}
+    {% endif %}
+  </div>
+</div>

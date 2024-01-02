@@ -1,10 +1,74 @@
 @use "uswds-core" as *;
 
+.bix-emphasis-blocks {
+  // The grid container.
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: units(2);
+
+    @include at-media("tablet") {
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .bix-emphasis-block {
+      @include at-media("tablet") {
+        flex-basis: calc(50% - #{units(1)});
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: units(3);
+  }
+}
+
 .bix-emphasis-block {
+  --_link-bg-color: var(--link-bg-color, rgba(125, 0, 150, 0.5));
+
   align-items: center;
   justify-content: center;
   background-color: color("gray-4");
   display: flex;
   flex-flow: column nowrap;
   padding: units(6) units(9);
+
+  &__prefix {
+    --_border-color: color-mix(in srgb, black, white 75%);
+    border-left: 2px solid var(--_border-color);
+    border-right: 2px solid var(--_border-color);
+    font-weight: 700;
+    font-size: px-to-rem(16px);
+    line-height: 1;
+    margin-top: units("05");
+    margin-bottom: units("05");
+    padding-left: units(2);
+    padding-right: units(2);
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: px-to-rem(30px);
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+    margin-top: units(1);
+    margin-bottom: units(2);
+  }
+
+  &__link {
+    box-shadow: var(--_link-bg-color) 0px -2px 0px inset;
+    text-decoration: none;
+    padding-left: units("05");
+    padding-right: units("05");
+    transition: box-shadow 0.25s;
+
+    &:hover,
+    &:focus {
+      box-shadow: var(--_link-bg-color) 0px -100px 0px inset;
+    }
+  }
 }

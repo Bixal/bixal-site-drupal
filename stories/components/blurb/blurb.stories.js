@@ -6,6 +6,7 @@ import "./blurb.scss";
 
 export default {
   title: "Components/Blurb",
+  tags: ["autodocs"],
   component: Blurb,
 };
 
@@ -19,5 +20,13 @@ export const Default = {
 
 export const BlurbCollection = {
   args: BlurbCollectionContent,
+  render: BlurbCollectionTemplate,
+};
+
+export const BlurbCollectionThreeUp = {
+  args: {
+    ...BlurbCollectionContent,
+    variant: "three-up",
+  },
   render: BlurbCollectionTemplate,
 };

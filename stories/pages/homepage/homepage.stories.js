@@ -35,7 +35,7 @@ export const Default = {
       title:
         "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",
       description:
-        "Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.",
+        "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
     },
     whatWeDo: {
       variant: "primary",
@@ -45,7 +45,7 @@ export const Default = {
       title:
         "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
       description:
-        "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.",
+        "<p>We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.</p>",
       cta: {
         label: "Explore case studies",
         modifier: "bix-button--inverse",

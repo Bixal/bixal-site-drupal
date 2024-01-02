@@ -17,10 +17,8 @@
 
     {% block body %}
       {% if description %}
-      <div class="who-we-are__description">
-        <p>
-          {{ description }}
-        </p>
+      <div class="bix-section__body">
+        {{ description | raw }}
       </div>
       {% endif %}
     {% endblock %}
