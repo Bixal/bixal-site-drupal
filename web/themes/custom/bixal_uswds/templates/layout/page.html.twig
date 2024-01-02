@@ -39,74 +39,11 @@
 */
 #}
 
-{% if page.sidebar %}
-  {% set content_grid_class = 'desktop:grid-col-9 order-last' %}
-  {% set aside_grid_class = 'desktop:grid-col-3 order-first' %}
-{% else %}
-  {% set content_grid_class = 'desktop:grid-col-12' %}
-{% endif %}
+{{ header }}
 
-{# Set the path to usa icons. #}
-{% set path_image =  '/dist/assets/img' %}
+{% block content %}
+  {{ page.content }}
+{% endblock %}
 
-{# Set the base URL. #}
-{% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
-
-<div class="layout-container">
-  {# Preface region for USA banner. #}
-  {{ page.preface }}
-
-  {# Header partial. #}
-  <!-- Start header.-->
-  {% include '@bixal_uswds/partials/p-header.html.twig' %}
-  <!-- End header.-->
-
-  <main role="main" class="main-content clearfix">
-    {# link is in html.html.twig #}
-    <a id="main-content" tabindex="-1"></a>
-
-    {# Highlighted region for full width components such as a hero. #}
-    {{ page.highlighted }}
-
-    {# Breadcrumb region. #}
-    {% if page.breadcrumb %}
-      <div class="grid-container-widescreen">
-        {{ page.breadcrumb }}
-      </div>
-    {% endif %}
-
-    <div class="layout-content grid-container-widescreen">
-      {# Help region. #}
-      {{ page.help }}
-    </div>
-
-    <div class="layout-content grid-container-widescreen">
-      {# Main content region. #}
-      <div class="grid-row grid-gap-lg">
-        <div class="{{ content_grid_class }}">
-          {{ page.content }}
-        </div>
-
-        {# Sidebar region. #}
-        {% if page.sidebar %}
-          <div class="{{ aside_grid_class }}">
-            <aside class="layout-sidebar-first" role="complementary">
-              {{ page.sidebar }}
-            </aside>
-          </div>
-        {% endif %}
-      </div>
-    </div>{# /.layout-content #}
-
-    {# Postscript region for full width components such as a global site CTA. #}
-    {{ page.postscript }}
-  </main>
-
-  {# Footer partial. #}
-  <footer role="contentinfo" class="usa-footer clearfix margin-top-4">
-    {% include '@bixal_uswds/partials/p-footer.html.twig' %}
-
-    {% include '@bixal_uswds/partials/p-identifier.html.twig' %}
-  </footer>
-
-</div>{# /.layout-container #}
+{% include "@components/contact-us/contact-us.html.twig" %}
+{% include "@components/footer/footer.html.twig" %}

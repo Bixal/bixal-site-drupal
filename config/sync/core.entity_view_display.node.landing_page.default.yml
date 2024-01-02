@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_banner_image
+    - field.field.node.landing_page.field_hero_description
+    - field.field.node.landing_page.field_hero_variant
     - field.field.node.landing_page.field_paragraphs
     - node.type.landing_page
   module:
     - entity_reference_revisions
+    - options
     - user
 id: node.landing_page.default
 targetEntityType: node
@@ -22,6 +25,20 @@ content:
       link: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_hero_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_hero_variant:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view

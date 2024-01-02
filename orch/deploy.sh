@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Deploy hook is NOT called locally (on Lando).
-# Exit the hook on any failure
 set -e
+
+./orch/show_file.sh $0
 
 # Clear the deploy log.
 echo "" > /var/log/deploy.log
@@ -24,3 +24,5 @@ fi
 
 echo 'DEPLOY LOG:'
 tail -n100 /var/log/deploy.log
+
+./orch/show_file.sh $0 end

@@ -2,6 +2,8 @@
 
 set -e
 
+./orch/show_file.sh $0
+
 drush cr
 if [ -n "$(ls $(drush php:eval "echo realpath(Drupal\Core\Site\Settings::get('config_sync_directory'));")/*.yml 2>/dev/null)" ]; then
   echo "Installing a fresh Drupal site from configuration"
@@ -18,3 +20,5 @@ fi
 
 # Do additional tasks for a fresh install if needed.
 #drush set-hp
+
+./orch/show_file.sh $0 end

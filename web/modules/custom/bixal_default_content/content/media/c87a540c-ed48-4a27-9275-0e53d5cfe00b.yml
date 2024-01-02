@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c87a540c-ed48-4a27-9275-0e53d5cfe00b
+  bundle: image
+  default_langcode: en
+  depends:
+    891a1d8c-46c7-4909-b23b-0ac4268ce399: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-customer-experience.svg
+  created:
+    -
+      value: 1702751740
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 891a1d8c-46c7-4909-b23b-0ac4268ce399
+      alt: 'Human Centered Design icon'
+      title: ''
+      width: 0
+      height: 0

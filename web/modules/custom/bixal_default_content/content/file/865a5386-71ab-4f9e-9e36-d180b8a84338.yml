@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 865a5386-71ab-4f9e-9e36-d180b8a84338
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: whatwedo_banner.jpeg
+  uri:
+    -
+      value: 'public://2023-12/whatwedo_banner_0_1.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 152731
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1702645422

@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1dde9e85-a7dd-43ca-987e-a31ec0006606
+  bundle: image
+  default_langcode: en
+  depends:
+    46b0ecd9-380e-4227-a207-dcf0af910191: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-strategy-communications.svg
+  created:
+    -
+      value: 1702751562
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drush Site-Install'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/1'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 46b0ecd9-380e-4227-a207-dcf0af910191
+      alt: 'Strategic Communications icon'
+      title: ''
+      width: 0
+      height: 0

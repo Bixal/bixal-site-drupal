@@ -4,11 +4,15 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  bixal_default_content: 0
   block: 0
   breakpoint: 0
   ckeditor5: 0
+  components: 0
+  contextual: 0
   datetime: 0
   dblog: 0
+  default_content: 0
   devel: 0
   disable_user_1_edit: 0
   dynamic_page_cache: 0
@@ -43,6 +47,7 @@ module:
   search_api: 0
   search_api_solr: 0
   seckit: 0
+  site_wrapper: 0
   system: 0
   text: 0
   token: 0
