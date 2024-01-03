@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 262700c3-b480-47dc-8cba-2a754ed19367
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: localization.png
+  uri:
+    -
+      value: 'public://2023-12/localization.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1567160
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703789340

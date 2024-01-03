@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 14fbcfce-fdc0-4c73-89c7-0baa62f162f3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: bridging-the-digital-health-divide.png
+  uri:
+    -
+      value: 'public://2023-12/bridging-the-digital-health-divide.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2382425
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703259533
