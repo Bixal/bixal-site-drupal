@@ -67,19 +67,11 @@
 *
 */
 #}
-{% if content.field_hero_variant['#items'].getString() == 'image-inline' %}
-  {% set image_inline = TRUE %}
-{% else %}
-  {% set image_inline = FALSE %}
-{% endif %}
 
 {% include "@components/hero/hero.html.twig" with {
   'title': 'Blog and News',
   'image' : file_url(content.field_banner_image['#object'].field_banner_image.entity.field_media_image.entity.uri.getString()),
   'variant' : 'image-bg',
-  'description' : 'image-bg'
-
-
 } %}
 
 <div class="bix-section">
