@@ -1,0 +1,158 @@
+uuid: 0ab23fb7-f5df-49d3-be78-7571f2d129b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.bixaler.title
+    - field.field.node.bixaler.body
+    - field.field.node.bixaler.field_bucket_list
+    - field.field.node.bixaler.field_certifications
+    - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_role
+    - field.field.node.bixaler.field_specialties
+    - field.field.node.bixaler.field_team
+    - node.type.bixaler
+  module:
+    - node
+label: 'Import Users'
+id: import_users
+description: 'Import Users'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml json'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: bixaler
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  jobtitle:
+    value: jobTitle
+    label: jobTitle
+    machine_name: jobtitle
+    type: csv
+  department:
+    value: department
+    label: department
+    machine_name: department
+    type: csv
+  specialties:
+    value: specialties
+    label: specialties
+    machine_name: specialties
+    type: csv
+  bioparagraph:
+    value: bioParagraph
+    label: bioParagraph
+    machine_name: bioparagraph
+    type: csv
+  bucketlist:
+    value: bucketList
+    label: bucketList
+    machine_name: bucketlist
+    type: csv
+  languages:
+    value: languages
+    label: languages
+    machine_name: languages
+    type: csv
+  certifications:
+    value: certifications
+    label: certifications
+    machine_name: certifications
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: name
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: field_role
+    map:
+      target_id: jobtitle
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: role
+  -
+    target: field_team
+    map:
+      target_id: department
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: team
+  -
+    target: field_specialties
+    map:
+      target_id: specialties
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: specialties
+  -
+    target: body
+    map:
+      value: bioparagraph
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_bucket_list
+    map:
+      value: bucketlist
+    settings:
+      language: null
+  -
+    target: field_languages
+    map:
+      target_id: languages
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: languages
+  -
+    target: field_certifications
+    map:
+      target_id: certifications
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: certifications

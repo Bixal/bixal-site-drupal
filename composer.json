@@ -28,6 +28,8 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",
+        "drupal/feeds": "^3.0@beta",
+        "drupal/feeds_ex": "^1.0@beta",
         "drupal/field_group": "^3.4",
         "drupal/menu_admin_per_menu": "^1.5",
         "drupal/metatag": "^2.0",

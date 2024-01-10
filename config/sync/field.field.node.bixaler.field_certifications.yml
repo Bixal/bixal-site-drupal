@@ -1,0 +1,29 @@
+uuid: b8c51bd2-2338-45cb-a951-718708056cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certifications
+    - node.type.bixaler
+    - taxonomy.vocabulary.certifications
+id: node.bixaler.field_certifications
+field_name: field_certifications
+entity_type: node
+bundle: bixaler
+label: Certifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      certifications: certifications
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
