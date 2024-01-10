@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 931e033d-12d5-4388-9e2d-8b7807f2121f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: ux-design.png
+  uri:
+    -
+      value: 'public://2023-12/ux-design.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1394118
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703789224

@@ -1,0 +1,65 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0fc49c02-629f-4a56-a57f-61292f567772
+  bundle: blog
+  default_langcode: en
+  depends:
+    5c12bb4d-8717-4a1d-a2dc-f40c1f90850f: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Insights and Expertise: Bixal’s Impactful Presentations at Drupal GovCon 2023'
+  created:
+    -
+      value: 1703783932
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Insights and Expertise: Bixal’s Impactful Presentations at Drupal GovCon 2023 | Drupal'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: "\_"
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/blog/insights-and-expertise-bixals-impactful-presentations-drupal-govcon-2023'
+  path:
+    -
+      alias: /blog/insights-and-expertise-bixals-impactful-presentations-drupal-govcon-2023
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: '<div style="box-sizing:inherit;"><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">&nbsp;</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Bixal was a sponsor of the recent Drupal GovCon held Nov. 1-2 in Bethesda, Maryland. We were excited to have so many Bixalers attend this great event and even more excited to have several of them present.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Big thank you to Drupal4Gov for hosting this event and to all of our team members for presenting and attending!</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Didn''t get a chance to attend Drupal GovCon? Don''t worry! You can watch our Bixalers'' presentations:</p><ol style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><li style="box-sizing:inherit;"><p style="box-sizing:inherit;font-size:20px;line-height:1.6;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://youtu.be/7Uc3pgpm7VU?si=tmeI5lChW3qoXkll"><u>A KPI Framework To Make Your Next Drupal Migration a Success</u></a>. (Nick Pistone)</p></li><li style="box-sizing:inherit;"><p style="box-sizing:inherit;font-size:20px;line-height:1.6;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://youtu.be/Y765z09vdVU?si=WM3wBKRkVerTjACr"><u>Gazing at the Stars: How To Take USWDS Beyond the Limits</u></a>. (Ray Estrada and James Mejia)</p></li><li style="box-sizing:inherit;"><p style="box-sizing:inherit;font-size:20px;line-height:1.6;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://youtu.be/DnAR2Z981qU?si=TgKlSlTBmjaFisOb"><u>Revealing Insights: Transforming Drupal Data Into Smart Decisions</u></a>. (Ivonne Carrillo)</p></li><li style="box-sizing:inherit;"><p style="box-sizing:inherit;font-size:20px;line-height:1.6;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://youtu.be/BdWQ_0dO380?si=bhtuytMJodHRbPEi"><u>Login.gov: Improving Government CX with SSO</u></a>. (John Franklin)</p></li><li style="box-sizing:inherit;"><p style="box-sizing:inherit;font-size:20px;line-height:1.6;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://youtu.be/LGcMeMXytHs?si=RUVVo9fVLBv0AhYZ"><u>Development To Deploy</u></a>. (Matt Poole)</p></li></ol><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">We had a ton of fun at this event. Enjoy these memorable moments:<br><br>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-1.png" data-align="center" data-entity-uuid="bdf2915d-6eb8-4186-9ab7-e173bb22e50d" data-entity-type="file" alt="A group shot of 19 smiling Bixal team members at the Drupal GovCon conference."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-2.png" data-align="center" data-entity-uuid="e83ddbca-6c2a-4ab9-bfa4-db80057c3338" data-entity-type="file" alt="Bixaler Ivonne Carillo, a woman with long dark hair and glasses, stands in front of a screen upon which is projected the title slide of her Drupal GovCon presentation, “Revealing Insights: Transforming Drupal Data Into Smart Decisions."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-3.png" data-align="center" data-entity-uuid="10b6f81d-16fd-4a06-9518-f8c914e4b779" data-entity-type="file" alt="Bixaler John Franklin, a man with glasses, stands behind a lectern during his Drupal GovCon presentation."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-4.png" data-align="center" data-entity-uuid="16cb60c7-d835-4110-bc39-c7c0bc61e170" data-entity-type="file" alt="Bixaler Nick Pistone, a smiling man with dark hair, stands behind a table with his laptop while behind him a television projects the title of his Drupal GovCon presentation, “A KPI Framework to Make Your Next Drupal Migration a Success."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-5.png" data-align="center" data-entity-uuid="3a7ce96b-a353-4637-8841-d12f2a518864" data-entity-type="file" alt="A large group of Bixal team members sit around a table in a bar."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-6.png" data-align="center" data-entity-uuid="1066a85c-4ecf-4485-9b79-a7078098c0a0" data-entity-type="file" alt="A large group of Bixal team members pose together for a photo outside the Drupal GovCon conference."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-7.png" data-align="center" data-entity-uuid="13d7b625-e716-4123-a9a9-40c74af03b65" data-entity-type="file" alt="Three Bixal team members pose for a photo by Bixal’s colorful booth at the Drupal GovCon conference. One holds up a purple rubber duck."><p>&nbsp;</p><img src="/sites/default/files/inline-images/drupal-govcon-8.png" data-align="center" data-entity-uuid="f2e0569c-623c-4e3d-a716-7c0f0f92c222" data-entity-type="file" alt="Bixaler Felicia Odie sits behind the Bixal table at Drupal GovCon. On the table are Bixal-branded swag items for conference goers, including purple rubber ducks, pens and colorful jelly beans."></div>'
+      format: html_text
+      summary: ''
+  field_banner_image:
+    -
+      entity: 5c12bb4d-8717-4a1d-a2dc-f40c1f90850f
+  field_date:
+    -
+      value: '2023-11-16'
