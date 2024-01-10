@@ -1,0 +1,19 @@
+uuid: 9d17570b-45e8-4ac8-948e-408d29391e8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_name
+    - taxonomy.vocabulary.view_embed
+id: taxonomy_term.view_embed.field_machine_name
+field_name: field_machine_name
+entity_type: taxonomy_term
+bundle: view_embed
+label: 'Machine name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

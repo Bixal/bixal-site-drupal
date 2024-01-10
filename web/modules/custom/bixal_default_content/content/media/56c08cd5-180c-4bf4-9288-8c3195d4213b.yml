@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 56c08cd5-180c-4bf4-9288-8c3195d4213b
+  bundle: image
+  default_langcode: en
+  depends:
+    b127fb33-c9c2-4c87-b970-9f189b32b537: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: blog-and-news-header.png
+  created:
+    -
+      value: 1703793737
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: b127fb33-c9c2-4c87-b970-9f189b32b537
+      alt: 'Blog and News Banner'
+      title: ''
+      width: 1376
+      height: 778

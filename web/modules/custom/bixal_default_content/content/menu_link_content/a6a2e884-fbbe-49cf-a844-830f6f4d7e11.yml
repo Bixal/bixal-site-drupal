@@ -39,9 +39,9 @@ default:
       tag: meta
       attributes:
         name: title
-        content: '| Drush Site-Install'
+        content: '| Drupal'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'http://bixalcom.lndo.site/node/1'
+        href: 'http://bixalcom.lndo.site/home'

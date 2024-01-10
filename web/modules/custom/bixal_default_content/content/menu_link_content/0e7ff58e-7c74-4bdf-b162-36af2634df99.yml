@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: e9ac1728-4870-4121-b67c-c7884ca18f23
+  uuid: 0e7ff58e-7c74-4bdf-b162-36af2634df99
   bundle: menu_link_content
   default_langcode: en
 default:
@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/'
+      uri: 'https://google.com'
       title: ''
       options: {  }
   external:
@@ -24,10 +24,10 @@ default:
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
-      value: -45
+      value: 0
   expanded:
     -
       value: false
@@ -39,9 +39,9 @@ default:
       tag: meta
       attributes:
         name: title
-        content: '| Drush Site-Install'
+        content: '| Drupal'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'http://bixalcom.lndo.site/node/1'
+        href: 'http://bixalcom.lndo.site/home'

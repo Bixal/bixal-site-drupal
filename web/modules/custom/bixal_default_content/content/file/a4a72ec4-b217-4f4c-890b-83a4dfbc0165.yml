@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a4a72ec4-b217-4f4c-890b-83a4dfbc0165
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: drupal-govcon-hero.png
+  uri:
+    -
+      value: 'public://2023-12/drupal-govcon-hero.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 641501
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703783954

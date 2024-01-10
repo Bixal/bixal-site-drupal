@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1d96672e-1e30-499c-a3d2-7446b38a991e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: better-cx.webp
+  uri:
+    -
+      value: 'public://2023-12/better-cx.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 198138
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703789484
