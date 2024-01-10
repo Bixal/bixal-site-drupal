@@ -1,39 +1,47 @@
-uuid: 120cec70-796f-4ab4-bd5f-d5bc94c182b0
+uuid: a4ffa6c0-880b-4514-bcdd-bd2d73928985
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.hero_section
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_variant
     - field.field.node.landing_page.field_paragraphs
     - node.type.landing_page
   module:
-    - entity_reference_revisions
+    - options
     - user
-id: node.landing_page.default
+id: node.landing_page.hero_section
 targetEntityType: node
 bundle: landing_page
-mode: default
+mode: hero_section
 content:
-  field_paragraphs:
-    type: entity_reference_revisions_entity_view
+  field_banner_image:
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  links:
-    settings: {  }
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
+  field_hero_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hero_variant:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
-  field_banner_image: true
-  field_hero_description: true
-  field_hero_variant: true
+  field_paragraphs: true
   langcode: true
-  layout_builder__layout: true
+  links: true
   search_api_excerpt: true
