@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.bixaler.body
-    - field.field.node.bixaler.feeds_item
     - field.field.node.bixaler.field_bucket_list
     - field.field.node.bixaler.field_certifications
     - field.field.node.bixaler.field_image
@@ -90,6 +89,5 @@ content:
     weight: 100
     region: content
 hidden:
-  feeds_item: true
   langcode: true
   search_api_excerpt: true

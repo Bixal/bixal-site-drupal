@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.bixaler.body
-    - field.field.node.bixaler.feeds_item
     - field.field.node.bixaler.field_bucket_list
     - field.field.node.bixaler.field_certifications
     - field.field.node.bixaler.field_image
@@ -160,5 +159,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  feeds_item: true
+hidden: {  }
