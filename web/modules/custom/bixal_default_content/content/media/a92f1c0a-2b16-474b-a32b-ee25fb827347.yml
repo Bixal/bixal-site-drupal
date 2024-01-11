@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a92f1c0a-2b16-474b-a32b-ee25fb827347
+  bundle: image
+  default_langcode: en
+  depends:
+    1d96672e-1e30-499c-a3d2-7446b38a991e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: better-cx.webp
+  created:
+    -
+      value: 1703789484
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1d96672e-1e30-499c-a3d2-7446b38a991e
+      alt: 'Better CX Banner'
+      title: ''
+      width: 3840
+      height: 1745

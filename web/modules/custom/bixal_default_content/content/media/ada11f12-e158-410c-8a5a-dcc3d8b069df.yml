@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ada11f12-e158-410c-8a5a-dcc3d8b069df
+  bundle: image
+  default_langcode: en
+  depends:
+    262700c3-b480-47dc-8cba-2a754ed19367: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: localization.png
+  created:
+    -
+      value: 1703789340
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 262700c3-b480-47dc-8cba-2a754ed19367
+      alt: 'Localization Banner'
+      title: ''
+      width: 3840
+      height: 1745

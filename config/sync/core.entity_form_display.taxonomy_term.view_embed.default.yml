@@ -1,0 +1,48 @@
+uuid: aeb4c98a-f7b9-4bcc-aaab-77091dbc3711
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.view_embed.field_display_name
+    - field.field.taxonomy_term.view_embed.field_machine_name
+    - taxonomy.vocabulary.view_embed
+id: taxonomy_term.view_embed.default
+targetEntityType: taxonomy_term
+bundle: view_embed
+mode: default
+content:
+  field_display_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_machine_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

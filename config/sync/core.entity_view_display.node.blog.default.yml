@@ -21,7 +21,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
   field_banner_image:
     type: entity_reference_entity_view
@@ -30,7 +30,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_date:
     type: datetime_default
@@ -39,12 +39,12 @@ content:
       timezone_override: ''
       format_type: olivero_medium
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true

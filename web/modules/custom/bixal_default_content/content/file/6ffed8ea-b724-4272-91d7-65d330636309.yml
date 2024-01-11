@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6ffed8ea-b724-4272-91d7-65d330636309
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: influencing.webp
+  uri:
+    -
+      value: 'public://2023-12/influencing.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 395250
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703789616
