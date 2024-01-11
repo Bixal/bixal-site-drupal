@@ -2,7 +2,6 @@
 
 .bix-blurbs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(465px, 1fr));
   gap: units(2);
 }
 
@@ -21,4 +20,12 @@
     letter-spacing: 1.25px;
     text-transform: uppercase;
   }
+}
+
+.bix-blurbs--two-up {
+  grid-template-columns: repeat(auto-fill, minmax(465px, 1fr));
+}
+
+.bix-blurbs--three-up {
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 }
