@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4123e22bc7b68dfcb984210661ba855",
+    "content-hash": "e100fd5699c12b68dd21b2e2a04fc7c9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2413,64 +2413,6 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
-            }
-        },
-        {
-            "name": "drupal/paragraph_blocks",
-            "version": "3.1.8",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragraph_blocks.git",
-                "reference": "3.1.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraph_blocks-3.1.8.zip",
-                "reference": "3.1.8",
-                "shasum": "cf4ce4f9a6a728a512922663ff4db7a3547a21cd"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "drupal/ctools": "^3.0 || ^4.0",
-                "drupal/paragraphs": "^1.8"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.1.8",
-                    "datestamp": "1686941922",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "basvredeling",
-                    "homepage": "https://www.drupal.org/user/207078"
-                },
-                {
-                    "name": "douggreen",
-                    "homepage": "https://www.drupal.org/user/29191"
-                },
-                {
-                    "name": "vaibhavjain",
-                    "homepage": "https://www.drupal.org/user/1159692"
-                }
-            ],
-            "description": "Drupal Paragraph Blocks module",
-            "homepage": "https://www.drupal.org/project/paragraph_blocks",
-            "keywords": [
-                "Drupal",
-                "Paragraphs"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragraph_blocks"
             }
         },
         {
@@ -12797,5 +12739,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
