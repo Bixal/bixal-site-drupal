@@ -68,15 +68,14 @@
 */
 #}
 
-{% include "@components/hero/hero.html.twig" with {
-  'title': 'Blog and News',
-  'image' : file_url(content.field_banner_image['#object'].field_banner_image.entity.field_media_image.entity.uri.getString()),
-  'variant' : 'image-bg',
-} %}
-
 <div class="bix-section">
-  <div class="bix-container">
-    <h2>{{node.label}}</h2>
-    {{ content|without('field_banner_image') }}
-  </div>
+	<div class="bix-container">
+		{% if content.field_decorative_title| field_value is not empty %}
+			<div class="section-overview">
+				<h1 class="blog-title">{{node.label}}</h1>
+			</div>
+		{% endif %}
+
+		{{ content|without('field_decorative_title') }}
+	</div>
 </div>
