@@ -4,6 +4,8 @@
   *
   * Available variables:
   * - variant: String for component variant.
+  * - aria_label: String for unique aria labels.
+  *               Unique label is required to avoid A11Y issues when there are multiple on the same page.
   * - items: Array of social nav objects.
   *   - href: Link to social network.
   *   - label: Social network label used for link title.
@@ -14,7 +16,9 @@
 
 {% set variant_class = variant ? "bix-social-nav--" ~ variant | default("") %}
 
-<nav class="bix-social-nav {{ variant_class }}" aria-label="Social navigation">
+<nav
+  class="bix-social-nav {{ variant_class }}"
+  aria-label="{{ aria_label | default("Social links") }}">
   <ul class="bix-social-nav__items">
     {% for item in items %}
 
