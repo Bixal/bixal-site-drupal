@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b84bf7e3-dae4-41d1-9d54-7aaaeaff5652
+  bundle: image
+  default_langcode: en
+  depends:
+    931e033d-12d5-4388-9e2d-8b7807f2121f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: ux-design.png
+  created:
+    -
+      value: 1703789224
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 931e033d-12d5-4388-9e2d-8b7807f2121f
+      alt: 'UX Design Banner'
+      title: ''
+      width: 3840
+      height: 1745

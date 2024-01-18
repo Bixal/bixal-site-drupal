@@ -1,4 +1,4 @@
-uuid: e024c40d-3fba-402c-b5d1-2a76e6d29522
+uuid: c9328847-6207-452d-8bd3-abe2891ccdeb
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: z2sNRM3ECa7FPCGnSNje_9SmZJQgwhD_6fG_L4Mr8zI
 id: taxonomy_term_unpublish_action
-label: 'Unpublish taxonomy term'
+label: "Unpublish taxonomy term"
 type: taxonomy_term
-plugin: 'entity:unpublish_action:taxonomy_term'
-configuration: {  }
+plugin: "entity:unpublish_action:taxonomy_term"
+configuration: {}

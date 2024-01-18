@@ -1,4 +1,4 @@
-uuid: 866f940e-db1f-4758-bad5-6ba7ad547e4d
+uuid: f584e27e-aab9-4f3a-879f-fcdf782a8489
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: DoVt_VGgVLcDD4XmVbSFzr0K17SJy9imFiYusKkJBgY
 id: taxonomy_term_publish_action
-label: 'Publish taxonomy term'
+label: "Publish taxonomy term"
 type: taxonomy_term
-plugin: 'entity:publish_action:taxonomy_term'
-configuration: {  }
+plugin: "entity:publish_action:taxonomy_term"
+configuration: {}

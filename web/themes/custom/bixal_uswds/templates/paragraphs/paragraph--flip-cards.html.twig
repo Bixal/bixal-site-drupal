@@ -53,7 +53,9 @@
   {% endfor %}
 
 {% block paragraph %}
-  {% include '@components/cards/flip-card-group.html.twig' with {
-    'flip_cards': cards,
-  } %}
+  <div class="bix-section">
+    {% include '@components/cards/flip-card-group.html.twig' with {
+      'flip_cards': cards,
+    } %}
+  </div>
 {% endblock paragraph %}

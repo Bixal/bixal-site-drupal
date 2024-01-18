@@ -1,0 +1,8 @@
+uuid: 098f5690-2d13-43dd-878f-3cdf6da5c3e9
+langcode: en
+status: true
+dependencies: {  }
+name: 'View Embed'
+vid: view_embed
+description: 'A listing of views to be utilized in a paragraph'
+weight: 0
