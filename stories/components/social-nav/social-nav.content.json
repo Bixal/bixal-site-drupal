@@ -1,0 +1,22 @@
+{
+	"variant": null,
+	"items": [
+		{
+			"href": "https://www.facebook.com/bixal",
+			"label": "Facebook",
+			"icon_path": null
+		},
+		{
+			"href": "https://www.twitter.com/bixal",
+			"label": "Twitter"
+		},
+		{
+			"href": "https://www.linkedIn.com/company/bixal",
+			"label": "LinkedIn"
+		},
+		{
+			"href": "https://medium.com/bixal",
+			"label": "Medium"
+		}
+	]
+}
