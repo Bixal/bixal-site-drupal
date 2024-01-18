@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 75c022bb-4cf7-45dd-8725-b1b206007ecb
+  bundle: image
+  default_langcode: en
+  depends:
+    c7144fd8-bd14-482a-ad13-c0ebdbd5216e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: clay-marshall.webp
+  created:
+    -
+      value: 1705593881
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: c7144fd8-bd14-482a-ad13-c0ebdbd5216e
+      alt: 'Clay Marshall Portrait'
+      title: ''
+      width: 600
+      height: 600

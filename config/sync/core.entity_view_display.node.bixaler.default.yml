@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.bixaler.field_certifications
     - field.field.node.bixaler.field_image
     - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_link
     - field.field.node.bixaler.field_role
     - field.field.node.bixaler.field_specialties
     - field.field.node.bixaler.field_team
     - node.type.bixaler
   module:
+    - link
     - text
     - user
 id: node.bixaler.default
@@ -58,6 +60,18 @@ content:
       link: true
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
     region: content
   field_role:
     type: entity_reference_label

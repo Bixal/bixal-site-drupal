@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.bixaler.field_certifications
     - field.field.node.bixaler.field_image
     - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_link
     - field.field.node.bixaler.field_role
     - field.field.node.bixaler.field_specialties
     - field.field.node.bixaler.field_team
     - node.type.bixaler
   module:
+    - link
     - media_library
     - path
     - text
@@ -71,6 +73,14 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 129
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_role:
     type: entity_reference_autocomplete_tags
