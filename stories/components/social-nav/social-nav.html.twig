@@ -9,8 +9,7 @@
   * - items: Array of social nav objects.
   *   - href: Link to social network.
   *   - label: Social network label used for link title.
-  *   - icon_path: Optional path to assets directory.
-  *                Uses label and icons directory as fallback.
+  *   - icon_path: Path to icon in static assets directory. StorybookJS uses `./stories/assets`.
 **/
 #}
 
@@ -21,11 +20,6 @@
   aria-label="{{ aria_label | default("Social links") }}">
   <ul class="bix-social-nav__items">
     {% for item in items %}
-
-      {% if not icon_path %}
-        {% set icon_path_fallback = "icons/" ~ item.label ~ ".svg" | lower %}
-      {% endif %}
-
       <li class="bix-social-nav__item">
         <a
           href="{{ item.href }}"
@@ -34,9 +28,13 @@
           title="{{ item.label }}"
           rel="noopener noreferrer">
           <!-- @TODO: Create an SVG component that embeds SVG markup and can take params like: height, width, aria-hidden. -->
-          <span aria-hidden="true">
-            {{ source(icon_path | default(icon_path_fallback)) }}
-          </span>
+          {% if item.icon_path %}
+            <span aria-hidden="true">
+              {{ source(item.icon_path) }}
+            </span>
+          {% else %}
+            {{ item.label }}
+          {% endif %}
         </a>
       </li>
     {% endfor %}

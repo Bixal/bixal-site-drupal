@@ -5,19 +5,22 @@
 		{
 			"href": "https://www.facebook.com/bixal",
 			"label": "Facebook",
-			"icon_path": null
+			"icon_path": "icons/facebook.svg"
 		},
 		{
 			"href": "https://www.twitter.com/bixal",
-			"label": "Twitter"
+			"label": "Twitter",
+			"icon_path": "icons/linkedin.svg"
 		},
 		{
 			"href": "https://www.linkedIn.com/company/bixal",
-			"label": "LinkedIn"
+			"label": "LinkedIn",
+			"icon_path": "icons/twitter.svg"
 		},
 		{
 			"href": "https://medium.com/bixal",
-			"label": "Medium"
+			"label": "Medium",
+			"icon_path": "icons/twitter.svg"
 		}
 	]
 }
