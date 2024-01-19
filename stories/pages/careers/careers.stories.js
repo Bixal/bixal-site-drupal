@@ -5,12 +5,14 @@ export default {
   component: Careers,
 };
 
-import "../base/base.stories";
-import "../../components/blurb/blurb.stories";
-
 import HeaderContent from "../../components/header/header.content.json";
 import EmphasisBlockCollectionContent from "../../components/emphasis-block/emphasis-block-collection.content.json";
+import SocialNavContent from "../../components/social-nav/social-nav.content.json";
+
+import "../base/base.stories";
+import "../../components/blurb/blurb.stories";
 import "../../components/emphasis-block/emphasis-block.stories";
+import "../../components/social-nav/social-nav.stories";
 
 // @TODO: Hero images should be webp.
 export const Default = {
@@ -74,5 +76,6 @@ export const Default = {
     featuredJobs: {
       blocks: EmphasisBlockCollectionContent,
     },
+    socialNav: SocialNavContent
   },
 };

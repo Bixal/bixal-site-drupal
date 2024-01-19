@@ -2,12 +2,14 @@ import BlogLanding from "./blog-landing.html.twig";
 
 import HeaderContent from "../../components/header/header.content.json";
 import BlurbCollectionContent from "../../components/blurb/blurb-collection.content.json";
+import SocialNavContent from "../../components/social-nav/social-nav.content.json";
 
 import "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
 import "../../components/blurb/blurb.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
+import "../../components/social-nav/social-nav.stories";
 
 export default {
   title: "Pages/Blog/Landing",
@@ -24,5 +26,6 @@ export const Default = {
         "https://www.bixal.com/static/0af8355f1979d79ddb8e2b9ab90b3a49/blog-and-news-header.png",
     },
     blurbs: BlurbCollectionContent,
+    socialNav: SocialNavContent
   },
 };
