@@ -77,7 +77,7 @@
 ] %}
 
 {% if content.field_decorative_title| field_value is not empty %}
-	{% set decorative_title = TRUE %}
+	{% set decorative_title = true %}
 	{% set title = content.field_decorative_title | field_value %}
 {% else %}
 	{% set decorative_title = false %}
