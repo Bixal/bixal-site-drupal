@@ -1,0 +1,7 @@
+{% embed "@components/section/section.html.twig" %}
+  {% set title = "How we work" %}
+
+  {% block body %}
+    {% include "@components/blurb/blurb-collection.html.twig" with blurbs %}
+  {% endblock %}
+{% endembed %}
