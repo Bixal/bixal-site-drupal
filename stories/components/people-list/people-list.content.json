@@ -1,8 +1,23 @@
 {
-  "people": [
+  "filter_dropdown_label": "Filter by",
+  "filter_options": [
+    "all",
+    "design",
+    "communications",
+    "learning",
+    "leadership",
+    "data",
+    "technology",
+    "operations",
+    "international",
+    "growth",
+    "delivery"
+  ],
+  "filter_content": [
     {
       "name": "Alex Hull",
       "role": "Digital Accessibility Specialist",
+      "filter_category": "communications",
       "social": [],
       "specialties": ["Behavioral Science", "Behavioral Science"],
       "languages": ["English", "American Sign Language (ASL)"],
@@ -11,6 +26,7 @@
     {
       "name": "Amie Nisler",
       "role": "Senior Communications Strategist",
+      "filter_category": "communications",
       "specialties": [
         "Behavioral Science",
         "Data Systems",
@@ -23,12 +39,14 @@
     {
       "name": "Brianna Naolu",
       "role": "UX Designer",
+      "filter_category": "design",
       "specialties": ["User Experience (UX)", "User Research", "Visual Design"],
       "bucketlist": "To see the northern lights in all their magnificent glory."
     },
     {
       "name": "Clay Marshall",
       "role": "Director, Web Development",
+      "filter_category": "technology",
       "specialties": [
         "Drupal CMS Architecture and Development",
         "Graphic Design",
@@ -39,6 +57,7 @@
     {
       "name": "Buddy Harlow",
       "role": "Associate Software Engineer",
+      "filter_category": "technology",
       "specialties": ["CSS", "Drupal", "React", "Wordpress"],
       "bucketlist": "To ride the Steel Vengeance roller coaster at Cedar Point in Sandusky, Ohio."
     }
