@@ -1,0 +1,33 @@
+# Automatically Generated from 'robo validate:init-robo-yml'.
+# See ./vendor/mattsqd/robovalidate/robo.example.yml for additional context.
+command:
+    validate:
+        options:
+            project-id: BSD
+        commit-messages:
+            options:
+                # The regular expression that much match for all commits not in 'target-branch'.
+                # Note how {$project_id} is not part of the pattern but replaced with whatever is
+                # in 'project-id' before the regular expression is used.
+                pattern: '/^{$project_id}: (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #\d+: /'
+                short-help: "Commit messages must start with: ''{$project_id}: [KEYWORD] #x:y'''"
+                long-help:
+                    - 'Where x is the ticket number.'
+                    - 'And y is a space.'
+                    - ''
+                    - 'How do I update my commit messages?'
+                    - 'See https://www.atlassian.com/git/tutorials/rewriting-history'
+                    - ''
+                    - 'After re-rewriting the history, you should --force-with-lease the push.'
+                    - 'https://stackoverflow.com/questions/52823692/git-push-force-with-lease-vs-force#:~:text=%2D%2Dforce%2Dwith%2Dlease%20is%20a%20safer%20option%20that%20will,elses%20work%20by%20force%20pushing.'
+        branch-name:
+            options:
+                pattern: '/^feature\/{$project_id}-([\d]{1,})-(?!.*--)([a-z\d]{1})([a-z\d-]{3,})([a-z\d]{1})$/'
+                custom-help:
+                    - 'feature/{$project_id}-x-y'
+                    - ' Where x is the ticket number.'
+                    - ' And y is:'
+                    - ' - Always lower case.'
+                    - ' - Starts and end with a letter or integer.'
+                    - ' - Contains letters, integers, or dashes (non-consecutive).'
+                    - ' - At least 5 characters long.'
