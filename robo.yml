@@ -9,10 +9,10 @@ command:
                 # The regular expression that much match for all commits not in 'target-branch'.
                 # Note how {$project_id} is not part of the pattern but replaced with whatever is
                 # in 'project-id' before the regular expression is used.
-                pattern: '/^{$project_id}: (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #\d+: /'
-                short-help: "Commit messages must start with: ''{$project_id}: [KEYWORD] #x:y'''"
+                pattern: '/^{$project_id} (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #\d+: /'
+                short-help: "Commit messages must start with: '{$project_id} [KEYWORD] #x:y'"
                 long-help:
-                    - 'Where x is the ticket number.'
+                    - 'Where x is the Git Hub issue number.'
                     - 'And y is a space.'
                     - ''
                     - 'How do I update my commit messages?'
