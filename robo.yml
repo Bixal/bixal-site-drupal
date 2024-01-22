@@ -25,7 +25,7 @@ command:
                 pattern: '/^feature\/{$project_id}-([\d]{1,})-(?!.*--)([a-z\d]{1})([a-z\d-]{3,})([a-z\d]{1})$/'
                 custom-help:
                     - 'feature/{$project_id}-x-y'
-                    - ' Where x is the ticket number.'
+                    - ' Where x is the Git Hub issue number.'
                     - ' And y is:'
                     - ' - Always lower case.'
                     - ' - Starts and end with a letter or integer.'
