@@ -17,6 +17,14 @@
     font-size: px-to-rem(16px);
   }
 
+  &-button.is-active {
+
+    // Flip the caret vertically when active.
+    .bix-icon--caret {
+      transform: scaleY(-1);
+    }
+  }
+
   &-options {
     @extend %filter-base-text-styles;
     background-color: color("white");
@@ -41,14 +49,21 @@
   }
 
   &-option {
+    cursor: pointer;
     display: block;
     line-height: 1;
     margin-bottom: units(3);
     text-align: left;
+    transition: color 0.25s;
   }
 
   &-option:last-child {
     margin-bottom: 0;
+  }
+
+  // Selected option.
+  &-option:has(input:checked) {
+    color: var(--c-primary-alt);
   }
 
   // The radio button.
@@ -61,6 +76,7 @@
 .bix-people-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 244px));
+  row-gap: units(7);
   list-style: none;
   padding-left: 0;
   justify-content: center;

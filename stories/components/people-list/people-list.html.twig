@@ -1,3 +1,22 @@
+{#
+/**
+  * Filterable people list.
+  *
+  * Available variables:
+  * - filter_dropwdown_label: String for filter button label.
+  * - filter_options: Array of strings for available filters.
+  * - filter_content: Array of people objects.
+  *   - name: String name of person.
+  *   - image: String URL of profile pic.
+  *   - role: String professional role.
+  *   - filter_category: string of associated option in `filter_options`.
+  *   - social_links: Array of objects containing social links.
+  *   - specialties: Array of strings that contain personal specialties.
+  *   - languages: Array of strings that contain spoken languages.
+  *   - bucketlist: A string that contains bucketlist wish.
+**/
+#}
+
 <section id="bixal-team" class="bix-people">
   <div class="bix-filter__dropdown">
     <button
@@ -33,50 +52,56 @@
         <label
           for="{{ option | lower }}"
           class="bix-filter__dropdown-option">
-          <input type="radio" name="radio" id="all" value="{{ option | lower }}">
+          <input
+            type="radio"
+            name="filter"
+            id="{{ option | lower }}"
+            value="{{ option | lower }}"
+            {{ loop.first ? "checked" }}>
           {{ option | capitalize }}
         </label>
       {% endfor %}
     </div>
   </div>
-  <div>
-  <div class="bix-container">
-    <ul class="bix-people-list">
-      {% for item in filter_content %}
-      <li
-        class="bix-people-list__item bix-person"
-        data-filter-category="{{ item.filter_category }}">
-        <a class="bix-person__link" href="javascript:void(0)">
-          <div class="bix-person__media">
-            <!-- @TODO: Use placeholder image as default value. -->
-            <img
-              src="https://placehold.co/325x325"
-              aria-hidden="true">
-            <div class="bix-person__overlay">
-              View all
-              <svg
-                class="bix-icon bix-icon--right-arrow"
-                width="20px"
-                fill="#fff"
-                version="1.1"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
-                <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
-              </svg>
-            </div>
+  <ul class="bix-people-list">
+    {% for item in filter_content %}
+    <li
+      class="bix-people-list__item bix-person"
+      data-filter-category="{{ item.filter_category }}">
+      <a
+        class="bix-person__link"
+        href="javascript:void(0)"
+        {% if item.name %}
+        title="View {{ item.name }}'s full profile">
+        {% endif %}
+        <div class="bix-person__media">
+          {# Image is decorative, therefore hidden. #}
+          <img
+            src="{{ item.image | default("https://placehold.co/325x325") }}"
+            aria-hidden="true">
+          <div class="bix-person__overlay">
+            View all
+            <svg
+              class="bix-icon bix-icon--right-arrow"
+              width="20px"
+              fill="#fff"
+              version="1.1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
+              <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
+            </svg>
           </div>
-          <div class="bix-person__details">
-            <h3 class="bix-person__name">
-              {{ item.name | default("Full name") }}
-            </h3>
-            <div class="bix-person__role">
-              {{ item.role | default("Role") }}
-            </div>
+        </div>
+        <div class="bix-person__details">
+          <h3 class="bix-person__name">
+            {{ item.name | default("Full name") }}
+          </h3>
+          <div class="bix-person__role">
+            {{ item.role | default("Role") }}
           </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  </div>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
