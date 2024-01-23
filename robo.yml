@@ -8,10 +8,14 @@ command:
             options:
                 # The regular expression that must match for all commits not in 'target-branch'.
                 pattern: '/^{$project_id} (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #\d+: /'
-                short-help: "Commit messages must start with: '{$project_id} [KEYWORD] #x:y'"
+                short-help: "Commit messages must follow these guidelines:"
                 long-help:
-                    - 'Where x is the Git Hub issue number.'
-                    - 'And y is a space.'
+                    - '<!> Note the space before the description.'
+                    - '{$project_id} [KEYWORD] #[ISSUE_NUMBER]: [DESCRIPTION]'
+                    - ''
+                    - 'Available keywords: close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved.'
+                    - ''
+                    - 'Example: ''{$project_id} fixes #64: Fixed coding standards issues.'''
                     - ''
                     - 'How do I update my commit messages?'
                     - 'See https://www.atlassian.com/git/tutorials/rewriting-history'
@@ -22,9 +26,13 @@ command:
             options:
                 pattern: '/^feature\/{$project_id}-([\d]{1,})-(?!.*--)([a-z\d]{1})([a-z\d-]{3,})([a-z\d]{1})$/'
                 custom-help:
-                    - 'feature/{$project_id}-x-y'
-                    - ' Where x is the Git Hub issue number.'
-                    - ' And y is:'
+                    - 'Feature branches'
+                    - ''
+                    - 'feature/{$project_id}-[ISSUE_NO]-[LOWER_CASE_DESCRIPTION]'
+                    - ''
+                    - 'Example: feature/{$project_id}-64-robo-validate.'
+                    - ''
+                    - ' The description has specific requirements of:'
                     - ' - Always lower case.'
                     - ' - Starts and end with a letter or integer.'
                     - ' - Contains letters, integers, or dashes (non-consecutive).'
