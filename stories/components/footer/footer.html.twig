@@ -123,7 +123,9 @@
         <a class="privacy" href="/privacy/">Privacy Policy</a>
         <span class="copyright">Copyright &copy; 2023 Bixal</span>
       </div>
-      {% include "@components/social-nav/social-nav.html.twig" with socialNav|default({}) %}
+      {% if socialNav %}
+      {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
+      {% endif %}
     </div>
   </section>
 </footer>
