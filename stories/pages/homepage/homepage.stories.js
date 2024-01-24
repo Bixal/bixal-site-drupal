@@ -3,7 +3,6 @@ import Homepage from "./homepage.html.twig";
 import HeaderContent from "../../components/header/header.content.json";
 import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
-import SocialNavContent from "../../components/social-nav/social-nav.content.json";
 
 import "../../components/header/header.stories";
 import "../../components/section/section.stories";
@@ -13,7 +12,7 @@ import "../../components/cards/cards.stories";
 import "../../components/description-list/description-list.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
-import "../../components/social-nav/social-nav.stories";
+import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
 export default {
   title: "Pages/Homepage",
@@ -76,6 +75,6 @@ export const Default = {
         has_icon: true,
       },
     },
-    socialNav: SocialNavContent
+    socialNav: SocialNav.default.args
   },
 };
