@@ -44,12 +44,6 @@
     }
   }
 
-  .bix-site-footer__primary .bix-social-nav {
-    @include at-media("tablet-lg") {
-      display: none;
-    }
-  }
-
   &__title {
     font-family: var(--font-ui);
     font-size: inherit;
@@ -69,6 +63,9 @@
     }
   }
 
+  // ==========================================================================
+  // Secondary section - Privacy policy & Social nav
+  // ==========================================================================
   &__secondary {
     border-top: 1px solid rgba(white, 0.2);
     padding-top: units(2);
@@ -108,7 +105,7 @@
     }
   }
 
-  &__secondary .bix-social-nav {
+  .bix-social-nav {
     display: none;
 
     @include at-media("tablet-lg") {
@@ -120,11 +117,11 @@
     @include at-media("desktop") {
       width: auto;
     }
-  }
 
-  &__secondary .bix-social-nav__items {
-    @include at-media("tablet-lg") {
-      gap: units(1);
+    &__items {
+      @include at-media("tablet-lg") {
+        gap: units(1);
+      }
     }
   }
 
