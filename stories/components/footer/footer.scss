@@ -134,3 +134,14 @@
     }
   }
 }
+
+// Accreditations overides.
+.bix-site-footer__column--accreditations {
+  ul {
+    padding-left: 0;
+  }
+
+  img {
+    margin-top: units("05");
+  }
+}
