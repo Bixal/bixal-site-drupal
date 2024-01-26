@@ -6,6 +6,7 @@
  */
 
 use Drupal\node\NodeInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess_page().
@@ -38,4 +39,35 @@ function bixal_uswds_preprocess_page(&$vars) {
       unset($vars['page']['help']['bixal_uswds_page_title']);
     }
   }
+  // Provide the social icons for social-nav.html.twig which is embedded in footer.html.twig.
+  $icon_path = static function ($file_name) use ($vars) {
+    $icons_path = $vars['directory'] . '/storybook_components/stories/assets/icons';
+    return Url::fromUri('base://' . $icons_path . '/' . $file_name)->toString();
+  };
+  $vars['socialNav'] = [
+    'variant' => NULL,
+    'aria_label' => t('Social links'),
+    'items' => [
+		  [
+        "href" => "https://www.facebook.com/bixal",
+        "label" => t("Facebook"),
+        "icon_path" => $icon_path('facebook.svg'),
+		  ],
+      [
+        "href" => "https://www.twitter.com/bixal",
+        "label" => t("Twitter"),
+        "icon_path" => $icon_path('twitter.svg'),
+      ],
+      [
+        "href" => "https://www.linkedIn.com/company/bixa",
+        "label" => t("LinkedIn"),
+        "icon_path" => $icon_path('linkedin.svg'),
+      ],
+      [
+        "href" => "https://medium.com/bixal",
+        "label" => t("Medium"),
+        "icon_path" => $icon_path('medium.svg'),
+      ],
+	  ],
+  ];
 }

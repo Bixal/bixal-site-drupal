@@ -7,6 +7,9 @@ import "../../components/hero/hero.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 
+import * as SocialNav from "../../components/social-nav/social-nav.stories";
+
+
 export default {
   title: "Pages/Base",
   tags: ["autodocs"],
@@ -20,5 +23,6 @@ export const Default = {
       variant: "image-bg",
       title: "Hero title",
     },
+    socialNav: SocialNav.default.args
   },
 };
