@@ -1,16 +1,16 @@
-uuid: 9b8424d9-f95c-4e86-98db-ff563c735200
+uuid: e0fd23b4-9efc-44fc-86ab-7ff267f662e8
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_section_variant
-    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.section_wrapper
   module:
     - options
-id: paragraph.section.field_section_variant
+id: paragraph.section_wrapper.field_section_variant
 field_name: field_section_variant
 entity_type: paragraph
-bundle: section
+bundle: section_wrapper
 label: 'Section Variant'
 description: ''
 required: false
