@@ -10,17 +10,17 @@
 		{
 			"href": "https://www.twitter.com/bixal",
 			"label": "Twitter",
-			"icon_path": "icons/linkedin.svg"
+			"icon_path": "icons/twitter.svg"
 		},
 		{
 			"href": "https://www.linkedIn.com/company/bixal",
 			"label": "LinkedIn",
-			"icon_path": "icons/twitter.svg"
+			"icon_path": "icons/linkedin.svg"
 		},
 		{
 			"href": "https://medium.com/bixal",
 			"label": "Medium",
-			"icon_path": "icons/twitter.svg"
+			"icon_path": "icons/medium.svg"
 		}
 	]
 }

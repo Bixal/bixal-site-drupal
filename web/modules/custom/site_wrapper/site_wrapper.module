@@ -5,8 +5,8 @@
  * Primary module hooks for Site Wrapper module.
  */
 
-use Drupal\Core\Url;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_theme().
@@ -18,7 +18,7 @@ function site_wrapper_theme($existing, $type, $theme, $path): array {
     ],
     'site_wrapper_contextual_links_wrapper' => [
       'variables' => ['cl' => NULL, 'content' => NULL],
-    ]
+    ],
   ];
 }
 
@@ -125,4 +125,3 @@ function _site_wrapper_get_menu_contextual_links(string $menu_name): array {
     ],
   ];
 }
-
