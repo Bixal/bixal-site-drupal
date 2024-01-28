@@ -19,4 +19,5 @@ permissions:
   - 'view paragraph content flip_card'
   - 'view paragraph content flip_cards'
   - 'view paragraph content section'
+  - 'view paragraph content section_wrapper'
   - 'view paragraph content view_embed'
