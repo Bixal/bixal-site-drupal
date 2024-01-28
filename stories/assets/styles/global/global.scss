@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "../utils/mixins/heading-border" as *;
 
 // @TODO: Move to color partial
 $c-blue--dark: #162d6a;
@@ -34,10 +35,9 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // Novel pro fontface.
 @import url("https://use.typekit.net/wfu7yyr.css");
 
-//
-// Typography
-//
-
+// ==========================================================================
+// Typopgrahy
+// ==========================================================================
 body {
   color: color("ink");
   font-family: $font-ui;
@@ -64,20 +64,11 @@ h1 {
 }
 
 h2 {
+  @include heading-border;
   font-size: 47px;
   font-weight: 700;
   letter-spacing: -2.4px;
   margin-bottom: units(4);
-
-  // @TODO: Combine into mixin to avoid duplicating in callout.scss.
-  &::after {
-    border-bottom: 2px solid var(--c-accent-cool-alt);
-    content: "";
-    display: block;
-    margin-top: units(4);
-    /* Using clamp to avoid width override hacks. */
-    width: clamp(200px, 8em, 35%);
-  }
 }
 
 h3 {
