@@ -1,9 +1,9 @@
 {
   "variant": null,
+  "heading_type": null,
   "image": null,
-  "image_inline": false,
   "title": "Our work",
-  "description": null,
+  "description": "",
   "cta": {
     "label": null,
     "href": null
