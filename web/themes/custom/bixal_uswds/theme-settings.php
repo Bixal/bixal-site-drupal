@@ -23,8 +23,8 @@ function bixal_uswds_form_system_theme_settings_alter(&$form, FormStateInterface
     '#type' => 'select',
     '#required' => TRUE,
     '#options' => [
-      'html5_time_picker' => 'HTML 5 time picker',
-      'uswds_time_picker' => 'USWDS time picker',
+      'html5_time_picker' => t('HTML 5 time picker'),
+      'uswds_time_picker' => t('USWDS time picker'),
     ],
     '#description' => t("Choose a time picker style, USWDS or standard HTML 5."),
     '#title' => 'Time picker style',

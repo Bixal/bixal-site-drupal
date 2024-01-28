@@ -1,43 +1,42 @@
-<nav class="bix-social-nav" aria-label="Social navigation">
+{#
+/**
+  * Social nav component.
+  *
+  * Available variables:
+  * - variant: String for component variant.
+  * - aria_label: String for unique aria labels.
+  *               Unique label is required to avoid A11Y issues when there are multiple on the same page.
+  * - items: Array of social nav objects.
+  *   - href: Link to social network.
+  *   - label: Social network label used for link title.
+  *   - icon_path: Path to icon in static assets directory. StorybookJS uses `./stories/assets`.
+**/
+#}
+
+{% set variant_class = variant ? "bix-social-nav--" ~ variant | default("") %}
+
+<nav
+  class="bix-social-nav {{ variant_class }}"
+  aria-label="{{ aria_label | default("Social links") }}">
   <ul class="bix-social-nav__items">
-    <li class="bix-social-nav__item">
-      <a href="https://www.facebook.com/bixal" class="bix-social-nav__link"
-        target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://bixal.com/static/9371b79d77e7a6c3938b51e9d400a9db/facebook.svg"
-          height="36px"
-          width="36px"
-          alt="facebook logo">
-      </a>
-    </li>
-    <li class="bix-social-nav__item">
-      <a href="https://www.twitter.com/bixal" class="bix-social-nav__link"
-        target="_blank" rel="noopener noreferrer">
-        <img src="https://bixal.com/static/bdf23103b83b05a128d129fc797fe201/twitter.svg"
-        height="36px"
-        width="36px" alt="twitter logo">
-      </a>
-    </li>
-    <li class="bix-social-nav__item">
-      <a href="https://www.linkedIn.com/company/bixal" class="bix-social-nav__link"
-        target="_blank" rel="noopener noreferrer">
-        <img src="https://bixal.com/static/45d1bb1b8ac9ab4b39726b1376923f54/linkedIn.svg"
-        height="36px"
-        width="36px"
-        alt="linkedIn logo">
-      </a>
-    </li>
-    <li class="bix-social-nav__item">
-      <a
-        href="https://medium.com/bixal"
-        class="bix-social-nav__link"
-        target="_blank"
-        rel="noopener noreferrer">
-        <img src="https://bixal.com/static/671f48097fe47205d89419717964ad8c/medium.svg"
-        height="36px"
-        width="36px"
-        alt="medium logo">
-      </a>
-    </li>
+    {% for item in items %}
+      <li class="bix-social-nav__item">
+        <a
+          href="{{ item.href }}"
+          class="bix-social-nav__link"
+          target="_blank"
+          title="{{ item.label }}"
+          rel="noopener noreferrer">
+          <!-- @TODO: Create an SVG component that embeds SVG markup and can take params like: height, width, aria-hidden. -->
+          {% if item.icon_path %}
+            <span aria-hidden="true">
+              {{ source(item.icon_path) }}
+            </span>
+          {% else %}
+            {{ item.label }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
 </ul>
 </nav>
