@@ -40,6 +40,10 @@
 #}
 
 {{ header }}
+{# Status messages, like DPM. #}
+{{ page.help }}
+{# Things that are above the content, like the hero. #}
+{{ page.highlighted }}
 {% block content %}
   {{ page.content }}
 {% endblock %}

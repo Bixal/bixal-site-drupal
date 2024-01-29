@@ -1,0 +1,6 @@
+name: 'Block Node'
+type: module
+description: 'A block type which displays the current node (or a specific node) in a block in the specified view mode'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Other'
