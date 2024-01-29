@@ -1,0 +1,15 @@
+<dl class="bix-description-list bix-description-list--{{ variant }}">
+  {% if image %}
+    <div class="bix-description-list__media">
+      {{ image }}
+    </div>
+  {% endif %}
+  {% if title %}
+    <dt class="bix-description-list__heading">
+      {{ title }}
+    </dt>
+  {% endif %}
+
+  {{ items }}
+
+</dl>

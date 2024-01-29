@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 0eb63c39-edff-4d41-83df-7a62222c704a
+  bundle: specialties
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Drupal
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Drupal | Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/taxonomy/term/4'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

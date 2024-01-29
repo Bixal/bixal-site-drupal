@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1f5531de-9d19-4db8-a4d1-b6dfe74ebf27
+  bundle: image
+  default_langcode: en
+  depends:
+    ca81ae4e-41b7-4a54-a464-c6efe4fe1d18: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: gerardo-maldonado.webp
+  created:
+    -
+      value: 1705593560
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: ca81ae4e-41b7-4a54-a464-c6efe4fe1d18
+      alt: 'Gerardo Maldonado Portrait'
+      title: ''
+      width: 600
+      height: 600

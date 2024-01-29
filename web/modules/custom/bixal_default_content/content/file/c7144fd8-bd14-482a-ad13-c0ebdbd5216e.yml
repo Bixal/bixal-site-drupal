@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c7144fd8-bd14-482a-ad13-c0ebdbd5216e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: clay-marshall.webp
+  uri:
+    -
+      value: 'public://2024-01/clay-marshall.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 35418
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1705593881

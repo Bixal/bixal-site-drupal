@@ -15,6 +15,14 @@ targetEntityType: paragraph
 bundle: flip_card
 mode: default
 content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_card_variant:
     type: options_select
     weight: 4

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ca81ae4e-41b7-4a54-a464-c6efe4fe1d18
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: gerardo-maldonado.webp
+  uri:
+    -
+      value: 'public://2024-01/gerardo-maldonado.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 9516
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1705593560

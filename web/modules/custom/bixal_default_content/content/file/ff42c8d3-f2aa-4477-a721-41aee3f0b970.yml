@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ff42c8d3-f2aa-4477-a721-41aee3f0b970
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: james-mejia.webp
+  uri:
+    -
+      value: 'public://2024-01/james-mejia.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 14794
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1705593406

@@ -1,0 +1,18 @@
+uuid: 5ce83c0f-4827-48d2-9e52-874ea8a33290
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bixaler
+id: node.bixaler.title
+field_name: title
+entity_type: node
+bundle: bixaler
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

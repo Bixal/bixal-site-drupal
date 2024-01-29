@@ -1,0 +1,11 @@
+uuid: 969ca39d-a2d0-452a-ad26-d3aa61ebd7e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certifications
+id: taxonomy_term.certifications
+target_entity_type_id: taxonomy_term
+target_bundle: certifications
+default_langcode: site_default
+language_alterable: false

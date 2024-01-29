@@ -6,10 +6,12 @@ module:
   admin_toolbar_tools: 0
   bixal_default_content: 0
   block: 0
+  block_node: 0
   breakpoint: 0
   ckeditor5: 0
   components: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   default_content: 0

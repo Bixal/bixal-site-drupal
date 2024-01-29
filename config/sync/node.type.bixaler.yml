@@ -1,0 +1,17 @@
+uuid: b88d0c13-4334-4426-b599-fd5ddc827f35
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Bixaler
+type: bixaler
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

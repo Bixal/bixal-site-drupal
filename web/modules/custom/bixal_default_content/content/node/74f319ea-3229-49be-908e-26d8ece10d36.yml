@@ -1,0 +1,83 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 74f319ea-3229-49be-908e-26d8ece10d36
+  bundle: bixaler
+  default_langcode: en
+  depends:
+    1f5531de-9d19-4db8-a4d1-b6dfe74ebf27: media
+    da922300-7b81-4bd4-ba86-cd7c23136335: taxonomy_term
+    3b93cee4-da36-43e7-89df-061acdf5bc25: taxonomy_term
+    ff1734b8-82ba-418d-9bc9-8b0ef54064d1: taxonomy_term
+    a17eaf26-f14d-4abc-a41b-25534a2cd81e: taxonomy_term
+    0eb63c39-edff-4d41-83df-7a62222c704a: taxonomy_term
+    b2ea1537-f79d-4b67-ab49-937012f5a4dd: taxonomy_term
+    d06bcd99-a80b-472f-bfff-610d3ae6474a: taxonomy_term
+    3cd61633-55d5-48b9-9abd-010b64102fb1: taxonomy_term
+    cf0cab34-4080-4571-baf4-b9437c8e3f52: taxonomy_term
+    adabd71f-807b-4335-9747-5ab18282e3db: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Gerardo Maldonado'
+  created:
+    -
+      value: 1705593438
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Gerardo Maldonado | Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/node/12'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_image:
+    -
+      entity: 1f5531de-9d19-4db8-a4d1-b6dfe74ebf27
+  field_languages:
+    -
+      entity: da922300-7b81-4bd4-ba86-cd7c23136335
+    -
+      entity: 3b93cee4-da36-43e7-89df-061acdf5bc25
+  field_role:
+    -
+      entity: ff1734b8-82ba-418d-9bc9-8b0ef54064d1
+  field_specialties:
+    -
+      entity: a17eaf26-f14d-4abc-a41b-25534a2cd81e
+    -
+      entity: 0eb63c39-edff-4d41-83df-7a62222c704a
+    -
+      entity: b2ea1537-f79d-4b67-ab49-937012f5a4dd
+    -
+      entity: d06bcd99-a80b-472f-bfff-610d3ae6474a
+    -
+      entity: 3cd61633-55d5-48b9-9abd-010b64102fb1
+    -
+      entity: cf0cab34-4080-4571-baf4-b9437c8e3f52
+  field_team:
+    -
+      entity: adabd71f-807b-4335-9747-5ab18282e3db

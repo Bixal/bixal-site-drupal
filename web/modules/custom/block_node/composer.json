@@ -1,0 +1,14 @@
+{
+  "name": "drupal/block_node",
+  "type": "drupal-module",
+  "description": "A block type which displays the current node (or a specific node) in a block in the specified view mode",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/block_node",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/block_node",
+    "source": "http://cgit.drupalcode.org/block_node"
+  },
+  "require": { }
+}

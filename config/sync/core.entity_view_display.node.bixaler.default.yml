@@ -1,0 +1,107 @@
+uuid: d6d35941-c508-4bb9-b936-fa3cd3a09c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bixaler.body
+    - field.field.node.bixaler.field_bucket_list
+    - field.field.node.bixaler.field_certifications
+    - field.field.node.bixaler.field_image
+    - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_link
+    - field.field.node.bixaler.field_role
+    - field.field.node.bixaler.field_specialties
+    - field.field.node.bixaler.field_team
+    - node.type.bixaler
+  module:
+    - link
+    - text
+    - user
+id: node.bixaler.default
+targetEntityType: node
+bundle: bixaler
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_bucket_list:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_certifications:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_languages:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_role:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_specialties:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_team:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

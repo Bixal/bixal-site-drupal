@@ -1,0 +1,24 @@
+uuid: 43f8abb7-3a8b-4f53-b54b-535392578dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.bixaler
+  module:
+    - text
+id: node.bixaler.body
+field_name: body
+entity_type: node
+bundle: bixaler
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
