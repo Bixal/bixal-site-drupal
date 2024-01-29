@@ -77,16 +77,16 @@
 ] %}
 
 {% if content.field_decorative_title| field_value is not empty %}
-	{% set decorative_title = true %}
-	{% set title = content.field_decorative_title | field_value %}
+  {% set decorative_title = true %}
+  {% set title = content.field_decorative_title | field_value %}
 {% else %}
-	{% set decorative_title = false %}
-	{% set title = node.title.value %}
+  {% set decorative_title = false %}
+  {% set title = node.title.value %}
 {% endif %}
 
 <div{{attributes.addClass(classes)}}>
 
-	{% include "@components/hero/hero.html.twig" with {
+  {% include "@components/hero/hero.html.twig" with {
     'title': title,
     'image' : file_url(content.field_banner_image['#object'].field_banner_image.entity.field_media_image.entity.uri.getString()),
     'variant' : 'image-bg',
