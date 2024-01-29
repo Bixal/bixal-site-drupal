@@ -12,7 +12,7 @@ $c-orange: #fda307;
 $c-red-orange: #e02f00;
 $c-gray: color("gray-4");
 
-$font-ui: "Proxima Nova", Arial, Helvetica, sans-serif;
+$font-ui: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
 $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 
 :root {
@@ -32,7 +32,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // Modern normalize - CSS Reset.
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css");
 
-// Novel pro fontface.
+// Proxima Nova and Novel pro typefaces.
 @import url("https://use.typekit.net/wfu7yyr.css");
 
 // ==========================================================================
