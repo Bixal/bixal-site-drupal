@@ -35,18 +35,19 @@
       </div>
     </div>
   </div>
+  {% if specialties or bucketlist %}
   <div class="bix-profile__aside">
     <div class="bix-profile__interests">
+      {% if specialties %}
       <div class="bix-profile__specialties">
         <h2 class="bix-profile__heading bix-profile__heading--secondary">Specialties</h2>
-        {% if specialties %}
         <ul>
           {% for item in specialties %}
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
-        {% endif %}
       </div>
+      {% endif %}
       {% if bucketlist %}
       <div class="bix-profile__bucket-list">
         <h2 class="bix-profile__heading bix-profile__heading--secondary">Bucket List</h2>
@@ -55,4 +56,5 @@
       {% endif %}
     </div>
   </div>
+  {% endif %}
 </div>
