@@ -18,9 +18,15 @@
   {% include "@components/hero/hero--image-inline.html.twig" %}
 {% else %}
   <div class="bix-hero__container">
-    <h1 class="bix-hero__title">
-      {{ title }}
-    </h1>
+    {% if decorative_title %}
+      <div class="bix-hero__decorative__title">
+        {{ title }}
+      </div>
+    {% else %}
+      <h1 class="bix-hero__title">
+        {{ title }}
+      </h1>
+    {% endif %}
   </div>
 {% endif %}
 
