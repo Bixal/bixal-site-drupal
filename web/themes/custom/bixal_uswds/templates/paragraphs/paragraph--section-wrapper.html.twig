@@ -38,22 +38,29 @@
  * @ingroup themeable
  */
 #}
-{% extends  "paragraph--default.html.twig" %}
-{# Pulling card data from paragraphs into a twig array to 
-  utilize in the card group component #}
-{% set cards = [] %}
-{% for item in content.field_cards | field_value %}
-	{% set cards = cards|merge([
-      { title: item['#paragraph'].field_title.value,
-        description: item['#paragraph'].field_description.value,
-        variant: item['#paragraph'].field_card_variant.value,
-        image: file_url(item['#paragraph'].field_image.entity.field_media_image.entity.uri.getString()),
-       }
-      ]) %}
-{% endfor %}
+{% set variant = content.field_section_variant['#items'].getString() %}
+{% set bg_image = file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString()) %}
 
-{% block paragraph %}
-	{% include '@components/cards/flip-card-group.html.twig' with {
-      'flip_cards': cards,
-    } %}
-{% endblock paragraph %}
+{% if variant == 'tall' %}
+  {% set variant = 'centered' %}
+  {% set additional_classes = 'bix-section--tall' %}
+{% elseif variant == 'background-image' %}
+  {% set variant = 'primary' %}
+{% endif %}
+
+{% set classes = [
+  'component',
+  'component--type--' ~ paragraph.bundle|clean_class,
+  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ?  'component--unpublished'
+] %}
+
+{% extends  "@components/section/section.html.twig" %}
+
+{% block body %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content | without('field_image', 'field_section_variant') }}
+    {% endblock %}
+  </div>
+{% endblock body %}

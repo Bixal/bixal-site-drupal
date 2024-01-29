@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: a92f1c0a-2b16-474b-a32b-ee25fb827347
+  uuid: 470656bf-37a9-47b2-a9fb-b2f13ea661e2
   bundle: image
   default_langcode: en
   depends:
-    1d96672e-1e30-499c-a3d2-7446b38a991e: file
+    a3bb112c-676a-434c-ae5c-1cb478b9106e: file
 default:
   status:
     -
@@ -15,10 +15,10 @@ default:
       target_id: 1
   name:
     -
-      value: better-cx.webp
+      value: services-cloud.svg
   created:
     -
-      value: 1703789484
+      value: 1706304578
   path:
     -
       alias: ''
@@ -26,8 +26,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: 1d96672e-1e30-499c-a3d2-7446b38a991e
-      alt: 'Better CX Banner'
+      entity: a3bb112c-676a-434c-ae5c-1cb478b9106e
+      alt: 'Cloud computing icon'
       title: ''
-      width: 3840
-      height: 1745
+      width: 0
+      height: 0
