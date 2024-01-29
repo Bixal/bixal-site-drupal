@@ -2,7 +2,7 @@
   "collections": [
     {
       "variant": "accent-vivid",
-      "image": "https://www.bixal.com/static/a6bfea2de9dc56a0d366e250f78b098a/09633/health.webp",
+      "image": "<img src=\"https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp\" height=\"155px\" alt=\"\">",
       "title": "Health",
       "items": [
         "Department of Health and Human Services",
@@ -13,13 +13,13 @@
     },
     {
       "variant": "accent-cool-alt",
-      "image": "https://www.bixal.com/static/00c17f077e6046c2065a20cb466e1049/09633/international.webp",
+      "image": "<img src=\"https://www.bixal.com/static/00c17f077e6046c2065a20cb466e1049/09633/international.webp\" height=\"155px\" alt=\"\">",
       "title": "International Development",
       "items": ["United States Agency for International Development"]
     },
     {
       "variant": "accent-warm",
-      "image": "https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp",
+      "image": "<img src=\"https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp\" height=\"155px\" alt=\"\">",
       "title": "Business & Finance",
       "items": [
         "Securities and Exchange Commission",
@@ -29,7 +29,7 @@
     },
     {
       "variant": "primary-alt",
-      "image": "https://www.bixal.com/static/bf6bcea0e576be6edfabd1229410fc97/09633/other.webp",
+      "image": "<img src=\"https://www.bixal.com/static/bf6bcea0e576be6edfabd1229410fc97/09633/other.webp\" height=\"155px\" alt=\"\">",
       "title": "Other",
       "items": [
         "Federal Emergency Management Agency",
