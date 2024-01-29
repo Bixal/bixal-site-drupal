@@ -1,3 +1,5 @@
+@use "uswds-core" as *;
+
 /// @name Heading Border Mixin
 /// @description A mixin that adds a fluid bottom border to headings. See `global.scss` for available color variables
 /// @accessor public
@@ -12,6 +14,8 @@
 ///     @include heading-border("primary"); // Overrides the default border color
 ///   }
 @mixin heading-border($border-color: "accent-cool-alt") {
+  padding-bottom: units(4);
+
   &::after {
     border-bottom: 2px solid var(--c-#{$border-color});
     content: "";
