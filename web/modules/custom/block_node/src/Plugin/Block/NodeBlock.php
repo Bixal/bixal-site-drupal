@@ -2,17 +2,17 @@
 
 namespace Drupal\block_node\Plugin\Block;
 
-use Drupal\Core\Cache\Cache;
-use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
-use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Provides a 'NodeBlock' block.
@@ -40,11 +40,25 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
   private $node;
 
   /**
+   * The node storage.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $nodeStorage;
+
+  /**
    * The entity type manager.
    *
    * @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface
    */
   protected $entityDisplayRepository;
+
+  /**
+   * The route match.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $routeMatch;
 
   /**
    * Constructs a NodeBlock instance.
@@ -59,18 +73,22 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
    *   The entity display repository.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager
    *   The entity type manager.
+   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+   *   The route match.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityDisplayRepositoryInterface $entity_display_repository, EntityTypeManagerInterface $entity_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityDisplayRepositoryInterface $entity_display_repository, EntityTypeManagerInterface $entity_manager, RouteMatchInterface $route_match) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->nodeStorage = $entity_manager->getStorage('node');
     $this->viewBuilder = $entity_manager->getViewBuilder('node');
+    $this->routeMatch = $route_match;
     // If the current node should be used attempt to load it.
     if (empty($configuration['current'])) {
-      $this->node = isset($configuration['nid']) ? $entity_manager->getStorage('node')->load($configuration['nid']) : [];
+      $this->node = isset($configuration['nid']) ? $this->nodeStorage->load($configuration['nid']) : [];
     }
     else {
-      $this->node = \Drupal::routeMatch()->getParameter('node');
+      $this->node = $this->routeMatch->getParameter('node');
     }
     $this->entityDisplayRepository = $entity_display_repository;
   }
@@ -84,7 +102,8 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_id,
       $plugin_definition,
       $container->get('entity_display.repository'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('current_route_match')
     );
   }
 
@@ -106,22 +125,22 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
     $config = $this->getConfiguration();
 
     $form['current'] = [
-      '#title' => t('Use current node?'),
-      '#description' => 'Will display the currently displayed node in the
+      '#title' => $this->t('Use current node?'),
+      '#description' => $this->t('Will display the currently displayed node in the
       specified view mode. Useful for showing certain fields from the current
-      node in a block. Uncheck to pick a specific node.',
+      node in a block. Uncheck to pick a specific node.'),
       '#type' => 'checkbox',
       '#default_value' => $config['current'] ?? 1,
     ];
 
     // Add a form field to the existing block configuration form.
     $form['nid'] = [
-      '#title' => t('Node to display'),
-      '#description' => t('The node you want to display'),
+      '#title' => $this->t('Node to display'),
+      '#description' => $this->t('The node you want to display'),
       '#type' => 'entity_autocomplete',
       '#target_type' => 'node',
       '#selection_handler' => 'default',
-      '#default_value' => !empty($config['nid']) ? Node::load($config['nid']) : NULL,
+      '#default_value' => !empty($config['nid']) ? $this->nodeStorage->load($config['nid']) : NULL,
       '#states' => [
         'invisible' => [
           ':input[name="settings[current]"]' => [
@@ -141,8 +160,8 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
     }
 
     $form['view_mode'] = [
-      '#title' => t('View mode'),
-      '#description' => t('Select the view mode you want your node to render in. This will only work for view modes that are marked as having a "custom" display mode for the content type. For example, "Full" will not work if your content type does not have "Full" marked as custom, instead choose "Default" which usually calls "Full".'),
+      '#title' => $this->t('View mode'),
+      '#description' => $this->t('Select the view mode you want your node to render in. This will only work for view modes that are marked as having a "custom" display mode for the content type. For example, "Full" will not work if your content type does not have "Full" marked as custom, instead choose "Default" which usually calls "Full".'),
       '#type' => 'select',
       '#options' => $options,
       '#default_value' => $config['view_mode'] ?? 'full',
@@ -150,7 +169,7 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
     ];
 
     $form['enabled_view_mode_only'] = [
-      '#title' => t('Use enabled view mode only?'),
+      '#title' => $this->t('Use enabled view mode only?'),
       '#description' => $this->t('Will only show the block if the display mode is enabled in "Use custom display settings for the following view modes" for each content type. This is handy if you have different enabled view modes between content types. This way, you don\'t need to use block visibility rules, it will only show on nodes that support the view mode. Don\'t use this option if you want to use "Full" unless "Full" is checked as a custom display setting in your content types.'),
       '#type' => 'checkbox',
       '#default_value' => $config['enabled_view_mode_only'] ?? 0,
@@ -181,7 +200,7 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
     }
     $view_mode = $config['view_mode'] ?? 'full';
     if ($config['enabled_view_mode_only'] ?? 0) {
-      $view_modes_for_ct = \Drupal::service('entity_display.repository')
+      $view_modes_for_ct = $this->entityDisplayRepository
         ->getViewModeOptionsByBundle('node', $this->node->bundle());
       if (!array_key_exists($view_mode, $view_modes_for_ct)) {
         return $build;
@@ -204,7 +223,7 @@ class NodeBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function getCacheTags() {
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($node = $this->routeMatch->getParameter('node')) {
       return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
     }
     else {
