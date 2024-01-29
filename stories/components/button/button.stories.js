@@ -17,6 +17,7 @@ export const Link = {
   },
 };
 
+// @TODO: Convert modifier to variant for consistency.
 export const Inverse = {
   args: {
     modifier: "bix-button--inverse",
@@ -26,3 +27,10 @@ export const Inverse = {
     backgrounds: { default: "dark" },
   },
 };
+
+export const Unstyled = {
+  args: {
+    modifier: "bix-button--unstyled",
+    has_icon: true,
+  },
+}
