@@ -4,7 +4,7 @@
     <div class="bix-profile__main-container">
       <div class="bix-profile__intro">
         <div class="bix-profile__image">
-          <img src="https://www.bixal.com/static/ac0c71983b8cf0d4955a0729c7a8ba71/ad0d6/amie-nisler.webp" alt="">
+          <img src="https://www.bixal.com/static/ac0c71983b8cf0d4955a0729c7a8ba71/ad0d6/amie-nisler.webp" height="270" width="270" alt="">
         </div>
         <div class="bix-profile__description">
           <h1 class="bix-profile__heading">Amie Nisler</h1>
@@ -13,26 +13,9 @@
               Senior Communications Strategist
             </div>
           </div>
-          <!-- @TODO: Use social nav component. -->
-          <div class="social-nav">
-            <ul class="social-nav__list">
-              <li class="social-nav__item">
-                <a
-                  href="https://www.linkedin.com/in/amienisler/"
-                  class="social-nav__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                  >
-                  <img
-                    src="https://bixal.com/static/45d1bb1b8ac9ab4b39726b1376923f54/linkedIn.svg"
-                    height="24"
-                    alt="linkedIn logo"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+          {% if socialNav %}
+            {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
+          {% endif %}
         </div>
       </div>
     </div>

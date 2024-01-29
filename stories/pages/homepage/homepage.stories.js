@@ -12,6 +12,7 @@ import "../../components/cards/cards.stories";
 import "../../components/description-list/description-list.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
+import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
 export default {
   title: "Pages/Homepage",
@@ -74,5 +75,6 @@ export const Default = {
         has_icon: true,
       },
     },
+    socialNav: SocialNav.default.args
   },
 };

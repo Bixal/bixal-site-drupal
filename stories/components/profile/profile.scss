@@ -3,7 +3,7 @@
 .bix-profile {
   @include at-media("desktop") {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     column-gap: units(5);
   }
 
@@ -14,9 +14,20 @@
   }
 
   &__intro {
-    display: flex;
-    flex-flow: row nowrap;
-    column-gap: units(2);
+    @include at-media("tablet") {
+      display: flex;
+      flex-flow: row nowrap;
+      column-gap: units(4);
+    }
+  }
+
+  &__intro .bix-profile__heading {
+    font-size: px-to-rem(40px);
+    margin-top: 0;
+
+    &::after {
+      content: none;
+    }
   }
 
   &__aside {
@@ -33,11 +44,25 @@
   }
 
   &__heading::after {
-    background-color: var(--c-accent-warm);
+    border-bottom-color: var(--c-accent-warm);
     content: "";
     display: block;
     height: 2px;
     margin-top: units(2);
     width: px-to-rem(200px);
+  }
+
+  &__role {
+    font-weight: 700;
+    font-size: size("ui", "lg");
+    line-height: 1;
+
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid var(--c-accent-warm);
+      padding-top: units(3);
+      width: px-to-rem(200px);
+    }
   }
 }

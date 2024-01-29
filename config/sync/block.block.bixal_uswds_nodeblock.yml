@@ -1,0 +1,24 @@
+uuid: e2675ae4-8cf8-4ef6-96b0-f04c20e391aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_node
+  theme:
+    - bixal_uswds
+id: bixal_uswds_nodeblock
+theme: bixal_uswds
+region: highlighted
+weight: 0
+provider: null
+plugin: node_block
+settings:
+  id: node_block
+  label: 'Hero Node Block'
+  label_display: '0'
+  provider: block_node
+  view_mode: hero_section
+  current: 1
+  nid: null
+  enabled_view_mode_only: 1
+visibility: {  }
