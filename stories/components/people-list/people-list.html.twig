@@ -108,4 +108,11 @@
     {% endfor %}
   </ul>
   {% endif %}
+  {% if filter_content|length > 20 %}
+  <div class="bix-people__footer">
+    {% include "@components/button/button.html.twig" with {
+      label: "View all",
+    } %}
+  </div>
+  {% endif %}
 </section>
