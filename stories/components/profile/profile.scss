@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-profile {
   @include at-media("desktop") {
@@ -9,8 +10,14 @@
 
   &__main,
   &__aside {
-    padding-top: units(5);
+    padding-top: units(7);
     padding-bottom: units(5);
+  }
+
+  &__main {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__intro {
@@ -21,35 +28,35 @@
     }
   }
 
-  &__intro .bix-profile__heading {
+  // Person's name.
+  &__heading--primary {
     font-size: px-to-rem(40px);
     margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // Heading with orange border.
+  &__heading--secondary {
+    @include heading-border("accent-warm");
+    font-size: px-to-rem(25px);
+    letter-spacing: -0.35px;
+    margin-top: 0;
+    margin-bottom: units(3);
+    padding-bottom: 0;
 
     &::after {
-      content: none;
+      margin-top: units(3);
     }
+  }
+
+  &__image {
+    flex-shrink: 0;
   }
 
   &__aside {
     background-color: var(--c-base);
     padding-left: units(10);
     padding-right: units(10);
-  }
-
-  &__heading {
-    font-size: px-to-rem(25px);
-    letter-spacing: -0.35px;
-    margin-top: units(5);
-    margin-bottom: units(2);
-  }
-
-  &__heading::after {
-    border-bottom-color: var(--c-accent-warm);
-    content: "";
-    display: block;
-    height: 2px;
-    margin-top: units(2);
-    width: px-to-rem(200px);
   }
 
   &__role {
@@ -64,5 +71,9 @@
       padding-top: units(3);
       width: px-to-rem(200px);
     }
+  }
+
+  &__specialties {
+    margin-bottom: units(8);
   }
 }

@@ -1,0 +1,22 @@
+{
+  "image": "https://placehold.co/325x325",
+  "name": "",
+  "role": "",
+  "socialNav": {
+    "variant": "accent-warm",
+      "items": [
+        {
+          "href": "https://www.linkedIn.com",
+          "label": "LinkedIn"
+        }
+      ]
+  },
+  "specialties": [
+    "Behavioral Science",
+    "Data Systems",
+    "Emergency and Risk Communications",
+    "Health Communications",
+    "Plain Language"
+  ],
+  "bucketlist": "To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course)."
+}

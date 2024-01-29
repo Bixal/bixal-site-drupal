@@ -1,16 +1,31 @@
-<!-- @TODO Allow component to take data. -->
+{#
+/**
+  * User Profile
+  *
+  * Available variables:
+  * - variable_name: description.
+**/
+#}
+
 <div class="bix-profile">
   <div class="bix-profile__main">
     <div class="bix-profile__main-container">
       <div class="bix-profile__intro">
         <div class="bix-profile__image">
-          <img src="https://www.bixal.com/static/ac0c71983b8cf0d4955a0729c7a8ba71/ad0d6/amie-nisler.webp" height="270" width="270" alt="">
+          <img
+            src="{{ image | default("https://placehold.co/325x325") }}"
+            height="270"
+            width="270"
+            alt=""
+          />
         </div>
         <div class="bix-profile__description">
-          <h1 class="bix-profile__heading">Amie Nisler</h1>
+          <h1 class="bix-profile__heading bix-profile__heading--primary">
+            {{ name | default("Full name") }}
+          </h1>
           <div class="bix-profile__job-description">
             <div class="bix-profile__role">
-              Senior Communications Strategist
+              {{ role | default("Role") }}
             </div>
           </div>
           {% if socialNav %}
@@ -23,19 +38,21 @@
   <div class="bix-profile__aside">
     <div class="bix-profile__interests">
       <div class="bix-profile__specialties">
-        <h2 class="bix-profile__heading">Specialties</h2>
+        <h2 class="bix-profile__heading bix-profile__heading--secondary">Specialties</h2>
+        {% if specialties %}
         <ul>
-          <li>Behavioral Science</li>
-          <li>Data Systems</li>
-          <li>Emergency and Risk Communications</li>
-          <li>Health Communications</li>
-          <li>Plain Language</li>
+          {% for item in specialties %}
+            <li>{{ item }}</li>
+          {% endfor %}
         </ul>
+        {% endif %}
       </div>
+      {% if bucketlist %}
       <div class="bix-profile__bucket-list">
-        <h2 class="bix-profile__heading">Bucket List</h2>
-        <p>To attend a World Cup final game.</p>
+        <h2 class="bix-profile__heading bix-profile__heading--secondary">Bucket List</h2>
+        <p>{{ bucketlist }}</p>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
