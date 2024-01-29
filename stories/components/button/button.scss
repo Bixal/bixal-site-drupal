@@ -10,6 +10,7 @@
   cursor: pointer;
   display: inline-flex;
   line-height: 1;
+  outline-color: var(--c-accent-cool-alt);
   padding: units(2) units(3);
   text-decoration: none;
   transition: 0.2s ease-in;
@@ -34,5 +35,17 @@
     background-color: color("white");
     color: color("ink");
     outline-offset: 3px;
+  }
+}
+
+.bix-button--unstyled {
+  border: none;
+  border-radius: 0;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: color("ink");
   }
 }

@@ -1,0 +1,10 @@
+uuid: 5fedd71d-30a7-4e78-bbc8-940dc5e4ab26
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.hero_section
+label: 'Hero Section'
+targetEntityType: node
+cache: true

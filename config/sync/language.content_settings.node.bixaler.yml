@@ -1,0 +1,11 @@
+uuid: 5e59b5c3-6bc2-4433-9cff-15f3a85a8048
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bixaler
+id: node.bixaler
+target_entity_type_id: node
+target_bundle: bixaler
+default_langcode: site_default
+language_alterable: false

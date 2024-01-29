@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 050f77ba-5c4c-4df4-b9ed-f97e7423c47a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: buddy-harlow.webp
+  uri:
+    -
+      value: 'public://2024-01/buddy-harlow.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 22882
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1705592906

@@ -1,8 +1,82 @@
 @use "uswds-core" as *;
 
+%filter-base-text-styles {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.bix-filter__dropdown {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  &-button {
+    @extend %filter-base-text-styles;
+    border-bottom: 2px solid var(--c-accent-cool-alt);
+    font-size: px-to-rem(16px);
+  }
+
+  &-button.is-active {
+
+    // Flip the caret vertically when active.
+    .bix-icon--caret {
+      transform: scaleY(-1);
+    }
+  }
+
+  &-options {
+    @extend %filter-base-text-styles;
+    background-color: color("white");
+    border: 2px solid var(--c-base);
+    font-size: px-to-rem(14px);
+    padding: units(5) units(5) units(4);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // 1. USWDS `tablet` token is 640px.
+    //    https://designsystem.digital.gov/design-tokens/spacing-units/
+    @include at-media("tablet") {
+      columns: 3;
+      gap: units(4);
+      margin-left: auto;
+      margin-right: auto;
+      max-width: units("tablet"); // 1
+      width: 100%;
+    }
+  }
+
+  &-option {
+    cursor: pointer;
+    display: block;
+    line-height: 1;
+    margin-bottom: units(3);
+    text-align: left;
+    transition: color 0.25s;
+  }
+
+  &-option:last-child {
+    margin-bottom: 0;
+  }
+
+  // Selected option.
+  &-option:has(input:checked) {
+    color: var(--c-primary-alt);
+  }
+
+  // The radio button.
+  &-option input {
+    opacity: 0;
+    position: absolute;
+  }
+}
+
 .bix-people-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 244px));
+  row-gap: units(7);
   list-style: none;
   padding-left: 0;
   justify-content: center;

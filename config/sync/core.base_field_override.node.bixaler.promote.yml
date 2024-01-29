@@ -1,0 +1,22 @@
+uuid: e410573b-f0d4-4ddd-a6d3-04e7ca03f296
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bixaler
+id: node.bixaler.promote
+field_name: promote
+entity_type: node
+bundle: bixaler
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

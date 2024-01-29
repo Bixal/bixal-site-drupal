@@ -9,6 +9,7 @@ $c-green: #deec1c;
 $c-maroon: #55052a;
 $c-orange: #fda307;
 $c-red-orange: #e02f00;
+$c-gray: color("gray-4");
 
 $font-ui: "Proxima Nova", Arial, Helvetica, sans-serif;
 $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
@@ -22,6 +23,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-accent-warm-alt: #{$c-red-orange};
   --c-accent-warm-dark: #{$c-maroon};
   --c-accent-vivid: #{$c-green};
+  --c-base: #{$c-gray};
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 }
@@ -209,4 +211,15 @@ address {
 
 .bix-input--textarea {
   min-height: px-to-rem(120px);
+}
+
+.bix-hero__decorative__title {
+  font-size: 64px;
+  text-wrap: balance;
+  color: color("white");
+  font-family: $font-heading;
+  font-weight: 800;
+  font-weight: font-weight(800);
+  line-height: 1.2;
+  margin: 0;
 }

@@ -1,16 +1,34 @@
 {
-  "people": [
+  "filter_dropdown_label": "Filter by",
+  "filter_options": [
+    "all",
+    "design",
+    "communications",
+    "learning",
+    "leadership",
+    "data",
+    "technology",
+    "operations",
+    "international",
+    "growth",
+    "delivery"
+  ],
+  "filter_content": [
     {
       "name": "Alex Hull",
+      "image": null,
       "role": "Digital Accessibility Specialist",
-      "social": [],
+      "filter_category": "communications",
+      "social_links": [{}],
       "specialties": ["Behavioral Science", "Behavioral Science"],
       "languages": ["English", "American Sign Language (ASL)"],
       "bucketlist": "To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course)."
     },
     {
       "name": "Amie Nisler",
+      "image": null,
       "role": "Senior Communications Strategist",
+      "filter_category": "communications",
       "specialties": [
         "Behavioral Science",
         "Data Systems",
@@ -22,13 +40,17 @@
     },
     {
       "name": "Brianna Naolu",
+      "image": null,
       "role": "UX Designer",
+      "filter_category": "design",
       "specialties": ["User Experience (UX)", "User Research", "Visual Design"],
       "bucketlist": "To see the northern lights in all their magnificent glory."
     },
     {
       "name": "Clay Marshall",
+      "image": null,
       "role": "Director, Web Development",
+      "filter_category": "technology",
       "specialties": [
         "Drupal CMS Architecture and Development",
         "Graphic Design",
@@ -38,7 +60,9 @@
     },
     {
       "name": "Buddy Harlow",
+      "image": null,
       "role": "Associate Software Engineer",
+      "filter_category": "technology",
       "specialties": ["CSS", "Drupal", "React", "Wordpress"],
       "bucketlist": "To ride the Steel Vengeance roller coaster at Cedar Point in Sandusky, Ohio."
     }

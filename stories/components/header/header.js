@@ -1,54 +1,78 @@
+import * as Toggle from "../../_utils/toggle";
+
 window.addEventListener("DOMContentLoaded", () => {
   const menuTrigger = document.querySelector("[data-menu-toggle]");
   const menuTarget = document.querySelector("[data-menu-target]");
   const menuLabel = menuTrigger.querySelector(".bix-toggle-icon__text");
 
   const desktopBreakpoint = window.matchMedia("(min-width: 1024px)");
-  const activeClass = "is-active";
   const labelClosed = "Menu";
   const labelOpen = "Close";
 
-  function showMenu() {
+  /**
+   * Show menu and update label to "Close".
+   */
+  function openMenu() {
     menuLabel.textContent = labelOpen;
-    menuTrigger.classList.add(activeClass);
-    menuTarget.classList.add(activeClass);
-    menuTarget.removeAttribute("hidden");
+    Toggle.show(menuTrigger, menuTarget);
   }
 
-  function hideMenu() {
+  /**
+   * Hide menu and revert text label to default state.
+   */
+  function closeMenu() {
     menuLabel.textContent = labelClosed;
-    menuTrigger.classList.remove(activeClass);
-    menuTarget.classList.remove(activeClass);
-    menuTarget.setAttribute("hidden", "");
+    Toggle.hide(menuTrigger, menuTarget);
   }
 
-  function toggleMenu(e) {
-    const isActive = menuTarget.classList.contains(activeClass);
+  /**
+   * Close menu when user hits escape key.
+   *
+   * @param {Event} event
+   */
+  function handleEscape(event) {
+    const isActive = Toggle.checkActive(menuTarget);
+
+    if (event.key === "Escape" && isActive) {
+      closeMenu();
+    }
+  }
+
+  /**
+   * On click it will determine state and toggle based off of that.
+   *
+   * @param {Event} event
+   */
+  function handleClick(event) {
+    const isActive = Toggle.checkActive(event.currentTarget);
 
     if (!isActive) {
-      showMenu();
+      openMenu();
     } else {
-      hideMenu();
+      closeMenu();
     }
   }
 
-  function handleEscape(e) {
-    if (e.key === "Escape" && menuTarget.classList.contains(activeClass)) {
-      hideMenu();
-    }
-  }
-
+  /**
+   * Reset menu based on screen size.
+   *
+   * @param {MediaQueryList} breakpoint
+   */
   function handleResize(breakpoint) {
     if (breakpoint.matches) {
-      showMenu();
+      openMenu();
     } else {
-      hideMenu();
+      closeMenu();
     }
   }
 
+  /**
+   * Add event listeners.
+   */
   function init() {
+    // @TODO: Add a focus trap for A11Y.
     handleResize(desktopBreakpoint);
-    menuTrigger.addEventListener("click", toggleMenu);
+    menuTrigger.addEventListener("click", handleClick);
     desktopBreakpoint.addEventListener("change", handleResize);
     document.addEventListener("keyup", handleEscape);
   }
