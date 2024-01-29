@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4599c6ac-6ad6-4402-9087-32e0a15c7a24
+  bundle: image
+  default_langcode: en
+  depends:
+    050f77ba-5c4c-4df4-b9ed-f97e7423c47a: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: buddy-harlow.webp
+  created:
+    -
+      value: 1705592906
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 050f77ba-5c4c-4df4-b9ed-f97e7423c47a
+      alt: 'Buddy Harlow Portrait'
+      title: ''
+      width: 600
+      height: 600

@@ -1,0 +1,19 @@
+uuid: e25c7709-c8e8-44d4-846b-e57aeffd9104
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_bucket_list
+field_name: field_bucket_list
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

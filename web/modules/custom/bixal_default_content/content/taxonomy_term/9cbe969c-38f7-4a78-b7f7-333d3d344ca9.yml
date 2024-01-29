@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 9cbe969c-38f7-4a78-b7f7-333d3d344ca9
+  bundle: specialties
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Creating Mobile-Friendly Websites'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Creating Mobile-Friendly Websites | Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/taxonomy/term/12'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
