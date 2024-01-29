@@ -24,7 +24,7 @@
       class="bix-filter__dropdown-button bix-button bix-button--unstyled"
       data-dropdown-toggle
       aria-controls="bix-filter-dropdown">
-      {{ filter_dropdown_label }}
+      {{ filter_dropdown_label | default("Filter by") }}
 
       <svg
         class="bix-icon bix-icon--caret"
@@ -44,25 +44,28 @@
       </svg>
     </button>
 
-    <div
-      id="bix-filter-dropdown"
-      class="bix-filter__dropdown-options"
-      data-dropdown-options>
-      {% for option in filter_options %}
-        <label
-          for="{{ option | lower }}"
-          class="bix-filter__dropdown-option">
-          <input
-            type="radio"
-            name="filter"
-            id="{{ option | lower }}"
-            value="{{ option | lower }}"
-            {{ loop.first ? "checked" }}>
-          {{ option | capitalize }}
-        </label>
-      {% endfor %}
-    </div>
+  {% if filter_options %}
+  <div
+    id="bix-filter-dropdown"
+    class="bix-filter__dropdown-options"
+    data-dropdown-options>
+    {% for option in filter_options %}
+      <label
+        for="{{ option | lower }}"
+        class="bix-filter__dropdown-option">
+        <input
+          type="radio"
+          name="filter"
+          id="{{ option | lower }}"
+          value="{{ option | lower }}"
+          {{ loop.first ? "checked" }}>
+        {{ option | capitalize }}
+      </label>
+    {% endfor %}
   </div>
+  {% endif %}
+  </div>
+  {% if filter_content %}
   <ul class="bix-people-list">
     {% for item in filter_content %}
     <li
@@ -104,4 +107,5 @@
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
 </section>
