@@ -35,20 +35,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'This is Bixal | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/home'
   path:
     -
       alias: /home
@@ -205,9 +191,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_nested_paragraphs:
             -
               entity:
@@ -227,9 +210,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_cards:
                     -
                       entity:
@@ -279,9 +259,6 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          revision_translation_affected:
-                            -
-                              value: true
                           field_card_variant:
                             -
                               value: accent-cool
@@ -312,9 +289,6 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          revision_translation_affected:
-                            -
-                              value: true
                           field_card_variant:
                             -
                               value: primary
@@ -345,9 +319,6 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          revision_translation_affected:
-                            -
-                              value: true
                           field_card_variant:
                             -
                               value: accent-cool-alt
@@ -378,9 +349,6 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          revision_translation_affected:
-                            -
-                              value: true
                           field_card_variant:
                             -
                               value: primary-alt
@@ -408,9 +376,6 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          revision_translation_affected:
-                            -
-                              value: true
                           field_card_variant:
                             -
                               value: accent-warm-dark

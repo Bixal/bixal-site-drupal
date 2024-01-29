@@ -38,17 +38,6 @@ default:
   sticky:
     -
       value: false
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Gerardo Maldonado | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/node/12'
   path:
     -
       alias: ''
