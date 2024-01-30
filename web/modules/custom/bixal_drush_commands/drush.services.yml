@@ -1,0 +1,6 @@
+services:
+  init.commands:
+    class: \Drupal\bixal_drush_commands\Commands\CustomCommands
+    arguments: ["@config.factory"]
+    tags:
+      - { name: drush.command }
