@@ -1,13 +1,14 @@
 {
   "image": "https://placehold.co/325x325",
-  "name": "",
-  "role": "",
+  "name": "Amie Nisler",
+  "role": "Senior Communications Strategist",
   "socialNav": {
     "variant": "accent-warm",
       "items": [
         {
           "href": "https://www.linkedIn.com",
-          "label": "LinkedIn"
+          "label": "LinkedIn",
+          "icon_path": "icons/linkedin.svg"
         }
       ]
   },

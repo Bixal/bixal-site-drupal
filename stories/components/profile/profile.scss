@@ -77,3 +77,15 @@
     margin-bottom: units(8);
   }
 }
+
+// ==========================================================================
+// Return bar
+// ==========================================================================
+
+// @TODO: Refactor into own component.
+.bix-return .bix-container {
+  border-top: 2px solid var(--c-base);
+  margin-top: units(10);
+  margin-bottom: units(10);
+  padding: units(3) units(1);
+}
