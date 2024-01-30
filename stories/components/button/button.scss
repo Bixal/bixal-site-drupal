@@ -27,6 +27,10 @@
   }
 }
 
+.bix-button--icon-before {
+  flex-direction: row-reverse;
+}
+
 .bix-button--inverse {
   color: color("white");
 

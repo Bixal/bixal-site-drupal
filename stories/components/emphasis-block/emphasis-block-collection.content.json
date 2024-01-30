@@ -33,7 +33,7 @@
   ],
   "cta": {
     "href": "javascript:void(0)",
-    "label": "View all jobs",
-    "has_icon": true
+    "icon": "arrow-right",
+    "label": "View all jobs"
   }
 }

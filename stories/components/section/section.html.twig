@@ -26,12 +26,8 @@
     {% block footer %}
       {% if cta.label %}
         <div class="bix-section__footer">
-          {% include "@components/button/button.html.twig" with {
-            modifier: cta.modifier,
-            label: cta.label,
-            href: cta.href,
-            has_icon: cta.has_icon
-          } %}
+          {# Avoid button inheriting section data. #}
+          {% include "@components/button/button.html.twig" with cta only %}
         </div>
       {% endif %}
     {% endblock %}
