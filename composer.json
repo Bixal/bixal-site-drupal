@@ -20,6 +20,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/components": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.1",
@@ -58,7 +59,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -76,6 +78,11 @@
             "allowed-packages": [
                 "DISABLEmpbixal/drupal-platform-lando"
             ]
+        },
+        "patches": {
+            "drupal/default_content": {
+                "/project/default_content/issues/3203014: BaseFieldOverride cause inconsistencies during export": "https://www.drupal.org/files/issues/2022-12-13/base_field_override_inconsistencies-3203014-9.patch"
+            }
         },
         "installer-paths": {
             "web/core": [

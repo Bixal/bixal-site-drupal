@@ -1,0 +1,51 @@
+uuid: acd7848a-f6d2-4d69-abdc-e4ee76563749
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_wrapper.field_image
+    - field.field.paragraph.section_wrapper.field_nested_paragraphs
+    - field.field.paragraph.section_wrapper.field_section_variant
+    - paragraphs.paragraphs_type.section_wrapper
+  module:
+    - media_library
+    - paragraphs
+id: paragraph.section_wrapper.default
+targetEntityType: paragraph
+bundle: section_wrapper
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_nested_paragraphs:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_section_variant:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

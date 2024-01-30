@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: adabd71f-807b-4335-9747-5ab18282e3db
+  bundle: team
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Technology
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

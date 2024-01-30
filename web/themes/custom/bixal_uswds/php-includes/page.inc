@@ -34,13 +34,15 @@ function bixal_uswds_preprocess_page(&$vars) {
   if ($node instanceof NodeInterface) {
     // If the page has a hero, unset the page
     // title as the hero will have a h1 tag.
-    if ($node->hasField('field_bx_hero') &&
-      !$node->get('field_bx_hero')->isEmpty()) {
+    if (
+      $node->hasField('field_bx_hero') &&
+      !$node->get('field_bx_hero')->isEmpty()
+    ) {
       unset($vars['page']['help']['bixal_uswds_page_title']);
     }
   }
-  // Provide the social icons for social-nav.html.twig which is embedded in
-  // footer.html.twig.
+  // Provide the social icons for social-nav.html.twig which is
+  // embedded in footer.html.twig.
   $icon_path = static function ($file_name) use ($vars) {
     $icons_path = $vars['directory'] . '/storybook_components/stories/assets/icons';
     return Url::fromUri('base://' . $icons_path . '/' . $file_name)->toString();

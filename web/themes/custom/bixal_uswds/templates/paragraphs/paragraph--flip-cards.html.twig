@@ -39,23 +39,21 @@
  */
 #}
 {% extends  "paragraph--default.html.twig" %}
-  {# Pulling card data from paragraphs into a twig array to 
+{# Pulling card data from paragraphs into a twig array to 
   utilize in the card group component #}
-  {% set cards = [] %}
-  {% for item in content.field_cards | field_value %}
-    {% set cards = cards|merge([
+{% set cards = [] %}
+{% for item in content.field_cards | field_value %}
+	{% set cards = cards|merge([
       { title: item['#paragraph'].field_title.value,
         description: item['#paragraph'].field_description.value,
         variant: item['#paragraph'].field_card_variant.value,
         image: file_url(item['#paragraph'].field_image.entity.field_media_image.entity.uri.getString()),
        }
       ]) %}
-  {% endfor %}
+{% endfor %}
 
 {% block paragraph %}
-  <div class="bix-section">
-    {% include '@components/cards/flip-card-group.html.twig' with {
+	{% include '@components/cards/flip-card-group.html.twig' with {
       'flip_cards': cards,
     } %}
-  </div>
 {% endblock paragraph %}

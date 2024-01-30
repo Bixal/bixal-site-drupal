@@ -1,0 +1,69 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 124d4228-2f2d-47c9-a013-4f4f5edee56b
+  bundle: bixaler
+  default_langcode: en
+  depends:
+    9fda5f83-6dff-4d40-be0e-ec458dc76a74: media
+    3b93cee4-da36-43e7-89df-061acdf5bc25: taxonomy_term
+    da922300-7b81-4bd4-ba86-cd7c23136335: taxonomy_term
+    6bde41fd-aeb4-438c-bb26-0c078f1356d7: taxonomy_term
+    588caa73-d1ad-4329-bc7c-6d072702ad68: taxonomy_term
+    9cbe969c-38f7-4a78-b7f7-333d3d344ca9: taxonomy_term
+    7d0c535e-9459-4777-9a90-ae0ae43b3c54: taxonomy_term
+    36c5bd46-4325-4807-9006-a59736631aef: taxonomy_term
+    adabd71f-807b-4335-9747-5ab18282e3db: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'James Mejia'
+  created:
+    -
+      value: 1705593315
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_bucket_list:
+    -
+      value: 'To take a proper vacation to any touristy spot in Mexico and travel to a South American country, like Chile or Uruguay.'
+  field_image:
+    -
+      entity: 9fda5f83-6dff-4d40-be0e-ec458dc76a74
+  field_languages:
+    -
+      entity: 3b93cee4-da36-43e7-89df-061acdf5bc25
+    -
+      entity: da922300-7b81-4bd4-ba86-cd7c23136335
+  field_role:
+    -
+      entity: 6bde41fd-aeb4-438c-bb26-0c078f1356d7
+  field_specialties:
+    -
+      entity: 588caa73-d1ad-4329-bc7c-6d072702ad68
+    -
+      entity: 9cbe969c-38f7-4a78-b7f7-333d3d344ca9
+    -
+      entity: 7d0c535e-9459-4777-9a90-ae0ae43b3c54
+    -
+      entity: 36c5bd46-4325-4807-9006-a59736631aef
+  field_team:
+    -
+      entity: adabd71f-807b-4335-9747-5ab18282e3db
