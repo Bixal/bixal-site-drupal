@@ -1,33 +1,48 @@
 {% set cta_exists = cta.label and cta.href %}
 
-<div class="bix-hero__container">
-  <div class="bix-hero__media">
-    <img src="{{ image }}" alt="" width="530px">
-  </div>
-  <div class="bix-hero__content">
-    <div class="bix-hero__header">
-      <h1 class="bix-hero__title">
-        {{ title }}
-      </h1>
+<section class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}">
+  <div class="bix-hero__container">
+    <div class="bix-hero__media">
+      <img src="{{ image }}" alt="" width="530px">
     </div>
-    {% if description %}
+    <div class="bix-hero__content">
+      <div class="bix-hero__header">
+        <{{ heading_type }} class="bix-hero__title">
+          {{ title }}
+        </{{ heading_type }}>
+      </div>
+      {% if description %}
       <div class="bix-hero__body">
         <p>
           {{ description }}
         </p>
       </div>
-    {% endif %}
-    {% if cta_exists %}
-      <div class="bix-hero__footer">
-        <div class="bix-hero__cta">
-          <a href="{{ cta.href }}">
-            {{ cta.label }}
-            <svg class="icon right-arrow" width="20px" fill="#fff" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 24 12">
-              <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
-            </svg>
-          </a>
+      {% endif %}
+      {% if cta_exists %}
+        <div class="bix-hero__footer">
+          <div class="bix-hero__cta">
+            <a href="{{ cta.href }}">
+              {{ cta.label }}
+              <svg
+                class="icon right-arrow"
+                width="20px"
+                fill="#fff"
+                version="1.1"
+                id=""
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 24 12"
+              >
+                <polygon
+                  class="st0"
+                  points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "
+                ></polygon>
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
-</div>
+</section>
