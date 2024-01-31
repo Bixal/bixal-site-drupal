@@ -19,6 +19,6 @@ else
 fi
 
 # Do additional tasks for a fresh install if needed.
-drush set-hp
+drush set-hp -y
 
 ./orch/show_file.sh $0 end

@@ -61,29 +61,39 @@ class CustomCommands extends DrushCommands {
    *
    * @aliases set-hp
    */
-  public function setHomepage() {
-    $nodes = $this->entityTypeManager->getStorage('node')->loadMultiple();
-    $homepage_uuid = 'ed430371-da05-4a2b-a686-80fe68d22d7c';
-
-    foreach ($nodes as $node) {
-      if ($node->uuid() == $homepage_uuid) {
-        $node_loaded_by_uuid = $this->entityTypeManager->getStorage('node')->loadByProperties(['uuid' => $homepage_uuid]);
-        $entity = reset($node_loaded_by_uuid);
-        $homepage_url = ('/node/' . $entity->id());
-        $this->configFactory->getEditable('system.site')
-          ->set('page.front', $homepage_url)
-          ->save();
-
-        $homepage_set = TRUE;
+  public function setHomepage(array $options = []) {
+    $no_interaction = FALSE;
+    if ($options['no-interaction'] || $options['yes']) {
+      $no_interaction = TRUE;
+    }
+    $homepage_uuid_file = '../.homepage-uuid';
+    $homepage_uuid = file_get_contents($homepage_uuid_file);
+    if (!$homepage_uuid) {
+      if ($no_interaction) {
+        $this->io()->warning(dt('Your homepage has not been set yet, do so by calling drush set-hp'));
+        return;
+      }
+      else {
+        $homepage_uuid = $this->ask('What is the UUID of your homepage node?');
+        if (!$homepage_uuid) {
+          throw new \Exception(dt('A homepage is required'));
+        }
+        file_put_contents($homepage_uuid_file, $homepage_uuid);
       }
     }
 
-    if ($homepage_set == TRUE) {
-      $this->io()->success(dt('Homepage has been set to' . $homepage_url));
+    $nodes = $this->entityTypeManager->getStorage('node')->loadByProperties(['uuid' => $homepage_uuid]);
+    if (empty($nodes)) {
+      file_put_contents($homepage_uuid_file, '');
+      throw new \Exception(dt('Unable to find a node for homepage by UUID ') . $homepage_uuid);
     }
-    else {
-      $this->io()->warning(dt('Homepage could not be set'));
-    }
+    /** @var \Drupal\node\NodeInterface $node */
+    $node = reset($nodes);
+    $homepage_url = '/node/' . $node->id();
+    $this->configFactory->getEditable('system.site')
+      ->set('page.front', $homepage_url)
+      ->save();
+    $this->io()->success(dt('Homepage has been set to ') . $homepage_url);
   }
 
 }
