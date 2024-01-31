@@ -11,7 +11,7 @@ _meta:
     c87a540c-ed48-4a27-9275-0e53d5cfe00b: media
     640588a2-9696-4017-8381-37232afe0939: media
     22d96a9d-0d32-4320-8293-296d9dc00f97: media
-    da97ce7c-48ef-46cd-a1f4-06b89acbefef: media
+    470656bf-37a9-47b2-a9fb-b2f13ea661e2: media
     b452f031-e9c0-41af-b118-163283806eb8: media
 default:
   revision_uid:
@@ -35,20 +35,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'This is Bixal | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/home'
   path:
     -
       alias: /home
@@ -82,9 +68,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_button:
             -
               entity:
@@ -104,9 +87,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_has_icon:
                     -
                       value: true
@@ -148,9 +128,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_button:
             -
               entity:
@@ -170,9 +147,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_has_icon:
                     -
                       value: true
@@ -204,8 +178,8 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: f67c3b68-9595-4fb2-9316-770d19eb0915
-          bundle: flip_cards
+          uuid: d712cf06-6c1d-407f-925b-b2cfe88e3799
+          bundle: section_wrapper
           default_langcode: en
         default:
           status:
@@ -213,21 +187,18 @@ default:
               value: true
           created:
             -
-              value: 1702649501
+              value: 1706303843
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
-          field_cards:
+          field_nested_paragraphs:
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: 1eb9ec9c-3539-4437-b8b2-43511da3af86
-                  bundle: flip_card
+                  uuid: ad21069f-7b4b-4c7a-b819-bc7f0a8ff4a8
+                  bundle: flip_cards
                   default_langcode: en
                 default:
                   status:
@@ -235,32 +206,195 @@ default:
                       value: true
                   created:
                     -
-                      value: 1702649501
+                      value: 1706303860
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
+                  field_cards:
                     -
-                      value: true
-                  field_card_variant:
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 4d6c2fff-d04c-46d9-995a-b5aefcb6f658
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706303860
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: accent-warm
+                          field_description:
+                            -
+                              value: 'We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients.'
+                          field_image:
+                            -
+                              entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
+                          field_title:
+                            -
+                              value: 'Strategic Communications'
                     -
-                      value: accent-warm
-                  field_description:
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 3fdeddfb-6c50-4adf-be00-d831dd0a9979
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706304394
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: accent-cool
+                          field_description:
+                            -
+                              value: 'We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users.'
+                          field_image:
+                            -
+                              entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
+                          field_title:
+                            -
+                              value: 'Human-Centered Design'
                     -
-                      value: 'We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients.'
-                  field_image:
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: d90d429e-5ce7-4e97-a149-c33a18887a80
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706304442
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: primary
+                          field_description:
+                            -
+                              value: 'We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way.'
+                          field_image:
+                            -
+                              entity: 640588a2-9696-4017-8381-37232afe0939
+                          field_title:
+                            -
+                              value: 'Agile Development'
                     -
-                      entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
-                  field_title:
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 050977ff-c233-4ad4-892d-f1fe96bb1e7d
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706304483
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: accent-cool-alt
+                          field_description:
+                            -
+                              value: 'Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society.'
+                          field_image:
+                            -
+                              entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
+                          field_title:
+                            -
+                              value: 'Modernized Learning'
                     -
-                      value: 'Strategic Communications'
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: c2cd21bd-13f3-405e-81db-ade73dbce6fb
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706304520
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: primary-alt
+                          field_description:
+                            -
+                              value: 'We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making.'
+                          field_title:
+                            -
+                              value: 'Data Science and Analytics'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: d957c763-fa88-4e6d-bc0d-9ec786c38e29
+                          bundle: flip_card
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706304549
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_card_variant:
+                            -
+                              value: accent-warm-dark
+                          field_description:
+                            -
+                              value: 'A client-focused approach to successfully migrate to the cloud and modernize the technology infrastructure to improve performance and security while reducing costs.'
+                          field_image:
+                            -
+                              entity: 470656bf-37a9-47b2-a9fb-b2f13ea661e2
+                          field_title:
+                            -
+                              value: 'Cloud Computing'
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: b11e535b-37ed-41fb-b5e1-2a86b6fef5c1
-                  bundle: flip_card
+                  uuid: 1d3cbbb1-f74b-4a17-a0d7-15fef2613e9c
+                  bundle: section
                   default_langcode: en
                 default:
                   status:
@@ -268,124 +402,49 @@ default:
                       value: true
                   created:
                     -
-                      value: 1702649519
+                      value: 1706303911
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
+                  field_button:
                     -
-                      value: true
-                  field_card_variant:
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: c090d855-5cbb-4b60-a022-c08ccd7489fc
+                          bundle: button
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706303911
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_has_icon:
+                            -
+                              value: true
+                          field_link:
+                            -
+                              uri: 'https://google.com'
+                              title: 'View Our Contract Vehicles'
+                              options: {  }
+                          field_modifier:
+                            -
+                              value: false
+                  field_section_variant:
                     -
-                      value: accent-cool
-                  field_description:
-                    -
-                      value: 'We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users.'
-                  field_image:
-                    -
-                      entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
+                      value: centered
                   field_title:
                     -
-                      value: 'Human-Centered Design'
+                      value: 'Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services.'
+          field_section_variant:
             -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: b3261a8e-d561-4b0d-b3cf-5e4ec2099c64
-                  bundle: flip_card
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1702649538
-                  behavior_settings:
-                    -
-                      value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
-                  field_card_variant:
-                    -
-                      value: primary
-                  field_description:
-                    -
-                      value: 'We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way.'
-                  field_image:
-                    -
-                      entity: 640588a2-9696-4017-8381-37232afe0939
-                  field_title:
-                    -
-                      value: 'Agile Development'
-            -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: ba07ee72-4891-4c95-bb5a-fe0dec43836e
-                  bundle: flip_card
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1702649557
-                  behavior_settings:
-                    -
-                      value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
-                  field_card_variant:
-                    -
-                      value: accent-cool-alt
-                  field_description:
-                    -
-                      value: 'Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society.'
-                  field_image:
-                    -
-                      entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
-                  field_title:
-                    -
-                      value: 'Modernized Learning'
-            -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: 219e570f-d6e7-4736-bf7f-9523fae32642
-                  bundle: flip_card
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1702649581
-                  behavior_settings:
-                    -
-                      value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
-                  field_card_variant:
-                    -
-                      value: accent-warm-dark
-                  field_description:
-                    -
-                      value: 'We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making.'
-                  field_image:
-                    -
-                      entity: da97ce7c-48ef-46cd-a1f4-06b89acbefef
-                  field_title:
-                    -
-                      value: 'Data Science and Analytics'
+              value: base
     -
       entity:
         _meta:
@@ -404,9 +463,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_button:
             -
               entity:
@@ -426,9 +482,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_has_icon:
                     -
                       value: true
