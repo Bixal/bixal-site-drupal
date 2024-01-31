@@ -1,23 +1,26 @@
-<dl class="bix-description-list bix-description-list--{{ variant }}">
-  <div class="bix-description-list__media">
-    <img src="{{ image | default("https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp") }}" height="155px" alt="">
-  </div>
-  <dt class="bix-description-list__heading">
-    {{ title | default("Health") }}
-  </dt>
+{% extends "@components/description-list/description-list-base.html.twig" %}
 
-  {% if items %}
+{% if image is empty %}
+  {% set image %}
+    <img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">
+  {% endset %}
+{% endif %}
+
+{% if title is empty %}
+  {% set title = 'Health' %}
+{% endif %}
+
+{% set items %}
+  {% if items is empty %}
+    <dd>Department of Health and Human Services</dd>
+    <dd>Centers for Medicare & Medicaid Services</dd>
+    <dd>National Institutes of Health</dd>
+    <dd>National Library of Medicine</dd>
+  {% else %}
     {% for item in items %}
       <dd>
         {{ item }}
       </dd>
     {% endfor %}
-
-  {% else %}
-    <dd>Department of Health and Human Services</dd>
-    <dd>Centers for Medicare & Medicaid Services</dd>
-    <dd>National Institutes of Health</dd>
-    <dd>National Library of Medicine</dd>
   {% endif %}
-
-</dl>
+{% endset %}

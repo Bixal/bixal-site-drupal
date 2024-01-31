@@ -1,117 +1,118 @@
-<section id="bixal-people" class="section-container  bixal-people">
-  <div>
-    <div class="dropdown">
-      <div data-test-id="filter-by-select" class="dropdown-select " role="button" tabindex="0">Filter By <div
-          class="icon-container" aria-hidden="true"><svg id="carrot-down" width="16px" height="10px" viewBox="0 0 16 10"
-            version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g fill="#000">
-                <path
-                  d="M15.9348521,2.05473568 L8.15375072,9.93454396 C8.06722618,10.0218187 7.9230186,10.0218187 7.83649406,9.93454396 L0.0648934083,2.05473568 C-0.0216311361,1.96711736 -0.0216311361,1.82108681 0.0648934083,1.73312488 L1.76722141,0 L7.83649406,6.14530898 C7.9230186,6.23327091 8.06722618,6.23327091 8.15375072,6.14530898 L14.2230234,0 L15.9348521,1.73312488 C16.021716,1.82108681 16.021716,1.96711736 15.9348521,2.05473568"
-                  id="arrow"></path>
-              </g>
-            </g>
-          </svg></div>
-      </div>
-      <div data-test-id="filter-by-content" class="dropdown-content ">
-        <div name="options" id="options">
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="all" value="all" checked="">
-            <label
-              data-test-id="filter-by-labelAll" class="container" for="all">all
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="leadership" value="leadership">
-            <label
-              data-test-id="filter-by-labelLeadership" class="container" for="leadership">leadership
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="international" value="international">
-            <label
-              data-test-id="filter-by-labelInternational" class="container" for="international">international</label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="design" value="design">
-            <label
-              data-test-id="filter-by-labelDesign" class="container" for="design">design
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="data" value="data">
-            <label
-              data-test-id="filter-by-labelData" class="container" for="data">data
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="growth" value="growth">
-            <label
-              data-test-id="filter-by-labelGrowth" class="container" for="growth">growth
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="communications"
-              value="communications">
-              <label data-test-id="filter-by-labelCommunications" class="container"
-              for="communications">communications
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="technology" value="technology">
-            <label
-              data-test-id="filter-by-labelTechnology" class="container" for="technology">technology
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="delivery" value="delivery">
-            <label
-              data-test-id="filter-by-labelDelivery" class="container" for="delivery">delivery
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="learning" value="learning">
-            <label
-              data-test-id="filter-by-labelLearning" class="container" for="learning">learning
-            </label>
-          </div>
-          <div class="dropdown-option">
-            <input type="radio" name="radio" id="operations" value="operations">
-            <label
-              data-test-id="filter-by-labelOperations" class="container" for="operations">operations
-            </label>
+{#
+/**
+  * Filterable people list.
+  *
+  * Available variables:
+  * - filter_dropwdown_label: String for filter button label.
+  * - filter_options: Array of strings for available filters.
+  * - filter_content: Array of people objects.
+  *   - name: String name of person.
+  *   - image: String URL of profile pic.
+  *   - role: String professional role.
+  *   - filter_category: string of associated option in `filter_options`.
+  *   - social_links: Array of objects containing social links.
+  *   - specialties: Array of strings that contain personal specialties.
+  *   - languages: Array of strings that contain spoken languages.
+  *   - bucketlist: A string that contains bucketlist wish.
+**/
+#}
+
+<section id="bixal-team" class="bix-people">
+  <div class="bix-filter__dropdown">
+    <button
+      type="button"
+      class="bix-filter__dropdown-button bix-button bix-button--unstyled"
+      data-dropdown-toggle
+      aria-controls="bix-filter-dropdown">
+      {{ filter_dropdown_label | default("Filter by") }}
+
+      <svg
+        class="bix-icon bix-icon--caret"
+        width="16px"
+        height="10px"
+        viewBox="0 0 16 10"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g fill="#000">
+            <path
+              d="M15.9348521,2.05473568 L8.15375072,9.93454396 C8.06722618,10.0218187 7.9230186,10.0218187 7.83649406,9.93454396 L0.0648934083,2.05473568 C-0.0216311361,1.96711736 -0.0216311361,1.82108681 0.0648934083,1.73312488 L1.76722141,0 L7.83649406,6.14530898 C7.9230186,6.23327091 8.06722618,6.23327091 8.15375072,6.14530898 L14.2230234,0 L15.9348521,1.73312488 C16.021716,1.82108681 16.021716,1.96711736 15.9348521,2.05473568"
+              id="arrow"></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+
+  {% if filter_options %}
+  <div
+    id="bix-filter-dropdown"
+    class="bix-filter__dropdown-options"
+    data-dropdown-options>
+    {% for option in filter_options %}
+      <label
+        for="{{ option | lower }}"
+        class="bix-filter__dropdown-option">
+        <input
+          type="radio"
+          name="filter"
+          id="{{ option | lower }}"
+          value="{{ option | lower }}"
+          {{ loop.first ? "checked" }}>
+        {{ option | capitalize }}
+      </label>
+    {% endfor %}
+  </div>
+  {% endif %}
+  </div>
+  {% if filter_content %}
+  <ul class="bix-people-list">
+    {% for item in filter_content %}
+    <li
+      class="bix-people-list__item bix-person"
+      data-filter-category="{{ item.filter_category }}">
+      <a
+        class="bix-person__link"
+        href="javascript:void(0)"
+        {% if item.name %}
+        title="View {{ item.name }}'s full profile">
+        {% endif %}
+        <div class="bix-person__media">
+          {# Image is decorative, therefore hidden. #}
+          <img
+            src="{{ item.image | default("https://placehold.co/325x325") }}"
+            aria-hidden="true">
+          <div class="bix-person__overlay">
+            View all
+            <svg
+              class="bix-icon bix-icon--right-arrow"
+              width="20px"
+              fill="#fff"
+              version="1.1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
+              <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
+            </svg>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="bix-container">
-      <ul class="bix-people-list">
-        {% for person in people %}
-          <!-- @TODO: Fix for A11Y -->
-          <li class="bix-person">
-            <a
-              class="bix-person__link"
-              href="javascript:void(0)">
-              <div class="bix-person__media">
-                <img src="https://placehold.co/325x325" alt="">
-                <div class="bix-person__overlay">
-                  View all
-                  <svg class="bix-icon bix-icon--right-arrow" width="20px" fill="#fff" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12"><polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon></svg>
-                </div>
-              </div>
-              <div class="bix-person__details">
-                <h3 class="bix-person__name">
-                  {{ person.name | default("Full name") }}
-                </h3>
-                <div class="bix-person__role">
-                  {{ person.role | default("Role") }}
-                </div>
-              </div>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+        <div class="bix-person__details">
+          <h3 class="bix-person__name">
+            {{ item.name | default("Full name") }}
+          </h3>
+          <div class="bix-person__role">
+            {{ item.role | default("Role") }}
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% if filter_content|length > 20 %}
+  <div class="bix-people__footer">
+    {% include "@components/button/button.html.twig" with {
+      label: "View all",
+    } %}
   </div>
+  {% endif %}
 </section>

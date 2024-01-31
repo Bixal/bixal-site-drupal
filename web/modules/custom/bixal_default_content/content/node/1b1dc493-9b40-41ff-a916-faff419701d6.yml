@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1b1dc493-9b40-41ff-a916-faff419701d6
+  bundle: bixaler
+  default_langcode: en
+  depends:
+    75c022bb-4cf7-45dd-8725-b1b206007ecb: media
+    477ea2c4-5930-493d-ae28-dc64e815d7bb: taxonomy_term
+    4c2ffba6-ce3c-4904-bc78-3d5256ff7d65: taxonomy_term
+    b9ee8bd4-76db-45e5-b153-8d2bc20e2c1b: taxonomy_term
+    58877ea2-3744-498f-9bca-b8960dfae283: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Clay Marshall'
+  created:
+    -
+      value: 1705593718
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_bucket_list:
+    -
+      value: 'To locate about 10 acres of land and build a house or cabin from the ground up.'
+  field_image:
+    -
+      entity: 75c022bb-4cf7-45dd-8725-b1b206007ecb
+  field_role:
+    -
+      entity: 477ea2c4-5930-493d-ae28-dc64e815d7bb
+  field_specialties:
+    -
+      entity: 4c2ffba6-ce3c-4904-bc78-3d5256ff7d65
+    -
+      entity: b9ee8bd4-76db-45e5-b153-8d2bc20e2c1b
+    -
+      entity: 58877ea2-3744-498f-9bca-b8960dfae283

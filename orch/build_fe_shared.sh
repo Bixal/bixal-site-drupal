@@ -40,11 +40,21 @@ then
     fi
 
     echo -e "${green}Copying theme components folders${NC}"
-    mkdir $components_target_dir $sass_target_dir $js_target_dir
+    mkdir $components_target_dir $js_target_dir
+    # Copy all content for the components leaving directory structure, the files
+    # not needed will be removed later.
     cp -r "$source_dir" "$components_target_dir"
+    # Copy all the custom sass files files and preserve directory structure.
+    cp -r "$source_dir" "$sass_target_dir"
+    # Remove all non-twig files from the components.
     find "$components_target_dir" -type f \( -name "*.scss" -o -name "*.js" -o -name "*.json" \) -exec rm -f {} \;
-    find "$source_dir" -name '*.scss' -exec cp {} "$sass_target_dir" \;
+    # Remove all non-css files from the sass dir.
+    find "$sass_target_dir" -type f ! -name "*.scss" -delete
+    # Remove any empty directories now that non-scss have been deleted
+    find "$sass_target_dir" -type d -empty -delete
+    # Copy all JS files and put them in a single dir.
     find "$source_dir" -name '*.js' -exec cp {} "$js_target_dir" \;
+    # Remove the storybook JS files, they do nothing for Drupal.
     find "$js_target_dir" -name '*.stories.js' -delete
 else
     echo "The storybook components directory, $source_dir, did not exist."

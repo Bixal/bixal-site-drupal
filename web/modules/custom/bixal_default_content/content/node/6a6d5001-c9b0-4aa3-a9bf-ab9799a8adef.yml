@@ -28,25 +28,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'What Is Localization, Anyway? Four Ways To Put Local People Front and Center in International Development | Drupal'
-    -
-      tag: meta
-      attributes:
-        name: description
-        content: ''
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/blog/what-localization-anyway-four-ways-put-local-people-front-and-center-international-development'
   path:
     -
       alias: /blog/what-localization-anyway-four-ways-put-local-people-front-and-center-international-development
@@ -63,3 +44,6 @@ default:
   field_date:
     -
       value: '2022-05-24'
+  field_decorative_title:
+    -
+      value: 'Blog and News'
