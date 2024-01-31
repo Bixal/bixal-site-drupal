@@ -28,6 +28,25 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Improving UX for Content Managers in Drupal: 5 Practical Tips for Success | Drupal'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'The success of any website is dependent on its ability to'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/blog/improving-ux-content-managers-drupal-5-practical-tips-success'
   path:
     -
       alias: /blog/improving-ux-content-managers-drupal-5-practical-tips-success

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: cb542749-c871-452b-9fa4-f10c3a0a38a4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: international.webp
+  uri:
+    -
+      value: 'public://2024-01/international.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 55324
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706650946

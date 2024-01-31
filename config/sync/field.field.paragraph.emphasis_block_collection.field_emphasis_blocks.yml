@@ -1,0 +1,58 @@
+uuid: 79f4e14a-66e4-4252-ade3-159850d5eaa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_emphasis_blocks
+    - paragraphs.paragraphs_type.emphasis_block
+    - paragraphs.paragraphs_type.emphasis_block_collection
+  module:
+    - entity_reference_revisions
+id: paragraph.emphasis_block_collection.field_emphasis_blocks
+field_name: field_emphasis_blocks
+entity_type: paragraph
+bundle: emphasis_block_collection
+label: 'Emphasis Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      emphasis_block: emphasis_block
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 11
+        enabled: false
+      description_list:
+        weight: 12
+        enabled: false
+      description_list_collection:
+        weight: 13
+        enabled: false
+      emphasis_block:
+        weight: 14
+        enabled: true
+      emphasis_block_collection:
+        weight: 15
+        enabled: false
+      flip_card:
+        weight: 16
+        enabled: false
+      flip_cards:
+        weight: 17
+        enabled: false
+      section:
+        weight: 18
+        enabled: false
+      section_wrapper:
+        weight: 19
+        enabled: false
+      view_embed:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

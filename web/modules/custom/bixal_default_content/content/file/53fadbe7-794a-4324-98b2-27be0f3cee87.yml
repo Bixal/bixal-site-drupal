@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 53fadbe7-794a-4324-98b2-27be0f3cee87
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers--empowered-teams.webp
+  uri:
+    -
+      value: 'public://2024-01/careers--empowered-teams.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 19474
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706718204

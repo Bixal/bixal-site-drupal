@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'https://google.com'
+      uri: 'internal:/careers'
       title: ''
       options: {  }
   external:
@@ -24,10 +24,24 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
       value: -48
   expanded:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'

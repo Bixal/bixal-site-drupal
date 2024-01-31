@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fbd2e91a-808a-4d19-b721-833ad15dc78a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hero-contract-vehicles.jpg
+  uri:
+    -
+      value: 'public://2024-01/hero-contract-vehicles.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 317244
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721416

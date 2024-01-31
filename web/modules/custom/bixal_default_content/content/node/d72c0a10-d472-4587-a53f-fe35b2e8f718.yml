@@ -29,6 +29,20 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Blog and News | Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/blog'
   path:
     -
       alias: /blog
@@ -59,6 +73,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_view_name:
             -
               entity: a3cb7161-e777-4154-87bb-e173e3a284ff

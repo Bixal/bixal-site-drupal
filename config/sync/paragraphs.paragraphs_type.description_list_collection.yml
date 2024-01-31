@@ -1,0 +1,10 @@
+uuid: d06e03d3-a00f-4e05-8346-4bbe9afda49b
+langcode: en
+status: true
+dependencies: {  }
+id: description_list_collection
+label: 'Description List Collection'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

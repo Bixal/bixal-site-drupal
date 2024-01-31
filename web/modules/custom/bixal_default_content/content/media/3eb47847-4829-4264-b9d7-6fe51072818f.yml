@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3eb47847-4829-4264-b9d7-6fe51072818f
+  bundle: image
+  default_langcode: en
+  depends:
+    fbd2e91a-808a-4d19-b721-833ad15dc78a: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hero-contract-vehicles.jpg
+  created:
+    -
+      value: 1706721416
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: fbd2e91a-808a-4d19-b721-833ad15dc78a
+      alt: 'Contract Vehicles Hero'
+      title: ''
+      width: 2200
+      height: 688

@@ -1,0 +1,27 @@
+uuid: 06ffbc78-a851-460a-80f1-d463aafc8ec7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_blurb_collection_variant
+field_name: field_blurb_collection_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: two-up
+      label: '2 -column'
+    -
+      value: three-up
+      label: 3-column
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

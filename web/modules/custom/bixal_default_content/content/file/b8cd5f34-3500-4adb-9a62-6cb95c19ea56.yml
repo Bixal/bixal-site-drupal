@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b8cd5f34-3500-4adb-9a62-6cb95c19ea56
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: greatest-impact.webp
+  uri:
+    -
+      value: 'public://2024-01/greatest-impact.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 36260
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721969

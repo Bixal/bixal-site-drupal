@@ -12,6 +12,10 @@ _meta:
     640588a2-9696-4017-8381-37232afe0939: media
     22d96a9d-0d32-4320-8293-296d9dc00f97: media
     470656bf-37a9-47b2-a9fb-b2f13ea661e2: media
+    6f99ae85-b406-4b92-aa13-879e256ce37a: media
+    dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932: media
+    e8144e45-ac70-47a4-9e47-ed0cdf183ea7: media
+    ea3450a1-cc31-45f4-b7bb-73759d81f803: media
     b452f031-e9c0-41af-b118-163283806eb8: media
 default:
   revision_uid:
@@ -35,6 +39,20 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'This is Bixal | Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
   path:
     -
       alias: /home
@@ -445,6 +463,251 @@ default:
           field_section_variant:
             -
               value: base
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 629f54f0-a075-4732-aeec-9ef7a5be160a
+          bundle: section_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1706650761
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_nested_paragraphs:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 165c74d7-78f6-4132-b203-3e28d59e3467
+                  bundle: section
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1706650773
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_button:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: ebc6286a-be26-4639-bf60-49960a19e8f1
+                          bundle: button
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706650773
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_has_icon:
+                            -
+                              value: false
+                          field_modifier:
+                            -
+                              value: false
+                  field_prefix_title:
+                    -
+                      value: 'OUR CLIENTS AND PARTNERS'
+                  field_title:
+                    -
+                      value: 'We work with leading government agencies and organizations who seek to create real change.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3e4c6306-5f6e-4395-9444-93f7ab5f699c
+                  bundle: description_list_collection
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1706650803
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_description_lists:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 1aae37ff-3d3d-46f7-80c8-627e170ebed1
+                          bundle: description_list
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706650803
+                          behavior_settings:
+                            -
+                              value: {  }
+                          revision_translation_affected:
+                            -
+                              value: true
+                          field_description_list_items:
+                            -
+                              value: 'Department of Health and Human Services'
+                            -
+                              value: 'Centers for Medicare & Medicaid Services'
+                            -
+                              value: 'National Institutes of Health'
+                            -
+                              value: 'National Library of Medicine'
+                          field_description_list_variant:
+                            -
+                              value: accent-vivid
+                          field_image:
+                            -
+                              entity: 6f99ae85-b406-4b92-aa13-879e256ce37a
+                          field_title:
+                            -
+                              value: Health
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: a017b0ea-6083-41f7-8972-ced78cc795b7
+                          bundle: description_list
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706650896
+                          behavior_settings:
+                            -
+                              value: {  }
+                          revision_translation_affected:
+                            -
+                              value: true
+                          field_description_list_items:
+                            -
+                              value: 'United States Agency for International Development'
+                          field_description_list_variant:
+                            -
+                              value: accent-cool
+                          field_image:
+                            -
+                              entity: dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932
+                          field_title:
+                            -
+                              value: 'International Development'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 9e6c1868-db09-42cb-b4b0-339a4d83874b
+                          bundle: description_list
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706650974
+                          behavior_settings:
+                            -
+                              value: {  }
+                          revision_translation_affected:
+                            -
+                              value: true
+                          field_description_list_items:
+                            -
+                              value: 'Securities and Exchange Commission'
+                            -
+                              value: 'General Services Administration'
+                            -
+                              value: 'Small Business Administration'
+                          field_description_list_variant:
+                            -
+                              value: accent-cool-alt
+                          field_image:
+                            -
+                              entity: e8144e45-ac70-47a4-9e47-ed0cdf183ea7
+                          field_title:
+                            -
+                              value: 'Business & Finance'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 472c146b-cdf5-4f20-a427-f49836877c79
+                          bundle: description_list
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1706651214
+                          behavior_settings:
+                            -
+                              value: {  }
+                          revision_translation_affected:
+                            -
+                              value: true
+                          field_description_list_items:
+                            -
+                              value: 'Federal Emergency Management Agency'
+                            -
+                              value: 'United States Department of Agriculture'
+                            -
+                              value: 'Department of Defense'
+                            -
+                              value: 'Department of Justice'
+                            -
+                              value: 'Department of Transportation'
+                            -
+                              value: 'Social Security Administration'
+                          field_description_list_variant:
+                            -
+                              value: accent-warm
+                          field_image:
+                            -
+                              entity: ea3450a1-cc31-45f4-b7bb-73759d81f803
+                          field_title:
+                            -
+                              value: Other
     -
       entity:
         _meta:

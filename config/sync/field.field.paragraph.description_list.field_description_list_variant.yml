@@ -1,0 +1,21 @@
+uuid: 810090dd-45c1-4677-959f-dcc5f4e1e92b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_list_variant
+    - paragraphs.paragraphs_type.description_list
+  module:
+    - options
+id: paragraph.description_list.field_description_list_variant
+field_name: field_description_list_variant
+entity_type: paragraph
+bundle: description_list
+label: 'Description List Variant'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

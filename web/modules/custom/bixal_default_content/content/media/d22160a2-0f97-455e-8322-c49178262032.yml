@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d22160a2-0f97-455e-8322-c49178262032
+  bundle: image
+  default_langcode: en
+  depends:
+    395f38c7-d0d0-4216-ba2e-6190ae77107b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: growth-mindset.webp
+  created:
+    -
+      value: 1706721929
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Drupal'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://bixalcom.lndo.site/home'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 395f38c7-d0d0-4216-ba2e-6190ae77107b
+      alt: 'Growth Mindset'
+      title: ''
+      width: 1376
+      height: 778
