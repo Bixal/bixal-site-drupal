@@ -56,8 +56,13 @@
 
   &__aside {
     background-color: var(--c-base);
-    padding-left: units(10);
-    padding-right: units(10);
+    padding-left: units(4);
+    padding-right: units(4);
+
+    @include at-media("tablet") {
+      padding-left: units(10);
+      padding-right: units(10);
+    }
   }
 
   &__role {
