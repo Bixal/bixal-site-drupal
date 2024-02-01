@@ -1,14 +1,11 @@
 import Base from "./base.html.twig";
 
-import HeaderContent from "../../components/header/header.content.json";
+import * as Header from "../../components/header/header.stories";
+import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
-import "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
-
-import * as SocialNav from "../../components/social-nav/social-nav.stories";
-
 
 export default {
   title: "Pages/Base",
@@ -18,7 +15,7 @@ export default {
 
 export const Default = {
   args: {
-    header: HeaderContent,
+    header: Header.default.args,
     hero: {
       variant: "image-bg",
       title: "Hero title",
