@@ -30,7 +30,6 @@ export const Default = {
         "<p>Bixal's diverse and talented team has led the digital transformation of some of the most influential organizations in the world and brings unparalleled experience and energy into every one of our engagements. Our team of supportive professionals thrive on challenge and hold themselves and their work to a higher standard.</p><p>Come work with us.</p>",
     },
     imageSection: {
-      variant: "image-bg",
       image:
         "https://www.bixal.com/static/5fbc59878f4c5e250d2f7efbb18a71a9/45909/careers--b-banner.webp",
     },
@@ -61,7 +60,6 @@ export const Default = {
       ],
     },
     joinSection: {
-      variant: "image-bg",
       image:
         "https://www.bixal.com/static/careers--join-our-team-bc7de974c21a020765a582d498089923.jpg",
       title: "Join Our Team",
