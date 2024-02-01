@@ -1,9 +1,12 @@
 @use "uswds-core" as *;
 
 .bix-site-header {
+  background-color: color("white");
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.1);
   padding-top: units(3);
   padding-bottom: units(3);
-  position: relative;
+  position: sticky;
+  top: 0;
 
   &__inner {
     display: flex;
