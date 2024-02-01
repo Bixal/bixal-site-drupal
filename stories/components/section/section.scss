@@ -2,7 +2,13 @@
 
 // @TODO Create mixin.
 .bix-section {
-  padding: 100px 0;
+  padding-top: units(5);
+  padding-bottom: units(5);
+
+  @include at-media("tablet") {
+    padding-top: units(10);
+    padding-bottom: units(10);
+  }
 
   &__body p {
     max-width: px-to-rem(725px);
@@ -51,7 +57,11 @@
   }
 }
 
-.bix-section--centered {
+.bix-section--accent-cool {
+  background-color: var(--c-accent-cool);
+}
+
+.bix-section--center-content {
   text-align: center;
 
   .bix-section__body p {
@@ -71,6 +81,11 @@
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: px-to-rem(160px);
-  padding-bottom: px-to-rem(160px);
+  padding-top: units(5);
+  padding-bottom: units(5);
+
+  @include at-media("desktop") {
+    padding-top: px-to-rem(160px);
+    padding-bottom: px-to-rem(160px);
+  }
 }
