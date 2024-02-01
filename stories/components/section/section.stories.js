@@ -1,5 +1,6 @@
 import Section from "./section.html.twig";
 import "./section.scss";
+import "../button/button.scss";
 
 export default {
   title: "Components/Section",
