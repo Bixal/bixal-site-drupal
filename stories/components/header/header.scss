@@ -105,6 +105,7 @@
     top: 100%;
     left: 0;
     right: 0;
+    z-index: z(100);
   }
 
   &__items {
@@ -175,7 +176,7 @@
     }
   }
 
-  .bix-button.desktop-only {
+  .bix-button:not(.bix-button--inverse) {
     @include at-media-max("desktop") {
       display: none;
     }
