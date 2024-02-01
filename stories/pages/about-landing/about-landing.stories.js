@@ -1,5 +1,9 @@
 import AboutLanding from "./about-landing.html.twig";
+
 import * as Header from "../../components/header/header.stories";
+import "../../components/hero/hero.stories";
+import "../../components/contact-us/contact-us.stories";
+import "../../components/footer/footer.stories";
 import * as PeopleList from "../../components/people-list/people-list.stories";
 import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
