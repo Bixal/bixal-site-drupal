@@ -32,20 +32,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Clay Marshall | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/node/9'
   path:
     -
       alias: ''

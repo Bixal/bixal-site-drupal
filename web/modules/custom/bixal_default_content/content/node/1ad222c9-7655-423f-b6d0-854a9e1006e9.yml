@@ -28,25 +28,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Key Learnings for a More Inclusive Global Health Landscape | Drupal'
-    -
-      tag: meta
-      attributes:
-        name: description
-        content: "By Stephanie Vasquez, Director of Global Health\_"
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/blog/key-learnings-more-inclusive-global-health-landscape'
   path:
     -
       alias: /blog/key-learnings-more-inclusive-global-health-landscape

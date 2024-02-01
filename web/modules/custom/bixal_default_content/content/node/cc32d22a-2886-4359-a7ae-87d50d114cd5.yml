@@ -34,20 +34,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'About Bixal | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/about'
   path:
     -
       alias: /about
@@ -215,8 +201,8 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: d84f6c65-b2e4-4f96-9c19-69840d724af2
-          bundle: section_wrapper
+          uuid: 9ce02496-bdc5-44ff-be8f-a21716cc5795
+          bundle: section
           default_langcode: en
         default:
           status:
@@ -224,18 +210,18 @@ default:
               value: true
           created:
             -
-              value: 1706722253
+              value: 1706798015
           behavior_settings:
             -
               value: {  }
-          field_nested_paragraphs:
+          field_button:
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: 2033ba3a-3d8a-4d14-b0ee-2fff5864567f
-                  bundle: section
+                  uuid: 8a824e23-c566-4f7d-b6b5-43b577b306eb
+                  bundle: button
                   default_langcode: en
                 default:
                   status:
@@ -243,47 +229,23 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706722259
+                      value: 1706798015
                   behavior_settings:
                     -
                       value: {  }
-                  field_button:
+                  field_has_icon:
                     -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 3ba1e6d4-3cd3-4305-86f9-2d650cb557c8
-                          bundle: button
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706722259
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_has_icon:
-                            -
-                              value: false
-                          field_modifier:
-                            -
-                              value: false
-                  field_description:
+                      value: false
+                  field_modifier:
                     -
-                      value: 'Bixal’s principles are expressed in four core organizational values that shape our culture and guide our work every day.'
-                  field_title:
-                    -
-                      value: 'Our Core Values'
+                      value: false
+          field_nested_paragraphs:
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: 3d8b6c49-3433-4e46-90e3-012029b6d942
+                  uuid: 885f0e12-db4d-46d1-b1fc-8568e9b0b715
                   bundle: blurb_collection
                   default_langcode: en
                 default:
@@ -292,7 +254,7 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706722307
+                      value: 1706798071
                   behavior_settings:
                     -
                       value: {  }
@@ -302,7 +264,7 @@ default:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: 64178d17-2fb2-44a3-89bd-ed7dc71c072b
+                          uuid: 1de2b671-0321-45de-a3ee-ec02802dd30f
                           bundle: blurb
                           default_langcode: en
                         default:
@@ -311,7 +273,7 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706722307
+                              value: 1706798071
                           behavior_settings:
                             -
                               value: {  }
@@ -329,7 +291,7 @@ default:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: f36c379d-6997-42ea-91c3-b5c116dc02d9
+                          uuid: 39548514-3570-4dc2-ab3a-d57e5f535fc2
                           bundle: blurb
                           default_langcode: en
                         default:
@@ -338,7 +300,7 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706722325
+                              value: 1706798095
                           behavior_settings:
                             -
                               value: {  }
@@ -356,7 +318,7 @@ default:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: 2ca14d5a-637f-45f5-8517-bc86e6d5359f
+                          uuid: 099d250c-08aa-42dc-91f4-379da6f56503
                           bundle: blurb
                           default_langcode: en
                         default:
@@ -365,7 +327,7 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706722349
+                              value: 1706798120
                           behavior_settings:
                             -
                               value: {  }
@@ -383,7 +345,7 @@ default:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: 3c38c6b3-ddc0-4a86-923c-f3653e2dd5a1
+                          uuid: 382bf4f7-0eab-43dd-bba8-519bb1a439af
                           bundle: blurb
                           default_langcode: en
                         default:
@@ -392,7 +354,7 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706722364
+                              value: 1706798175
                           behavior_settings:
                             -
                               value: {  }
@@ -408,6 +370,12 @@ default:
                   field_blurb_collection_variant:
                     -
                       value: two-up
+          field_prefix_title:
+            -
+              value: 'Our Core Values'
+          field_title:
+            -
+              value: 'Bixal’s principles are expressed in four core organizational values that shape our culture and guide our work every day.'
     -
       entity:
         _meta:
@@ -426,9 +394,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_button:
             -
               entity:
@@ -448,9 +413,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_has_icon:
                     -
                       value: true

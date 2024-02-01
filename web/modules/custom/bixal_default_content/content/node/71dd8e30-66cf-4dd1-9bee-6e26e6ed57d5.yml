@@ -28,17 +28,6 @@ default:
   sticky:
     -
       value: false
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Contract Vehicles | Drupal'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/contract-vehicles'
   path:
     -
       alias: /contract-vehicles

@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.landing_page
-    - paragraphs.paragraphs_type.description_list
-    - paragraphs.paragraphs_type.flip_card
   module:
     - entity_reference_revisions
 id: node.landing_page.field_paragraphs
@@ -22,33 +20,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      description_list: description_list
-      flip_card: flip_card
-    negate: 1
-    target_bundles_drag_drop:
-      button:
-        weight: 9
-        enabled: false
-      description_list:
-        weight: 10
-        enabled: true
-      description_list_collection:
-        weight: 11
-        enabled: false
-      flip_card:
-        weight: 12
-        enabled: true
-      flip_cards:
-        weight: 13
-        enabled: false
-      section:
-        weight: 14
-        enabled: false
-      section_wrapper:
-        weight: 15
-        enabled: false
-      view_embed:
-        weight: 16
-        enabled: false
+    target_bundles: null
+    negate: 0
 field_type: entity_reference_revisions

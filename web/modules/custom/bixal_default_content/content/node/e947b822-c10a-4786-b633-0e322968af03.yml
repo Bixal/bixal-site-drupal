@@ -28,25 +28,6 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Building Better Customer Experience (CX) | Drupal'
-    -
-      tag: meta
-      attributes:
-        name: description
-        content: 'Bixal is celebrating'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'http://bixalcom.lndo.site/blog/building-better-customer-experience-cx'
   path:
     -
       alias: /blog/building-better-customer-experience-cx
