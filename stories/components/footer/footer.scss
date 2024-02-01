@@ -107,10 +107,8 @@
   }
 
   .bix-social-nav {
-    display: none;
 
     @include at-media("tablet-lg") {
-      display: unset;
       margin-top: 0;
       width: 100%;
     }
