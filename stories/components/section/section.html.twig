@@ -24,10 +24,14 @@
 ] %}
 
 {% set heading_type = heading_type | default("h2") %}
+{% set content_not_empty = (prefix or title or description or cta.label) %}
 
 <section
   {{ attributes.addClass(section_classes) }}
   {% if image %}style="background-image: url('{{ image }}')"{% endif %}>
+
+  {# Image only section, ex: image section above "Careers - How we work" #}
+  {% if content_not_empty %}
   <div class="bix-container">
     {% block header %}
       {% if prefix %}
@@ -60,4 +64,5 @@
       {% endif %}
     {% endblock %}
   </div>
+  {% endif %}
 </section>
