@@ -7,9 +7,11 @@
     </div>
     <div class="bix-hero__content">
       <div class="bix-hero__header">
+        {% if title %}
         <{{ heading_type }} class="bix-hero__title">
           {{ title }}
         </{{ heading_type }}>
+        {% endif %}
       </div>
       {% if description %}
       <div class="bix-hero__body">
