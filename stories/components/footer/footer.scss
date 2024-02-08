@@ -98,6 +98,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    padding-left: 0;
 
     @include at-media("tablet-lg") {
       margin-bottom: 0;
@@ -106,10 +107,8 @@
   }
 
   .bix-social-nav {
-    display: none;
 
     @include at-media("tablet-lg") {
-      display: unset;
       margin-top: 0;
       width: 100%;
     }

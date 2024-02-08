@@ -9,6 +9,22 @@ use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 
 /**
+ * Get the URL of a storybook icon.
+ *
+ * @param string $file_name_or_icon_name
+ *   Either the name (facebook) or file name (facebook.svg) of an SB icon.
+ *
+ * @return \Drupal\Core\Url
+ *   A Drupal Url.
+ */
+function _bixal_uswds_get_storybook_icon_file_url(string $file_name_or_icon_name) :Url {
+  if (!str_ends_with($file_name_or_icon_name, '.svg')) {
+    $file_name_or_icon_name .= '.svg';
+  }
+  return Url::fromUri("base://icons/$file_name_or_icon_name");
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function bixal_uswds_preprocess_page(&$vars) {
@@ -41,12 +57,6 @@ function bixal_uswds_preprocess_page(&$vars) {
       unset($vars['page']['help']['bixal_uswds_page_title']);
     }
   }
-  // Provide the social icons for social-nav.html.twig which is
-  // embedded in footer.html.twig.
-  $icon_path = static function ($file_name) use ($vars) {
-    $icons_path = $vars['directory'] . '/storybook_components/stories/assets/icons';
-    return Url::fromUri('base://' . $icons_path . '/' . $file_name)->toString();
-  };
   $vars['socialNav'] = [
     'variant' => NULL,
     'aria_label' => t('Social links'),
@@ -54,22 +64,22 @@ function bixal_uswds_preprocess_page(&$vars) {
       [
         "href" => "https://www.facebook.com/bixal",
         "label" => t("Facebook"),
-        "icon_path" => $icon_path('facebook.svg'),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('facebook.svg')->toString(),
       ],
       [
         "href" => "https://www.twitter.com/bixal",
         "label" => t("Twitter"),
-        "icon_path" => $icon_path('twitter.svg'),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('twitter.svg')->toString(),
       ],
       [
         "href" => "https://www.linkedIn.com/company/bixa",
         "label" => t("LinkedIn"),
-        "icon_path" => $icon_path('linkedin.svg'),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
       ],
       [
         "href" => "https://medium.com/bixal",
         "label" => t("Medium"),
-        "icon_path" => $icon_path('medium.svg'),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('medium.svg')->toString(),
       ],
     ],
   ];

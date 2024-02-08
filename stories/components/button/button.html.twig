@@ -1,24 +1,49 @@
-{% set is_link = href | default(false) %}
-{% set has_icon = has_icon | default(false) %}
+{#
+/**
+  * Button
+  *
+  * Available variables:
+  * - href: String `href` for link variant; defaults to false.
+  * - icon_before: Boolean to reorder icon before label.
+  * - icon_base_path: String path to icon directory.
+  * - icon: String of icon name.
+  * - variant: String for type of button variant.
+  * - additional_classes: Array of strings for additional classes — experimental.
+  * - type: String to determine button type; i.e. submit, reset, button, etc.
+**/
+#}
 
-{% set button_classes = "bix-button" ~ (modifier ? " " ~ modifier : "")  %}
+{% set is_link = href | default(false) %}
+{% set has_icon = icon | default(false) %}
+
+{% set icon_base_path = icon_base_path | default("icons/") %}
+{% set icon_name = icon | default("arrow-right") %}
+{% set icon_path = icon_base_path  ~ icon_name ~ ".svg" %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{# Parenthesis wrap checks; otherwise classes fail. #}
+{# Button direction is set via CSS because it removes duplicate logic check and is hidden from screen readers anyways, so HTML order not important. #}
+{% set button_classes = [
+  "bix-button",
+  (variant ? "bix-button--" ~ variant),
+  (icon_before ? "bix-button--icon-before"),
+  (additional_classes ? additional_classes),
+] %}
 
 {% set button_inner %}
-  {{ label | default("Join our team")}}
-
-  {% if has_icon %}
-    <svg class="icon right-arrow" width="20px" fill="#000" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 12">
-      <polygon class="st0" points="24,6 18,0 18,5.4 0,5.4 0,6.7 18,6.7 18,12 "></polygon>
-    </svg>
-  {% endif %}
+  {{ label | default((variant | capitalize | default("Default")) ~ " button")}}
+  {% if has_icon %}{{ source(icon_path) }}{% endif %}
 {% endset %}
 
-{% if is_link %}
-  <a href="javascript:void(0)" class="{{ button_classes }}">
+{% if is_link  %}
+  <a{{ attributes.addClass(button_classes) }} href="{{ href }}" >
     {{ button_inner }}
   </a>
 {% else %}
-  <button type="{{ type | default("button") }}" class="{{ button_classes }}">
+  <button{{ attributes.addClass(button_classes).setAttribute("type", type | default("button")) }}>
     {{ button_inner }}
   </button>
 {% endif %}

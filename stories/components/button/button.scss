@@ -27,6 +27,10 @@
   }
 }
 
+.bix-button--icon-before {
+  flex-direction: row-reverse;
+}
+
 .bix-button--inverse {
   color: color("white");
 
@@ -42,6 +46,7 @@
   border: none;
   border-radius: 0;
   appearance: none;
+  padding: 0;
 
   &:hover,
   &:focus {
