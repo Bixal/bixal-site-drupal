@@ -1,0 +1,16 @@
+{% extends "@pages/base/base.html.twig" %}
+
+{% block content %}
+{% include "@components/profile/profile.html.twig" with profile %}
+
+<div class="bix-return">
+  <div class="bix-container">
+    {% include "@components/button/button.html.twig" with {
+      variant: "unstyled",
+      label: "Back to team Bixal",
+      icon: "arrow-left",
+      icon_before: true,
+    } %}
+  </div>
+</div>
+{% endblock %}

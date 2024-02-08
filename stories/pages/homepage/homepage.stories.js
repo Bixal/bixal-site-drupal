@@ -48,8 +48,8 @@ export const Default = {
         "<p>We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.</p>",
       cta: {
         label: "Explore case studies",
-        modifier: "bix-button--inverse",
-        has_icon: true,
+        variant: "inverse",
+        icon: "arrow-right",
         href: "#",
       },
     },
@@ -71,7 +71,7 @@ export const Default = {
       cta: {
         label: "Join our team",
         href: "#",
-        has_icon: true,
+        icon: "arrow-right",
       },
     },
     socialNav: SocialNav.default.args

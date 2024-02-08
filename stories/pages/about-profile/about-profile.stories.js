@@ -1,25 +1,20 @@
-import Base from "./base.html.twig";
+import AboutProfile from "./about-profile.html.twig";
 
 import * as Header from "../../components/header/header.stories";
+import * as Profile from "../../components/profile/profile.stories";
 import * as SocialNav from "../../components/social-nav/social-nav.stories";
-
-import "../../components/hero/hero.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 
 export default {
-  title: "Pages/Base",
-  tags: ["autodocs"],
-  component: Base,
+  title: "Pages/About/Profile",
+  component: AboutProfile,
 };
 
 export const Default = {
   args: {
     header: Header.default.args,
-    hero: {
-      variant: "image-bg",
-      title: "Hero title",
-    },
+    profile: Profile.default.args,
     socialNav: SocialNav.default.args
   },
 };

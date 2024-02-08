@@ -1,7 +1,6 @@
 import Section from "./section.html.twig";
 import "./section.scss";
-
-import "../../components/button/button.stories";
+import "../button/button.scss";
 
 export default {
   title: "Components/Section",
@@ -68,10 +67,10 @@ export const BackgroundImage = {
     description:
       "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.",
     cta: {
-      modifier: "bix-button--inverse",
+      variant: "inverse",
+      icon: "arrow-right",
       href: "javascript:void(0)",
       label: "Explore case studies",
-      has_icon: true,
     },
   },
 };
@@ -89,7 +88,7 @@ export const Tall = {
     cta: {
       href: "javascript:void(0)",
       label: "Explore case studies",
-      has_icon: true,
+      icon: "arrow-right",
     },
   },
 };

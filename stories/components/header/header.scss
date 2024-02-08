@@ -1,9 +1,12 @@
 @use "uswds-core" as *;
 
 .bix-site-header {
+  background-color: color("white");
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.1);
   padding-top: units(3);
   padding-bottom: units(3);
-  position: relative;
+  position: sticky;
+  top: 0;
 
   &__inner {
     display: flex;
@@ -105,6 +108,7 @@
     top: 100%;
     left: 0;
     right: 0;
+    z-index: z(100);
   }
 
   &__items {
@@ -175,7 +179,7 @@
     }
   }
 
-  .bix-button.desktop-only {
+  .bix-button:not(.bix-button--inverse) {
     @include at-media-max("desktop") {
       display: none;
     }

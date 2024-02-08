@@ -1,5 +1,8 @@
 {% include "@components/header/header.html.twig" with header %}
+
+{% if hero %}
 {% include "@components/hero/hero.html.twig" with hero %}
+{% endif %}
 
 <main>
   {% block content %}

@@ -9,19 +9,16 @@ export default {
 
 export const Default = {};
 
-// @TODO: Refactor so it uses link if there's an HREF set.
 export const Link = {
   args: {
-    href: null,
-    has_icon: true,
+    label: "Link button",
+    href: "javascript:void(0)",
   },
 };
 
-// @TODO: Convert modifier to variant for consistency.
 export const Inverse = {
   args: {
-    modifier: "bix-button--inverse",
-    has_icon: true,
+    variant: "inverse",
   },
   parameters: {
     backgrounds: { default: "dark" },
@@ -30,7 +27,21 @@ export const Inverse = {
 
 export const Unstyled = {
   args: {
-    modifier: "bix-button--unstyled",
-    has_icon: true,
+    variant: "unstyled",
+  },
+}
+
+export const Next = {
+  args: {
+    label: "Next",
+    icon: "arrow-right"
+  },
+}
+
+export const Previous = {
+  args: {
+    label: "Previous",
+    icon: "arrow-left",
+    icon_before: true,
   },
 }

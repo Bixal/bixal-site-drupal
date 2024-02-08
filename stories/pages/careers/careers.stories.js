@@ -68,9 +68,9 @@ export const Default = {
       description:
         "<p>We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations.</p>",
       cta: {
+        icon: "arrow-right",
         href: "javascript:void(0)",
         label: "View all jobs",
-        has_icon: true,
       },
     },
     featuredJobs: {

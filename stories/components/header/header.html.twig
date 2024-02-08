@@ -36,15 +36,16 @@
 
         {% if cta %}
           <li class="bix-site-nav__item">
-            <!-- @TODO: Refactor this button -->
+            {# Mobile button #}
             {% include "@components/button/button.html.twig" with {
               label: cta.label,
-              modifier: "bix-button--inverse",
+              variant: "inverse",
               href: cta.href
             } %}
+
+            {# Desktop button #}
             {% include "@components/button/button.html.twig" with {
               label: cta.label,
-              modifier: "desktop-only",
               href: cta.href
             } %}
           </li>
