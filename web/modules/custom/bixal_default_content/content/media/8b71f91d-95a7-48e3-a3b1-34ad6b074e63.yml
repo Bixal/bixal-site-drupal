@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8b71f91d-95a7-48e3-a3b1-34ad6b074e63
+  bundle: image
+  default_langcode: en
+  depends:
+    53fadbe7-794a-4324-98b2-27be0f3cee87: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers--empowered-teams.webp
+  created:
+    -
+      value: 1706718204
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 53fadbe7-794a-4324-98b2-27be0f3cee87
+      alt: 'Empowered Teams'
+      title: ''
+      width: 900
+      height: 564

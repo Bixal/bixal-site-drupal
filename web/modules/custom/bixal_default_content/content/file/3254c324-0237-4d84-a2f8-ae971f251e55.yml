@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3254c324-0237-4d84-a2f8-ae971f251e55
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: about--b-banner.webp
+  uri:
+    -
+      value: 'public://2024-01/about--b-banner.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 79196
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721721

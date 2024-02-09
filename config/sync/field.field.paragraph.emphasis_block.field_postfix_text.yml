@@ -1,0 +1,19 @@
+uuid: 36c769ac-84cd-407b-9579-718e551b5f00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_postfix_text
+    - paragraphs.paragraphs_type.emphasis_block
+id: paragraph.emphasis_block.field_postfix_text
+field_name: field_postfix_text
+entity_type: paragraph
+bundle: emphasis_block
+label: 'Postfix Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

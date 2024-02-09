@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 12154d0b-78c2-480a-9c9d-d67ac5b595e2
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: services-cloud.svg
+  uri:
+    -
+      value: 'public://2024-02/services-cloud.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 3217
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706796988

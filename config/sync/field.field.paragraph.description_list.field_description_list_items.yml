@@ -1,0 +1,19 @@
+uuid: cab9fbf3-f6db-4776-a2e3-1cd3d56ba6c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_list_items
+    - paragraphs.paragraphs_type.description_list
+id: paragraph.description_list.field_description_list_items
+field_name: field_description_list_items
+entity_type: paragraph
+bundle: description_list
+label: 'Description List Items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

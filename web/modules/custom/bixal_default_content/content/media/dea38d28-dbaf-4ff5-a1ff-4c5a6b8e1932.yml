@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932
+  bundle: image
+  default_langcode: en
+  depends:
+    cb542749-c871-452b-9fa4-f10c3a0a38a4: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: international.webp
+  created:
+    -
+      value: 1706650946
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: cb542749-c871-452b-9fa4-f10c3a0a38a4
+      alt: 'International Web Development'
+      title: ''
+      width: 664
+      height: 336

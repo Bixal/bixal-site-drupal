@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: acc0dd5a-e523-4fb9-911c-1b08ce193224
+  bundle: image
+  default_langcode: en
+  depends:
+    3254c324-0237-4d84-a2f8-ae971f251e55: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: about--b-banner.webp
+  created:
+    -
+      value: 1706721721
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 3254c324-0237-4d84-a2f8-ae971f251e55
+      alt: 'About Bixal Banner'
+      title: ''
+      width: 1680
+      height: 829

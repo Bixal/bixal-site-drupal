@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 68ecbd1f-78c5-4e63-bbf1-b21c094ab336
+  bundle: image
+  default_langcode: en
+  depends:
+    b13244cf-a58d-4bea-9c3d-b03c8af68603: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: people-first.webp
+  created:
+    -
+      value: 1706721840
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: b13244cf-a58d-4bea-9c3d-b03c8af68603
+      alt: 'People First Image'
+      title: ''
+      width: 1376
+      height: 778

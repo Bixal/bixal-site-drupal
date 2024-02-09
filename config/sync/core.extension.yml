@@ -5,6 +5,7 @@ module:
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
   bixal_default_content: 0
+  bixal_drush_commands: 0
   block: 0
   block_node: 0
   breakpoint: 0
@@ -39,7 +40,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
   redirect: 0

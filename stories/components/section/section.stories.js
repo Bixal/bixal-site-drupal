@@ -1,5 +1,6 @@
 import Section from "./section.html.twig";
 import "./section.scss";
+import "../button/button.scss";
 
 import "../button/button.stories";
 

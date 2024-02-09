@@ -1,0 +1,23 @@
+uuid: 87d4da6c-a8a1-44f4-b125-4f4fcfddb98f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb_collection_variant
+    - paragraphs.paragraphs_type.blurb_collection
+  module:
+    - options
+id: paragraph.blurb_collection.field_blurb_collection_variant
+field_name: field_blurb_collection_variant
+entity_type: paragraph
+bundle: blurb_collection
+label: 'Blurb Collection Variant'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: two-up
+default_value_callback: ''
+settings: {  }
+field_type: list_string

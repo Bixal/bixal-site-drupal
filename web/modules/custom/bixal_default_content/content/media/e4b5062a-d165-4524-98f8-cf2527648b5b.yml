@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e4b5062a-d165-4524-98f8-cf2527648b5b
+  bundle: image
+  default_langcode: en
+  depends:
+    44d760da-30ff-498e-ab8a-684819185299: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers--b-banner.webp
+  created:
+    -
+      value: 1706711975
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 44d760da-30ff-498e-ab8a-684819185299
+      alt: 'Careers Banner Image'
+      title: ''
+      width: 1920
+      height: 940

@@ -1,0 +1,52 @@
+uuid: 75641218-954a-49ab-a3a5-99292917b434
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_lists
+    - paragraphs.paragraphs_type.description_list
+    - paragraphs.paragraphs_type.description_list_collection
+  module:
+    - entity_reference_revisions
+id: paragraph.description_list_collection.field_description_lists
+field_name: field_description_lists
+entity_type: paragraph
+bundle: description_list_collection
+label: 'Description List Items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      description_list: description_list
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 9
+        enabled: false
+      description_list:
+        weight: 10
+        enabled: true
+      description_list_collection:
+        weight: 11
+        enabled: false
+      flip_card:
+        weight: 12
+        enabled: false
+      flip_cards:
+        weight: 13
+        enabled: false
+      section:
+        weight: 14
+        enabled: false
+      section_wrapper:
+        weight: 15
+        enabled: false
+      view_embed:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

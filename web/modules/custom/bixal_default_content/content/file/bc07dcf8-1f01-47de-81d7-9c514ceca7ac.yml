@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bc07dcf8-1f01-47de-81d7-9c514ceca7ac
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: about--talented-people-656d177e41a41b58075a4b0b402eadab.jpg
+  uri:
+    -
+      value: 'public://2024-01/about--talented-people-656d177e41a41b58075a4b0b402eadab.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 314173
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706722072

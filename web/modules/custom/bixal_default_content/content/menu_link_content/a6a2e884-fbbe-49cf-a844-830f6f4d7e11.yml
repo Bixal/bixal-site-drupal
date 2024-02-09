@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/'
+      uri: 'internal:/contract-vehicles'
       title: ''
       options: {  }
   external:
@@ -27,7 +27,7 @@ default:
       value: true
   weight:
     -
-      value: -48
+      value: -49
   expanded:
     -
       value: false

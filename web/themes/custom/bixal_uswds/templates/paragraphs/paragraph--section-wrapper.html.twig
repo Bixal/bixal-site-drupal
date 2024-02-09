@@ -39,13 +39,14 @@
  */
 #}
 {% set variant = content.field_section_variant['#items'].getString() %}
-{% set bg_image = file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString()) %}
+{% set image = file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString()) %}
 
 {% if variant == 'tall' %}
   {% set variant = 'centered' %}
   {% set additional_classes = 'bix-section--tall' %}
 {% elseif variant == 'background-image' %}
-  {% set variant = 'primary' %}
+  {% set variant = 'image-bg' %}
+  {% set additional_classes = 'bix-section--primary'%}
 {% endif %}
 
 {% set classes = [
@@ -58,9 +59,9 @@
 {% extends  "@components/section/section.html.twig" %}
 
 {% block body %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{attributes.addClass(classes)}}>
     {% block content %}
-      {{ content | without('field_image', 'field_section_variant') }}
+      {{ content.field_nested_paragraphs | field_value }}
     {% endblock %}
   </div>
 {% endblock body %}

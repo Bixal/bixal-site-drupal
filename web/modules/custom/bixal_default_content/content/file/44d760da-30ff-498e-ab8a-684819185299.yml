@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 44d760da-30ff-498e-ab8a-684819185299
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers--b-banner.webp
+  uri:
+    -
+      value: 'public://2024-01/careers--b-banner.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 48442
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706711975
