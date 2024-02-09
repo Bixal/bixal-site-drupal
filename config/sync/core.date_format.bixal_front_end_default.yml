@@ -1,0 +1,8 @@
+uuid: a5dd8c55-b5b4-466d-b38f-8c2478d7ba94
+langcode: en
+status: true
+dependencies: {  }
+id: bixal_front_end_default
+label: 'Bixal Front End Default'
+locked: false
+pattern: 'F j, Y'
