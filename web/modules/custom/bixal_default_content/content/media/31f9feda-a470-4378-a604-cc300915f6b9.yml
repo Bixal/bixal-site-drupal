@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 31f9feda-a470-4378-a604-cc300915f6b9
+  bundle: image
+  default_langcode: en
+  depends:
+    b8cd5f34-3500-4adb-9a62-6cb95c19ea56: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: greatest-impact.webp
+  created:
+    -
+      value: 1706721969
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: b8cd5f34-3500-4adb-9a62-6cb95c19ea56
+      alt: 'Greatest impact image'
+      title: ''
+      width: 1376
+      height: 778

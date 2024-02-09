@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4e5c540f-3547-4368-b035-0e6760155ccb
+  bundle: image
+  default_langcode: en
+  depends:
+    abd6123b-4fed-4fe8-8d14-7f9ffb25256d: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: about--hero.jpg
+  created:
+    -
+      value: 1706721625
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: abd6123b-4fed-4fe8-8d14-7f9ffb25256d
+      alt: 'About Hero'
+      title: ''
+      width: 3360
+      height: 1050

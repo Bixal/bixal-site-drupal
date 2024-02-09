@@ -1,0 +1,70 @@
+uuid: 9a94f579-7360-4b77-88a8-d65014cca464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nested_paragraphs
+    - paragraphs.paragraphs_type.blurb
+    - paragraphs.paragraphs_type.description_list
+    - paragraphs.paragraphs_type.emphasis_block
+    - paragraphs.paragraphs_type.flip_card
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_nested_paragraphs
+field_name: field_nested_paragraphs
+entity_type: paragraph
+bundle: section
+label: 'Nested Paragraphs (Body)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      flip_card: flip_card
+      blurb: blurb
+      description_list: description_list
+      emphasis_block: emphasis_block
+    negate: 1
+    target_bundles_drag_drop:
+      blurb:
+        weight: 13
+        enabled: true
+      blurb_collection:
+        weight: 14
+        enabled: false
+      button:
+        weight: 7
+        enabled: false
+      description_list:
+        weight: 15
+        enabled: true
+      description_list_collection:
+        weight: 16
+        enabled: false
+      emphasis_block:
+        weight: 17
+        enabled: true
+      emphasis_block_collection:
+        weight: 18
+        enabled: false
+      flip_card:
+        weight: 8
+        enabled: true
+      flip_cards:
+        weight: 9
+        enabled: false
+      section:
+        weight: 10
+        enabled: false
+      section_wrapper:
+        weight: 11
+        enabled: false
+      view_embed:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

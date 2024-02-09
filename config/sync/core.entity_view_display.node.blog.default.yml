@@ -29,7 +29,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: olivero_medium
+      format_type: bixal_front_end_default
     third_party_settings: {  }
     weight: 1
     region: content

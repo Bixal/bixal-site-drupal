@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: badfeabf-92c3-465d-a536-0038d4c1ef88
+  bundle: image
+  default_langcode: en
+  depends:
+    bc07dcf8-1f01-47de-81d7-9c514ceca7ac: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: about--talented-people-656d177e41a41b58075a4b0b402eadab.jpg
+  created:
+    -
+      value: 1706722072
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: bc07dcf8-1f01-47de-81d7-9c514ceca7ac
+      alt: 'Talented people banner'
+      title: ''
+      width: 3360
+      height: 1698

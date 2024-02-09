@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 61da69e4-fe41-4a18-98c4-922e8e06b25c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers--collaborative-and-agile.webp
+  uri:
+    -
+      value: 'public://2024-01/careers--collaborative-and-agile.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 26226
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706718160

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 40b1c8ef-e171-4396-8c13-00745a34fef7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: health.webp
+  uri:
+    -
+      value: 'public://2024-01/health.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 13020
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706650861

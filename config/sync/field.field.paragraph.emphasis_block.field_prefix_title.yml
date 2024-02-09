@@ -1,0 +1,19 @@
+uuid: 3f58478c-4f70-4dd0-9f2f-6c1146e0dfe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prefix_title
+    - paragraphs.paragraphs_type.emphasis_block
+id: paragraph.emphasis_block.field_prefix_title
+field_name: field_prefix_title
+entity_type: paragraph
+bundle: emphasis_block
+label: 'Prefix Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

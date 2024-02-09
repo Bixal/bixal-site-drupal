@@ -1,0 +1,10 @@
+uuid: 96e647b7-a1af-4e24-8b1e-17fb83cc2215
+langcode: en
+status: true
+dependencies: {  }
+id: emphasis_block
+label: 'Emphasis Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

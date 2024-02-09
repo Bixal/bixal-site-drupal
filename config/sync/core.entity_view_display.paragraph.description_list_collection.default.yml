@@ -1,0 +1,25 @@
+uuid: 194df1f8-3e10-4321-9459-6b8733c0b93f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_list_collection.field_description_lists
+    - paragraphs.paragraphs_type.description_list_collection
+  module:
+    - entity_reference_revisions
+id: paragraph.description_list_collection.default
+targetEntityType: paragraph
+bundle: description_list_collection
+mode: default
+content:
+  field_description_lists:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,34 @@
+uuid: 18306b00-8ecf-4644-bdff-4298349264f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blurb_collection.field_blurb_collection_variant
+    - field.field.paragraph.blurb_collection.field_blurbs
+    - paragraphs.paragraphs_type.blurb_collection
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.blurb_collection.default
+targetEntityType: paragraph
+bundle: blurb_collection
+mode: default
+content:
+  field_blurb_collection_variant:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_blurbs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

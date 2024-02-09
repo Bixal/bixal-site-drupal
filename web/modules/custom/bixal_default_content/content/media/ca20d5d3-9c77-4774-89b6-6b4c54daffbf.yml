@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ca20d5d3-9c77-4774-89b6-6b4c54daffbf
+  bundle: image
+  default_langcode: en
+  depends:
+    61da69e4-fe41-4a18-98c4-922e8e06b25c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers--collaborative-and-agile.webp
+  created:
+    -
+      value: 1706718160
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 61da69e4-fe41-4a18-98c4-922e8e06b25c
+      alt: 'Collaborative and Agile Image'
+      title: ''
+      width: 902
+      height: 562

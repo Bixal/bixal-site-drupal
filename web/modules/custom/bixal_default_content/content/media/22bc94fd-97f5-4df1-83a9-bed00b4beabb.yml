@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 22bc94fd-97f5-4df1-83a9-bed00b4beabb
+  bundle: image
+  default_langcode: en
+  depends:
+    12154d0b-78c2-480a-9c9d-d67ac5b595e2: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: services-cloud.svg
+  created:
+    -
+      value: 1706796988
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 12154d0b-78c2-480a-9c9d-d67ac5b595e2
+      alt: 'Cloud computing icon'
+      title: ''
+      width: 0
+      height: 0

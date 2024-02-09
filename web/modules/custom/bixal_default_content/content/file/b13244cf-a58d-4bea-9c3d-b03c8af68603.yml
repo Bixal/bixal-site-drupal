@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b13244cf-a58d-4bea-9c3d-b03c8af68603
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: people-first.webp
+  uri:
+    -
+      value: 'public://2024-01/people-first.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 52700
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721840

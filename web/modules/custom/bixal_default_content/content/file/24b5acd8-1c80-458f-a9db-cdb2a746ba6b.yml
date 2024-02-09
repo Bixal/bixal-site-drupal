@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 24b5acd8-1c80-458f-a9db-cdb2a746ba6b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers--thought-leaders.webp
+  uri:
+    -
+      value: 'public://2024-01/careers--thought-leaders.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 25710
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706718117

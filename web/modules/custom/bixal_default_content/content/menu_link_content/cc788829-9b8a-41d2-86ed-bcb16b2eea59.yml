@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'https://google.com'
+      uri: 'internal:/careers'
       title: ''
       options: {  }
   external:
@@ -24,7 +24,7 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
       value: -48
