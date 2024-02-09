@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9c6a8b0c-d1b2-4517-95a1-0c1869b2f1d7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers-hero.jpg
+  uri:
+    -
+      value: 'public://2024-01/careers-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 90069
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706711901

@@ -1,0 +1,21 @@
+uuid: fd50e236-db2f-431f-85ff-74d5df209001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.blurb
+  module:
+    - datetime
+id: paragraph.blurb.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: blurb
+label: 'Blurb Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

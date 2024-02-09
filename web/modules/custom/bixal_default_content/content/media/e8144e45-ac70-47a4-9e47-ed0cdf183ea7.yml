@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e8144e45-ac70-47a4-9e47-ed0cdf183ea7
+  bundle: image
+  default_langcode: en
+  depends:
+    1b035eed-62c5-45df-bd0e-c28454757a00: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: business-finance.webp
+  created:
+    -
+      value: 1706651067
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1b035eed-62c5-45df-bd0e-c28454757a00
+      alt: 'Business and Finance Image'
+      title: ''
+      width: 664
+      height: 336

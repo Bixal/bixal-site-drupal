@@ -1,0 +1,43 @@
+uuid: d3560ad7-8bb6-4faa-910a-bdf407eefb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.emphasis_block.field_link
+    - field.field.paragraph.emphasis_block.field_postfix_text
+    - field.field.paragraph.emphasis_block.field_prefix_title
+    - paragraphs.paragraphs_type.emphasis_block
+  module:
+    - link
+id: paragraph.emphasis_block.default
+targetEntityType: paragraph
+bundle: emphasis_block
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_postfix_text:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_prefix_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

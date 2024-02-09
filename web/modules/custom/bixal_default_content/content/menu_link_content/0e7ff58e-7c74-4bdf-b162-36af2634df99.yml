@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'https://google.com'
+      uri: 'internal:/about'
       title: ''
       options: {  }
   external:
@@ -24,10 +24,10 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
-      value: 0
+      value: -46
   expanded:
     -
       value: false

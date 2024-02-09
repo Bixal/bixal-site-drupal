@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8fef8025-5742-48c3-bf2a-dc34d6f2e4fe
+  bundle: image
+  default_langcode: en
+  depends:
+    f7babed9-0736-475b-8686-80af201f69d7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers--join-our-team-bc7de974c21a020765a582d498089923.jpg
+  created:
+    -
+      value: 1706712073
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: f7babed9-0736-475b-8686-80af201f69d7
+      alt: 'Join Our Team Banner Image'
+      title: ''
+      width: 1920
+      height: 947

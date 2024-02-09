@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4f9a72a9-15f7-4ee2-af25-8802c6330833
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: unparalleled-diversity.webp
+  uri:
+    -
+      value: 'public://2024-01/unparalleled-diversity.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 60598
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721878

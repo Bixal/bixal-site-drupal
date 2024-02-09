@@ -1,0 +1,29 @@
+uuid: 9f232d97-eb8f-4b71-bbb2-282966e56fe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.blurb
+id: paragraph.blurb.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: blurb
+label: 'Blurb Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: af4bfaff-38fa-40de-8170-c970a7c272ac
+  bundle: image
+  default_langcode: en
+  depends:
+    24b5acd8-1c80-458f-a9db-cdb2a746ba6b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers--thought-leaders.webp
+  created:
+    -
+      value: 1706718117
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 24b5acd8-1c80-458f-a9db-cdb2a746ba6b
+      alt: 'Thought Leaders Image'
+      title: ''
+      width: 900
+      height: 564

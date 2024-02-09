@@ -20,6 +20,8 @@
       <div class="bix-section__body">
         {{ description | raw }}
       </div>
+      {% else %}
+      {{ body }}
       {% endif %}
     {% endblock %}
 

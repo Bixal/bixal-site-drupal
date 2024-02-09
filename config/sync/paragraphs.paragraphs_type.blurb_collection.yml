@@ -1,0 +1,10 @@
+uuid: ced8ff2c-000c-4779-bc89-b01412771a86
+langcode: en
+status: true
+dependencies: {  }
+id: blurb_collection
+label: 'Blurb Collection'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

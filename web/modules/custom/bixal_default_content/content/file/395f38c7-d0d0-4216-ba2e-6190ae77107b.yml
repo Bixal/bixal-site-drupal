@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 395f38c7-d0d0-4216-ba2e-6190ae77107b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: growth-mindset.webp
+  uri:
+    -
+      value: 'public://2024-01/growth-mindset.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 31434
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706721929
