@@ -82,12 +82,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
-                    -
-                      value: false
-                  field_modifier:
-                    -
-                      value: false
           field_description:
             -
               value: "Bixal's diverse and talented team has led the digital transformation of some of the most influential organizations in the world and brings unparalleled experience and energy into every one of our engagements. Our team of supportive professionals thrive on challenge and hold themselves and their work to a higher standard.\r\n\r\nCome work with us."
@@ -131,12 +125,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
-                    -
-                      value: false
-                  field_modifier:
-                    -
-                      value: false
           field_image:
             -
               entity: e4b5062a-d165-4524-98f8-cf2527648b5b
@@ -180,12 +168,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
-                    -
-                      value: false
-                  field_modifier:
-                    -
-                      value: false
           field_nested_paragraphs:
             -
               entity:
@@ -330,17 +312,14 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: true
+                      value: arrow-right
                   field_link:
                     -
                       uri: 'https://jobs.lever.co/bixalhttps://jobs.lever.co/bixal'
                       title: 'View All Jobs'
                       options: {  }
-                  field_modifier:
-                    -
-                      value: false
           field_description:
             -
               value: 'We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations.'
@@ -390,17 +369,14 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: true
+                      value: arrow-right
                   field_link:
                     -
                       uri: 'https://jobs.lever.co/bixal'
                       title: 'View All Jobs'
                       options: {  }
-                  field_modifier:
-                    -
-                      value: false
           field_nested_paragraphs:
             -
               entity:

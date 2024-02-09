@@ -92,17 +92,14 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: true
+                      value: arrow-right
                   field_link:
                     -
                       uri: 'https://google.com'
                       title: 'Learn more about us'
                       options: {  }
-                  field_modifier:
-                    -
-                      value: false
           field_description:
             -
               value: 'Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.'
@@ -152,17 +149,17 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_button_variant:
                     -
-                      value: true
+                      value: inverse
+                  field_icon:
+                    -
+                      value: arrow-right
                   field_link:
                     -
                       uri: 'https://google.com'
                       title: 'Explore Case Studies'
                       options: {  }
-                  field_modifier:
-                    -
-                      value: true
           field_description:
             -
               value: 'We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.'
@@ -215,12 +212,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: false
-                  field_modifier:
-                    -
-                      value: false
+                      value: arrow-right
           field_nested_paragraphs:
             -
               entity:
@@ -458,17 +452,14 @@ default:
                           behavior_settings:
                             -
                               value: {  }
-                          field_has_icon:
+                          field_icon:
                             -
-                              value: true
+                              value: arrow-right
                           field_link:
                             -
                               uri: 'https://google.com'
                               title: 'View our contract vehicles'
                               options: {  }
-                          field_modifier:
-                            -
-                              value: false
                   field_section_variant:
                     -
                       value: centered
@@ -515,12 +506,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: false
-                  field_modifier:
-                    -
-                      value: false
+                      value: arrow-right
           field_nested_paragraphs:
             -
               entity:
@@ -715,17 +703,14 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_has_icon:
+                  field_icon:
                     -
-                      value: true
+                      value: arrow-right
                   field_link:
                     -
                       uri: 'https://google.com'
                       title: 'Join our team'
                       options: {  }
-                  field_modifier:
-                    -
-                      value: false
           field_image:
             -
               entity: b452f031-e9c0-41af-b118-163283806eb8
