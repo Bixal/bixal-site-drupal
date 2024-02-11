@@ -1,5 +1,7 @@
-<div class="bix-blurbs bix-blurbs--{{ variant | default("two-up") }}">
+<ul class="bix-blurbs bix-blurbs--{{ variant | default("two-up") }}">
   {% for blurb in blurbs %}
-    {% include "@components/blurb/blurb.html.twig" with blurb %}
+    <li>
+      {% include "@components/blurb/blurb.html.twig" with blurb %}
+    </li>
   {% endfor %}
 </div>

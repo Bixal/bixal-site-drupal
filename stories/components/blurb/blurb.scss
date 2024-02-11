@@ -1,8 +1,12 @@
 @use "uswds-core" as *;
 
 .bix-blurbs {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
   display: grid;
   gap: units(2);
+  padding-left: 0;
 }
 
 .bix-blurb {
