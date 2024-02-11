@@ -15,7 +15,7 @@
 
     .bix-emphasis-block {
       @include at-media("tablet") {
-        flex-basis: calc(50% - #{units(1)});
+        width: calc(50% - #{units(1)});
       }
     }
   }
@@ -31,11 +31,16 @@
   --_link-bg-color: var(--link-bg-color, rgba(125, 0, 150, 0.5));
 
   align-items: center;
-  justify-content: center;
   background-color: var(--c-base);
   display: flex;
   flex-flow: column nowrap;
-  padding: units(6) units(9);
+  justify-content: center;
+  padding: units(3) units(6);
+  text-align: center;
+
+  @include at-media("desktop") {
+    padding: units(6) units(9);
+  }
 
   &__prefix {
     --_border-color: color-mix(in srgb, black, white 75%);
@@ -52,11 +57,14 @@
   }
 
   &__title {
-    font-size: px-to-rem(30px);
     line-height: 1.5;
     letter-spacing: -0.75px;
     margin-top: units(1);
     margin-bottom: units(2);
+
+    @include at-media("desktop") {
+      font-size: px-to-rem(30px);
+    }
   }
 
   &__link {
