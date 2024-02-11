@@ -141,13 +141,13 @@ dd {
 ul,
 ol {
   list-style-position: outside;
-  margin-top: units(2);
-  margin-bottom: units(2);
+  margin-top: units(3);
+  margin-bottom: units(3);
   padding-left: units(3);
 
   ul,
   ol {
-    margin-top: 0;
+    margin-top: units(1);
     margin-bottom: units(1);
     padding-left: units(3);
   }
@@ -180,8 +180,8 @@ p {
     hyphens: auto;
   }
 
-  margin-top: units("205");
-  margin-bottom: units("205");
+  margin-top: units(3);
+  margin-bottom: units(3);
 }
 
 img {
