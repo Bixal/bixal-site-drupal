@@ -72,25 +72,42 @@
   background-color: var(--c-primary);
   color: color("white");
 
-  @include at-media("tablet-lg") {
-    .bix-hero__container {
+  .bix-hero__container {
+    @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: minmax(400px, 1fr) 4fr;
+      grid-template-columns: minmax(300px, 1fr) 4fr;
       column-gap: units(8);
       align-items: end;
-      width: 85%;
     }
 
-    .bix-hero__media img {
-      object-fit: contain;
+    @include at-media("desktop") {
+      grid-template-columns: minmax(400px, 1fr) 4fr;
+    }
+  }
+
+  .bix-hero__media {
+    @include at-media-max("tablet-lg") {
+      margin-bottom: units(4);
+    }
+  }
+
+  .bix-hero__media img {
+    object-fit: contain;
+    max-width: 50%;
+
+    @include at-media("tablet-lg") {
       max-width: 100%;
     }
   }
 
   .bix-hero__title {
     @include heading-border;
-    font-size: 72px;
-    letter-spacing: -2.4px;
+    font-size: px-to-rem(47px);
+
+    @include at-media("desktop") {
+      font-size: 72px;
+      letter-spacing: -2.4px;
+    }
   }
 
 }
