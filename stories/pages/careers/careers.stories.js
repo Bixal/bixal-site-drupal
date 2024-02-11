@@ -60,6 +60,7 @@ export const Default = {
       ],
     },
     joinSection: {
+      additional_classes: ["bix-join-our-team-section"],
       image:
         "https://www.bixal.com/static/careers--join-our-team-bc7de974c21a020765a582d498089923.jpg",
       title: "Join Our Team",
