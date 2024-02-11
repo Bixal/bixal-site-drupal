@@ -7,6 +7,7 @@
   padding-bottom: units(3);
   position: sticky;
   top: 0;
+  z-index: z(100);
 
   &__inner {
     display: flex;
@@ -108,7 +109,6 @@
     top: 100%;
     left: 0;
     right: 0;
-    z-index: z(100);
   }
 
   &__items {
