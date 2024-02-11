@@ -41,7 +41,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 body {
   color: color("ink");
   font-family: $font-ui;
-  font-size: 20px;
+  font-size: px-to-rem(20px);
   line-height: 1.6;
 }
 
