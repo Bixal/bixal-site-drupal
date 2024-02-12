@@ -1,6 +1,7 @@
 import Blurb from "./blurb.html.twig";
 import BlurbCollectionTemplate from "./blurb-collection.html.twig";
 import BlurbCollectionContent from "./blurb-collection.content.json";
+import BlurbCollectionContentFeatured from "./blurb-collection-featured.content.json";
 
 import "./blurb.scss";
 
@@ -28,5 +29,10 @@ export const BlurbCollectionThreeUp = {
     ...BlurbCollectionContent,
     variant: "three-up",
   },
+  render: BlurbCollectionTemplate,
+};
+
+export const BlurbCollectionFeatured = {
+  args: BlurbCollectionContentFeatured,
   render: BlurbCollectionTemplate,
 };

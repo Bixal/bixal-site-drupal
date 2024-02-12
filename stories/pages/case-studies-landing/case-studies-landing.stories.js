@@ -24,7 +24,7 @@ export const Default = {
       title: "What we do",
       description: "<p>At Bixal, we lead human-centered digital transformation and global solutions that drive equity, sustainability and social good. We leverage technology, communications, data and human-centered design to help governments and organizations be more efficient, effective and impactful. Read on to learn more about the broad scope of our work and how we support our clients to provide a better customer experience and, ultimately, improve the lives of the people they serve.</p>",
     },
-    blurbs: Blurb.BlurbCollection.args,
+    blurbs: Blurb.BlurbCollectionFeatured.args,
     socialNav: SocialNav.default.args
   },
 };
