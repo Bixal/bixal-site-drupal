@@ -1,10 +1,11 @@
 {% extends "@components/description-list/description-list-base.html.twig" %}
 
-{% if image is empty %}
-  {% set image %}
-    <img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">
-  {% endset %}
-{% endif %}
+{% set image %}
+  {% include "@partials/media-image.html.twig" with {
+    'image': '<img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">' | default(image),
+    'additional_classes': ['bix-description-list__media']
+  } %}
+{% endset %}
 
 {% if title is empty %}
   {% set title = 'Health' %}

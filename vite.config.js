@@ -15,6 +15,7 @@ export default defineConfig({
       namespaces: {
         components: join(__dirname, "./stories/components"),
         pages: join(__dirname, "./stories/pages"),
+        partials: join(__dirname, "./stories/partials"),
       },
     }),
   ],
