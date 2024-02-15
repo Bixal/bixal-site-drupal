@@ -60,9 +60,8 @@ export const Default = {
       ],
     },
     joinSection: {
-      additional_classes: ["bix-join-our-team-section"],
-      image:
-        "https://www.bixal.com/static/careers--join-our-team-bc7de974c21a020765a582d498089923.jpg",
+      variant: "accent-cool",
+      center_content: true,
       title: "Join Our Team",
       description:
         "<p>We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations.</p>",
