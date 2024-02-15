@@ -189,8 +189,10 @@ img {
   vertical-align: middle; // Remove extra space from images.
 }
 
+// Used in Footer & Contract vehicles.
 address {
   font-style: normal;
+  margin-bottom: units(3);
 }
 
 .bix-container {
