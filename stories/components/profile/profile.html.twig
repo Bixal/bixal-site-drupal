@@ -1,28 +1,30 @@
 {% extends "@components/profile/profile-base.html.twig" %}
 
-{% if image is empty %}
+{% if image is not empty %}
   {% set image %}
-  <img src="{{ image | default("https://placehold.co/325x325") }}" height="270" width="270" alt=""/>
+  {{ image | default("https://placehold.co/325x325") }}
   {% endset %}
 {% endif %}
 
-{% if name is empty %}
+{% if name is not empty %}
   {% set name %}
   {{ name | default("Full name") }}
   {% endset %}
 {% endif %}
 
-{% if role is empty %}
+{% if role is not empty %}
   {% set role %}
   {{ role | default("Role") }}
   {% endset %}
 {% endif %}
 
-{% if socialNav is empty %}
+{% if socialNav is not empty %}
+{% set socialNav %}
   {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
+{% endset %}
 {% endif %}
 
-{% if specialties is empty %}
+{% if specialties is not empty %}
   {% set specialties %}
   <ul>
     {% for item in specialties %}
@@ -32,7 +34,7 @@
   {% endset %}
 {% endif %}
 
-{% if certifications is empty %}
+{% if certifications is not empty %}
   {% set certifications %}
   <ul>
     {% for item in certifications %}
@@ -42,7 +44,7 @@
   {% endset %}
 {% endif %}
 
-{% if languages is empty %}
+{% if languages is not empty %}
   {% set languages %}
   <ul>
     {% for item in languages %}
@@ -52,7 +54,7 @@
   {% endset %}
 {% endif %}
 
-{% if bucketlist is empty %}
+{% if bucketlist is not empty %}
   {% set bucketlist %}
   {{ bucketlist }}
   {% endset %}

@@ -1,17 +1,19 @@
 {
-  "image": "<img src=\"https://placehold.co/325x325\" height=\"270\" width=\"270\" alt=\"\"/>",
+  "image": "<img src=\"https://placehold.co/325x325\" height=\"270\" width=\"270\" alt=\"\">",
   "name": "Amie Nisler",
   "role": "Senior Communications Strategist",
   "socialNav": {
     "variant": "accent-warm",
-      "items": [
+      "items" : [
         {
-          "href": "https://www.linkedIn.com",
-          "label": "LinkedIn",
-          "icon_path": "icons/linkedin.svg"
+          "href" : "https://www.linkedIn.com",
+          "label" : "LinkedIn",
+          "icon_path" : "icons/linkedin.svg"
         }
       ]
-  },
+    
+  }, 
+  
   "specialties": [
     "Behavioral Science",
     "Data Systems",
