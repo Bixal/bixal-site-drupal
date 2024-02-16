@@ -21,14 +21,14 @@ settings:
       value: background-image
       label: 'Background Image'
     -
-      value: centered
-      label: Centered
-    -
       value: tall
       label: Tall
     -
       value: primary-alt
       label: Primary-alt
+    -
+      value: accent-cool
+      label: Accent-Cool
   allowed_values_function: ''
 module: options
 locked: false
