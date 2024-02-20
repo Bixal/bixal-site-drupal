@@ -343,7 +343,7 @@ default:
                       value: true
                   field_link:
                     -
-                      uri: 'https://jobs.lever.co/bixalhttps://jobs.lever.co/bixal'
+                      uri: 'https://jobs.lever.co/bixal'
                       title: 'View All Jobs'
                       options: {  }
                   field_modifier:
