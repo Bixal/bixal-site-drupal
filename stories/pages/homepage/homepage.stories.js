@@ -61,8 +61,8 @@ export const Default = {
       collections: DescriptionListCollectionContent,
     },
     workWithUs: {
-      variant: "centered",
-      additional_classes: "bix-section--tall",
+      variant: "tall",
+      center_content: true,
       image:
         "https://www.bixal.com/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
       prefix: "Work with us",

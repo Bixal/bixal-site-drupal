@@ -23,9 +23,13 @@
 }
 
 .bix-blurbs--two-up {
-  grid-template-columns: repeat(auto-fill, minmax(465px, 1fr));
+  @include at-media("tablet") {
+    grid-template-columns: repeat(auto-fill, minmax(465px, 1fr));
+  }
 }
 
 .bix-blurbs--three-up {
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  @include at-media("tablet") {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
 }

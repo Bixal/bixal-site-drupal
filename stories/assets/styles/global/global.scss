@@ -41,7 +41,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 body {
   color: color("ink");
   font-family: $font-ui;
-  font-size: 20px;
+  font-size: px-to-rem(20px);
   line-height: 1.6;
 }
 
@@ -51,47 +51,64 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-heading;
+  font-family: var(--font-heading);
   font-weight: 800;
-  font-weight: font-weight(800);
   line-height: 1.2;
   margin: 0;
+  transition: font-size 0.25s;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: px-to-rem(64px);
+  margin-bottom: units(2);
   text-wrap: balance;
 }
 
 h2 {
   @include heading-border;
-  font-size: 47px;
+  font-size: px-to-rem(24px);
   font-weight: 700;
-  letter-spacing: -2.4px;
+  letter-spacing: -0.5px;
   margin-bottom: units(4);
+
+  @include at-media("tablet") {
+    font-size: px-to-rem(35px);
+    letter-spacing: -0.75px;
+  }
 }
 
 h3 {
-  font-size: 43px;
-  letter-spacing: -0.75px;
+  font-family: var(--font-ui);
+  font-size: px-to-rem(22px);
+  letter-spacing: -0.5px;
   margin-top: units(3);
 }
 
 h4 {
-  font-size: 30px;
-  letter-spacing: -0.75px;
+  font-size: px-to-rem(22px);
+  letter-spacing: -0.5px;
+  margin-top: units(2);
 }
 
 h5 {
-  font-size: 22px;
+  font-family: var(--font-ui);
+  font-size: px-to-rem(22px);
   letter-spacing: -0.5px;
+  margin-top: units(2);
+}
+
+h6 {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: units(2);
 }
 
 .bix-title-prefix {
   border-left: 2px solid var(--c-accent-cool-alt);
   border-right: 2px solid var(--c-accent-cool-alt);
   display: inline-flex;
-  font-family: $font-ui;
+  font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -124,13 +141,13 @@ dd {
 ul,
 ol {
   list-style-position: outside;
-  margin-top: units(2);
-  margin-bottom: units(2);
+  margin-top: units(3);
+  margin-bottom: units(3);
   padding-left: units(3);
 
   ul,
   ol {
-    margin-top: 0;
+    margin-top: units(1);
     margin-bottom: units(1);
     padding-left: units(3);
   }
@@ -157,12 +174,14 @@ a {
 }
 
 p {
+
+  // Improves readability in word breaks.
   &[lang="en"] {
     hyphens: auto;
   }
 
-  margin-top: units("205");
-  margin-bottom: units("205");
+  margin-top: units(3);
+  margin-bottom: units(3);
 }
 
 img {

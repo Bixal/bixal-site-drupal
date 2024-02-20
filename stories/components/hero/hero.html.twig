@@ -28,9 +28,11 @@
   class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}"
   style="background-image: url('{{ image }}')">
   <div class="bix-hero__container">
+    {% if title %}
     <{{ heading_type }} class="bix-hero__title">
       {{ title | default("Hero title") }}
     </{{ heading_type }}>
+    {% endif %}
     </div>
 </section>
 
