@@ -1,0 +1,8 @@
+{% set heading_type = heading_type | default("h2") %}
+
+{% for section in sections %}
+  <{{ heading_type }}>
+    {{ section.title }}
+  </{{ heading_type }}>
+  {{ section.text | raw }}
+{% endfor %}
