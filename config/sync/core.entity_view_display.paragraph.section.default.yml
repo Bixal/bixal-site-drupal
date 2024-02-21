@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.section.field_button
+    - field.field.paragraph.section.field_center_content
     - field.field.paragraph.section.field_description
     - field.field.paragraph.section.field_image
     - field.field.paragraph.section.field_nested_paragraphs
@@ -27,6 +28,16 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_center_content:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_description:
     type: basic_string

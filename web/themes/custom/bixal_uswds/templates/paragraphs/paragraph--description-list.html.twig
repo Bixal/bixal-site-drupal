@@ -39,14 +39,20 @@
  */
 #}
 
+{% set additional_classes = [
+  'component',
+  'component--type--' ~ paragraph.bundle|clean_class,
+  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ?  'component--unpublished',
+] | merge(additional_classes | default([]))
+%}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% include '@components/description-list/description-list-base.html.twig' with {
-      'title': content.field_title | field_value,
-      'image': content.field_image.0,
-      'items': content.field_description_list_items,
-      'variant': content.field_description_list_variant['#items'].getString()
-      
-    } %}
-  </div>
+  {% include '@components/description-list/description-list-base.html.twig' with {
+    'title': content.field_title | field_value,
+    'image': content.field_image.0,
+    'items': content.field_description_list_items,
+    'variant': content.field_description_list_variant['#items'].getString(),
+    'additional_classes': additional_classes,
+  } %}
 {% endblock paragraph %}

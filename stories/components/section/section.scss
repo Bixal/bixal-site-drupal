@@ -92,29 +92,3 @@
 .bix-section--tall {
   min-height: px-to-rem(960px);
 }
-
-// ==========================================================================
-// Overrides
-// ==========================================================================
-
-// @TODO: Refactor Join our Team section so that it doesn't require hacks for a11y.
-
-//
-// Careers page
-// ==========================================================================
-.bix-section.bix-join-our-team-section {
-  background-position: 0 0;
-  padding-bottom: units(10); // Prevent button from being unreadable.
-
-  @include at-media("desktop") {
-    background-position: center bottom;
-  }
-
-  .bix-section__body p {
-    max-width: px-to-rem(375px);
-
-    @include at-media("desktop") {
-      max-width: px-to-rem(500px);
-    }
-  }
-}

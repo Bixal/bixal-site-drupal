@@ -89,6 +89,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_description:
             -
               value: "We do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding.\r\nWe do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding."
@@ -138,6 +141,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_image:
             -
               entity: acc0dd5a-e523-4fb9-911c-1b08ce193224
@@ -187,12 +193,12 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: true
           field_description:
             -
               value: 'An organization is only as effective as its people. Our people are our lifeblood—the heart and soul behind every project we take on and every impact we make.'
-          field_section_variant:
-            -
-              value: centered
           field_title:
             -
               value: 'Meet Team Bixal'
@@ -239,6 +245,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: true
           field_nested_paragraphs:
             -
               entity:
@@ -424,6 +433,9 @@ default:
                   field_modifier:
                     -
                       value: true
+          field_center_content:
+            -
+              value: false
           field_description:
             -
               value: 'If you share our sense of purpose and are interested in exploring opportunities with Bixal, drop us a line or check out our careers page.'

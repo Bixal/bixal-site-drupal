@@ -1,9 +1,14 @@
-<dl class="bix-description-list bix-description-list--{{ variant }}">
-  {% if image %}
-    <div class="bix-description-list__media">
-      {{ image }}
-    </div>
-  {% endif %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set classes = [
+  'bix-description-list',
+  'bix-description-list--' ~ variant | clean_class,
+] %}
+
+<dl{{ attributes.addClass(classes).addClass(additional_classes) }}>
+  {{ image }}
   {% if title %}
     <dt class="bix-description-list__heading">
       {{ title }}
