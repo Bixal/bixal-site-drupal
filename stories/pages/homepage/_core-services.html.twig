@@ -4,7 +4,7 @@
 
 {% set variant = "base" %}
 
-{% block body %}
+{% block nested_sections %}
   {% include "@components/cards/flip-card-group.html.twig" with flipCards %}
   {% embed "@components/section/section.html.twig" %}
     {% set variant = "centered" %}

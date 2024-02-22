@@ -1,32 +1,36 @@
-<section class="bix-section {{ variant ? "bix-section--" ~ variant : "" }} {{ additional_classes }}" {% if image %}
-  style="background-image: url('{{ image }}')"
-{% endif %}>
+<section class="bix-section {{ variant ? " bix-section--" ~ variant : " " }} {{ additional_classes }}" {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
   <div class="bix-container">
     {% block header %}
       {% if prefix %}
-      <div class="bix-title-prefix">
-        {{ prefix }}
-      </div>
+        <div class="bix-title-prefix">
+          {{ prefix }}
+        </div>
       {% endif %}
       {% if title %}
-      <h2 class="bix-section__title">
-        {{ title }}
-      </h2>
+        <h2 class="bix-section__title">
+          {{ title }}
+        </h2>
       {% endif %}
     {% endblock %}
 
-    {% block body %}
+    {% block description %}
       {% if description %}
-      <div class="bix-section__body">
-        {{ description | raw }}
-      </div>
+        <div class="bix-section__body">
+          {{ description | raw }}
+        </div>
       {% endif %}
-      {{ body }}
+    {% endblock %}
+
+    {% block nested_sections %}
+      {% if nested_sections %}
+        {{ nested_sections }}
+      {% endif %}
     {% endblock %}
 
     {% block footer %}
       {% if cta.label %}
-        <div class="bix-section__footer">
+        <div
+          class="bix-section__footer">
           {# Avoid button inheriting section data. #}
           {% include "@components/button/button.html.twig" with cta only %}
         </div>
