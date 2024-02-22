@@ -64,9 +64,11 @@ then
     # Remove any empty directories now that non-scss have been deleted
     find "$sass_target_dir" -type d -empty -delete
     # Copy all JS files and put them in a single dir.
-    find "$source_dir" -name '*.js' -exec cp {} "$js_target_dir" \;
+    cp -r "$source_dir" "$js_target_dir"
     # Remove the storybook JS files, they do nothing for Drupal.
-    find "$js_target_dir" -name '*.stories.js' -delete
+    find "$js_target_dir" -name '*.stories.js' -delete;
+    find "$js_target_dir" -type f \( -name "*.scss" -o -name "*.twig" -o -name "*.json" \) -exec rm -f {} \;
+    find "$js_target_dir" -type d -empty -delete
 else
     echo "The storybook components directory, $source_dir, did not exist."
     exit 1
