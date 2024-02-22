@@ -1,6 +1,6 @@
 {% extends "@components/profile/profile-base.html.twig" %}
 
-{% if image is not empty %}
+{% if image is empty %}
   {% set image %}
   {{ image | default("https://placehold.co/325x325") }}
   {% endset %}
@@ -18,44 +18,41 @@
   {% endset %}
 {% endif %}
 
-{% if socialNav is not empty %}
-{% set socialNav %}
+{% if socialNav %}
+  {% set social_nav %}
   {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
-{% endset %}
+  {% endset %}
 {% endif %}
 
-{% if specialties is not empty %}
+{% if specialties is empty %}
   {% set specialties %}
-  <ul>
-    {% for item in specialties %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
   {% endset %}
 {% endif %}
 
-{% if certifications is not empty %}
+{% if certifications is empty %}
   {% set certifications %}
-  <ul>
-    {% for item in certifications %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
   {% endset %}
 {% endif %}
 
-{% if languages is not empty %}
+{% if languages is empty %}
   {% set languages %}
-  <ul>
-    {% for item in languages %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
   {% endset %}
 {% endif %}
 
-{% if bucketlist is not empty %}
+{% if bucketlist is empty %}
   {% set bucketlist %}
-  {{ bucketlist }}
+  My bucket list is to fill a bucket to the brim with lists.
   {% endset %}
 {% endif %}

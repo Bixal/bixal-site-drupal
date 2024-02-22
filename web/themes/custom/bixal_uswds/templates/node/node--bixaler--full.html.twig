@@ -82,7 +82,7 @@
 {% endset %}
 
 {% if content.field_link %}
-  {% set socialNav %}
+  {% set social_nav %}
   {% include '@components/social-nav/social-nav.html.twig' with {
     "variant": "accent-warm",
     items : [
@@ -97,31 +97,31 @@
 
 {% if content.field_specialties | field_value %}
   {% set specialties %}
-  <ul>
-    {% for item in content.field_specialties | field_value %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+
+  {% for item in content.field_specialties | field_value %}
+    <li>{{ item }}</li>
+  {% endfor %}
+
   {% endset %}
 {% endif %}
 
 {% if content.field_languages | field_value %}
   {% set languages %}
-  <ul>
-    {% for item in content.field_languages | field_value %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+
+  {% for item in content.field_languages | field_value %}
+    <li>{{ item }}</li>
+  {% endfor %}
+
   {% endset %}
 {% endif %}
 
 {% if content.field_certifications | field_value %}
   {% set certifications %}
-  <ul>
-    {% for item in content.certifications | field_value %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+
+  {% for item in content.certifications | field_value %}
+    <li>{{ item }}</li>
+  {% endfor %}
+
   {% endset %}
 {% endif %}
 
