@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 76e2a994-8a55-43ba-a8be-0d1711108f5f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: alex-hull.webp
+  uri:
+    -
+      value: 'public://2024-02/alex-hull.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 14606
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1708550844

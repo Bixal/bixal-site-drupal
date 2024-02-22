@@ -172,6 +172,25 @@ default:
           field_description:
             -
               value: 'An organization is only as effective as its people. Our people are our lifeblood—the heart and soul behind every project we take on and every impact we make.'
+          field_nested_paragraphs:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 0199b309-3474-4cdc-8696-98b3df5a57ef
+                  bundle: people_list
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1708363265
+                  behavior_settings:
+                    -
+                      value: {  }
           field_section_variant:
             -
               value: centered
