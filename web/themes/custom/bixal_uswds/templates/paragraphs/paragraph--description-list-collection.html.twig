@@ -38,18 +38,18 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
+
+{% set additional_classes = [
   'component',
-  'bix-description-list-collection',
   'component--type--' ~ paragraph.bundle|clean_class,
   view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+  not paragraph.isPublished() ?  'component--unpublished',
+] | merge(additional_classes | default([]))
+%}
 
 {% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    {% block content %}
-      {{ content.field_description_lists |field_value }}
-    {% endblock %}
-  </div>
+  {% include '@components/description-list/description-list-collection-base.html.twig' with {
+    'description_list_collection': content.field_description_lists | field_value,
+    'additional_classes': additional_classes,
+  } %}
 {% endblock paragraph %}

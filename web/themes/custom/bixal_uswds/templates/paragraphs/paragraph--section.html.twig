@@ -66,9 +66,9 @@
     'prefix': content.field_prefix_title | field_value,
     'description': content.field_description | field_value,
     'nested_sections': content.field_nested_paragraphs | field_value,
+    'center_content': content.field_center_content.0['#markup'],
     'cta': cta,
     'image': bg_image
   } %}
-
 
 {% endblock paragraph %}

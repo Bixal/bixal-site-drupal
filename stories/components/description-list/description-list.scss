@@ -1,10 +1,13 @@
 @use "uswds-core" as *;
 
 .bix-description-list-collection {
-  @include at-media("desktop") {
+  @include at-media("mobile-lg") {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: units(2);
+  }
+  @include at-media("desktop") {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

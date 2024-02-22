@@ -1,10 +1,10 @@
 {% include "@components/header/header.html.twig" with header %}
 
-{% if hero %}
-{% include "@components/hero/hero.html.twig" with hero %}
-{% endif %}
-
 <main>
+  {% if hero %}
+  {% include "@components/hero/hero.html.twig" with hero %}
+  {% endif %}
+
   {% block content %}
     Content block.
   {% endblock %}

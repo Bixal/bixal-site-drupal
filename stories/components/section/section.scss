@@ -2,7 +2,13 @@
 
 // @TODO Create mixin.
 .bix-section {
-  padding: 100px 0;
+  padding-top: units(5);
+  padding-bottom: units(5);
+
+  @include at-media("tablet") {
+    padding-top: units(10);
+    padding-bottom: units(10);
+  }
 
   &__body p {
     max-width: px-to-rem(725px);
@@ -51,7 +57,11 @@
   }
 }
 
-.bix-section--centered {
+.bix-section--accent-cool {
+  background-color: var(--c-accent-cool);
+}
+
+.bix-section--center-content {
   text-align: center;
 
   .bix-section__body p {
@@ -59,18 +69,26 @@
   }
 
   .bix-section__title::after {
-    content: none;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-.bix-section--tall {
-  min-height: px-to-rem(800px);
 }
 
 .bix-section--image-bg {
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: px-to-rem(160px);
-  padding-bottom: px-to-rem(160px);
+  min-height: px-to-rem(300px);
+  padding-top: units(5);
+  padding-bottom: units(5);
+
+  @include at-media("desktop") {
+    min-height: px-to-rem(600px);
+    padding-top: px-to-rem(160px);
+    padding-bottom: px-to-rem(160px);
+  }
+}
+
+.bix-section--tall {
+  min-height: px-to-rem(960px);
 }

@@ -1,0 +1,18 @@
+uuid: 3df6f45e-5456-4dc9-8131-86d0576ab920
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_center_content
+field_name: field_center_content
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

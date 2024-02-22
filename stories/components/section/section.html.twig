@@ -1,4 +1,39 @@
-<section class="bix-section {{ variant ? " bix-section--" ~ variant : " " }} {{ additional_classes }}" {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
+{#
+/**
+  * Section component.
+  *
+  * Available variables:
+  * - prefix: Optional string. Contains title prefix with borders on the side.
+  * - heading_type: String heading type for title.
+  * - title: String title of section.
+  * - description: String body text, can include paragraphs.
+  * - cta: Optional call to action, uses button component and its settings.
+**/
+#}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set section_classes = [
+  "bix-section",
+  (image ? "bix-section--image-bg"),
+  (variant ? "bix-section--" ~ variant),
+  (center_content ? "bix-section--center-content"),
+  (additional_classes ? additional_classes),
+] %}
+
+{% set heading_type = heading_type | default("h2") %}
+
+<section
+  {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
+
+  {#
+    /**
+      ? The `bix-container` can appear *without* content, for sections like homepage flip grids.
+      ? A side effect of this is that `bix-container` can appear empty on image only sections, ex: above "Careers - How we work"
+    **/
+    #}
   <div class="bix-container">
     {% block header %}
       {% if prefix %}
@@ -6,10 +41,11 @@
           {{ prefix }}
         </div>
       {% endif %}
+
       {% if title %}
-        <h2 class="bix-section__title">
+        <{{heading_type}} class="bix-section__title">
           {{ title }}
-        </h2>
+        </{{heading_type}}>
       {% endif %}
     {% endblock %}
 
@@ -37,4 +73,5 @@
       {% endif %}
     {% endblock %}
   </div>
+  {% if content_not_empty %}{% endif %}
 </section>
