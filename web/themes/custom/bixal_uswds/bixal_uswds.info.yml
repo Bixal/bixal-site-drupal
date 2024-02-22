@@ -12,6 +12,7 @@ components:
   namespaces:
     pages: storybook_components/stories/pages
     components: storybook_components/stories/components
+    partials: storybook_components/stories/partials
 
 libraries:
   - bixal_uswds/global

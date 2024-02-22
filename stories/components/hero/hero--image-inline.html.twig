@@ -1,15 +1,17 @@
 {% set cta_exists = cta.label and cta.href %}
 
 <section class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}">
-  <div class="bix-hero__container">
+  <div class="bix-hero__container bix-container">
     <div class="bix-hero__media">
       <img src="{{ image }}" alt="" width="530px">
     </div>
     <div class="bix-hero__content">
       <div class="bix-hero__header">
+        {% if title %}
         <{{ heading_type }} class="bix-hero__title">
           {{ title }}
         </{{ heading_type }}>
+        {% endif %}
       </div>
       {% if description %}
       <div class="bix-hero__body">
