@@ -3,40 +3,25 @@
   * Blurb collection
   *
   * Available variables:
-  * - href: String that determines whether to wrap entire content with anchor.
-  * - title: String title.
-  * - description: String content description.
-  * - date: String used in time element.
-**/
-#}
-
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
-{% set blurb_classes = [
-  "bix-blurbs",
-  (variant ? "bix-blurbs--" ~ variant | default("two-up")),
-  (featured ? "bix-blurbs--featured"),
-  (additional_classes ? additional_classes),
-] %}
-
-{#
-/**
-  * Featured collection
+  * - blurbs (array): An array of JSON content used to power blurb.html.twig [href, title, description, date].
+  * - variant (string, default "two-up"):
+  *    - two-up: Always 2 column layout
+  *    - three-up: Auto-fill columns that are minimum of 380px and max of 1fr.
+  * - featured (bool, default false):
+  * - additional_classes (array): Add more classes to the collection wrapper.
   *
-  * Image sizes:
-  *   - Featured:
-  *     - Large: 1350px
-  *     - Small: 516px
-  *   - Regular: 670px
+  * Image size guidance:
+  * - featured is true:
+  *    - First image is: 1350px
+  *    - Rest of images: 516px
+  * - featured is false:
+  *    - All images: 670px
 **/
 #}
-{# @TODO: Support lazy loading after X amount of items. #}
-<ul {{ attributes.addClass(blurb_classes) }}>
+{% extends "@components/blurb/blurb-collection-base.html.twig" %}
+
+{% set blurb_collection %}
   {% for blurb in blurbs %}
-    <li class="bix-blurb">
-      {% include "@components/blurb/blurb.html.twig" with blurb %}
-    </li>
+    {% include "@components/blurb/blurb.html.twig" with blurb %}
   {% endfor %}
-</ul>
+{% endset %}
