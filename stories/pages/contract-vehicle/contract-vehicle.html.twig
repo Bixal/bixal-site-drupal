@@ -1,8 +1,17 @@
+{% extends "@pages/base/base.html.twig" %}
+
 {% set heading_type = heading_type | default("h2") %}
 
-{% for section in sections %}
-  <{{ heading_type }}>
-    {{ section.title }}
-  </{{ heading_type }}>
-  {{ section.text | raw }}
-{% endfor %}
+{% block content %}
+  {% embed "@components/section/section.html.twig" %}
+    {% block body %}
+      {% for section in sections %}
+        <{{ heading_type }}>
+          {{ section.title }}
+        </{{ heading_type }}>
+        {{ section.text | raw }}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+
+{% endblock %}
