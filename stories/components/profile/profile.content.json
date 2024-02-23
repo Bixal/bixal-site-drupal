@@ -4,22 +4,17 @@
   "role": "Senior Communications Strategist",
   "socialNav": {
     "variant": "accent-warm",
-      "items" : [
-        {
-          "href" : "https://www.linkedIn.com",
-          "label" : "LinkedIn",
-          "icon_path" : "icons/linkedin.svg"
-        }
-      ]
+    "items" : [{
+        "href" : "https://www.linkedIn.com",
+        "label" : "LinkedIn",
+        "icon_path" : "icons/linkedin.svg"
+      }
+    ]
     
   }, 
   
-  "specialties": [
-    "Behavioral Science",
-    "Data Systems",
-    "Emergency and Risk Communications",
-    "Health Communications",
-    "Plain Language"
-  ],
+  "specialties": 
+    "<li>Behavioral Science</li><li>Data Systems</li><li>Emergency and Risk Communications</li><li>Health Communications</li><li>Plain Language</li>"
+  ,
   "bucketlist": "To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course)."
 }

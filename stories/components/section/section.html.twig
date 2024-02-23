@@ -26,48 +26,52 @@
 {% set heading_type = heading_type | default("h2") %}
 
 <section
-  {{ attributes.addClass(section_classes) }}
-  {% if image %}style="background-image: url('{{ image }}')"{% endif %}>
+  {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
 
   {#
-  /**
-    ? The `bix-container` can appear *without* content, for sections like homepage flip grids.
-    ? A side effect of this is that `bix-container` can appear empty on image only sections, ex: above "Careers - How we work"
-  **/
-  #}
+    /**
+      ? The `bix-container` can appear *without* content, for sections like homepage flip grids.
+      ? A side effect of this is that `bix-container` can appear empty on image only sections, ex: above "Careers - How we work"
+    **/
+    #}
   <div class="bix-container">
     {% block header %}
       {% if prefix %}
-      <div class="bix-title-prefix">
-        {{ prefix }}
-      </div>
+        <div class="bix-title-prefix">
+          {{ prefix }}
+        </div>
       {% endif %}
 
       {% if title %}
-      <{{ heading_type }} class="bix-section__title">
-        {{ title }}
-      </{{ heading_type }}>
+        <{{heading_type}} class="bix-section__title">
+          {{ title }}
+        </{{heading_type}}>
       {% endif %}
     {% endblock %}
 
-    {% block body %}
+    {% block description %}
       {% if description %}
-      <div class="bix-section__body">
-        {{ description | raw }}
-      </div>
+        <div class="bix-section__body">
+          {{ description | raw }}
+        </div>
       {% endif %}
-      {{ body }}
+    {% endblock %}
+
+    {% block nested_sections %}
+      {% if nested_sections %}
+        {{ nested_sections }}
+      {% endif %}
     {% endblock %}
 
     {% block footer %}
       {% if cta.label %}
-        <div class="bix-section__footer">
+        <div
+          class="bix-section__footer">
           {# Avoid button inheriting section data. #}
           {% include "@components/button/button.html.twig" with cta only %}
         </div>
       {% endif %}
     {% endblock %}
   </div>
-  {% if content_not_empty %}
-  {% endif %}
+  {% if content_not_empty %}{% endif %}
 </section>

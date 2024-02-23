@@ -1,5 +1,5 @@
 _meta:
-  version: '1.0'
+  version: "1.0"
   entity_type: node
   uuid: cc32d22a-2886-4359-a7ae-87d50d114cd5
   bundle: landing_page
@@ -14,432 +14,343 @@ _meta:
     badfeabf-92c3-465d-a536-0038d4c1ef88: media
 default:
   revision_uid:
-    -
-      target_id: 1
+    - target_id: 1
   status:
-    -
-      value: true
+    - value: true
   uid:
-    -
-      target_id: 1
+    - target_id: 1
   title:
-    -
-      value: 'About Bixal'
+    - value: "About Bixal"
   created:
-    -
-      value: 1706721618
+    - value: 1706721618
   promote:
-    -
-      value: false
+    - value: false
   sticky:
-    -
-      value: false
+    - value: false
   path:
-    -
-      alias: /about
+    - alias: /about
       langcode: en
       pathauto: 0
   field_banner_image:
-    -
-      entity: 4e5c540f-3547-4368-b035-0e6760155ccb
+    - entity: 4e5c540f-3547-4368-b035-0e6760155ccb
   field_hero_variant:
-    -
-      value: image-bg
+    - value: image-bg
   field_paragraphs:
-    -
-      entity:
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: ad434c57-8c63-4f9b-95d3-7c931f5a813d
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706721644
+            - value: 1706721644
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 56d6d330-47d4-45e5-984f-29efed835677
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706721644
+                    - value: 1706721644
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
+                  field_has_icon:
+                    - value: false
+                  field_modifier:
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_description:
-            -
-              value: "We do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding.\r\nWe do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding."
+            - value: "We do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding.\r\nWe do this by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences to better serve the American public and communities around the world.\r\n\r\nBixal is more than an organization. Bixal is a methodology. It’s a people-absolutely-first approach to solving complex organizational challenges, balancing cutting-edge technical chops with a deep sense of empathy and understanding."
           field_title:
-            -
-              value: 'Bixal is a mission-driven organization determined to have a positive impact on the lives of people everywhere.'
-    -
-      entity:
+            - value: "Bixal is a mission-driven organization determined to have a positive impact on the lives of people everywhere."
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: e2ed20b1-ea46-428c-8ccb-43fca36dc288
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706721695
+            - value: 1706721695
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 4f56edb4-a496-4f47-86dd-ea766cd697a6
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706721695
+                    - value: 1706721695
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
+                  field_has_icon:
+                    - value: false
+                  field_modifier:
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_image:
-            -
-              entity: acc0dd5a-e523-4fb9-911c-1b08ce193224
+            - entity: acc0dd5a-e523-4fb9-911c-1b08ce193224
           field_section_variant:
-            -
-              value: tall
-    -
-      entity:
+            - value: tall
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 73628be4-2274-4706-b75b-0961b3a2865c
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706721743
+            - value: 1706721743
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: dac67b89-182d-4a6a-8c3c-0e26bc7b8020
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706721743
+                    - value: 1706721743
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
+                  field_has_icon:
+                    - value: false
+                  field_modifier:
+                    - value: false
           field_center_content:
-            -
-              value: true
+            - value: true
           field_description:
-            -
-              value: 'An organization is only as effective as its people. Our people are our lifeblood—the heart and soul behind every project we take on and every impact we make.'
+            - value: "An organization is only as effective as its people. Our people are our lifeblood—the heart and soul behind every project we take on and every impact we make."
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: a81faaa9-c558-40a4-be5c-d52ec1ef84c3
                   bundle: people_list
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1708625192
+                    - value: 1708625192
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
           field_title:
-            -
-              value: 'Meet Team Bixal'
-    -
-      entity:
+            - value: "Meet Team Bixal"
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 9ce02496-bdc5-44ff-be8f-a21716cc5795
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706798015
+            - value: 1706798015
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 8a824e23-c566-4f7d-b6b5-43b577b306eb
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706798015
+                    - value: 1706798015
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
+                  field_has_icon:
+                    - value: false
+                  field_modifier:
+                    - value: false
           field_center_content:
-            -
-              value: true
+            - value: true
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 885f0e12-db4d-46d1-b1fc-8568e9b0b715
                   bundle: blurb_collection
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706798071
+                    - value: 1706798071
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_blurbs:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 1de2b671-0321-45de-a3ee-ec02802dd30f
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706798071
+                            - value: 1706798071
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'We care deeply about our team members, our clients and the diverse communities we serve. We value kindness, humility and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.'
+                            - value: "We care deeply about our team members, our clients and the diverse communities we serve. We value kindness, humility and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team."
                           field_image:
-                            -
-                              entity: 68ecbd1f-78c5-4e63-bbf1-b21c094ab336
+                            - entity: 68ecbd1f-78c5-4e63-bbf1-b21c094ab336
                           field_title:
-                            -
-                              value: People-absolutely-first.
-                    -
-                      entity:
+                            - value: People-absolutely-first.
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 39548514-3570-4dc2-ab3a-d57e5f535fc2
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706798095
+                            - value: 1706798095
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'Bixal unites different people with different perspectives from all over the world to bring broad representation and inclusive approaches to support our clients and the communities they serve. Each of us brings a unique background and worldview that translate into better outcomes for all.'
+                            - value: "Bixal unites different people with different perspectives from all over the world to bring broad representation and inclusive approaches to support our clients and the communities they serve. Each of us brings a unique background and worldview that translate into better outcomes for all."
                           field_image:
-                            -
-                              entity: ac0564e5-4ca5-49db-8ebb-cc41a6d5bbcc
+                            - entity: ac0564e5-4ca5-49db-8ebb-cc41a6d5bbcc
                           field_title:
-                            -
-                              value: 'An unparalleled diversity of perspectives.'
-                    -
-                      entity:
+                            - value: "An unparalleled diversity of perspectives."
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 099d250c-08aa-42dc-91f4-379da6f56503
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706798120
+                            - value: 1706798120
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'We foster a culture of curiosity and continuous learning — always growing, challenging ourselves and optimizing our efforts. We focus on the future with an understanding of the past and never settle for the easy answer or status quo.'
+                            - value: "We foster a culture of curiosity and continuous learning — always growing, challenging ourselves and optimizing our efforts. We focus on the future with an understanding of the past and never settle for the easy answer or status quo."
                           field_image:
-                            -
-                              entity: d22160a2-0f97-455e-8322-c49178262032
+                            - entity: d22160a2-0f97-455e-8322-c49178262032
                           field_title:
-                            -
-                              value: 'A growth mindset driven to innovate.'
-                    -
-                      entity:
+                            - value: "A growth mindset driven to innovate."
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 382bf4f7-0eab-43dd-bba8-519bb1a439af
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706798175
+                            - value: 1706798175
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'We seek and create bold new ways to change the world for the better at the largest scales. We team with governments and organizations to positively impact people’s lives. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates everything we do.'
+                            - value: "We seek and create bold new ways to change the world for the better at the largest scales. We team with governments and organizations to positively impact people’s lives. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates everything we do."
                           field_image:
-                            -
-                              entity: 31f9feda-a470-4378-a604-cc300915f6b9
+                            - entity: 31f9feda-a470-4378-a604-cc300915f6b9
                           field_title:
-                            -
-                              value: 'A relentless hunger for the greatest impact.'
+                            - value: "A relentless hunger for the greatest impact."
                   field_blurb_collection_variant:
-                    -
-                      value: two-up
+                    - value: two-up
           field_prefix_title:
-            -
-              value: 'Our Core Values'
+            - value: "Our Core Values"
           field_title:
-            -
-              value: 'Bixal’s principles are expressed in four core organizational values that shape our culture and guide our work every day.'
-    -
-      entity:
+            - value: "Bixal’s principles are expressed in four core organizational values that shape our culture and guide our work every day."
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 19e22b63-457e-41ff-ad50-13a54a837fa4
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706721995
+            - value: 1706721995
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: d1366d7d-add8-4a6c-bac7-883be5f1089d
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706721995
+                    - value: 1706721995
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_button_variant:
-                    -
-                      value: inverse
+                    - value: inverse
                   field_icon:
-                    -
-                      value: arrow-right
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'internal:/careers'
-                      title: 'Learn More'
-                      options: {  }
+                    - uri: "internal:/careers"
+                      title: "Learn More"
+                      options: {}
+                  field_modifier:
+                    - value: true
           field_center_content:
-            -
-              value: false
+            - value: false
           field_description:
-            -
-              value: 'If you share our sense of purpose and are interested in exploring opportunities with Bixal, drop us a line or check out our careers page.'
+            - value: "If you share our sense of purpose and are interested in exploring opportunities with Bixal, drop us a line or check out our careers page."
           field_image:
-            -
-              entity: badfeabf-92c3-465d-a536-0038d4c1ef88
+            - entity: badfeabf-92c3-465d-a536-0038d4c1ef88
           field_section_variant:
-            -
-              value: background-image
+            - value: background-image
           field_title:
-            -
-              value: "We're always looking for talented people."
+            - value: "We're always looking for talented people."

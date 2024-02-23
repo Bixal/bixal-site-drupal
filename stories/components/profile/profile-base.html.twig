@@ -23,7 +23,7 @@
               {{ role }}
             </div>
           </div>
-          {{ socialNav }}
+          {{ social_nav }}
         </div>
       </div>
     </div>
@@ -35,20 +35,26 @@
         {% if specialties %}
           <div class="bix-profile__specialties">
             <h2 class="bix-profile__heading bix-profile__heading--secondary">Specialties</h2>
-            {{ specialties }}
+            <ul>
+              {{ specialties }}
+            </ul>
           </div>
         {% endif %}
         {% if certifications %}
           <div class="bix-profile__certifications">
             <h2 class="bix-profile__heading bix-profile__heading--secondary">Certifications</h2>
-            {{ certifications }}
+            <ul>
+              {{ certifications }}
+            </ul>
           </ul>
         </div>
       {% endif %}
       {% if languages %}
         <div class="bix-profile__languages">
           <h2 class="bix-profile__heading bix-profile__heading--secondary">Languages</h2>
-          {{languages}}
+          <ul>
+            {{languages}}
+          </ul>
         </div>
       {% endif %}
       {% if bucketlist %}
