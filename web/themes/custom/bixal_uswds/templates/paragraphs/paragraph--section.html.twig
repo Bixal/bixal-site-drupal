@@ -53,7 +53,7 @@
 
 {% set cta = [] %}
 {% set cta = cta|merge(
-  { 'link': content.field_button.0['#paragraph'].field_link.uri,
+  { 'href': content.field_button.0['#paragraph'].field_link.uri,
     'label': content.field_button.0['#paragraph'].field_link.title,
     'has_icon': content.field_button.0['#paragraph'].field_has_icon.value,
     'modifier': content.field_button.0['#paragraph'].field_modifier.value ? 'bix-button--inverse' : '',
@@ -66,7 +66,9 @@
     'prefix': content.field_prefix_title | field_value,
     'description': content.field_description | field_value,
     'body': content.field_nested_paragraphs | field_value,
+    'center_content': content.field_center_content.0['#markup'],
     'cta': cta,
     'image': bg_image
   } %}
+
 {% endblock paragraph %}

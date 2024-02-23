@@ -1,0 +1,13 @@
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+<figure{{ attributes.addClass(additional_classes) }}>
+  {{ image }}
+  {% if caption %}
+    <figcaption>
+      {{ caption }}
+    </figcaption>
+  {% endif %}
+  {{ contextual_links }}
+</figure>

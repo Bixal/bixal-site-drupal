@@ -10,7 +10,6 @@ _meta:
     af4bfaff-38fa-40de-8170-c970a7c272ac: media
     ca20d5d3-9c77-4774-89b6-6b4c54daffbf: media
     8b71f91d-95a7-48e3-a3b1-34ad6b074e63: media
-    8fef8025-5742-48c3-bf2a-dc34d6f2e4fe: media
 default:
   revision_uid:
     -
@@ -88,6 +87,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_description:
             -
               value: "Bixal's diverse and talented team has led the digital transformation of some of the most influential organizations in the world and brings unparalleled experience and energy into every one of our engagements. Our team of supportive professionals thrive on challenge and hold themselves and their work to a higher standard.\r\n\r\nCome work with us."
@@ -137,6 +139,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_image:
             -
               entity: e4b5062a-d165-4524-98f8-cf2527648b5b
@@ -186,6 +191,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_nested_paragraphs:
             -
               entity:
@@ -335,21 +343,21 @@ default:
                       value: true
                   field_link:
                     -
-                      uri: 'https://jobs.lever.co/bixalhttps://jobs.lever.co/bixal'
+                      uri: 'https://jobs.lever.co/bixal'
                       title: 'View All Jobs'
                       options: {  }
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: true
           field_description:
             -
               value: 'We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations.'
-          field_image:
-            -
-              entity: 8fef8025-5742-48c3-bf2a-dc34d6f2e4fe
           field_section_variant:
             -
-              value: background-image
+              value: accent-cool
           field_title:
             -
               value: 'Join Our Team'
@@ -401,6 +409,9 @@ default:
                   field_modifier:
                     -
                       value: false
+          field_center_content:
+            -
+              value: false
           field_nested_paragraphs:
             -
               entity:

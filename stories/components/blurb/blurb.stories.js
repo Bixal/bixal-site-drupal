@@ -16,6 +16,7 @@ export const Default = {
     title: "Key Learnings for a More Inclusive Global Health Landscape",
     description: null,
     date: "November 30, 2023",
+    in_collection: false,
   },
 };
 
