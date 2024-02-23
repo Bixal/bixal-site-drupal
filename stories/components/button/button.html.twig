@@ -30,8 +30,7 @@
   "bix-button",
   (variant ? "bix-button--" ~ variant),
   (icon_before ? "bix-button--icon-before"),
-  (additional_classes ? additional_classes),
-] %}
+] | merge(additional_classes | default([])) %}
 
 {% set button_inner %}
   {{ label | default((variant | capitalize | default("Default")) ~ " button")}}

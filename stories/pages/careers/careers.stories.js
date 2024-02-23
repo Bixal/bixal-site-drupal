@@ -38,21 +38,21 @@ export const Default = {
       blurbs: [
         {
           image:
-            "https://www.bixal.com/static/d6e70f1bae8881758dd9b06d3fd77607/56d27/careers--thought-leaders.webp",
+            "<img src='https://www.bixal.com/static/d6e70f1bae8881758dd9b06d3fd77607/56d27/careers--thought-leaders.webp'>",
           title: "Thought leaders",
           description:
             "Bixal's team members are constant learners and teachers, supportive of individual and professional growth. We value kindness and humility and seek to build each other up and drive everyone forward.",
         },
         {
           image:
-            "https://www.bixal.com/static/dcaf9d4d8975930ba8811afd2c14d333/95694/careers--collaborative-and-agile.webp",
+            "<img src='https://www.bixal.com/static/dcaf9d4d8975930ba8811afd2c14d333/95694/careers--collaborative-and-agile.webp'>",
           title: "Collaborative & Agile",
           description:
             "We relentlessly focus on outcomes and weave it together with a unique agility that permeates everything we do. Bixal values collaboration and transparency. It shapes how we approach every project.",
         },
         {
           image:
-            "https://www.bixal.com/static/1d156602b6729216b92caa6707ea9ace/56d27/careers--empowered-teams.webp",
+            "<img src='https://www.bixal.com/static/1d156602b6729216b92caa6707ea9ace/56d27/careers--empowered-teams.webp'>",
           title: "Empowered Teams",
           description:
             "Bixal unites different people with different perspectives from all over the world and provides them with an open, empowered environment where creativity can flourish.",
