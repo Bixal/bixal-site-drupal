@@ -49,7 +49,7 @@ then
     fi
 
     echo -e "${green}Copying theme components folders${NC}"
-    mkdir $components_target_dir $js_target_dir 
+    mkdir $components_target_dir $js_target_dir
     # Copy all content for the components leaving directory structure, the files
     # not needed will be removed later.
     cp -r "$source_dir" "$components_target_dir"
