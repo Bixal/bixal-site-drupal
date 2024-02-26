@@ -4,19 +4,17 @@
 
 {% set variant = "base" %}
 
-{% block nested_sections %}
+{% set body %}
   {% include "@components/cards/flip-card-group.html.twig" with flipCards %}
   {% embed "@components/section/section.html.twig" %}
     {% set center_content = true %}
     {% set title = "Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services." %}
 
-    {% block footer %}
-      {% include "@components/button/button.html.twig" with {
-        label: "View our contract vehicles",
-        href: "#",
-        icon: "arrow-right"
-      } %}
-    {% endblock %}
+    {% set cta = {
+      label: "View our contract vehicles",
+      href: "#",
+      icon: "arrow-right"
+    } %}
 
   {% endembed %}
-{% endblock %}
+{% endset %}

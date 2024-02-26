@@ -56,11 +56,7 @@
       {% endif %}
     {% endblock %}
 
-    {% block nested_sections %}
-      {% if nested_sections %}
-        {{ nested_sections }}
-      {% endif %}
-    {% endblock %}
+    {{ body }}
 
     {% block footer %}
       {% if cta.label %}
