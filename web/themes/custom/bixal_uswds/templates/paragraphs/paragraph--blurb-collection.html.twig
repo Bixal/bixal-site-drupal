@@ -38,19 +38,18 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'component',
-  'bix-blurbs',
-  'bix-blurbs--' ~ content.field_blurb_collection_variant['#items'].getString(),
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
-
+{# @todo: Add a field to blurb collection that is a boolean for 'featured', it is an option to blurb-collection-base
+  and makes the first blurb full width.
+#}
 {% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    {% block content %}
-      {{ content.field_blurbs |field_value }}
-    {% endblock %}
-  </div>
+  {% include '@components/blurb/blurb-collection-base.html.twig' with {
+    'blurb_collection': content.field_blurbs | field_value,
+    'variant': content.field_blurb_collection_variant['#items'].getString(),
+    'additional_classes': [
+      'component',
+      'component--type--' ~ paragraph.bundle|clean_class,
+      view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
+      not paragraph.isPublished() ?  'component--unpublished'
+    ],
+  }%}
 {% endblock paragraph %}

@@ -64,9 +64,10 @@
       {% endif %}
 
       {% if rows %}
-        <div class="bix-blurbs bix-blurbs--two-up">
-          {{ rows }}
-        </div>
+        {% include '@components/blurb/blurb-collection-base.html.twig' with {
+          'blurb_collection': rows,
+          'variant': 'two-up',
+        } %}
       {% elseif empty %}
         <div class="view-empty">
           {{ empty }}
