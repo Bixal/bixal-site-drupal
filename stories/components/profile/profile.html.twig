@@ -2,57 +2,57 @@
 
 {% if image is empty %}
   {% set image %}
-  {{ image | default("https://placehold.co/325x325") }}
+    {{ image | default("https://placehold.co/325x325") }}
   {% endset %}
 {% endif %}
 
 {% if name is not empty %}
   {% set name %}
-  {{ name | default("Full name") }}
+    {{ name | default("Full name") }}
   {% endset %}
 {% endif %}
 
 {% if role is not empty %}
   {% set role %}
-  {{ role | default("Role") }}
+    {{ role | default("Role") }}
   {% endset %}
 {% endif %}
 
 {% if socialNav %}
   {% set social_nav %}
-  {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
+    {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
   {% endset %}
 {% endif %}
 
 {% if specialties is empty %}
   {% set specialties %}
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
   {% endset %}
 {% endif %}
 
 {% if certifications is empty %}
   {% set certifications %}
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
   {% endset %}
 {% endif %}
 
 {% if languages is empty %}
   {% set languages %}
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
   {% endset %}
 {% endif %}
 
 {% if bucketlist is empty %}
   {% set bucketlist %}
-  My bucket list is to fill a bucket to the brim with lists.
+    My bucket list is to fill a bucket to the brim with lists.
   {% endset %}
 {% endif %}
