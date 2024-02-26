@@ -1,0 +1,69 @@
+{
+  "variant": "two-up",
+	"featured": true,
+  "blurbs": [
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/d6b25ad6c22c438dde0709d18958c405/01c9c/digital-apex-1.webp\" alt=\"\">",
+      "title": "Building cybersecurity capacity to improve digital health and protect against cyber threats",
+      "description": "USAID Digital Apex",
+      "date": null
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/35c60dc21e56c47c5743b9535871e14f/01c9c/fema-image-1.webp\" alt=\"\">",
+      "title": "Educating the public on FEMA's mission",
+      "description": null,
+      "date": "November 16, 2023"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/ef2a68004b3583d87a3d0f91acb22602/f5e99/kdlt-image-1.webp\" alt=\"\">",
+      "title": "Delivering digital communications for food security",
+      "description": null,
+      "date": "October 26, 2023"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/75a99fa13172a7888b09cbfe477ccaa3/3eba8/hhs-careers-hero.webp\" alt=\"\">",
+      "title": "Better engagement through human-centered design",
+      "description": null,
+      "date": "U.S. Department of Health and Human Services"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/b0c67b0752535ba810776c24442aa457/f5e99/mel-content-hero.webp\" alt=\"\">",
+      "title": "Using data to empower global solutions",
+      "description": null,
+      "date": "USAID EVAL-ME IDIQ"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/1b621cb00e758019369595619fbc6801/f5e99/6-sba.webp\" alt=\"\">",
+      "title": "Propelling business with multilingual content strategy",
+      "description": null,
+      "date": "U.S. Small Business Administration"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/a78be17224d6f6810f88a30ab62f8921/9c0b3/4-medline-plus.webp\" alt=\"\">",
+      "title": "Multilingual marketing expands health services reach",
+      "description": null,
+      "date": "Medline Plus, Medline Plus en Español"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/4df9ced39dacfdf42db05ba23b7141af/9c0b3/1-hud.webp\" alt=\"\">",
+      "title": "Training and certification of housing counselors",
+      "description": null,
+      "date": "U.S. Department of Housing and Urban Development"
+    },
+    {
+      "href": "javascript:void(0)",
+      "image": "<img src=\"https://www.bixal.com/static/f8d02a773b0855b0cbfafeb3c83c49bb/9c0b3/2-usaid.webp\" alt=\"\">",
+      "title": "Promoting land tenure and property rights",
+      "description": null,
+      "date": "U.S. Agency for International Development"
+    }
+  ]
+}

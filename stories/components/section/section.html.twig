@@ -20,8 +20,7 @@
   (image ? "bix-section--image-bg"),
   (variant ? "bix-section--" ~ variant),
   (center_content ? "bix-section--center-content"),
-  (additional_classes ? additional_classes),
-] %}
+] | merge(additional_classes | default([])) %}
 
 {% set heading_type = heading_type | default("h2") %}
 
@@ -57,11 +56,7 @@
       {% endif %}
     {% endblock %}
 
-    {% block nested_sections %}
-      {% if nested_sections %}
-        {{ nested_sections }}
-      {% endif %}
-    {% endblock %}
+    {{ body }}
 
     {% block footer %}
       {% if cta.label %}

@@ -1,0 +1,57 @@
+{#
+/**
+  * Blurb
+  *
+  * Available variables:
+  * - href: String that determines whether to wrap entire content with anchor.
+  * - title: String title.
+  * - description: String content description.
+  * - date: String used in time element.
+  * - in_collection (book, default true): This is one of many blurbs in a collection.
+**/
+#}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set blurb_classes = [
+  "bix-blurb",
+] | merge(additional_classes | default([])) %}
+
+{% if in_collection | default(true) %}
+  <li {{ attributes.addClass(blurb_classes) }}>
+{% else %}
+  <div {{ attributes.addClass(blurb_classes) }}>
+{% endif %}
+{{ title_suffix.contextual_links }}
+
+{% set blurb_inner %}
+  <div class="bix-blurb__media">
+    {{ image }}
+  </div>
+  <h3 class="bix-blurb__title">{{ title }}</h3>
+  {% if date %}
+    <time class="bix-blurb__date" datetime="{{ date | date("m-d-Y") }}">
+      {{ date }}
+    </time>
+  {% endif %}
+  {% if description %}
+    <p class="bix-blurb__description">
+      {{ description }}
+    </p>
+  {% endif %}
+{% endset %}
+
+{% if href %}
+  <a href="{{ href | default("javascript:void(0)")}}" class="bix-blurb">
+{% endif %}
+{{ blurb_inner }}
+{% if href %}
+  </a>
+{% endif %}
+
+{% if in_collection | default(true) %}
+  </li>
+{% else %}
+  </div>
+{% endif %}

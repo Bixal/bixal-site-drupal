@@ -1,0 +1,16 @@
+{% if blurb_collection %}
+  {% if attributes is empty %}
+    {% set attributes = create_attribute() %}
+  {% endif %}
+
+  {% set blurb_classes = [
+    "bix-blurbs",
+    (variant ? "bix-blurbs--" ~ variant | default("two-up")),
+    (featured ? "bix-blurbs--featured"),
+  ] | merge(additional_classes | default([])) %}
+
+  {# @TODO: Support lazy loading after X amount of items. #}
+  <ul {{ attributes.addClass(blurb_classes) }}>
+    {{ blurb_collection }}
+  </ul>
+{% endif %}

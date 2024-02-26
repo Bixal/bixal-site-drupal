@@ -44,10 +44,7 @@
 {% set variant = content.field_section_variant['#items'].getString() %}
 {% set bg_image = file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString())%}
 
-{% if variant == 'tall' %}
-  {% set variant = 'centered' %}
-  {% set additional_classes = 'bix-section--tall'%}
-{% elseif variant == 'background-image' %}
+{% if variant == 'background-image' %}
   {% set variant = 'primary' %}
 {% endif %}
 
@@ -65,7 +62,7 @@
     'title': content.field_title | field_value,
     'prefix': content.field_prefix_title | field_value,
     'description': content.field_description | field_value,
-    'nested_sections': content.field_nested_paragraphs | field_value,
+    'body': content.field_nested_paragraphs | field_value,
     'center_content': content.field_center_content.0['#markup'],
     'cta': cta,
     'image': bg_image

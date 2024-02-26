@@ -40,13 +40,16 @@
 #}
 
 {% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    {% include '@components/blurb/blurb.html.twig' with {
-      'title': content.field_title | field_value,
-      'image': file_url(content.field_image['#object'].field_image.entity.field_media_image.entity.uri.getString()),
-      'description': content.field_description | field_value,
-      'date': content.field_date.0['#text'],
-    }
-    %}
-  </div>
+  {% include '@components/blurb/blurb-base.html.twig' with {
+    'title': content.field_title | field_value,
+    'image': content.field_image | field_value,
+    'description': content.field_description | field_value,
+    'date': content.field_date.0['#text'],
+    'additional_classes': [
+      'component',
+      'component--type--' ~ paragraph.bundle|clean_class,
+      view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
+      not paragraph.isPublished() ?  'component--unpublished'
+    ],
+  } %}
 {% endblock %}

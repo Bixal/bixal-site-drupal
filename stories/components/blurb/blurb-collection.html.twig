@@ -1,5 +1,27 @@
-<div class="bix-blurbs bix-blurbs--{{ variant | default("two-up") }}">
+{#
+/**
+  * Blurb collection
+  *
+  * Available variables:
+  * - blurbs (array): An array of JSON content used to power blurb.html.twig [href, title, description, date].
+  * - variant (string, default "two-up"):
+  *    - two-up: Always 2 column layout
+  *    - three-up: Auto-fill columns that are minimum of 380px and max of 1fr.
+  * - featured (bool, default false):
+  * - additional_classes (array): Add more classes to the collection wrapper.
+  *
+  * Image size guidance:
+  * - featured is true:
+  *    - First image is: 1350px
+  *    - Rest of images: 516px
+  * - featured is false:
+  *    - All images: 670px
+**/
+#}
+{% extends "@components/blurb/blurb-collection-base.html.twig" %}
+
+{% set blurb_collection %}
   {% for blurb in blurbs %}
     {% include "@components/blurb/blurb.html.twig" with blurb %}
   {% endfor %}
-</div>
+{% endset %}

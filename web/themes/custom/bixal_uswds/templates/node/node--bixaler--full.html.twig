@@ -70,63 +70,57 @@
 {% extends "@components/profile/profile-base.html.twig" %}
 
 {% set name %}
-{{ label }}
+  {{ label }}
 {% endset %}
 
 {% set role %}
-{{ content.field_role }}
+  {{ content.field_role }}
 {% endset %}
 
 {% set image %}
-{{ content.field_image }}
+  {{ content.field_image }}
 {% endset %}
 
-{% if content.field_link %}
+{% if content.field_link | field_value %}
   {% set social_nav %}
-  {% include '@components/social-nav/social-nav.html.twig' with {
-    "variant": "accent-warm",
-    items : [
-      { href: content.field_link.0['#url'].uri,
-			label: "LinkedIn",
-			icon_path: "icons/linkedin.svg"}
-    ],
-  }
-  %}
+    {% include '@components/social-nav/social-nav.html.twig' with {
+      "variant": "accent-warm",
+      items : [
+        { href: content.field_link.0['#url'].uri,
+        label: "LinkedIn",
+        icon_path: "icons/linkedin.svg"}
+      ],
+    }
+    %}
   {% endset %}
 {% endif %}
 
 {% if content.field_specialties | field_value %}
   {% set specialties %}
-
-  {% for item in content.field_specialties | field_value %}
-    <li>{{ item }}</li>
-  {% endfor %}
-
+    {% for item in content.field_specialties | field_value %}
+      <li>{{ item }}</li>
+    {% endfor %}
   {% endset %}
 {% endif %}
 
 {% if content.field_languages | field_value %}
   {% set languages %}
-
-  {% for item in content.field_languages | field_value %}
-    <li>{{ item }}</li>
-  {% endfor %}
-
+    {% for item in content.field_languages | field_value %}
+      <li>{{ item }}</li>
+    {% endfor %}
   {% endset %}
 {% endif %}
 
 {% if content.field_certifications | field_value %}
   {% set certifications %}
-
-  {% for item in content.certifications | field_value %}
-    <li>{{ item }}</li>
-  {% endfor %}
-
+    {% for item in content.field_certifications | field_value %}
+      <li>{{ item }}</li>
+    {% endfor %}
   {% endset %}
 {% endif %}
 
 {% if content.field_bucket_list | field_value %}
   {% set bucketlist %}
-  {{content.field_bucket_list}}
+    {{ content.field_bucket_list }}
   {% endset %}
 {% endif %}
