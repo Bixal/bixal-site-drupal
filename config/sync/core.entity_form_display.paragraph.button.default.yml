@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.button.field_has_icon
+    - field.field.paragraph.button.field_button_variant
+    - field.field.paragraph.button.field_icon
     - field.field.paragraph.button.field_link
-    - field.field.paragraph.button.field_modifier
     - paragraphs.paragraphs_type.button
   module:
     - link
@@ -22,9 +22,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_has_icon:
-    type: options_buttons
-    weight: 1
+  field_button_variant:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon:
+    type: options_select
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -35,12 +41,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_modifier:
-    type: options_buttons
-    weight: 2
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
