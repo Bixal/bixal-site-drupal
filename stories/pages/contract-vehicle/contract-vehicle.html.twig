@@ -4,14 +4,14 @@
 
 {% block content %}
   {% embed "@components/section/section.html.twig" %}
-    {% block body %}
+    {% set body %}
       {% for section in sections %}
         <{{ heading_type }}>
           {{ section.title }}
         </{{ heading_type }}>
         {{ section.text | raw }}
       {% endfor %}
-    {% endblock %}
+    {% endset %}
   {% endembed %}
 
 {% endblock %}
