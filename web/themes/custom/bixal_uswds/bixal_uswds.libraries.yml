@@ -4,8 +4,9 @@ global:
     theme:
       dist/css/styles.min.css: { minified: true }
   js:
-    dist/js/uswds.min.js: { minified: true }
+    # dist/js/uswds.min.js: { minified: true }
     dist/js/bx-global.js: { minified: true }
+
   dependencies:
     - core/once
     - core/drupal.active-link
@@ -26,3 +27,18 @@ remote_video:
   version: VERSION
   js:
     dist/js/bx-remote-video.js: { minified: true }
+
+storybook:
+  js:
+    dist/js/storybook-js/stories/_utils/toggle.js:
+      minified: true
+      attributes:
+        type: module
+    dist/js/storybook-js/stories/components/header/header.js:
+      minified: true
+      attributes:
+        type: module
+    dist/js/storybook-js/stories/components/people-list/people-list.js:
+      minified: true
+      attributes:
+        type: module

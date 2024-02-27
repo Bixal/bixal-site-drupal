@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 15c4768f-babb-41c4-be86-ca76c2f88f25
+  bundle: specialties
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Digital Media Accessibility'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

@@ -1,4 +1,4 @@
-import * as Toggle from "../../_utils/toggle";
+import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const trigger = document.querySelector("[data-dropdown-toggle]");
@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // const filterOptions = target.querySelectorAll(".bix-filter__dropdown-option");
   const filterItems = document.querySelectorAll(".bix-person");
 
-
+  
   /**
    * Basic content filtering.
    *
