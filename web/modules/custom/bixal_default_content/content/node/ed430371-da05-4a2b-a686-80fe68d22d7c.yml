@@ -1,5 +1,5 @@
 _meta:
-  version: '1.0'
+  version: "1.0"
   entity_type: node
   uuid: ed430371-da05-4a2b-a686-80fe68d22d7c
   bundle: landing_page
@@ -20,736 +20,545 @@ _meta:
     b452f031-e9c0-41af-b118-163283806eb8: media
 default:
   revision_uid:
-    -
-      target_id: 1
+    - target_id: 1
   status:
-    -
-      value: true
+    - value: true
   uid:
-    -
-      target_id: 1
+    - target_id: 1
   title:
-    -
-      value: 'This is Bixal'
+    - value: "This is Bixal"
   created:
-    -
-      value: 1702645301
+    - value: 1702645301
   promote:
-    -
-      value: false
+    - value: false
   sticky:
-    -
-      value: false
+    - value: false
   path:
-    -
-      alias: /home
+    - alias: /home
       langcode: en
       pathauto: 0
   field_banner_image:
-    -
-      entity: 65cf3a30-9202-4e32-b263-eeade9e421ac
+    - entity: 65cf3a30-9202-4e32-b263-eeade9e421ac
   field_hero_description:
-    -
-      value: 'A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.'
+    - value: "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences."
   field_hero_variant:
-    -
-      value: image-inline
+    - value: image-inline
   field_paragraphs:
-    -
-      entity:
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: c05f1e51-2dff-4d5b-aae2-09315fa618aa
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1702645350
+            - value: 1702645350
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: d64344b5-40ac-4360-93ba-7fa485205f90
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1703095838
+                    - value: 1703095838
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: true
+                    - value: {}
+                  field_icon:
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'https://google.com'
-                      title: 'Learn more about us'
-                      options: {  }
+                    - uri: "https://google.com"
+                      title: "Learn more about us"
+                      options: {}
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_description:
-            -
-              value: 'Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.'
+            - value: "Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team."
           field_prefix_title:
-            -
-              value: 'Who we are'
+            - value: "Who we are"
           field_section_variant:
-            -
-              value: base
+            - value: base
           field_title:
-            -
-              value: 'Bixal is a diverse group of strategists, designers, engineers, and thinkers.'
-    -
-      entity:
+            - value: "Bixal is a diverse group of strategists, designers, engineers, and thinkers."
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 18bd99de-666c-4ded-b57d-3fbb747d2da3
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1703098049
+            - value: 1703098049
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 5fe2ba5d-7fce-4dea-8256-533dbed1a7be
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1703098049
+                    - value: 1703098049
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: true
+                    - value: {}
+                  field_button_variant:
+                    - value: inverse
+                  field_icon:
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'https://google.com'
-                      title: 'Explore Case Studies'
-                      options: {  }
+                    - uri: "https://google.com"
+                      title: "Explore Case Studies"
+                      options: {}
                   field_modifier:
-                    -
-                      value: true
+                    - value: true
           field_center_content:
-            -
-              value: false
+            - value: false
           field_description:
-            -
-              value: 'We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.'
+            - value: "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do."
           field_image:
-            -
-              entity: aa1d7e14-37a5-4677-ba05-b0162937197b
+            - entity: aa1d7e14-37a5-4677-ba05-b0162937197b
           field_prefix_title:
-            -
-              value: 'WHAT WE DO'
+            - value: "WHAT WE DO"
           field_section_variant:
-            -
-              value: background-image
+            - value: background-image
           field_title:
-            -
-              value: 'The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.'
-    -
-      entity:
+            - value: "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world."
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: a91b713a-04a8-4180-b6a8-aafb8b333073
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706794972
+            - value: 1706794972
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: a6c2ca5e-a7ba-4268-8431-53d7cc053686
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706794972
+                    - value: 1706794972
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: false
+                    - value: {}
+                  field_icon:
+                    - value: false
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: f9cec748-751c-4198-ba97-bfb1998de04f
                   bundle: flip_cards
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706794984
+                    - value: 1706794984
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_cards:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: e46c17b5-918c-4abb-a0d9-38d80f8d100d
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706794984
+                            - value: 1706794984
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: accent-warm
+                            - value: accent-warm
                           field_description:
-                            -
-                              value: 'We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients.'
+                            - value: "We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients."
                           field_image:
-                            -
-                              entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
+                            - entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
                           field_title:
-                            -
-                              value: 'Strategic Communications'
-                    -
-                      entity:
+                            - value: "Strategic Communications"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 7c676dce-8ece-42f7-bfb8-c6cd899911d8
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795023
+                            - value: 1706795023
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: accent-cool
+                            - value: accent-cool
                           field_description:
-                            -
-                              value: 'We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users.'
+                            - value: "We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users."
                           field_image:
-                            -
-                              entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
+                            - entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
                           field_title:
-                            -
-                              value: 'Human-Centered Design'
-                    -
-                      entity:
+                            - value: "Human-Centered Design"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 6e5d0075-8c7a-471f-b6d8-78986bd6cfec
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795044
+                            - value: 1706795044
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: primary
+                            - value: primary
                           field_description:
-                            -
-                              value: 'We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way.'
+                            - value: "We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way."
                           field_image:
-                            -
-                              entity: 640588a2-9696-4017-8381-37232afe0939
+                            - entity: 640588a2-9696-4017-8381-37232afe0939
                           field_title:
-                            -
-                              value: 'Agile Development'
-                    -
-                      entity:
+                            - value: "Agile Development"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 2ec97ec0-f7f1-444c-b4f9-26ed51283617
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795070
+                            - value: 1706795070
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: accent-cool-alt
+                            - value: accent-cool-alt
                           field_description:
-                            -
-                              value: 'Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society.'
+                            - value: "Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society."
                           field_image:
-                            -
-                              entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
+                            - entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
                           field_title:
-                            -
-                              value: 'Modernized Learning'
-                    -
-                      entity:
+                            - value: "Modernized Learning"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 90cc8aa1-007a-4066-ab12-d8065b0ba082
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795104
+                            - value: 1706795104
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: primary-alt
+                            - value: primary-alt
                           field_description:
-                            -
-                              value: 'We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making.'
+                            - value: "We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making."
                           field_image:
-                            -
-                              entity: da97ce7c-48ef-46cd-a1f4-06b89acbefef
+                            - entity: da97ce7c-48ef-46cd-a1f4-06b89acbefef
                           field_title:
-                            -
-                              value: 'Data Science and Analytics'
-                    -
-                      entity:
+                            - value: "Data Science and Analytics"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: a873ba33-6937-402e-b9da-378e9889791f
                           bundle: flip_card
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795138
+                            - value: 1706795138
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_card_variant:
-                            -
-                              value: accent-warm-dark
+                            - value: accent-warm-dark
                           field_description:
-                            -
-                              value: 'A client-focused approach to successfully migrate to the cloud and modernize the technology infrastructure to improve performance and security while reducing costs.'
+                            - value: "A client-focused approach to successfully migrate to the cloud and modernize the technology infrastructure to improve performance and security while reducing costs."
                           field_image:
-                            -
-                              entity: 22bc94fd-97f5-4df1-83a9-bed00b4beabb
+                            - entity: 22bc94fd-97f5-4df1-83a9-bed00b4beabb
                           field_title:
-                            -
-                              value: 'Cloud Computing'
-            -
-              entity:
+                            - value: "Cloud Computing"
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 0cfe6bf9-9a72-4b32-b860-4e696abcc451
                   bundle: section
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706795222
+                    - value: 1706795222
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_button:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: cb322157-646e-47c0-8516-a141289bd5ae
                           bundle: button
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706795222
+                            - value: 1706795222
                           behavior_settings:
-                            -
-                              value: {  }
-                          field_has_icon:
-                            -
-                              value: true
+                            - value: {}
+                          field_icon:
+                            - value: arrow-right
                           field_link:
-                            -
-                              uri: 'https://google.com'
-                              title: 'View our contract vehicles'
-                              options: {  }
+                            - uri: "https://google.com"
+                              title: "View our contract vehicles"
+                              options: {}
                           field_modifier:
-                            -
-                              value: false
+                            - value: false
                   field_center_content:
-                    -
-                      value: true
+                    - value: true
                   field_title:
-                    -
-                      value: 'Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services.'
+                    - value: "Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services."
           field_section_variant:
-            -
-              value: base
-    -
-      entity:
+            - value: base
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: eedb49ac-561d-4e33-a040-d98d89fc4261
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706794053
+            - value: 1706794053
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 55b612ae-170f-4828-a213-68eb8d51b028
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706794053
+                    - value: 1706794053
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: false
+                    - value: {}
+                  field_icon:
+                    - value: false
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: bcb433e4-889b-4a83-9048-d072bcb99076
                   bundle: description_list_collection
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706794132
+                    - value: 1706794132
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_description_lists:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 524ee521-f7c9-4e96-ae59-5304ef7953d3
                           bundle: description_list
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706794132
+                            - value: 1706794132
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description_list_items:
-                            -
-                              value: 'Department of Health and Human Services'
-                            -
-                              value: 'Centers for Medicare & Medicaid Services'
-                            -
-                              value: 'National Institutes of Health'
-                            -
-                              value: 'National Library of Medicine'
+                            - value: "Department of Health and Human Services"
+                            - value: "Centers for Medicare & Medicaid Services"
+                            - value: "National Institutes of Health"
+                            - value: "National Library of Medicine"
                           field_description_list_variant:
-                            -
-                              value: accent-vivid
+                            - value: accent-vivid
                           field_image:
-                            -
-                              entity: 6f99ae85-b406-4b92-aa13-879e256ce37a
+                            - entity: 6f99ae85-b406-4b92-aa13-879e256ce37a
                           field_title:
-                            -
-                              value: Health
-                    -
-                      entity:
+                            - value: Health
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 7971dd5b-5f81-40e5-857d-6aa94ae628cf
                           bundle: description_list
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706794198
+                            - value: 1706794198
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description_list_items:
-                            -
-                              value: 'United States Agency for International Development'
+                            - value: "United States Agency for International Development"
                           field_image:
-                            -
-                              entity: dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932
+                            - entity: dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932
                           field_title:
-                            -
-                              value: 'International Development'
-                    -
-                      entity:
+                            - value: "International Development"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 9cd1f481-c399-4ea5-9e3f-5d6a12619aff
                           bundle: description_list
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706794248
+                            - value: 1706794248
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description_list_items:
-                            -
-                              value: 'Securities and Exchange Commission'
-                            -
-                              value: 'General Services Administration'
-                            -
-                              value: 'Small Business Administration'
+                            - value: "Securities and Exchange Commission"
+                            - value: "General Services Administration"
+                            - value: "Small Business Administration"
                           field_image:
-                            -
-                              entity: e8144e45-ac70-47a4-9e47-ed0cdf183ea7
+                            - entity: e8144e45-ac70-47a4-9e47-ed0cdf183ea7
                           field_title:
-                            -
-                              value: 'Business & Finance'
-                    -
-                      entity:
+                            - value: "Business & Finance"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: a0fe659e-df4f-4d9e-ad14-db57c774db0d
                           bundle: description_list
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706794281
+                            - value: 1706794281
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description_list_items:
-                            -
-                              value: 'Federal Emergency Management Agency'
-                            -
-                              value: 'United States Department of Agriculture'
-                            -
-                              value: 'Department of Defense'
-                            -
-                              value: 'Department of Justice'
-                            -
-                              value: 'Department of Transportation'
-                            -
-                              value: 'Social Security Administration'
+                            - value: "Federal Emergency Management Agency"
+                            - value: "United States Department of Agriculture"
+                            - value: "Department of Defense"
+                            - value: "Department of Justice"
+                            - value: "Department of Transportation"
+                            - value: "Social Security Administration"
                           field_image:
-                            -
-                              entity: ea3450a1-cc31-45f4-b7bb-73759d81f803
+                            - entity: ea3450a1-cc31-45f4-b7bb-73759d81f803
                           field_title:
-                            -
-                              value: Other
+                            - value: Other
           field_prefix_title:
-            -
-              value: 'OUR CLIENTS AND PARTNERS'
+            - value: "OUR CLIENTS AND PARTNERS"
           field_title:
-            -
-              value: 'We work with leading government agencies and organizations who seek to create real change.'
-    -
-      entity:
+            - value: "We work with leading government agencies and organizations who seek to create real change."
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: ab307f54-840a-461a-883b-b0a8fcde3fd1
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1703100515
+            - value: 1703100515
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 6227f6fe-f5c0-4293-9c8e-26de61a76849
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1703100515
+                    - value: 1703100515
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: true
+                    - value: {}
+                  field_icon:
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'https://google.com'
-                      title: 'Join our team'
-                      options: {  }
+                    - uri: "https://google.com"
+                      title: "Join our team"
+                      options: {}
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: true
+            - value: true
           field_image:
-            -
-              entity: b452f031-e9c0-41af-b118-163283806eb8
+            - entity: b452f031-e9c0-41af-b118-163283806eb8
           field_prefix_title:
-            -
-              value: 'WORK WITH US'
+            - value: "WORK WITH US"
           field_section_variant:
-            -
-              value: tall
+            - value: tall
           field_title:
-            -
-              value: 'Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.'
+            - value: "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page."

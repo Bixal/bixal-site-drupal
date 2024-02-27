@@ -36,7 +36,7 @@ default:
       value: false
   path:
     -
-      alias: ''
+      alias: /bixaler/buddy-harlow
       langcode: en
       pathauto: 0
   field_bucket_list:

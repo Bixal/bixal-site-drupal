@@ -1,4 +1,4 @@
-import * as Toggle from "../../_utils/toggle";
+import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const menuTrigger = document.querySelector("[data-menu-toggle]");
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menuLabel.textContent = labelOpen;
     Toggle.show(menuTrigger, menuTarget);
   }
-
+  
   /**
    * Hide menu and revert text label to default state.
    */
@@ -79,3 +79,4 @@ window.addEventListener("DOMContentLoaded", () => {
 
   init();
 });
+

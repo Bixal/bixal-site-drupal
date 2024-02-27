@@ -1,4 +1,3 @@
-
 /**
  * Utility that toggles visibility and active class.
  */

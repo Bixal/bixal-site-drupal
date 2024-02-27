@@ -64,7 +64,7 @@ export const AccentCool = {
 
 export const BackgroundImage = {
   args: {
-    additional_classes: "bix-section--primary",
+    additional_classes: ["bix-section--primary"],
     image:
       "https://www.bixal.com/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
     prefix: "What we do",

@@ -2,7 +2,7 @@
 
 {% block content %}
   {% embed "@components/section/section.html.twig" %}
-    {% block body %}
+    {% set body %}
 
       <div class="bix-case-study__overview">
         <dl>
@@ -25,12 +25,12 @@
           <dd>Agile Project Management</dd>
         </dl>
       </div>
-    {% endblock %}
+    {% endset %}
   {% endembed %}
 
   {% embed "@components/section/section.html.twig" %}
 
-    {% block body %}
+    {% set body %}
       <h2>Challenge</h2>
       <p>
         The increased use of technology, mobile phones and digital systems means USAID/Colombia’s IPs face a wide range of vulnerabilities, such as phishing attacks, account impersonation attempts and cyber-based corrupt financial transactions. The scarcity of cybersecurity education for vulnerable IPs translates to a higher risk of attacks and security breaches, which forces organizations to remedy system failures and change user behaviors to mitigate future attacks. Attacks can erode the public’s and stakeholders’ trust in how organizations handle personal and sensitive information, ultimately undermining IPs’ integrity and confidence in the programs they deploy.
@@ -90,13 +90,13 @@
       <p>
         As the COVID-19 pandemic worsened and international travel was restricted, Bixal converted our training plan from instructor led to virtual delivery. In-house instructional designers worked with cybersecurity experts to design a highly interactive virtual course that used adult-learning techniques, collaborative whiteboards, short quizzes and pop-up polls to keep participants engaged. As a result of virtual training, 146 participants from 10 IPs experienced a substantial improvement in their cybersecurity knowledge.
       </p>
-    {% endblock %}
+    {% endset %}
   {% endembed %}
 
   {% embed "@components/section/section.html.twig"  %}
     {% set variant = "primary-alt" %}
 
-    {% block body %}
+    {% set body %}
       <h2>Outcomes</h2>
       <p>Bixal applied an Agile learning approach in designing and developing a cybersecurity training program to help USAID IPs and civil society organizations in Colombia improve their digital health, build local capacity and strengthen cybersecurity practices. As part of this program, Bixal provided access to asynchronous training modules and delivered 15 synchronous virtual ILT sessions to over 298 participants from 44 USAID partners. The topics selected contributed to a growing knowledge base on cybersecurity vulnerabilities that impact organizations’ governance structure, technology infrastructure and business operations.</p>
 
@@ -107,13 +107,13 @@
       <p>Webinar quiz results demonstrated that USAID/Colombia’s IPs had a low baseline knowledge of cybersecurity. Data from the 10 risk assessments conducted in Phase II confirmed the need for cybersecurity action plans. Over 95 percent of participants who identified as “novice” before the training advanced their knowledge to align with higher competency levels as a result of the program. Detailed post-training survey results are captured in the following chart.</p>
 
       <p>These results demonstrate that a multi-faceted approach, coupling asynchronous and virtual ILT with risk assessments and roadmaps for improvement, can result in significant improvements in cybersecurity awareness.</p>
-    {% endblock %}
+    {% endset %}
 
 
   {% endembed %}
 
   {% embed "@components/section/section.html.twig" %}
-    {% block body %}
+    {% set body %}
 
       <h2>Improvements in recipients’ cybersecurity knowledge after in-depth interactive training.</h2>
       <p>These results demonstrate that a multi-faceted approach, coupling asynchronous and virtual ILT with risk assessments and roadmaps for improvement, can result in significant improvements in cybersecurity awareness.</p>
@@ -121,6 +121,6 @@
       {# @TODO: Highlight component #}
       <h3>Highlight</h3>
       <p>Overall, Bixal delivered cybersecurity training to 298 individuals, supporting capacity development for 44 organizations to improve their digital health.</p>
-    {% endblock %}
+    {% endset %}
   {% endembed %}
 {% endblock %}
