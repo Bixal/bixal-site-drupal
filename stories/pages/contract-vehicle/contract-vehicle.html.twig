@@ -1,11 +1,12 @@
 {% extends "@pages/base/base.html.twig" %}
 
-{% set heading_type = heading_type | default("h2") %}
-
 {% block content %}
   {% embed "@components/section/section.html.twig" %}
     {% set body %}
       {% for section in sections %}
+
+        {% set heading_type = section.heading_type | default("h2") %}
+
         <{{ heading_type }}>
           {{ section.title }}
         </{{ heading_type }}>
