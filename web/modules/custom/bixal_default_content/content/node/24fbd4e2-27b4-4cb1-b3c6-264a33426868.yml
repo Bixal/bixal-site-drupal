@@ -1,5 +1,5 @@
 _meta:
-  version: '1.0'
+  version: "1.0"
   entity_type: node
   uuid: 24fbd4e2-27b4-4cb1-b3c6-264a33426868
   bundle: landing_page
@@ -12,539 +12,406 @@ _meta:
     8b71f91d-95a7-48e3-a3b1-34ad6b074e63: media
 default:
   revision_uid:
-    -
-      target_id: 1
+    - target_id: 1
   status:
-    -
-      value: true
+    - value: true
   uid:
-    -
-      target_id: 1
+    - target_id: 1
   title:
-    -
-      value: Careers
+    - value: Careers
   created:
-    -
-      value: 1706711893
+    - value: 1706711893
   promote:
-    -
-      value: false
+    - value: false
   sticky:
-    -
-      value: false
+    - value: false
   path:
-    -
-      alias: /careers
+    - alias: /careers
       langcode: en
       pathauto: 0
   field_banner_image:
-    -
-      entity: dbe0063c-60b3-493b-8355-c6d83e892bb4
+    - entity: dbe0063c-60b3-493b-8355-c6d83e892bb4
   field_hero_variant:
-    -
-      value: image-bg
+    - value: image-bg
   field_paragraphs:
-    -
-      entity:
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 7179b46d-4f49-4619-835f-1f360e94d88d
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706711923
+            - value: 1706711923
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 12d41f72-12b8-4d3a-ac9d-01fadbc7f2f6
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706711923
+                    - value: 1706711923
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_has_icon:
-                    -
-                      value: false
+                    - value: false
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_description:
-            -
-              value: "Bixal's diverse and talented team has led the digital transformation of some of the most influential organizations in the world and brings unparalleled experience and energy into every one of our engagements. Our team of supportive professionals thrive on challenge and hold themselves and their work to a higher standard.\r\n\r\nCome work with us."
+            - value: "Bixal's diverse and talented team has led the digital transformation of some of the most influential organizations in the world and brings unparalleled experience and energy into every one of our engagements. Our team of supportive professionals thrive on challenge and hold themselves and their work to a higher standard.\r\n\r\nCome work with us."
           field_title:
-            -
-              value: 'How can you improve the lives of people today?'
-    -
-      entity:
+            - value: "How can you improve the lives of people today?"
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 7451a08c-87a3-488a-a6b0-ab2eb4e68851
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706711944
+            - value: 1706711944
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 2c4e6545-a17c-42d3-a861-dfb1750708ef
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706711944
+                    - value: 1706711944
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_has_icon:
-                    -
-                      value: false
+                    - value: false
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_image:
-            -
-              entity: e4b5062a-d165-4524-98f8-cf2527648b5b
+            - entity: e4b5062a-d165-4524-98f8-cf2527648b5b
           field_section_variant:
-            -
-              value: tall
-    -
-      entity:
+            - value: tall
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 12cc0e31-ccd2-4846-bd4e-829d5f118513
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706797444
+            - value: 1706797444
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: d7b5f8a5-3ca2-4061-a8c3-cc6b9f28c42d
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706797444
+                    - value: 1706797444
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_has_icon:
-                    -
-                      value: false
+                    - value: false
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: bda9a4c2-3308-4c44-80aa-f34aa5a9f2bd
                   bundle: blurb_collection
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706797481
+                    - value: 1706797481
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_blurbs:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: d8f88684-5ec7-41ae-ad3e-eba68a009284
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797481
+                            - value: 1706797481
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: "Bixal's team members are constant learners and teachers, supportive of individual and professional growth. We value kindness and humility and seek to build each other up and drive everyone forward."
+                            - value: "Bixal's team members are constant learners and teachers, supportive of individual and professional growth. We value kindness and humility and seek to build each other up and drive everyone forward."
                           field_image:
-                            -
-                              entity: af4bfaff-38fa-40de-8170-c970a7c272ac
+                            - entity: af4bfaff-38fa-40de-8170-c970a7c272ac
                           field_title:
-                            -
-                              value: 'THOUGHT LEADERS'
-                    -
-                      entity:
+                            - value: "THOUGHT LEADERS"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 1e01479d-6c77-4ab3-b2ad-f4f2ac68434b
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797509
+                            - value: 1706797509
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'We relentlessly focus on outcomes and weave it together with a unique agility that permeates everything we do. Bixal values collaboration and transparency. It shapes how we approach every project.'
+                            - value: "We relentlessly focus on outcomes and weave it together with a unique agility that permeates everything we do. Bixal values collaboration and transparency. It shapes how we approach every project."
                           field_image:
-                            -
-                              entity: ca20d5d3-9c77-4774-89b6-6b4c54daffbf
+                            - entity: ca20d5d3-9c77-4774-89b6-6b4c54daffbf
                           field_title:
-                            -
-                              value: 'COLLABORATIVE & AGILE'
-                    -
-                      entity:
+                            - value: "COLLABORATIVE & AGILE"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: c3ea1bf3-e483-46dd-9ea0-9d084f7a959b
                           bundle: blurb
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797522
+                            - value: 1706797522
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_description:
-                            -
-                              value: 'Bixal unites different people with different perspectives from all over the world and provides them with an open, empowered environment where creativity can flourish.'
+                            - value: "Bixal unites different people with different perspectives from all over the world and provides them with an open, empowered environment where creativity can flourish."
                           field_image:
-                            -
-                              entity: 8b71f91d-95a7-48e3-a3b1-34ad6b074e63
+                            - entity: 8b71f91d-95a7-48e3-a3b1-34ad6b074e63
                           field_title:
-                            -
-                              value: 'EMPOWERED TEAMS'
+                            - value: "EMPOWERED TEAMS"
                   field_blurb_collection_variant:
-                    -
-                      value: three-up
+                    - value: three-up
           field_title:
-            -
-              value: 'How we work'
-    -
-      entity:
+            - value: "How we work"
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 3341d57d-3413-424d-aab7-f591be310360
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706797570
+            - value: 1706797570
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 64c7bbb1-a2f4-4cce-acf6-d7ad37c04684
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706797570
+                    - value: 1706797570
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: true
+                    - value: {}
+                  field_icon:
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'https://jobs.lever.co/bixal'
-                      title: 'View All Jobs'
-                      options: {  }
+                    - uri: "https://jobs.lever.co/bixal"
+                      title: "View All Jobs"
+                      options: {}
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: true
+            - value: true
           field_description:
-            -
-              value: 'We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations.'
+            - value: "We are focused on working with federal clients to deliver on their mission to leave a positive impact on the lives of people everywhere. Headquartered in Fairfax, VA, our talent is located in Washington, DC, Richmond, VA, Baltimore, MD, Atlanta, GA, and other remote locations."
           field_section_variant:
-            -
-              value: accent-cool
+            - value: accent-cool
           field_title:
-            -
-              value: 'Join Our Team'
-    -
-      entity:
+            - value: "Join Our Team"
+    - entity:
         _meta:
-          version: '1.0'
+          version: "1.0"
           entity_type: paragraph
           uuid: 527999dc-6b43-443a-a61d-438e5472f5ca
           bundle: section
           default_langcode: en
         default:
           status:
-            -
-              value: true
+            - value: true
           created:
-            -
-              value: 1706797682
+            - value: 1706797682
           behavior_settings:
-            -
-              value: {  }
+            - value: {}
           field_button:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: 397519a5-fa7d-48e1-ae38-89fe9275d525
                   bundle: button
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706797682
+                    - value: 1706797682
                   behavior_settings:
-                    -
-                      value: {  }
-                  field_has_icon:
-                    -
-                      value: true
+                    - value: {}
+                  field_icon:
+                    - value: arrow-right
                   field_link:
-                    -
-                      uri: 'https://jobs.lever.co/bixal'
-                      title: 'View All Jobs'
-                      options: {  }
+                    - uri: "https://jobs.lever.co/bixal"
+                      title: "View All Jobs"
+                      options: {}
                   field_modifier:
-                    -
-                      value: false
+                    - value: false
           field_center_content:
-            -
-              value: false
+            - value: false
           field_nested_paragraphs:
-            -
-              entity:
+            - entity:
                 _meta:
-                  version: '1.0'
+                  version: "1.0"
                   entity_type: paragraph
                   uuid: f2d74741-4a8f-48c0-acbf-83e5240ec067
                   bundle: emphasis_block_collection
                   default_langcode: en
                 default:
                   status:
-                    -
-                      value: true
+                    - value: true
                   created:
-                    -
-                      value: 1706797711
+                    - value: 1706797711
                   behavior_settings:
-                    -
-                      value: {  }
+                    - value: {}
                   field_emphasis_blocks:
-                    -
-                      entity:
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: bc8ed2b9-756b-43b9-81fb-3f3af0eb9c92
                           bundle: emphasis_block
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797711
+                            - value: 1706797711
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/6ec40093-636e-45cc-8274-11c68960b211'
-                              title: 'Events & Partnerships Strategist'
-                              options: {  }
+                            - uri: "https://jobs.lever.co/bixal/6ec40093-636e-45cc-8274-11c68960b211"
+                              title: "Events & Partnerships Strategist"
+                              options: {}
                           field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
+                            - value: "Washington D.C. Metro Area"
                           field_prefix_title:
-                            -
-                              value: 'CORPORATE MARKETING & ENGAGEMENT'
-                    -
-                      entity:
+                            - value: "CORPORATE MARKETING & ENGAGEMENT"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: eb7265eb-8473-4624-a8ab-088b75ecff4a
                           bundle: emphasis_block
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797746
+                            - value: 1706797746
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/743c2cbb-478e-40b8-9eda-cb65deeeae39'
-                              title: 'MEL Program Associate'
-                              options: {  }
+                            - uri: "https://jobs.lever.co/bixal/743c2cbb-478e-40b8-9eda-cb65deeeae39"
+                              title: "MEL Program Associate"
+                              options: {}
                           field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
+                            - value: "Washington D.C. Metro Area"
                           field_prefix_title:
-                            -
-                              value: MEL
-                    -
-                      entity:
+                            - value: MEL
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 9cfa3ddf-5de3-47e4-9bba-4a6dfea037c4
                           bundle: emphasis_block
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797792
+                            - value: 1706797792
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/10d13e00-2dcd-4315-bbdb-85cdf57abfae'
-                              title: 'Sr. Project Manager'
-                              options: {  }
+                            - uri: "https://jobs.lever.co/bixal/10d13e00-2dcd-4315-bbdb-85cdf57abfae"
+                              title: "Sr. Project Manager"
+                              options: {}
                           field_prefix_title:
-                            -
-                              value: 'PROJECT MANAGEMENT'
-                    -
-                      entity:
+                            - value: "PROJECT MANAGEMENT"
+                    - entity:
                         _meta:
-                          version: '1.0'
+                          version: "1.0"
                           entity_type: paragraph
                           uuid: 0741bda1-f904-44f8-b742-cdacae052a22
                           bundle: emphasis_block
                           default_langcode: en
                         default:
                           status:
-                            -
-                              value: true
+                            - value: true
                           created:
-                            -
-                              value: 1706797830
+                            - value: 1706797830
                           behavior_settings:
-                            -
-                              value: {  }
+                            - value: {}
                           field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/684d5c9d-5a67-4f68-99ef-baac8ba2ba81'
-                              title: 'General Opportunities'
-                              options: {  }
+                            - uri: "https://jobs.lever.co/bixal/684d5c9d-5a67-4f68-99ef-baac8ba2ba81"
+                              title: "General Opportunities"
+                              options: {}
                           field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
+                            - value: "Washington D.C. Metro Area"
                           field_prefix_title:
-                            -
-                              value: OTHER
+                            - value: OTHER
           field_title:
-            -
-              value: 'Featured Jobs'
+            - value: "Featured Jobs"

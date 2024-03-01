@@ -3,7 +3,7 @@
 {% block content %}
 
   {% embed "@components/section/section.html.twig" %}
-    {% block body %}
+    {% set body %}
       <h2>A focus on federal</h2>
       <p>
         Bixal partners with federal agencies and organizations for two reasons: We believe that everyone has the right to effective government, and we believe that our government has the potential to deliver on its promise of promoting the general welfare of all people. Helping federal agencies create tangible change—by providing an agile, people-first approach to fixing complex organizational issues—is what we do best. Our dedicated teams work with stakeholders to deliver powerful data-driven customer experiences through digital and communications solutions to real-life problems.
@@ -29,6 +29,6 @@
         <li><a href="">GSA Multiple Award Schedule (MAS)</a></li>
       </ul>
 
-    {% endblock %}
+    {% endset %}
   {% endembed %}
 {% endblock %}

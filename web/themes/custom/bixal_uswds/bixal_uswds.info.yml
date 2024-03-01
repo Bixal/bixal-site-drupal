@@ -8,7 +8,6 @@ dependencies:
   - drupal:twig_tweak
   - drupal:twig_field_value
   - drupal:admin_toolbar
-
 components:
   namespaces:
     pages: storybook_components/stories/pages
@@ -17,6 +16,7 @@ components:
 
 libraries:
   - bixal_uswds/global
+  - bixal_uswds/storybook
 
 regions:
   preface: "Preface"

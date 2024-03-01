@@ -10,6 +10,7 @@ _meta:
     4c2ffba6-ce3c-4904-bc78-3d5256ff7d65: taxonomy_term
     b9ee8bd4-76db-45e5-b153-8d2bc20e2c1b: taxonomy_term
     58877ea2-3744-498f-9bca-b8960dfae283: taxonomy_term
+    adabd71f-807b-4335-9747-5ab18282e3db: taxonomy_term
 default:
   revision_uid:
     -
@@ -53,3 +54,6 @@ default:
       entity: b9ee8bd4-76db-45e5-b153-8d2bc20e2c1b
     -
       entity: 58877ea2-3744-498f-9bca-b8960dfae283
+  field_team:
+    -
+      entity: adabd71f-807b-4335-9747-5ab18282e3db

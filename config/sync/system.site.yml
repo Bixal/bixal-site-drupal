@@ -4,10 +4,10 @@ langcode: en
 uuid: 90da12aa-1b68-40b5-a418-0a55949171ea
 name: Drupal
 mail: admin@example.com
-slogan: ''
+slogan: ""
 page:
-  403: ''
-  404: ''
+  403: ""
+  404: ""
   front: /node/16
 admin_compact_mode: false
 weight_select_max: 100

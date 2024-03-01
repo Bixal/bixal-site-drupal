@@ -1,0 +1,63 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0a88f1a4-8477-492c-837f-532636ff6b09
+  bundle: bixaler
+  default_langcode: en
+  depends:
+    6f5d7cd9-a45f-4cd6-accb-21568b59987d: media
+    3b93cee4-da36-43e7-89df-061acdf5bc25: taxonomy_term
+    fcf7e2f6-9b28-4e03-9b3c-ad963163ad55: taxonomy_term
+    f9a05912-f118-406e-904b-7ff012a3fedf: taxonomy_term
+    15c4768f-babb-41c4-be86-ca76c2f88f25: taxonomy_term
+    3397a3b4-ce47-4ab8-b8ea-9750416f2d08: taxonomy_term
+    7e035b08-118c-4a54-9162-0f797ac9b52a: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Alex Hull'
+  created:
+    -
+      value: 1708550714
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_bucket_list:
+    -
+      value: 'To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course).'
+  field_image:
+    -
+      entity: 6f5d7cd9-a45f-4cd6-accb-21568b59987d
+  field_languages:
+    -
+      entity: 3b93cee4-da36-43e7-89df-061acdf5bc25
+  field_role:
+    -
+      entity: fcf7e2f6-9b28-4e03-9b3c-ad963163ad55
+  field_specialties:
+    -
+      entity: f9a05912-f118-406e-904b-7ff012a3fedf
+    -
+      entity: 15c4768f-babb-41c4-be86-ca76c2f88f25
+    -
+      entity: 3397a3b4-ce47-4ab8-b8ea-9750416f2d08
+  field_team:
+    -
+      entity: 7e035b08-118c-4a54-9162-0f797ac9b52a
