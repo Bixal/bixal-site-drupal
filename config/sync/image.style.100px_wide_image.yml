@@ -1,0 +1,15 @@
+uuid: 8f0c1d16-7c79-4cc0-b6b2-aeef32053ef8
+langcode: en
+status: true
+dependencies: {  }
+name: 100px_wide_image
+label: '100px wide image'
+effects:
+  d056caac-1c4d-4b68-afc9-b0376f94ff6f:
+    uuid: d056caac-1c4d-4b68-afc9-b0376f94ff6f
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: null
+      upscale: false
