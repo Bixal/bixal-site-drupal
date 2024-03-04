@@ -1,26 +1,26 @@
 {
-	"variant": null,
-	"aria_label": "Social links",
-	"items": [
-		{
-			"href": "https://www.facebook.com/bixal",
-			"label": "Facebook",
-			"icon_path": "icons/facebook.svg"
-		},
-		{
-			"href": "https://www.twitter.com/bixal",
-			"label": "Twitter",
-			"icon_path": "icons/twitter.svg"
-		},
-		{
-			"href": "https://www.linkedIn.com/company/bixal",
-			"label": "LinkedIn",
-			"icon_path": "icons/linkedin.svg"
-		},
-		{
-			"href": "https://medium.com/bixal",
-			"label": "Medium",
-			"icon_path": "icons/medium.svg"
-		}
-	]
+  "variant": null,
+  "aria_label": "Social links",
+  "items": [
+    {
+      "href": "https://www.facebook.com/bixal",
+      "label": "Facebook",
+      "icon_path": "icons/facebook.svg"
+    },
+    {
+      "href": "https://www.twitter.com/bixal",
+      "label": "Twitter",
+      "icon_path": "icons/twitter.svg"
+    },
+    {
+      "href": "https://www.linkedIn.com/company/bixal",
+      "label": "LinkedIn",
+      "icon_path": "icons/linkedin.svg"
+    },
+    {
+      "href": "https://instagram.com/bixal",
+      "label": "Instagram",
+      "icon_path": "icons/instagram.svg"
+    }
+  ]
 }

@@ -769,6 +769,10 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
+  // This will make it so that Drupal stops scanning our storybook components
+  // as possible template overrides.
+  // @see https://drupal.stackexchange.com/questions/297589/extensiondiscoveryscandirectory-takes-too-long
+  'storybook_components',
 ];
 
 /**

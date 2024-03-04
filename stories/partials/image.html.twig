@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Prints out an image using a combination of image_src (string) + image_attributes (object).
+ *
+ * This will only be used by both Drupal & StoryBook if the image is not editorially controlled. If we want to use
+ * images that are committed to storybook, we will need to figure out a way make sure the image_src is the same AND
+ * copy these imges to the default files directory in build_fe_shared and flag that here so that we can use 'public://'
+ * to render them.
+ *
+ * In StoryBook, it always prints out just an <img> with the image_scr. However, for Drupal, if responsive_image_style
+ * or image_style are set (these must exist in Drupal first), then it will use the imagecache external module (
+ * https://www.drupal.org/project/imagecache_external) module to download image_src and apply either a responsive or
+ * single image style (crop, scale, etc) to the image.
+ * Example:
+{% include "@partials/image.html.twig" with {
+  image_attributes: { 'role': 'presentation', 'aria-hidden': 'true', 'decoding': 'async', 'loading': 'lazy', 'alt': '', },
+  image_src: 'https://bixal.com/static/8fb0fe7a56370262b76be5bda8d68737/d409d/img-b-footer.png',
+  responsive_image_style: 'footer_logo'
+} %}
+ *
+ * Available variables:
+ * - image_src (string): The URL of the image.
+ * - image_attributes (object): An object that defines all other image attributes like:
+ *     { 'role': 'presentation', 'aria-hidden': 'true', 'decoding': 'async', 'loading': 'lazy', 'alt': '', }
+ * - responsive_image_style (string): When loaded in Drupal, it will apply this responsive image style
+ *     /admin/config/media/responsive-image-style.
+ * - image_style (string): When loaded in Drupal, it will apply a single image style /admin/config/media/image-styles.
+ *
+ */
+#}
+{# This is to check if Drupal is using the template. #}
+{% if db_is_active is defined %}
+  {% set image = {
+    '#uri': image_src,
+    '#attributes': image_attributes,
+  } %}
+  {% if responsive_image_style %}
+    {% set image = image | merge({
+      '#theme': 'imagecache_external_responsive',
+      '#responsive_image_style_id': responsive_image_style,
+    }) %}
+  {% elseif image_style %}
+    {% set image = image | merge({
+      '#theme': 'imagecache_external',
+      '#style_name': image_style,
+    }) %}
+  {% else %}
+    {% set image = image | merge({
+      '#theme': 'image',
+    }) %}
+  {% endif %}
+  {{ image }}
+{% else %}
+  {% set attributes = create_attribute(image_attributes) %}
+  <img {{ attributes.setAttribute('src', image_src) }} />
+{% endif %}
