@@ -4,3 +4,4 @@
 a63449fcce1213de3c590678ddc1bd17|Buddy Harlow|feature/BSD-12-scaffold-drupal-theme|Tue Dec 12 14:14:17 EST 2023|./composer.sh
 a42621d48ea57cbb2f91c3b9d8b27ee2|Matt Poole|feature/BSD-58-reuse-section-for-wrapper|Mon Jan 29 16:40:12 EST 2024|./composer.sh require cweagans/composer-patches
 65de35fce0fecb7d5ada406734759296|Matt Poole|feature/BSD-58-reuse-section-for-wrapper|Mon Jan 29 16:40:12 EST 2024|./composer.sh update --lock
+c40b2c85e6e96b0e5de8aa649eb6477d|Matt Poole|feature/BSD-16-footer-refinements|Fri Mar  1 15:21:03 EST 2024|./composer.sh require drupal/imagecache_external:^3.0
