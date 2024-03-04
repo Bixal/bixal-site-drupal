@@ -3,14 +3,11 @@
     <div class="bix-site-footer__columns">
       <div class="bix-site-footer__column bix-site-footer__column--logo">
         <div class="bix-site-footer__logo">
-          {# @TODO: Get a properly sized image, ex: 100px wide. #}
-          <img
-            role="presentational"
-            aria-hidden="true"
-            decoding="async"
-            loading="lazy"
-            width="100px"
-            src="https://bixal.com/static/8fb0fe7a56370262b76be5bda8d68737/d409d/img-b-footer.png">
+          {% include "@partials/image.html.twig" with {
+            image_attributes: { 'role': 'presentation', 'aria-hidden': 'true', 'decoding': 'async', 'loading': 'lazy', 'alt': '', },
+            image_src: 'https://bixal.com/static/8fb0fe7a56370262b76be5bda8d68737/d409d/img-b-footer.png',
+            responsive_image_style: 'footer_logo',
+          } %}
         </div>
       </div>
       <div class="bix-site-footer__column bix-site-footer__column--collab">
