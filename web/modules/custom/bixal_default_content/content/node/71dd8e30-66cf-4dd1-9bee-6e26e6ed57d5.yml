@@ -6,6 +6,7 @@ _meta:
   default_langcode: en
   depends:
     3eb47847-4829-4264-b9d7-6fe51072818f: media
+    502ca92f-b71d-415e-a916-b89c0b18c577: taxonomy_term
 default:
   revision_uid:
     -
@@ -77,38 +78,17 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-          field_description:
+          field_center_content:
             -
-              value: 'Bixal partners with federal agencies and organizations for two reasons: We believe that everyone has the right to effective government, and we believe that our government has the potential to deliver on its promise of promoting the general welfare of all people. Helping federal agencies create tangible change—by providing an agile, people-first approach to fixing complex organizational issues—is what we do best. Our dedicated teams work with stakeholders to deliver powerful data-driven customer experiences through digital and communications solutions to real-life problems.'
-          field_title:
-            -
-              value: 'A Focus on Federal'
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 461a3865-a696-447c-954c-0484568d2f01
-          bundle: section
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1706721455
-          behavior_settings:
-            -
-              value: {  }
-          field_button:
+              value: false
+          field_nested_paragraphs:
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: 0bd3b9ec-422f-4e89-b0bb-9b66c397d814
-                  bundle: button
+                  uuid: b9a721a4-4879-4dde-ba3e-3c79b310801d
+                  bundle: wysiwyg
                   default_langcode: en
                 default:
                   status:
@@ -116,42 +96,21 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706721455
+                      value: 1709905179
                   behavior_settings:
                     -
                       value: {  }
-          field_description:
-            -
-              value: 'There’s no better way to reach communities and transform organizations than with effective technology and digital communications. The services we offer start with meaningful dialogue to gain an understanding of user needs and institutional goals and end with effective, customer-centric solutions to even the most intricate of problems.'
-          field_title:
-            -
-              value: Capabilities
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 6109152e-4296-4c64-8a63-515bcb5647cd
-          bundle: section
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1706721480
-          behavior_settings:
-            -
-              value: {  }
-          field_button:
+                  field_wysiwyg:
+                    -
+                      value: '<h2>A Focus on Federal</h2><p>Bixal partners with federal agencies and organizations for two reasons: We believe that everyone has the right to effective government, and we believe that our government has the potential to deliver on its promise of promoting the general welfare of all people. Helping federal agencies create tangible change—by providing an agile, people-first approach to fixing complex organizational issues—is what we do best. Our dedicated teams work with stakeholders to deliver powerful data-driven customer experiences through digital and communications solutions to real-life problems.</p>'
+                      format: html_text
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: 6e1e04c4-7ea8-43cd-a775-2e3b16670d0e
-                  bundle: button
+                  uuid: 05ea91c8-d3cb-417c-81df-b0400634c687
+                  bundle: wysiwyg
                   default_langcode: en
                 default:
                   status:
@@ -159,13 +118,54 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706721480
+                      value: 1709905202
                   behavior_settings:
                     -
                       value: {  }
-          field_description:
+                  field_wysiwyg:
+                    -
+                      value: '<h2>Capabilities</h2><p>There’s no better way to reach communities and transform organizations than with effective technology and digital communications. The services we offer start with meaningful dialogue to gain an understanding of user needs and institutional goals and end with effective, customer-centric solutions to even the most intricate of problems.</p>'
+                      format: html_text
             -
-              value: 'Government agencies can seek our services through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services—including IT, marketing and communications, administrative management, consulting services, and an array of other professional support products and services—for all contract types.'
-          field_title:
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 40f7bd64-c6be-4a24-966c-b6e4fa0d5720
+                  bundle: wysiwyg
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905230
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_wysiwyg:
+                    -
+                      value: '<h2>Contract Vehicles</h2><p>Government agencies can seek our services through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services—including IT, marketing and communications, administrative management, consulting services, and an array of other professional support products and services—for all contract types.</p>'
+                      format: html_text
             -
-              value: 'Contract Vehicles'
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3eb1a2c6-513a-40eb-848e-e83bba5021e3
+                  bundle: view_embed
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905773
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_view_name:
+                    -
+                      entity: 502ca92f-b71d-415e-a916-b89c0b18c577

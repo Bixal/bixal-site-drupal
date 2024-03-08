@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a43a9547-dde0-485a-aea6-42b9f8890762
+  bundle: image
+  default_langcode: en
+  depends:
+    40b92bc9-4280-4985-b2b9-e747148b0503: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: USDT-BPA.jpg
+  created:
+    -
+      value: 1709903797
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 40b92bc9-4280-4985-b2b9-e747148b0503
+      alt: 'Hero Image'
+      title: ''
+      width: 1680
+      height: 267

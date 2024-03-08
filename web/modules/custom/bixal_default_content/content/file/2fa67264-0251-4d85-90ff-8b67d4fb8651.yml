@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2fa67264-0251-4d85-90ff-8b67d4fb8651
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: comp-ta-announcement.jpg
+  uri:
+    -
+      value: 'public://2024-03/comp-ta-announcement.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 4246715
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709907480

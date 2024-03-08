@@ -1,0 +1,26 @@
+uuid: fe0c06fc-b567-40bf-a1a9-0b64a53a3d9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contractor_capabilities
+    - filter.format.html_text
+    - filter.format.plain_text
+    - node.type.contract_vehicle
+  module:
+    - text
+id: node.contract_vehicle.field_contractor_capabilities
+field_name: field_contractor_capabilities
+entity_type: node
+bundle: contract_vehicle
+label: 'Contractor Capabilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+    - plain_text
+field_type: text_long

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: aaf64897-7301-42cc-a28f-fdf0d9dedb23
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: health-summit.jpg
+  uri:
+    -
+      value: 'public://2024-03/health-summit.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2962183
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709906720

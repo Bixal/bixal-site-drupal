@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c9440550-3421-4398-a8a3-faec384bb79b
+  bundle: image
+  default_langcode: en
+  depends:
+    1c19a18a-e8de-411d-93ae-ab35e8363f49: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: data-privacy-week-blog.jpg
+  created:
+    -
+      value: 1709906851
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1c19a18a-e8de-411d-93ae-ab35e8363f49
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: faf832a5-0ec9-4e1a-a303-0ab0a85aad61
+  bundle: contract_vehicle
+  default_langcode: en
+  depends:
+    ec6ca3db-b24a-4059-a121-1e036dd25ace: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'EVAL-ME II IDIQ'
+  created:
+    -
+      value: 1709903615
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: ec6ca3db-b24a-4059-a121-1e036dd25ace
+  field_contractor_capabilities:
+    -
+      value: '<p>As the prime contractor, Bixal brings advanced technology to bear on evaluation, performance monitoring and learning, and has a proven ability to build capacity using technology-driven approaches. We have sophisticated data analytics expertise and can use geo-referenced secondary data, combining datasets to deepen understanding and analyses, especially for difficult-to-measure concepts like resilience and governance. Our established mobile and web-based data collection platforms and dashboards speed the collection-to-use cycle and enable rapid feedback loops for adaptive management.</p><p>Our consortium’s commitment to advancing the journey to self-reliance is manifest in our collective history of building capacity, engaging with local stakeholders, hiring local researchers and evaluators, embedding learning throughout the evaluation lifecycle, and ensuring utilization of results. Our participatory methods equip local actors to design and assess their own development solutions and to institutionalize effective MEL practices.</p><p>Our collective reach is powered by databases of more than 10,000 consultants and 20,000 staff in local offices in nearly half of USAID-supported countries worldwide. The comprehensive sector expertise of the consortium will enable us to draw on the strengths of different partners to provide complementary experiences to USAID.</p>'
+      format: html_text
+  field_general_overview:
+    -
+      value: '<p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Bixal holds an active Evaluation, Monitoring and Learning Services (EVAL-ME II) Indefinite Delivery/Indefinite Quantity (IDIQ) contract with the United States Agency for International Development (USAID). This 5-year contract, awarded September 2020, allows USAID teams agency-wide to procure our technical and advisory services in monitoring, evaluation and learning (MEL) on behalf of Bureaus and Missions worldwide.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Details of the USAID EVAL-ME II IDIQ contract include:</p><ul><li>Designing and implementing quantitative and qualitative evaluation studies and assessments</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Providing technical assistance in performance monitoring</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Development of Websites, Mobile Apps</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Monitoring services</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Developing and delivering evaluation and monitoring training</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Supporting USAID in learning from evidence to adapt programming</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Branding</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Cultural Transformation</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Supporting implementation of knowledge management practices and services</li></ul>'
+      format: html_text
+  field_information:
+    -
+      value: '<p><strong>Contract Number:</strong> 7200AA20D00009</p>'
+      format: html_text
+  field_key_points_of_contact:
+    -
+      value: '<p>For information on this USAID EVAL-ME II IDIQ vehicle, please use the following contact information:</p><address><p><strong>Maricarmen Smith-Martinez</strong><br><strong>Senior Director, Strategic Growth and Partnerships</strong><br><a href="mailto:maricarmen.smith-martinez@bixal.com">Maricarmen Smith-Martinez</a><br><a href="tel:+1-703-634-5701">703.634.5701</a></p></address>'
+      format: html_text

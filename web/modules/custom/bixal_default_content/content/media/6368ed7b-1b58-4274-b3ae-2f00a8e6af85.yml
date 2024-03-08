@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6368ed7b-1b58-4274-b3ae-2f00a8e6af85
+  bundle: image
+  default_langcode: en
+  depends:
+    4aee3a15-9af3-486b-867a-f2d4f2480ce5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: USWDS-image.jpg
+  created:
+    -
+      value: 1709906975
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 4aee3a15-9af3-486b-867a-f2d4f2480ce5
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

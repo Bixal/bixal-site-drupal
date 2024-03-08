@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4aee3a15-9af3-486b-867a-f2d4f2480ce5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: USWDS-image.jpg
+  uri:
+    -
+      value: 'public://2024-03/USWDS-image.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1319786
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709906975

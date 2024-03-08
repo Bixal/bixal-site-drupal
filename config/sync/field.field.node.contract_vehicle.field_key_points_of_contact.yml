@@ -1,0 +1,26 @@
+uuid: 3a52d8b8-0618-4d52-be9f-c83f40fe8415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_points_of_contact
+    - filter.format.html_text
+    - filter.format.plain_text
+    - node.type.contract_vehicle
+  module:
+    - text
+id: node.contract_vehicle.field_key_points_of_contact
+field_name: field_key_points_of_contact
+entity_type: node
+bundle: contract_vehicle
+label: 'Key Points of Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+    - plain_text
+field_type: text_long
