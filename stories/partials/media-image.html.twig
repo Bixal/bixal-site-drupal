@@ -2,7 +2,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-<figure{{ attributes.addClass(additional_classes) }}>
+<figure{{ attributes.addClass(additional_classes) }} {% if aria_hidden %}{{ attributes.setAttribute('aria-hidden', true) }}{% endif %}>
   {{ image }}
   {% if caption %}
     <figcaption>
