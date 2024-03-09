@@ -4,7 +4,7 @@
 
 {% set classes = [
   'bix-description-list',
-  'bix-description-list--' ~ variant | clean_class,
+  (variant ? 'bix-description-list--' ~ variant | clean_class),
 ] %}
 
 <dl{{ attributes.addClass(classes).addClass(additional_classes) }}>
