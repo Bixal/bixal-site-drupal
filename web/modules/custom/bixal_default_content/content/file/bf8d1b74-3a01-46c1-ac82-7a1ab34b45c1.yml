@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bf8d1b74-3a01-46c1-ac82-7a1ab34b45c1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: GSA-TOTAL.jpg
+  uri:
+    -
+      value: 'public://2024-03/GSA-TOTAL.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 270767
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709904318

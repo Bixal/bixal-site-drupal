@@ -1,0 +1,18 @@
+uuid: a549adc5-8e66-496a-8440-ed1cb865b8ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Contract Vehicle'
+type: contract_vehicle
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

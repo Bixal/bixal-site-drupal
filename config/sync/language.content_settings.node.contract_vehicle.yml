@@ -1,0 +1,11 @@
+uuid: 36c6482a-74a7-4205-aa93-7ea094348cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract_vehicle
+id: node.contract_vehicle
+target_entity_type_id: node
+target_bundle: contract_vehicle
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,26 @@
+uuid: 49d09dd8-d41a-40c1-a021-a2d7a2e10baa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_overview
+    - filter.format.html_text
+    - filter.format.plain_text
+    - node.type.contract_vehicle
+  module:
+    - text
+id: node.contract_vehicle.field_general_overview
+field_name: field_general_overview
+entity_type: node
+bundle: contract_vehicle
+label: 'General Overview'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+    - plain_text
+field_type: text_long

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 32ebf31f-7318-4144-988d-5008355d9b22
+  bundle: image
+  default_langcode: en
+  depends:
+    bf8d1b74-3a01-46c1-ac82-7a1ab34b45c1: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: GSA-TOTAL.jpg
+  created:
+    -
+      value: 1709904318
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: bf8d1b74-3a01-46c1-ac82-7a1ab34b45c1
+      alt: 'Hero Image'
+      title: ''
+      width: 1680
+      height: 267

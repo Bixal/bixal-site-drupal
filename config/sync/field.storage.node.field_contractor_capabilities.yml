@@ -1,0 +1,19 @@
+uuid: 4123113e-9bb8-4df2-bdf9-c043ba392825
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_contractor_capabilities
+field_name: field_contractor_capabilities
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

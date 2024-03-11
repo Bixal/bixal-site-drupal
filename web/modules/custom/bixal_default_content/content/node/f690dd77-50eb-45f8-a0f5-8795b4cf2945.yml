@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f690dd77-50eb-45f8-a0f5-8795b4cf2945
+  bundle: blog
+  default_langcode: en
+  depends:
+    6368ed7b-1b58-4274-b3ae-2f00a8e6af85: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'USWDS Training Sneak Peek with James Mejia and Charlie Mahoney'
+  created:
+    -
+      value: 1709907003
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /blog/uswds-training-sneak-peek-james-mejia-and-charlie-mahoney
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: '<p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Ahead of this year''s <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.drupal.org/community/events/drupal-global-training-day-drupal-and-uswds-the-beginning-the-middle-and-the-advanced-2024-02-07"><u>Drupal Global Training Day</u></a> on February 7th, Bixalers <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.linkedin.com/in/mejiajames/"><u>James Mejia</u></a> and <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.linkedin.com/in/mahoneycm/"><u>Charlie Mahoney</u></a> joined our partners at <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://drupal4gov.us/"><u>Drupal4Gov</u></a> to preview their training session on the U.S. Web Design System (USWDS) in a special webinar.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">In the video, James (lead software engineer) and Charlie (associate software engineer), who both serve on the USWDS core team, walk us through a step-by-step tutorial on implementing USWDS to help speed up your design and development. The eight-step plan shows you how to:</p><ol style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><li style="box-sizing:inherit;">Set up the tutorial site.</li><li style="box-sizing:inherit;">Set up the USWDS and the USWDS compiler.</li><li style="box-sizing:inherit;">Set up USWDS theme files and assets.</li><li style="box-sizing:inherit;">Add USWDS CSS and JavaScript to the site template.</li><li style="box-sizing:inherit;">Add the USWDS banner.</li><li style="box-sizing:inherit;">Add the USWDS Identifier.</li><li style="box-sizing:inherit;">Integrate project CSS and USWDS Sass.</li><li style="box-sizing:inherit;">Customize USWDS settings.</li></ol><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Nearly sixty attendees, including various government colleagues who support technology and communications, joined the virtual session on January 25th. Didn’t get a chance to attend or wish to watch the training again? Check out the full recording below!</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.youtube.com/watch?v=yin9HZmI7d8"><u>Sneak Peek: Drupal &amp; USWDS</u></a></p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Looking to attend the in-person training event on February 7th? <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.tickettailor.com/events/drupal4gov/1106191"><u>Click here</u></a> to join the waitlist.</p>'
+      format: html_text
+      summary: ''
+  field_banner_image:
+    -
+      entity: 6368ed7b-1b58-4274-b3ae-2f00a8e6af85
+  field_date:
+    -
+      value: '2024-02-05'
+  field_decorative_title:
+    -
+      value: 'Blog and News'
