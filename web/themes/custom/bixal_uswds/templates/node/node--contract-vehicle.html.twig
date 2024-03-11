@@ -81,10 +81,14 @@
   {% block content %}
     {% embed "@components/section/section.html.twig" %}
       {% set body %}
-      {% for section in content %}
-        <h2>{{ section['#title'] }}</h2>
-        {{ section.0 }}
-      {% endfor %}
+        {{ {
+          '#theme': 'page_title',
+          '#title': node.title.value,
+        } }}
+        {% for section in content %}
+          <h2>{{ section['#title'] }}</h2>
+          {{ section.0 }}
+        {% endfor %}
       {% endset %}
     {% endembed %}
 

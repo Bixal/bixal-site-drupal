@@ -67,23 +67,7 @@
  *
  */
 #}
-{% set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-] %}
-
-{% if content.field_decorative_title| field_value is not empty %}
-  {% set decorative_title = true %}
-  {% set title = content.field_decorative_title | field_value %}
-{% else %}
-  {% set decorative_title = false %}
-  {% set title = node.title.value %}
-{% endif %}
-
+{#
 <div{{attributes.addClass(classes)}}>
 
   {% include "@components/hero/hero.html.twig" with {
@@ -94,3 +78,4 @@
   } %}
 
 </div>
+#}
