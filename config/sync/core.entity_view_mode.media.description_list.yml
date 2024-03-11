@@ -1,0 +1,10 @@
+uuid: adc928fb-4215-4cf4-acce-109d102be075
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.description_list
+label: 'Description List'
+targetEntityType: media
+cache: true
