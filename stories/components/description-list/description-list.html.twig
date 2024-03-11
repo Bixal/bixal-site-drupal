@@ -1,9 +1,11 @@
 {% extends "@components/description-list/description-list-base.html.twig" %}
 
+{# Image is decorative and needs to be hidden to avoid a11y issue. #}
 {% set image %}
   {% include "@partials/media-image.html.twig" with {
     'image': image | default('<img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">'),
-    'additional_classes': ['bix-description-list__media']
+    'additional_classes': ['bix-description-list__media'],
+    'aria_hidden': true
   } %}
 {% endset %}
 

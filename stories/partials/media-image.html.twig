@@ -1,7 +1,9 @@
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
-
+{% if aria_hidden %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
+{% endif %}
 <figure{{ attributes.addClass(additional_classes) }}>
   {{ image }}
   {% if caption %}
