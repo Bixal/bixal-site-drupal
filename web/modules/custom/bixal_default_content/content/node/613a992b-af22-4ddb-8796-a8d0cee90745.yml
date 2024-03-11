@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 613a992b-af22-4ddb-8796-a8d0cee90745
+  bundle: blog
+  default_langcode: en
+  depends:
+    1ff3639b-f4fe-48c3-9814-cb602081a64d: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'USAID Awards Bixal the Comprehensive Technical Assistance for Health Supply Chain and Pharmaceutical Management IDIQ'
+  created:
+    -
+      value: 1709907471
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /blog/usaid-awards-bixal-comprehensive-technical-assistance-health-supply-chain-and-pharmaceutical
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: '<p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Bixal is proud to expand its services in the global health sector with the award of the <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.bixal.com/contract-vehicles/usaid-comp-ta"><u>U.S. Agency for International Development (USAID) Comprehensive Technical Assistance for Health Supply Chain and Pharmaceutical Management (Comprehensive TA) contract</u></a>. This 10-year, $2.2 billion indefinite delivery/indefinite quantity (IDIQ) contract is part of the Next Generation (NextGen) Global Health Supply Chain Suite of Programs. The program objective is to ensure sustainable access to and appropriate use of safe, quality-assured, and affordable health commodities through locally led supply chain and pharmaceutical management systems.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">With this contract, Bixal will capitalize on its expertise within the global health sector to support monitoring, evaluation, and learning (MEL); knowledge management (KM); communications; and coordination for health systems strengthening, providing comprehensive technical assistance for health supply chains and pharmaceutical management. Bixal will expand its capabilities with a depth of experience from consortium partners, including JSI, Dexis, Empower School of Health, inSupply, Pact, and Planate.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Bixal fosters a <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.bixal.com/blog/key-learnings-for-a-more-inclusive-global-health-landscape/"><u>more inclusive global health landscape</u></a> by integrating a social inclusion perspective and prioritizing a people absolutely first approach. "We are excited to leverage our technical knowledge and digital solutions to advance supply chain systems through the NextGen program,” said Stephanie Vazquez, Bixal’s director of global health. "Our collaborative approach and commitment to human-centered design aligns to maximize program achievements, and we look forward to positively impacting global health outcomes by contributing to the continuous improvement of supply chain systems.”</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">With strong roots supporting digital transformation initiatives across the U.S. federal government, Bixal’s global health footprint began as a subcontractor on the USAID Global Health Supply Chain-Procurement and Supply Management (GHSC-PSM) activity with the design and development of the <a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="https://www.ghsupplychain.org/index.php/"><u>USAID-funded GHSC website</u></a>, including the creation of an interactive dashboard to exhibit contraceptive security indicators. The dynamic online tool allows users to select different data views, download data sets for independent analysis, and access annual reports synthesizing survey results.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Based in Fairfax, Virginia, Bixal provides advisory support in digital health, MEL, KM, and communications across 45 countries in Africa, Asia, and Latin America and the Caribbean for activities funded by USAID, The Global Fund, Millennium Challenge Corporation (MCC), and other donors. Support to donors, host country governments, and local organizations has ranged from leading various evaluation and learning activities that advance HIV program delivery across the HIV continuum of care to advising donors on digital health system design and development. Global health support has included President''s Emergency Plan for AIDS Relief (PEPFAR) Site Improvement Monitoring System assessments, evaluations of HIV differentiated service delivery investments on behalf of The Global Fund, analysis of community health programs for MCC, and KM leadership to bolster local implementation of nutrition programs and policies. With in-depth understanding of country-level health systems, Bixal ensures a best fit approach to improve the quality of care and advance health equity in primary health care service delivery encompassing HIV and other infectious and chronic diseases.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Bixal’s multidisciplinary team, comprising evaluators, knowledge managers, learning experts, software engineers, data scientists, and strategic communications specialists, offers a full suite of evaluation and learning services with an emphasis on health and HIV. The team applies methodological rigor to research and evaluation activities, ensuring high-quality data that underpins evidence-based decision-making, timely program enhancements, and powerful evaluations that bolster the success of donors and host country governments.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><strong style="box-sizing:inherit;font-weight:bolder;">IDIQ Contact:</strong><br>Maricarmen Smith-Martinez<br><a style="background-color:transparent;box-sizing:inherit;color:inherit;" href="mailto:maricarmen.smith-martinez@bixal.com"><u>maricarmen.smith-martinez@bixal.com</u></a></p>'
+      format: html_text
+      summary: ''
+  field_banner_image:
+    -
+      entity: 1ff3639b-f4fe-48c3-9814-cb602081a64d
+  field_date:
+    -
+      value: '2024-03-07'
+  field_decorative_title:
+    -
+      value: 'Blog and News'

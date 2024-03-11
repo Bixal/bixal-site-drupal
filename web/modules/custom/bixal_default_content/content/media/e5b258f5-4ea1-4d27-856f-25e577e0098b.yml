@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e5b258f5-4ea1-4d27-856f-25e577e0098b
+  bundle: image
+  default_langcode: en
+  depends:
+    aaf64897-7301-42cc-a28f-fdf0d9dedb23: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: health-summit.jpg
+  created:
+    -
+      value: 1709906720
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: aaf64897-7301-42cc-a28f-fdf0d9dedb23
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

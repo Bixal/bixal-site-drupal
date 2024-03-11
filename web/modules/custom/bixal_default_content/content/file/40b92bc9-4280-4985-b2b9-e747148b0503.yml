@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 40b92bc9-4280-4985-b2b9-e747148b0503
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: USDT-BPA.jpg
+  uri:
+    -
+      value: 'public://2024-03/USDT-BPA.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 294205
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709903797

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 376e1ab0-5922-41a8-8353-e2d05afc2bf7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: oasis-hero.jpg
+  uri:
+    -
+      value: 'public://2024-03/oasis-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 225755
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709848982

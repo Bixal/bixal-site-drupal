@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 72233791-1845-4ba4-adc9-1ff05fc4409c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: eval-me-ii-idiq-hero.jpg
+  uri:
+    -
+      value: 'public://2024-03/eval-me-ii-idiq-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 536951
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709903658

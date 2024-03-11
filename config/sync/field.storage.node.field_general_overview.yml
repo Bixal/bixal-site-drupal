@@ -1,0 +1,19 @@
+uuid: ec051a1d-f137-45e6-a4e6-f914e2bc419b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_general_overview
+field_name: field_general_overview
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

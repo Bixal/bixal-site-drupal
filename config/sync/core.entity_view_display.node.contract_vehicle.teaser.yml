@@ -1,0 +1,32 @@
+uuid: 16ab5e4a-c9a0-4940-88ed-1a768cebb6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contract_vehicle.field_banner_image
+    - field.field.node.contract_vehicle.field_contractor_capabilities
+    - field.field.node.contract_vehicle.field_general_overview
+    - field.field.node.contract_vehicle.field_information
+    - field.field.node.contract_vehicle.field_key_points_of_contact
+    - node.type.contract_vehicle
+  module:
+    - user
+id: node.contract_vehicle.teaser
+targetEntityType: node
+bundle: contract_vehicle
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_image: true
+  field_contractor_capabilities: true
+  field_general_overview: true
+  field_information: true
+  field_key_points_of_contact: true
+  langcode: true
+  search_api_excerpt: true

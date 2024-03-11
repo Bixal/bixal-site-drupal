@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ec6ca3db-b24a-4059-a121-1e036dd25ace
+  bundle: image
+  default_langcode: en
+  depends:
+    72233791-1845-4ba4-adc9-1ff05fc4409c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: eval-me-ii-idiq-hero.jpg
+  created:
+    -
+      value: 1709903658
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 72233791-1845-4ba4-adc9-1ff05fc4409c
+      alt: 'Hero Image'
+      title: ''
+      width: 1680
+      height: 267

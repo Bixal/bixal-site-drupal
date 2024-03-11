@@ -1,0 +1,52 @@
+uuid: a216f634-f224-4d9c-a8b3-f17434f5007f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contract_vehicle.field_banner_image
+    - field.field.node.contract_vehicle.field_contractor_capabilities
+    - field.field.node.contract_vehicle.field_general_overview
+    - field.field.node.contract_vehicle.field_information
+    - field.field.node.contract_vehicle.field_key_points_of_contact
+    - node.type.contract_vehicle
+  module:
+    - text
+    - user
+id: node.contract_vehicle.default
+targetEntityType: node
+bundle: contract_vehicle
+mode: default
+content:
+  field_contractor_capabilities:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_general_overview:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_information:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_key_points_of_contact:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
