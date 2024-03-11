@@ -1,8 +1,10 @@
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
-
-<figure{{ attributes.addClass(additional_classes) }} {% if aria_hidden %}{{ attributes.setAttribute('aria-hidden', true) }}{% endif %}>
+{% if aria_hidden %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
+{% endif %}
+<figure{{ attributes.addClass(additional_classes) }}>
   {{ image }}
   {% if caption %}
     <figcaption>
