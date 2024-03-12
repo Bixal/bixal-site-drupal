@@ -168,8 +168,7 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         // Try to read from API.
         try {
           foreach ($teams as $team) {
-            $query_string = rawurlencode($team);
-            $response = $client->get("https://api.lever.co/v0/postings/bixal?department={$query_string}");
+            $response = $client->get("https://api.lever.co/v0/postings/bixal", ['query' => ['department' => $team]]);
             $result = json_decode($response->getBody(), TRUE);
             $listings[$team] = $result;
 
