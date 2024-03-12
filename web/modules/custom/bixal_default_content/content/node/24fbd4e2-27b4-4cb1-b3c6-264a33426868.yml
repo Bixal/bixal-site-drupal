@@ -387,15 +387,15 @@ default:
                       options: {  }
           field_center_content:
             -
-              value: false
+              value: true
           field_nested_paragraphs:
             -
               entity:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: f2d74741-4a8f-48c0-acbf-83e5240ec067
-                  bundle: emphasis_block_collection
+                  uuid: 5653c68e-a390-4ec8-945f-0b9e302d5623
+                  bundle: job_listing
                   default_langcode: en
                 default:
                   status:
@@ -403,124 +403,10 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706797711
+                      value: 1710177074
                   behavior_settings:
                     -
                       value: {  }
-                  field_emphasis_blocks:
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: bc8ed2b9-756b-43b9-81fb-3f3af0eb9c92
-                          bundle: emphasis_block
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706797711
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/6ec40093-636e-45cc-8274-11c68960b211'
-                              title: 'Events & Partnerships Strategist'
-                              options: {  }
-                          field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
-                          field_prefix_title:
-                            -
-                              value: 'CORPORATE MARKETING & ENGAGEMENT'
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: eb7265eb-8473-4624-a8ab-088b75ecff4a
-                          bundle: emphasis_block
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706797746
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/743c2cbb-478e-40b8-9eda-cb65deeeae39'
-                              title: 'MEL Program Associate'
-                              options: {  }
-                          field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
-                          field_prefix_title:
-                            -
-                              value: MEL
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 9cfa3ddf-5de3-47e4-9bba-4a6dfea037c4
-                          bundle: emphasis_block
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706797792
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/10d13e00-2dcd-4315-bbdb-85cdf57abfae'
-                              title: 'Sr. Project Manager'
-                              options: {  }
-                          field_prefix_title:
-                            -
-                              value: 'PROJECT MANAGEMENT'
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 0741bda1-f904-44f8-b742-cdacae052a22
-                          bundle: emphasis_block
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706797830
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_link:
-                            -
-                              uri: 'https://jobs.lever.co/bixal/684d5c9d-5a67-4f68-99ef-baac8ba2ba81'
-                              title: 'General Opportunities'
-                              options: {  }
-                          field_postfix_text:
-                            -
-                              value: 'Washington D.C. Metro Area'
-                          field_prefix_title:
-                            -
-                              value: OTHER
           field_title:
             -
               value: 'Featured Jobs'

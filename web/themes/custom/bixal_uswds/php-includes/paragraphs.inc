@@ -7,6 +7,8 @@
 
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * Implements hook_preprocess_paragraph().
@@ -134,7 +136,7 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           // Add team to array if it doesn't exist in array.
           if (!in_array($team_name, $filter_options)) {
             $filter_options[] = $team_name;
-          };
+          }
         }
 
         // Sort filter options.
@@ -145,6 +147,59 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           'filter_content' => $filter_content,
           'filter_options' => $filter_options,
         ];
+
+        break;
+
+      case "job_listing":
+        // Create jobs array, teams array, and client object.
+        $client = new Client();
+        $jobs = [];
+        $teams = [
+          'Corporate Operations',
+          'Data Analytics',
+          'Human Centered Design',
+          'International',
+          'Learning',
+          'Program Management',
+          'Technology',
+          'Other Teams',
+        ];
+
+        // Try to read from API.
+        try {
+          foreach ($teams as $team) {
+            $query_string = rawurlencode($team);
+            $response = $client->get("https://api.lever.co/v0/postings/bixal?department={$query_string}");
+            $result = json_decode($response->getBody(), TRUE);
+            $listings[$team] = $result;
+
+            // Sort listing based on most recent.
+            usort($listings[$team], function ($job1, $job2) {
+              return $job2['createdAt'] <=> $job1['createdAt'];
+            });
+
+            // Remove all but most recent.
+            array_splice($listings[$team], 1);
+
+            // If team index of listings array isn't empty, set for jobs array.
+            if (!empty($listings[$team])) {
+              $jobs[] = [
+                'title' => $listings[$team][0]['text'],
+                'href' => $listings[$team][0]['hostedUrl'],
+                'prefix' => $listings[$team][0]['categories']['team'],
+                'postfix' => $listings[$team][0]['categories']['location'],
+              ];
+            }
+          }
+
+          // Set content to jobs.
+          $vars['content'] = [
+            'jobs' => $jobs,
+          ];
+        }
+        catch (RequestException $e) {
+          \Drupal::logger('system')->alert('Jobs could not be fetched from lever.');
+        }
 
         break;
 
