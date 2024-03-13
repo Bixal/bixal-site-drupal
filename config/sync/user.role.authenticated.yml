@@ -8,6 +8,7 @@ dependencies:
     - contextual
     - filter
     - media
+    - node
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -20,3 +21,4 @@ permissions:
   - 'access contextual links'
   - 'use text format html_text'
   - 'view media'
+  - 'view own unpublished content'

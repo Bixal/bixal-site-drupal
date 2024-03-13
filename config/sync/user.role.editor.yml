@@ -1,0 +1,71 @@
+uuid: 9e02f6a0-acf9-42fb-9ab7-e54eb886517e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bixaler
+    - node.type.blog
+    - node.type.contract_vehicle
+    - node.type.landing_page
+    - taxonomy.vocabulary.certifications
+    - taxonomy.vocabulary.languages
+    - taxonomy.vocabulary.role
+    - taxonomy.vocabulary.specialties
+    - taxonomy.vocabulary.team
+  module:
+    - admin_toolbar_search
+    - file
+    - media
+    - menu_admin_per_menu
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer main menu items'
+  - 'administer mainnavcta menu items'
+  - 'create bixaler content'
+  - 'create blog content'
+  - 'create contract_vehicle content'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create terms in certifications'
+  - 'create terms in languages'
+  - 'create terms in role'
+  - 'create terms in specialties'
+  - 'create terms in team'
+  - 'create url aliases'
+  - 'delete any bixaler content'
+  - 'delete any blog content'
+  - 'delete any contract_vehicle content'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete terms in certifications'
+  - 'delete terms in languages'
+  - 'delete terms in role'
+  - 'delete terms in specialties'
+  - 'delete terms in team'
+  - 'edit any bixaler content'
+  - 'edit any blog content'
+  - 'edit any contract_vehicle content'
+  - 'edit any landing_page content'
+  - 'edit terms in certifications'
+  - 'edit terms in languages'
+  - 'edit terms in role'
+  - 'edit terms in specialties'
+  - 'edit terms in team'
+  - 'update any media'
+  - 'use admin toolbar search'
+  - 'view all media revisions'
+  - 'view the administration theme'
