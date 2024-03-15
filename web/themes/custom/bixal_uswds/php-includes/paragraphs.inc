@@ -73,6 +73,10 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         $results = $entity_query->execute();
         $nodes = Node::loadMultiple($results);
 
+        // Setting up cache contexts.
+        $cache_contexts = ['node'];
+        $cache_contexts[] = '<bixaler>';
+
         // Instantiate arrays to pass to template.
         $filter_content = [];
         // Add 'All' option by default.
@@ -148,6 +152,8 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           'filter_options' => $filter_options,
         ];
 
+        // Reset cache.
+        $vars['#attached']['drupalSettings']['cacheContexts'] = $cache_contexts;
         break;
 
       case "job_listing":
