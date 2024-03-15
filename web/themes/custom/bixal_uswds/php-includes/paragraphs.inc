@@ -83,19 +83,22 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           // Get image url.
           if ($node->hasField('field_image')) {
             $media_entity = $node->get('field_image')->entity;
-            if ($media_entity->hasField('field_media_image')) {
-              // Get the file entity.
-              $file_entity = $media_entity->get('field_media_image')->entity;
+            if (!empty($media_entity)) {
+              if ($media_entity->hasField('field_media_image')) {
+                // Get the file entity.
+                $file_entity = $media_entity->get('field_media_image')->entity;
 
-              // Get the URL of the media file.
-              if ($file_entity) {
-                $uri = $file_entity->getFileUri();
-                $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+                // Get the URL of the media file.
+                if ($file_entity) {
+                  $uri = $file_entity->getFileUri();
+                  $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+                }
               }
             }
-          }
-          else {
-            $image_url = NULL;
+            else {
+              $image_url = NULL;
+            }
+
           }
 
           // Get role value.
