@@ -5,7 +5,9 @@
  * Bixal USWDS Paragraphs file.
  */
 
+use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Drupal\taxonomy\Entity\Term;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -72,69 +74,61 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           ->sort('title', 'ASC');
         $results = $entity_query->execute();
         $nodes = Node::loadMultiple($results);
-
+        if (empty($nodes)) {
+          return;
+        }
         // Instantiate arrays to pass to template.
         $filter_content = [];
         // Add 'All' option by default.
         $filter_options = ['All'];
 
+        $field_ne_and_exists = static function (FieldableEntityInterface $entity, string $field_name) {
+          return $entity->hasField($field_name) && !$entity->get($field_name)->isEmpty();
+        };
+
+        $get_media_image_url = static function (NodeInterface $node, $field_name) use (&$field_ne_and_exists) {
+          // Get the media file field.
+          if (!$field_ne_and_exists($node, $field_name)) {
+            return '';
+          }
+          $media_entity = $node->get($field_name)->entity;
+          // Get the file field on the media entity.
+          if (!$field_ne_and_exists($media_entity, 'field_media_image')) {
+            return '';
+          }
+          $file_entity = $media_entity->get('field_media_image')->entity;
+          // Get the URL of the media file.
+          $uri = $file_entity->getFileUri();
+          return \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+        };
+
+        $get_first_term_ref_title = static function (NodeInterface $node, $field_name) use (&$field_ne_and_exists) {
+          if (!$field_ne_and_exists($node, $field_name)) {
+            return '';
+          }
+          $term_id = $node->get($field_name)->first()->getString();
+          $term = Term::load($term_id);
+          if ($term === NULL) {
+            return '';
+          }
+          return $term->getName();
+        };
+
         // Process each node to set values of each array item.
         foreach ($nodes as $node) {
-          // Get image url.
-          if ($node->hasField('field_image')) {
-            $media_entity = $node->get('field_image')->entity;
-            if ($media_entity->hasField('field_media_image')) {
-              // Get the file entity.
-              $file_entity = $media_entity->get('field_media_image')->entity;
-
-              // Get the URL of the media file.
-              if ($file_entity) {
-                $uri = $file_entity->getFileUri();
-                $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
-              }
-            }
-          }
-          else {
-            $image_url = NULL;
-          }
-
-          // Get role value.
-          if ($node->hasField('field_role')) {
-            $field_items_role = $node->get('field_role')->getValue();
-            foreach ($field_items_role as $item) {
-              $term = Term::load($item['target_id']);
-              // Get the name of the term and add it to the array.
-              $role_name = $term->getName();
-            }
-          }
-          else {
-            $role_name = NULL;
-          }
-
-          // Get team value.
-          if ($node->hasField('field_team')) {
-            $field_items_team = $node->get('field_team')->getValue();
-            foreach ($field_items_team as $item) {
-              $term = Term::load($item['target_id']);
-              // Get the name of the term and add it to the array.
-              $team_name = $term->getName();
-            }
-          }
-          else {
-            $team_name = NULL;
-          }
+          $team_name = $get_first_term_ref_title($node, 'field_team');
 
           // Set value of node.
           $filter_content[] = [
             'name' => $node->getTitle(),
-            'image' => $image_url,
-            'role' => $role_name,
+            'image' => $get_media_image_url($node, 'field_image'),
+            'role' => $get_first_term_ref_title($node, 'field_role'),
             'url' => $node->toUrl()->toString(),
             'filter_category' => strtolower($team_name),
           ];
 
           // Add team to array if it doesn't exist in array.
-          if (!in_array($team_name, $filter_options)) {
+          if (strlen($team_name) && !in_array($team_name, $filter_options)) {
             $filter_options[] = $team_name;
           }
         }
