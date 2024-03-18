@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adc80e7ac000a2865042eeca698894fe",
+    "content-hash": "a80ed547defd903ddbe193901a0a8309",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4254,6 +4254,18 @@
                 }
             ],
             "time": "2023-11-28T21:12:40+00:00"
+        },
+        {
+            "name": "jjj/chosen",
+            "version": "2.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/JJJ/chosen/archive/refs/tags/2.2.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "chosen"
+            }
         },
         {
             "name": "laminas/laminas-stdlib",

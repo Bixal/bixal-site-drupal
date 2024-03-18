@@ -7,15 +7,15 @@ minimum_width: 400
 max_shown_results: null
 use_relative_width: false
 jquery_selector: 'select:visible'
-search_contains: false
+search_contains: true
 disable_search: false
 allow_single_deselect: false
 disabled_themes:
+  bixal_uswds: bixal_uswds
   claro: '0'
   olivero: '0'
   stark: '0'
-  bixal_uswds: '0'
-chosen_include: 2
+chosen_include: 0
 placeholder_text_multiple: 'Choose some options'
 placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'
