@@ -14,6 +14,21 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "package",
+            "package": {
+                "name": "jjj/chosen",
+                "version": "2.2.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chosen"
+                },
+                "dist": {
+                    "url": "https://github.com/JJJ/chosen/archive/refs/tags/2.2.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
             "type": "vcs",
             "url": "git@github.com:mpbixal/drupal-platform-lando.git"
         }
@@ -22,6 +37,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/chosen": "^4.0",
         "drupal/components": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
@@ -45,6 +61,7 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "*",
+        "jjj/chosen": "2.2.1",
         "mattsqd/robovalidate": "@alpha",
         "mpbixal/drupal-platform-lando": "dev-main",
         "platformsh/config-reader": "^2.4"
@@ -61,7 +78,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
