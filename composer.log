@@ -5,3 +5,5 @@ a63449fcce1213de3c590678ddc1bd17|Buddy Harlow|feature/BSD-12-scaffold-drupal-the
 a42621d48ea57cbb2f91c3b9d8b27ee2|Matt Poole|feature/BSD-58-reuse-section-for-wrapper|Mon Jan 29 16:40:12 EST 2024|./composer.sh require cweagans/composer-patches
 65de35fce0fecb7d5ada406734759296|Matt Poole|feature/BSD-58-reuse-section-for-wrapper|Mon Jan 29 16:40:12 EST 2024|./composer.sh update --lock
 c40b2c85e6e96b0e5de8aa649eb6477d|Matt Poole|feature/BSD-16-footer-refinements|Fri Mar  1 15:21:03 EST 2024|./composer.sh require drupal/imagecache_external:^3.0
+f996e536d04232a5a8b1c61a6563d846|Buddy Harlow|feature/BSD-103-install-chosen-module|Fri Mar 15 11:03:26 UTC 2024|./composer.sh require drupal/chosen:^4.0
+927e55f6845342cbcbf351c3a91af45e|Matt Poole|feature/BSD-103-install-chosen-module|Mon Mar 18 15:48:01 EDT 2024|./composer.sh require jjj/chosen:2.2.1
