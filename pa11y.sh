@@ -11,6 +11,6 @@ else
   cd bixal-pa11y-node
 fi
 
-node app.js -c config.json -s http://bixalcom_blah.lndo.site/sitemap.xml?page=1
+node app.js -c config.json -s http://bixalcom.lndo.site/sitemap.xml?page=1
 
 echo 'HTML reports can be found in bixal-pa11y-node/pa11y_html'
