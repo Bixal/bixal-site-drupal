@@ -71,12 +71,14 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         $entity_query = \Drupal::entityQuery('node');
         $entity_query->condition('type', 'bixaler')
           ->accessCheck(TRUE)
+          ->condition('status', NodeInterface::PUBLISHED)
           ->sort('title', 'ASC');
         $results = $entity_query->execute();
         $nodes = Node::loadMultiple($results);
         if (empty($nodes)) {
           return;
         }
+
         // Instantiate arrays to pass to template.
         $filter_content = [];
         // Add 'All' option by default.
@@ -141,6 +143,9 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           'filter_content' => $filter_content,
           'filter_options' => $filter_options,
         ];
+
+        // Reset cache.
+        $vars['#cache']['tags'][] = "node_list:bixaler";
 
         break;
 
