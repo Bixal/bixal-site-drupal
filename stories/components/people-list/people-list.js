@@ -2,11 +2,16 @@ import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const trigger = document.querySelector("[data-dropdown-toggle]");
+  if (!trigger) {
+    return;
+  }
   const target = document.getElementById(trigger.getAttribute("aria-controls"));
   // const filterOptions = target.querySelectorAll(".bix-filter__dropdown-option");
   const filterItems = document.querySelectorAll(".bix-person");
+  if (!filterItems) {
+    return;
+  }
 
-  
   /**
    * Basic content filtering.
    *

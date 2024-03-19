@@ -1,0 +1,20 @@
+uuid: 7b364043-2cb7-424e-8bb2-86faa8e4bb6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_toolbar_search
+    - role_delegation
+    - system
+    - toolbar
+id: site_admin
+label: Site-Admin
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access toolbar'
+  - 'administer users'
+  - 'assign editor role'
+  - 'use admin toolbar search'
+  - 'view the administration theme'
