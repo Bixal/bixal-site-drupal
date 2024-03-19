@@ -71,16 +71,13 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         $entity_query = \Drupal::entityQuery('node');
         $entity_query->condition('type', 'bixaler')
           ->accessCheck(TRUE)
+          ->condition('status', NodeInterface::PUBLISHED)
           ->sort('title', 'ASC');
         $results = $entity_query->execute();
         $nodes = Node::loadMultiple($results);
         if (empty($nodes)) {
           return;
         }
-
-        // Setting up cache contexts.
-        $cache_contexts = ['node'];
-        $cache_contexts[] = '<bixaler>';
 
         // Instantiate arrays to pass to template.
         $filter_content = [];
@@ -148,7 +145,8 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         ];
 
         // Reset cache.
-        $vars['#attached']['drupalSettings']['cacheContexts'] = $cache_contexts;
+        $vars['#cache']['tags'][] = "node_list:bixaler";
+
         break;
 
       case "job_listing":
