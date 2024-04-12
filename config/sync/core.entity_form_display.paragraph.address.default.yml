@@ -1,0 +1,41 @@
+uuid: 619bc9d5-bceb-47ad-aa5b-2101131b0be6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.address.field_email
+    - field.field.paragraph.address.field_name_and_title
+    - field.field.paragraph.address.field_phone_number
+    - paragraphs.paragraphs_type.address
+id: paragraph.address.default
+targetEntityType: paragraph
+bundle: address
+mode: default
+content:
+  field_email:
+    type: email_default
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_name_and_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_number:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -81,14 +81,23 @@
   {% block content %}
     {% embed "@components/section/section.html.twig" %}
       {% set body %}
-        {{ {
+      {{ {
           '#theme': 'page_title',
           '#title': node.title.value,
         } }}
-        {% for section in content %}
-          <h2>{{ section['#title'] }}</h2>
-          {{ section.0 }}
-        {% endfor %}
+      <h2>{{content.field_general_overview['#title']}}</h2>
+      {{content.field_general_overview}}
+      <h2>{{content.field_contractor_capabilities['#title']}}</h2>
+      {{content.field_contractor_capabilities}}
+      <h2>{{content.field_key_points_of_contact['#title']}}</h2>
+      <p>To contact us for information on the
+        {{node.title.value}}
+        vehicle, please use the following contact information:</p>
+      {{content.field_key_points_of_contact}}
+
+      <h2>{{content.field_information['#title']}}</h2>
+      {{content.field_information}}
+
       {% endset %}
     {% endembed %}
 
