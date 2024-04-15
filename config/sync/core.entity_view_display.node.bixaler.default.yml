@@ -27,14 +27,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_bucket_list:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 107
+    weight: 7
     region: content
   field_certifications:
     type: entity_reference_label
@@ -42,7 +42,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -51,7 +51,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 108
+    weight: 8
     region: content
   field_languages:
     type: entity_reference_label
@@ -59,7 +59,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_link:
     type: link
@@ -71,7 +71,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 109
+    weight: 9
     region: content
   field_role:
     type: entity_reference_label
@@ -79,7 +79,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_specialties:
     type: entity_reference_label
@@ -87,7 +87,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_team:
     type: entity_reference_label
@@ -95,12 +95,12 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true
