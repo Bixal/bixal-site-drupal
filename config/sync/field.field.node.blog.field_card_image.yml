@@ -11,7 +11,7 @@ field_name: field_card_image
 entity_type: node
 bundle: blog
 label: 'Card Image'
-description: 'This is an optional field if you would like to have more control over the presentation of the image in the card context. If no image is chosen, the banner image will be used in card by default.'
+description: 'This is an optional field if you would like to have more control over the presentation of the image in the card context. If no image is chosen, the banner image will be used in card by default. Recommended image size: At least 667px wide X 302px tall.'
 required: false
 translatable: false
 default_value: {  }

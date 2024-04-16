@@ -11,7 +11,7 @@ field_name: field_banner_image
 entity_type: node
 bundle: blog
 label: 'Banner Image'
-description: ''
+description: 'Recommended image size at least 600px tall and wide enough to support 4k monitors at 4096px.'
 required: true
 translatable: false
 default_value: {  }
