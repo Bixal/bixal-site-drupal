@@ -8,3 +8,6 @@ c40b2c85e6e96b0e5de8aa649eb6477d|Matt Poole|feature/BSD-16-footer-refinements|Fr
 f996e536d04232a5a8b1c61a6563d846|Buddy Harlow|feature/BSD-103-install-chosen-module|Fri Mar 15 11:03:26 UTC 2024|./composer.sh require drupal/chosen:^4.0
 927e55f6845342cbcbf351c3a91af45e|Matt Poole|feature/BSD-103-install-chosen-module|Mon Mar 18 15:48:01 EDT 2024|./composer.sh require jjj/chosen:2.2.1
 c526c01ae049ec54dc350a91c25bd44b|Buddy Harlow|feature/BSD-109-update-composer-dependencies|Mon Mar 18 20:07:03 UTC 2024|./composer.sh update
+f9425f233605ab54f451c3e173731a1c|Buddy Harlow|feature/BSD-116-unpublish-bixaler-fix|Tue Apr  9 14:46:18 UTC 2024|./composer.sh require drupal/override_node_options:^2.7
+5d47a217007220b7388ce666b3df7f8e|Buddy Harlow|feature/BSD-116-unpublish-bixaler-fix|Tue Apr  9 14:56:30 UTC 2024|./composer.sh require drupal/view_unpublished:^1.2
+26995193934405a77347fadc2f29ba8a|Buddy Harlow|feature/BSD-117-bixaler-term-reference-fields|Tue Apr 16 10:40:07 EDT 2024|./composer.sh require drupal/autocomplete_deluxe:^2.0

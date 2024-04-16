@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  autocomplete_deluxe: 0
   bixal_default_content: 0
   bixal_drush_commands: 0
   block: 0
@@ -42,6 +43,7 @@ module:
   mysql: 0
   node: 0
   options: 0
+  override_node_options: 0
   page_cache: 0
   path: 0
   path_alias: 0
@@ -63,6 +65,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  view_unpublished: 0
   views_ui: 0
   menu_admin_per_menu: 1
   pathauto: 1
