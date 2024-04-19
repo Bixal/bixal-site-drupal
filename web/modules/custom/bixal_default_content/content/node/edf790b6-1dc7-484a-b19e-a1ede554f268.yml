@@ -70,11 +70,10 @@ default:
           field_email:
             -
               value: maricarmen.smith-martinez@bixal.com
-          field_name_and_title:
+          field_name_title:
             -
-              value: 'Maricarmen Smith-Martinez'
-            -
-              value: 'Senior Director, Strategic Growth and Partnerships'
+              value: 'Maricarmen Smith-Martinez <br> Senior Director, Strategic Growth and Partnerships'
+              format: html_text
           field_phone_number:
             -
               value: 703.634.5701

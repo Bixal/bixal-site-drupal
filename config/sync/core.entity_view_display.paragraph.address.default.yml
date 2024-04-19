@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.address.field_email
-    - field.field.paragraph.address.field_name_and_title
+    - field.field.paragraph.address.field_name_title
     - field.field.paragraph.address.field_phone_number
     - paragraphs.paragraphs_type.address
+  module:
+    - text
 id: paragraph.address.default
 targetEntityType: paragraph
 bundle: address
@@ -19,13 +21,12 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_name_and_title:
-    type: string
+  field_name_title:
+    type: text_default
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
   field_phone_number:
     type: string

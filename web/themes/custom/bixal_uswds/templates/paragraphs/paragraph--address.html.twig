@@ -47,13 +47,11 @@
   ]
 %}
 {% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    {% block content %}
-      <address>
-        <b>{{content.field_name_and_title}}</b>
-        <a href="\" javascript:void(0)\"">{{content.field_email}}</a>
-        <a href="\" javascript:void(0)\"">{{content.field_phone_number}}</a>
-      </address>
-    {% endblock %}
-  </div>
+  <address>
+    <b>{{content.field_name_title | field_value}}</b>
+    <br>
+    <a href="mailto: {{content.field_email | field_value}}" javascript:void(0)\"">{{content.field_email | field_value}}</a>
+    <br>
+    <a href="tel: {{content.field_phone_number | field_value}}">{{content.field_phone_number | field_value}}</a>
+  </address>
 {% endblock paragraph %}

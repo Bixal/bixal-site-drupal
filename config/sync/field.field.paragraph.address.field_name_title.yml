@@ -1,0 +1,24 @@
+uuid: d150701c-e6b1-4ed7-a928-b8fd68875c70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name_title
+    - filter.format.html_text
+    - paragraphs.paragraphs_type.address
+  module:
+    - text
+id: paragraph.address.field_name_title
+field_name: field_name_title
+entity_type: paragraph
+bundle: address
+label: 'Name and Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+field_type: text

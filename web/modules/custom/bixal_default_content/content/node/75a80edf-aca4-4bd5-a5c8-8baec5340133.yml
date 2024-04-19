@@ -70,11 +70,10 @@ default:
           field_email:
             -
               value: annie.schwartz@bixal.com
-          field_name_and_title:
+          field_name_title:
             -
-              value: 'Annie Schwartz'
-            -
-              value: 'Senior Director Monitoring, Evaluation and Learning'
+              value: 'Annie Schwartz <br> Senior Director Monitoring, Evaluation and Learning'
+              format: html_text
           field_phone_number:
             -
               value: 703.634.5701

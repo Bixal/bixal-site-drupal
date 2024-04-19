@@ -70,11 +70,10 @@ default:
           field_email:
             -
               value: fred.jorgensen@bixal.com
-          field_name_and_title:
+          field_name_title:
             -
-              value: 'Fred Jorgensen'
-            -
-              value: ' VP of Strategic Growth'
+              value: 'Fred Jorgensen,  VP of Strategic Growth'
+              format: html_text
           field_phone_number:
             -
               value: 703.634.5701
@@ -99,11 +98,10 @@ default:
           field_email:
             -
               value: oasissb@bixal.com
-          field_name_and_title:
+          field_name_title:
             -
-              value: 'Ottavia Criss'
-            -
-              value: 'OASIS IDIQ Manager'
+              value: 'Ottavia Criss, OASIS IDIQ Manager'
+              format: html_text
           field_phone_number:
             -
               value: 703.634.5701
