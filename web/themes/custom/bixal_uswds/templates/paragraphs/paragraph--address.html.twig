@@ -46,12 +46,17 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+{% set name_and_title %}
+{{ content.field_name_title }}
+{% endset %}
+
 {% block paragraph %}
   <address>
-    <b>{{content.field_name_title | field_value}}</b>
+    <b>{{name_and_title | striptags }}</b>
     <br>
     <a href="mailto: {{content.field_email | field_value}}" javascript:void(0)\"">{{content.field_email | field_value}}</a>
     <br>
     <a href="tel: {{content.field_phone_number | field_value}}">{{content.field_phone_number | field_value}}</a>
   </address>
+  {{dd(content.field_name_title | field_value)}}
 {% endblock paragraph %}
