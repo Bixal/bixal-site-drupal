@@ -47,7 +47,7 @@ filters:
   filter_html_escape:
     id: filter_html_escape
     provider: filter
-    status: true
+    status: false
     weight: -50
     settings: {  }
   filter_html_image_secure:
@@ -71,7 +71,7 @@ filters:
   filter_url:
     id: filter_url
     provider: filter
-    status: true
+    status: false
     weight: -49
     settings:
       filter_url_length: 72

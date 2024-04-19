@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_name_title
-    - filter.format.html_text
+    - filter.format.plain_text
     - paragraphs.paragraphs_type.address
   module:
     - text
@@ -13,12 +13,12 @@ field_name: field_name_title
 entity_type: paragraph
 bundle: address
 label: 'Name and Title'
-description: ''
+description: "You can split the output up into multiple lines by using the linebreak tag &lt;br&gt;\r\n<br>\r\nExample: <br>\r\nJohn Doe &lt;br&gt; Director of Directing, Department of Direction and Directing\"\r\n<br>\r\nBecomes: <br>\r\nJohn Doe <br> Director of Directing, Department of Direction and Directing"
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    - html_text
+    - plain_text
 field_type: text
