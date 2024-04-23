@@ -7,23 +7,21 @@ dependencies:
     - field.field.paragraph.address.field_name_title
     - field.field.paragraph.address.field_phone_number
     - paragraphs.paragraphs_type.address
-  module:
-    - text
 id: paragraph.address.default
 targetEntityType: paragraph
 bundle: address
 mode: default
 content:
   field_email:
-    type: basic_string
+    type: email_mailto
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_name_title:
-    type: text_default
-    label: hidden
+    type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 4

@@ -72,8 +72,7 @@ default:
               value: ottavia.criss@bixal.com
           field_name_title:
             -
-              value: 'Ottavia Criss, GSA TOTAL BPA Manager'
-              format: html_text
+              value: "Ottavia Criss\r\nGSA TOTAL BPA Manager"
           field_phone_number:
             -
               value: 703.634.5701

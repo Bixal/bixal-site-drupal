@@ -7,8 +7,6 @@ dependencies:
     - field.field.paragraph.address.field_name_title
     - field.field.paragraph.address.field_phone_number
     - paragraphs.paragraphs_type.address
-  module:
-    - text
 id: paragraph.address.default
 targetEntityType: paragraph
 bundle: address
@@ -16,27 +14,27 @@ mode: default
 content:
   field_email:
     type: email_default
-    weight: 2
+    weight: 1
     region: content
     settings:
       placeholder: ''
       size: 60
     third_party_settings: {  }
   field_name_title:
-    type: text_textfield
+    type: string_textarea
     weight: 0
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      rows: 5
+      placeholder: "Name, Title\r\nor\r\nName\r\nTitle\r\nSupports as many names and titles in this form as needed."
     third_party_settings: {  }
   field_phone_number:
     type: string_textfield
-    weight: 3
+    weight: 2
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 123.123.1234
     third_party_settings: {  }
 hidden:
   created: true

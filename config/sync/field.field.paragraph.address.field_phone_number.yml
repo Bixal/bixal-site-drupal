@@ -10,7 +10,7 @@ field_name: field_phone_number
 entity_type: paragraph
 bundle: address
 label: 'Phone Number'
-description: 'Entered as 999.999.9999'
+description: ''
 required: false
 translatable: false
 default_value: {  }
