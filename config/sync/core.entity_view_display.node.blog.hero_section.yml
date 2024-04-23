@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.hero_section
     - field.field.node.blog.body
     - field.field.node.blog.field_banner_image
+    - field.field.node.blog.field_card_image
     - field.field.node.blog.field_date
     - field.field.node.blog.field_decorative_title
     - node.type.blog
@@ -35,6 +36,7 @@ content:
     region: content
 hidden:
   body: true
+  field_card_image: true
   field_date: true
   langcode: true
   links: true

@@ -76,10 +76,15 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
+{% if content.field_card_image | field_value is not empty%}
+  {% set card_image = content.field_card_image | field_value %}
+{% else %}
+  {% set card_image = content.field_banner_image | field_value %}
+{% endif %}
 
 {% include "@components/blurb/blurb-base.html.twig" with {
   'title': node.label,
-  'image' : content.field_banner_image | field_value,
+  'image' : card_image,
   'date': content.field_date.0['#text'],
   'href': path('entity.node.canonical', {'node': node.id}),
   'additional_classes': classes,

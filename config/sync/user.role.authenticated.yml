@@ -20,5 +20,6 @@ permissions:
   - 'access content'
   - 'access contextual links'
   - 'use text format html_text'
+  - 'view all revisions'
   - 'view media'
   - 'view own unpublished content'

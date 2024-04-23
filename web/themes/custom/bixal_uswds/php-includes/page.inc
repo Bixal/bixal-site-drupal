@@ -17,7 +17,7 @@ use Drupal\node\NodeInterface;
  * @return \Drupal\Core\Url
  *   A Drupal Url.
  */
-function _bixal_uswds_get_storybook_icon_file_url(string $file_name_or_icon_name) :Url {
+function _bixal_uswds_get_storybook_icon_file_url(string $file_name_or_icon_name): Url {
   if (!str_ends_with($file_name_or_icon_name, '.svg')) {
     $file_name_or_icon_name .= '.svg';
   }
@@ -62,6 +62,11 @@ function bixal_uswds_preprocess_page(&$vars) {
     'aria_label' => t('Social links'),
     'items' => [
       [
+        "href" => "https://www.linkedIn.com/company/bixa",
+        "label" => t("LinkedIn"),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
+      ],
+      [
         "href" => "https://www.facebook.com/bixal",
         "label" => t("Facebook"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('facebook.svg')->toString(),
@@ -70,16 +75,6 @@ function bixal_uswds_preprocess_page(&$vars) {
         "href" => "https://www.twitter.com/bixal",
         "label" => t("Twitter"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('twitter.svg')->toString(),
-      ],
-      [
-        "href" => "https://www.linkedIn.com/company/bixa",
-        "label" => t("LinkedIn"),
-        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
-      ],
-      [
-        "href" => "https://medium.com/bixal",
-        "label" => t("Medium"),
-        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('medium.svg')->toString(),
       ],
     ],
   ];
