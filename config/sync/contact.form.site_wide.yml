@@ -1,0 +1,12 @@
+uuid: 426c9b40-1d8e-4ae1-b757-cc799a0dbfd2
+langcode: en
+status: true
+dependencies: {  }
+id: site_wide
+label: 'Site Wide'
+recipients:
+  - matt.poole@bixal.com
+reply: ''
+weight: 0
+message: 'Thank you for the submission!'
+redirect: ''

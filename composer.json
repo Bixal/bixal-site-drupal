@@ -40,6 +40,7 @@
         "drupal/autocomplete_deluxe": "^2.0",
         "drupal/chosen": "^4.0",
         "drupal/components": "^3.0@beta",
+        "drupal/config_ignore": "^3.3",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",

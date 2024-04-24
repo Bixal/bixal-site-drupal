@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 
 /**
  * Implements hook_form_alter().
@@ -34,6 +35,68 @@ function bixal_uswds_form_alter(&$form, FormStateInterface $form_state, $form_id
     // Add a placeholder.
     $form["basic"]["keys"]['#attributes']['placeholder'] = t('Enter search terms');
   }
+  elseif ($form_id === 'contact_message_site_wide_form') {
+    foreach (Element::children($form) as $key) {
+      $field =& $form[$key]['widget'][0]['value'];
+      switch ($key) {
+        case 'field_company':
+        case 'message':
+          $field['#title_display'] = 'form-no-label';
+          $field['#no_wrapper'] = 1;
+          if ($key === 'message') {
+            $field['#placeholder'] = t('Want to find out more or interested in doing business with us? type message here...');
+          }
+          else {
+            $field['#placeholder'] = $field['#title'];
+          }
+          if (!empty($field['#required'])) {
+            $field['#placeholder'] .= ' *';
+          }
+          break;
+
+        case 'name':
+        case 'mail':
+          $form[$key] = [
+            '#type' => 'textfield',
+            '#title' => $form[$key]['#title'],
+            '#title_display' => 'form-no-label',
+            '#maxlength' => 255,
+            '#required' => TRUE,
+            '#default_value' => $form[$key]['#value'] ?? '',
+            '#placeholder' => $form[$key]['#title'],
+            '#no_wrapper' => 1,
+            '#disabled' => !empty($form[$key]['#value']),
+          ];
+          if ($key === 'mail') {
+            $form[$key]['#placeholder'] = t('Email');
+          }
+          if (!empty($form[$key]['#required'])) {
+            $form[$key]['#placeholder'] .= ' *';
+          }
+          break;
+
+        case 'subject':
+          $field['#type'] = 'hidden';
+          $field['#value'] = 'Submission';
+          $field['#no_wrapper'] = 1;
+          break;
+
+        case 'footer':
+          $form[$key]['#access'] = FALSE;
+          break;
+
+        case 'actions':
+          $form[$key]['#attributes']['class'][] = 'bix-contact__actions';
+          $form[$key]['submit']['#attributes']['class'] = ['bix-button', 'bix-button--inverse'];
+          $form[$key]['submit']['#value'] = t('Submit');
+          break;
+
+      }
+    }
+    unset($field);
+
+    $form['#attributes']['class'][] = 'bix-contact__form';
+  }
 
   // Add the USWDS form class.
   $form['#attributes']['class'][] = 'usa-form';
@@ -55,6 +118,27 @@ function bixal_uswds_preprocess_form_element(&$vars): void {
   if ($vars['disabled']) {
     $vars['label']['#attributes']['class'][] = 'is-disabled';
   }
+
+  if (!empty($vars['element']['#no_wrapper'])) {
+    $vars['no_wrapper'] = 1;
+  }
+}
+
+/**
+ * Implements hook_preprocess_input().
+ */
+function bixal_uswds_preprocess_input(&$vars): void {
+  if ($vars['element']['#type'] !== 'submit') {
+    $vars['attributes']['class'][] = 'bix-input';
+  }
+}
+
+/**
+ * Implements hook_preprocess_input().
+ */
+function bixal_uswds_preprocess_textarea(&$vars): void {
+  $vars['attributes']['class'][] = 'bix-input';
+  $vars['attributes']['class'][] = 'bix-input--textarea';
 }
 
 /**

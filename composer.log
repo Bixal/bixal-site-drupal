@@ -11,3 +11,4 @@ c526c01ae049ec54dc350a91c25bd44b|Buddy Harlow|feature/BSD-109-update-composer-de
 f9425f233605ab54f451c3e173731a1c|Buddy Harlow|feature/BSD-116-unpublish-bixaler-fix|Tue Apr  9 14:46:18 UTC 2024|./composer.sh require drupal/override_node_options:^2.7
 5d47a217007220b7388ce666b3df7f8e|Buddy Harlow|feature/BSD-116-unpublish-bixaler-fix|Tue Apr  9 14:56:30 UTC 2024|./composer.sh require drupal/view_unpublished:^1.2
 26995193934405a77347fadc2f29ba8a|Buddy Harlow|feature/BSD-117-bixaler-term-reference-fields|Tue Apr 16 10:40:07 EDT 2024|./composer.sh require drupal/autocomplete_deluxe:^2.0
+c47a85199108f03ebd272f68f72cdc68|Matt Poole|develop|Wed Apr 24 16:12:59 EDT 2024|./composer.sh require drupal/config_ignore

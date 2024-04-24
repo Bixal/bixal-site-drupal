@@ -14,6 +14,8 @@ module:
   chosen_lib: 0
   ckeditor5: 0
   components: 0
+  config_ignore: 0
+  contact: 0
   contextual: 0
   ctools: 0
   datetime: 0

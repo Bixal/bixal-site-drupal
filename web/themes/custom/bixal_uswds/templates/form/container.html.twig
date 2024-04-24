@@ -28,5 +28,8 @@
   has_parent ? 'form-wrapper',
   form_id == 'search_form' ? 'margin-bottom-1'
 ] %}
-
-<div{{ attributes.addClass(classes) }}>{{ children }}</div>
+{% if element.widget.0.value['#no_wrapper'] %}
+  {{ children }}
+{% else %}
+  <div{{ attributes.addClass(classes) }}>{{ children }}</div>
+{% endif %}
