@@ -1,0 +1,390 @@
+<style>
+  .gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden
+  }
+  .gatsby-image-wrapper picture.object-fit-polyfill {
+    position: static !important
+  }
+  .gatsby-image-wrapper img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover
+  }
+  .gatsby-image-wrapper [data-main-image] {
+    opacity: 0;
+    transform: translateZ(0);
+    transition: opacity 0.25s linear;
+    will-change: opacity
+  }
+  .gatsby-image-wrapper-constrained {
+    display: inline-block;
+    vertical-align: top
+  }
+</style>
+<noscript>
+  <style>
+    .gatsby-image-wrapper noscript [data-main-image] {
+      opacity: 1 !important
+    }
+    .gatsby-image-wrapper [data-placeholder-image] {
+      opacity: 0 !important
+    }
+  </style>
+</noscript>
+<script type="module">
+  const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+  e && document.body.addEventListener("load", (function (e) {
+    const t = e.target;
+    if (void 0 === t.dataset.mainImage) 
+      return;
+    
+
+    if (void 0 === t.dataset.gatsbyImageSsr) 
+      return;
+    
+
+    let a = null,
+      n = t;
+    for (; null === a && n;) 
+      void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode),
+      n = n.parentNode;
+    
+
+    const o = a.querySelector("[data-placeholder-image]"),
+      r = new Image;
+    r.src = t.currentSrc,
+    r.decode().catch((() => {})).then((() => {
+      t.style.opacity = 1,
+      o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear")
+    }))
+  }), !0);
+</script>
+<div id="case-study" class="page--case-study">
+  <section id="hero" class="section-container bg-image hero " style="background-color:transparent;color:black;padding:0px 0;background-image:radial-gradient(circle, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%), url(/static/d6b25ad6c22c438dde0709d18958c405/digital-apex-1.png)">
+    <div style="margin:0 auto;width:100%;max-width:1350px">
+      <div class="section-banner-details">
+        <div class="section-overview  section-overview--center">
+          <div class="piped-title" style="border-left-color:#fff;border-right-color:#fff">OUR WORK</div>
+          <div style="max-width:100%" class="section-overview__text">
+            <h1>Building cybersecurity capacity of civil society organizations in Colombia to improve digital health and protect against cyber threats.</h1>
+          </div>
+        </div>
+        <p class="section-banner-description"></p>
+      </div>
+    </div>
+  </section>
+  <section id="intro-section" class="section-container  intro-section " style="background-color:transparent;color:black;padding:30px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div id="case-study-intro" class="
+                                        intro-block
+                                        intro-block-2
+                                        intro-block--case-study-intro
+                                      ">
+        <div class="intro-block__heading">
+          <h3 class="intro-block-2__heading" style="color:#7d0096">United States Agency for International Development (USAID)</h3>
+          <h3 class="intro-block-2__heading" style="color:#7d0096">Digital APEX Colombia</h3>
+          <div class="intro-block-2__heading">
+            <span class="sc-bcXHqe cRdFuA">
+              <a class="decorative-link" rel="noreferrer" target="_blank" href="https://www.usaid.gov/colombia">https://www.usaid.gov/colombia</a>
+            </span>
+          </div>
+        </div>
+        <div class="introBlockDivider" style="border-color:#7d0096"></div>
+        <div class="emphasis-block-set">
+          <div class="emphasis-block-set__row">
+            <div class="emphasis-block emphasis-block--featured">
+              <div class="topic-subhead">
+                <p>Services</p>
+              </div>
+              <div class="emphasis-block__text">Cybersecurity Training, Virtual Instructor-led Training, Capacity Building, Instructional Design, Accessibility/508 Compliance, Bilingual English-Spanish Training Delivery, Communications, Marketing, Cybersecurity Risk Assessments, Agile Project Management</div>
+            </div>
+          </div>
+          <div class="emphasis-block-set__row"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-0" class="section-container  undefined-section--columns-0 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-multiple">
+        <div class="column-set__column " style="flex-basis:33%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Challenge</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">The increased use of technology, mobile phones and digital systems means USAID/Colombia’s IPs face a wide range of vulnerabilities, such as phishing attacks, account impersonation attempts and cyber-based corrupt financial transactions. The scarcity of cybersecurity education for vulnerable IPs translates to a higher risk of attacks and security breaches, which forces organizations to remedy system failures and change user behaviors to mitigate future attacks. Attacks can erode the public’s and stakeholders’ trust in how organizations handle personal and sensitive information, ultimately undermining IPs’ integrity and confidence in the programs they deploy.</div>
+          </div>
+        </div>
+        <div class="column-set__column " style="flex-basis:33%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Solution</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">Working with the USAID/Colombia Mission, Bixal developed and implemented a cybersecurity training program that used an interactive online training format, assessed existing hardware and software assets, and developed action plans aligned to best practices outlined in the Center for Internet Security (CIS) Controls to improve cybersecurity vulnerabilities.</div>
+          </div>
+        </div>
+        <div class="column-set__column " style="flex-basis:33%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Results</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">Through a combined approach of asynchronous training and virtual learning, 298 individuals representing 44 organizations in Colombia increased their knowledge of cybersecurity and improved their digital health practices. Bixal conducted cyber risk assessments with the most vulnerable partner organizations to develop roadmaps with action items designed to increase digital protection and reduce the risk of cyberattacks.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-1" class="section-container  undefined-section--columns-1 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Design &amp; Approach</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">Under Digital APEX — implemented by prime contractor Project Management Consulting Group (PMCG) — Bixal collaborated with the USAID/Colombia Mission to develop and implement the Cybersecurity Integration of Partners and Hacking Emergency Response (CIPHER), a cybersecurity training program that uses an easily replicable three-phased approach.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-2" class="section-container  undefined-section--columns-2 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Phase 1: Generating Cybersecurity Awareness</p>
+            </div>
+            <div class="column-content__text">Bixal introduced cybersecurity concepts to the participating organizations using KnowBe4, a platform that offers asynchronous training available in Spanish, which enabled the organizations’ leadership, program and IT staff to take self-paced courses and learn more about basic cybersecurity concepts.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-3" class="section-container  undefined-section--columns-3 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Phase 2: Assisting USAID IPs</p>
+            </div>
+            <div class="column-content__text">To deliver additional training and assistance, Bixal identified the 10 most vulnerable IPs based on data from initial training quizzes. We drafted rules of engagement that detailed system restrictions and boundaries to ensure confidentiality throughout the assessment process. Bixal then conducted the cybersecurity risk assessments, testing external and internal accessible systems, hosts and applications for IT, communications and network systems. After completing the assessments, Bixal scheduled individual sessions with each of the 10 IPs, designing virtual instructor-led training (ILT). The in-depth training enabled IT professionals to further diffuse cybersecurity best practices across the organization and ensure all users are aware of their behaviors and responsibility to mitigate cybersecurity attacks and threats.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-4" class="section-container  undefined-section--columns-4 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Phase 3: Developing and Disseminating Action Plans</p>
+            </div>
+            <div class="column-content__text">Bixal analyzed data collected through the in-depth training and risk assessments to draft individual action plans for each of the 10 IPs. Action plans communicated assessment results, documented cybersecurity vulnerabilities and provided recommendations for remediation. Bixal and Digital APEX met with IT and management staff of IPs to review action plans and outline steps for IPs to ensure future cybersecurity.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-5" class="section-container  undefined-section--columns-5 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Delivering the Solution</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">Bixal uses proven methods for delivering the right solution to the right client.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-6" class="section-container  undefined-section--columns-6 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Collaboration, Learning and Adapting (CLA) Approach</p>
+            </div>
+            <div class="column-content__text">Strong CLA practices enabled Bixal to learn from client feedback and incorporate process improvements to generate better outcomes. The Bixal team met with the client weekly to plan activities, make decisions on preferred approaches for activity implementation, discuss impediments, and identify solutions. This level of client collaboration allowed us to continuously adapt to changing circumstances and stakeholder needs.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-7" class="section-container  undefined-section--columns-7 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Local Cybersecurity Expertise</p>
+            </div>
+            <div class="column-content__text">We leveraged a new partnership with Functional Cybersecurity International LLC (FC International), engaging local SMEs with extensive knowledge of cybersecurity threats in Colombia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-8" class="section-container  undefined-section--columns-8 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="topic-subhead">
+              <p>Data-Centered Methodology</p>
+            </div>
+            <div class="column-content__text">We used data from the cybersecurity training and testing to identify the most vulnerable organizations participating in the program, to inform cybersecurity solutions and topics covered in webinars tailored to selected partners, and to assess the effectiveness of training provided.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-9" class="section-container  undefined-section--columns-9 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Unexpected Challenge</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+            <div class="column-content__text">As the COVID-19 pandemic worsened and international travel was restricted, Bixal converted our training plan from instructor led to virtual delivery. In-house instructional designers worked with cybersecurity experts to design a highly interactive virtual course that used adult-learning techniques, collaborative whiteboards, short quizzes and pop-up polls to keep participants engaged. As a result of virtual training, 146 participants from 10 IPs experienced a substantial improvement in their cybersecurity knowledge.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="digital-apex-section--callout-10" class="section-container  digital-apex-section--callout-10 section--callout" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="callout" style="background-color:#172d6a;color:#fff">
+        <div class="heading heading--underlined">
+          <h2 class="heading__content">Outcomes</h2>
+          <div class="heading__line" style="background-color:#7d0096"></div>
+        </div>
+        <div class="callout__text">
+          <p>Bixal applied an Agile learning approach in designing and developing a cybersecurity training program to help USAID IPs and civil society organizations in Colombia improve their digital health, build local capacity and strengthen cybersecurity practices. As part of this program, Bixal provided access to asynchronous training modules and delivered 15 synchronous virtual ILT sessions to over 298 participants from 44 USAID partners. The topics selected contributed to a growing knowledge base on cybersecurity vulnerabilities that impact organizations’ governance structure, technology infrastructure and business operations.</p>
+          <p>Working with the USAID/Colombia Mission, Bixal assessed existing hardware and software assets for cybersecurity vulnerabilities and delivered training organized into five learning topics that mapped to 20 CIS controls.</p>
+          <p>In Bixal’s experience, when people understand cybersecurity threats and demonstrate familiarity with best practices to combat cyberattacks, the likelihood of destructive cyberattacks decreases.</p>
+          <p>Webinar quiz results demonstrated that USAID/Colombia’s IPs had a low baseline knowledge of cybersecurity. Data from the 10 risk assessments conducted in Phase II confirmed the need for cybersecurity action plans. Over 95 percent of participants who identified as “novice” before the training advanced their knowledge to align with higher competency levels as a result of the program. Detailed post-training survey results are captured in the following chart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-11" class="section-container  undefined-section--columns-11 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Improvements in recipients’ cybersecurity knowledge after in-depth interactive training.</h2>
+              <div class="heading__line" style="background-color:#7d0096"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-12" class="section-container  undefined-section--columns-12 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper">
+              <div aria-hidden="true" style="padding-top:58.57988165680473%"></div>
+              <div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear"></div>
+              <picture><source type="image/webp" data-srcset="/static/83e9cb73b7db5b160f83cd2ee67e77d8/17a31/digital-apex-2.webp 750w,/static/83e9cb73b7db5b160f83cd2ee67e77d8/bb2c3/digital-apex-2.webp 1014w" sizes="100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="100vw" decoding="async" loading="lazy" data-src="/static/83e9cb73b7db5b160f83cd2ee67e77d8/2e618/digital-apex-2.png" data-srcset="/static/83e9cb73b7db5b160f83cd2ee67e77d8/c5f34/digital-apex-2.png 750w,/static/83e9cb73b7db5b160f83cd2ee67e77d8/2e618/digital-apex-2.png 1014w" alt="chart showing post-training survey results on cybersecurity knowledge"/></picture>
+              <noscript>
+                <picture><source type="image/webp" srcset="/static/83e9cb73b7db5b160f83cd2ee67e77d8/17a31/digital-apex-2.webp 750w,/static/83e9cb73b7db5b160f83cd2ee67e77d8/bb2c3/digital-apex-2.webp 1014w" sizes="100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="100vw" decoding="async" loading="lazy" src="/static/83e9cb73b7db5b160f83cd2ee67e77d8/2e618/digital-apex-2.png" srcset="/static/83e9cb73b7db5b160f83cd2ee67e77d8/c5f34/digital-apex-2.png 750w,/static/83e9cb73b7db5b160f83cd2ee67e77d8/2e618/digital-apex-2.png 1014w" alt="chart showing post-training survey results on cybersecurity knowledge"/></picture>
+              </noscript>
+              <script type="module">
+                const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+                if (t) {
+                  const t = document.querySelectorAll("img[data-main-image]");
+                  for (let e of t) {
+                    e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")),
+                    e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"));
+                    const t = e.parentNode.querySelectorAll("source[data-srcset]");
+                    for (let e of t) 
+                      e.setAttribute("srcset", e.dataset.srcset),
+                      e.removeAttribute("data-srcset");
+                    
+
+                    e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0)
+                  }
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-13" class="section-container  undefined-section--columns-13 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="column-content__text">These results demonstrate that a multi-faceted approach, coupling asynchronous and virtual ILT with risk assessments and roadmaps for improvement, can result in significant improvements in cybersecurity awareness.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="digital-apex-section--emphasis-blocks-14" class="section-container  digital-apex-section--emphasis-blocks-14 section--emphasis-blocks" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="emphasis-block-set">
+        <div class="emphasis-block-set__row">
+          <div class="emphasis-block emphasis-block--featured">
+            <div class="topic-subhead">
+              <p>Highlight</p>
+            </div>
+            <div class="emphasis-block__text">Overall, Bixal delivered cybersecurity training to 298 individuals, supporting capacity development for 44 organizations to improve their digital health.</div>
+          </div>
+        </div>
+        <div class="emphasis-block-set__row"></div>
+      </div>
+    </div>
+  </section>
+</div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/
+window.pagePath = "/our-work/digital-apex/";
+window.___webpackCompilationHash = "a06665383b741f3aa4c1"; /*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/
+window.___chunkMapping = {
+  "polyfill": ["/polyfill-71426064197f37fd8168.js"],
+  "app": ["/app-071ed289116e4fb5f844.js"],
+  "component---src-pages-404-js": ["/component---src-pages-404-js-a8c7736d17a9ce5ac13e.js"],
+  "component---src-pages-about-index-js": ["/component---src-pages-about-index-js-eb5b5a7b8dfc00440d2c.js"],
+  "component---src-pages-blog-index-js": ["/component---src-pages-blog-index-js-da2e906add700328850f.js"],
+  "component---src-pages-careers-index-js": ["/component---src-pages-careers-index-js-1191e82cbdda01d1ab81.js"],
+  "component---src-pages-contract-vehicles-index-js": ["/component---src-pages-contract-vehicles-index-js-df326cfb740f55247217.js"],
+  "component---src-pages-deia-js": ["/component---src-pages-deia-js-c566f96c737ecbf10f83.js"],
+  "component---src-pages-holiday-2023-index-js": ["/component---src-pages-holiday-2023-index-js-da0b4948883202b4a7be.js"],
+  "component---src-pages-index-js": ["/component---src-pages-index-js-4cabdec5322fad838e11.js"],
+  "component---src-pages-markdown-remark-frontmatter-slug-jsx": ["/component---src-pages-markdown-remark-frontmatter-slug-jsx-8f39af43a26f3c2d2f09.js"],
+  "component---src-pages-our-work-index-js": ["/component---src-pages-our-work-index-js-8176aee2358070a65e0e.js"],
+  "component---src-pages-privacy-js": ["/component---src-pages-privacy-js-d4b8e6b1c91cc23e20c9.js"],
+  "component---src-templates-case-study-js": ["/component---src-templates-case-study-js-396d1165e284b02e7744.js"],
+  "component---src-templates-case-study-legacy-js": ["/component---src-templates-case-study-legacy-js-10f25bf639c48d445884.js"],
+  "component---src-templates-contract-vehicle-js": ["/component---src-templates-contract-vehicle-js-15edda6738d7d2186450.js"],
+  "component---src-templates-person-profile-js": ["/component---src-templates-person-profile-js-39578bc98c790a199d6c.js"]
+}; /*]]>*/</script><script src="/polyfill-71426064197f37fd8168.js" nomodule=""></script><script src="/app-071ed289116e4fb5f844.js" async=""></script><script src="/framework-261b3c8cc3bd8dfe6dfa.js" async=""></script><script src="/webpack-runtime-f4b601a5b1ec8ea50b55.js" async=""></script></body></html>

@@ -2,8 +2,8 @@
 
 {# Image is decorative and needs to be hidden to avoid a11y issue. #}
 {% set image %}
-  {% include "@partials/media-image.html.twig" with {
-    'image': image | default('<img src="https://www.bixal.com/static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">'),
+{% include "@partials/media-image.html.twig" with {
+    'image': image | default('<img src="tatic/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">'),
     'additional_classes': ['bix-description-list__media'],
     'aria_hidden': true
   } %}
@@ -14,16 +14,16 @@
 {% endif %}
 
 {% set items %}
-  {% if items is empty %}
-    <dd>Department of Health and Human Services</dd>
-    <dd>Centers for Medicare & Medicaid Services</dd>
-    <dd>National Institutes of Health</dd>
-    <dd>National Library of Medicine</dd>
-  {% else %}
-    {% for item in items %}
-      <dd>
-        {{ item }}
-      </dd>
-    {% endfor %}
-  {% endif %}
+{% if items is empty %}
+  <dd>Department of Health and Human Services</dd>
+  <dd>Centers for Medicare & Medicaid Services</dd>
+  <dd>National Institutes of Health</dd>
+  <dd>National Library of Medicine</dd>
+{% else %}
+  {% for item in items %}
+    <dd>
+      {{ item }}
+    </dd>
+  {% endfor %}
+{% endif %}
 {% endset %}

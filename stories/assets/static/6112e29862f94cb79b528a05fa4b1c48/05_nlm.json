@@ -1,0 +1,104 @@
+{
+  "jsonId": "nlm",
+  "order": "05",
+  "title": "Expanding on the government's mission to improve Americans’ health.",
+  "template": "old",
+  "description": "NLM’s mission is to provide consumers and medical practitioners with authoritative health information, primarily through its flagship website, MedlinePlus, and its companion site, MedlinePlus en español. Bixal is helping NLM achieve this goal by supporting content production, social media outreach, search engine optimization, workflow management, and quality assurance.",
+  "overlayDescription": "Multilingual marketing expands health services reach",
+  "caseStudyURL": "https://medlineplus.gov/",
+  "caseStudyLabel": "https://medlineplus.gov/",
+  "logo": "medline-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "4-medline-plus.jpg",
+  "heroImageAlt": "two women medical practitioners working together",
+  "landingImage": "4-medline-plus.jpg",
+  "landingImageAlt": "two women medical practitioners working together",
+  "details": {
+    "client": "MedlinePlus and MedlinePlus en español, National Library of Medicine (NLM)",
+    "client_abrev": "Medline Plus, Medline Plus en español",    
+    "project": "MedlinePlus and MedlinePlus en español",
+    "technology": null
+  },
+  "primaryColor": "#06c5bc",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Expanding the Reach",
+          "description": "Bixal assembled a highly qualified team of UX specialists, health and consumer librarians, bilingual marketing communications specialists, developers, and designers to help NLM develop a top-quality, user-friendly consumer health website in MedlinePlus and MedlinePlus en español. The diverse Bixal team works closely with NLM to plan and execute the production, dissemination, and promotion of content on the website through different social media channels. Bixal collaborates with NLM to conduct Section 508 compliance and promote the use of plain language to ensure that relevant health content is easily accessible for all users.",
+          "images": [
+            {
+              "image": "medline-image-1.jpg",
+              "imageAlt": "woman medical practitioner smiling at patient"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Search Engine Optimization",
+          "description": "<p>Bixal conducted a comprehensive search engine optimization (SEO) audit of MedlinePlus and presented a prioritized list of recommendations to NLM on methods to improve SEO and drive more traffic to important medical information.</p><p>Bixal supports inbound marketing using social media and other channels, continually monitoring and reporting findings to NLM. The Bixal team looks for outreach and engagement opportunities and compiles weekly and monthly analytics reports using Google Analytics and other tools to measure against specific targets to evaluate the effectiveness of SEO and outreach activities.</p><p>As a result of these efforts, and for the first time, MedlinePlus was <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.searchmetrics.com/us/google-winner-loser-2016/\">ranked 7th of the top 100 sites</a>with more visibility in 2016, just below Facebook, Instagram, YouTube, and Google.</p>",
+          "images": [
+            {
+              "image": "medline-image-2.png",
+              "imageAlt": "information blocks"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": true,
+        "overview": {
+          "heading": "Web Coding and User Interface",
+          "description": "Bixal also provides custom programming support to create and maintain web pages using HTML, RSS, and CSS within the MedlinePlus custom CMS and TeamSite CMS. Developers ensure that web pages can support desktop, tablet, and mobile devices and are compatible with multiple web browsers.",
+          "images": [
+            {
+              "image": "medline-image-3.png",
+              "imageAlt": "display of browser code and website interface"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "features",
+        "bgColor": false,
+        "overview": {
+          "heading": null,
+          "description": null,
+          "images": [
+            {
+              "image": "medline-icon-1.png",
+              "imageAlt": "icon of chat bubbles",
+              "imageHeading": "Spanish Language Support",
+              "imageDescription": "The Latino community actively engages online and needs high-quality information on health and other important issues. To meet the community’s information needs, Bixal’s Spanish Language Support Team organizes, edits, updates, and publishes Spanish content for MedlinePlus en español. The Spanish Language Specialist also writes content for the Qué hay de nuevo en MedlinePlus newsletter; supports the promotion of health information and NLM activities through the @MedlinePlusEsp Twitter feed, the MedlinePlus en español Facebook page, and other social media channels; and provides translations that are culturally relevant and neutral. Bixal’s support helped MedlinePlus en español reach 10,000 followers on its Facebook page."
+            },
+            {
+              "image": "medline-icon-2.png",
+              "imageAlt": "icon indicating navigation on mobile device",
+              "imageHeading": "Systems Librarian and Accessibility Support",
+              "imageDescription": "Bixal proactively monitors content and identifies areas for improvement throughout the MedlinePlus site and also performs site testing for usability, accessibility, and compatibility with web browsers. Bixal’s reports on site-monitoring activities distill quantitative and qualitative results and provide recommendations for improvements that can then be built into the overall site management workflow. Bixal revisits upgrades and changes to evaluate the success of each implementation and provide suggestions for adjustments and improvements."
+            },
+            {
+              "image": "medline-icon-3.png",
+              "imageAlt": "icon of gears with avatar inside one",
+              "imageHeading": "Consumer Health Librarian Support",
+              "imageDescription": "The Bixal team’s Consumer Health Librarian (CHL) is primarily responsible for the web content development life cycle, which includes discovery, creation, publication, and maintenance. The CHL collaborates with the Systems Librarian and the Spanish Librarian to ensure that content is current and accessible and that it adheres to the overall content strategy to promote site visibility, accessibility, and usability."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

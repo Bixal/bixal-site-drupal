@@ -1,0 +1,90 @@
+{
+  "jsonId": "usaid",
+  "order": "02",
+  "template": "old",
+  "title": "Promoting land tenure and property rights worldwide.",
+  "description": "Bixal partnered with USAID and The Cloudburst Group to reconceive the USAID Land Tenure site www.land-links.org. The site is a resource to a diverse audience about USAID’s international efforts to clarify and strengthen land tenure and property rights of all stakeholders: individuals, groups, and legal entities, including marginalized members of society.",
+  "overlayDescription": "Promoting land tenure and property rights",
+  "caseStudyURL": "https://www.land-links.org/",
+  "caseStudyLabel": "https://www.land-links.org/",
+  "logo": "usaid-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "2-usaid.jpg",
+  "heroImageAlt": "older woman smiling walking through the tall grass",
+  "landingImage": "2-usaid.jpg",
+  "landingImageAlt": "older woman smiling walking through the tall grass",
+  "details": {
+    "client": "LandLinks, USAID",
+    "client_abrev": "U.S. Agency for International Development",
+    "project": "Website architecture and site redesign",
+    "technology": "WordPress"
+  },
+  "primaryColor": "#172d6a",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "An Engaging Experience",
+          "description": "The previous site was neither intuitive nor engaging for the breadth of global users working in land tenure. Bixal worked with USAID stakeholders performing in-depth user studies and interactive engagements to help shape a simpler knowledge management tool and a more successful user experience.",
+          "images": [
+            {
+              "image": "usaid-image-1.jpg",
+              "imageAlt": "an older gentleman and younger man working with a tablet computer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Modern Design",
+          "description": "The Bixal team successfully launched a fully responsive and scannable site that integrates the latest in contemporary design and user experience-guided strategies.",
+          "images": [
+            {
+              "image": "usaid-image-2.png",
+              "imageAlt": "computer view of USAID Land Tenure website as displayed on multiple devices"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": true,
+        "overview": {
+          "heading": "Stakeholder Engagement",
+          "description": "An iterative understanding and confirmation of stakeholder usability from around the globe was critical to designing a solution in which the majority of people could access and understand information in a quick and substantive way.",
+          "images": [
+            {
+              "image": "usaid-image-3.jpg",
+              "imageAlt": "several women working together in a field"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Knowledge Management ",
+          "description": "The Bixal team simplified the navigation structure of the website and beefed up the functionality so that users would be able to understand complex content via visual mapping and curated content",
+          "images": [
+            {
+              "image": "usaid-image-4.png",
+              "imageAlt": "display view of information displayed in the system"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
