@@ -1,9 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: c281857b-4704-4c07-9c44-59097424759d
+  uuid: f3ad8603-af0a-4bf0-9279-d4fa8bde6782
   bundle: menu_link_content
   default_langcode: en
+  depends:
+    b8623cdc-0d93-4c21-80ee-508221dcbfb8: node
 default:
   enabled:
     -
@@ -16,7 +18,7 @@ default:
       value: main
   link:
     -
-      uri: 'https://google.com'
+      target_uuid: b8623cdc-0d93-4c21-80ee-508221dcbfb8
       title: ''
       options: {  }
   external:

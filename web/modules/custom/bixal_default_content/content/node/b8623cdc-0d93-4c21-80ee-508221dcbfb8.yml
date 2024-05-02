@@ -1,0 +1,69 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b8623cdc-0d93-4c21-80ee-508221dcbfb8
+  bundle: landing_page
+  default_langcode: en
+  depends:
+    c69649c8-1616-4b37-8f25-e83d0fdf16e8: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Our Work'
+  created:
+    -
+      value: 1714667307
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /our-work
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: c69649c8-1616-4b37-8f25-e83d0fdf16e8
+  field_hero_variant:
+    -
+      value: image-bg
+  field_paragraphs:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 490f8604-fe17-490d-ad38-08d6ed425e0f
+          bundle: section
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1714667363
+          behavior_settings:
+            -
+              value: {  }
+          field_center_content:
+            -
+              value: true
+          field_description:
+            -
+              value: 'At Bixal, we lead human-centered digital transformation and global solutions that drive equity, sustainability and social good. We leverage technology, communications, data and human-centered design to help governments and organizations be more efficient, effective and impactful. Read on to learn more about the broad scope of our work and how we support our clients to provide a better customer experience and, ultimately, improve the lives of the people they serve.'
+          field_title:
+            -
+              value: 'What we do'
