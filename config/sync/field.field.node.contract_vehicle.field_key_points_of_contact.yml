@@ -1,14 +1,13 @@
-uuid: 3a52d8b8-0618-4d52-be9f-c83f40fe8415
+uuid: 389bc416-9557-436d-bd26-45e0ca1b72a3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_key_points_of_contact
-    - filter.format.html_text
-    - filter.format.plain_text
     - node.type.contract_vehicle
+    - paragraphs.paragraphs_type.address
   module:
-    - text
+    - entity_reference_revisions
 id: node.contract_vehicle.field_key_points_of_contact
 field_name: field_key_points_of_contact
 entity_type: node
@@ -20,7 +19,58 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats:
-    - html_text
-    - plain_text
-field_type: text_long
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      address: address
+    negate: 0
+    target_bundles_drag_drop:
+      address:
+        weight: 17
+        enabled: true
+      blurb:
+        weight: 18
+        enabled: false
+      blurb_collection:
+        weight: 19
+        enabled: false
+      button:
+        weight: 20
+        enabled: false
+      description_list:
+        weight: 21
+        enabled: false
+      description_list_collection:
+        weight: 22
+        enabled: false
+      emphasis_block:
+        weight: 23
+        enabled: false
+      emphasis_block_collection:
+        weight: 24
+        enabled: false
+      flip_card:
+        weight: 25
+        enabled: false
+      flip_cards:
+        weight: 26
+        enabled: false
+      job_listing:
+        weight: 27
+        enabled: false
+      people_list:
+        weight: 28
+        enabled: false
+      section:
+        weight: 29
+        enabled: false
+      section_wrapper:
+        weight: 30
+        enabled: false
+      view_embed:
+        weight: 31
+        enabled: false
+      wysiwyg:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

@@ -81,14 +81,29 @@
   {% block content %}
     {% embed "@components/section/section.html.twig" %}
       {% set body %}
-        {{ {
+      {{ {
           '#theme': 'page_title',
           '#title': node.title.value,
         } }}
-        {% for section in content %}
-          <h2>{{ section['#title'] }}</h2>
-          {{ section.0 }}
-        {% endfor %}
+      {% if content.field_general_overview| field_value is not empty %}
+        <h2>{{content.field_general_overview | field_label}}</h2>
+        {{content.field_general_overview | field_value}}
+      {% endif %}
+      {% if content.field_contractor_capabilities | field_value is not empty %}
+        <h2>{{content.field_contractor_capabilities | field_label}}</h2>
+        {{content.field_contractor_capabilities | field_value}}
+      {% endif %}
+      {% if content.field_key_points_of_contact | field_value is not empty %}
+        <h2>{{content.field_key_points_of_contact  | field_label}}</h2>
+        <p>To contact us for information on the
+          {{node.title.value}}
+          vehicle, please use the following contact information:</p>
+        {{content.field_key_points_of_contact | field_value}}
+      {% endif %}
+      {% if content.field_information | field_value is not empty %}
+        <h2>{{content.field_information | field_label}}</h2>
+        {{content.field_information | field_value}}
+      {% endif %}
       {% endset %}
     {% endembed %}
 
