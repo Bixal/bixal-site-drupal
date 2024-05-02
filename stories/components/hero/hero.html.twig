@@ -1,27 +1,41 @@
+{#
+/**
+  * Hero component.
+  *
+  * Available variables:
+  * - variant: String component variant. Ex: "image-bg", "image-inline".
+  * - heading_type: String used to set heading type. Ex: "h2".
+  * - image: String of image url.
+  * - title: String of component title.
+  * - description: String for inline image variant.
+  * - cta:
+  *     - label: String of action label.
+  *     - href: String used in setting action href.
+**/
+#}
+
 {% set cta_exists = cta.label and cta.href %}
+{% set heading_type = heading_type | default("h1") %}
 
-<!-- @TODO: Make section a landmark for screen readers. -->
-<section
-  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}"
-  {% if not image_inline %}
-    style="
-      background-image: radial-gradient(
-          circle,
-          rgba(0, 0, 0, 0.48) 0%,
-          rgba(0, 0, 0, 0) 100%
-        ),
-        url('{{ image }}')"
-  {% endif %}
->
-
-{% if image_inline %}
-  {% include "@components/hero/hero--image-inline.html.twig" %}
+{% if variant == "image-inline" %}
+  {% set image_inline = true %}
 {% else %}
-  <div class="bix-hero__container">
-    <h1 class="bix-hero__title">
-      {{ title }}
-    </h1>
-  </div>
+  {% set image_inline = false %}
 {% endif %}
 
+{% if not image_inline %}
+<section
+  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}"
+  style="background-image: url('{{ image }}')">
+  <div class="bix-hero__container">
+    {% if title %}
+    <{{ heading_type }} class="bix-hero__title">
+      {{ title | default("Hero title") }}
+    </{{ heading_type }}>
+    {% endif %}
+    </div>
 </section>
+
+{% else %}
+  {% include "@components/hero/hero--image-inline.html.twig" %}
+{% endif %}

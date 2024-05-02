@@ -8,14 +8,15 @@ dependencies:
   - drupal:twig_tweak
   - drupal:twig_field_value
   - drupal:admin_toolbar
-
 components:
   namespaces:
     pages: storybook_components/stories/pages
     components: storybook_components/stories/components
+    partials: storybook_components/stories/partials
 
 libraries:
   - bixal_uswds/global
+  - bixal_uswds/storybook
 
 regions:
   preface: "Preface"

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 18a6cff4-de86-4378-bffb-dfc776238d79
+  bundle: image
+  default_langcode: en
+  depends:
+    c1bd279f-f685-45cc-b55d-d99589c36cab: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: global-training-graphic.jpg
+  created:
+    -
+      value: 1709907096
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: c1bd279f-f685-45cc-b55d-d99589c36cab
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

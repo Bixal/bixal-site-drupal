@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: ff1734b8-82ba-418d-9bc9-8b0ef54064d1
+  bundle: role
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Senior Director, Software Engineering'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

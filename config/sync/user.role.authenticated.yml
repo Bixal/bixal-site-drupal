@@ -2,8 +2,13 @@ uuid: 34986c5c-e163-46bb-9bd2-fa3375d6a2a7
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.html_text
   module:
+    - contextual
+    - filter
     - media
+    - node
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -13,4 +18,8 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access contextual links'
+  - 'use text format html_text'
+  - 'view all revisions'
   - 'view media'
+  - 'view own unpublished content'

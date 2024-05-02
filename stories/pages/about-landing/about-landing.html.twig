@@ -1,0 +1,7 @@
+{% extends "@pages/base/base.html.twig" %}
+
+{% block content %}
+  {% include "@components/section/section.html.twig" with intro %}
+  {% include "@components/section/section.html.twig" with bixalers %}
+  {% include "@pages/about-landing/_people-section.html.twig" with people %}
+{% endblock %}

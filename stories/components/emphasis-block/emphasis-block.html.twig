@@ -1,16 +1,23 @@
 <div class="bix-emphasis-block">
+  {% if prefix %}
   <p class="bix-emphasis-block__prefix">
-    Cloud &amp; Compliance
+    {{ prefix }}
   </p>
-  <h4 class="heading">
+  {% endif %}
+  {# @TODO: Fix heading order, ex: use `h3`. #}
+  <h4 class="bix-emphasis-block__title">
+    {% if href %}
     <a
       rel="noreferrer"
       target="_blank"
-      href="https://jobs.lever.co/bixal/4ff54a1e-bc38-4bf0-8c67-158d4907e5e0"
+      href="{{ href }}"
+      class="bix-emphasis-block__link"
     >
-      Cybersecurity Resilience Lead - USAID Kosovo Critical Infrastructure
-      Activity
-    </a>
+    {% endif %}
+
+    {{ title }}
+
+    {% if href %}</a>{% endif %}
   </h4>
-  <div class="bix-emphasis-block__postfix">Pristina</div>
+  <div class="bix-emphasis-block__postfix">{{ postfix }}</div>
 </div>

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 0e7ff58e-7c74-4bdf-b162-36af2634df99
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'About Bixal'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/about'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -46
+  expanded:
+    -
+      value: false

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 41bd3165-8405-415e-92d9-3cdcecf3b5ba
+  bundle: image
+  default_langcode: en
+  depends:
+    84ff3d21-f2c5-43d4-9f80-d9068e041025: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: human-centered.png
+  created:
+    -
+      value: 1703789026
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 84ff3d21-f2c5-43d4-9f80-d9068e041025
+      alt: 'Human Centered Design article'
+      title: ''
+      width: 3840
+      height: 1745

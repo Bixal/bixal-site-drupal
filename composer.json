@@ -14,13 +14,31 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "package",
+            "package": {
+                "name": "jjj/chosen",
+                "version": "2.2.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chosen"
+                },
+                "dist": {
+                    "url": "https://github.com/JJJ/chosen/archive/refs/tags/2.2.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
             "type": "vcs",
             "url": "git@github.com:mpbixal/drupal-platform-lando.git"
         }
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/autocomplete_deluxe": "^2.0",
+        "drupal/chosen": "^4.0",
         "drupal/components": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
@@ -28,9 +46,12 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",
+        "drupal/email_username": "^1.0",
         "drupal/field_group": "^3.4",
+        "drupal/imagecache_external": "^3.0",
         "drupal/menu_admin_per_menu": "^1.5",
         "drupal/metatag": "^2.0",
+        "drupal/override_node_options": "^2.7",
         "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
@@ -41,8 +62,10 @@
         "drupal/stable": "^2.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
+        "drupal/view_unpublished": "^1.2",
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "*",
+        "jjj/chosen": "2.2.1",
         "mattsqd/robovalidate": "@alpha",
         "mpbixal/drupal-platform-lando": "dev-main",
         "platformsh/config-reader": "^2.4"
@@ -58,7 +81,9 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -76,6 +101,11 @@
             "allowed-packages": [
                 "DISABLEmpbixal/drupal-platform-lando"
             ]
+        },
+        "patches": {
+            "drupal/default_content": {
+                "/project/default_content/issues/3203014: BaseFieldOverride cause inconsistencies during export": "https://www.drupal.org/files/issues/2022-12-13/base_field_override_inconsistencies-3203014-9.patch"
+            }
         },
         "installer-paths": {
             "web/core": [

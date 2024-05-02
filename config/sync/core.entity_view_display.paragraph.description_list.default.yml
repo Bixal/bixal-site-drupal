@@ -1,0 +1,51 @@
+uuid: 0bce6faa-add4-4e50-b595-a5ae8eba3a27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_list.field_description_list_items
+    - field.field.paragraph.description_list.field_description_list_variant
+    - field.field.paragraph.description_list.field_image
+    - field.field.paragraph.description_list.field_title
+    - paragraphs.paragraphs_type.description_list
+  module:
+    - options
+id: paragraph.description_list.default
+targetEntityType: paragraph
+bundle: description_list
+mode: default
+content:
+  field_description_list_items:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description_list_variant:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: description_list
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,39 @@
+{
+  "blocks": [
+    {
+      "prefix": "Strategic Growth",
+      "href": "#",
+      "title": "Director, Business Development",
+      "postfix": "Washington D.C. Metro Area"
+    },
+    {
+      "prefix": "MEL",
+      "href": "#",
+      "title": "Public Health Subject Matter Expert - GESI Analysis",
+      "postfix": "Global (multiple)"
+    },
+    {
+      "prefix": "Project Management",
+      "href": "#",
+      "title": "Sr. Technical Project Manager, Data Governance",
+      "postfix": "United States"
+    },
+    {
+      "prefix": "Software Engineering",
+      "href": "#",
+      "title": "Sr. Full Stack Software Engineer",
+      "postfix": "United States"
+    },
+    {
+      "prefix": "Other",
+      "href": "#",
+      "title": "General Opportunities",
+      "postfix": "Washington D.C. Metro Area"
+    }
+  ],
+  "cta": {
+    "href": "javascript:void(0)",
+    "icon": "arrow-right",
+    "label": "View all jobs"
+  }
+}

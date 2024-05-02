@@ -1,0 +1,20 @@
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set classes = [
+  'bix-description-list',
+  (variant ? 'bix-description-list--' ~ variant | clean_class),
+] %}
+
+<dl{{ attributes.addClass(classes).addClass(additional_classes) }}>
+  {{ image }}
+  {% if title %}
+    <dt class="bix-description-list__heading">
+      {{ title }}
+    </dt>
+  {% endif %}
+
+  {{ items }}
+
+</dl>

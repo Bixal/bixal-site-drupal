@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c1bd279f-f685-45cc-b55d-d99589c36cab
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: global-training-graphic.jpg
+  uri:
+    -
+      value: 'public://2024-03/global-training-graphic.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2344810
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709907096

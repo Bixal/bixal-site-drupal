@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5c12bb4d-8717-4a1d-a2dc-f40c1f90850f
+  bundle: image
+  default_langcode: en
+  depends:
+    a4a72ec4-b217-4f4c-890b-83a4dfbc0165: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: drupal-govcon-hero.png
+  created:
+    -
+      value: 1703783954
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: a4a72ec4-b217-4f4c-890b-83a4dfbc0165
+      alt: 'Banner Image'
+      title: ''
+      width: 3840
+      height: 1745

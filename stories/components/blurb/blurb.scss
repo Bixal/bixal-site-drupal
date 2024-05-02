@@ -1,9 +1,12 @@
 @use "uswds-core" as *;
 
 .bix-blurbs {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(465px, 1fr));
   gap: units(2);
+  padding-left: 0;
 }
 
 .bix-blurb {
@@ -20,5 +23,31 @@
     font-weight: 700;
     letter-spacing: 1.25px;
     text-transform: uppercase;
+  }
+
+  &__description {
+    margin-top: 0;
+  }
+}
+
+.bix-blurbs--two-up {
+  @include at-media("tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bix-blurbs--three-up {
+  @include at-media("tablet") {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+}
+
+.bix-blurbs--featured {
+
+  // First child span entire row, ex: Case Studies landing page.
+  & > :first-child {
+    @include at-media("tablet") {
+      grid-column: 1 / -1;
+    }
   }
 }

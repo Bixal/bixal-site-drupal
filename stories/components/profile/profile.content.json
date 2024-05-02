@@ -1,0 +1,20 @@
+{
+  "image": "<img src=\"https://placehold.co/325x325\" height=\"270\" width=\"270\" alt=\"\">",
+  "name": "Amie Nisler",
+  "role": "Senior Communications Strategist",
+  "socialNav": {
+    "variant": "accent-warm",
+    "items" : [{
+        "href" : "https://www.linkedIn.com",
+        "label" : "LinkedIn",
+        "icon_path" : "icons/linkedin.svg"
+      }
+    ]
+    
+  }, 
+  
+  "specialties": 
+    "<li>Behavioral Science</li><li>Data Systems</li><li>Emergency and Risk Communications</li><li>Health Communications</li><li>Plain Language</li>"
+  ,
+  "bucketlist": "To visit South Africa so I can observe Cape penguins in their natural habitat (from an appropriate distance, of course)."
+}

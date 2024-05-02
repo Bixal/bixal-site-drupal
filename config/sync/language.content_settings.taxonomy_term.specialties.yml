@@ -1,0 +1,11 @@
+uuid: 22ff27d8-9c40-42ef-b29e-34fb4193ae2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialties
+id: taxonomy_term.specialties
+target_entity_type_id: taxonomy_term
+target_bundle: specialties
+default_langcode: site_default
+language_alterable: false

@@ -1,14 +1,47 @@
 @use "uswds-core" as *;
 
 .bix-social-nav {
+  --_icon-color: var(--icon-color), currentColor;
+
   margin-top: units(3);
 
   &__items {
     display: flex;
-    column-gap: units("05");
+    column-gap: units(1);
     list-style: none;
+    line-height: 1; // Remove extra white space.
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+  }
+
+  &__item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  svg {
+    fill: currentColor;
+    height: units(4);
+    width: units(4);
+  }
+}
+
+.bix-social-nav--inverse {
+
+  svg {
+    fill: color("white");
+  }
+}
+
+// @TODO: Consider additional accents, like in `description-list.scss`.
+.bix-social-nav--accent-warm {
+  --icon-color: var(--c-accent-warm);
+
+  svg {
+    border: 1px solid var(--icon-color);
+    border-radius: 100%;
+    fill: color("white");
+    background: var(--icon-color);
   }
 }

@@ -39,11 +39,16 @@
 */
 #}
 
-{% include "@components/header/header.html.twig" %}
-
+{{ header }}
+{# Status messages, like DPM. #}
+{{ page.help }}
+<main>
+{# Things that are above the content, like the hero. #}
+{{ page.highlighted }}
 {% block content %}
   {{ page.content }}
 {% endblock %}
+</main>
 
 {% include "@components/contact-us/contact-us.html.twig" %}
 {% include "@components/footer/footer.html.twig" %}

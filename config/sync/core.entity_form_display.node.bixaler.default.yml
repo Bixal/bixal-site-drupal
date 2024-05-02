@@ -1,0 +1,198 @@
+uuid: 9e6770b0-9ee0-4a52-b4e4-7fba67a35a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bixaler.body
+    - field.field.node.bixaler.field_bucket_list
+    - field.field.node.bixaler.field_certifications
+    - field.field.node.bixaler.field_image
+    - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_link
+    - field.field.node.bixaler.field_role
+    - field.field.node.bixaler.field_specialties
+    - field.field.node.bixaler.field_team
+    - node.type.bixaler
+  module:
+    - autocomplete_deluxe
+    - link
+    - media_library
+    - path
+id: node.bixaler.default
+targetEntityType: node
+bundle: bixaler
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bucket_list:
+    type: string_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_certifications:
+    type: autocomplete_deluxe
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The certification '@term' will be added"
+      new_terms: true
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 15
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_languages:
+    type: autocomplete_deluxe
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The language '@term' will be added"
+      new_terms: true
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 16
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_role:
+    type: autocomplete_deluxe
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The role '@term' will be added"
+      new_terms: true
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_specialties:
+    type: autocomplete_deluxe
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The specialty '@term' will be added"
+      new_terms: true
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_team:
+    type: autocomplete_deluxe
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: true
+      not_found_message: "The team '@term' cannot be found"
+      new_terms: false
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

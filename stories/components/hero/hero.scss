@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-hero {
   align-items: center;
@@ -21,15 +22,43 @@
   }
 }
 
+// ==========================================================================
+// Hero with background image
+// ==========================================================================
+%hero-gradient-overlay {
+  content: '';
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.48) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 .bix-hero--image-bg {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    @extend %hero-gradient-overlay;
+  }
+
+  .bix-hero__container {
+    z-index: 1;
+  }
 
   .bix-hero__title {
     color: color("white");
+    text-align: center;
   }
 
   @include at-media("desktop") {
@@ -37,27 +66,49 @@
   }
 }
 
+// ==========================================================================
+// Inline image hero - Ex: Homepage
+// ==========================================================================
 .bix-hero--image-inline {
   background-color: var(--c-primary);
   color: color("white");
 
-  @include at-media("tablet-lg") {
-    .bix-hero__container {
+  .bix-hero__container {
+    @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: minmax(400px, 1fr) 4fr;
+      grid-template-columns: minmax(300px, 1fr) 4fr;
       column-gap: units(8);
       align-items: end;
-      width: 85%;
     }
 
-    .bix-hero__media img {
-      object-fit: contain;
+    @include at-media("desktop") {
+      grid-template-columns: minmax(400px, 1fr) 4fr;
+    }
+  }
+
+  .bix-hero__media {
+    @include at-media-max("tablet-lg") {
+      margin-bottom: units(4);
+    }
+  }
+
+  .bix-hero__media img {
+    object-fit: contain;
+    max-width: 50%;
+
+    @include at-media("tablet-lg") {
       max-width: 100%;
     }
   }
 
   .bix-hero__title {
-    font-size: 72px;
-    letter-spacing: -2.4px;
+    @include heading-border;
+    font-size: px-to-rem(47px);
+
+    @include at-media("desktop") {
+      font-size: 72px;
+      letter-spacing: -2.4px;
+    }
   }
+
 }

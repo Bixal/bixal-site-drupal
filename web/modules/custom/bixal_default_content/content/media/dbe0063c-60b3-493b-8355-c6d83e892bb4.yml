@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dbe0063c-60b3-493b-8355-c6d83e892bb4
+  bundle: image
+  default_langcode: en
+  depends:
+    9c6a8b0c-d1b2-4517-95a1-0c1869b2f1d7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: careers-hero.jpg
+  created:
+    -
+      value: 1706711901
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 9c6a8b0c-d1b2-4517-95a1-0c1869b2f1d7
+      alt: 'Careers Hero'
+      title: ''
+      width: 1680
+      height: 525

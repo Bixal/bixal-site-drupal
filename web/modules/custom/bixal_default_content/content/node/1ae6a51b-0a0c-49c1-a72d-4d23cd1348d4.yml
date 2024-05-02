@@ -1,0 +1,78 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1ae6a51b-0a0c-49c1-a72d-4d23cd1348d4
+  bundle: contract_vehicle
+  default_langcode: en
+  depends:
+    32ebf31f-7318-4144-988d-5008355d9b22: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'GSA TOTAL BPA'
+  created:
+    -
+      value: 1709904287
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: 32ebf31f-7318-4144-988d-5008355d9b22
+  field_contractor_capabilities:
+    -
+      value: '<p>As the prime contractor, Bixal brings an integrated, human-centered approach focusing on outcomes for our clients while simultaneously connecting back to the broader customer experience and organizational goals. Through user research, we are experts in understanding our client’s objectives and the needs of those they serve. We validate our assumptions through iterative experiences, content prototyping and user testing. We employ user participation and service design methodologies to create and deliver engaging and usable experiences that more effectively deliver on the missions of our partner organizations. We communicate often; collaborate closely; assess, learn and adapt; and keep teams together. Additionally, we translate client data into meaningful and actionable information that drives informed outcomes.</p><p>We conceive and deliver powerful, data-driven customer experiences through holistic digital and communications solutions. We offer a wide array of strategic and digital services, including HCD, content strategy, Agile development, communication strategy, development, plain language, technical writing and editing, user and customer experience, Section 508 compliance and more. We implement user-centric experiences by adhering to the U.S. Digital Services Playbook and the United States Web Design System. Bixal will provide TTS with the best outcomes by employing the following capabilities:</p><ul><li>Implementing cloud-based information architecture solutions for all clients.</li><li>Increasing audience engagement by using research-driven, tailored and data-informed efforts.</li><li>Using Agile methodology that focuses on taking an iterative approach to our work. Collaboration among our teams leads to reduced risks throughout the product’s lifecycle and ultimately produces digital products better aligned with our users’ needs.</li><li>Using the team’s technical knowledge, coupled with HCD approaches, to ensure Section 508 and plain language compliance are built in from the beginning.</li><li>Enlisting an experienced team of developers, engineers, design experts, content strategists and Agile project managers.</li><li>Maintaining compliance with all applicable security policies and procedures.</li></ul>'
+      format: html_text
+  field_general_overview:
+    -
+      value: '<p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">The General Services Administration (GSA) Technology Transformation Services (TTS) awarded the five-year TTS Organizational Transformation to Agile Lifecycle (TOTAL) blanket purchase agreement (BPA) to Bixal.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">TTS Solutions helps government agencies improve their delivery of information and services to the public. The goal of TTS is to use modern technologies and methodologies to improve the public’s experiences with government agencies by making the digital services they use more accessible, efficient and effective, thereby helping to solve problems across government.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">The TOTAL BPA will help streamline the GSA process for awarding task orders (TOs), enabling TTS to issue TOs for agencies — both within and outside GSA — directly to the entire pool of digital service vendors awarded a BPA.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">TTS’ goal aligns with Bixal’s mission to improve people’s lives through human-centered design (HCD) and transformative technologies using Agile principles for continuous improvement and quick delivery. Bixal’s award focuses on design, user research, user interface (UI)/user experience (UX), information architecture (IA), content strategy, accessibility, prototyping and modeling. The TTS BPA allows Bixal to leverage our product, design and technology expertise to make the U.S. government’s digital services accessible and more intuitive for public use and to support and guide citizens to find the answers and solutions the government can provide.</p>'
+      format: html_text
+  field_information:
+    -
+      value: '<p><strong>Contract Number:</strong> GS35F342GA<br><strong>Award Date:</strong> May 2021</p>'
+      format: html_text
+  field_key_points_of_contact:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6fcdff98-4f22-48ca-a873-e63da7212a8d
+          bundle: address
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1712930130
+          behavior_settings:
+            -
+              value: {  }
+          field_email:
+            -
+              value: ottavia.criss@bixal.com
+          field_name_and_title:
+            -
+              value: 'Ottavia Criss, GSA TOTAL BPA Manager'
+          field_phone_number:
+            -
+              value: 703.634.5701

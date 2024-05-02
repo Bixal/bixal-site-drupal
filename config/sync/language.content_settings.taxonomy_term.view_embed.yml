@@ -1,0 +1,11 @@
+uuid: 190d447a-1db6-4fec-b65e-10b5a4cf44ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.view_embed
+id: taxonomy_term.view_embed
+target_entity_type_id: taxonomy_term
+target_bundle: view_embed
+default_langcode: site_default
+language_alterable: false

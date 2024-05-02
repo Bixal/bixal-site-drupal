@@ -1,0 +1,40 @@
+uuid: 2d8a3f3a-ea5f-451a-88da-8d18f262f14c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bixaler.body
+    - field.field.node.bixaler.field_bucket_list
+    - field.field.node.bixaler.field_certifications
+    - field.field.node.bixaler.field_image
+    - field.field.node.bixaler.field_languages
+    - field.field.node.bixaler.field_link
+    - field.field.node.bixaler.field_role
+    - field.field.node.bixaler.field_specialties
+    - field.field.node.bixaler.field_team
+    - node.type.bixaler
+  module:
+    - user
+id: node.bixaler.teaser
+targetEntityType: node
+bundle: bixaler
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_bucket_list: true
+  field_certifications: true
+  field_image: true
+  field_languages: true
+  field_link: true
+  field_role: true
+  field_specialties: true
+  field_team: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,36 @@
+uuid: 5b5a4abe-482c-4729-bf7e-9bd6e7afae30
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_description_list_variant
+field_name: field_description_list_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: accent-vivid
+      label: 'Accent Vivid'
+    -
+      value: accent-cool
+      label: 'Accent Cool'
+    -
+      value: accent-cool-alt
+      label: 'Accent Cool Alt'
+    -
+      value: accent-warm
+      label: 'Accent Warm'
+    -
+      value: primary-alt
+      label: 'Primary Alt'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -10,9 +10,17 @@
     margin-top: 0;
   }
 
+  a {
+    text-decoration-thickness: units(1px);
+  }
+
+  &__logo {
+    max-width: px-to-rem(100px);
+  }
+
   &__primary {
-    padding-top: units(5);
-    padding-bottom: units(5);
+    padding-top: units(8);
+    padding-bottom: units(8);
   }
 
   &__columns {
@@ -20,7 +28,7 @@
     row-gap: units(3);
 
     @include at-media("desktop") {
-      grid-template-columns: 150px 1fr 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr 1fr;
       column-gap: units(4);
     }
   }
@@ -44,16 +52,16 @@
     }
   }
 
-  .bix-site-footer__primary .bix-social-nav {
-    @include at-media("tablet-lg") {
-      display: none;
-    }
+  // Align paragraph in "Collab" column with rest of columns.
+  &__column p {
+    margin-top: 0;
   }
 
   &__title {
     font-family: var(--font-ui);
-    font-size: inherit;
+    font-size: px-to-rem(16px);
     letter-spacing: 0.5px;
+    margin-top: 0;
     margin-bottom: units("05");
     text-transform: uppercase;
 
@@ -69,10 +77,13 @@
     }
   }
 
+  // ==========================================================================
+  // Secondary section - Privacy policy & Social nav
+  // ==========================================================================
   &__secondary {
     border-top: 1px solid rgba(white, 0.2);
-    padding-top: units(2);
-    padding-bottom: units(2);
+    padding-top: units(4);
+    padding-bottom: units(4);
   }
 
   &__secondary-container {
@@ -89,30 +100,42 @@
   &__secondary-nav {
     font-weight: 700;
     font-size: px-to-rem(14px);
+    margin-top: units(4);
+    margin-bottom: units(5);
     text-transform: uppercase;
 
     @include at-media("tablet-lg") {
       display: inline-flex;
       flex-grow: 1;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
   &__secondary-nav-items {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    gap: units(1);
+    flex-direction: column;
+    padding-left: 0;
+
+    @include at-media("tablet") {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
 
     @include at-media("tablet-lg") {
-      margin-bottom: 0;
       width: 100%;
     }
   }
 
-  &__secondary .bix-social-nav {
-    display: none;
+  &__secondary-nav__item {
+    margin-bottom: 0;
+  }
+
+  .bix-social-nav {
 
     @include at-media("tablet-lg") {
-      display: unset;
       margin-top: 0;
       width: 100%;
     }
@@ -120,20 +143,40 @@
     @include at-media("desktop") {
       width: auto;
     }
-  }
 
-  &__secondary .bix-social-nav__items {
-    @include at-media("tablet-lg") {
-      gap: units(1);
+    &__items {
+      @include at-media("tablet-lg") {
+        gap: units(1);
+      }
     }
   }
 
   &__legal {
+    display: flex;
+    column-gap: units(2);
+    font-size: px-to-rem(16px);
+    margin-bottom: units(6);
+
     @include at-media("tablet-lg") {
-      display: flex;
-      column-gap: units(2);
       margin-right: units(8);
+      margin-bottom: 0;
       order: -1;
     }
   }
+}
+
+// Accreditations overides.
+.bix-site-footer__column--accreditations {
+  ul {
+    padding-left: 0;
+  }
+
+  img {
+    margin-top: units("05");
+    margin-bottom: units(1);
+  }
+}
+
+.accreditations-logos a {
+  text-decoration: none;
 }

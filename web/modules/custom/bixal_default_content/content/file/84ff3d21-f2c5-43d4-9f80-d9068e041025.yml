@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 84ff3d21-f2c5-43d4-9f80-d9068e041025
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: human-centered.png
+  uri:
+    -
+      value: 'public://2023-12/human-centered.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 3491266
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1703789026

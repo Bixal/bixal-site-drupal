@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods.
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% include "media--image.html.twig" with {
+  'additional_classes': ['bix-description-list__media'],
+  'aria_hidden': true,
+}%}

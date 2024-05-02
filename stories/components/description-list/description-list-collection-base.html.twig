@@ -1,0 +1,7 @@
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+<div{{ attributes.addClass('bix-description-list-collection').addClass(additional_classes) }}>
+  {{ description_list_collection }}
+</div>

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ac0564e5-4ca5-49db-8ebb-cc41a6d5bbcc
+  bundle: image
+  default_langcode: en
+  depends:
+    4f9a72a9-15f7-4ee2-af25-8802c6330833: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: unparalleled-diversity.webp
+  created:
+    -
+      value: 1706721878
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 4f9a72a9-15f7-4ee2-af25-8802c6330833
+      alt: 'An unparalleled diversity of perspectives image'
+      title: ''
+      width: 1376
+      height: 778

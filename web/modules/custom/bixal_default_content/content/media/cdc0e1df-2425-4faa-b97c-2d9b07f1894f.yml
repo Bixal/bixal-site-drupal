@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cdc0e1df-2425-4faa-b97c-2d9b07f1894f
+  bundle: image
+  default_langcode: en
+  depends:
+    376e1ab0-5922-41a8-8353-e2d05afc2bf7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: oasis-hero.jpg
+  created:
+    -
+      value: 1709848982
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 376e1ab0-5922-41a8-8353-e2d05afc2bf7
+      alt: 'Oasis Hero'
+      title: ''
+      width: 3360
+      height: 422

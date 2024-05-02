@@ -1,0 +1,10 @@
+uuid: df6eb835-f8d1-4715-88d1-7edf97975617
+langcode: en
+status: true
+dependencies: {  }
+id: job_listing
+label: 'Job Listing'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

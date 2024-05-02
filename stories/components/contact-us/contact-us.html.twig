@@ -1,4 +1,4 @@
-<section id="contact" class="bix-contact bix-section bix-section--primary">
+<section id="contact" class="bix-contact bix-section bix-section--primary" aria-label="Contact us">
   <div class="bix-container">
     <div class="bix-contact__content">
       <div class="contact__overview">
@@ -62,10 +62,10 @@
         ></textarea>
         <div class="bix-contact__actions">
           {% include "@components/button/button.html.twig" with {
-            modifier: "bix-button--inverse",
+            variant: "inverse",
             label: "Submit",
             type: "submit",
-            has_icon: "true"
+            icon: "arrow-right",
           } %}
         </div>
       </form>

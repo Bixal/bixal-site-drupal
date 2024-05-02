@@ -1,5 +1,6 @@
 import Homepage from "./homepage.html.twig";
 
+import HeaderContent from "../../components/header/header.content.json";
 import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
@@ -11,6 +12,7 @@ import "../../components/cards/cards.stories";
 import "../../components/description-list/description-list.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
+import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
 export default {
   title: "Pages/Homepage",
@@ -19,11 +21,11 @@ export default {
 
 export const Default = {
   args: {
+    header: HeaderContent,
     hero: {
       variant: "image-inline",
       image:
         "https://www.bixal.com/static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
-      image_inline: true,
       title: "This is Bixal.",
       description:
         "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
@@ -33,7 +35,7 @@ export const Default = {
       title:
         "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",
       description:
-        "Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.",
+        "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
     },
     whatWeDo: {
       variant: "primary",
@@ -43,11 +45,12 @@ export const Default = {
       title:
         "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
       description:
-        "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.",
+        "<p>We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.</p>",
       cta: {
         label: "Explore case studies",
-        modifier: "bix-button--inverse",
-        has_icon: true,
+        variant: "inverse",
+        icon: "arrow-right",
+        href: "#",
       },
     },
     flipCards: FlipCardContent,
@@ -58,8 +61,8 @@ export const Default = {
       collections: DescriptionListCollectionContent,
     },
     workWithUs: {
-      variant: "centered",
-      additional_classes: "bix-section--tall",
+      variant: "tall",
+      center_content: true,
       image:
         "https://www.bixal.com/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
       prefix: "Work with us",
@@ -67,8 +70,10 @@ export const Default = {
         "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.",
       cta: {
         label: "Join our team",
-        has_icon: true,
+        href: "#",
+        icon: "arrow-right",
       },
     },
+    socialNav: SocialNav.default.args
   },
 };

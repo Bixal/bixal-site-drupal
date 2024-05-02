@@ -1,0 +1,19 @@
+uuid: d7e0ed84-194b-4e46-b594-fb8d508cc750
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.blurb
+id: paragraph.blurb.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: blurb
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,43 +1,97 @@
 @use "uswds-core" as *;
+@use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-profile {
   @include at-media("desktop") {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     column-gap: units(5);
   }
 
   &__main,
   &__aside {
-    padding-top: units(5);
+    padding-top: units(7);
     padding-bottom: units(5);
   }
 
+  &__main {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__intro {
-    display: flex;
-    flex-flow: row nowrap;
-    column-gap: units(2);
+    @include at-media("tablet") {
+      display: flex;
+      flex-flow: row nowrap;
+      column-gap: units(4);
+    }
   }
 
-  &__aside {
-    background-color: color("gray-4");
-    padding-left: units(10);
-    padding-right: units(10);
+  // Person's name.
+  &__heading--primary {
+    font-size: px-to-rem(40px);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  &__heading {
+  // Heading with orange border.
+  &__heading--secondary {
+    @include heading-border("accent-warm");
     font-size: px-to-rem(25px);
     letter-spacing: -0.35px;
-    margin-top: units(5);
+    margin-top: 0;
+    margin-bottom: units(3);
+    padding-bottom: 0;
+
+    &::after {
+      margin-top: units(3);
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
     margin-bottom: units(2);
   }
 
-  &__heading::after {
-    background-color: var(--c-accent-warm);
-    content: "";
-    display: block;
-    height: 2px;
-    margin-top: units(2);
-    width: px-to-rem(200px);
+  &__aside {
+    background-color: var(--c-base);
+    padding-left: units(4);
+    padding-right: units(4);
+
+    @include at-media("tablet") {
+      padding-left: units(10);
+      padding-right: units(10);
+    }
   }
+
+  &__role {
+    font-weight: 700;
+    font-size: size("ui", "lg");
+    line-height: 1;
+
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid var(--c-accent-warm);
+      padding-top: units(3);
+      width: px-to-rem(200px);
+    }
+  }
+
+  &__specialties,  &__certifications, &__languages {
+    margin-bottom: units(8);
+  }
+}
+
+// ==========================================================================
+// Return bar
+// ==========================================================================
+
+// @TODO: Refactor into own component.
+.bix-return .bix-container {
+  border-top: 2px solid var(--c-base);
+  margin-top: units(10);
+  margin-bottom: units(10);
+  padding: units(3) units(1);
 }

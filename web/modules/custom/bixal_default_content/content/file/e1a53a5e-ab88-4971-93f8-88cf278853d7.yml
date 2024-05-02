@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e1a53a5e-ab88-4971-93f8-88cf278853d7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: usaid-comp-ta-image.jpg
+  uri:
+    -
+      value: 'public://2024-03/usaid-comp-ta-image.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2873998
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709903929

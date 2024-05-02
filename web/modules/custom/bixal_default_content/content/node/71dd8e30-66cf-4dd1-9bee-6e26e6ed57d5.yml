@@ -1,0 +1,171 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 71dd8e30-66cf-4dd1-9bee-6e26e6ed57d5
+  bundle: landing_page
+  default_langcode: en
+  depends:
+    3eb47847-4829-4264-b9d7-6fe51072818f: media
+    502ca92f-b71d-415e-a916-b89c0b18c577: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Contract Vehicles'
+  created:
+    -
+      value: 1706721389
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /contract-vehicles
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: 3eb47847-4829-4264-b9d7-6fe51072818f
+  field_hero_variant:
+    -
+      value: image-bg
+  field_paragraphs:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f2cd7ea4-1b2d-4c59-af92-24db44fc08e2
+          bundle: section
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1706721438
+          behavior_settings:
+            -
+              value: {  }
+          field_button:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3ad08e41-e471-47dc-8f8f-8ed1a9eb2eb4
+                  bundle: button
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1706721438
+                  behavior_settings:
+                    -
+                      value: {  }
+          field_center_content:
+            -
+              value: false
+          field_nested_paragraphs:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b9a721a4-4879-4dde-ba3e-3c79b310801d
+                  bundle: wysiwyg
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905179
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_wysiwyg:
+                    -
+                      value: '<h2>A Focus on Federal</h2><p>Bixal partners with federal agencies and organizations for two reasons: We believe that everyone has the right to effective government, and we believe that our government has the potential to deliver on its promise of promoting the general welfare of all people. Helping federal agencies create tangible change—by providing an agile, people-first approach to fixing complex organizational issues—is what we do best. Our dedicated teams work with stakeholders to deliver powerful data-driven customer experiences through digital and communications solutions to real-life problems.</p>'
+                      format: html_text
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 05ea91c8-d3cb-417c-81df-b0400634c687
+                  bundle: wysiwyg
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905202
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_wysiwyg:
+                    -
+                      value: '<h2>Capabilities</h2><p>There’s no better way to reach communities and transform organizations than with effective technology and digital communications. The services we offer start with meaningful dialogue to gain an understanding of user needs and institutional goals and end with effective, customer-centric solutions to even the most intricate of problems.</p>'
+                      format: html_text
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 40f7bd64-c6be-4a24-966c-b6e4fa0d5720
+                  bundle: wysiwyg
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905230
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_wysiwyg:
+                    -
+                      value: '<h2>Contract Vehicles</h2><p>Government agencies can seek our services through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services—including IT, marketing and communications, administrative management, consulting services, and an array of other professional support products and services—for all contract types.</p>'
+                      format: html_text
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3eb1a2c6-513a-40eb-848e-e83bba5021e3
+                  bundle: view_embed
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1709905773
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_view_name:
+                    -
+                      entity: 502ca92f-b71d-415e-a916-b89c0b18c577

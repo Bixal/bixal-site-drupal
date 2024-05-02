@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ea3450a1-cc31-45f4-b7bb-73759d81f803
+  bundle: image
+  default_langcode: en
+  depends:
+    d81c667e-a04d-43e5-8790-f8b60adb9bb8: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: other_image.webp
+  created:
+    -
+      value: 1706651330
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: d81c667e-a04d-43e5-8790-f8b60adb9bb8
+      alt: 'Roman Columns'
+      title: ''
+      width: 664
+      height: 336

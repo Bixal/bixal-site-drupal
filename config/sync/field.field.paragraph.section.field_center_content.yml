@@ -1,0 +1,21 @@
+uuid: 7fd67b4c-7414-493a-bfe6-7c437d80b687
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_center_content
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_center_content
+field_name: field_center_content
+entity_type: paragraph
+bundle: section
+label: 'Center Content?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

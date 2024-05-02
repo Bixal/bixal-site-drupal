@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1ff3639b-f4fe-48c3-9814-cb602081a64d
+  bundle: image
+  default_langcode: en
+  depends:
+    2fa67264-0251-4d85-90ff-8b67d4fb8651: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: comp-ta-announcement.jpg
+  created:
+    -
+      value: 1709907480
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 2fa67264-0251-4d85-90ff-8b67d4fb8651
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

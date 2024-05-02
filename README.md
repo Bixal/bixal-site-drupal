@@ -5,16 +5,19 @@
 ### Starting the Environment
 
 First time:
+
 ```
 lando start
 ```
 
 Change something in the .lando.yml config and/or you want to re-install front and back end dependencies?
+
 ```
 lando rebuild -y
 ```
 
 Re-install front and back end dependencies
+
 ```
 lando build
 ```
@@ -45,29 +48,35 @@ Or
 
 Using it this way allows you to use your local to run the composer command instead of Docker which often times out when using docker. To use your local composer:
 
- * Install brew https://brew.sh/
- * Install composer `brew install composer`
- * The above will install php 8.3, we want to use 8.1 `brew unlink php@8.3 && brew link php@8.1`
- * Set the local to use your composer: `echo 'BIN_PATH_COMPOSER="composer"' >> .env`
+- Install brew https://brew.sh/
+- Install composer `brew install composer`
+- The above will install php 8.3, we want to use 8.1 `brew unlink php@8.3 && brew link php@8.1`
+- Set the local to use your composer: `echo 'BIN_PATH_COMPOSER="composer"' >> .env`
 
 ### Composer.log
 
 There is a composer.log that is modified everytime you do something that changes the composer.lock file.
 It's important that you always use `lando composer` or `./composer.sh` instead of plain `composer` to run composer commands. Otherwise, an entry in composer.log will not be made.
 
- * Do not put multiple of the same command in composer.log. If you apply to patches, just leave the last `composer update --patch`
+- Do not put multiple of the same command in composer.log. If you apply to patches, just leave the last `composer update --patch`
 
 ### Access story book
 
 [Storybook](https://storybook.js.org/) for this project can be found by:
- * Docker version: http://storybook.bixalcom.lndo.site/
- * Local version:
-   * npm run storybook:local
-   * This should automatically open it in your browser.
+
+- Docker version: http://storybook.bixalcom.lndo.site/
+- Local version:
+  - npm run storybook:local
+  - This should automatically open it in your browser.
+
+### Handy Commands for Development
+
+- Run all the validation commands that the pipelines run without needing to push remotely `vendor/bin/robo validate:all`.
 
 ### Enabling Xdebug
 
 To enable Xdebug, you simply need to run:
+
 ```
 lando xdebug-on
 ```
@@ -87,6 +96,7 @@ vendor/bin/robo xdebug:always-connect
 This is handy if you want to debug CLI commands (Drush) or use the trigger method below.
 
 To turn it back off:
+
 ```
 lando xdebug-off
 ```
@@ -98,6 +108,7 @@ The file `.run/appserver.run.xml` defines the PHP Remote Debug configuration. Ho
 ```
 vendor/bin/robo xdebug:phpstorm-debug-config
 ```
+
 Then in the toolbar choose 'appserver' for your debug configuration.
 
 #### Configure Xdebug for Vscode
@@ -116,8 +127,9 @@ If you want to debug CLI commands but you don't want Xdebug on always, you can d
 #### Troubleshoot Xdebug
 
 There 2 minimum things that are required to make Xdebug work:
-* The Xdebug PHP module must be enabled, confirm with `lando ssh -c 'php -m | grep xdebug'`. It should print 'xdebug'
-   * If not see 'Enabling Xdebug' section above.
-* Your IDE must be listening for Xdebug connections. See the 'Configure Xdebug for X' sections. `lando drush eval 'print_r(getenv());' | grep XDEBUG_SESSION`
+
+- The Xdebug PHP module must be enabled, confirm with `lando ssh -c 'php -m | grep xdebug'`. It should print 'xdebug'
+  - If not see 'Enabling Xdebug' section above.
+- Your IDE must be listening for Xdebug connections. See the 'Configure Xdebug for X' sections. `lando drush eval 'print_r(getenv());' | grep XDEBUG_SESSION`
 
 Once those are in place, you now have to make sure Xdebug is trying to connect to your IDE. See the 'How do I trigger Xdebug?' section above.

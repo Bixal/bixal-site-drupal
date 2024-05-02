@@ -5,6 +5,7 @@ const config = {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
+    "@storybook/addon-a11y",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
@@ -16,5 +17,6 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ['../stories/assets']
 };
 export default config;

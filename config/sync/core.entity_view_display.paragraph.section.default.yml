@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.section.field_button
+    - field.field.paragraph.section.field_center_content
     - field.field.paragraph.section.field_description
     - field.field.paragraph.section.field_image
+    - field.field.paragraph.section.field_nested_paragraphs
     - field.field.paragraph.section.field_prefix_title
     - field.field.paragraph.section.field_section_variant
     - field.field.paragraph.section.field_title
@@ -27,6 +29,16 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_center_content:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_description:
     type: basic_string
     label: hidden
@@ -42,6 +54,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_nested_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_prefix_title:
     type: string

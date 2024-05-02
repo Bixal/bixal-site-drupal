@@ -1,0 +1,15 @@
+uuid: fa2866f5-2b68-42dd-9e74-9eed016f0500
+langcode: en
+status: true
+dependencies: {  }
+name: 200px_wide_image
+label: '200px wide image'
+effects:
+  515afac3-3129-4949-b064-60c3ed4fa0d0:
+    uuid: 515afac3-3129-4949-b064-60c3ed4fa0d0
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false

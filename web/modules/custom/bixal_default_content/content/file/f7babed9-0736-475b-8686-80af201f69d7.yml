@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f7babed9-0736-475b-8686-80af201f69d7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: careers--join-our-team-bc7de974c21a020765a582d498089923.jpg
+  uri:
+    -
+      value: 'public://2024-01/careers--join-our-team-bc7de974c21a020765a582d498089923.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 126531
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706712073

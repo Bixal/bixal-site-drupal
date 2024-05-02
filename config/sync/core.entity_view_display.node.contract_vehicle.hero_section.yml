@@ -1,0 +1,40 @@
+uuid: b7bff8af-3b70-4c0f-b206-5b0e023d252e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero_section
+    - field.field.node.contract_vehicle.field_banner_image
+    - field.field.node.contract_vehicle.field_contractor_capabilities
+    - field.field.node.contract_vehicle.field_general_overview
+    - field.field.node.contract_vehicle.field_information
+    - field.field.node.contract_vehicle.field_key_points_of_contact
+    - node.type.contract_vehicle
+  module:
+    - user
+id: node.contract_vehicle.hero_section
+targetEntityType: node
+bundle: contract_vehicle
+mode: hero_section
+content:
+  field_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contractor_capabilities: true
+  field_general_overview: true
+  field_information: true
+  field_key_points_of_contact: true
+  langcode: true
+  search_api_excerpt: true

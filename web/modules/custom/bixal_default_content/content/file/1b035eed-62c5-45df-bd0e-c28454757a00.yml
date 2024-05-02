@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1b035eed-62c5-45df-bd0e-c28454757a00
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: business-finance.webp
+  uri:
+    -
+      value: 'public://2024-01/business-finance.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 31272
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1706651067

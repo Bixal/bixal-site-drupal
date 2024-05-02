@@ -1,5 +1,7 @@
-<div class="bix-description-list-collection">
+{% extends "@components/description-list/description-list-collection-base.html.twig" %}
+
+{% set description_list_collection %}
   {% for description in collections %}
     {% include "@components/description-list/description-list.html.twig" with description %}
   {% endfor %}
-</div>
+{% endset %}

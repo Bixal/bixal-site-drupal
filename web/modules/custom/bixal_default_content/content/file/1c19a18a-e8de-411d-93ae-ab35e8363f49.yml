@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1c19a18a-e8de-411d-93ae-ab35e8363f49
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: data-privacy-week-blog.jpg
+  uri:
+    -
+      value: 'public://2024-03/data-privacy-week-blog.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 6495751
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709906851

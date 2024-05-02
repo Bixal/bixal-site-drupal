@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4103e217-a4a4-4b2a-a3db-806dfe467da3
+  bundle: image
+  default_langcode: en
+  depends:
+    14fbcfce-fdc0-4c73-89c7-0baa62f162f3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: bridging-the-digital-health-divide.png
+  created:
+    -
+      value: 1703259533
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 14fbcfce-fdc0-4c73-89c7-0baa62f162f3
+      alt: 'Banner Image'
+      title: ''
+      width: 3840
+      height: 1745

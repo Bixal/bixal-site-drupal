@@ -1,0 +1,26 @@
+uuid: 5acae2e3-635b-4980-989b-106f8cee9991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_information
+    - filter.format.html_text
+    - filter.format.plain_text
+    - node.type.contract_vehicle
+  module:
+    - text
+id: node.contract_vehicle.field_information
+field_name: field_information
+entity_type: node
+bundle: contract_vehicle
+label: Information
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+    - plain_text
+field_type: text_long

@@ -1,0 +1,11 @@
+{# Attributes is only used for the contextual links. This will put an extra wrapper around the header, that's why
+  it's not going around the header.html.twig.
+#}
+{% if attributes is not empty %}
+  {# The wrapper around the contextual links to make the JS work. #}
+  <div{{ attributes }}>
+    {# Contextual links are put in this var. #}
+    {{ title_suffix }}
+    {{ content }}
+  </div>
+{% endif %}

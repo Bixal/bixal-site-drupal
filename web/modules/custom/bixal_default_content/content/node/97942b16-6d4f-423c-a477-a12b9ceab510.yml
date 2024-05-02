@@ -1,0 +1,105 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 97942b16-6d4f-423c-a477-a12b9ceab510
+  bundle: contract_vehicle
+  default_langcode: en
+  depends:
+    cdc0e1df-2425-4faa-b97c-2d9b07f1894f: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'OASIS SB Pool 1 & OASIS 8(a) SubPool 1'
+  created:
+    -
+      value: 1709848853
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: cdc0e1df-2425-4faa-b97c-2d9b07f1894f
+  field_contractor_capabilities:
+    -
+      value: '<p>As prime contractor, Bixal offers a global perspective to help federal agencies identify their needs and create systems that support business objectives with the customer in mind.</p><p>Bixal leverages agile methodologies that align with our commitment to exceptional service, ensuring the delivery of value, quality and security. Our core capabilities suited specifically for the GSA OASIS vehicle include:</p><ul><li>Program Management</li><li>Management Consulting</li><li>Logistics Management</li><li>Marketing</li><li>Human Resources</li><li>Systems Engineering</li><li>Network Administration</li><li>Data Modeling and Simulation</li><li>Statistical Analysis</li><li>Information Technology Administration</li></ul>'
+      format: html_text
+  field_general_overview:
+    -
+      value: '<p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">OASIS Small Business (SB) and OASIS 8(a) are multiple award, Indefinite Delivery Indefinite Quantity (IDIQ) contracts that provide flexible and innovative solutions for complex professional services.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Details of the OASIS contract include:</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Administered by the <a class="decorative-link" style="background-color:transparent;box-shadow:rgba(125, 0, 150, 0.5) 0px -2px 0px inset;box-sizing:border-box;color:inherit;cursor:pointer;padding:0px 4px;text-decoration:none;transition:box-shadow 0.2s ease-in-out 0s;" href="https://www.gsa.gov/" rel="noreferrer" target="_blank"><span class="sc-bcXHqe cRdFuA" style="box-sizing:inherit;">General Services Administration (GSA)</span></a>, the OASIS vehicle offers access to a select group of vendors pre-screened for an outstanding track record of past performance, customer satisfaction, corporate management, cost control and the ability to deliver across a wide range of disciplines and expertise areas.</p><p style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:inherit;color:rgb(0, 0, 0);font-family:proxima-nova, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;line-height:1.6;margin-top:0px;orphans:2;text-align:left;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">The OASIS contract offers high quality, cost-effective professional services to federal agencies and is structured to:</p><ul><li>Span many areas of expertise and mission space;</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Span multiple professional service disciplines;</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Allow flexibility for all contract types, including hybrids and cost-reimbursement, at the task order level; and</li><li style="box-sizing:inherit;list-style:disc;margin:initial;padding-inline-start:0px;padding:initial;">Allow ancillary support components, commonly referred to as Other Direct Costs (ODC), at the task order level.</li></ul>'
+      format: html_text
+  field_information:
+    -
+      value: '<p><strong>Contract Number:</strong> 47QRAD20D1074<br><strong>DUNS Number:</strong> 100128086<br><strong>CAGE Code:</strong> 4QRJ3</p>'
+      format: html_text
+  field_key_points_of_contact:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 3af0fa71-a815-4a0d-8923-0ae3687ac59f
+          bundle: address
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1712926469
+          behavior_settings:
+            -
+              value: {  }
+          field_email:
+            -
+              value: fred.jorgensen@bixal.com
+          field_name_and_title:
+            -
+              value: 'Fred Jorgensen, VP of Strategic Growth'
+          field_phone_number:
+            -
+              value: 703.634.5701
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 560a9524-66d0-4fc0-bf0d-fd1196e378ee
+          bundle: address
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1712926484
+          behavior_settings:
+            -
+              value: {  }
+          field_email:
+            -
+              value: oasissb@bixal.com
+          field_name_and_title:
+            -
+              value: 'Ottavia Criss, OASIS IDIQ Manager'
+          field_phone_number:
+            -
+              value: 703.634.5701

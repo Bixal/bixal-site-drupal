@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fd38d29e-c92e-4060-becb-0a83ad91397d
+  bundle: image
+  default_langcode: en
+  depends:
+    e1a53a5e-ab88-4971-93f8-88cf278853d7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: usaid-comp-ta-image.jpg
+  created:
+    -
+      value: 1709903929
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: e1a53a5e-ab88-4971-93f8-88cf278853d7
+      alt: 'Hero Image'
+      title: ''
+      width: 3840
+      height: 1745

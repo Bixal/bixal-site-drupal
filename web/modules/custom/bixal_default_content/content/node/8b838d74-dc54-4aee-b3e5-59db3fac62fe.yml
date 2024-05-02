@@ -1,0 +1,67 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8b838d74-dc54-4aee-b3e5-59db3fac62fe
+  bundle: bixaler
+  default_langcode: en
+  depends:
+    4599c6ac-6ad6-4402-9087-32e0a15c7a24: media
+    2028c8f2-aae8-4fd4-8c0d-8c5eb12f05c4: taxonomy_term
+    bfa57243-b31a-4f76-8497-faade50242e5: taxonomy_term
+    0eb63c39-edff-4d41-83df-7a62222c704a: taxonomy_term
+    d06bcd99-a80b-472f-bfff-610d3ae6474a: taxonomy_term
+    be4a5090-0e3a-4c05-a6fa-3eb4dca3e756: taxonomy_term
+    adabd71f-807b-4335-9747-5ab18282e3db: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Buddy Harlow'
+  created:
+    -
+      value: 1705593101
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /bixaler/buddy-harlow
+      langcode: en
+      pathauto: 0
+  field_bucket_list:
+    -
+      value: 'To live forever.'
+  field_image:
+    -
+      entity: 4599c6ac-6ad6-4402-9087-32e0a15c7a24
+  field_link:
+    -
+      uri: 'https://www.linkedin.com/in/buddy-harlow/'
+      title: LinkedIn
+      options: {  }
+  field_role:
+    -
+      entity: 2028c8f2-aae8-4fd4-8c0d-8c5eb12f05c4
+  field_specialties:
+    -
+      entity: bfa57243-b31a-4f76-8497-faade50242e5
+    -
+      entity: 0eb63c39-edff-4d41-83df-7a62222c704a
+    -
+      entity: d06bcd99-a80b-472f-bfff-610d3ae6474a
+    -
+      entity: be4a5090-0e3a-4c05-a6fa-3eb4dca3e756
+  field_team:
+    -
+      entity: adabd71f-807b-4335-9747-5ab18282e3db

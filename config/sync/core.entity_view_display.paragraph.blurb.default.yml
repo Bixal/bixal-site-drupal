@@ -1,0 +1,52 @@
+uuid: 0d0af71c-64de-42d4-ab03-bb39a30a3596
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blurb.field_date
+    - field.field.paragraph.blurb.field_description
+    - field.field.paragraph.blurb.field_image
+    - field.field.paragraph.blurb.field_title
+    - paragraphs.paragraphs_type.blurb
+  module:
+    - datetime
+id: paragraph.blurb.default
+targetEntityType: paragraph
+bundle: blurb
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: bixal_front_end_default
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

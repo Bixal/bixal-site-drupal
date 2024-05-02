@@ -19,7 +19,7 @@ function bixal_uswds_preprocess_node(&$vars) {
     if ($node->getType() === "bx_landing_page") {
       // Query the components field on the landing page node.
       if (!empty($node->field_bx_components->getValue())) {
-        foreach ($node->field_bx_components->getValue() as $key => $value) {
+        foreach ($node->field_bx_components->getValue() as $value) {
           $paragraph = FALSE;
           if (!empty($value['entity'])) {
             // Previewing.
