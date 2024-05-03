@@ -48,9 +48,11 @@
       return;
     
 
+
     if (void 0 === t.dataset.gatsbyImageSsr) 
       return;
     
+
 
     let a = null,
       n = t;
@@ -58,6 +60,7 @@
       void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode),
       n = n.parentNode;
     
+
 
     const o = a.querySelector("[data-placeholder-image]"),
       r = new Image;
@@ -68,6 +71,7 @@
     }))
   }), !0);
 </script>
+<title>This is the title of a web page</title>
 <div id="case-study" class="page--case-study">
   <section id="hero" class="section-container bg-image hero " style="background-color:transparent;color:black;padding:0px 0;background-image:radial-gradient(circle, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%), url(/static/d6b25ad6c22c438dde0709d18958c405/digital-apex-1.png)">
     <div style="margin:0 auto;width:100%;max-width:1350px">
@@ -85,10 +89,10 @@
   <section id="intro-section" class="section-container  intro-section " style="background-color:transparent;color:black;padding:30px 0">
     <div style="margin:0 auto;width:85%;max-width:1350px">
       <div id="case-study-intro" class="
-                                        intro-block
-                                        intro-block-2
-                                        intro-block--case-study-intro
-                                      ">
+                                                            intro-block
+                                                            intro-block-2
+                                                            intro-block--case-study-intro
+                                                          ">
         <div class="intro-block__heading">
           <h3 class="intro-block-2__heading" style="color:#7d0096">United States Agency for International Development (USAID)</h3>
           <h3 class="intro-block-2__heading" style="color:#7d0096">Digital APEX Colombia</h3>
@@ -329,6 +333,7 @@
                       e.setAttribute("srcset", e.dataset.srcset),
                       e.removeAttribute("data-srcset");
                     
+
 
                     e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0)
                   }

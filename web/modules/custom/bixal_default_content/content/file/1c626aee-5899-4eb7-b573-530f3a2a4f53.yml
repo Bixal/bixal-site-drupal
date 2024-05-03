@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1c626aee-5899-4eb7-b573-530f3a2a4f53
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: fema-image-1.png
+  uri:
+    -
+      value: 'public://2024-05/fema-image-1.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 439965
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751096

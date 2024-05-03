@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6df02060-b3a1-489c-b244-9d14e623ab79
+  bundle: image
+  default_langcode: en
+  depends:
+    1c626aee-5899-4eb7-b573-530f3a2a4f53: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: fema-image-1.png
+  created:
+    -
+      value: 1714751096
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1c626aee-5899-4eb7-b573-530f3a2a4f53
+      alt: 'Hero Image'
+      title: ''
+      width: 2200
+      height: 943

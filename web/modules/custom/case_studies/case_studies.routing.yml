@@ -2,6 +2,6 @@ case_studies.display_markup:
   path: "/our-work/{template}"
   defaults:
     _controller: '\Drupal\case_studies\Controller\CaseStudiesController::displayMarkup'
-    _title: "Case Studies Content"
+    _title: "Case Study"
   requirements:
     _permission: "access content"
