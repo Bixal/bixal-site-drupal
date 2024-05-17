@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: node
 bundle: bixaler
 label: Image
-description: ''
+description: 'The image will be scaled to a 325 X 325 square image. The image will be scaled up or down if it does not match these dimensions. If the image is not square, it will be cropped and focus on the center.'
 required: false
 translatable: false
 default_value: {  }
