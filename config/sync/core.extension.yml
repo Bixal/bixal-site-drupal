@@ -23,6 +23,7 @@ module:
   disable_user_1_edit: 0
   dynamic_page_cache: 0
   editor: 0
+  email_username: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
