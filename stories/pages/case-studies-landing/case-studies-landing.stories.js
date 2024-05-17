@@ -18,7 +18,7 @@ export const Default = {
     hero: {
       variant: "image-bg",
       title: "Our Work",
-      image: "https://www.bixal.com/static/0a66c21e57fc6b5c25b6a4b9055bf84f/landing-hero.jpg",
+      image: "/static/0a66c21e57fc6b5c25b6a4b9055bf84f/landing-hero.jpg",
     },
     intro: {
       title: "What we do",

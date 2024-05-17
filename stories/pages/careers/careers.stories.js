@@ -22,7 +22,7 @@ export const Default = {
       variant: "image-bg",
       title: "Careers",
       image:
-        "https://www.bixal.com/static/72fb0e52a06fe7d036d793de33f62208/careers-hero.jpg",
+        "/static/72fb0e52a06fe7d036d793de33f62208/careers-hero.jpg",
     },
     intro: {
       title: "How can you improve the lives of people today?",
@@ -31,28 +31,28 @@ export const Default = {
     },
     imageSection: {
       image:
-        "https://www.bixal.com/static/5fbc59878f4c5e250d2f7efbb18a71a9/45909/careers--b-banner.webp",
+        "/static/5fbc59878f4c5e250d2f7efbb18a71a9/45909/careers--b-banner.webp",
     },
     blurbs: {
       variant: "three-up",
       blurbs: [
         {
           image:
-            "<img src='https://www.bixal.com/static/d6e70f1bae8881758dd9b06d3fd77607/56d27/careers--thought-leaders.webp'>",
+            "<img src='/static/d6e70f1bae8881758dd9b06d3fd77607/56d27/careers--thought-leaders.webp'>",
           title: "Thought leaders",
           description:
             "Bixal's team members are constant learners and teachers, supportive of individual and professional growth. We value kindness and humility and seek to build each other up and drive everyone forward.",
         },
         {
           image:
-            "<img src='https://www.bixal.com/static/dcaf9d4d8975930ba8811afd2c14d333/95694/careers--collaborative-and-agile.webp'>",
+            "<img src='/static/dcaf9d4d8975930ba8811afd2c14d333/95694/careers--collaborative-and-agile.webp'>",
           title: "Collaborative & Agile",
           description:
             "We relentlessly focus on outcomes and weave it together with a unique agility that permeates everything we do. Bixal values collaboration and transparency. It shapes how we approach every project.",
         },
         {
           image:
-            "<img src='https://www.bixal.com/static/1d156602b6729216b92caa6707ea9ace/56d27/careers--empowered-teams.webp'>",
+            "<img src='/static/1d156602b6729216b92caa6707ea9ace/56d27/careers--empowered-teams.webp'>",
           title: "Empowered Teams",
           description:
             "Bixal unites different people with different perspectives from all over the world and provides them with an open, empowered environment where creativity can flourish.",

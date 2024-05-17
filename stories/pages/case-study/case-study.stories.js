@@ -18,7 +18,7 @@ export const Default = {
     hero: {
       variant: "image-bg",
       title: "Building cybersecurity capacity of civil society organizations in Colombia to improve digital health and protect against cyber threats.",
-      image: "https://www.bixal.com/static/d6b25ad6c22c438dde0709d18958c405/digital-apex-1.png",
+      image: "/static/d6b25ad6c22c438dde0709d18958c405/digital-apex-1.png",
     },
     socialNav: SocialNav.default.args
   },
