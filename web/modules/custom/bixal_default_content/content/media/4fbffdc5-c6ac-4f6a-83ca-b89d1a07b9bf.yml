@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4fbffdc5-c6ac-4f6a-83ca-b89d1a07b9bf
+  bundle: image
+  default_langcode: en
+  depends:
+    36297155-4334-4b1b-89d6-4d4feda34665: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 1-hud.jpg
+  created:
+    -
+      value: 1714751763
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 36297155-4334-4b1b-89d6-4d4feda34665
+      alt: 'Hero Image'
+      title: ''
+      width: 1378
+      height: 558

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 13ebccf5-b4be-4133-a5e7-7d6cbac5b1a3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 6-sba.jpg
+  uri:
+    -
+      value: 'public://2024-05/6-sba.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 3071090
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751525

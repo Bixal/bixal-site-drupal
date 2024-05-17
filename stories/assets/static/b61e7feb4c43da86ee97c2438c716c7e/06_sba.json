@@ -1,0 +1,348 @@
+{
+  "jsonId": "sba",
+  "order": "06",
+  "template": "new",
+  "title": "Using content strategy to propel American business.",
+  "description": "There are more than 32 million small businesses in the United States, making up over 99% of all businesses in the country. The owners of these operations look to the U.S. Small Business Administration and its website for counseling, capital, and expertise. We worked closely with stakeholders to turn SBA.gov into a service-oriented website—a place where entrepreneurs and business owners could be guided to the vital information that they need to start a business, stay on track, expand, and flourish.",
+  "overlayDescription": "Propelling business with multilingual content strategy",  
+  "introTemplate": "new",
+  "introHeading": ["U.S. Small Business Administration (SBA)", "SBA.gov"],
+  "introServices": "Agile Project Management, Content Strategy, Marketing Research, Outreach and Liaising Services, SEO and Analytics, Copywriting, Accessibility/508 Compliance, Bilingual English-Spanish Content Strategy, Help Desk and Customer Support",
+  "caseStudyURL": "https://www.sba.gov",
+  "caseStudyLabel": "https://www.sba.gov",
+  "logo": "mod-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "6-sba.jpg",
+  "heroImageAlt": "Two Entrepreneurs working together in a florist",
+  "landingImage": "6-sba.jpg",
+  "landingImageAlt": "Two Entrepreneurs working together in a florist",
+  "details": {
+    "client": "U.S. Small Business Administration (SBA)",
+    "client_abrev": "U.S. Small Business Administration",
+    "project": "Hispanic Web Presence",
+    "technology": null
+  },
+  "primaryColor": "#E02F00",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Challenge",
+            "columnText": "SBA.gov existed as a warehouse of information and links that customers found difficult to understand and navigate. It also failed to meet federal accessibility guidelines, meaning many people were unable to use the site at all. As a result, 52% of visitors left the site without going beyond the landing page. We needed to gain a better comprehension of who the customers were and what brought them to the site, so we could develop and deliver a customer-centered online experience."
+          },
+          {
+            "columnHeading": "Solution",
+            "columnText": "Armed with an array of customer research and data that our team collected, we were able to build personas and user stories based on actual people and their real-life needs. This deeper understanding of SBA customers then informed the development of a comprehensive content strategy, which included establishing an SBA brand position and social media plan."
+          },
+          {
+            "columnHeading": "Results",
+            "columnText": "A plain language, accessible, and easy-to-navigate website, with a Spanish-language counterpart, firmly based on customer needs, which helps hundreds of thousands of entrepreneurs and small business owners every month find all the tools they need to start, grow, and keep their businesses."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Defining the Problem",
+            "columnText": "Much of the language found on SBA.gov was geared toward the internal stakeholder and not the small business owner, and there was no information in Spanish for the country’s more than 4.4 million Latino-owned businesses. Also, the site did not meet the Federal Government’s accessibility requirements. We wanted to transform the website from a jargon- and document-laden repository into a searchable, fully accessible, and bilingual resource that everyone could turn to for their small business information needs."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "banner",
+        "sectionImage": "sba-open-welcome.jpg",
+        "sectionImageAlt": "A small business storefront with a sign that says Open and Welcome."
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Discovery & Research",
+            "columnText": "Our research methods are human-centered, just like our design strategies. We engaged in extensive discovery sessions with the SBA team and listened to the needs of U.S. business owners by conducting various types of user research. This information helped influence our customer personas and journey maps to identify problem areas within the website and adjust the content to respond to specific needs accordingly."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Analysis",
+            "columnImage": "sba-research.jpg",
+            "columnImageAlt": "Side view of a woman's hands on the keyboard of a laptop.",
+            "columnText": "We carried out customer interviews and impromptu social research to obtain live, raw online feedback on what was working or lacking on the original site. Our user research included analytics reviews, behavior reports, and both content gap and competitive analyses. We also conducted a content audit of the SBA website, which helped us to identify what to keep, delete, or rewrite."
+          },
+          {
+            "columnTopic": "Findings",
+            "columnImage": "sba-discovery.jpg",
+            "columnImageAlt": "Three people standing in front of a whiteboard, writing on sticky notes.",
+            "columnText": "Through our research, we discovered that people had trouble self-identifying with the small business criteria on SBA.gov. Customers found it difficult to navigate the federal jargon to access the information and applications relevant to their specific situation, and because the site was not 508 compliant, many customers had trouble accessing the site. Also, the site was designed to fit SBA employees’ computer screens and not optimized for different sized screens or mobile devices, which 31% of all visitors used to access the site."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Design & Approach",
+            "columnText": "Every project we take on starts with a research process to help us understand the needs of the client, but to tailor a solution for SBA.gov, our focus was the site’s customers. With hundreds of thousands of people visiting this site every month, we knew that our approach had to be human-centered and it was vital that our design be customer-friendly and 508 compliant."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Personas",
+            "columnText": "To iteratively redesign the online experience for <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.sba.gov/\">SBA.gov</a> customers, we created personas—representations of both SBA customers and internal stakeholders. From this exercise, we gathered information on what types of services business owners seek when starting up or expanding, when disaster hits, or when their business has to close permanently. We then used this data to model our content for any eventuality."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-user-experience.jpg",
+            "columnImageAlt": "Two user persona profiles."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Iconography",
+            "columnText": "Web pages with large amounts of copy can be overwhelming for customers, so our team utilized design elements such as infographics and icons, so users can easily understand the content in a visually appealing, responsive format. Graphics both help explain complex topics in visual ways and unify the design experience when used across the site. Our communications team also used Bixal-designed graphics in email marketing campaigns, which reached approximately 1.8 million people each month."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "image-quad",
+        "quadImages": [
+          {
+            "quadImage": "sba-card-adv.jpg",
+            "quadImageAlt": "A card showing a page and a pencil and the words '$10k ADV.'"
+          },
+          {
+            "quadImage": "sba-card-express.jpg",
+            "quadImageAlt": "A card showing a clock and the word 'Expre$$'."
+          },
+          {
+            "quadImage": "sba-card-give.jpg",
+            "quadImageAlt": "A card showing a hand giving another hand a coin then a dove carrying an olive branch."
+          },
+          {
+            "quadImage": "sba-card-ppp.jpg",
+            "quadImageAlt": "A card showing a stack of dollar bills and a check mark labeled 'PPP'."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Social Outreach",
+            "columnText": "As part of our strategic plan recommendations, we wanted to strengthen the connection between the site and SBA’s social media channels, especially as research has shown that social media and mobile internet-use is prevalent among Spanish-speaking members of the U.S. population. Bixal piloted design strategies for the SBA’s social media channels, which increased awareness and deepened customer engagement."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-social-outreach.jpg",
+            "columnImageAlt": "A mobile phone showing a tweet from @SBAgov's twitter account."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Data Analytics",
+            "columnText": "Each month, more than 750,000 customers visit SBA.gov, generating a wealth of data on website behavior—SEO, customer behavior and interactions, and social media performance. By implementing new data collection and analytics tools, Bixal helped the SBA better understand their key audiences and implement data-driven content model and website design solutions. Our support has been instrumental in helping the SBA deliver content; the site featured a 443% increase in site visitors overall and the mobile site increased visitors by 186%."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-data-analytics.jpg",
+            "columnImageAlt": "An analytics report for SBA.GOV."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Information Architecture",
+            "columnText": "Bixal created an intuitive information architecture (IA) and customer-friendly navigation structure based on customer research and testing. Through this work, we condensed information in the SBA’s Business Guide (a key content section on the site) from 300+ web pages to 30. By reducing irrelevant content, we were able to reduce clicks in the navigation, making it easier for customers to find the content they need."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-content-strategy.jpg",
+            "columnImageAlt": "Heirarchical sets of content."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-content-strategy-cards.jpg",
+            "columnImageAlt": "Four cards showing key SBA content areas."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Delivering the Solution",
+            "columnText": "In addition to building a more human-centered web experience, including a Spanish-language site, we provide full-time web support to address ongoing needs."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Technology",
+            "columnIconType": "sba-tech",
+            "columnText": "Bixal migrated over 3,000 pages of web content from Drupal 7 to Drupal 8. We used analytics tools to better understand SBA’s key audience and measure success, and we dramatically expanded the SBA’s ability to implement a data-backed content strategy."
+          },
+          {
+            "columnHeading": "Methodology",
+            "columnIconType": "sba-response",
+            "columnText": "Using Agile development methodologies to manage the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.sba.gov/\">SBA.gov</a> project allowed our team to make continuous improvements to the site and to easily adapt to change. It also helped create a streamlined process for content design and creation. The iterative process allowed the team to rapidly meet short-term goals while working toward long-term objectives."
+          },
+          {
+            "columnHeading": "Customer Support",
+            "columnIconType": "sba-support",
+            "columnText": "SBA’s help desk is a key touchpoint for internal and external audiences and complements the site’s main services. Bixal manages both the help desk and SBA’s customer support line with professional acumen, well-defined processes, and exceptional communication skills to respond rapidly and represent the SBA’s brand."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Unexpected Challenge",
+            "columnText": "In the spring of 2020, the eyes of the country were on the Small Business Administration. SBA.gov was not prepared for the impact COVID-19 would have on small businesses. When people started flooding the site, it became apparent that vital information—especially regarding emergency loans and debt relief—was difficult to find."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-iconography-phone.jpg",
+            "columnImageAlt": "A woman wearing a protective face mask working at a laptop."
+          },
+          {
+            "columnImage": "sba-user-personas-mask.jpg",
+            "columnImageAlt": "A phone app showing a shopping cart next to the words: STAY HOME, WE DELIVER."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "Rapid Response",
+            "columnText": "Within a few hours, our team had developed an IA plan and added original content to the site to inform business owners about coronavirus relief funding, providing a lifeline to businesses struggling through economic uncertainty. We also pivoted our workflow to make necessary updates to the live site, as requests were handed down from the administration."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnImage": "sba-outcome.jpg",
+            "columnImageAlt": "A laptop showing an SBA website about Coronavirus Relief Options."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "callout",
+        "bgColor": true,
+        "callout": {
+          "calloutHeading": "The Outcome",
+          "calloutText": "In the first six months of 2020, the site experienced an 801% increase in visitors, compared with the previous year. Bixal helped the Small Business Administration quickly connect these customers with counseling, resources, and financial assistance to navigate the effects of the pandemic, while delivering SBA.gov resources to customers in 18 different languages."
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "emphasis-blocks",
+        "blocks": [
+          {
+            "blockTopic": "Highlight",
+            "blockHeading": "1.4 million",
+            "blockText": "The average number of daily visitors Bixal helped SBA.gov reach in April 2020."
+          },
+          {
+            "blockTopic": "Highlight",
+            "blockHeading": "A+",
+            "blockText": "Grade Bixal helped SBA.gov earn for “organizational compliance” from the Center for Plain Language."
+          }
+        ]
+      }
+    }
+  ]
+}

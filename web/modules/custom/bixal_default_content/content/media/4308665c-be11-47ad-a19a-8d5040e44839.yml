@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4308665c-be11-47ad-a19a-8d5040e44839
+  bundle: image
+  default_langcode: en
+  depends:
+    996f001d-7c8f-4052-a963-e566affd57b2: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 2-usaid.jpg
+  created:
+    -
+      value: 1714751834
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 996f001d-7c8f-4052-a963-e566affd57b2
+      alt: 'Hero Image'
+      title: ''
+      width: 1378
+      height: 558

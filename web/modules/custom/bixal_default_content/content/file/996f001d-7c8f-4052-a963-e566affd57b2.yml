@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 996f001d-7c8f-4052-a963-e566affd57b2
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 2-usaid.jpg
+  uri:
+    -
+      value: 'public://2024-05/2-usaid.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1066447
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751834

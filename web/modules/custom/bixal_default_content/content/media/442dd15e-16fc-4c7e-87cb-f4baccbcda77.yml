@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 442dd15e-16fc-4c7e-87cb-f4baccbcda77
+  bundle: image
+  default_langcode: en
+  depends:
+    711e198a-b1e2-4c4d-b463-f946820fb1f7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 4-medline-plus.jpg
+  created:
+    -
+      value: 1714751675
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 711e198a-b1e2-4c4d-b463-f946820fb1f7
+      alt: 'Hero Image'
+      title: ''
+      width: 1378
+      height: 558

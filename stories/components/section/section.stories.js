@@ -66,7 +66,7 @@ export const BackgroundImage = {
   args: {
     additional_classes: ["bix-section--primary"],
     image:
-      "https://www.bixal.com/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
+      "static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
     prefix: "What we do",
     title:
       "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
@@ -86,7 +86,7 @@ export const Tall = {
     variant: "tall",
     center_content: true,
     image:
-      "https://www.bixal.com/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
+      "static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
     prefix: "What we do",
     title:
       "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",

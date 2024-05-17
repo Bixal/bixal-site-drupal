@@ -1,0 +1,21 @@
+uuid: c4ec9d69-feea-400d-8e3b-166f3fd64f9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured
+    - paragraphs.paragraphs_type.blurb_collection
+id: paragraph.blurb_collection.field_featured
+field_name: field_featured
+entity_type: paragraph
+bundle: blurb_collection
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

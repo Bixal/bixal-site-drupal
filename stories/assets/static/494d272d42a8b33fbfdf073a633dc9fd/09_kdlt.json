@@ -1,0 +1,114 @@
+{
+  "jsonId": "kdlt",
+  "order": "09",
+  "template": "new",
+  "title": "Delivering digital communications and web strategy in support of global food security.",
+  "description": "<p>Feed the Future is the U.S. government’s global hunger and food security initiative. Over the course of Bixal’s work with this initiative, their primary focus has been on 12 target countries: Bangladesh, Ethiopia, Ghana, Guatemala, Honduras, Kenya, Mali, Nepal, Niger, Nigeria, Senegal and Uganda.</p><p>As a Feed the Future-funded activity, KDLT supports USAID and the global food security community in achieving their goals by facilitating effective learning.</p>",
+  "overlayDescription": "Delivering digital communications for food security",      
+  "introTemplate": "new",
+  "introHeading": ["United States Agency for International Development (USAID)", "Bureau for Resilience and Food Security (RFS)", "Feed the Future Knowledge, Data, Learning and Training (KDLT)"],
+  "introServices": "Digital Strategy; Content Strategy; Visual Design; Human-Centered Design; User-Experience Design (UX); Agile Web Strategy and Management; Knowledge Management; Organizational Development; Training; Event Management and Facilitation; Multimedia Production; Monitoring, Evaluation and Learning; Data Analysis and Visualization",
+  "caseStudyURL": "https://www.agrilinks.org",
+  "caseStudyLabel": "https://www.agrilinks.org",
+  "logo": "mod-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "kdlt-image-1.jpg",
+  "heroImageAlt": "",
+  "landingImage": "kdlt-image-1.jpg",
+  "landingImageAlt": "",
+  "details": {
+    "client": "U.S. Agency for International Development (USAID) Bureau for Resilience and Food Security (RFS) Feed the Future Knowledge, Data, Learning, and Training (KDLT) Activity",
+    "client_abrev": "USAID Bureau for Resilience and Food Security",
+    "project": "",
+    "technology": null
+  },
+  "primaryColor": "#deec1e",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Challenge",
+            "columnText": "In March 2019, USAID and Bixal launched KDLT to build the capacity of Feed the Future, USAID and the global food security community to share knowledge and data in alignment with the Global Food Security Strategy (GFSS). One of USAID’s priorities was to ensure that its premier knowledge-sharing platform for food security, Agrilinks, was effectively positioned and aligned to support Feed the Future and USAID’s knowledge-sharing goals."
+          },
+          {
+            "columnHeading": "Solution",
+            "columnText": "Bixal met this challenge by upgrading Agrilinks and providing an ongoing series of digital content and communications enhancements. Bixal’s digital content strategy and implementation support created foundational guidelines, such as a vision document, branding and editorial style guides, and data analysis dashboards to track website success. We also bolstered content channels, ensuring ease of Agrilinks’ maintenance and use, and improved accessibility and usability targeted at USAID and members of the global food security community."
+          },
+          {
+            "columnHeading": "Results",
+            "columnText": "The refresh and upgrade of Agrilinks has been an important achievement, resulting in increased user engagement and knowledge sharing and positioning the website for ongoing excellence in support of GFSS goals. Since Bixal began oversight of Agrilinks, the website has had a 132% increase in pageviews and a substantial increase in USAID-authored content, Agrilinks event participation and mailing-list membership. Agrilinks is now the leading website for USAID staff to share knowledge on food security and agricultural development with the global community."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Defining the Problem",
+            "columnText": "<p>RFS and the hundreds of U.S. government-funded activities that comprise the Feed the Future initiative continually develop and aggregate technical knowledge, data, new approaches and lessons learned. This wealth of knowledge, however, can be hard to take full advantage of because it is varied in format and dispersed across several sources.</p><p>Based on audits and discovery of Agrilinks and discussions with USAID, Bixal identified the need for a digital strategy to leverage the community’s knowledge and network and Agrilinks’ associated communication channels to increase and better facilitate knowledge sharing. Bixal pursued opportunities to improve the way Agrilinks’ diverse audiences can contribute learning and find the information most relevant to them.</p><p>Improving access to learning and knowledge was deemed a key step toward increasing the application of program-relevant knowledge and content to facilitate informed decision-making, learning and adaptive management among USAID staff, implementing partners and other Feed the Future stakeholders.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Design & Approach",
+            "columnText": "<p>Starting in 2019, USAID and Bixal began workshops to set goals for Agrilinks and lay a path forward. USAID’s collaborating, learning and adapting approach and Agile methodologies drove Bixal’s work on Agrilinks. Our team worked with USAID to complete the website’s migration to Drupal 9, create a discovery plan, standardize brand treatment across related Agrilinks channels, retire content, prepare for continued back-end improvement and chart a path for continuous UX improvement.</p><p>Supporting activities included conducting extensive user research, a full content audit of the original website, establishing an editorial style guide and setting criteria for member applications. We also worked with USAID to synthesize technical reports, including accompanying data visualizations, for general audiences.</p><p>We expanded on this process in modernizing and relaunching ResilienceLinks.org, USAID’s Center for Resilience’s knowledge-management platform for international development and humanitarian response professionals.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Delivering the Solution",
+            "columnText": "<p>In migrating Agrilinks to Drupal 9, Bixal increased the website’s accessibility. Our team made critical responsive design improvements, ensuring color and alternate-tag compliance. The team also has ensured that alternate text is appropriately added to necessary media and all content is Section 508 compliant.</p><p>Bixal created a content and governance guide for Agrilinks to ensure RFS’s ability to continue building the website in a way that ensures all content remains relevant and accessible to users. Bixal updated and improved Agrilinks’ branding and redesigned the external communications, including newsletters, event invites, the event PowerPoint template and social media graphics. Bixal improved content channels and working relations with USAID, resulting in more USAID content on the website, a win for both USAID and the global food security community.</p><p>To increase knowledge dissemination and engagement throughout the community, Bixal upgraded USAID’s webinar platform to BlueJeans and designed, coordinated and hosted 34 webinars (as of September 2021) through the Agrilinks Webinar Series using our audiovisual technical expertise. Attendance averaged more than 320 people per webinar.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "callout",
+        "bgColor": true,
+        "callout": {
+          "calloutHeading": "The Outcome",
+          "calloutText": "<p>Through KDLT, Bixal focuses on the following five outcomes in support of USAID’s global food security and resilience efforts:</p><ol class='callout-list'><li>Improved and sustained capacity for knowledge sharing.</li><li>Expanded capacity for on-demand, accurate data analysis and visualization.</li><li>Maintenance, growth and improvement in USAID web platforms and databases (including Agrilinks).</li><li>Increased awareness and use of new evidence and learnings to influence programmatic procurement and decision-making.</li><li>Improved culture of collaboration, knowledge sharing, learning and adapting among USAID staff, Feed the Future Missions and Feed the Future implementing partners.</li></ol><p>Bixal continues to drive high impact and innovation across these areas.</p>"
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Project Highlights",
+            "columnText": "To date, KDLT’s digital and web strategy work has contributed to the following important achievements:"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "emphasis-blocks",
+        "blocks": [
+          {
+            "blockTopic": "",
+            "blockHeading": "",
+            "blockText": "<ol class='emphasis-list'><li>Agrilinks’ mailing list of subscribers grew by 58% since the contract’s start.</li><li>Sixty Agrilinks newsletters have been published and disseminated to more than 25,000 subscribers.</li><li>Total attendance at Agrilinks’ webinars grew significantly, with increased participation from international stakeholders from 145 countries.</li><li>Agrilinks has been accessed by 597,000 unique visitors.</li><li>In the year prior to Bixal’s involvement with KDLT, Agrilinks averaged 16,000 visits per month; after our engagement, visits increased to an average of 38,000 per month — a 132% increase over a period of two and a half years. </li><li>KDLT updated and relaunched an additional website, ResilienceLinks.org, with RFS’s Center for Resilience after completing a comprehensive digital communications strategy and website update including platform upgrade, rebrand and improved user navigation. </li></ol>"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ac380069-7cbc-44be-bb66-b13ab59f11d4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: kdlt-image-1.jpg
+  uri:
+    -
+      value: 'public://2024-05/kdlt-image-1.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 373882
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751115

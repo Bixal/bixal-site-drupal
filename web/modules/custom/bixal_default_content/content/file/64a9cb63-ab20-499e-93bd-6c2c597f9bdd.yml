@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 64a9cb63-ab20-499e-93bd-6c2c597f9bdd
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hhs-careers-hero.jpeg
+  uri:
+    -
+      value: 'public://2024-05/hhs-careers-hero.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 109149
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751366
