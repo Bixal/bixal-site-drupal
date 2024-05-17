@@ -1,0 +1,15 @@
+uuid: 32da28cb-6c20-4bfd-a709-cf08f8ca871d
+langcode: en
+status: true
+dependencies: {  }
+name: bixaler_thumbnail
+label: 'Bixaler Thumbnail'
+effects:
+  ad71a4a6-7c0f-4756-9efc-34608f04687b:
+    uuid: ad71a4a6-7c0f-4756-9efc-34608f04687b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 325
+      height: 325
+      anchor: center-center
