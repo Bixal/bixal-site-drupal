@@ -62,7 +62,7 @@ function bixal_uswds_preprocess_page(&$vars) {
     'aria_label' => t('Social links'),
     'items' => [
       [
-        "href" => "https://www.linkedIn.com/company/bixa",
+        "href" => "https://www.linkedIn.com/company/bixal",
         "label" => t("LinkedIn"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
       ],
