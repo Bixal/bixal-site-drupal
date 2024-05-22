@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 83dfab43-4149-442c-b25f-abbed3890e5f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: landing-hero.jpg
+  uri:
+    -
+      value: 'public://2024-05/landing-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 177313
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714667338

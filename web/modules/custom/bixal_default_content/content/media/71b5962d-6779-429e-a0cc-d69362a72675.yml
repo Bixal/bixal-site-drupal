@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 71b5962d-6779-429e-a0cc-d69362a72675
+  bundle: image
+  default_langcode: en
+  depends:
+    e921eaff-7ef1-4cbf-807c-b3bafe670f8c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: digital-apex-1.png
+  created:
+    -
+      value: 1714750250
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: e921eaff-7ef1-4cbf-807c-b3bafe670f8c
+      alt: 'Hero Image'
+      title: ''
+      width: 2200
+      height: 943

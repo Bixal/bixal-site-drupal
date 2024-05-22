@@ -12,9 +12,11 @@ dependencies:
     - field.field.node.bixaler.field_role
     - field.field.node.bixaler.field_specialties
     - field.field.node.bixaler.field_team
+    - image.style.bixaler_thumbnail
     - node.type.bixaler
   module:
     - link
+    - media
     - user
 id: node.bixaler.default
 targetEntityType: node
@@ -37,11 +39,13 @@ content:
     weight: 2
     region: content
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: bixaler_thumbnail
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 7
     region: content

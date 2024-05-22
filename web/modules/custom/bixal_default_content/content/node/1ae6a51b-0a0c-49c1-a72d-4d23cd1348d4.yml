@@ -50,5 +50,29 @@ default:
       format: html_text
   field_key_points_of_contact:
     -
-      value: '<p>For information on the GSA TOTAL BPA, please use the following contact information:</p><address><p><strong>Ottavia Criss</strong><br><strong>GSA TOTAL BPA Manager</strong><br><a href="mailto:ottavia.criss@bixal.com">ottavia.criss@bixal.com</a><br><a href="tel:+1-703-634-5701">703.634.5701</a></p></address>'
-      format: html_text
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6fcdff98-4f22-48ca-a873-e63da7212a8d
+          bundle: address
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1712930130
+          behavior_settings:
+            -
+              value: {  }
+          field_email:
+            -
+              value: ottavia.criss@bixal.com
+          field_name_and_title:
+            -
+              value: 'Ottavia Criss, GSA TOTAL BPA Manager'
+          field_phone_number:
+            -
+              value: 703.634.5701

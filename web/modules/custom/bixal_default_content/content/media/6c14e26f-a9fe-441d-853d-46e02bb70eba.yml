@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6c14e26f-a9fe-441d-853d-46e02bb70eba
+  bundle: image
+  default_langcode: en
+  depends:
+    13ebccf5-b4be-4133-a5e7-7d6cbac5b1a3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 6-sba.jpg
+  created:
+    -
+      value: 1714751525
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 13ebccf5-b4be-4133-a5e7-7d6cbac5b1a3
+      alt: 'Hero Image'
+      title: ''
+      width: 2802
+      height: 1144

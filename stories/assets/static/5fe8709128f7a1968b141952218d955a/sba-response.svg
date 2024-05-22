@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="66px" viewBox="0 0 74 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bixal-casestudies-sba" transform="translate(-801.000000, -7119.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Delivering-the-Solution" transform="translate(140.000000, 6783.250000)">
+                <g id="Response" transform="translate(488.861048, 290.500000)">
+                    <g id="desktop-solid" transform="translate(172.500000, 45.464844)">
+                        <path d="M67.03125,0 L6.09375,0 C2.72949219,0 0,2.72949219 0,6.09375 L0,46.71875 C0,50.0830078 2.72949219,52.8125 6.09375,52.8125 L30.46875,52.8125 L28.4375,58.90625 L19.296875,58.90625 C17.6083984,58.90625 16.25,60.2646484 16.25,61.953125 C16.25,63.6416016 17.6083984,65 19.296875,65 L53.828125,65 C55.5166016,65 56.875,63.6416016 56.875,61.953125 C56.875,60.2646484 55.5166016,58.90625 53.828125,58.90625 L44.6875,58.90625 L42.65625,52.8125 L67.03125,52.8125 C70.3955078,52.8125 73.125,50.0830078 73.125,46.71875 L73.125,6.09375 C73.125,2.72949219 70.3955078,0 67.03125,0 Z M65,44.6875 L8.125,44.6875 L8.125,8.125 L65,8.125 L65,44.6875 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

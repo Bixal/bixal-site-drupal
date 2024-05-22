@@ -17,7 +17,7 @@ export const Default = {
     hero: {
       variant: "image-bg",
       title: "Contract Vehicles",
-      image: "https://www.bixal.com/static/de1a4f3c509d3232e4d3be54522dac29/hero-contract-vehicles.jpg",
+      image: "/static/de1a4f3c509d3232e4d3be54522dac29/hero-contract-vehicles.jpg",
     },
     socialNav: SocialNav.default.args
   },

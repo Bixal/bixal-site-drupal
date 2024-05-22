@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ddac1361-2890-42ac-9a2e-f702c1ddd5a7
+  bundle: image
+  default_langcode: en
+  depends:
+    64a9cb63-ab20-499e-93bd-6c2c597f9bdd: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hhs-careers-hero.jpeg
+  created:
+    -
+      value: 1714751366
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 64a9cb63-ab20-499e-93bd-6c2c597f9bdd
+      alt: 'Hero Image'
+      title: ''
+      width: 1199
+      height: 514

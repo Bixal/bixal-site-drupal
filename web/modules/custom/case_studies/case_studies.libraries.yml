@@ -1,0 +1,4 @@
+case_studies_styles:
+  css:
+    theme:
+      css/case-studies.min.css: { minified: true }

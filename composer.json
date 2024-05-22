@@ -47,6 +47,7 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",
+        "drupal/email_username": "^1.0",
         "drupal/field_group": "^3.4",
         "drupal/imagecache_external": "^3.0",
         "drupal/menu_admin_per_menu": "^1.5",

@@ -45,6 +45,7 @@
     'image': content.field_image | field_value,
     'description': content.field_description | field_value,
     'date': content.field_date.0['#text'],
+    'href': content.field_link.0['#url'],
     'additional_classes': [
       'component',
       'component--type--' ~ paragraph.bundle|clean_class,

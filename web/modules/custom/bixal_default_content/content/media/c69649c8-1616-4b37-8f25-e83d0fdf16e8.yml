@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c69649c8-1616-4b37-8f25-e83d0fdf16e8
+  bundle: image
+  default_langcode: en
+  depends:
+    83dfab43-4149-442c-b25f-abbed3890e5f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: landing-hero.jpg
+  created:
+    -
+      value: 1714667338
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 83dfab43-4149-442c-b25f-abbed3890e5f
+      alt: 'Landing Hero'
+      title: ''
+      width: 1680
+      height: 525

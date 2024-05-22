@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e921eaff-7ef1-4cbf-807c-b3bafe670f8c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: digital-apex-1.png
+  uri:
+    -
+      value: 'public://2024-05/digital-apex-1.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 560369
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714750250

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.blurb_collection.field_blurb_collection_variant
     - field.field.paragraph.blurb_collection.field_blurbs
+    - field.field.paragraph.blurb_collection.field_featured
     - paragraphs.paragraphs_type.blurb_collection
   module:
     - entity_reference_revisions
@@ -29,6 +30,16 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true

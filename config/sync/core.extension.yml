@@ -10,6 +10,7 @@ module:
   block: 0
   block_node: 0
   breakpoint: 0
+  case_studies: 0
   chosen: 0
   chosen_lib: 0
   ckeditor5: 0
@@ -25,6 +26,7 @@ module:
   disable_user_1_edit: 0
   dynamic_page_cache: 0
   editor: 0
+  email_username: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0

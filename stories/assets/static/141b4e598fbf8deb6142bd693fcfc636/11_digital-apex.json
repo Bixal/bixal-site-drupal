@@ -1,0 +1,203 @@
+{
+   "jsonId":"digital-apex",
+   "order":"11",
+   "template":"new",
+   "title":"Building cybersecurity capacity of civil society organizations in Colombia to improve digital health and protect against cyber threats.",
+   "description":"The U.S. Agency for International Development (USAID) funds the Digital APEX activity, which aims to help USAID partners strengthen cybersecurity practices and improve the digital health of local programs around the world. Bixal was awarded the Training and Network Assessment Colombia Task Order to support USAID/Colombia’s efforts to improve cyberhealth among its implementing partners (IPs).",
+   "overlayDescription": "Building cybersecurity capacity to improve digital health and protect against cyber threats",      
+   "introTemplate": "new",
+   "introHeading": ["United States Agency for International Development (USAID)", "Digital APEX Colombia"],
+   "introServices": "Cybersecurity Training, Virtual Instructor-led Training, Capacity Building, Instructional Design, Accessibility/508 Compliance, Bilingual English-Spanish Training Delivery, Communications, Marketing, Cybersecurity Risk Assessments, Agile Project Management",
+   "caseStudyURL":"https://www.usaid.gov/colombia",
+   "caseStudyLabel":"https://www.usaid.gov/colombia",
+   "logo":"",
+   "logoAlt":"",
+   "heroImage":"digital-apex-1.png",
+   "heroImageAlt":"A woman with a face mask sits outside on a staircase with an open laptop on her lap. Two men sit behind her looking at a textbook.",
+   "landingImage":"digital-apex-1.png",
+   "landingImageAlt":"A woman with a face mask sits outside on a staircase with an open laptop on her lap. Two men sit behind her looking at a textbook.",
+   "details":{
+      "client":"U.S. Agency for International Development (USAID) Digital APEX Activity",
+      "client_abrev":"USAID Digital APEX",      
+      "project":"",
+      "technology":null
+   },
+   "primaryColor":"#7d0096",
+   "secondaryColor":null,
+   "sections":[
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnHeading":"Challenge",
+                  "columnText":"The increased use of technology, mobile phones and digital systems means USAID/Colombia’s IPs face a wide range of vulnerabilities, such as phishing attacks, account impersonation attempts and cyber-based corrupt financial transactions. The scarcity of cybersecurity education for vulnerable IPs translates to a higher risk of attacks and security breaches, which forces organizations to remedy system failures and change user behaviors to mitigate future attacks. Attacks can erode the public’s and stakeholders’ trust in how organizations handle personal and sensitive information, ultimately undermining IPs’ integrity and confidence in the programs they deploy."
+               },
+               {
+                  "columnHeading":"Solution",
+                  "columnText":"Working with the USAID/Colombia Mission, Bixal developed and implemented a cybersecurity training program that used an interactive online training format, assessed existing hardware and software assets, and developed action plans aligned to best practices outlined in the Center for Internet Security (CIS) Controls to improve cybersecurity vulnerabilities."
+               },
+               {
+                  "columnHeading":"Results",
+                  "columnText":"Through a combined approach of asynchronous training and virtual learning, 298 individuals representing 44 organizations in Colombia increased their knowledge of cybersecurity and improved their digital health practices. Bixal conducted cyber risk assessments with the most vulnerable partner organizations to develop roadmaps with action items designed to increase digital protection and reduce the risk of cyberattacks."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnHeading":"Design & Approach",
+                  "columnText":"Under Digital APEX — implemented by prime contractor Project Management Consulting Group (PMCG) — Bixal collaborated with the USAID/Colombia Mission to develop and implement the Cybersecurity Integration of Partners and Hacking Emergency Response (CIPHER), a cybersecurity training program that uses an easily replicable three-phased approach."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Phase 1: Generating Cybersecurity Awareness",
+                  "columnText":"Bixal introduced cybersecurity concepts to the participating organizations using KnowBe4, a platform that offers asynchronous training available in Spanish, which enabled the organizations’ leadership, program and IT staff to take self-paced courses and learn more about basic cybersecurity concepts."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Phase 2: Assisting USAID IPs",
+                  "columnText":"To deliver additional training and assistance, Bixal identified the 10 most vulnerable IPs based on data from initial training quizzes. We drafted rules of engagement that detailed system restrictions and boundaries to ensure confidentiality throughout the assessment process. Bixal then conducted the cybersecurity risk assessments, testing external and internal accessible systems, hosts and applications for IT, communications and network systems. After completing the assessments, Bixal scheduled individual sessions with each of the 10 IPs, designing virtual instructor-led training (ILT). The in-depth training enabled IT professionals to further diffuse cybersecurity best practices across the organization and ensure all users are aware of their behaviors and responsibility to mitigate cybersecurity attacks and threats."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Phase 3: Developing and Disseminating Action Plans",
+                  "columnText":"Bixal analyzed data collected through the in-depth training and risk assessments to draft individual action plans for each of the 10 IPs. Action plans communicated assessment results, documented cybersecurity vulnerabilities and provided recommendations for remediation. Bixal and Digital APEX met with IT and management staff of IPs to review action plans and outline steps for IPs to ensure future cybersecurity."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnHeading":"Delivering the Solution",
+                  "columnText":"Bixal uses proven methods for delivering the right solution to the right client."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Collaboration, Learning and Adapting (CLA) Approach",
+                  "columnText":"Strong CLA practices enabled Bixal to learn from client feedback and incorporate process improvements to generate better outcomes. The Bixal team met with the client weekly to plan activities, make decisions on preferred approaches for activity implementation, discuss impediments, and identify solutions. This level of client collaboration allowed us to continuously adapt to changing circumstances and stakeholder needs."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Local Cybersecurity Expertise",
+                  "columnText":"We leveraged a new partnership with Functional Cybersecurity International LLC (FC International), engaging local SMEs with extensive knowledge of cybersecurity threats in Colombia."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnTopic":"Data-Centered Methodology",
+                  "columnText":"We used data from the cybersecurity training and testing to identify the most vulnerable organizations participating in the program, to inform cybersecurity solutions and topics covered in webinars tailored to selected partners, and to assess the effectiveness of training provided."
+               }
+            ]
+         }
+      },
+          {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Unexpected Challenge",
+            "columnText": "As the COVID-19 pandemic worsened and international travel was restricted, Bixal converted our training plan from instructor led to virtual delivery. In-house instructional designers worked with cybersecurity experts to design a highly interactive virtual course that used adult-learning techniques, collaborative whiteboards, short quizzes and pop-up polls to keep participants engaged. As a result of virtual training, 146 participants from 10 IPs experienced a substantial improvement in their cybersecurity knowledge."
+          }
+        ]
+      }
+    },
+
+      {
+         "section":{
+            "type":"callout",
+            "bgColor":true,
+            "callout":{
+               "calloutHeading":"Outcomes",
+               "calloutText":"<p>Bixal applied an Agile learning approach in designing and developing a cybersecurity training program to help USAID IPs and civil society organizations in Colombia improve their digital health, build local capacity and strengthen cybersecurity practices. As part of this program, Bixal provided access to asynchronous training modules and delivered 15 synchronous virtual ILT sessions to over 298 participants from 44 USAID partners. The topics selected contributed to a growing knowledge base on cybersecurity vulnerabilities that impact organizations’ governance structure, technology infrastructure and business operations.</p> <p>Working with the USAID/Colombia Mission, Bixal assessed existing hardware and software assets for cybersecurity vulnerabilities and delivered training organized into five learning topics that mapped to 20 CIS controls.</p><p>In Bixal’s experience, when people understand cybersecurity threats and demonstrate familiarity with best practices to combat cyberattacks, the likelihood of destructive cyberattacks decreases.</p><p>Webinar quiz results demonstrated that USAID/Colombia’s IPs had a low baseline knowledge of cybersecurity. Data from the 10 risk assessments conducted in Phase II confirmed the need for cybersecurity action plans. Over 95 percent of participants who identified as “novice” before the training advanced their knowledge to align with higher competency levels as a result of the program. Detailed post-training survey results are captured in the following chart.</p>"
+            }
+         }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnHeading":"Improvements in recipients’ cybersecurity knowledge after in-depth interactive training.",
+                  "columnText":""
+               }
+            ]
+         }
+      },
+      {
+        "section":{
+          "type":"columns",
+          "columns":[
+            {
+              "columnImage":"digital-apex-2.png",
+              "columnImageAlt":"chart showing post-training survey results on cybersecurity knowledge"
+            }
+          ]
+        }
+      },
+      {
+         "section":{
+            "type":"columns",
+            "columns":[
+               {
+                  "columnHeading":"",
+                  "columnText":"These results demonstrate that a multi-faceted approach, coupling asynchronous and virtual ILT with risk assessments and roadmaps for improvement, can result in significant improvements in cybersecurity awareness."
+               }
+            ]
+         }
+      },
+      {
+         "section":{
+            "type":"emphasis-blocks",
+            "blocks":[
+               {
+                  "blockTopic":"Highlight",
+                  "blockIsFeatured":true,
+                  "blockText":"Overall, Bixal delivered cybersecurity training to 298 individuals, supporting capacity development for 44 organizations to improve their digital health."
+               }
+            ]
+         }
+      }
+   ]
+}

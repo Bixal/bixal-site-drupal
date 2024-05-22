@@ -1,0 +1,90 @@
+{
+  "jsonId": "hud",
+  "order": "04",
+  "template": "old",
+  "title": "Training and certification of housing counselors to protect the public.",
+  "description": "The Dodd-Frank Wall Street Reform and Consumer Protection Act enacted a set of federal regulations to mitigate risk and enforce transparency and accountability of financial institutions. The legislation established the Office of Housing Counseling within the U.S. Department of Housing and Urban Development (HUD). This new office, which was required to certify individual housing counselors participating in HUD’s Housing Counseling Program, needed a training and testing program to demonstrate the competence of counselors.",
+  "overlayDescription": "Training and certification of housing counselors",
+  "caseStudyURL": "https://www.hud.gov/program_offices/housing/sfh/hcc",
+  "caseStudyLabel": "https://www.hud.gov/",
+  "logo": "hud-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "1-hud.jpg",
+  "heroImageAlt": "houses along a clear sky horizon",
+  "landingImage": "1-hud.jpg",
+  "landingImageAlt": "angled tops of houses",
+  "details": {
+    "client": "Office of Housing Counseling, U.S. Department of Housing and Urban Development (HUD)",
+    "client_abrev": "U.S. Department of Housing and Urban Development",
+    "project": "Dodd-Frank Compliance - Housing Counselor Training and Testing for Certification Program",
+    "technology": "Drupal, Articulate Storyline"
+  },
+  "primaryColor": "#55052a",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Training Counselors to Protect the Public",
+          "description": "Bixal provided HUD with a talented e-learning team made up of digital project managers, subject matter experts (SMEs), instructional systems designers, e-learning developers, user experience specialists, and visual designers to create the training curriculum. Our content developers engaged with the SMEs to extract critical information, asking the right questions in the right way to capture the knowledge that housing counselors would need to be considered competent in such areas as financial management, fair housing, and home affordability. The team collaborated to define learning objectives and develop a course syllabus to guide the development of the 15 interactive e-learning modules.",
+          "images": [
+            {
+              "image": "hud-image-1.jpg",
+              "imageAlt": "woman standing at laptop smiling"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Development of Online Training",
+          "description": "<p>Bixal began by gathering information on learning objectives, the target audience, system requirements, and other key factors to determine the best approach to course development.</p><p>We used an agile methodology to develop the training, from content development and storyboarding to the design and production of the interactive modules. This involved developing a prototype in coordination with the HUD team, then conducting multiple rounds of testing and revisions. This iterative process provided numerous opportunities to receive and act upon client feedback, and we were able to conduct comprehensive user testing to ensure an intuitive and engaging user experience.</p>",
+          "images": [
+            {
+              "image": "hud-image-2.png",
+              "imageAlt": "computer view of development module screen"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": true,
+        "overview": {
+          "heading": "Certification Exam Development",
+          "description": "Bixal project managers and adult learning experts worked closely with a psychometrician—an expert in certification exam development—following a rigorous process to build a reliable, valid, relevant, and legally defensible certification exam. A team of item writers, housing SMEs, and translators designed the certification exam and a practice test in both English and Spanish.",
+          "images": [
+            {
+              "image": "hud-image-3.png",
+              "imageAlt": "stacked images of website screens"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "image",
+        "bgColor": false,
+        "overview": {
+          "heading": "Website Development and Systems Integration",
+          "description": "To provide a seamless experience for housing counselor candidates, Bixal used Drupal and Application Programming Interfaces (APIs) to connect several platforms that provide access to the practice exam and proctoring services for the certification exam. To update HUD’s Housing Counselor Registry, the platform also transfers information to HUD’s Housing Counselor database. The platform is fully Section 508 compliant and was designed to meet all federal security requirements.",
+          "images": [
+            {
+              "image": "hud-image-5.png",
+              "imageAlt": "display view of information displayed in the system"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

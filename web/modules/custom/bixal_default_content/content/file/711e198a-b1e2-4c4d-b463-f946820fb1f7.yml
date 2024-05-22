@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 711e198a-b1e2-4c4d-b463-f946820fb1f7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 4-medline-plus.jpg
+  uri:
+    -
+      value: 'public://2024-05/4-medline-plus.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 803118
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751675

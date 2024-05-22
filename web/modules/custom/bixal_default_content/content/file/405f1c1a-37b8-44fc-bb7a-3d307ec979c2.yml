@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 405f1c1a-37b8-44fc-bb7a-3d307ec979c2
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: mel-content-hero.png
+  uri:
+    -
+      value: 'public://2024-05/mel-content-hero.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 342824
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751409

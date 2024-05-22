@@ -1,0 +1,81 @@
+ {
+  "jsonId": "monitoring-evaluation-and-learning",
+  "order": "07",
+  "template": "new",
+  "title": "Improving outcomes and ensuring accountability for agencies worldwide.",
+  "description": "<p>Many of Bixal’s federal partners require efficient, cost-effective solutions to meet the mounting pressure to access real-time data and innovative analyses.</p><p>MEL’s components — ongoing collection and analysis of program data (monitoring); periodic analysis of project data to gauge progress on intended outcomes and impacts (evaluation); and use of those findings to fine-tune and course correct activities, build on success, and share emerging best practices and knowledge gained (learning) — provide a framework for understanding a project’s progress and impact.</p><p>By applying what we learn from evidence and analysis to our broader work, we promote improvements to outcomes and ensure accountability for the resources used to achieve them.</p>",
+  "overlayDescription": "Using data to empower global solutions",  
+  "caseStudyURL": "https://www.bixal.com/contract-vehicles/eval-me-ii-idiq/",
+  "caseStudyLabel": "Related Contract Vehicle: USAID EVAL-ME Ⅱ IDIQ",
+  "logo": "mod-logo.png",
+  "logoAlt": "logo",
+  "heroImage": "mel-content-hero.png",
+  "heroImageAlt": "elderly farmer of Indian ethnicity holding digital tablet in the outdoors",
+  "landingImage": "mel-content-hero.png",
+  "landingImageAlt": "",
+  "details": {
+    "client": "Monitoring, Evaluation and Learning (MEL) Practices for Federal Partners",
+    "client_abrev": "USAID EVAL-ME II IDIQ",
+    "project": "",
+    "technology": null
+  },
+  "primaryColor": "#fda305",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "MEL and Agile Methodologies",
+            "columnText": "Bixal’s team of evaluators, data scientists and analysts brings a full suite of capabilities and support services to solve complex challenges at local and global levels. Our unique delivery of MEL and data solutions, grounded in Agile principles, supports our federal partners by providing crucial data for informed decision-making. The Agile process promotes iterative, sustainable solutions through reflective, incremental assessments to review whether and how to adjust implementation and strategy as new needs and challenges arise. Our team uses learnings from the monitoring and evaluation phases to inform the next iteration of work. They also use data-collection platforms and dashboards to increase efficiency in the data-reporting cycle, enabling rapid feedback loops for adaptive management."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Program Support for USAID",
+            "columnText": "When USAID’s Feed the Future Knowledge, Data, Learning and Training (KDLT) activity required expanded capacity for data analytics and visualization to support program monitoring and evaluation, Bixal’s data analysts built a custom Tableau dashboard. By transforming disparate datasets into a user-friendly dashboard, we created easy access and an optimal method to communicate KDLT activity progress to both internal team members and the larger management team. The indicator dashboard efficiently translates KDLT trends and patterns and allows team members to identify successes and challenges and then adapt accordingly."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Data Management at HHS",
+            "columnText": "The U.S. Department of Health and Human Services’ (HHS’s) large internet footprint made data management, monitoring and coordinated improvement an ongoing challenge. Data were available but not centralized, limiting HHS’s business-intelligence capabilities. Bixal introduced a business-intelligence environment that integrated cloud-based data storage, an Agile approach to business intelligence and a consistent focus on quickly converting data into usable information. To improve data analysis and its use, we expanded the enterprise data warehouse and developed interactive and engaging data-visualization and -reporting tools based on user-informed research and human centered–design strategies."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Reducing the Burden on SSA",
+            "columnText": "The volume of replacement requests for Social Security cards was creating an excessive burden on the field offices and call centers of the Social Security Administration (SSA). Bixal identified and implemented a minimum viable product (MVP) to reduce this stress on the agency. We began with a base period of discovery around user experience, technology and data. During this period, qualitative and quantitative research validated key audiences, website content–analysis and –impact assessment. Exploratory data analysis, topic modeling and enterprise data mapping established a strong context through which the MVP would provide immediate relief and serve as a scalable model to solve systemic challenges regarding information-technology modernization, enterprise data gaps and the need for a customer-experience strategy."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Recent Work with Nongovernmental Agencies",
+            "columnText": "<p>Though Bixal has a focus on federal, we have also performed work with nongovernmental organizations across the globe. We’ve successfully completed contracts in over 40 countries, partnering with local organizations to establish MEL support.</p><p>In one recent project, we were the MEL partner for the Stanford University Center for Global Health Innovation’s WomenLift Health Leadership Initiative (a multiyear, multinational initiative funded by The Bill & Melinda Gates Foundation). Bixal, under recently acquired Clear Outcomes, designed the MEL framework for the project, built a custom Tableau dashboard to share progress on key indicators, and currently conducts annual evaluations and leads monthly learning sessions with the team.</p>"
+          }
+        ]
+      }
+    }
+  ]
+}
