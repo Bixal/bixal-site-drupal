@@ -12,3 +12,5 @@ f9425f233605ab54f451c3e173731a1c|Buddy Harlow|feature/BSD-116-unpublish-bixaler-
 5d47a217007220b7388ce666b3df7f8e|Buddy Harlow|feature/BSD-116-unpublish-bixaler-fix|Tue Apr  9 14:56:30 UTC 2024|./composer.sh require drupal/view_unpublished:^1.2
 26995193934405a77347fadc2f29ba8a|Buddy Harlow|feature/BSD-117-bixaler-term-reference-fields|Tue Apr 16 10:40:07 EDT 2024|./composer.sh require drupal/autocomplete_deluxe:^2.0
 4c4931b36a7429438dc8eec2abaa62a3|Buddy Harlow|feature/BSD-135-un-to-email-only|Fri Apr 26 15:53:11 UTC 2024|./composer.sh require drupal/email_username:^1.0
+612fe8c317fd0a36956057c0c7f43be9|Matt Poole|feature/BSD-54-contact-us|Wed May 22 16:02:26 EDT 2024|./composer.sh require drupal/config_ignore
+a7440aada8f7b46ac3f0b5e5f45c920d|Matt Poole|feature/BSD-54-contact-us|Wed May 22 16:03:09 EDT 2024|./composer.sh require drupal/maillog:^1.1

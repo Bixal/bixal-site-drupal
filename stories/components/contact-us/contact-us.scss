@@ -25,7 +25,7 @@
       width: 100%;
     }
 
-    .bix-input--textarea {
+    .bix-input--textarea, .bix-input[name=name] {
       grid-column: 1 / -1;
     }
   }

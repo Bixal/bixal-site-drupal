@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
+    - contact
+    - devel
     - media
     - system
 _core:
@@ -13,4 +15,5 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'access site-wide contact form'
   - 'view media'

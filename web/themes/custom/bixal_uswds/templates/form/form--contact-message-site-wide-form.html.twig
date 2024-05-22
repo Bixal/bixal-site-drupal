@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<section id="contact" class="bix-contact bix-section bix-section--primary" aria-label="Contact us">
+  <div class="bix-container">
+    <div class="bix-contact__content">
+      <div class="contact__overview">
+        <div class="bix-title-prefix">Contact</div>
+        <h2>
+          {{ 'How can we help?'|t }}<br />
+          {{ 'We\'d love to hear from you.'|t }}
+        </h2>
+      </div>
+      <form{{ attributes }}>
+        {{ children }}
+      </form>
+    </div>
+  </div>
+</section>
