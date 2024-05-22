@@ -12,7 +12,7 @@ import "../base/base.stories";
 import "../../components/blurb/blurb.stories";
 import "../../components/emphasis-block/emphasis-block.stories";
 
-import * as SocialNav from "../../components/social-nav/social-nav.stories";
+import * as FooterContent from "../../components/footer/footer.stories";
 
 // @TODO: Hero images should be webp.
 export const Default = {
@@ -74,6 +74,6 @@ export const Default = {
     featuredJobs: {
       blocks: EmphasisBlockCollectionContent,
     },
-    socialNav: SocialNav.default.args
+    footerContent: FooterContent.default.args
   },
 };

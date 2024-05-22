@@ -57,25 +57,7 @@ function bixal_uswds_preprocess_page(&$vars) {
       unset($vars['page']['help']['bixal_uswds_page_title']);
     }
   }
-  $vars['socialNav'] = [
-    'variant' => NULL,
-    'aria_label' => t('Social links'),
-    'items' => [
-      [
-        "href" => "https://www.linkedIn.com/company/bixal",
-        "label" => t("LinkedIn"),
-        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
-      ],
-      [
-        "href" => "https://www.facebook.com/bixal",
-        "label" => t("Facebook"),
-        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('facebook.svg')->toString(),
-      ],
-      [
-        "href" => "https://www.twitter.com/bixal",
-        "label" => t("Twitter"),
-        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('twitter.svg')->toString(),
-      ],
-    ],
+  $vars['footer'] = [
+    '#theme' => 'site_wrapper_footer',
   ];
 }
