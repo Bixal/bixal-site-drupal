@@ -16,6 +16,9 @@ function site_wrapper_theme($existing, $type, $theme, $path): array {
     'site_wrapper_header' => [
       'variables' => ['cl' => NULL],
     ],
+    'site_wrapper_footer' => [
+      'variables' => ['cl' => NULL],
+    ],
     'site_wrapper_contextual_links_wrapper' => [
       'variables' => ['cl' => NULL, 'content' => NULL],
     ],
@@ -71,6 +74,84 @@ function template_preprocess_site_wrapper_header(array &$variables): void {
       'href' => $cta_menu_link->link->getUrlObject()->toString(),
     ];
   }
+}
+
+/**
+ * Prepares variables for footer template.
+ *
+ * Default template: bixal-uswds-footer.html.twig.
+ *
+ * @param array $variables
+ *   This function has no $variables.
+ */
+function template_preprocess_site_wrapper_footer(array &$variables): void {
+  $menu_name = 'footer';
+  $variables['#cache']['contexts'][] = 'user.permissions';
+  $variables['#cache']['tags'][] = "config:system.menu.$menu_name";
+  // This requires contextual_preprocess() to be called, this is not called for
+  // theme functions defined in themes, only modules. I don't know why.
+  // 'cl' corresponds to the first variable of this theme function, this is
+  // needed for the contextual links to render properly.
+  $variables['footer_nav_cl'] = _site_wrapper_get_menu_contextual_links($menu_name);
+  /** @var \Drupal\Core\Menu\MenuLinkTreeElement $menu_link */
+  foreach (_site_wrapper_get_top_level_menu_tree($menu_name) as $menu_link) {
+    // Top level menu links are not removed that are not allowed, must kick
+    // them out manually.
+    if (NULL === $menu_link->access || !$menu_link->access->isAllowed()) {
+      continue;
+    }
+    /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $menu_link_content */
+    $menu_link_content = $menu_link->link;
+    $variables['nav'][] = [
+      'label' => $menu_link_content->getTitle(),
+      'current' => $menu_link->inActiveTrail,
+      'href' => $menu_link_content->getUrlObject()->toString(),
+    ];
+  }
+  $menu_name = 'legal';
+  $variables['#cache']['contexts'][] = 'user.permissions';
+  $variables['#cache']['tags'][] = "config:system.menu.$menu_name";
+  // This requires contextual_preprocess() to be called, this is not called for
+  // theme functions defined in themes, only modules. I don't know why.
+  // 'cl' corresponds to the first variable of this theme function, this is
+  // needed for the contextual links to render properly.
+  $variables['legal_nav_cl'] = _site_wrapper_get_menu_contextual_links($menu_name);
+  /** @var \Drupal\Core\Menu\MenuLinkTreeElement $menu_link */
+  foreach (_site_wrapper_get_top_level_menu_tree($menu_name) as $menu_link) {
+    // Top level menu links are not removed that are not allowed, must kick
+    // them out manually.
+    if (NULL === $menu_link->access || !$menu_link->access->isAllowed()) {
+      continue;
+    }
+    /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $menu_link_content */
+    $menu_link_content = $menu_link->link;
+    $variables['legal'][] = [
+      'label' => $menu_link_content->getTitle(),
+      'current' => $menu_link->inActiveTrail,
+      'href' => $menu_link_content->getUrlObject()->toString(),
+    ];
+  }
+  $variables['socialNav'] = [
+    'variant' => NULL,
+    'aria_label' => t('Social links'),
+    'items' => [
+      [
+        "href" => "https://www.linkedIn.com/company/bixal",
+        "label" => t("LinkedIn"),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
+      ],
+      [
+        "href" => "https://www.facebook.com/bixal",
+        "label" => t("Facebook"),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('facebook.svg')->toString(),
+      ],
+      [
+        "href" => "https://www.twitter.com/bixal",
+        "label" => t("Twitter"),
+        "icon_path" => _bixal_uswds_get_storybook_icon_file_url('twitter.svg')->toString(),
+      ],
+    ],
+  ];
 }
 
 /**

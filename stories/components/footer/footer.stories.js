@@ -1,4 +1,5 @@
 import Footer from "./footer.html.twig";
+import FooterContent from "./footer.content.json";
 import "../button/button.html.twig";
 
 import "./footer.scss";
@@ -11,7 +12,8 @@ export default {
   title: "Components/Footer",
   component: Footer,
   args: {
-    socialNav: SocialNav.default.args
+    socialNav: SocialNav.default.args,
+    ...FooterContent
   }
 };
 

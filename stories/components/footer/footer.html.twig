@@ -80,34 +80,35 @@
   </section>
   <section id="bix-site-footer__secondary" class="bix-site-footer__secondary">
     <div class="bix-site-footer__secondary-container bix-container">
-      <nav class="bix-site-footer__secondary-nav" aria-label="Site links">
-        <ul class="bix-site-footer__secondary-nav-items">
-          <li class="bix-site-footer__secondary-nav__item">
-            <a class="quick-link quick-link--case-studies" href="/our-work/">
-              Our Work
+      {{ legal_nav_cl }}
+      {% if nav %}
+        <nav class="bix-site-footer__secondary-nav" aria-label="Site links">
+          <ul class="bix-site-footer__secondary-nav-items">
+            {% for item in nav %}
+              <li class="bix-site-footer__secondary-nav__item">
+                <a
+                  class="{{ item.current ? "is-current" }}"
+                  href="{{ item.href | default("javascript:void(0)") }}">
+                  {{ item.label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+      {{ footer_nav_cl }}
+      {% if legal %}
+        <div class="bix-site-footer__legal">
+          {% for item in legal %}
+            <a
+              class="{{ item.current ? "is-current" }}"
+              href="{{ item.href | default("javascript:void(0)") }}">
+              {{ item.label }}
             </a>
-          </li>
-          <li class="bix-site-footer__secondary-nav__item">
-            <a class="quick-link quick-link--contract-vehicles" href="/contract-vehicles/">
-              Contract vehicles
-            </a>
-          </li>
-          <li class="bix-site-footer__secondary-nav__item">
-            <a class="quick-link quick-link--careers" href="/careers/">
-              Careers
-            </a>
-          </li>
-          <li class="bix-site-footer__secondary-nav__item">
-            <a class="quick-link quick-link--about" href="/about/">
-              About Bixal
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="bix-site-footer__legal">
-        <a class="privacy" href="/privacy/">Privacy Policy</a>
-        <span class="copyright">Copyright &copy; 2023 Bixal</span>
-      </div>
+          {% endfor %}
+          <span class="copyright">Copyright &copy; {{ 'now' | date('Y') }} Bixal</span>
+        </div>
+      {% endif %}
       {% if socialNav %}
         {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
       {% endif %}

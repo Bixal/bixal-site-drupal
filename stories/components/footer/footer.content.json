@@ -1,0 +1,25 @@
+{
+  "nav": [
+    {
+      "label": "Our work"
+    },
+    {
+      "label": "Contract Vehicles"
+    },
+    {
+      "label": "Careers"
+    },
+    {
+      "label": "Blog",
+      "current": true
+    },
+    {
+      "label": "About Bixal"
+    }
+  ],
+  "legal": [
+    {
+      "label": "Privacy Policy"
+    }
+  ]
+}

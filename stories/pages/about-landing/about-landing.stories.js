@@ -5,7 +5,7 @@ import "../../components/hero/hero.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as PeopleList from "../../components/people-list/people-list.stories";
-import * as SocialNav from "../../components/social-nav/social-nav.stories";
+import * as FooterContent from "../../components/footer/footer.stories";
 
 export default {
   title: "Pages/About/Landing",
@@ -28,6 +28,6 @@ export const Default = {
       image: "/static/59f4525c9919bfa346d4f9cf50f1070a/5e5f3/about--b-banner.webp",
     },
     people: PeopleList.default.args,
-    socialNav: SocialNav.default.args
+    footerContent: FooterContent.default.args
   },
 };
