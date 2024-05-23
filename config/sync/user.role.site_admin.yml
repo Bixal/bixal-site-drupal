@@ -6,7 +6,10 @@ dependencies:
     - admin_toolbar_search
     - captcha
     - contact
+    - google_tag
+    - pathauto
     - recaptcha
+    - redirect
     - role_delegation
     - system
     - toolbar
@@ -19,7 +22,11 @@ permissions:
   - 'access toolbar'
   - 'administer CAPTCHA settings'
   - 'administer contact forms'
+  - 'administer google_tag_container'
+  - 'administer pathauto'
   - 'administer recaptcha'
+  - 'administer redirect settings'
+  - 'administer redirects'
   - 'administer users'
   - 'assign editor role'
   - 'use admin toolbar search'
