@@ -49,8 +49,18 @@
 {% endif %}
 
 {% set cta = [] %}
+
+{% set href %}
+  {% if content.field_button.0['#paragraph'].field_link is not empty %}
+    {% if content.field_button.0['#paragraph'].field_link.0.url.external %}
+      {{ content.field_button.0['#paragraph'].field_link.uri }}
+    {% else %}
+      {{ path(content.field_button.0['#paragraph'].field_link.0.url.routeName, content.field_button.0['#paragraph'].field_link.0.url.routeParameters) }}
+    {% endif %}
+  {% endif %}
+{% endset %}
 {% set cta = cta|merge(
-  { 'href': content.field_button.0['#paragraph'].field_link.uri,
+  { 'href': href,
     'label': content.field_button.0['#paragraph'].field_link.title,
     'icon': content.field_button.0['#paragraph'].field_icon.0.value,
     'variant': content.field_button.0['#paragraph'].field_button_variant.0.value
