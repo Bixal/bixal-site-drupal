@@ -69,6 +69,7 @@ function bixal_uswds_form_alter(&$form, FormStateInterface $form_state, $form_id
           ];
           if ($key === 'mail') {
             $form[$key]['#placeholder'] = t('Email');
+            $form[$key]['#type'] = 'email';
           }
           if (!empty($form[$key]['#required'])) {
             $form[$key]['#placeholder'] .= ' *';
