@@ -882,3 +882,10 @@ if (getenv('LANDO_INFO') !== FALSE) {
   }
   include $settings_local_php;
 }
+
+/**
+ * Ensure that google tag is disabled on non-prod envs.
+ */
+if (getenv('PLATFORM_BRANCH') !== 'main') {
+  $config['google_tag.container.GTM-W8JTQRX.664e571d7146d9.28940066']['status'] = FALSE;
+}

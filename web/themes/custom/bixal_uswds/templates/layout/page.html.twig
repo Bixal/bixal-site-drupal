@@ -50,5 +50,6 @@
 {% endblock %}
 </main>
 
-{% include "@components/contact-us/contact-us.html.twig" %}
+{# Contact block module did not work, it would not print the forms classes. #}
+{{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
 {{ footer }}
