@@ -9,5 +9,7 @@ ignored_config_entities:
   - 'contact.form.site_wide:reply'
   - contact.settings
   - 'google_tag.*'
+  - 'pathauto.*'
   - recaptcha.settings
+  - redirect.settings
   - 'system.site:page.front'
