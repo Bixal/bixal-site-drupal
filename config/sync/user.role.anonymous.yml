@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - contact
-    - devel
     - media
     - system
 _core:
