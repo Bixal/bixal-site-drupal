@@ -5,6 +5,8 @@ dependencies:
   config:
     - filter.format.html_text
   module:
+    - captcha
+    - contact
     - contextual
     - filter
     - media
@@ -19,6 +21,8 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access contextual links'
+  - 'access site-wide contact form'
+  - 'skip CAPTCHA'
   - 'use text format html_text'
   - 'view all revisions'
   - 'view media'

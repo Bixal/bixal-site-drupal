@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 36297155-4334-4b1b-89d6-4d4feda34665
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 1-hud.jpg
+  uri:
+    -
+      value: 'public://2024-05/1-hud.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 709981
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1714751763

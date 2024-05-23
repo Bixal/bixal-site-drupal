@@ -3,7 +3,7 @@ import ContractVehicle from "./contract-vehicle.html.twig"
 import * as Header from "../../components/header/header.stories";
 import "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
-import * as SocialNav from "../../components/social-nav/social-nav.stories";
+import * as FooterContent from "../../components/footer/footer.stories";
 
 export default {
   title: "Pages/Contract Vehicles/Contract Vehicle",
@@ -37,7 +37,7 @@ export default {
         text: "<h3>OASIS SB</h3><ul><li>Contract Number: 47QRAD20D1074</li><li>DUNS Number: 100128086</li><li>CAGE Code: 4QRJ3</li></ul><h3>OASIS 8(a)</h3><ul><li>Contract Number: 47QRAD20D1074</li><li>DUNS Number: 100128086</li><li>CAGE Code: 4QRJ3</li></ul>"
       }
     ],
-    socialNav: SocialNav.default.args
+    footerContent: FooterContent.default.args
   }
 };
 

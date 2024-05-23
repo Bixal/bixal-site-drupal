@@ -12,6 +12,8 @@ echo "Updating storybook components in theme"
 source_dir="./stories"
 icons_source_dir="./stories/assets/icons"
 icons_target_dir="./web/icons"
+legacy_static_images_src_dir="./stories/assets/static"
+legacy_static_images_target_dir="./web/static"
 components_target_dir="./web/themes/custom/bixal_uswds/storybook_components"
 sass_target_dir="./web/themes/custom/bixal_uswds/src/sass/storybook-sass"
 js_target_dir="./web/themes/custom/bixal_uswds/src/js/storybook-js"
@@ -47,6 +49,13 @@ then
     else
         echo ""
     fi
+    if [ -d $legacy_static_images_target_dir ]
+    then
+      echo -e "${green}Removing legacy images folder${NC}"
+      rm -R $legacy_static_images_target_dir
+    else
+      echo ""
+    fi
 
     echo -e "${green}Copying theme components folders${NC}"
     mkdir $components_target_dir $js_target_dir
@@ -55,6 +64,8 @@ then
     cp -r "$source_dir" "$components_target_dir"
     # Copy all icons to new directory in web
     cp -r "$icons_source_dir" "$icons_target_dir"
+    # Copy all static images to new direcctory in web
+    cp -r "$legacy_static_images_src_dir" "$legacy_static_images_target_dir"
     # Copy all the custom sass files files and preserve directory structure.
     cp -r "$source_dir" "$sass_target_dir"
     # Remove all non-twig files from the components.

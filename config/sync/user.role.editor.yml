@@ -35,6 +35,8 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer footer menu items'
+  - 'administer legal menu items'
   - 'administer main menu items'
   - 'administer mainnavcta menu items'
   - 'create bixaler content'

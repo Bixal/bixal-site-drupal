@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\taxonomy\Entity\Term;
@@ -98,10 +99,12 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           if (!$field_ne_and_exists($media_entity, 'field_media_image')) {
             return '';
           }
+
           $file_entity = $media_entity->get('field_media_image')->entity;
           // Get the URL of the media file.
           $uri = $file_entity->getFileUri();
-          return \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+          $url = ImageStyle::load('bixaler_thumbnail')->buildUrl($uri);
+          return $url;
         };
 
         $get_first_term_ref_title = static function (NodeInterface $node, $field_name) use (&$field_ne_and_exists) {

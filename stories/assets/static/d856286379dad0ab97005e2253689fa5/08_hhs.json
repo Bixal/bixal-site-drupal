@@ -1,0 +1,160 @@
+{
+  "jsonId": "hhs",
+  "order": "08",
+  "template": "new",
+  "title": "Delivering human-centered design strategies to transform customer experience.",
+  "description": "The United States Department of Health and Human Services administers over 100 programs across its 11 operating divisions — which include eight U.S. Public Health Service agencies and three human services agencies. The agency’s mission is to “enhance the health and well-being of all Americans by providing for effective health and human services and by fostering sound, sustained advances in the sciences underlying medicine, public health, and social service.” With more than 330,000,000 potential clients in the public, the HHS Careers site is essential to recruiting and maintaining capable and qualified staff.",
+  "overlayDescription": "Better engagement through human-centered design",    
+  "introTemplate": "new",
+  "introHeading": ["U.S. Department of Health & Human Services (HHS)", "Office of the Assistant Secretary of Public Affairs (ASPA)", "Digital Solutions Services (DSS)"],
+  "introServices": "Agile Project Management, Content Strategy, Marketing Research, Copywriting, Accessibility/Section 508 Compliance, Web Modernization, Human-Centered Design and Customer Experience, Plain Language Writing, Drupal Web Development",
+  "caseStudyURL": "https://www.hhs.gov/careers",
+  "caseStudyLabel": "https://www.hhs.gov/careers",
+  "logo": "",
+  "logoAlt": "",
+  "heroImage": "hhs-careers-hero.jpeg",
+  "heroImageAlt": "",
+  "landingImage": "hhs-careers-hero.jpeg",
+  "landingImageAlt": "",
+  "details": {
+    "client": "U.S. Department of Health & Human Services (HHS)",
+    "client_abrev": "U.S. Department of Health and Human Services",
+    "project": null,
+    "technology": null
+  },
+  "primaryColor": "#06c5bc",
+  "secondaryColor": null,
+  "sections": [
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Challenge",
+            "columnText": "The HHS Careers site lacked engaging content and failed to highlight the best aspects of the agency and the career opportunities available. For example, the site did not effectively communicate benefits to current employees, lacked cohesive information about HHS-specific jobs, and missed the opportunity to communicate the value of working at HHS."
+          },
+          {
+            "columnHeading": "Solution",
+            "columnText": "Bixal, in collaboration with the HHS Office of the Assistant Secretary of Public Affairs (ASPA) and the HHS Office of Human Resources (OHR), worked to update the Careers site. Following HHS’ mission to become the #1 Employer of Choice among federal departments by 2020, our team created a more accessible, user-friendly and valuable site aimed at current HHS employees, job seekers outside of HHS, and the public in general. "
+          },
+          {
+            "columnHeading": "Results",
+            "columnText": "Our team delivered an updated Careers site to HHS, accompanied with a social media campaign. The site saw overall user engagement increase by 66%. The homepage saw a reduction of 52% in visitors leaving the site (over the top-ranked page of the previous careers section), and the new Job Search function saw a 43% increase in visitors entering the site than the comparable previous page."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Defining the Problem",
+            "columnText": "An audit of the Careers site uncovered a lack of content for key populations likely to apply for HHS jobs, including returned Peace Corps volunteers and Veterans, as well as a lack of employee narratives and information about the impact of human services, medicine and science advocacy. Among webpages on the HHS.gov site, the Careers site was the 34th most visited page, averaging 208,054 daily visits. Additionally, the data gathered from users showed that 64% of respondents suggest the site’s content should be narrative-based or include more employee stories. Approximately half (45%) of respondents referenced the site as a possible tool for recruitment or retention, and 64% noted the site should house benefits information, instructions on applying for positions and even information explaining the organizational structure. These are just a few of the responses displaying the need for updating the Careers site."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Discovery & Research",
+            "columnText": "<p>During the initial discovery phase, the Bixal team interviewed stakeholders and subject matter experts (SMEs) along with new hires, long-time HHS employees and recent retirees. The information discovered during these interactions uncovered pain points related to posting, managing and promoting career-related content; finding jobs; and locating both retirement and employee benefits information. This research led to the creation of user stories that helped our team create a product roadmap, outlining our project vision.</p><p>In the codesign phase, we designed mockups for the HHS Careers homepage, Jobs List page and Job Detail page. The team identified that these pages needed updating to provide more value to visitors during the discovery phase. To end the codesign phase, we performed usability testing with stakeholders and employees to ensure their needs were being met.</p><p>During content strategy planning, the Bixal team used insights from the discovery and codesign phases to create a content model and governance plan. The purpose of the content model was to make sure users have access to the information they need and that its organization is both intuitive and user friendly. The purpose of the governance plan was to create procedures to guarantee the proper maintenance of the site.</p><p>During the development phase, we used the insights from the discovery, codesign and content strategy phases to develop a new Careers site. This site was a dynamic and centralized resource for HHS jobs and was able to guide visitors to appropriate application pages, recommend job postings, contact information, and additional information.</p><p>After the development of the site, the Bixal team completed a marketing implementation plan for HHS and OHR to reach targeted audiences, build brand awareness and drive more traffic to the career website’s content and resources. This plan included search engine marketing, search engine optimization and both social media and multimedia marketing. The features list was validated by both stakeholders and employees before our team moved to the design phase.</p><p>Interviewees saw their work as part of something bigger; thus, the #PartofSomethingBigger theme emerged. Our team designed a product around this theme, showcasing a mural of people coming together to form an object and corresponding copy highlighting the work of HHS and its agencies.</p><p>Thanks to our unique approach to discovery and the weighted decision matrix that validated each step of development with customers and stakeholders alike, we ended up with a clearly articulated message and design that captures the vision of our stakeholders and the core values of the people working within HHS.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnTopic": "",
+            "columnImage": "hhs-work-images-1.jpeg",
+            "columnImageAlt": "",
+            "columnText": ""
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Design & Approach",
+            "columnText": "<p>At Bixal, we employ an Agile program management methodology focused on continuity, quality and continuous improvement. We also use Scrum, an Agile methodology, to make sure we are working in the most efficient way possible. For this specific project, Bixal’s Scrum Master facilitated the workflow through two-week sprints to make sure value was being provided to HHS on a biweekly basis.</p><p>No team exists — or should exist — in a vacuum. Constant collaboration among teams leads to the greatest amount of innovation, and therefore, the greatest amount of value to the client. Throughout this project, the design, content strategy, marketing and development teams were in constant collaboration to generate ideas for the best possible deliverables.</p><p>At Bixal, we believe that if you want to come up with the best possible product, you must pay attention to what people are saying. During this project, we used research to create user stories, which heavily informed our redesign of the Careers site. Our team also performed usability testing to make sure HHS employees and stakeholders could properly navigate the new site. In this work, and all the work we do, we used a design thinking approach. In other words, we empathize with and identify the needs of our users and then brainstorm and prototype innovative solutions to address these needs.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Delivering the Solution",
+            "columnText": "<p>The Bixal team defined success through the perspectives of our stakeholders and the Careers site’s users. To refine priorities quickly, our team worked closely with our HHS colleagues to develop a weighted decision matrix that prioritized discovery efforts based on the impact a given activity would have on other project areas.</p><p>The decision matrix allowed our team to perform more activities than originally envisioned, allowing us to act quickly and more strategically on work efforts. This allowed us to clearly see what activities needed to be addressed first. We were able to accomplish content auditing; information architecture; document strategy; informational interviews; data analytics; content governance; gap analysis; an internal campaign; and journey mapping/user flows.</p><p>In the discovery phase, we produced the required documentation to set a clear direction, which enabled our team to quickly perform stakeholder, SME, and employee interviews and to analyze each group separately. These analyses were combined into a detailed findings report that identified common themes across all groups. We then reviewed the interview scripts and quantified the instances of those themes for each participant — a topic identified by at least two participants was included in a chart. Additionally, the team used interview quotes to define specific goals for each theme. The goals were subsequently mapped to product features to ensure the minimum viable product met all groups’ needs.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Technology",
+            "columnIconType": "sba-tech",
+            "columnText": "Drupal 9, USAJOBS API, React.js, Leaflet Map API"
+          },
+          {
+            "columnHeading": "Methodology",
+            "columnIconType": "sba-response",
+            "columnText": "We used Agile methodology and Scrum framework."
+          },
+          {
+            "columnHeading": "Customer Support",
+            "columnIconType": "sba-support",
+            "columnText": "To support customers, we developed a go-to-market project plan and social media toolkit for the product launch."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "columns",
+        "columns": [
+          {
+            "columnHeading": "Unexpected Challenge",
+            "columnText": "The 2020 COVID-19 pandemic had an impact on the promotion of the updated site. The key stakeholders were sidetracked with this new landscape and did not have the bandwidth to continue the work as planned and did not use the Bixal marketing plan. Currently, HHS has plans pending to bring more attention to the site."
+          }
+        ]
+      }
+    },
+    {
+      "section": {
+        "type": "callout",
+        "bgColor": true,
+        "callout": {
+          "calloutHeading": "The Outcome",
+          "calloutText": "This was not a simple application website. Bixal delivered a website telling the story of HHS employees and provided a refreshed user experience for potential HHS employees. Much research and engagement went into the discovery to deliver valuable results to the OHR."
+        }
+      }
+    },
+    {
+      "section": {
+        "type": "emphasis-blocks",
+        "blocks": [
+          {
+            "blockTopic": "Highlight",
+            "blockHeading": "#PartofSomethingBigger",
+            "blockText": "From stakeholder interviews, the importance of their work generated the  #PartofSomethingBigger theme. This theme was subsequently used to design the product and the corresponding copy and imagery displayed on HHS.gov/careers."
+          }
+        ]
+      }
+    }
+  ]
+}

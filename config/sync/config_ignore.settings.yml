@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
+mode: simple
+ignored_config_entities:
+  - 'captcha.*'
+  - 'contact.form.site_wide:message'
+  - 'contact.form.site_wide:recipients'
+  - 'contact.form.site_wide:redirect'
+  - 'contact.form.site_wide:reply'
+  - contact.settings
+  - recaptcha.settings

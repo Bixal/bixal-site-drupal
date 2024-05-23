@@ -1,0 +1,31 @@
+uuid: 54ede32f-a00a-4b21-9c33-017636359844
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.site_wide
+    - field.field.contact_message.site_wide.field_company
+id: contact_message.site_wide.default
+targetEntityType: contact_message
+bundle: site_wide
+mode: default
+content:
+  field_company:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

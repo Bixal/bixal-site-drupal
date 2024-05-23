@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.blurb_collection.field_blurb_collection_variant
     - field.field.paragraph.blurb_collection.field_blurbs
+    - field.field.paragraph.blurb_collection.field_featured
     - paragraphs.paragraphs_type.blurb_collection
   module:
     - paragraphs
@@ -36,6 +37,13 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_featured:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

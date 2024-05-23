@@ -66,7 +66,9 @@
   description_display == 'invisible' ? 'visually-hidden',
 ] %}
 
-<div{{ attributes.addClass(classes) }}>
+{% if not no_wrapper %}
+  <div{{ attributes.addClass(classes) }}>
+{% endif %}
 
   {% if label_display in ['before', 'invisible'] %}
     {{ label }}
@@ -102,4 +104,6 @@
       {{ description.content }}
     </div>
   {% endif %}
-</div>
+{% if not no_wrapper %}
+  </div>
+{% endif %}

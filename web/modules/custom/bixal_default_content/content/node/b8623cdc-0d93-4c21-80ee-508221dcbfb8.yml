@@ -1,0 +1,432 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b8623cdc-0d93-4c21-80ee-508221dcbfb8
+  bundle: landing_page
+  default_langcode: en
+  depends:
+    c69649c8-1616-4b37-8f25-e83d0fdf16e8: media
+    71b5962d-6779-429e-a0cc-d69362a72675: media
+    6df02060-b3a1-489c-b244-9d14e623ab79: media
+    e1342bc4-4d93-4686-8c31-d81e444682b5: media
+    ddac1361-2890-42ac-9a2e-f702c1ddd5a7: media
+    cb1265fb-4207-4bad-83fc-5d34d3885654: media
+    6c14e26f-a9fe-441d-853d-46e02bb70eba: media
+    442dd15e-16fc-4c7e-87cb-f4baccbcda77: media
+    4fbffdc5-c6ac-4f6a-83ca-b89d1a07b9bf: media
+    4308665c-be11-47ad-a19a-8d5040e44839: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Our Work'
+  created:
+    -
+      value: 1714667307
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /our-work
+      langcode: en
+      pathauto: 0
+  field_banner_image:
+    -
+      entity: c69649c8-1616-4b37-8f25-e83d0fdf16e8
+  field_hero_variant:
+    -
+      value: image-bg
+  field_paragraphs:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 490f8604-fe17-490d-ad38-08d6ed425e0f
+          bundle: section
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1714667363
+          behavior_settings:
+            -
+              value: {  }
+          field_center_content:
+            -
+              value: true
+          field_description:
+            -
+              value: 'At Bixal, we lead human-centered digital transformation and global solutions that drive equity, sustainability and social good. We leverage technology, communications, data and human-centered design to help governments and organizations be more efficient, effective and impactful. Read on to learn more about the broad scope of our work and how we support our clients to provide a better customer experience and, ultimately, improve the lives of the people they serve.'
+          field_title:
+            -
+              value: 'What we do'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: cae32c14-ca19-4004-b1b5-ffb45a8c6711
+          bundle: section
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1714750780
+          behavior_settings:
+            -
+              value: {  }
+          field_button:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 25b6723f-8519-4849-8355-388cd1912dca
+                  bundle: button
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1714750780
+                  behavior_settings:
+                    -
+                      value: {  }
+          field_center_content:
+            -
+              value: false
+          field_nested_paragraphs:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 77996b2a-21e9-4daf-828e-b06ea44b0cf5
+                  bundle: blurb_collection
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1714750797
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_blurbs:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 2774d093-0639-4fd9-b999-51be7424a0ed
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714750797
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'USAID Digital Apex'
+                          field_image:
+                            -
+                              entity: 71b5962d-6779-429e-a0cc-d69362a72675
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/digital-apex/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Building cybersecurity capacity to improve digital health and protect against cyber threats'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 2e29719e-c341-41c6-9c3f-7d5d2c5d455e
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751145
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'Federal Emergency Management Agency'
+                          field_image:
+                            -
+                              entity: 6df02060-b3a1-489c-b244-9d14e623ab79
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/fema/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: "Educating the public on FEMA's mission"
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 4414beac-076c-420b-a809-e769253b190c
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751166
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'USAID Bureau for Resilience and Food Security'
+                          field_image:
+                            -
+                              entity: e1342bc4-4d93-4686-8c31-d81e444682b5
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/kdlt/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Delivering digital communications for food security'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: b89a9ff2-1ade-4f09-b9ea-7a0f270ac0d9
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751307
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'U.S. Department of Health and Human Services'
+                          field_image:
+                            -
+                              entity: ddac1361-2890-42ac-9a2e-f702c1ddd5a7
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/hhs/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Better engagement through human-centered design'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: d76ea4ad-7050-4c0b-8aea-b0848aa15191
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751373
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'USAID EVAL-ME II IDIQ'
+                          field_image:
+                            -
+                              entity: cb1265fb-4207-4bad-83fc-5d34d3885654
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/monitoring-evaluation-and-learning/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Using data to empower global solutions'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: b3c0e575-3475-46db-8bb9-af9dd5151c40
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751468
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'U.S. Small Business Administration'
+                          field_image:
+                            -
+                              entity: 6c14e26f-a9fe-441d-853d-46e02bb70eba
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/sba/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Propelling business with multilingual content strategy'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: d8e89196-79be-4d4d-8cff-d994bd6a4307
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751546
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'Medline Plus, Medline Plus en español'
+                          field_image:
+                            -
+                              entity: 442dd15e-16fc-4c7e-87cb-f4baccbcda77
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/nlm/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Multilingual marketing expands health services reach'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 0582a20a-90eb-40c3-9807-fd79c9967301
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751683
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'U.S. Department of Housing and Urban Development'
+                          field_image:
+                            -
+                              entity: 4fbffdc5-c6ac-4f6a-83ca-b89d1a07b9bf
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/hud/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Training and certification of housing counselors'
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: d19fb711-2051-4c64-8ea8-921cfb151f02
+                          bundle: blurb
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1714751770
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_description:
+                            -
+                              value: 'U.S. Agency for International Development'
+                          field_image:
+                            -
+                              entity: 4308665c-be11-47ad-a19a-8d5040e44839
+                          field_link:
+                            -
+                              uri: 'internal:/our-work/usaid/'
+                              title: ''
+                              options: {  }
+                          field_title:
+                            -
+                              value: 'Promoting land tenure and property rights'
+                  field_blurb_collection_variant:
+                    -
+                      value: two-up
+                  field_featured:
+                    -
+                      value: true

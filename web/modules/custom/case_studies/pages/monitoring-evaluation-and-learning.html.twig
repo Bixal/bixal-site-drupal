@@ -1,0 +1,207 @@
+<style>
+  .gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden
+  }
+  .gatsby-image-wrapper picture.object-fit-polyfill {
+    position: static !important
+  }
+  .gatsby-image-wrapper img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover
+  }
+  .gatsby-image-wrapper [data-main-image] {
+    opacity: 0;
+    transform: translateZ(0);
+    transition: opacity 0.25s linear;
+    will-change: opacity
+  }
+  .gatsby-image-wrapper-constrained {
+    display: inline-block;
+    vertical-align: top
+  }
+</style>
+<noscript>
+  <style>
+    .gatsby-image-wrapper noscript [data-main-image] {
+      opacity: 1 !important
+    }
+    .gatsby-image-wrapper [data-placeholder-image] {
+      opacity: 0 !important
+    }
+  </style>
+</noscript>
+<script type="module">
+  const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+  e && document.body.addEventListener("load", (function (e) {
+    const t = e.target;
+    if (void 0 === t.dataset.mainImage) 
+      return;
+    
+
+
+    if (void 0 === t.dataset.gatsbyImageSsr) 
+      return;
+    
+
+
+    let a = null,
+      n = t;
+    for (; null === a && n;) 
+      void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode),
+      n = n.parentNode;
+    
+
+
+    const o = a.querySelector("[data-placeholder-image]"),
+      r = new Image;
+    r.src = t.currentSrc,
+    r.decode().catch((() => {})).then((() => {
+      t.style.opacity = 1,
+      o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear")
+    }))
+  }), !0);
+</script>
+<div id="case-study" class="page--case-study">
+  <section id="hero" class="section-container bg-image hero " style="background-color:transparent;color:black;padding:0px 0;background-image:radial-gradient(circle, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%), url(/static/b0c67b0752535ba810776c24442aa457/mel-content-hero.png)">
+    <div style="margin:0 auto;width:100%;max-width:1350px">
+      <div class="section-banner-details">
+        <div class="section-overview  section-overview--center">
+          <div class="piped-title" style="border-left-color:#fff;border-right-color:#fff">OUR WORK</div>
+          <div style="max-width:100%" class="section-overview__text">
+            <h1>Improving outcomes and ensuring accountability for agencies worldwide.</h1>
+          </div>
+        </div>
+        <p class="section-banner-description"></p>
+      </div>
+    </div>
+  </section>
+  <section id="intro-section" class="section-container  intro-section " style="background-color:transparent;color:black;padding:30px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div id="case-study-intro" class="
+                                intro-block
+                                intro-block--case-study-intro
+                              ">
+        <div class="intro-block__heading">
+          <h2>Monitoring, Evaluation and Learning (MEL) Practices for Federal Partners</h2>
+          <span class="sc-bcXHqe hkrZtX">
+            <a class="decorative-link" rel="noreferrer" target="_blank" href="https://www.bixal.com/contract-vehicles/eval-me-ii-idiq/">Related Contract Vehicle: USAID EVAL-ME Ⅱ IDIQ</a>
+          </span>
+        </div>
+        <div class="intro-block__text" style="border-color:#fda305">
+          <p>Many of Bixal’s federal partners require efficient, cost-effective solutions to meet the mounting pressure to access real-time data and innovative analyses.</p>
+          <p>MEL’s components — ongoing collection and analysis of program data (monitoring); periodic analysis of project data to gauge progress on intended outcomes and impacts (evaluation); and use of those findings to fine-tune and course correct activities, build on success, and share emerging best practices and knowledge gained (learning) — provide a framework for understanding a project’s progress and impact.</p>
+          <p>By applying what we learn from evidence and analysis to our broader work, we promote improvements to outcomes and ensure accountability for the resources used to achieve them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-0" class="section-container  undefined-section--columns-0 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">MEL and Agile Methodologies</h2>
+              <div class="heading__line" style="background-color:#fda305"></div>
+            </div>
+            <div class="column-content__text">Bixal’s team of evaluators, data scientists and analysts brings a full suite of capabilities and support services to solve complex challenges at local and global levels. Our unique delivery of MEL and data solutions, grounded in Agile principles, supports our federal partners by providing crucial data for informed decision-making. The Agile process promotes iterative, sustainable solutions through reflective, incremental assessments to review whether and how to adjust implementation and strategy as new needs and challenges arise. Our team uses learnings from the monitoring and evaluation phases to inform the next iteration of work. They also use data-collection platforms and dashboards to increase efficiency in the data-reporting cycle, enabling rapid feedback loops for adaptive management.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-1" class="section-container  undefined-section--columns-1 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Program Support for USAID</h2>
+              <div class="heading__line" style="background-color:#fda305"></div>
+            </div>
+            <div class="column-content__text">When USAID’s Feed the Future Knowledge, Data, Learning and Training (KDLT) activity required expanded capacity for data analytics and visualization to support program monitoring and evaluation, Bixal’s data analysts built a custom Tableau dashboard. By transforming disparate datasets into a user-friendly dashboard, we created easy access and an optimal method to communicate KDLT activity progress to both internal team members and the larger management team. The indicator dashboard efficiently translates KDLT trends and patterns and allows team members to identify successes and challenges and then adapt accordingly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-2" class="section-container  undefined-section--columns-2 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Data Management at HHS</h2>
+              <div class="heading__line" style="background-color:#fda305"></div>
+            </div>
+            <div class="column-content__text">The U.S. Department of Health and Human Services’ (HHS’s) large internet footprint made data management, monitoring and coordinated improvement an ongoing challenge. Data were available but not centralized, limiting HHS’s business-intelligence capabilities. Bixal introduced a business-intelligence environment that integrated cloud-based data storage, an Agile approach to business intelligence and a consistent focus on quickly converting data into usable information. To improve data analysis and its use, we expanded the enterprise data warehouse and developed interactive and engaging data-visualization and -reporting tools based on user-informed research and human centered–design strategies.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-3" class="section-container  undefined-section--columns-3 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Reducing the Burden on SSA</h2>
+              <div class="heading__line" style="background-color:#fda305"></div>
+            </div>
+            <div class="column-content__text">The volume of replacement requests for Social Security cards was creating an excessive burden on the field offices and call centers of the Social Security Administration (SSA). Bixal identified and implemented a minimum viable product (MVP) to reduce this stress on the agency. We began with a base period of discovery around user experience, technology and data. During this period, qualitative and quantitative research validated key audiences, website content–analysis and –impact assessment. Exploratory data analysis, topic modeling and enterprise data mapping established a strong context through which the MVP would provide immediate relief and serve as a scalable model to solve systemic challenges regarding information-technology modernization, enterprise data gaps and the need for a customer-experience strategy.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="undefined-section--columns-4" class="section-container  undefined-section--columns-4 section--columns" style="background-color:transparent;color:black;padding:20px 0">
+    <div style="margin:0 auto;width:85%;max-width:1350px">
+      <div class="column-set column-set--layout-single">
+        <div class="column-set__column " style="flex-basis:100%">
+          <div class="column-content">
+            <div class="heading heading--underlined">
+              <h2 class="heading__content">Recent Work with Nongovernmental Agencies</h2>
+              <div class="heading__line" style="background-color:#fda305"></div>
+            </div>
+            <div class="column-content__text">
+              <p>Though Bixal has a focus on federal, we have also performed work with nongovernmental organizations across the globe. We’ve successfully completed contracts in over 40 countries, partnering with local organizations to establish MEL support.</p>
+              <p>In one recent project, we were the MEL partner for the Stanford University Center for Global Health Innovation’s WomenLift Health Leadership Initiative (a multiyear, multinational initiative funded by The Bill &amp; Melinda Gates Foundation). Bixal, under recently acquired Clear Outcomes, designed the MEL framework for the project, built a custom Tableau dashboard to share progress on key indicators, and currently conducts annual evaluations and leads monthly learning sessions with the team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/
+window.pagePath = "/our-work/monitoring-evaluation-and-learning/";
+window.___webpackCompilationHash = "a06665383b741f3aa4c1"; /*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/
+window.___chunkMapping = {
+  "polyfill": ["/polyfill-71426064197f37fd8168.js"],
+  "app": ["/app-071ed289116e4fb5f844.js"],
+  "component---src-pages-404-js": ["/component---src-pages-404-js-a8c7736d17a9ce5ac13e.js"],
+  "component---src-pages-about-index-js": ["/component---src-pages-about-index-js-eb5b5a7b8dfc00440d2c.js"],
+  "component---src-pages-blog-index-js": ["/component---src-pages-blog-index-js-da2e906add700328850f.js"],
+  "component---src-pages-careers-index-js": ["/component---src-pages-careers-index-js-1191e82cbdda01d1ab81.js"],
+  "component---src-pages-contract-vehicles-index-js": ["/component---src-pages-contract-vehicles-index-js-df326cfb740f55247217.js"],
+  "component---src-pages-deia-js": ["/component---src-pages-deia-js-c566f96c737ecbf10f83.js"],
+  "component---src-pages-holiday-2023-index-js": ["/component---src-pages-holiday-2023-index-js-da0b4948883202b4a7be.js"],
+  "component---src-pages-index-js": ["/component---src-pages-index-js-4cabdec5322fad838e11.js"],
+  "component---src-pages-markdown-remark-frontmatter-slug-jsx": ["/component---src-pages-markdown-remark-frontmatter-slug-jsx-8f39af43a26f3c2d2f09.js"],
+  "component---src-pages-our-work-index-js": ["/component---src-pages-our-work-index-js-8176aee2358070a65e0e.js"],
+  "component---src-pages-privacy-js": ["/component---src-pages-privacy-js-d4b8e6b1c91cc23e20c9.js"],
+  "component---src-templates-case-study-js": ["/component---src-templates-case-study-js-396d1165e284b02e7744.js"],
+  "component---src-templates-case-study-legacy-js": ["/component---src-templates-case-study-legacy-js-10f25bf639c48d445884.js"],
+  "component---src-templates-contract-vehicle-js": ["/component---src-templates-contract-vehicle-js-15edda6738d7d2186450.js"],
+  "component---src-templates-person-profile-js": ["/component---src-templates-person-profile-js-39578bc98c790a199d6c.js"]
+}; /*]]>*/</script><script src="/polyfill-71426064197f37fd8168.js" nomodule=""></script><script src="/app-071ed289116e4fb5f844.js" async=""></script><script src="/framework-261b3c8cc3bd8dfe6dfa.js" async=""></script><script src="/webpack-runtime-f4b601a5b1ec8ea50b55.js" async=""></script></body></html>

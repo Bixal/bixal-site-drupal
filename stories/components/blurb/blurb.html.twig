@@ -13,7 +13,7 @@
 {% extends "@components/blurb/blurb-base.html.twig" %}
 
 {% set image %}
-  {% include "@partials/media-image.html.twig" with {
-    'image': image | default('<img src="https://www.bixal.com/static/ff0d561dd14923cd599238ab42a7745e/4e534/people-first.webp" width="750px" alt="">'),
+{% include "@partials/media-image.html.twig" with {
+    'image': image | default('<img src="static/ff0d561dd14923cd599238ab42a7745e/4e534/people-first.webp" width="750px" alt="">'),
   } %}
 {% endset %}

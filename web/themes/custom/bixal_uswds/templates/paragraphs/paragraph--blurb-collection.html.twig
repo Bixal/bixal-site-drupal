@@ -45,6 +45,7 @@
   {% include '@components/blurb/blurb-collection-base.html.twig' with {
     'blurb_collection': content.field_blurbs | field_value,
     'variant': content.field_blurb_collection_variant['#items'].getString(),
+    'featured': content.field_featured.0['#markup'],
     'additional_classes': [
       'component',
       'component--type--' ~ paragraph.bundle|clean_class,
