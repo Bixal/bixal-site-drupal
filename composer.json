@@ -57,6 +57,7 @@
         "drupal/override_node_options": "^2.7",
         "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.12",
+        "drupal/recaptcha": "^3.2",
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/role_delegation": "^1.2",
