@@ -1,0 +1,7 @@
+uuid: e2532da3-794e-4896-a7fd-c2f7115a02be
+langcode: en
+status: false
+dependencies: {  }
+formId: node_bixaler_form
+captchaType: default
+label: node_bixaler_form
