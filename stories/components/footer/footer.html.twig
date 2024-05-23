@@ -97,18 +97,16 @@
         </nav>
       {% endif %}
       {{ footer_nav_cl }}
-      {% if legal %}
-        <div class="bix-site-footer__legal">
-          {% for item in legal %}
-            <a
-              class="{{ item.current ? "is-current" }}"
-              href="{{ item.href | default("javascript:void(0)") }}">
-              {{ item.label }}
-            </a>
-          {% endfor %}
-          <span class="copyright">Copyright &copy; {{ 'now' | date('Y') }} Bixal</span>
-        </div>
-      {% endif %}
+      <div class="bix-site-footer__legal">
+        {% for item in legal %}
+          <a
+            class="{{ item.current ? "is-current" }}"
+            href="{{ item.href | default("javascript:void(0)") }}">
+            {{ item.label }}
+          </a>
+        {% endfor %}
+        <span class="copyright">Copyright &copy; {{ 'now' | date('Y') }} Bixal</span>
+      </div>
       {% if socialNav %}
         {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
       {% endif %}
