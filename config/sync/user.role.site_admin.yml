@@ -7,6 +7,7 @@ dependencies:
     - captcha
     - contact
     - google_tag
+    - path
     - pathauto
     - recaptcha
     - redirect
@@ -27,7 +28,9 @@ permissions:
   - 'administer recaptcha'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer url aliases'
   - 'administer users'
   - 'assign editor role'
+  - 'create url aliases'
   - 'use admin toolbar search'
   - 'view the administration theme'
