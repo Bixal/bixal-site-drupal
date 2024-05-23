@@ -8,4 +8,6 @@ ignored_config_entities:
   - 'contact.form.site_wide:redirect'
   - 'contact.form.site_wide:reply'
   - contact.settings
+  - 'google_tag.*'
   - recaptcha.settings
+  - 'system.site:page.front'
