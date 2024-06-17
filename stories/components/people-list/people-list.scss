@@ -90,6 +90,10 @@
   justify-content: center;
 }
 
+.view-all-only {
+  display: none;
+}
+
 .bix-person {
   --_overlay-color: var(--overlay-color, gray);
   --_text-color: var(--text-color, #000);

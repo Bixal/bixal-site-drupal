@@ -72,7 +72,7 @@
       <ul class="bix-people-list">
         {% for item in filter_content %}
           <li
-            class="bix-people-list__item bix-person"
+            class="bix-people-list__item bix-person{% if loop.index > 20 %} view-all-only{% endif %}"
             data-filter-category="{{ item.filter_category }}">
             <a
               class="bix-person__link"
@@ -94,7 +94,7 @@
               </div>
               <div class="bix-person__details">
                 <h3 class="bix-person__name">
-                  {{ item.name | default("Full name") }}
+                 INDEX {{ loop.index }} {{ item.name | default("Full name") }}
                 </h3>
                 <div class="bix-person__role">
                   {{ item.role | default("Role") }}
