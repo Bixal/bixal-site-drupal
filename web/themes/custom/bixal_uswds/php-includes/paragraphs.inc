@@ -119,9 +119,26 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           return $term->getName();
         };
 
+        $get_multiple_term_ref_title = static function (NodeInterface $node, $field_name) use (&$field_ne_and_exists): array {
+          if (!$field_ne_and_exists($node, $field_name)) {
+            return [];
+          }
+          if (empty($term_ids = explode(', ', $node->get($field_name)->getString()))) {
+            return [];
+          }
+          $return = [];
+          foreach (Term::loadMultiple($term_ids) as $term) {
+            if ($term === NULL || !$term->isPublished()) {
+              continue;
+            }
+            $return[] = $term->getName();
+          }
+          return $return;
+        };
+
         // Process each node to set values of each array item.
         foreach ($nodes as $node) {
-          $team_name = $get_first_term_ref_title($node, 'field_team');
+          $current_team_names = $get_multiple_term_ref_title($node, 'field_team');
 
           // Set value of node.
           $filter_content[] = [
@@ -129,12 +146,13 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
             'image' => $get_media_image_url($node, 'field_image'),
             'role' => $get_first_term_ref_title($node, 'field_role'),
             'url' => $node->toUrl()->toString(),
-            'filter_category' => strtolower($team_name),
+            'filter_category' => implode('|||', array_map('strtolower', $current_team_names)),
           ];
 
           // Add team to array if it doesn't exist in array.
-          if (strlen($team_name) && !in_array($team_name, $filter_options)) {
-            $filter_options[] = $team_name;
+          $new_team_names = array_diff($current_team_names, $filter_options);
+          if (!empty($new_team_names)) {
+            $filter_options = array_merge($filter_options, $new_team_names);
           }
         }
 
