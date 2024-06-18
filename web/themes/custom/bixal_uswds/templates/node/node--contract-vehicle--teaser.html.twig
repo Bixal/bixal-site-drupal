@@ -77,10 +77,10 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{% if content.field_link_to_content.0['#title'] is not empty %}
-  {% set content_link = content.field_link_to_content.0['#title'] %}
+{% if content.field_link_to_content | field_value %}
+  {% set content_link = content.field_link_to_content | field_value %}
 {% else %}
-  {% set content_link = path('entity.node.canonical', {'node': node.id}) %}
+  {% set content_link = url %}
 {% endif %}
 
 <article{{attributes.addClass(classes)}}>
