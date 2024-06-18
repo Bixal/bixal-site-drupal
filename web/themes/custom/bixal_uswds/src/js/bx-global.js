@@ -21,6 +21,22 @@
         }
       }
 
+      // This function replaces email protected innerhtml with the decoded email.
+      function cfDecodeEmails() {
+        const emailtags = document.querySelectorAll('.__cf_email__')
+        emailtags.forEach((item) => {
+          const encodedString = item.dataset.cfemail
+          var email = "", r = parseInt(encodedString.substr(0, 2), 16), n, i;
+          for (n = 2; encodedString.length - n; n += 2) {
+            i = parseInt(encodedString.substr(n, 2), 16) ^ r;
+            email += String.fromCharCode(i);
+            item.innerHTML = email
+
+          }
+        })
+      }
+      cfDecodeEmails();
+
       // Remove <p>&nbsp;</p> function.
       function nbspCleaner(el) {
         if (el.innerHTML === '&nbsp;' || el.innerHTML === '') {
