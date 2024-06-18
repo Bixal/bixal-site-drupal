@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.contract_vehicle.field_general_overview
     - field.field.node.contract_vehicle.field_information
     - field.field.node.contract_vehicle.field_key_points_of_contact
+    - field.field.node.contract_vehicle.field_link_to_content
     - node.type.contract_vehicle
   module:
     - entity_reference_revisions
+    - link
     - text
     - user
 id: node.contract_vehicle.default
@@ -47,6 +49,18 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_link_to_content:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   field_banner_image: true
