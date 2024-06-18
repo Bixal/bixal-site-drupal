@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!filterItems) {
     return;
   }
+  const viewAllButton = document.querySelector('.bix-people__footer').children[0];
 
   /**
    * Basic content filtering.
@@ -47,6 +48,19 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
+   * Remove content number limit.
+   *
+   * @param {Event} event
+   */
+  function removeContentLimit(event) {
+    const hiddenExtraItems = document.querySelectorAll(".view-all-only");
+    [...hiddenExtraItems].map(person => {
+      person.classList.remove('view-all-only');
+    });
+    document.querySelector('.bix-people__footer').setAttribute("hidden", "");
+  }
+
+  /**
    * Hides menu initially and then uses Toggle utility to show/hide.
    */
   function init() {
@@ -54,6 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     trigger.addEventListener("click", Toggle.toggle);
     target.addEventListener("click", filterContent);
+    viewAllButton.addEventListener("click", removeContentLimit);
   }
 
   init();
