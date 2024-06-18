@@ -13,3 +13,8 @@ effects:
       width: 325
       height: 325
       anchor: center-center
+  978c1b05-b75d-447c-bb12-37e512475d36:
+    uuid: 978c1b05-b75d-447c-bb12-37e512475d36
+    id: image_desaturate
+    weight: 2
+    data: {  }

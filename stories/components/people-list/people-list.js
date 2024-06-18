@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!filterItems) {
     return;
   }
+  const viewAllButton = document.querySelector('.bix-people__footer').children[0];
 
   /**
    * Basic content filtering.
@@ -26,18 +27,37 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     const option = event.target;
-    const filterValue = option.getAttribute("for");
+    const chosenFilterValue = option.getAttribute("for");
 
     // @TODO: Check for scrollbar and adjust body padding to avoid screen "shake" when there are zero items.
     [...filterItems].map(person => {
-      const contentItemFilter = person.dataset.filterCategory;
+      const bixalersFilterCategory = person.dataset.filterCategory.split('|||');
       person.removeAttribute("hidden");
-
-      // @TODO: Add transitions for filtering.
-      if (filterValue !== "all" && contentItemFilter !== filterValue) {
-        person.setAttribute("hidden", "");
+      if (chosenFilterValue === "all") {
+        return;
       }
+      // @TODO: Add transitions for filtering.
+      for (let key in bixalersFilterCategory) {
+        if (bixalersFilterCategory[key] === chosenFilterValue) {
+          person.removeAttribute("hidden");
+          return;
+        }
+      }
+      person.setAttribute("hidden", "");
     });
+  }
+
+  /**
+   * Remove content number limit.
+   *
+   * @param {Event} event
+   */
+  function removeContentLimit(event) {
+    const hiddenExtraItems = document.querySelectorAll(".view-all-only");
+    [...hiddenExtraItems].map(person => {
+      person.classList.remove('view-all-only');
+    });
+    document.querySelector('.bix-people__footer').setAttribute("hidden", "");
   }
 
   /**
@@ -48,6 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     trigger.addEventListener("click", Toggle.toggle);
     target.addEventListener("click", filterContent);
+    viewAllButton.addEventListener("click", removeContentLimit);
   }
 
   init();

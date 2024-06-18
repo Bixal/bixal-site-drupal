@@ -41,11 +41,13 @@
 {# @todo: Add a field to blurb collection that is a boolean for 'featured', it is an option to blurb-collection-base
   and makes the first blurb full width.
 #}
+
+
 {% block paragraph %}
   {% include '@components/blurb/blurb-collection-base.html.twig' with {
     'blurb_collection': content.field_blurbs | field_value,
     'variant': content.field_blurb_collection_variant['#items'].getString(),
-    'featured': content.field_featured.0['#markup'],
+    'featured': content.field_featured['#items'].value,
     'additional_classes': [
       'component',
       'component--type--' ~ paragraph.bundle|clean_class,

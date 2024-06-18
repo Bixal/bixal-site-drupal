@@ -9,14 +9,28 @@ dependencies:
     - field.field.node.contract_vehicle.field_general_overview
     - field.field.node.contract_vehicle.field_information
     - field.field.node.contract_vehicle.field_key_points_of_contact
+    - field.field.node.contract_vehicle.field_link_to_content
     - node.type.contract_vehicle
   module:
+    - link
     - user
 id: node.contract_vehicle.teaser
 targetEntityType: node
 bundle: contract_vehicle
 mode: teaser
 content:
+  field_link_to_content:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

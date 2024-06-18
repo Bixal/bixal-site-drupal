@@ -12,4 +12,4 @@ ignored_config_entities:
   - 'pathauto.*'
   - recaptcha.settings
   - redirect.settings
-  - 'system.site:page.front'
+  - system.site
