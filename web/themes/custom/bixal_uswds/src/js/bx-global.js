@@ -26,12 +26,17 @@
         const emailtags = document.querySelectorAll('.__cf_email__')
         emailtags.forEach((item) => {
           const encodedString = item.dataset.cfemail
-          var email = "", r = parseInt(encodedString.substr(0, 2), 16), n, i;
+          let email = "", r = parseInt(encodedString.substr(0, 2), 16), n, i;
           for (n = 2; encodedString.length - n; n += 2) {
             i = parseInt(encodedString.substr(n, 2), 16) ^ r;
             email += String.fromCharCode(i);
             item.innerHTML = email
+          }
+          let parent = item.parentElement;
 
+          // Change the mailto to the email as well.
+          if (parent.tagName.toLowerCase() === 'a' && parent.href.includes('/cdn-cgi/l/email-protection')) {
+            parent.href = 'mailto: ' + email;
           }
         })
       }
