@@ -102,6 +102,10 @@ tooling:
       - "./orch/deploy_shared_install.sh"
       - "./orch/post_deploy_shared.sh"
       - "drush uli"
+  watch:
+    service: node
+    cmd:
+      - 'cd web/themes/custom/bixal_uswds && npm run gulp'
   xdebug-on:
     service: appserver
     description: Enable Xdebug.
