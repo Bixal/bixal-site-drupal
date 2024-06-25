@@ -75,10 +75,9 @@ Or a USWDS mixin...
 
 // ****** Do not write any custom CSS on this file ****** //
 
-@use "uswds-core" with (
-  // General settings.
+@use "uswds-core" with ( // General settings.
   $theme-image-path: "../assets/img",
-  $theme-font-path: "../assets/fonts",
+  $theme-font-path: "../../src/fonts",
   $theme-show-notifications: false,
 
   // Color settings
@@ -93,7 +92,7 @@ Or a USWDS mixin...
   $theme-color-primary-lightest: 'cyan-5v',
   $theme-color-primary-lighter: 'cyan-10v',
   $theme-color-primary-light: 'cyan-20v',
-  $theme-color-primary:  "cyan-50v",
+  $theme-color-primary: "cyan-50v",
   $theme-color-primary-dark: "cyan-60v",
   $theme-color-primary-darker: "cyan-70v",
   $theme-color-primary-darkest: "cyan-80v",
@@ -129,7 +128,7 @@ Or a USWDS mixin...
   $theme-color-accent-warm-darkest: "gold-80v",
 
   // Info
-  $theme-color-info-family:"cyan",
+  $theme-color-info-family: "cyan",
   $theme-color-info-lighter: "cyan-5v",
   $theme-color-info-light: "cyan-10v",
   $theme-color-info: "cyan-30v",
@@ -200,7 +199,7 @@ Or a USWDS mixin...
   $theme-column-gap-md: 4,
   $theme-column-gap-lg: 6,
   $theme-column-gap-mobile: 5,
- // $theme-column-gap-desktop: 7,
+  // $theme-column-gap-desktop: 7,
 
   // Typography settings
   // https://designsystem.digital.gov/documentation/settings/#typography-settings
@@ -228,28 +227,25 @@ Or a USWDS mixin...
   //$width-manual-values: ('flag': 150px),
 
   // Turn on or off breakpoints
-  $theme-utility-breakpoints: (
-  'card':              false,   // 160px
-  'card-lg':           false,   // 240px
-  'mobile':            false,   // 320px
-  'mobile-lg':         true,    // 480px
-  'tablet':            true,    // 640px
-  'tablet-lg':         true,   // 880px
-  'desktop':           true,    // 1024px
-  'desktop-lg':        false,   // 1200px
-  'widescreen':        false,   // 1400px
+  $theme-utility-breakpoints: ('card': false, // 160px
+    'card-lg': false, // 240px
+    'mobile': false, // 320px
+    'mobile-lg': true, // 480px
+    'tablet': true, // 640px
+    'tablet-lg': true, // 880px
+    'desktop': true, // 1024px
+    'desktop-lg': false, // 1200px
+    'widescreen': false, // 1400px
   ),
 
-// Max width settings, set responsive to true.
-  $max-width-settings: (
-  output: true,
-  responsive: true,
+  // Max width settings, set responsive to true.
+  $max-width-settings: (output: true,
+    responsive: true,
   ),
 
-  $flex-direction-settings: (
-  output: true,
-  responsive: true,
-),
+  $flex-direction-settings: (output: true,
+    responsive: true,
+  ),
 
 );
 // ****** Do not write any custom CSS on this file ****** //
