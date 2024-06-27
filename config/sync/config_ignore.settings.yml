@@ -2,6 +2,7 @@ _core:
   default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
 mode: simple
 ignored_config_entities:
+  - 'bixal_uswds.settings:favicon'
   - 'captcha.*'
   - 'contact.form.site_wide:message'
   - 'contact.form.site_wide:recipients'
