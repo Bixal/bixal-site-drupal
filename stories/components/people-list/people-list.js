@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!filterItems) {
     return;
   }
-  const viewAllButton = document.querySelector('.bix-people__footer').children[0];
+  const footer = document.querySelector('.bix-people__footer');
 
   /**
    * Basic content filtering.
@@ -25,6 +25,10 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!isOption) {
       return;
     }
+    // After a filter is chosen, hide the popup.
+    Toggle.hide(trigger, target)
+    // If a filter is chosen, show all results and hide the 'view all' button.
+    removeContentLimit();
 
     const option = event.target;
     const chosenFilterValue = option.getAttribute("for");
@@ -49,15 +53,21 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Remove content number limit.
-   *
-   * @param {Event} event
    */
-  function removeContentLimit(event) {
+  function removeContentLimit() {
+    const footer = document.querySelector('.bix-people__footer');
+    if (!footer) {
+      return;
+    }
+    const style = window.getComputedStyle(footer);
+    if (style.visibility === 'hidden') {
+      return;
+    }
     const hiddenExtraItems = document.querySelectorAll(".view-all-only");
     [...hiddenExtraItems].map(person => {
       person.classList.remove('view-all-only');
     });
-    document.querySelector('.bix-people__footer').setAttribute("hidden", "");
+    footer.setAttribute("hidden", "");
   }
 
   /**
@@ -68,7 +78,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     trigger.addEventListener("click", Toggle.toggle);
     target.addEventListener("click", filterContent);
-    viewAllButton.addEventListener("click", removeContentLimit);
+    // Add a click event to the 'View All' button.
+    if (footer) {
+      footer.children[0].addEventListener("click", removeContentLimit);
+    }
   }
 
   init();
