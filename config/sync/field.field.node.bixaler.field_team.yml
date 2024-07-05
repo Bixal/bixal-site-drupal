@@ -11,7 +11,7 @@ field_name: field_team
 entity_type: node
 bundle: bixaler
 label: Team
-description: ''
+description: 'If the term you wish to use does not exist, please visit the <a href="/admin/structure/taxonomy/manage/team/add">team vocabulary addition page</a> to add the new term.'
 required: false
 translatable: false
 default_value: {  }
