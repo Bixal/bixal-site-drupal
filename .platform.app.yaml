@@ -125,9 +125,9 @@ hooks:
   deploy: |
     # On production and staging environments, the site is just updated.
     if ( [ "${PLATFORM_ENVIRONMENT_TYPE}" = "production" ] || [ "${PLATFORM_ENVIRONMENT_TYPE}" = "staging" ] ); then
-      DRUPAL_UPDATE_OR_INSTALL=update
+      export DRUPAL_UPDATE_OR_INSTALL=update
     else
-      DRUPAL_UPDATE_OR_INSTALL=install
+      export DRUPAL_UPDATE_OR_INSTALL=install
     fi
     php $PLATFORM_APP_DIR/orch/deploy_generate_drush_yml.php
     $PLATFORM_APP_DIR/orch/deploy.sh
