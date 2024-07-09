@@ -100,6 +100,23 @@ hooks:
   # The build hook runs after Composer to finish preparing up your code.
   # No services are available but the disk is writeable.
   build: |
+    # On Platform.sh, use a single container and install node 16 in it.
+    # This broke for Mac users with VirtioFS:
+    # https://github.com/docker/for-mac/issues/6277
+    # Install the version specified in the .nvmrc file
+    n auto
+
+    # Reset the location hash to recognize the newly installed version
+    hash -r
+    # Finish setting node version.
+
+    # Rebuild our front end dependencies and build assets.
+    # Since remotely we are able to set a newer version of node IN the
+    # PHP service, this command is run in the PHP service. Locally it is
+    # run in a build step in lando.yml.
+    $PLATFORM_APP_DIR/orch/build_node.sh
+
+    # PHP / Drupal build process.
     $PLATFORM_APP_DIR/orch/build.sh
 
   # The deploy hook runs after your application has been deployed and started.
@@ -107,6 +124,7 @@ hooks:
   # The site is not accepting requests while this script runs so keep it
   # fast.
   deploy: |
+    php $PLATFORM_APP_DIR/orch/deploy_generate_drush_yml.php
     $PLATFORM_APP_DIR/orch/deploy.sh
 
   # The post deploy hook runs after the application has been deployed and is

@@ -4,29 +4,13 @@ set -e
 
 ./orch/show_file.sh $0
 
-# If this was not built on lando (local), then
-if [ -z "${LANDO_INFO}" ]; then
-  # Don't install dev dependencies remotely.
-  composer install --no-interaction --no-dev
-
-  # On Platform.sh, use a single container and install node 16 in it.
-  # This broke for Mac users with VirtioFS:
-  # https://github.com/docker/for-mac/issues/6277
-  # Install the version specified in the .nvmrc file
-  n auto
-
-  # Reset the location hash to recognize the newly installed version
-  hash -r
-  # Finish setting node version.
-
-  # Rebuild our front end dependencies and build assets.
-  # Since remotely we are able to set a newer version of node IN the
-  # PHP service, this command is run in the PHP service. Locally it is
-  # run in a build step in lando.yml.
-  ./orch/build_fe_shared.sh
+if [ "$COMPOSER_DEV" -eq 0 ]; then
+    composer install --no-interaction --no-dev
+elif [ "$COMPOSER_DEV" -eq 1 ]; then
+    composer install --no-interaction
 else
-  # Install with dev dependencies on locals.
-  composer install --no-interaction
+    echo "Env variable COMPOSER_DEV must be set when build.sh is run. 1 to install dev dependencies and 0 not to install dev dependencies."
+    exit 1
 fi
 
 # TODO: Add in support for incremental DB backups with cron and s3.
