@@ -7,7 +7,7 @@
 name: 'bixalcom'
 
 # The runtime the application uses.
-type: 'php:8.1'
+type: 'php:8.3'
 
 dependencies:
   php:
