@@ -115,6 +115,9 @@ hooks:
     # run in a build step in lando.yml.
     $PLATFORM_APP_DIR/orch/build_node.sh
 
+    # Don't install dev dependencies.
+    export COMPOSER_DEV=0
+
     # PHP / Drupal build process.
     $PLATFORM_APP_DIR/orch/build.sh
 
