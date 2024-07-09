@@ -103,7 +103,8 @@
                 "web-root": "web/",
                 "project-root": "./"
             },
-            "gitignore": false
+            "gitignore": false,
+            "allowed-packages": []
         },
         "installer-paths": {
             "web/core": [
