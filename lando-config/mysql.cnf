@@ -1,0 +1,2 @@
+[mariadb]
+transaction_isolation=READ-COMMITTED
