@@ -24,18 +24,18 @@
  * 'sites/default' will be used.
  *
  * For example, for a fictitious site installed at
- * https://www.drupal.org:8080/mysite/test/, the 'settings.php' file is searched
+ * https://www.drupal.org:8080/my-site/test/, the 'settings.php' file is searched
  * for in the following directories:
  *
- * - sites/8080.www.drupal.org.mysite.test
- * - sites/www.drupal.org.mysite.test
- * - sites/drupal.org.mysite.test
- * - sites/org.mysite.test
+ * - sites/8080.www.drupal.org.my-site.test
+ * - sites/www.drupal.org.my-site.test
+ * - sites/drupal.org.my-site.test
+ * - sites/org.my-site.test
  *
- * - sites/8080.www.drupal.org.mysite
- * - sites/www.drupal.org.mysite
- * - sites/drupal.org.mysite
- * - sites/org.mysite
+ * - sites/8080.www.drupal.org.my-site
+ * - sites/www.drupal.org.my-site
+ * - sites/drupal.org.my-site
+ * - sites/org.my-site
  *
  * - sites/8080.www.drupal.org
  * - sites/www.drupal.org
@@ -46,8 +46,8 @@
  *
  * Note that if you are installing on a non-standard port number, prefix the
  * hostname with that number. For example,
- * https://www.drupal.org:8080/mysite/test/ could be loaded from
- * sites/8080.www.drupal.org.mysite.test/.
+ * https://www.drupal.org:8080/my-site/test/ could be loaded from
+ * sites/8080.www.drupal.org.my-site.test/.
  *
  * @see example.sites.php
  * @see \Drupal\Core\DrupalKernel::getSitePath()
@@ -78,8 +78,8 @@
  * @code
  * $databases['default']['default'] = [
  *   'database' => 'databasename',
- *   'username' => 'sqlusername',
- *   'password' => 'sqlpassword',
+ *   'username' => 'sql_username',
+ *   'password' => 'sql_password',
  *   'host' => 'localhost',
  *   'port' => '3306',
  *   'driver' => 'mysql',
@@ -181,8 +181,8 @@ $databases = [];
  *
  * WARNING: The above defaults are designed for database portability. Changing
  * them may cause unexpected behavior, including potential data loss. See
- * https://www.drupal.org/developing/api/database/configuration for more
- * information on these defaults and the potential issues.
+ * https://www.drupal.org/docs/8/api/database-api/database-configuration for
+ * more information on these defaults and the potential issues.
  *
  * More details can be found in the constructor methods for each driver:
  * - \Drupal\mysql\Driver\Database\mysql\Connection::__construct()
@@ -194,8 +194,8 @@ $databases = [];
  *   $databases['default']['default'] = [
  *     'driver' => 'pgsql',
  *     'database' => 'databasename',
- *     'username' => 'sqlusername',
- *     'password' => 'sqlpassword',
+ *     'username' => 'sql_username',
+ *     'password' => 'sql_password',
  *     'host' => 'localhost',
  *     'prefix' => '',
  *   ];
@@ -205,7 +205,7 @@ $databases = [];
  * @code
  *   $databases['default']['default'] = [
  *     'driver' => 'sqlite',
- *     'database' => '/path/to/databasefilename',
+ *     'database' => '/path/to/database_filename',
  *   ];
  * @endcode
  *
@@ -216,10 +216,31 @@ $databases = [];
  *     'namespace' => 'Drupal\my_module\Driver\Database\my_driver',
  *     'autoload' => 'modules/my_module/src/Driver/Database/my_driver/',
  *     'database' => 'databasename',
- *     'username' => 'sqlusername',
- *     'password' => 'sqlpassword',
+ *     'username' => 'sql_username',
+ *     'password' => 'sql_password',
  *     'host' => 'localhost',
  *     'prefix' => '',
+ *   ];
+ * @endcode
+ *
+ * Sample Database configuration format for a driver that is extending another
+ * database driver.
+ * @code
+ *   $databases['default']['default'] = [
+ *     'driver' => 'my_driver',
+ *     'namespace' => 'Drupal\my_module\Driver\Database\my_driver',
+ *     'autoload' => 'modules/my_module/src/Driver/Database/my_driver/',
+ *     'database' => 'databasename',
+ *     'username' => 'sql_username',
+ *     'password' => 'sql_password',
+ *     'host' => 'localhost',
+ *     'prefix' => '',
+ *     'dependencies' => [
+ *       'parent_module' => [
+ *         'namespace' => 'Drupal\parent_module',
+ *         'autoload' => 'core/modules/parent_module/src/',
+ *       ],
+ *     ],
  *   ];
  * @endcode
  */
@@ -235,7 +256,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-$settings['config_sync_directory'] = '../config/sync';
+# $settings['config_sync_directory'] = '/directory/outside/webroot';
 
 /**
  * Settings:
@@ -265,7 +286,7 @@ $settings['config_sync_directory'] = '../config/sync';
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-# $settings['hash_salt'] = 'PjteRKqC_AwGysOKV1ivyUCeilY3bXEDC8Kh6zRRRBEBDp3Y5Vz_B8Ze1pv9WV4z01Kx96EC9Q';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -567,7 +588,7 @@ $settings['update_free_access'] = FALSE;
  * the output of phpinfo(). The full output can contain sensitive information
  * so by default Drupal removes some sections.
  *
- * This behaviour can be configured by setting this variable to a different
+ * This behavior can be configured by setting this variable to a different
  * value corresponding to the flags parameter of phpinfo().
  *
  * If you need to expose more information in the report - for example to debug a
@@ -693,9 +714,6 @@ $settings['update_free_access'] = FALSE;
 /**
  * Load services definition file.
  */
-if (!file_exists($app_root . '/' . $site_path . '/services.yml')) {
-  copy($app_root . '/' . $site_path . '/default.services.yml', $app_root . '/' . $site_path . '/services.yml');
-}
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 /**
@@ -769,10 +787,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
-  // This will make it so that Drupal stops scanning our storybook components
-  // as possible template overrides.
-  // @see https://drupal.stackexchange.com/questions/297589/extensiondiscoveryscandirectory-takes-too-long
-  'storybook_components',
 ];
 
 /**
@@ -851,14 +865,19 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_private_path'] = '';
 
 /**
- * Ensure that google tag is disabled on non-prod envs.
+ * Load local development override configuration, if available.
+ *
+ * Create a settings.local.php file to override variables on secondary (staging,
+ * development, etc.) installations of this site.
+ *
+ * Typical uses of settings.local.php include:
+ * - Disabling caching.
+ * - Disabling JavaScript/CSS compression.
+ * - Rerouting outgoing emails.
+ *
+ * Keep this code block at the end of this file to take full effect.
  */
-if (getenv('PLATFORM_BRANCH') !== 'main') {
-  $config['google_tag.container.GTM-W8JTQRX.664e571d7146d9.28940066']['status'] = FALSE;
-}
-
-if (getenv('RECAPTCHA_SECRET_KEY')) {
-  $config['recaptcha.settings']['secret_key'] = getenv('RECAPTCHA_SECRET_KEY');
-}
-
-include $app_root . '/' . $site_path . '/settings.drupal_env.php';
+#
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }

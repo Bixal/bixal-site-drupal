@@ -7,7 +7,7 @@
 name: 'bixalcom'
 
 # The runtime the application uses.
-type: 'php:8.1'
+type: 'php:8.3'
 
 dependencies:
   php:
@@ -43,7 +43,6 @@ variables:
 relationships:
   database: 'database:mysql'
   redis: 'cache:redis'
-  solrsearch: "searchsolr:main"
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
@@ -100,6 +99,26 @@ hooks:
   # The build hook runs after Composer to finish preparing up your code.
   # No services are available but the disk is writeable.
   build: |
+    # On Platform.sh, use a single container and install node 16 in it.
+    # This broke for Mac users with VirtioFS:
+    # https://github.com/docker/for-mac/issues/6277
+    # Install the version specified in the .nvmrc file
+    n auto
+
+    # Reset the location hash to recognize the newly installed version
+    hash -r
+    # Finish setting node version.
+
+    # Rebuild our front end dependencies and build assets.
+    # Since remotely we are able to set a newer version of node IN the
+    # PHP service, this command is run in the PHP service. Locally it is
+    # run in a build step in lando.yml.
+    $PLATFORM_APP_DIR/orch/build_node.sh
+
+    # Don't install dev dependencies.
+    export COMPOSER_DEV=0
+
+    # PHP / Drupal build process.
     $PLATFORM_APP_DIR/orch/build.sh
 
   # The deploy hook runs after your application has been deployed and started.
@@ -107,6 +126,13 @@ hooks:
   # The site is not accepting requests while this script runs so keep it
   # fast.
   deploy: |
+    # On production and staging environments, the site is just updated.
+    if ( [ "${PLATFORM_ENVIRONMENT_TYPE}" = "production" ] || [ "${PLATFORM_ENVIRONMENT_TYPE}" = "staging" ] ); then
+      export DRUPAL_UPDATE_OR_INSTALL=update
+    else
+      export DRUPAL_UPDATE_OR_INSTALL=install
+    fi
+    php $PLATFORM_APP_DIR/orch/deploy_generate_drush_yml.php
     $PLATFORM_APP_DIR/orch/deploy.sh
 
   # The post deploy hook runs after the application has been deployed and is

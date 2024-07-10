@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3691170c3bc180524e4314986383be6",
+    "content-hash": "f7752b20b10b921956983765803eb3ad",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,80 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.6.0"
             },
             "time": "2024-05-20T12:50:42+00:00"
+        },
+        {
+            "name": "cocur/slugify",
+            "version": "v4.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cocur/slugify.git",
+                "reference": "7c6e088228b9f082050876ae8b0cd287b117b840"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/7c6e088228b9f082050876ae8b0cd287b117b840",
+                "reference": "7c6e088228b9f082050876ae8b0cd287b117b840",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+            },
+            "conflict": {
+                "symfony/config": "<3.4 || >=4,<4.3",
+                "symfony/dependency-injection": "<3.4 || >=4,<4.3",
+                "symfony/http-kernel": "<3.4 || >=4,<4.3",
+                "twig/twig": "<2.12.1"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.0|^6.0|^7.0|^8.0",
+                "latte/latte": "~2.2",
+                "league/container": "^2.2.0",
+                "mikey179/vfsstream": "~1.6.8",
+                "mockery/mockery": "^1.3",
+                "nette/di": "~2.4",
+                "pimple/pimple": "~1.1",
+                "plumphp/plum": "~0.1",
+                "symfony/config": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+                "symfony/dependency-injection": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+                "symfony/http-kernel": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+                "symfony/phpunit-bridge": "^5.4 || ^6.0",
+                "twig/twig": "^2.12.1 || ~3.0",
+                "zendframework/zend-modulemanager": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-view": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cocur\\Slugify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "https://florian.ec"
+                },
+                {
+                    "name": "Ivo Bathke",
+                    "email": "ivo.bathke@gmail.com"
+                }
+            ],
+            "description": "Converts a string into a slug.",
+            "keywords": [
+                "slug",
+                "slugify"
+            ],
+            "support": {
+                "issues": "https://github.com/cocur/slugify/issues",
+                "source": "https://github.com/cocur/slugify/tree/v4.5.1"
+            },
+            "time": "2023-09-17T07:26:20+00:00"
         },
         {
             "name": "composer/installers",
@@ -914,16 +988,16 @@
         },
         {
             "name": "dflydev/dot-access-data",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
-                "reference": "f41715465d65213d644d3141a6a93081be5d3549"
+                "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/f41715465d65213d644d3141a6a93081be5d3549",
-                "reference": "f41715465d65213d644d3141a6a93081be5d3549",
+                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/a23a2bf4f31d3518f3ecb38660c95715dfead60f",
+                "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f",
                 "shasum": ""
             },
             "require": {
@@ -983,9 +1057,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
-                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.2"
+                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
-            "time": "2022-10-27T11:44:00+00:00"
+            "time": "2024-07-08T12:26:09+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2117,16 +2191,16 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.2.7",
+            "version": "10.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "adc702b6ef38a0446abe90267acb96aa806995cf"
+                "reference": "a1a186caeb89899143e0c6912ccee9d3d7181dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/adc702b6ef38a0446abe90267acb96aa806995cf",
-                "reference": "adc702b6ef38a0446abe90267acb96aa806995cf",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/a1a186caeb89899143e0c6912ccee9d3d7181dbe",
+                "reference": "a1a186caeb89899143e0c6912ccee9d3d7181dbe",
                 "shasum": ""
             },
             "require": {
@@ -2161,9 +2235,9 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.2.7"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.3.1"
             },
-            "time": "2024-04-09T07:27:23+00:00"
+            "time": "2024-05-11T08:21:39+00:00"
         },
         {
             "name": "drupal/core-project-message",
@@ -5187,6 +5261,288 @@
             "time": "2023-05-10T11:58:31+00:00"
         },
         {
+            "name": "mattsqd/drupal-env",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattsqd/drupal-env.git",
+                "reference": "dd5f126c96f94164f1ec24882ded5ba503b75810"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattsqd/drupal-env/zipball/dd5f126c96f94164f1ec24882ded5ba503b75810",
+                "reference": "dd5f126c96f94164f1ec24882ded5ba503b75810",
+                "shasum": ""
+            },
+            "require": {
+                "consolidation/robo": "^3.0.9 || ^4.0.1",
+                "drupal/core-composer-scaffold": "^10.0",
+                "php": ">=8.0.17"
+            },
+            "default-branch": true,
+            "type": "robo-tasks",
+            "extra": {
+                "drupal-scaffold": {
+                    "file-mapping": {
+                        "[project-root]/composer.patches.json": {
+                            "mode": "replace",
+                            "path": "scaffolding/composer/composer.patches.json",
+                            "overwrite": true
+                        },
+                        "[project-root]/patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch": {
+                            "mode": "replace",
+                            "path": "scaffolding/composer/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/updated.development.services.yml": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/updated.development.services.yml",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.php": {
+                            "append": "scaffolding/drupal_config/settings_additions.php",
+                            "force-append": true
+                        },
+                        "[web-root]/sites/default/settings.drupal_env.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.drupal_env.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/updated.settings.local.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/updated.settings.local.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.memcache.container_pure.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.memcache.container_pure.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.memcache.container_tags_db.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.memcache.container_tags_db.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.memcache.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.memcache.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.redis.container.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.redis.container.php",
+                            "overwrite": true
+                        },
+                        "[web-root]/sites/default/settings.redis.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.redis.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/.gitignore": {
+                            "append": "scaffolding/drupal_config/root-gitignore-additions.txt",
+                            "force-append": true
+                        },
+                        "[web-root]/.gitignore": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/web-gitignore",
+                            "overwrite": true
+                        },
+                        "[project-root]/.editorconfig": {
+                            "append": "scaffolding/ide_config/root-editorconfig",
+                            "force-append": true
+                        },
+                        "[project-root]/.run/appserver.run.xml": {
+                            "mode": "replace",
+                            "path": "scaffolding/ide_config/phpstorm-appserver.run.xml",
+                            "overwrite": true
+                        },
+                        "[project-root]/.vscode/launch.json": {
+                            "mode": "replace",
+                            "path": "scaffolding/ide_config/vscode-launch.json",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/build.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/build.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/build_node.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/build_node.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy_install.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy_install.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/deploy_update.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/deploy_update.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/post_deploy.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/post_deploy.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/orch/show_file.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/orch/show_file.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboEnv/Robo/Plugin/Commands/.editorconfig": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/editorconfig",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboEnv/Robo/Plugin/Commands/CommonAbstract.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/CommonAbstract.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboEnv/Robo/Plugin/Commands/CommonCommands.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/CommonCommands.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboEnv/Robo/Plugin/Commands/CommonTrait.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/CommonTrait.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboFile.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/RoboFile.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/composer.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/composer.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/drush.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/drush.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/php.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/php.sh",
+                            "overwrite": true
+                        },
+                        "[project-root]/robo.sh": {
+                            "mode": "replace",
+                            "path": "scaffolding/shortcuts/robo.sh",
+                            "overwrite": true
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DrupalEnv\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mattsqd",
+                    "email": "mattsqd@users.noreply.github.com"
+                }
+            ],
+            "description": "Common functional for working with local and remote Drupal environments.",
+            "support": {
+                "issues": "https://github.com/mattsqd/drupal-env/issues",
+                "source": "https://github.com/mattsqd/drupal-env/tree/main"
+            },
+            "time": "2024-07-08T19:14:27+00:00"
+        },
+        {
+            "name": "mattsqd/drupal-env-lando",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattsqd/drupal-env-lando.git",
+                "reference": "60a4dea7c08d2ff585e3dfd233e7f0f288dd578a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattsqd/drupal-env-lando/zipball/60a4dea7c08d2ff585e3dfd233e7f0f288dd578a",
+                "reference": "60a4dea7c08d2ff585e3dfd233e7f0f288dd578a",
+                "shasum": ""
+            },
+            "require": {
+                "cocur/slugify": "^4.0.0",
+                "consolidation/robo": "^3.0.9 || ^4.0.1",
+                "drupal/core-composer-scaffold": "^10.0",
+                "mattsqd/drupal-env": "dev-main",
+                "php": ">=8.0.17"
+            },
+            "default-branch": true,
+            "type": "robo-tasks",
+            "extra": {
+                "drupal-scaffold": {
+                    "gitignore": false,
+                    "file-mapping": {
+                        "[web-root]/sites/default/settings.lando.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/drupal_config/settings.lando.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/.lando.dist.yml": {
+                            "mode": "replace",
+                            "path": "scaffolding/env_config/lando.dist.yml",
+                            "overwrite": true
+                        },
+                        "[project-root]/lando-config/php.ini": {
+                            "mode": "replace",
+                            "path": "scaffolding/php_config/php.ini",
+                            "overwrite": true
+                        },
+                        "[project-root]/RoboEnv/Robo/Plugin/Commands/LandoCommands.php": {
+                            "mode": "replace",
+                            "path": "scaffolding/Robo/LandoCommands.php",
+                            "overwrite": true
+                        },
+                        "[project-root]/.gitignore": {
+                            "append": "scaffolding/gitignore-additions.txt",
+                            "force-append": true
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DrupalEnvLando\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mattsqd",
+                    "email": "mattsqd@users.noreply.github.com"
+                }
+            ],
+            "description": "Use Lando with the Drupal Env project.",
+            "support": {
+                "issues": "https://github.com/mattsqd/drupal-env-lando/issues",
+                "source": "https://github.com/mattsqd/drupal-env-lando/tree/main"
+            },
+            "time": "2024-07-08T19:28:10+00:00"
+        },
+        {
             "name": "mattsqd/robovalidate",
             "version": "1.3.0-alpha",
             "source": {
@@ -5282,158 +5638,6 @@
                 "source": "https://github.com/mck89/peast/tree/v1.15.4"
             },
             "time": "2023-08-12T08:29:29+00:00"
-        },
-        {
-            "name": "mpbixal/drupal-platform-lando",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mpbixal/drupal-platform-lando.git",
-                "reference": "b08f8ca119cc1898f78fcdd6a4e1959975f82946"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mpbixal/drupal-platform-lando/zipball/b08f8ca119cc1898f78fcdd6a4e1959975f82946",
-                "reference": "b08f8ca119cc1898f78fcdd6a4e1959975f82946",
-                "shasum": ""
-            },
-            "require": {
-                "consolidation/robo": "^3.0.9 || ^4.0.1",
-                "drupal/core-composer-scaffold": "^10.0",
-                "php": ">=8.0.17"
-            },
-            "default-branch": true,
-            "type": "robo-tasks",
-            "extra": {
-                "drupal-scaffold": {
-                    "file-mapping": {
-                        "[web-root]/sites/default/settings.php": {
-                            "mode": "replace",
-                            "path": "scaffolding/drupal_config/settings.php",
-                            "overwrite": true
-                        },
-                        "[web-root]/sites/updated.settings.local.php": {
-                            "mode": "replace",
-                            "path": "scaffolding/drupal_config/updated.settings.local.php",
-                            "overwrite": true
-                        },
-                        "[web-root]/sites/default/settings.platformsh.php": {
-                            "mode": "replace",
-                            "path": "scaffolding/drupal_config/settings.platformsh.php",
-                            "overwrite": true
-                        },
-                        "[web-root]/sites/updated.development.services.yml": {
-                            "mode": "replace",
-                            "path": "scaffolding/drupal_config/updated.development.services.yml",
-                            "overwrite": true
-                        },
-                        "[project-root]/.gitignore": {
-                            "append": "scaffolding/gitignore-additions.txt",
-                            "force-append": true
-                        },
-                        "[project-root]/.environment": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/environment",
-                            "overwrite": true
-                        },
-                        "[project-root]/.lando.yml": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/lando.yml",
-                            "overwrite": true
-                        },
-                        "[project-root]/.platform.app.yaml": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/platform.app.yaml",
-                            "overwrite": true
-                        },
-                        "[project-root]/.platform/routes.yaml": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/routes.yaml",
-                            "overwrite": true
-                        },
-                        "[project-root]/.platform/services.yaml": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/services.yaml",
-                            "overwrite": true
-                        },
-                        "[project-root]/.nvmrc": {
-                            "mode": "replace",
-                            "path": "scaffolding/environment_config/nvmrc",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/build.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/build.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/build_fe_shared.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/build_fe_shared.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/deploy.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/deploy.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/deploy_generate_drush_yml.php": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/deploy_generate_drush_yml.php",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/deploy_shared_install.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/deploy_shared_install.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/deploy_shared_update.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/deploy_shared_update.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/post_deploy.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/post_deploy.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/orch/post_deploy_shared.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/orch/post_deploy_shared.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/composer.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/shortcuts/composer.sh",
-                            "overwrite": true
-                        },
-                        "[project-root]/php.sh": {
-                            "mode": "replace",
-                            "path": "scaffolding/shortcuts/php.sh",
-                            "overwrite": true
-                        }
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "DrupalPlatformLando\\": "src"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mpbixal",
-                    "email": "mattsqd@users.noreply.github.com"
-                }
-            ],
-            "description": "Creates a Drupal environment that can be deployed to Platform.sh and run locally on Lando.",
-            "support": {
-                "source": "https://github.com/mpbixal/drupal-platform-lando/tree/main",
-                "issues": "https://github.com/mpbixal/drupal-platform-lando/issues"
-            },
-            "time": "2023-12-01T02:44:50+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6552,16 +6756,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.4.8",
+            "version": "v6.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "be5854cee0e8c7b110f00d695d11debdfa1a2a91"
+                "reference": "6edb5363ec0c78ad4d48c5128ebf4d083d89d3a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/be5854cee0e8c7b110f00d695d11debdfa1a2a91",
-                "reference": "be5854cee0e8c7b110f00d695d11debdfa1a2a91",
+                "url": "https://api.github.com/repos/symfony/console/zipball/6edb5363ec0c78ad4d48c5128ebf4d083d89d3a9",
+                "reference": "6edb5363ec0c78ad4d48c5128ebf4d083d89d3a9",
                 "shasum": ""
             },
             "require": {
@@ -6626,7 +6830,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.4.8"
+                "source": "https://github.com/symfony/console/tree/v6.4.9"
             },
             "funding": [
                 {
@@ -6642,7 +6846,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:49:08+00:00"
+            "time": "2024-06-28T09:49:33+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -7025,16 +7229,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v6.4.8",
+            "version": "v6.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "4d37529150e7081c51b3c5d5718c55a04a9503f3"
+                "reference": "b51ef8059159330b74a4d52f68e671033c0fe463"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/4d37529150e7081c51b3c5d5718c55a04a9503f3",
-                "reference": "4d37529150e7081c51b3c5d5718c55a04a9503f3",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b51ef8059159330b74a4d52f68e671033c0fe463",
+                "reference": "b51ef8059159330b74a4d52f68e671033c0fe463",
                 "shasum": ""
             },
             "require": {
@@ -7071,7 +7275,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v6.4.8"
+                "source": "https://github.com/symfony/filesystem/tree/v6.4.9"
             },
             "funding": [
                 {
@@ -7087,7 +7291,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:49:08+00:00"
+            "time": "2024-06-28T09:49:33+00:00"
         },
         {
             "name": "symfony/finder",
@@ -8084,16 +8288,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.29.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b"
+                "reference": "77fa7995ac1b21ab60769b7323d600a991a90433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
-                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/77fa7995ac1b21ab60769b7323d600a991a90433",
+                "reference": "77fa7995ac1b21ab60769b7323d600a991a90433",
                 "shasum": ""
             },
             "require": {
@@ -8144,7 +8348,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.29.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.30.0"
             },
             "funding": [
                 {
@@ -8160,20 +8364,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-29T20:11:03+00:00"
+            "time": "2024-05-31T15:07:36+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.29.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
-                "reference": "c565ad1e63f30e7477fc40738343c62b40bc672d"
+                "reference": "3fb075789fb91f9ad9af537c4012d523085bd5af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/c565ad1e63f30e7477fc40738343c62b40bc672d",
-                "reference": "c565ad1e63f30e7477fc40738343c62b40bc672d",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/3fb075789fb91f9ad9af537c4012d523085bd5af",
+                "reference": "3fb075789fb91f9ad9af537c4012d523085bd5af",
                 "shasum": ""
             },
             "require": {
@@ -8220,7 +8424,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.29.0"
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.30.0"
             },
             "funding": [
                 {
@@ -8236,7 +8440,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-29T20:11:03+00:00"
+            "time": "2024-06-19T12:30:46+00:00"
         },
         {
             "name": "symfony/polyfill-php83",
@@ -8727,16 +8931,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.4.8",
+            "version": "v6.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "a147c0f826c4a1f3afb763ab8e009e37c877a44d"
+                "reference": "76792dbd99690a5ebef8050d9206c60c59e681d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/a147c0f826c4a1f3afb763ab8e009e37c877a44d",
-                "reference": "a147c0f826c4a1f3afb763ab8e009e37c877a44d",
+                "url": "https://api.github.com/repos/symfony/string/zipball/76792dbd99690a5ebef8050d9206c60c59e681d7",
+                "reference": "76792dbd99690a5ebef8050d9206c60c59e681d7",
                 "shasum": ""
             },
             "require": {
@@ -8793,7 +8997,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.4.8"
+                "source": "https://github.com/symfony/string/tree/v6.4.9"
             },
             "funding": [
                 {
@@ -8809,7 +9013,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:49:08+00:00"
+            "time": "2024-06-28T09:25:38+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -14308,16 +14512,16 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.29.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "21bd091060673a1177ae842c0ef8fe30893114d2"
+                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/21bd091060673a1177ae842c0ef8fe30893114d2",
-                "reference": "21bd091060673a1177ae842c0ef8fe30893114d2",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/ec444d3f3f6505bb28d11afa41e75faadebc10a1",
+                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1",
                 "shasum": ""
             },
             "require": {
@@ -14364,7 +14568,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.29.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.30.0"
             },
             "funding": [
                 {
@@ -14380,7 +14584,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-29T20:11:03+00:00"
+            "time": "2024-05-31T15:07:36+00:00"
         },
         {
             "name": "symfony/polyfill-php82",
@@ -14572,8 +14776,9 @@
     "stability-flags": {
         "drupal/components": 10,
         "drupal/default_content": 15,
-        "mattsqd/robovalidate": 15,
-        "mpbixal/drupal-platform-lando": 20
+        "mattsqd/drupal-env": 20,
+        "mattsqd/drupal-env-lando": 20,
+        "mattsqd/robovalidate": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
