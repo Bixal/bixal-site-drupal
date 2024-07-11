@@ -6,3 +6,4 @@ name: 'View Embed'
 vid: view_embed
 description: 'A listing of views to be utilized in a paragraph'
 weight: 0
+new_revision: false

@@ -13,3 +13,5 @@ services:
     # If this dies (sometimes it runs out of memory), run lando restart.
     # To see the output of why it dies lando ssh -s node -c 'cat /tmp/story_book_start.log'.
     command: ./orch/start_storty_book_docker.js
+    globals:
+      gulp-cli: latest

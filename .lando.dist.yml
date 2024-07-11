@@ -12,6 +12,7 @@ config:
     php: lando-config/php.ini
     #server: config/server.conf
     #vhosts: config/default.conf
+    database: lando-config/mysql.cnf
 
 services:
   appserver:
