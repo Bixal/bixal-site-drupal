@@ -10,7 +10,9 @@ if [ -n "$XDEBUG_MODE" ]; then
   export XDEBUG_MODE=debug
 fi
 
+echo 'above cr'
 drush cr
+echo 'after cr'
 
 # If using Postgres, enable the pg_trgm extension which is required before
 # Drupal is installed.
