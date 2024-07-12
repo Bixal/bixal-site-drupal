@@ -99,6 +99,8 @@ hooks:
   # The build hook runs after Composer to finish preparing up your code.
   # No services are available but the disk is writeable.
   build: |
+    set -e
+    exit 1
     # On Platform.sh, use a single container and install node 16 in it.
     # This broke for Mac users with VirtioFS:
     # https://github.com/docker/for-mac/issues/6277
