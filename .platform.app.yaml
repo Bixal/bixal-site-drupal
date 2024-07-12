@@ -127,6 +127,7 @@ hooks:
   # fast.
   deploy: |
     set -e
+    exit 1
     # On production and staging environments, the site is just updated.
     if ( [ "${PLATFORM_ENVIRONMENT_TYPE}" = "production" ] || [ "${PLATFORM_ENVIRONMENT_TYPE}" = "staging" ] ); then
       export DRUPAL_UPDATE_OR_INSTALL=update
