@@ -1,0 +1,18 @@
+uuid: e0d44ee7-34ee-4d8f-9d9f-98f5a568b130
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: 'Local environment only.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: config/split/local
+module:
+  tracer: 0
+  webprofiler: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }
