@@ -18,6 +18,7 @@ module:
   components: 0
   config: 0
   config_ignore: 0
+  config_split: 0
   contact: 0
   contextual: 0
   ctools: 0
@@ -70,6 +71,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  tracer: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0

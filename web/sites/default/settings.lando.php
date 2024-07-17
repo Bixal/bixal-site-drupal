@@ -4,6 +4,9 @@
  * @file
  * Configure settings.php for lando.
  */
+
+$config['config_split.config_split.local']['status'] = TRUE;
+
 $lando_info = json_decode(getenv('LANDO_INFO'));
 
 if (isset($lando_info->database)) {
