@@ -9,7 +9,7 @@ weight: 0
 stackable: false
 no_patching: false
 storage: folder
-folder: config/split/local
+folder: ../config/split/local
 module:
   tracer: 0
   webprofiler: 0
