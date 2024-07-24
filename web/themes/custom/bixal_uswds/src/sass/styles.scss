@@ -5,7 +5,8 @@
 
 // USWDS individual components
 // to include everything, just code it as @forward "uswds";
-@forward "uswds";
+@forward "uswds-core";
+@forward "usa-skipnav";
 
 // Custom styles
 @forward "uswds-theme-custom-styles";
