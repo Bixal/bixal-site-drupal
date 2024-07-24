@@ -3,8 +3,6 @@ config:
   via: 'nginx:1.25'
 services:
   appserver:
-    build:
-      - "env COMPOSER_DEV=1 ./orch/build.sh"
     overrides:
       environment:
         # These are used by phpmailer_smtp as the credentials if you want to test it locally.
