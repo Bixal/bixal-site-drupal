@@ -1,129 +1,17 @@
 name: bixalcom
-recipe: drupal10
 config:
-  webroot: web
-  via: nginx
-  php: '8.1'
-  database: mariadb:10.3
-  # Off by default, enabled with lando xdebug-on.
-  xdebug: false
-
+  via: 'nginx:1.25'
 services:
-  appserver:
-    build:
-      - "./orch/build.sh"
-    config:
-      php: lando-config/php.ini
-    overrides:
-      environment:
-        # This is equivalent to setting drush/drush.yml options.uri.
-        # Handy so one does not need to set --uri on drush calls, like uli.
-        DRUSH_OPTIONS_URI: 'http://bixalcom.lndo.site'
-        # Allows path mapping in PhpStorm and CLI debugging.
-        # https://docs.lando.dev/guides/lando-phpstorm.html#debugging-cli-commands.
-        PHP_IDE_CONFIG: "serverName=appserver"
-        # Set debug mode here, instead of in config: xdebug so it can be toggled off and on.
-        # Develop allows additional features, like html in var_dump.
-        # https://xdebug.org/docs/develop.
-        # Debug allows step debugging.
-        # https://xdebug.org/docs/remote.
-        XDEBUG_MODE: 'debug,develop'
-        # DO NOT USE XDEBUG_CONFIG, instead set these in lando-config/php.ini.
-        # If you set them here, they unset the magic lando does for xdebug.client_host.
-        # You can see these by: lando drush eval 'print_r(getenv());' | grep XDEBUG_CONFIG
-        #XDEBUG_CONFIG: 'log_level=0'
-
-  # https://docs.lando.dev/redis/config.html
-  # Ensure configured at /admin/reports/redis.
   cache:
-    type:
-      redis:6
-
-  # (Optional) Install PHPMyAdmin.
-  # Go to http://phpmyadmin.bixalcom.lndo.site/index.php?route=/database/structure&db=main
-  phpmyadmin:
-    type: phpmyadmin
-
-  # (optional) Install Mailhog service for testing emails sent from Drupal.
-  # No addl. config required elsewhere to use; SMTP contrib is not required.
-  mailhog:
-    type: mailhog
-    portforward: false
-    hogfrom:
-      - appserver
-
+    type: 'redis:6'
   node:
-    build:
-      # The Drupal reqs.
-      - "./orch/build_fe_shared.sh"
-      # Storybook.
-      - npm install
     type: 'node:18'
+    build:
+      - ./orch/build_node.sh
     scanner: false
-    ssl: true
-    sslExpose: false
-    globals:
-      gulp-cli: latest
     # This starts storybook as the node user, it's root by default here.
     # If this dies (sometimes it runs out of memory), run lando restart.
     # To see the output of why it dies lando ssh -s node -c 'cat /tmp/story_book_start.log'.
     command: ./orch/start_storty_book_docker.js
-
-tooling:
-  build:
-    description: "Install Dependencies"
-    cmd:
-      - appserver: './orch/build.sh'
-      - node: './orch/build_fe_shared.sh'
-  # Run composer commands through composer.sh so composer.log is generated.
-  composer:
-    service: appserver
-    description: 'Run composer inside lando. Defaults to composer 1 if composer install has not run yet...'
-    cmd:
-      - "./composer.sh"
-  drush:
-    service: appserver
-  export-content:
-    service: appserver
-    cmd:
-      - 'rm -r web/modules/custom/bixal_default_content/content'
-      - 'drush default-content:export-references node --folder=modules/custom/bixal_default_content/content'
-      - 'drush default-content:export-references menu_link_content --folder=modules/custom/bixal_default_content/content'
-      - 'drush default-content:export-references media --folder=modules/custom/bixal_default_content/content'
-  patch:
-    service: appserver
-    description: Apply composer patches or regenerate lock hash.
-    cmd:
-      - "./composer.sh update --lock"
-  si:
-    service: appserver
-    description: Install a fresh Drupal site from configuration.
-    cmd:
-      - "./orch/deploy_shared_install.sh"
-      - "./orch/post_deploy_shared.sh"
-      - "drush uli"
-  xdebug-on:
-    service: appserver
-    description: Enable Xdebug.
-    user: root
-    cmd:
-      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
-      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
-  xdebug-off:
-    service: appserver
-    description: Disable Xdebug.
-    user: root
-    cmd:
-      - "[ -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini ]] && { rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload; } || { echo 'Xdebug is already disabled.'; }"
-      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo
-
-proxy:
-  phpmyadmin:
-    - phpmyadmin.bixalcom.lndo.site
-  mailhog:
-    - mailhog.bixalcom.lndo.site
-  node:
-    - storybook.bixalcom.lndo.site
-  # Explicitly set so if 'name' is overridden (for multiple local environments) the URL does not change.
-  #appserver:
-  #  - bixalcom.lndo.site
+    globals:
+      gulp-cli: latest

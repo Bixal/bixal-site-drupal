@@ -2,30 +2,11 @@
 
 cd "$(dirname "$0")" || exit
 
-# If the .env file exists, use it to populate BIN_PATH_COMPOSER.
-if [ -f .env ]; then
-  . .env
-fi
-
-# If this was run through 'lando composer'.
-# BIN_PATH_COMPOSER can also be set with an 'env' property in tooling.
-if [ -n "${LANDO_INFO}" ]; then
-  BIN_PATH_COMPOSER="composer"
-fi
-
 EXIT_STATUS=0
-if [ -n "${BIN_PATH_COMPOSER}" ]; then
-  set -x
-  ${BIN_PATH_COMPOSER} "$@" || EXIT_STATUS=$?
-  set +x
-else
-  # If there is no path to composer override, use the composer binary in the working path of Lando.
-  # Format the arguments within single quotes
-  formatted_args=$(printf "'%s' " "$@")
-  set -x
-  lando ssh -c "composer $formatted_args" || EXIT_STATUS=$?
-  set +x
-fi
+
+set -x
+./php.sh vendor/bin/robo common:composer -- "$@" || EXIT_STATUS=$?
+set +x
 
 # Support MacOS and Linux.
 # https://stackoverflow.com/questions/8996820/how-to-create-md5-hash-in-bash-in-mac-os-x/8996924#8996924
@@ -63,7 +44,7 @@ if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]; then
     # then the command has already been recorded. The command given might not
     # even be the last command run, but the last_hash is based on the diff not the command.
     if [[ "$last_hash" = "$hash" ]]; then
-      exit 0
+      exit "${EXIT_STATUS}"
     fi
     branch=$(git rev-parse --abbrev-ref HEAD)
     date=$(date)

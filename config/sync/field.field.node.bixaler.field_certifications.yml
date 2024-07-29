@@ -11,7 +11,7 @@ field_name: field_certifications
 entity_type: node
 bundle: bixaler
 label: Certifications
-description: ''
+description: 'If the term you wish to use does not exist, please visit the <a href="/admin/structure/taxonomy/manage/certifications/add">certifications vocabulary addition page</a> to add the new term.'
 required: false
 translatable: false
 default_value: {  }

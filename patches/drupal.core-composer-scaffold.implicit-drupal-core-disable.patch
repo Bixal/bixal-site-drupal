@@ -1,0 +1,16 @@
+Index: AllowedPackages.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/AllowedPackages.php b/AllowedPackages.php
+--- a/AllowedPackages.php
++++ b/AllowedPackages.php	(date 1713301202119)
+@@ -120,7 +120,6 @@
+   protected function getTopLevelAllowedPackages() {
+     $implicit_packages = [
+       'drupal/legacy-scaffold-assets',
+-      'drupal/core',
+     ];
+     $top_level_packages = $this->manageOptions->getOptions()->allowedPackages();
+     return array_merge($implicit_packages, $top_level_packages);

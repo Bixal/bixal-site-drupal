@@ -70,8 +70,9 @@
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "*",
         "jjj/chosen": "2.2.1",
+        "mattsqd/drupal-env": "dev-main",
+        "mattsqd/drupal-env-lando": "dev-main",
         "mattsqd/robovalidate": "@alpha",
-        "mpbixal/drupal-platform-lando": "dev-main",
         "platformsh/config-reader": "^2.4"
     },
     "conflict": {
@@ -93,7 +94,7 @@
     },
     "scripts": {
         "post-drupal-scaffold-cmd": [
-            "echo 'Allowing orchestration files to be executed...' & chmod +x orch/*.sh composer.sh php.sh"
+            "echo 'Allowing orchestration files to be executed...' & chmod -f +x ./orch/*.sh ./composer.sh ./php.sh ./robo.sh ./drush.sh"
         ]
     },
     "extra": {
@@ -102,14 +103,8 @@
                 "web-root": "web/",
                 "project-root": "./"
             },
-            "allowed-packages": [
-                "DISABLEmpbixal/drupal-platform-lando"
-            ]
-        },
-        "patches": {
-            "drupal/default_content": {
-                "/project/default_content/issues/3203014: BaseFieldOverride cause inconsistencies during export": "https://www.drupal.org/files/issues/2022-12-13/base_field_override_inconsistencies-3203014-9.patch"
-            }
+            "gitignore": false,
+            "allowed-packages": []
         },
         "installer-paths": {
             "web/core": [
@@ -160,9 +155,15 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+        "patches-file": "composer.patches.json"
     },
     "require-dev": {
         "drupal/core-dev": "^10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "RoboEnv\\": "./RoboEnv/"
+        }
     }
 }

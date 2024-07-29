@@ -1,0 +1,10 @@
+{
+  "patches": {
+    "drupal/core-composer-scaffold": {
+      "Disable drupal/core from scaffolding without being in composer.extra.drupal-scaffold.allowed-packages in that way one has more control of when new scaffolding is added.": "./patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch"
+    },
+    "drupal/default_content": {
+      "/project/default_content/issues/3203014: BaseFieldOverride cause inconsistencies during export": "https://www.drupal.org/files/issues/2022-12-13/base_field_override_inconsistencies-3203014-9.patch"
+    }
+  }
+}

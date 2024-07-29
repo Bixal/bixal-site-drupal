@@ -18,3 +18,8 @@ ef9c0f52e4d59852433286b00a58a0c6|Matt Poole|develop|Wed May 22 16:33:35 EDT 2024
 c08caca79ae3cd1ff3fa5e6be76a6110|Matt Poole|feature/BSD-145-update-drupal|Wed May 22 16:41:05 EDT 2024|./composer.sh update
 cc0af3e152142acc0d91d54c0a016f58|Matt Poole|feature/BSD-153-recaptcha|Thu May 23 11:15:31 EDT 2024|./composer.sh require drupal/recaptcha:^3.2
 a07c6ffd542393a563081245f0a82062|Matt Poole|feature/BSD-170-multiple-teams|Mon Jun 17 12:57:48 EDT 2024|./composer.sh update
+3817a7f20006b2ad0a5a4443550a7c05|Matt Poole|develop|Tue Jul  9 13:01:51 EDT 2024|./composer.sh remove mpbixal/*
+17ff33d6e889d158d4e8a598b248f825|Matt Poole|develop|Mon Jul  8 16:42:45 EDT 2024|./composer.sh require mattsqd/drupal-env:dev-main
+2db0b37137c8af2bf9de9987ce08983b|Matt Poole|develop|Mon Jul  8 16:44:38 EDT 2024|./composer.sh require mattsqd/drupal-env-lando:dev-main --ansi
+647fcec042da8e95f14a2f835084105c|Matt Poole|develop|Tue Jul  9 17:06:15 UTC 2024|./composer.sh update --lock
+0c3038ed9c2f5c7d4bb4846d2d32e8b8|Matt Poole|feature/BSD-224-update-deps|Wed Jul 10 10:01:18 EDT 2024|./composer.sh update

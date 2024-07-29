@@ -4,25 +4,19 @@ set -e
 
 ./orch/show_file.sh $0
 
-# Clear the deploy log.
-echo "" > /var/log/deploy.log
-
-# Allow Drush to work on Platform.
-php ./orch/deploy_generate_drush_yml.php
-
 echo "Relevant environment variables and their values:"
 echo ""
-echo "PLATFORM_ENVIRONMENT_TYPE: ${PLATFORM_ENVIRONMENT_TYPE}"
+echo "DRUPAL_UPDATE_OR_INSTALL: ${DRUPAL_UPDATE_OR_INSTALL}"
 
 set -x
-# On production and staging environments, the site is just updated.
-if ( [ "${PLATFORM_ENVIRONMENT_TYPE}" == "production" ] || [ "${PLATFORM_ENVIRONMENT_TYPE}" == "staging" ] ); then
-  ./orch/deploy_shared_update.sh
+if [ "${DRUPAL_UPDATE_OR_INSTALL}" = 'update' ]; then
+    ./orch/deploy_update.sh
+    echo 'updating'
+elif [ "${DRUPAL_UPDATE_OR_INSTALL}" = 'install' ]; then
+    ./orch/deploy_install.sh
 else
-  ./orch/deploy_shared_install.sh
+    echo "Env variable DRUPAL_UPDATE_OR_INSTALL must be set when deploy.sh is run. 'update' to update (runs updates and installs config, installs if not installed only) Drupal or 'install' to install Drupal fresh every time."
+    exit 1
 fi
-
-echo 'DEPLOY LOG:'
-tail -n100 /var/log/deploy.log
 
 ./orch/show_file.sh $0 end
