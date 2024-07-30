@@ -45,6 +45,7 @@
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
+        "drupal/decorative_image_widget": "^1.0",
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",

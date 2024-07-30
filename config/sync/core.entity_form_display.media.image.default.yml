@@ -7,6 +7,7 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
+    - decorative_image_widget
     - image
     - path
 id: media.image.default
@@ -27,7 +28,9 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
   langcode:
     type: language_select
     weight: 2
