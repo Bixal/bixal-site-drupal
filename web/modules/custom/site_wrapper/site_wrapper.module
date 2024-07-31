@@ -137,17 +137,17 @@ function template_preprocess_site_wrapper_footer(array &$variables): void {
     'items' => [
       [
         "href" => "https://www.linkedIn.com/company/bixal",
-        "label" => t("LinkedIn"),
+        "label" => t("Bixal LinkedIn"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('linkedin.svg')->toString(),
       ],
       [
         "href" => "https://www.facebook.com/bixal",
-        "label" => t("Facebook"),
+        "label" => t("Bixal Facebook"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('facebook.svg')->toString(),
       ],
       [
         "href" => "https://www.twitter.com/bixal",
-        "label" => t("Twitter"),
+        "label" => t("Bixal Twitter"),
         "icon_path" => _bixal_uswds_get_storybook_icon_file_url('twitter.svg')->toString(),
       ],
     ],

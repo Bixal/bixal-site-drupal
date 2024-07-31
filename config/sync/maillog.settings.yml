@@ -1,5 +1,15 @@
 _core:
   default_config_hash: qE7nRF7VKMVNntpJzc4mJtGeq3MOzeYF9orshg3dXyE
-send: true
+formatter: phpmailer_smtp
+send: false
+sender: phpmailer_smtp
+nosend_notify: false
 log: true
+log_notify: false
 verbose: false
+body_trimmed: false
+base64_remove: false
+cron_enabled: false
+keep_limit_type: number_to_keep
+time_to_keep: null
+number_to_keep: null
