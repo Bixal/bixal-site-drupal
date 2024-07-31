@@ -24,6 +24,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  decorative_image_widget: 0
   default_content: 0
   devel: 0
   disable_user_1_edit: 0
@@ -46,6 +47,7 @@ module:
   mailsystem: 0
   media: 0
   media_library: 0
+  media_library_edit: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
