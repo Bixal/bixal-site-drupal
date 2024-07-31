@@ -111,7 +111,7 @@ class LandoCommands extends CommonCommands
         $yml_value =& $yml_file['services']['appserver']['overrides']['environment']['XDEBUG_SESSION'];
         if ($yml_value === 1) {
             $this->yell('Xdebug is is already connecting by default, disabling so trigger must be passed.');
-            unset($yml_file['services']['appserver']['overrides']['environment']);
+            unset($yml_file['services']['appserver']['overrides']['environment']['XDEBUG_SESSION']);
         } else {
             $this->yell('Allowing Xdebug to connect automatically. Warning: You will see "Step Debug" warnings about Xdebug not being able to connect when running CLI commands if you IDE is not listening.');
             $yml_value = 1;
@@ -1370,6 +1370,7 @@ class LandoCommands extends CommonCommands
                     'additional_config' => [
                         'build' => ['./orch/build_node.sh'],
                         'scanner' => false,
+                        'gulp-cli' => 'latest',
                     ],
                 ],
             ],
