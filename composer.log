@@ -29,3 +29,5 @@ cbfd7291b5369ebb261b39f6d883576c|Matt Poole|feature/BSD-212-smpt-enable|Tue Jul 
 c545f0e3b52f58e9f57fe4c455ecfbe3|Matt Poole|feature/BSD-212-smpt-enable|Tue Jul 23 15:00:49 EDT 2024|./composer.sh require drupal/phpmailer_smtp
 dda1c9f0dcf896a188fa10dc05351af1|Matt Poole|feature/BSD-212-smpt-enable|Tue Jul 23 15:01:00 EDT 2024|./composer.sh require drupal/mailsystem
 d0b264b8bfd2f16b57808145e6c7b950|Matt Poole|feature/BSD-212-smpt-enable|Tue Jul 23 15:01:26 EDT 2024|./composer.sh require drupal/maillog:1.x-dev@dev
+1cc6d6789783135d19582c52d712125d|Buddy Harlow|feature/BSD-244-blog-images-marked-decorative|Wed Jul 31 14:36:44 EDT 2024|./composer.sh require drupal/decorative_image_widget
+4d4eeea0afa18c0874d2696e7ccf9b64|Matt Poole|feature/BSD-244-blog-images-marked-decorative|Wed Jul 31 14:45:51 EDT 2024|./composer.sh require drupal/media_library_edit:^3.0

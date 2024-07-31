@@ -12,6 +12,7 @@ dependencies:
   module:
     - datetime
     - media_library
+    - media_library_edit
     - path
     - text
 id: node.blog.default
@@ -35,14 +36,18 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_card_image:
     type: media_library_widget
     weight: 3
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_date:
     type: datetime_default
     weight: 5
