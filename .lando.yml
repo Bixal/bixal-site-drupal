@@ -2,6 +2,13 @@ name: bixalcom
 config:
   via: 'nginx:1.25'
 services:
+  appserver:
+    overrides:
+      environment:
+        # These are used by phpmailer_smtp as the credentials if you want to test it locally.
+        # These are set in platform.sh as variables only on prod.
+        EMAIL_USERNAME: ''
+        EMAIL_PASSWORD: ''
   cache:
     type: 'redis:6'
   node:
