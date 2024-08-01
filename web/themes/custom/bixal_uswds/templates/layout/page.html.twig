@@ -51,6 +51,8 @@
   {% endblock %}
 </main>
 
-{# Contact block module did not work, it would not print the forms classes. #}
-{{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
+{% if show_contact_form_in_footer %}
+  {# Contact block module did not work, it would not print the forms classes. #}
+  {{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
+{% endif %}
 {{ footer }}
