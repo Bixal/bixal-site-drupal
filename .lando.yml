@@ -9,6 +9,8 @@ services:
         # These are set in platform.sh as variables only on prod.
         EMAIL_USERNAME: ''
         EMAIL_PASSWORD: ''
+        # Used to enable recaptcha.
+        RECAPTCHA_SECRET_KEY: ''
   cache:
     type: 'redis:6'
   node:

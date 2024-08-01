@@ -116,6 +116,9 @@ h6 {
   margin: 14px 0;
   padding: 0 10px;
   text-transform: uppercase;
+  h1 {
+    all: unset;
+  }
 }
 
 dl {

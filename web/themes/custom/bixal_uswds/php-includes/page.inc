@@ -60,4 +60,9 @@ function bixal_uswds_preprocess_page(&$vars) {
   $vars['footer'] = [
     '#theme' => 'site_wrapper_footer',
   ];
+
+  // Show the contact form in the footer if:
+  // * The env variable is set
+  // * The current page is not /contact.
+  $vars['show_contact_form_in_footer'] = getenv('SHOW_CONTACT_FORM_IN_FOOTER') && \Drupal::routeMatch()->getRouteName() !== 'contact.site_page';
 }
