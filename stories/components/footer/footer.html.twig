@@ -11,12 +11,19 @@
           Work With Us
         </h3>
         <p>Looking to join our team? Check out our openings.</p>
-        {% include "@components/button/button.html.twig" with {
+        <p>
+          {% include "@components/button/button.html.twig" with {
           variant: "inverse",
           label: "Learn more",
           href: "/careers",
           icon: "arrow-right"
         } %}
+        </p>
+        <div>
+          <a href="/accessibility-statement">Accessibility Statement</a>
+          |
+          <a href="/deia">DEIA Statement</a>
+        </div>
       </div>
       <div class="bix-site-footer__column bix-site-footer__column--hq">
         <h3 class="bix-site-footer__title">Headquarters</h3>
@@ -35,43 +42,26 @@
         <h3 class="bix-site-footer__title">Accreditations</h3>
         <ul>
           <li>
-            <a
-              href="https://www.sba.gov/business-guide/grow-your-business/women-owned-businesses"
-              rel="noopener noreferrer"
-              target="_blank">
+            <a href="https://www.sba.gov/business-guide/grow-your-business/women-owned-businesses" rel="noopener noreferrer" target="_blank">
               Woman-owned small business
             </a>
           </li>
           <li>
-            <a
-              href="https://www.iso.org/standard/62085.html"
-              rel="noopener noreferrer"
-              target="_blank">
+            <a href="https://www.iso.org/standard/62085.html" rel="noopener noreferrer" target="_blank">
               ISO 9001:2015
             </a>
           </li>
           <li>
-            <a
-              href="https://cmmiinstitute.com/learning/appraisals/levels"
-              rel="noopener noreferrer"
-              target="_blank">
+            <a href="https://cmmiinstitute.com/learning/appraisals/levels" rel="noopener noreferrer" target="_blank">
               CMMI Level 3
             </a>
           </li>
         </ul>
         <div class="accreditations-logos">
-          <a
-            href="https://www.iso.org/standard/62085.html"
-            rel="noopener noreferrer"
-            target="_blank">
-            <img
-              src="/static/7110e309c7dc3b7c2aa59397bde3793a/iso-certified.svg"
-              alt="ISO certified logo">
+          <a href="https://www.iso.org/standard/62085.html" rel="noopener noreferrer" target="_blank">
+            <img src="/static/7110e309c7dc3b7c2aa59397bde3793a/iso-certified.svg" alt="ISO certified logo">
           </a>
-          <a
-            href="https://cmmiinstitute.com/learning/appraisals/levels"
-            rel="noopener noreferrer"
-            target="_blank">
+          <a href="https://cmmiinstitute.com/learning/appraisals/levels" rel="noopener noreferrer" target="_blank">
             <img src="/static/9f64d5381d0ca7afecdd062b1bac2a68/cmmi.svg" alt="Capability Maturity Model Integration Level 3 logo">
           </a>
         </div>
@@ -86,9 +76,7 @@
           <ul class="bix-site-footer__secondary-nav-items">
             {% for item in nav %}
               <li class="bix-site-footer__secondary-nav__item">
-                <a
-                  class="{{ item.current ? "is-current" }}"
-                  href="{{ item.href | default("javascript:void(0)") }}">
+                <a class="{{ item.current ? "is-current" }}" href="{{ item.href | default("javascript:void(0)") }}">
                   {{ item.label }}
                 </a>
               </li>
@@ -99,13 +87,13 @@
       {{ footer_nav_cl }}
       <div class="bix-site-footer__legal">
         {% for item in legal %}
-          <a
-            class="{{ item.current ? "is-current" }}"
-            href="{{ item.href | default("javascript:void(0)") }}">
+          <a class="{{ item.current ? "is-current" }}" href="{{ item.href | default("javascript:void(0)") }}">
             {{ item.label }}
           </a>
         {% endfor %}
-        <span class="copyright">Copyright &copy; {{ 'now' | date('Y') }} Bixal</span>
+        <span class="copyright">Copyright &copy;
+          {{ 'now' | date('Y') }}
+          Bixal</span>
       </div>
       {% if socialNav %}
         {% include "@components/social-nav/social-nav.html.twig" with socialNav %}

@@ -9,11 +9,9 @@ dependencies:
     - field.field.node.blog.field_card_image
     - field.field.node.blog.field_date
     - field.field.node.blog.field_decorative_title
-    - image.style.blog_image
     - node.type.blog
   module:
     - datetime
-    - media
     - user
 id: node.blog.teaser
 targetEntityType: node
@@ -21,24 +19,20 @@ bundle: blog
 mode: teaser
 content:
   field_banner_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: blog_image
-      image_loading:
-        attribute: lazy
+      view_mode: blog_image
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content
   field_card_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: blog_image
-      image_loading:
-        attribute: lazy
+      view_mode: blog_image
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

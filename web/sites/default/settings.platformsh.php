@@ -9,6 +9,11 @@ use Platformsh\ConfigReader\Config;
 
 $platformsh = new Config();
 
+// Enable production only config split.
+if ($platformsh->branch == 'main') {
+  $config['config_split.config_split.production']['status'] = TRUE;
+}
+
 // Configure the database.
 if ($platformsh->hasRelationship('database')) {
   $creds = $platformsh->credentials('database');
@@ -127,7 +132,7 @@ $settings['trusted_host_patterns'] = ['.*'];
 // and 'drupalconfig:' into $config.
 foreach ($platformsh->variables() as $name => $value) {
   $parts = explode(':', $name);
-  list($prefix, $key) = array_pad($parts, 3, null);
+  [$prefix, $key] = array_pad($parts, 3, null);
   switch ($prefix) {
     // Variables that begin with `drupalsettings` or `drupal` get mapped
     // to the $settings array verbatim, even if the value is an array.

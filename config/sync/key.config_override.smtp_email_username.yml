@@ -1,0 +1,14 @@
+uuid: 6b4d7797-42ca-4350-b4d3-45660ad26013
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.smtp_email_username
+    - phpmailer_smtp.settings
+id: smtp_email_username
+label: 'SMTP Email Username'
+config_type: system.simple
+config_prefix: ''
+config_name: phpmailer_smtp.settings
+config_item: smtp_username
+key_id: smtp_email_username

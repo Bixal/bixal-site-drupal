@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Bixal Captcha module.
+ */
+
+/**
+ * Implements hook_captcha_alter().
+ */
+function bixal_captcha_captcha_alter(&$captcha, $info) {
+  // If the captcha is cacheable and the env variable is not set to enable
+  // caching for these, turn off caching. reCaptcha was not working with
+  // caching on.
+  if (!getenv('CAPTCHA_ALLOW_CACHEABLE') && ($captcha['cacheable'] ?? FALSE) === TRUE) {
+    $captcha['form']['#cache']['max-age'] = 0;
+    \Drupal::service('page_cache_kill_switch')->trigger();
+  }
+}

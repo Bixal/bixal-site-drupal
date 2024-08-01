@@ -42,14 +42,17 @@
 {{ header }}
 {# Status messages, like DPM. #}
 {{ page.help }}
-<main>
-{# Things that are above the content, like the hero. #}
-{{ page.highlighted }}
-{% block content %}
-  {{ page.content }}
-{% endblock %}
+<main
+  id="main-content">
+  {# Things that are above the content, like the hero. #}
+  {{ page.highlighted }}
+  {% block content %}
+    {{ page.content }}
+  {% endblock %}
 </main>
 
-{# Contact block module did not work, it would not print the forms classes. #}
-{{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
+{% if show_contact_form_in_footer %}
+  {# Contact block module did not work, it would not print the forms classes. #}
+  {{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
+{% endif %}
 {{ footer }}

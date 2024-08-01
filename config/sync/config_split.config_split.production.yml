@@ -1,0 +1,17 @@
+uuid: eb83abd3-f595-4db1-9def-ee8659804d6e
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: Production
+description: 'Only active on production.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/split/production
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list:
+  - maillog.settings

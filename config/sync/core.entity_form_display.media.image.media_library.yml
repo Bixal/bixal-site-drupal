@@ -8,6 +8,7 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
+    - decorative_image_widget
     - image
 id: media.image.media_library
 targetEntityType: media
@@ -21,7 +22,9 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
   name:
     type: string_textfield
     weight: 0

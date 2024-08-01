@@ -11,6 +11,7 @@ dependencies:
   module:
     - field_group
     - media_library
+    - media_library_edit
     - paragraphs
     - path
 third_party_settings:
@@ -33,7 +34,6 @@ third_party_settings:
     group_hero_section:
       children:
         - title
-        - field_decorative_title
         - field_banner_image
         - field_hero_description
         - field_hero_variant
@@ -75,7 +75,9 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_hero_description:
     type: string_textarea
     weight: 4

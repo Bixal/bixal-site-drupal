@@ -16,6 +16,7 @@ dependencies:
   module:
     - link
     - media_library
+    - media_library_edit
     - path
 id: node.bixaler.default
 targetEntityType: node
@@ -52,7 +53,9 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_languages:
     type: entity_reference_autocomplete_tags
     weight: 11
