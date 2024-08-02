@@ -14,3 +14,4 @@ ignored_config_entities:
   - recaptcha.settings
   - redirect.settings
   - system.site
+  - update.settings
