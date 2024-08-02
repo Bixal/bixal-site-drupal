@@ -1,5 +1,4 @@
 global:
-  version: VERSION
   css:
     theme:
       dist/css/styles.min.css: { minified: true }
@@ -12,19 +11,16 @@ global:
     - core/drupal.active-link
 
 form_range:
-  version: VERSION
   js:
     dist/js/bx-form-range.js: { minified: true }
 
 # https://github.com/AgnosticUI/a11y-tabs
 a11y_tabs:
-  version: VERSION
   js:
     dist/vendor/js/a11y-tabs.min.js: { minified: true }
     dist/js/bx-a11y-tabs-init.js: { minified: true }
 
 remote_video:
-  version: VERSION
   js:
     dist/js/bx-remote-video.js: { minified: true }
 
