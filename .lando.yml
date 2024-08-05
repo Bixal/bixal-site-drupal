@@ -11,6 +11,8 @@ services:
         EMAIL_PASSWORD: ''
         # Used to enable recaptcha.
         RECAPTCHA_SECRET_KEY: ''
+        # Show the contact form in the footer.
+        SHOW_CONTACT_FORM_IN_FOOTER: 1
   cache:
     type: 'redis:6'
   node:
