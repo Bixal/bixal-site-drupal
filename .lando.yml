@@ -26,3 +26,16 @@ services:
     command: ./orch/start_storty_book_docker.js
     globals:
       gulp-cli: latest
+tooling:
+  watch:
+    service: node
+    cmd:
+      - 'cd web/themes/custom/bixal_uswds/ && gulp watch'
+  gulp:
+    service: node
+    cmd:
+      - 'cd web/themes/custom/bixal_uswds/ && gulp'
+  build_node:
+    service: node
+    cmd:
+    - ./orch/build_node.sh
