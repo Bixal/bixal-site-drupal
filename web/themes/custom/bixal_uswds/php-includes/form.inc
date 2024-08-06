@@ -114,6 +114,13 @@ function bixal_uswds_theme_suggestions_form_alter(array &$suggestions, array $va
 /**
  * Implements hook_preprocess_form_element().
  */
+function bixal_uswds_preprocess_form__contact_message_site_wide_form(&$vars): void {
+  $vars['on_full_form_page'] = \Drupal::routeMatch()->getRouteName() === 'contact.site_page';
+}
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
 function bixal_uswds_preprocess_form_element(&$vars): void {
   // If the form element is disabled, add a class.
   if ($vars['disabled']) {
