@@ -3,3 +3,5 @@ type: module
 description: "Provides static content for case studies pages"
 package: Custom
 core_version_requirement: ^10
+dependencies:
+  - drupal:xmlsitemap
