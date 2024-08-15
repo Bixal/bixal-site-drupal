@@ -1,6 +1,7 @@
 name: bixalcom
 config:
   via: 'nginx:1.25'
+  database: 'mariadb:10.6.18'
 services:
   appserver:
     overrides:

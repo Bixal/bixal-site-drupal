@@ -21,8 +21,6 @@ function case_studies_update_8001() {
 
 /**
  * Add XML sitemap entries.
- *
- * @return void
  */
 function _case_studies_add_case_study_xmlsitemap_entries() {
   /** @var \Drupal\xmlsitemap\XmlSitemapLinkStorage $link_storage */
