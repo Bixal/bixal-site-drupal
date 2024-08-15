@@ -50,23 +50,19 @@ if (isset($lando_info->cache->type)) {
       if (!function_exists('_settings_redis')) {
         require 'settings.redis.php';
       }
-      else {
-        _settings_redis(
-          $settings,
-          $lando_info->cache->internal_connection->host,
-          $lando_info->cache->internal_connection->port
-        );
-      }
+      _settings_redis(
+        $settings,
+        $lando_info->cache->internal_connection->host,
+        $lando_info->cache->internal_connection->port
+      );
       break;
 
     case 'memcached':
       if (!function_exists('_settings_memcache')) {
         require 'settings.memcache.php';
       }
-      else {
-        $memcache_host = implode(':', (array)$lando_info->cache->internal_connection);
-        _settings_memcache($settings, $memcache_host);
-      }
+      $memcache_host = implode(':', (array)$lando_info->cache->internal_connection);
+      _settings_memcache($settings, $memcache_host);
       break;
 
     default:
