@@ -4,7 +4,7 @@
 # to power your Platform.sh project.
 
 database:
-  type: mariadb:10.6
+  type: mariadb:10.6.18
   disk: 2048
 
 cache:
