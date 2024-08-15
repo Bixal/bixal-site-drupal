@@ -26,7 +26,7 @@ function bixal_captcha_captcha_alter(&$captcha, $info) {
  * Allows stopping contact form submissions from being sent by mail.
  */
 function bixal_captcha_mail_alter(&$message) {
-  if (!($message['params']['contact_message'] instanceof MessageInterface)) {
+  if (!isset($message['params']['contact_message']) || !($message['params']['contact_message'] instanceof MessageInterface)) {
     return;
   }
   /** @var \Drupal\contact\MessageInterface $contact_message */
