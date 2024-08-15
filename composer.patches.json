@@ -1,8 +1,5 @@
 {
   "patches": {
-    "drupal/admin_toolbar": {
-      "Search links always open new window / tab: https://www.drupal.org/project/admin_toolbar/issues/3420788": "https://www.drupal.org/files/issues/2024-02-29/search_links_always_open_new_window%20_tab.patch"
-    },
     "drupal/core-composer-scaffold": {
       "Disable drupal/core from scaffolding without being in composer.extra.drupal-scaffold.allowed-packages in that way one has more control of when new scaffolding is added.": "./patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch"
     },

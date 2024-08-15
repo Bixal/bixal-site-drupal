@@ -9,8 +9,10 @@ ignored_config_entities:
   - 'contact.form.site_wide:redirect'
   - 'contact.form.site_wide:reply'
   - contact.settings
+  - core.menu.static_menu_link_overrides
   - 'google_tag.*'
   - 'pathauto.*'
   - recaptcha.settings
   - redirect.settings
   - system.site
+  - update.settings

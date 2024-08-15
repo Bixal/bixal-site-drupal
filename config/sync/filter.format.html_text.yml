@@ -19,7 +19,7 @@ filters:
     id: filter_align
     provider: filter
     status: true
-    weight: -47
+    weight: -48
     settings: {  }
   filter_autop:
     id: filter_autop
@@ -37,7 +37,7 @@ filters:
     id: filter_html
     provider: filter
     status: true
-    weight: -46
+    weight: -47
     settings:
       allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <address> <strong> <em> <u> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <img src alt height width data-entity-uuid data-entity-type data-caption data-align> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
       filter_html_help: true
@@ -77,7 +77,7 @@ filters:
     id: media_embed
     provider: media
     status: true
-    weight: -48
+    weight: -46
     settings:
       default_view_mode: default
       allowed_view_modes: {  }

@@ -5,6 +5,8 @@
  * Primary module hooks for Bixal Captcha module.
  */
 
+use Drupal\contact\MessageInterface;
+
 /**
  * Implements hook_captcha_alter().
  */
@@ -15,5 +17,26 @@ function bixal_captcha_captcha_alter(&$captcha, $info) {
   if (!getenv('CAPTCHA_ALLOW_CACHEABLE') && ($captcha['cacheable'] ?? FALSE) === TRUE) {
     $captcha['form']['#cache']['max-age'] = 0;
     \Drupal::service('page_cache_kill_switch')->trigger();
+  }
+}
+
+/**
+ * Implements hook_mail_alter().
+ *
+ * Allows stopping contact form submissions from being sent by mail.
+ */
+function bixal_captcha_mail_alter(&$message) {
+  if (!isset($message['params']['contact_message']) || !($message['params']['contact_message'] instanceof MessageInterface)) {
+    return;
+  }
+  /** @var \Drupal\contact\MessageInterface $contact_message */
+  $contact_message = $message['params']['contact_message'];
+  if (!$contact_message->hasField('field_company')) {
+    return;
+  }
+  $company = strtolower($contact_message->get('field_company')->getString());
+  // If company field contains google.
+  if (str_contains($company, 'google')) {
+    $message['send'] = FALSE;
   }
 }

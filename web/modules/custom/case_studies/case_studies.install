@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Case Studies module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function case_studies_install($is_syncing) {
+  _case_studies_add_case_study_xmlsitemap_entries();
+}
+
+/**
+ * Add XML sitemap entries to already installed site.
+ */
+function case_studies_update_8001() {
+  _case_studies_add_case_study_xmlsitemap_entries();
+}
+
+/**
+ * Add XML sitemap entries.
+ */
+function _case_studies_add_case_study_xmlsitemap_entries() {
+  /** @var \Drupal\xmlsitemap\XmlSitemapLinkStorage $link_storage */
+  $link_storage = \Drupal::service('xmlsitemap.link_storage');
+  foreach ([
+    '/our-work/digital-apex/',
+    '/our-work/fema/',
+    '/our-work/hhs/',
+    '/our-work/monitoring-evaluation-and-learning/',
+    '/our-work/sba/',
+    '/our-work/nlm/',
+    '/our-work/hud/',
+    '/our-work/usaid/',
+  ] as $url) {
+    $link_storage->save([
+      'type' => 'case_studies',
+      'id' => md5($url),
+      'loc' => $url,
+      'subtype' => '',
+      'priority' => '0.5',
+      'changefreq' => '3600',
+      'lastmod' => \Drupal::service('datetime.time')->getRequestTime(),
+    ]);
+  }
+}

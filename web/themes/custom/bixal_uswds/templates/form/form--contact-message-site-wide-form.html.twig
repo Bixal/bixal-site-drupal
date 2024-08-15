@@ -14,7 +14,7 @@
   <div class="bix-container">
     <div class="bix-contact__content">
       <div class="contact__overview">
-        <div class="bix-title-prefix"><h1>Contact</h1></div>
+        <div class="bix-title-prefix">{% if on_full_form_page %}<h1>{% endif %}Contact{% if on_full_form_page %}</h1>{% endif %}</div>
         <h2>
           {{ 'How can we help?'|t }}<br />
           {{ 'We\'d love to hear from you.'|t }}

@@ -1,6 +1,7 @@
 name: bixalcom
 config:
   via: 'nginx:1.25'
+  database: 'mariadb:10.6.18'
 services:
   appserver:
     overrides:
@@ -11,6 +12,8 @@ services:
         EMAIL_PASSWORD: ''
         # Used to enable recaptcha.
         RECAPTCHA_SECRET_KEY: ''
+        # Show the contact form in the footer.
+        SHOW_CONTACT_FORM_IN_FOOTER: 1
   cache:
     type: 'redis:6'
   node:
@@ -24,3 +27,16 @@ services:
     command: ./orch/start_storty_book_docker.js
     globals:
       gulp-cli: latest
+tooling:
+  watch:
+    service: node
+    cmd:
+      - 'cd web/themes/custom/bixal_uswds/ && gulp watch'
+  gulp:
+    service: node
+    cmd:
+      - 'cd web/themes/custom/bixal_uswds/ && gulp'
+  build_node:
+    service: node
+    cmd:
+    - ./orch/build_node.sh
