@@ -6248,16 +6248,16 @@
         },
         {
             "name": "mattsqd/robovalidate",
-            "version": "1.3.0-alpha",
+            "version": "1.4.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattsqd/robovalidate.git",
-                "reference": "8d7d0b4a20cfaf26444a0744cc76a4907bfbb21f"
+                "reference": "db39f0605b1a1a2d94f36a57e07237d0f2326217"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattsqd/robovalidate/zipball/8d7d0b4a20cfaf26444a0744cc76a4907bfbb21f",
-                "reference": "8d7d0b4a20cfaf26444a0744cc76a4907bfbb21f",
+                "url": "https://api.github.com/repos/mattsqd/robovalidate/zipball/db39f0605b1a1a2d94f36a57e07237d0f2326217",
+                "reference": "db39f0605b1a1a2d94f36a57e07237d0f2326217",
                 "shasum": ""
             },
             "require": {
@@ -6290,9 +6290,9 @@
             "description": "A group of Robo commands that run various validation tasks on local environments or pipelines",
             "support": {
                 "issues": "https://github.com/mattsqd/robovalidate/issues",
-                "source": "https://github.com/mattsqd/robovalidate/tree/1.3.0-alpha"
+                "source": "https://github.com/mattsqd/robovalidate/tree/1.4.0-alpha"
             },
-            "time": "2023-05-30T20:17:14+00:00"
+            "time": "2024-07-31T17:51:40+00:00"
         },
         {
             "name": "mck89/peast",
