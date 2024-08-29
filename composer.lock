@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff089adb674ac2dbbcb3aa04198d9037",
+    "content-hash": "1a7c3a3598b4c95ed8aa68d13a2973ec",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1628,6 +1628,64 @@
             }
         },
         {
+            "name": "drupal/anchor_link",
+            "version": "3.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/anchor_link.git",
+                "reference": "3.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/anchor_link-3.0.0-beta1.zip",
+                "reference": "3.0.0-beta1",
+                "shasum": "a05fafd3b9f2e808b67d07f396ba80d30f748afc"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta1",
+                    "datestamp": "1718879208",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "branch-alias": {
+                    "dev-3.0.x": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vardot",
+                    "homepage": "https://www.drupal.org/vardot",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Northern Commerce",
+                    "homepage": "https://www.drupal.org/northern-commerce",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Rajab Natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "This plugin module adds the better link dialog and anchor related features to CKEditor in Drupal.",
+            "homepage": "https://www.drupal.org/project/anchor_link",
+            "support": {
+                "source": "http://cgit.drupalcode.org/anchor_link",
+                "issues": "https://www.drupal.org/project/issues/anchor_link"
+            }
+        },
+        {
             "name": "drupal/autocomplete_deluxe",
             "version": "2.0.3",
             "source": {
@@ -2106,6 +2164,75 @@
                 "source": "https://git.drupalcode.org/project/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
+            "name": "drupal/cookies",
+            "version": "1.2.13",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookies.git",
+                "reference": "1.2.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookies-1.2.13.zip",
+                "reference": "1.2.13",
+                "shasum": "9f5b398283d728c065b85b4b64e5e9a05ec4c060"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "jfeltkamp/cookiesjsr": "^1.0.12"
+            },
+            "require-dev": {
+                "drupal/asset_injector": "^2",
+                "drupal/facebook_pixel": "^2.0",
+                "drupal/google_analytics": "^4.0",
+                "drupal/google_tag": "^2.0",
+                "drupal/ivw_integration": "^2.0",
+                "drupal/matomo": "^1.0",
+                "drupal/media_entity_instagram": "^3.0",
+                "drupal/media_entity_twitter": "^2.0",
+                "drupal/recaptcha": "^3.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.13",
+                    "datestamp": "1724152774",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "JFeltkamp",
+                    "homepage": "https://www.drupal.org/user/2471686"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Cookie consent tool.",
+            "homepage": "https://www.drupal.org/project/cookies",
+            "support": {
+                "source": "http://cgit.drupalcode.org/cookies",
+                "issues": "https://www.drupal.org/project/issues/cookies"
             }
         },
         {
@@ -2950,6 +3077,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/gdpr_compliance",
+            "version": "1.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gdpr_compliance.git",
+                "reference": "8.x-1.22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gdpr_compliance-8.x-1.22.zip",
+                "reference": "8.x-1.22",
+                "shasum": "f0c6899a64de6a65fb84b35b1120f27ff39d7d81"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.22",
+                    "datestamp": "1685368992",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "APolitsin",
+                    "homepage": "https://www.drupal.org/user/400653"
+                },
+                {
+                    "name": "Kseniya Myarkovskaya",
+                    "homepage": "https://www.drupal.org/user/3590754"
+                },
+                {
+                    "name": "politsin",
+                    "homepage": "https://www.drupal.org/user/1820324"
+                }
+            ],
+            "description": "The General Data Protection Regulation Compliance module provides basic GDPR Compliance use cases.",
+            "homepage": "https://www.drupal.org/project/gdpr_compliance",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gdpr_compliance"
             }
         },
         {
@@ -5691,6 +5870,33 @@
             "time": "2024-06-28T20:10:30+00:00"
         },
         {
+            "name": "jfeltkamp/cookiesjsr",
+            "version": "1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jfeltkamp/cookiesjsr.git",
+                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jfeltkamp/cookiesjsr/zipball/a25132aadb01975cbe77dc7746fd5cf15f06d246",
+                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Cookie consent tool.",
+            "homepage": "https://github.com/jfeltkamp/cookiesjsr",
+            "support": {
+                "issues": "https://github.com/jfeltkamp/cookiesjsr/issues",
+                "source": "https://github.com/jfeltkamp/cookiesjsr.git"
+            },
+            "time": "2022-03-25T09:05:23+00:00"
+        },
+        {
             "name": "jjj/chosen",
             "version": "2.2.1",
             "dist": {
@@ -6823,6 +7029,15 @@
             "time": "2024-07-01T20:03:41+00:00"
         },
         {
+            "name": "northernco/ckeditor5-anchor-drupal",
+            "version": "0.5.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@northernco/ckeditor5-anchor-drupal/-/ckeditor5-anchor-drupal-0.5.0.tgz"
+            },
+            "type": "drupal-library"
+        },
+        {
             "name": "pear/archive_tar",
             "version": "1.5.0",
             "source": {
@@ -7645,16 +7860,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/79dff0b268932c640297f5208d6298f71855c03e",
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e",
                 "shasum": ""
             },
             "require": {
@@ -7689,9 +7904,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.1"
             },
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-08-21T13:31:24+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -16061,6 +16276,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/anchor_link": 10,
         "drupal/components": 10,
         "drupal/default_content": 15,
         "drupal/maillog": 20,

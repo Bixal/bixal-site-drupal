@@ -47,7 +47,14 @@
   {# Things that are above the content, like the hero. #}
   {{ page.highlighted }}
   {% block content %}
-    {{ page.content }}
+    {% if add_section_wrapper %}
+      {% include '@components/section/section.html.twig' with {
+        'title': page['#title'],
+        'body': page.content,
+      } %}
+    {% else %}
+      {{ page.content }}
+    {% endif %}
   {% endblock %}
 </main>
 
@@ -56,3 +63,4 @@
   {{ drupal_entity_form('contact_message', values={contact_form: 'site_wide'}) }}
 {% endif %}
 {{ footer }}
+{{ page.footer }}
