@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 ./orch/show_file.sh $0
 
 # Normally, XDEBUG_MODE=debug,develop but develop breaks the Drupal installation.
@@ -11,6 +9,8 @@ if [ -n "$XDEBUG_MODE" ]; then
 fi
 
 drush cr
+
+set -e
 
 # If using Postgres, enable the pg_trgm extension which is required before
 # Drupal is installed.
