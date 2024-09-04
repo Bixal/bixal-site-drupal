@@ -4,10 +4,12 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  anchor_link: 0
   autocomplete_deluxe: 0
   bixal_captcha: 0
   bixal_default_content: 0
   bixal_drush_commands: 0
+  bixal_gdpr: 0
   block: 0
   block_node: 0
   breakpoint: 0
@@ -20,8 +22,10 @@ module:
   config: 0
   config_ignore: 0
   config_split: 0
+  config_translation: 0
   contact: 0
   contextual: 0
+  cookies: 0
   ctools: 0
   datetime: 0
   dblog: 0
@@ -44,6 +48,7 @@ module:
   key: 0
   language: 0
   link: 0
+  locale: 0
   maillog: 0
   mailsystem: 0
   media: 0
@@ -87,6 +92,7 @@ module:
   pathauto: 1
   xmlsitemap: 1
   views: 10
+  cookies_gtag: 11
   paragraphs: 11
   minimal: 1000
 theme:

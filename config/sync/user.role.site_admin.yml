@@ -6,6 +6,7 @@ dependencies:
     - admin_toolbar_search
     - captcha
     - contact
+    - cookies
     - google_tag
     - path
     - pathauto
@@ -23,6 +24,7 @@ permissions:
   - 'access toolbar'
   - 'administer CAPTCHA settings'
   - 'administer contact forms'
+  - 'administer cookies services and service groups'
   - 'administer google_tag_container'
   - 'administer pathauto'
   - 'administer recaptcha'
@@ -31,6 +33,8 @@ permissions:
   - 'administer url aliases'
   - 'administer users'
   - 'assign editor role'
+  - 'configure cookies config'
+  - 'configure cookies widget texts'
   - 'create url aliases'
   - 'use admin toolbar search'
   - 'view the administration theme'

@@ -1,0 +1,21 @@
+uuid: ded440ef-5550-4c17-ba89-8ec4f019397f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: N-O3629vb-jExOxfM0FYcfPzEu6QVzgWHMm06jMERLg
+id: functional
+label: 'Required functional'
+group: functional
+info:
+  value: '<table><thead><tr><th>Cookie name</th><th>Default expiration time</th><th>Description</th></tr></thead><tbody><tr><td><code dir="ltr">SSESS&lt;ID&gt;</code></td><td>1 month</td><td>If you are logged in to this website, a session cookie is required to identify and connect your browser to your user account in the server backend of this website.</td></tr><tr><td><code dir="ltr">cookiesjsr</code></td><td>1 year</td><td>When you visited this website for the first time, you were asked for your permission to use several services (including those from third parties) that require data to be saved in your browser (cookies, local storage). Your decisions about each service (allow, deny) are stored in this cookie and are reused each time you visit this website.</td></tr></tbody></table>'
+  format: html_text
+consentRequired: false
+purpose: 'Essential functional cookies to provide general functionality'
+placeholderMainText: 'This content is blocked because required functional cookies have not been accepted.'
+placeholderAcceptText: 'Only accept required functional cookies'
+processor: ''
+processorContact: ''
+processorUrl: ''
+processorPrivacyPolicyUrl: ''
+processorCookiePolicyUrl: ''

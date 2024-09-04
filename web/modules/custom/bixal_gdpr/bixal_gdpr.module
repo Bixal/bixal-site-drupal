@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Bixal GDPR module.
+ */
+
+/**
+ * Implements hook_page_top().
+ */
+function bixal_gdpr_page_top(array &$page) {
+  // Remove the iFrame that loads GTM if JS is disabled. We need JS to write
+  // the consent cookie, so we can't track JS disabled page loads.
+  if (isset($page['google_tag_gtm_iframe'])) {
+    unset($page['google_tag_gtm_iframe']);
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function bixal_gdpr_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'page_top') {
+    // Ensure this module's implementation of the `page_top` hook runs
+    // last to remove the google tag gtm iframe.
+    $group = $implementations['bixal_gdpr'];
+    unset($implementations['bixal_gdpr']);
+    $implementations['bixal_gdpr'] = $group;
+  }
+}

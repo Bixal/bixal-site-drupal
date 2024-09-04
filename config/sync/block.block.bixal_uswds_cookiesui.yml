@@ -1,0 +1,20 @@
+uuid: ae133bf2-90dd-4aa5-b9c0-a4401a5af62a
+langcode: en
+status: true
+dependencies:
+  module:
+    - cookies
+  theme:
+    - bixal_uswds
+id: bixal_uswds_cookiesui
+theme: bixal_uswds
+region: footer
+weight: 0
+provider: null
+plugin: cookies_ui_block
+settings:
+  id: cookies_ui_block
+  label: 'Cookies UI'
+  label_display: '0'
+  provider: cookies
+visibility: {  }
