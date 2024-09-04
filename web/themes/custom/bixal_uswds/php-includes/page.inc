@@ -65,4 +65,12 @@ function bixal_uswds_preprocess_page(&$vars) {
   // * The env variable is set
   // * The current page is not /contact.
   $vars['show_contact_form_in_footer'] = getenv('SHOW_CONTACT_FORM_IN_FOOTER') && \Drupal::routeMatch()->getRouteName() !== 'contact.site_page';
+
+  // Most pages have titles in the templates, some do not.
+  if (in_array(\Drupal::routeMatch()->getRouteName(), [
+    'cookies.cookies_documentation',
+    'user.login',
+  ])) {
+    $vars['add_section_wrapper'] = TRUE;
+  }
 }

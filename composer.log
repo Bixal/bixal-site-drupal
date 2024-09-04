@@ -35,3 +35,6 @@ d0b264b8bfd2f16b57808145e6c7b950|Matt Poole|feature/BSD-212-smpt-enable|Tue Jul 
 59d81fa4a3cb5b4021dd9824956e194c|Matt Poole|feature/BSD-271-validation-action|Tue Aug  6 13:13:48 EDT 2024|./composer.sh update mattsqd/robovalidate
 8a08b6d45145b305c16131bd11430688|Matt Poole|feature/BSD-278-update-deps|Thu Aug 15 12:05:25 EDT 2024|./composer.sh update
 bb805ef6ca0a258d1c8306f0b36fafec|Matt Poole|feature/BSD-287-update-deps|Wed Sep  4 10:41:04 EDT 2024|./composer.sh update
+30ef2bb0122b978360bda4a19c3c9b00|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:48:48 EDT 2024|./composer.sh require drupal/cookies
+45572e7bbb597f5c3740a8c9063c9496|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:48:59 EDT 2024|./composer.sh require drupal/anchor_link:^3.0@beta
+a64a80ee97032a4a2898228866cf865f|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:49:08 EDT 2024|./composer.sh require northernco/ckeditor5-anchor-drupal
