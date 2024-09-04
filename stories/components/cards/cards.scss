@@ -54,6 +54,10 @@
       left: units(3);
       right: units(3);
     }
+
+    div {
+      overflow-y: auto;
+    }
   }
 
   &:hover &__face--front {
