@@ -31,6 +31,7 @@
   }
 
   &__face--front {
+    text-align: center;
   }
 
   &__face--front .bix-icon {
@@ -53,13 +54,17 @@
       left: units(3);
       right: units(3);
     }
+
+    div {
+      overflow-y: auto;
+    }
   }
 
-  &:hover &__face--front {
+  &:hover &__face--front, &:focus-within &__face--front {
     transform: rotateY(-180deg);
   }
 
-  &:hover &__face--back {
+  &:hover &__face--back, &:focus-within &__face--back {
     transform: rotateY(0deg);
   }
 
