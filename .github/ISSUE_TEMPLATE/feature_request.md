@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: 'bixal-site-drupal - feature request: '
-labels: ''
-assignees: ''
-
+title: "bixal-site-drupal - feature request: "
+labels: enhancement
+assignees: ""
 ---
 
 **Is your feature request related to a problem? Please describe.**
