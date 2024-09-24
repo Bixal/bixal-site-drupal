@@ -884,7 +884,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Ensure that google tag is disabled on non-prod envs.
  */
 if (getenv('PLATFORM_BRANCH') !== 'main') {
- # $config['google_tag.container.GTM-W8JTQRX.664e571d7146d9.28940066']['status'] = FALSE;
+ $config['google_tag.container.GTM-W8JTQRX.664e571d7146d9.28940066']['status'] = FALSE;
 }
 
 if (getenv('RECAPTCHA_SECRET_KEY')) {
