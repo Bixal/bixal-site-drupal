@@ -38,3 +38,4 @@ bb805ef6ca0a258d1c8306f0b36fafec|Matt Poole|feature/BSD-287-update-deps|Wed Sep 
 30ef2bb0122b978360bda4a19c3c9b00|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:48:48 EDT 2024|./composer.sh require drupal/cookies
 45572e7bbb597f5c3740a8c9063c9496|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:48:59 EDT 2024|./composer.sh require drupal/anchor_link:^3.0@beta
 a64a80ee97032a4a2898228866cf865f|Matt Poole|feature/BSD-284-gdpr-compliance|Wed Sep  4 16:49:08 EDT 2024|./composer.sh require northernco/ckeditor5-anchor-drupal
+e854b19c73ce4a93589f51c9e10dfd5c|Matt Poole|feature/BSD-300-update-deps|Tue Sep 24 13:02:32 EDT 2024|./composer.sh update
