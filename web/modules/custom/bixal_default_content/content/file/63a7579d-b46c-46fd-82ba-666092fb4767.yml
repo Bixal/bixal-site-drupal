@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 63a7579d-b46c-46fd-82ba-666092fb4767
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: iso-certified.svg
+  uri:
+    -
+      value: 'public://accreditations/iso-certified.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 27097
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1728677424

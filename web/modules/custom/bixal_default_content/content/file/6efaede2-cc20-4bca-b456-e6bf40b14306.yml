@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6efaede2-cc20-4bca-b456-e6bf40b14306
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: cmmi.svg
+  uri:
+    -
+      value: 'public://accreditations/cmmi.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 19104
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1728677375

@@ -45,6 +45,7 @@ tooling:
       - 'drush default-content:export-references node --folder=modules/custom/bixal_default_content/content'
       - 'drush default-content:export-references menu_link_content --folder=modules/custom/bixal_default_content/content'
       - 'drush default-content:export-references media --folder=modules/custom/bixal_default_content/content'
+      - 'drush default-content:export-references config_pages --folder=modules/custom/bixal_default_content/content'
   patch:
     service: appserver
     description: Apply composer patches or regenerate lock hash.
