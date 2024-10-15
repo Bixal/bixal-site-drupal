@@ -1,0 +1,19 @@
+uuid: 2bd37382-9108-4804-97b8-0a845da5f911
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - link
+id: config_pages.field_links
+field_name: field_links
+entity_type: config_pages
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

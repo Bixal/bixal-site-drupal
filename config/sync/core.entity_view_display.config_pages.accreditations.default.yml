@@ -1,0 +1,47 @@
+uuid: f910d084-dd5d-42f4-867f-0bcaca3ea8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.accreditations
+    - field.field.config_pages.accreditations.field_links
+    - field.field.config_pages.accreditations.field_logos
+  module:
+    - link
+    - svg_image_field
+id: config_pages.accreditations.default
+targetEntityType: config_pages
+bundle: accreditations
+mode: default
+content:
+  field_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_logos:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: false
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

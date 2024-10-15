@@ -5,6 +5,7 @@ dependencies:
   module:
     - admin_toolbar_search
     - captcha
+    - config_pages
     - contact
     - cookies
     - google_tag
@@ -36,5 +37,6 @@ permissions:
   - 'configure cookies config'
   - 'configure cookies widget texts'
   - 'create url aliases'
+  - 'edit accreditations config page entity'
   - 'use admin toolbar search'
   - 'view the administration theme'

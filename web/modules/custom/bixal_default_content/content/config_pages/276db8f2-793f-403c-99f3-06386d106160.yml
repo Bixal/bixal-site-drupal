@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: config_pages
+  uuid: 276db8f2-793f-403c-99f3-06386d106160
+  bundle: accreditations
+  depends:
+    63a7579d-b46c-46fd-82ba-666092fb4767: file
+    6efaede2-cc20-4bca-b456-e6bf40b14306: file
+    06223de4-3425-4892-931e-2df4f3d616d3: file
+default:
+  label:
+    -
+      value: Accreditations
+  type:
+    -
+      target_id: accreditations
+  context:
+    -
+      value: 'a:0:{}'
+  field_links:
+    -
+      uri: 'https://www.sba.gov/business-guide/grow-your-business/women-owned-businesses'
+      title: 'Woman-owned small business '
+      options: {  }
+    -
+      uri: 'https://www.iso.org/standard/62085.html'
+      title: 'ISO 9001:2015 '
+      options: {  }
+    -
+      uri: 'https://cmmiinstitute.com/learning/appraisals/levels'
+      title: 'CMMI Level 3 '
+      options: {  }
+  field_logos:
+    -
+      entity: 63a7579d-b46c-46fd-82ba-666092fb4767
+      alt: 'ISO certified logo'
+      title: ''
+    -
+      entity: 6efaede2-cc20-4bca-b456-e6bf40b14306
+      alt: 'Capability Maturity Model Integration Level 3 logo'
+      title: ''
+    -
+      entity: 06223de4-3425-4892-931e-2df4f3d616d3
+      alt: 'Drupal Certified Bronze Partner'
+      title: ''

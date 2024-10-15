@@ -5,7 +5,6 @@ module:
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
   anchor_link: 0
-  autocomplete_deluxe: 0
   bixal_captcha: 0
   bixal_default_content: 0
   bixal_drush_commands: 0
@@ -21,6 +20,7 @@ module:
   components: 0
   config: 0
   config_ignore: 0
+  config_pages: 0
   config_split: 0
   config_translation: 0
   contact: 0
@@ -77,6 +77,7 @@ module:
   search_api_solr: 0
   seckit: 0
   site_wrapper: 0
+  svg_image_field: 0
   system: 0
   taxonomy: 0
   text: 0
