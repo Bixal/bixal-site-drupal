@@ -41,3 +41,5 @@ a64a80ee97032a4a2898228866cf865f|Matt Poole|feature/BSD-284-gdpr-compliance|Wed 
 e854b19c73ce4a93589f51c9e10dfd5c|Matt Poole|feature/BSD-300-update-deps|Tue Sep 24 13:02:32 EDT 2024|./composer.sh update
 99a75b4859e0d6e103f45c5dc4a4bb2c|Matt Poole|feature/BSD-303-drupal-partner|Fri Oct 11 16:08:22 EDT 2024|./composer.sh require drupal/svg_image_field
 320ac2f509ac26933a05babde466b2a9|Matt Poole|feature/BSD-303-drupal-partner|Fri Oct 11 17:14:30 EDT 2024|./composer.sh require drupal/config_pages
+c844a0df1fb652429755003179a5177c|Matt Poole|feature/BSD-305-dep-update|Tue Oct 15 15:56:33 EDT 2024|./composer.sh update
+887db95451678c154f246321d8883647|Matt Poole|feature/BSD-305-dep-update|Tue Oct 15 16:03:26 EDT 2024|./composer.sh require drupal/autocomplete_deluxe
