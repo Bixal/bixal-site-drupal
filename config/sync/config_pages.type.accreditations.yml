@@ -1,0 +1,17 @@
+uuid: 4b52e822-65df-42d9-b8d9-8245fc5acbfc
+langcode: en
+status: true
+dependencies: {  }
+id: accreditations
+label: Accreditations
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/content/accreditations
+  weight: 0
+  description: 'Add or remove accreditation links and images.'

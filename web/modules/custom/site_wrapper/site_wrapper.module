@@ -152,6 +152,7 @@ function template_preprocess_site_wrapper_footer(array &$variables): void {
       ],
     ],
   ];
+
 }
 
 /**
