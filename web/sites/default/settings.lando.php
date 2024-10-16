@@ -43,33 +43,33 @@ if (isset($lando_info->database)) {
       throw new \Exception('The Database type "' . $lando_info->database->type . "' is not automatically able to be configured.");
   }
 }
-/*
+
 if (isset($lando_info->cache->type)) {
   switch ($lando_info->cache->type) {
     case 'redis':
-      if (!function_exists('_settings_redis')) {
-        require 'settings.redis.php';
+      require 'settings.redis.php';
+      if (function_exists('_settings_redis')) {
+        _settings_redis(
+          $settings,
+          $lando_info->cache->internal_connection->host,
+          $lando_info->cache->internal_connection->port
+        );
       }
-      _settings_redis(
-        $settings,
-        $lando_info->cache->internal_connection->host,
-        $lando_info->cache->internal_connection->port
-      );
       break;
 
     case 'memcached':
-      if (!function_exists('_settings_memcache')) {
-        require 'settings.memcache.php';
+      require 'settings.memcache.php';
+      if (function_exists('_settings_memcache')) {
+        $memcache_host = implode(':', (array)$lando_info->cache->internal_connection);
+        _settings_memcache($settings, $memcache_host);
       }
-      $memcache_host = implode(':', (array)$lando_info->cache->internal_connection);
-      _settings_memcache($settings, $memcache_host);
       break;
 
     default:
       throw new \Exception('The Cache type "' . $lando_info->cache->type . "' is not automatically able to be configured.");
 
   }
-}*/
+}
 
 if (isset($lando_info->search->type)) {
   switch ($lando_info->search->type) {
