@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: case_studies
+label: 'Case Studies'
+type: 'canonical_entities:node'
+pattern: 'our-work/[node:title]'
+selection_criteria:
+  c5da88d6-f0e4-4202-ba8d-c0c5c6ff8a6b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c5da88d6-f0e4-4202-ba8d-c0c5c6ff8a6b
+    context_mapping:
+      node: node
+    bundles:
+      case_study: case_study
+selection_logic: and
+weight: -5
+relationships: {  }

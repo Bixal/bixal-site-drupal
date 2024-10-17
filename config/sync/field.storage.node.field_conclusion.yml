@@ -1,0 +1,19 @@
+uuid: b27484f4-483a-4a3c-a661-817f4c3617e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_conclusion
+field_name: field_conclusion
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: db681dec-4a39-4e65-975f-063822601497
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction
+    - filter.format.html_text
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_introduction
+field_name: field_introduction
+entity_type: node
+bundle: case_study
+label: Introduction
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+field_type: text_long
