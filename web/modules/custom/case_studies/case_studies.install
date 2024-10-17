@@ -5,6 +5,8 @@
  * Install, update and uninstall functions for the Case Studies module.
  */
 
+use Drupal\Core\Config\FileStorage;
+
 /**
  * Implements hook_install().
  */
@@ -45,4 +47,20 @@ function _case_studies_add_case_study_xmlsitemap_entries() {
       'lastmod' => \Drupal::service('datetime.time')->getRequestTime(),
     ]);
   }
+}
+
+/**
+ * Implements hook_update_n().
+ *
+ * Add path alias settings for case studies.
+ */
+function case_studies_update_8002($is_syncing) {
+  // Get all configs in the config install dir and install them.
+  $source = new FileStorage(__DIR__ . '/config/install');
+  $config_storage = \Drupal::service('config.storage');
+  foreach ($source->listAll() as $config_name) {
+    $config_storage->write($config_name, $source->read($config_name));
+    \Drupal::logger('case_studies')->info('Configuration for @config_name was successfully imported as text.', ['@config_name' => $config_name]);
+  }
+
 }
