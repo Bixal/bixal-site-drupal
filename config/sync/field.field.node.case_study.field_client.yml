@@ -1,0 +1,19 @@
+uuid: 85df398a-e793-4f89-ba0c-2514ce73900f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.case_study
+id: node.case_study.field_client
+field_name: field_client
+entity_type: node
+bundle: case_study
+label: Client
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

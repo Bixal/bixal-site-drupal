@@ -1,0 +1,24 @@
+uuid: a3795b81-8817-472d-947f-1a7f37a57350
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact
+    - filter.format.html_text
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_impact
+field_name: field_impact
+entity_type: node
+bundle: case_study
+label: Impact
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+field_type: text_long
