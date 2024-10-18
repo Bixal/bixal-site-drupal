@@ -40,7 +40,7 @@ lando build
 lando si
 ```
 
-This will install all the sample content we have created in web/modules/custom/bixal_default_content. In order to export new content here, create it locally and run ```lando export-content```.
+This will install all the sample content we have created in `web/modules/custom/bixal_default_content`. In order to export new content here, create it locally and run `lando export-content`.
 
 ### Running Drush
 
@@ -81,6 +81,6 @@ It's important that you always use `lando composer` or `./composer.sh` instead o
 
 - Run all the validation commands that the pipelines run without needing to push remotely `vendor/bin/robo validate:all`.
 
-#### Configure  Xdebug
+#### Configure Xdebug
 
 https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
