@@ -8,6 +8,40 @@ The remote environments are hosted in platform.sh. See the ./.platform directory
 
 The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal-env/wiki) and the [Drupal Env Lando](https://github.com/mattsqd/drupal-env-lando/wiki) packages.
 
+## Branching
+
+Use the following naming for your git branches.
+
+```sh
+feature/BSD-[ISSUE_NO]-[LOWER_CASE_DESCRIPTION]
+```
+
+**Example**
+
+```sh
+feature/BSD-64-robo-validate
+```
+
+## Commit style
+
+```sh
+BSD fixes #64: Fixed coding standards issues.
+```
+
+Also acceptable:
+
+- close, closes, closed
+- fix, fixes, fixed
+- resolve, resolves, resolved
+
+Example:
+
+```
+BSD closes #64: Fixed coding standards issues.
+```
+
+More guidance on git branches and commit style in [robo.yml](https://github.com/Bixal/bixal-site-drupal/blob/develop/robo.yml)
+
 ### Starting the Environment
 
 First time:
