@@ -17,6 +17,13 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ['../stories/assets']
+  staticDirs: ['../stories/assets'],
+  async viteFinal(config, { configType }) {
+      // This allows starting this in a sub dir:
+      // BASE_PATH=/sb npm run build-storybook
+      config.base = process.env.BASE_PATH || config.base;
+      // return the customized config
+      return config;
+    },
 };
 export default config;
