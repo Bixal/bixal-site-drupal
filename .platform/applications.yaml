@@ -247,4 +247,4 @@ storybook:
 
   hooks:
     build: |
-      BASE_PATH=/sb npm run build-storybook
+      npm run build-storybook
