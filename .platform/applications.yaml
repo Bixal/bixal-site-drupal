@@ -247,4 +247,7 @@ storybook:
 
   hooks:
     build: |
-      npm run build-storybook
+      # Building for a sub-dir caused a 502 on platform that I could not
+      # figure out.
+      # BASE_PATH=/sb npm run build-storybook
+      run build-storybook
