@@ -237,8 +237,9 @@ storybook:
         # 365 days).
         expires: 5m
 
-        # Redirect any incoming request to Drupal's front controller.
-        passthru: '/index.html'
+        # Allow storybook's landing .html file to be picked up when going to /.
+        index:
+          - '/index.html'
 
         # Disable server side scripts.
         scripts: false
