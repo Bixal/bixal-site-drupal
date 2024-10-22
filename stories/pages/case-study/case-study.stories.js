@@ -24,7 +24,7 @@ export const Default = {
           "Working for Americans: Bixal helps transform WIOA state plan portal",
       },
       {
-        description: `
+        body: `
           <h2 class="bix-section__title">Introduction</h2>
           <p>
             The Workforce Innovation and Opportunity Act (WIOA) is designed to strengthen the public workforce system by expanding access to education and training, helping employers hire and retain skilled workers, and creating opportunities for Americans — especially those with significant barriers to employment—to thrive in high-quality careers.
@@ -57,7 +57,7 @@ export const Default = {
       {
         variant: "accent-cool",
         title: "Impact",
-        description: `
+        body: `
           <strong>State Plan submission processes optimized:</strong>
           <ul>
             <li>Thousands of previously separate grant requirements for every state &mdash; spread across nine offices within five agencies, a total of 15 programs &mdash; streamline into a single grant process.</li>
@@ -85,7 +85,7 @@ export const Default = {
       {
         variant: "primary-alt",
         title: "Conclusion",
-        description: `
+        body: `
           <p>
             Bixal's work for ED and DOL made it much easier for state and local partners to adhere to WIOA's provisions, facilitated the created of more and better career paths for all Americans, in particular those facing significant hurdles to employment, and demonstrated how well federal agencies can work for the people they serve when they lead with human-centered design and an ethos of constant improvement.
         </p>
