@@ -212,12 +212,6 @@ bixalcom:
       commands:
         start: '[ "$PLATFORM_BRANCH" = main ] && bash cron/upload_logs_to_s3.sh'
 
-  source:
-    operations:
-      auto-update:
-        command: |
-          curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
-
 storybook:
   type: nodejs:18
 
@@ -239,7 +233,7 @@ storybook:
 
         # Allow storybook's landing .html file to be picked up when going to /.
         index:
-          - 'index.html'
+          - 'sb/index.html'
 
         # Disable server side scripts.
         scripts: false
@@ -247,7 +241,10 @@ storybook:
         # Allow access to all static files.
         allow: true
 
+      commands:
+        # Run a no-op process that uses no CPU resources since this is a static site
+        start: sleep infinity
+
   hooks:
     build: |
-      npm install
       BASE_PATH=/sb npm run build-storybook
