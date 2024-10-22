@@ -223,11 +223,11 @@ storybook:
 
   web:
     locations:
-      '/storybook-static':
+      '/':
         # The folder from which to serve static assets, for this location.
         #
         # This is a filesystem path, relative to the application root.
-        #root: '.'
+        root: 'storybook-static'
 
         # How long to allow static assets from this location to be cached.
         #
@@ -239,6 +239,9 @@ storybook:
 
         # Redirect any incoming request to Drupal's front controller.
         passthru: '/index.html'
+
+        # Disable server side scripts.
+        scripts: false
 
         # Allow access to all static files.
         allow: true

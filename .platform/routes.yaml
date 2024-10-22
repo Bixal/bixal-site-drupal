@@ -19,7 +19,7 @@
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
     cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://sb.{default}/":
+"https://{default}/sb":
   type: upstream
   upstream: "storybook:http"
   tls:
