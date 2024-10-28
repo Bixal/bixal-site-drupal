@@ -32,8 +32,8 @@ bixalcom:
     env:
       N_PREFIX: /app/.global
     php:
-      post_max_size: '90M'
-      upload_max_filesize: '90M'
+      post_max_size: '300M'
+      upload_max_filesize: '300M'
 
   # The relationships of the application with services or other applications.
   #
