@@ -104,6 +104,8 @@ It's important that you always use `lando composer` or `./composer.sh` instead o
 
 ### Access story book
 
+[Storybook preview is available here →](https://sb.feature-bsd-286-remote-xcrmjai-tsvj5tw7p3f66.us.platformsh.site) 
+
 [Storybook](https://storybook.js.org/) for this project can be found by:
 
 - Docker version: http://storybook.bixalcom.lndo.site/
