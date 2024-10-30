@@ -32,8 +32,8 @@ bixalcom:
     env:
       N_PREFIX: /app/.global
     php:
-      post_max_size: '90M'
-      upload_max_filesize: '90M'
+      post_max_size: '300M'
+      upload_max_filesize: '300M'
 
   # The relationships of the application with services or other applications.
   #
@@ -161,10 +161,10 @@ bixalcom:
         # Redirect any incoming request to Drupal's front controller.
         passthru: '/index.php'
 
-        # Allow 90M files to be uploaded.
+        # Allow 300M files to be uploaded.
         request_buffering:
           enabled: true
-          max_request_size: 100m
+          max_request_size: 320m
 
         # Deny access to all static files, except those specifically allowed below.
         allow: false

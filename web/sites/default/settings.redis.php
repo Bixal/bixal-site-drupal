@@ -5,7 +5,8 @@ use Drupal\Core\Installer\InstallerKernel;
 if ((
   !InstallerKernel::installationAttempted() &&
   extension_loaded('redis') &&
-  class_exists('Drupal\redis\ClientFactory')
+  class_exists('Drupal\redis\ClientFactory') &&
+  !function_exists('_settings_redis')
 )) {
   function _settings_redis(array &$settings, string $host, string $port): void {
     $settings['redis.connection']['host'] = $host;
