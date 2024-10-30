@@ -10,6 +10,10 @@
     padding-bottom: units(10);
   }
 
+  .bix-section__title:not(:first-of-type) {
+    margin-top: units(8);
+  }
+
   &__body p {
     max-width: px-to-rem(725px);
     widows: 3;
