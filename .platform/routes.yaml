@@ -19,15 +19,15 @@
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
     cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://sb.{default}":
-  type: upstream
-  upstream: "storybook:http"
-  tls:
-    # https://docs.platform.sh/define-routes/https.html#stricttransportsecurity
-    strict_transport_security:
-      # This is one year, can't change.
-      enabled: true
-      include_subdomains: false
-      preload: false
-  cache:
-    enabled: true
+#"https://sb.{default}":
+#  type: upstream
+#  upstream: "storybook:http"
+#  tls:
+#    # https://docs.platform.sh/define-routes/https.html#stricttransportsecurity
+#    strict_transport_security:
+#      # This is one year, can't change.
+#      enabled: true
+#      include_subdomains: false
+#      preload: false
+#  cache:
+#    enabled: true
