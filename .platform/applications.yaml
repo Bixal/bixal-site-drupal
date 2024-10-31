@@ -9,6 +9,9 @@ bixalcom:
   # The runtime the application uses.
   type: 'php:8.3'
 
+  # https://docs.platform.sh/create-apps/app-reference/single-runtime-image.html#sizes
+  size: AUTO
+
   dependencies:
     php:
       composer/composer: '^2'
@@ -214,6 +217,11 @@ bixalcom:
 
 storybook:
   type: nodejs:18
+
+  # https://docs.platform.sh/create-apps/app-reference/single-runtime-image.html#sizes
+  # Running out of resources in prod because this added a HIGH_CPU profile.
+  # Lower the size.
+  size: S
 
   web:
     locations:
