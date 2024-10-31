@@ -1,0 +1,24 @@
+uuid: e02e8ba3-5abd-47bd-bb30-f279f2cb74f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution
+    - filter.format.html_text
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_solution
+field_name: field_solution
+entity_type: node
+bundle: case_study
+label: Solution
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+field_type: text_long

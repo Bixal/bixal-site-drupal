@@ -5,7 +5,8 @@ use Drupal\Core\Installer\InstallerKernel;
 if ((
   !InstallerKernel::installationAttempted() &&
   (extension_loaded('memcached') || extension_loaded('memcache')) &&
-  file_exists($app_root . '/modules/contrib/memcache')
+  file_exists($app_root . '/modules/contrib/memcache') &&
+  !function_exists('_settings_memcache')
 )) {
   function _settings_memcache(array &$settings, string $host): void {
     $settings['memcache']['servers'][$host] = 'default';

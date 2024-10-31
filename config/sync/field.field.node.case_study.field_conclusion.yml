@@ -1,0 +1,24 @@
+uuid: eb1ca146-9c25-486c-b0ab-ceb661a4e823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conclusion
+    - filter.format.html_text
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_conclusion
+field_name: field_conclusion
+entity_type: node
+bundle: case_study
+label: Conclusion
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html_text
+field_type: text_long
