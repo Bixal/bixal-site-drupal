@@ -1,0 +1,37 @@
+{#
+/**
+  * Alert component.
+  *
+  * Available variables:
+  * - title: Optional string for the alert header.
+  * - variant: String alert type: info, error, warning.
+  * - text: A string of the alert body text.
+**/
+#}
+
+
+{% set heading_type = heading_type | default("h4") %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set alert_classes = [
+  "bix-alert",
+  (variant ? "bix-alert--" ~ variant),
+] | merge(additional_classes | default([])) %}
+
+<div{{ attributes.addClass(alert_classes) }}>
+  <div class="bix-alert__body">
+  {% if title %}
+    <{{ heading_type }} class="bix-alert__heading">
+      {{ title }}
+    </{{ heading_type }}>
+  {% endif %}
+  {% if text %}
+    <div class="bix-alert__text">
+      {{ text }}
+    </div>
+  {% endif %}
+  </div>
+</div>
