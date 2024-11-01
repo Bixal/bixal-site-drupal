@@ -209,5 +209,5 @@ exports.watch = parallel(watchCompFiles, logVersion, buildSass, watchSass, brows
 exports.update = uswds.updateUswds;
 exports.copyAssets = uswds.copyAssets;
 exports.compileSass = series(logVersion, buildSass);
-exports.compile = series(logVersion, parallel(buildSass, uswds.compileIcons, buildJS));
+exports.compile = series(logVersion, parallel(buildSass, uswds.compileIcons, buildJS, uswds.copyAssets));
 exports.default = this.compile;
