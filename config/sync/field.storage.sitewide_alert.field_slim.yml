@@ -1,0 +1,18 @@
+uuid: 797e9cc6-2a37-4992-92da-5c8f06479f6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitewide_alert
+id: sitewide_alert.field_slim
+field_name: field_slim
+entity_type: sitewide_alert
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

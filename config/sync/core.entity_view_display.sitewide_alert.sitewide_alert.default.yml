@@ -1,0 +1,29 @@
+uuid: fd537a2d-5599-4548-b215-cfbd00cb596c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sitewide_alert.sitewide_alert.field_heading
+    - field.field.sitewide_alert.sitewide_alert.field_no_icon
+    - field.field.sitewide_alert.sitewide_alert.field_slim
+  module:
+    - sitewide_alert
+    - text
+id: sitewide_alert.sitewide_alert.default
+targetEntityType: sitewide_alert
+bundle: sitewide_alert
+mode: default
+content:
+  message:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_heading: true
+  field_no_icon: true
+  field_slim: true
+  langcode: true
+  search_api_excerpt: true

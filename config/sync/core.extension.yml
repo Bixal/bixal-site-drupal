@@ -28,6 +28,7 @@ module:
   cookies: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   decorative_image_widget: 0
   default_content: 0
@@ -77,6 +78,7 @@ module:
   search_api_solr: 0
   seckit: 0
   site_wrapper: 0
+  sitewide_alert: 0
   svg_image_field: 0
   system: 0
   taxonomy: 0

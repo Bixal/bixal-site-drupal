@@ -1,0 +1,22 @@
+uuid: 02d9ebfc-cee1-4aa2-bb9c-244d278edae5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sitewide_alert.field_no_icon
+  module:
+    - sitewide_alert
+id: sitewide_alert.sitewide_alert.field_no_icon
+field_name: field_no_icon
+entity_type: sitewide_alert
+bundle: sitewide_alert
+label: 'No Icon'
+description: "Display an site alert without an icon.\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
