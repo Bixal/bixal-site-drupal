@@ -33,6 +33,7 @@ permissions:
   - 'administer recaptcha'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer sitewide alert entities'
   - 'administer url aliases'
   - 'administer users'
   - 'assign editor role'
