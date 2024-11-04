@@ -3,8 +3,10 @@
   * Alert component.
   *
   * Available variables:
-  * - title: Optional string for the alert header.
   * - variant: String alert type: info, error, warning.
+  * - icon: String alert icon from USWDS: info, error, warning.
+  * - heading_type: Optional string for the type of header (h1-h6).
+  * - title: Optional string for the alert header.
   * - text: A string of the alert body text.
 **/
 #}
@@ -23,8 +25,16 @@
 
 <div{{ attributes.addClass(alert_classes) }}>
   <div class="bix-alert__body">
+
+
   {% if title %}
     <{{ heading_type }} class="bix-alert__heading">
+    {% if icon %}
+    <span class="bix-alert__icon">
+      {{ source(icon) }}
+    </span>
+    {% endif %}
+
       {{ title }}
     </{{ heading_type }}>
   {% endif %}

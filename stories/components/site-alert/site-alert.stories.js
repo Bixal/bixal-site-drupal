@@ -1,13 +1,14 @@
-import Alert from "./alert.html.twig";
-import "./alert.scss";
+import SiteAlert from "./site-alert.html.twig";
+import "./site-alert.scss";
+
 import infoIcon from "@uswds/uswds/img/usa-icons/info_outline.svg";
 import warningIcon from "@uswds/uswds/img/usa-icons/warning.svg";
 import errorIcon from "@uswds/uswds/img/usa-icons/error_outline.svg";
 
 export default {
-  title: "Components/Alert",
+  title: "Components/Site Alert",
   tags: ["autodocs"],
-  component: Alert,
+  component: SiteAlert,
 };
 
 const defaultContent = {
@@ -50,10 +51,10 @@ export const Warning = {
   },
 };
 
-export const Error = {
+export const Urgent = {
   args: {
     ...defaultContent,
     icon: errorIcon,
-    variant: "error",
+    variant: "urgent",
   },
 };

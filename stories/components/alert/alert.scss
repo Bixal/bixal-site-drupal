@@ -1,22 +1,16 @@
 @use "uswds-core" as *;
+@use "../../assets/styles/utils/mixins/alert-base-styles" as *;
 
 .bix-alert {
+  @include alert-base-styles;
+
   --_alert-color: var(--alert-color, currentColor);
 
   border-left: 4px solid var(--_alert-color);
 
-  &__heading {
-    font-family: var(--font-ui);
-    font-weight: 600;
-    margin-top: 0;
-  }
-
   &__body {
     padding: units(1.5) units(2.5);
-  }
-
-  &__text > :last-child {
-    margin-bottom: 0;
+    padding-left: units(5);
   }
 }
 
@@ -26,4 +20,8 @@
 
 .bix-alert--warning {
   --alert-color: var(--c-warning);
+}
+
+.bix-alert--error {
+  --alert-color: var(--c-error);
 }
