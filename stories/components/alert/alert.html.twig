@@ -1,0 +1,47 @@
+{#
+/**
+  * Alert component.
+  *
+  * Available variables:
+  * - variant: String alert type: info, error, warning.
+  * - icon: String alert icon from USWDS: info, error, warning.
+  * - heading_type: Optional string for the type of header (h1-h6).
+  * - title: Optional string for the alert header.
+  * - text: A string of the alert body text.
+**/
+#}
+
+
+{% set heading_type = heading_type | default("h4") %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set alert_classes = [
+  "bix-alert",
+  (variant ? "bix-alert--" ~ variant),
+] | merge(additional_classes | default([])) %}
+
+<div{{ attributes.addClass(alert_classes) }}>
+  <div class="bix-alert__body">
+
+
+  {% if title %}
+    <{{ heading_type }} class="bix-alert__heading">
+    {% if icon %}
+    <span class="bix-alert__icon">
+      {{ source(icon) }}
+    </span>
+    {% endif %}
+
+      {{ title }}
+    </{{ heading_type }}>
+  {% endif %}
+  {% if text %}
+    <div class="bix-alert__text">
+      {{ text }}
+    </div>
+  {% endif %}
+  </div>
+</div>

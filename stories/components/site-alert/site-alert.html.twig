@@ -1,0 +1,50 @@
+{#
+/**
+  * Site Alert component.
+  *
+  * Available variables:
+  * - variant: String alert type: info, error, warning.
+  * - icon: String for icon type.
+  * - aria_label: Optional string for the aria label, must be unique.
+  * - heading_type: Optional string for the type of header (h1-h6).
+  * - title: Optional string for the alert header.
+  * - text: A string of the alert body text.
+**/
+#}
+
+
+{% set heading_type = heading_type | default("h4") %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set alert_classes = [
+  "bix-site-alert",
+  (variant ? "bix-site-alert--" ~ variant),
+] | merge(additional_classes | default([])) %}
+
+{# Must be unique if mulitple on page. #}
+{% set aria_label = ariaLabel | default("Site alert")  %}
+
+<section{{ attributes.addClass(alert_classes).setAttribute("aria-label", aria_label) }} >
+  <div class="bix-container">
+    <div class="bix-site-alert__body">
+    {% if title %}
+      <{{ heading_type }} class="bix-site-alert__heading">
+        {% if icon %}
+        <span class="bix-site-alert__icon">
+          {{ source(icon) }}
+        </span>
+        {% endif %}
+        {{ title }}
+      </{{ heading_type }}>
+    {% endif %}
+    {% if text %}
+      <div class="bix-site-alert__text">
+        {{ text }}
+      </div>
+    {% endif %}
+    </div>
+  </div>
+</section>

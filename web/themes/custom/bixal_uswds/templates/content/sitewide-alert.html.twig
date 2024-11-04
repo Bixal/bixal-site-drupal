@@ -23,25 +23,20 @@
 #}
 {% if heading or content %}
     <div {{ attributes }}>
-        <section class="usa-site-alert usa-site-alert--{{ style }}{% if slim  %} usa-site-alert--slim{% endif %}{% if no_icon  %} usa-site-alert--no-icon{% endif %}" aria-label="Site alert,">
-            <div class="usa-alert">
-                <div class="usa-alert__body">
-                    {% if heading -%}
-                        <h4 class="usa-alert__heading">{{ heading }}</h4>
-                    {%- endif %}
-                    {% if content -%}
-                        <div class="usa-alert__text">
-                            {{- content -}}
-                            {% if is_dismissible -%}
-                                {# The dismiss (close) button must have the class js-dismiss-button in order to work. #}
-                                <button class="close js-dismiss-button" aria-label="{{ 'close'|t }}">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            {%- endif %}
-                        </div>
-                    {%- endif %}
-                </div>
-            </div>
-        </section>
+        {% if not no_icon  %}
+             {% if style == 'urgent' %}
+                {% set icon = directory ~ '/dist/assets/img/usa-icons/error_outline.svg' %}
+             {% elseif style == 'warning' %}
+                {% set icon = directory ~ '/dist/assets/img/usa-icons/warning.svg' %}
+             {% else %}
+                {% set icon = directory ~ '/dist/assets/img/usa-icons/info_outline.svg' %}
+             {% endif %}
+        {% endif %}
+        {% include '@components/site-alert/site-alert.html.twig' with {
+            'title': heading,
+            'text': content,
+            'variant': style,
+            'icon': icon,
+        } %}
     </div>
 {% endif %}
