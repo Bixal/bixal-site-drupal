@@ -34,6 +34,10 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-info-darker: #{color("blue-cool-30v")};
   // Warning
   --c-warning: #{$c-yellow};
+  // Error
+  --c-error: #{color("orange-warm-50v")};
+  // Urgent
+  --c-urgent: #{color("orange-warm-70v")};
   // Fonts
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
