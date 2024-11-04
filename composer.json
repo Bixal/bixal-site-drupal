@@ -84,6 +84,7 @@
         "drupal/role_delegation": "^1.2",
         "drupal/search_api_solr": "^4.3",
         "drupal/seckit": "^2.0",
+        "drupal/sitewide_alert": "^2.2",
         "drupal/stable": "^2.0",
         "drupal/svg_image_field": "^2.3",
         "drupal/twig_field_value": "^2.0",
