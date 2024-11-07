@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Allows using the title element from a section anywhere.
+ *
+ * Example:
+{% include "@partials/section-title.html.twig" with {
+  heading_type: 'h2'
+  title: 'A great title',
+} %}
+ * Available variables:
+ * - heading_type (string): The URL of the image.
+ * - title (string): The title to display.
+ #}
+{% if title %}
+    {% set heading_type = heading_type | default("h2") %}
+    <{{heading_type}} class="bix-section__title">
+        {{ title }}
+    </{{heading_type}}>
+{% endif %}
