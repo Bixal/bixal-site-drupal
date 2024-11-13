@@ -8,6 +8,7 @@ dependencies:
     - config_pages
     - contact
     - cookies
+    - file_resup
     - google_tag
     - path
     - pathauto
@@ -28,6 +29,7 @@ permissions:
   - 'administer CAPTCHA settings'
   - 'administer contact forms'
   - 'administer cookies services and service groups'
+  - 'administer file resup'
   - 'administer google_tag_container'
   - 'administer pathauto'
   - 'administer recaptcha'
