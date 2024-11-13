@@ -8,12 +8,14 @@ dependencies:
     - config_pages
     - contact
     - cookies
+    - file_resup
     - google_tag
     - path
     - pathauto
     - recaptcha
     - redirect
     - role_delegation
+    - sitewide_alert
     - system
     - toolbar
 id: site_admin
@@ -23,20 +25,25 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access toolbar'
+  - 'add sitewide alert entities'
   - 'administer CAPTCHA settings'
   - 'administer contact forms'
   - 'administer cookies services and service groups'
+  - 'administer file resup'
   - 'administer google_tag_container'
   - 'administer pathauto'
   - 'administer recaptcha'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer sitewide alert entities'
   - 'administer url aliases'
   - 'administer users'
   - 'assign editor role'
   - 'configure cookies config'
   - 'configure cookies widget texts'
   - 'create url aliases'
+  - 'delete sitewide alert entities'
   - 'edit accreditations config page entity'
+  - 'edit sitewide alert entities'
   - 'use admin toolbar search'
   - 'view the administration theme'

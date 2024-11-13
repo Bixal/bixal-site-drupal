@@ -9,7 +9,8 @@
     "start": "npm run storybook",
     "storybook": "storybook dev -p 80",
     "storybook:local": "storybook dev -p 5050",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "static-sb": "npm run build-storybook && npx http-server storybook-static/"
   },
   "repository": {
     "type": "git",

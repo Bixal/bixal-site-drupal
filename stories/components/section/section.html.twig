@@ -22,10 +22,8 @@
   (center_content ? "bix-section--center-content"),
 ] | merge(additional_classes | default([])) %}
 
-{% set heading_type = heading_type | default("h2") %}
-
 <section
-  {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
+    {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
 
   {#
     /**
@@ -40,12 +38,7 @@
           {{ prefix }}
         </div>
       {% endif %}
-
-      {% if title %}
-        <{{heading_type}} class="bix-section__title">
-          {{ title }}
-        </{{heading_type}}>
-      {% endif %}
+      {% include "@partials/section-title.html.twig" %}
     {% endblock %}
 
     {% block description %}
@@ -61,7 +54,7 @@
     {% block footer %}
       {% if cta.label %}
         <div
-          class="bix-section__footer">
+            class="bix-section__footer">
           {# Avoid button inheriting section data. #}
           {% include "@components/button/button.html.twig" with cta only %}
         </div>

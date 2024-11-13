@@ -9,6 +9,7 @@ $c-purple: #7d0096;
 $c-green: #deec1c;
 $c-maroon: #55052a;
 $c-orange: #fda307;
+$c-yellow: color("yellow-20v");
 $c-red-orange: #e02f00;
 $c-gray: color("gray-4");
 
@@ -16,6 +17,7 @@ $font-ui: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
 $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 
 :root {
+  // Theme colors
   --c-primary: #{$c-blue--dark};
   --c-primary-alt: #{$c-purple};
   --c-accent-cool: #{$c-blue--light};
@@ -25,6 +27,18 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-accent-warm-dark: #{$c-maroon};
   --c-accent-vivid: #{$c-green};
   --c-base: #{$c-gray};
+  // State colors
+  // Info - Closest USWDS color is blue-cool-10v.
+  --c-info: var(--c-accent-cool);
+  --c-info-dark: #{color("blue-cool-20v")};
+  --c-info-darker: #{color("blue-cool-30v")};
+  // Warning
+  --c-warning: #{$c-yellow};
+  // Error
+  --c-error: #{color("orange-warm-50v")};
+  // Urgent
+  --c-urgent: #{color("orange-warm-70v")};
+  // Fonts
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 }
@@ -32,7 +46,10 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // Modern normalize - CSS Reset.
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css");
 
-// Proxima Nova and Novel pro typefaces.
+// Typefaces:
+// Proxima Nova (400, 600, 700)
+// Novel pro (700 & 800)
+// poynter-gothic-text (400, 400 italic, 700, 700 italic)
 @import url("https://use.typekit.net/wfu7yyr.css");
 
 // ==========================================================================

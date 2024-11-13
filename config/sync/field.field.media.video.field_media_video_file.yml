@@ -7,6 +7,12 @@ dependencies:
     - media.type.video
   module:
     - file
+    - file_resup
+third_party_settings:
+  file_resup:
+    enabled: 1
+    max_upload_size: '4 GB'
+    auto_upload: 0
 id: media.video.field_media_video_file
 field_name: field_media_video_file
 entity_type: media
@@ -21,7 +27,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'mp4 webm'
-  max_filesize: '300 MB'
+  file_extensions: 'mp4 webm m4v'
+  max_filesize: ''
   description_field: false
 field_type: file

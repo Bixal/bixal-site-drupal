@@ -1,0 +1,31 @@
+@use "uswds-core" as *;
+@use "../../assets/styles/utils/mixins/alert-base-styles" as *;
+
+.bix-site-alert {
+  @include alert-base-styles;
+
+  --_alert-color: var(--alert-color, var(--c-base));
+
+  background-color: var(--_alert-color);
+
+  &__icon svg {
+    fill: currentColor;
+  }
+
+  &__body {
+    padding: units(3) units(2.5);
+  }
+}
+
+.bix-site-alert--info {
+  --alert-color: var(--c-info);
+}
+
+.bix-site-alert--warning {
+  --alert-color: var(--c-warning);
+}
+
+.bix-site-alert--urgent {
+  --alert-color: var(--c-urgent);
+  color: color("white");
+}

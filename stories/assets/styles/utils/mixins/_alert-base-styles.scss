@@ -1,0 +1,33 @@
+@use "uswds-core" as *;
+
+/// Applies shared base styles to alert and site alert components.
+///
+/// @example
+/// .bix-alert {
+///   @include alert-base-styles;
+/// }
+///
+/// This mixin assumes the following structure:
+/// - `.alert__heading` contains the heading text.
+/// - `.alert__icon` contains the icon element.
+/// - `.alert__text` contains the main text content.
+@mixin alert-base-styles {
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    column-gap: units("05");
+    font-family: var(--font-ui);
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    margin-left: calc(#{units(-4)} + #{units("05")}); // Offset column gap.
+  }
+
+  &__text > :last-child {
+    margin-bottom: 0;
+  }
+}

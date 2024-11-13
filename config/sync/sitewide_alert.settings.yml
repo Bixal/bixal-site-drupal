@@ -1,7 +1,7 @@
 _core:
   default_config_hash: 0y_QHS2RsEHVusPnhiEqDUshLy8-YqDaXtafZJdYjXA
 show_on_admin: 0
-alert_styles: "info|Info\r\nemergency|Emergency"
+alert_styles: "info|Info\r\nwarning|Warning\r\nurgent|Urgent"
 display_order: ascending
 refresh_interval: 15
 automatic_refresh: 0

@@ -1,4 +1,5 @@
 // Add any custom component files here using @forward.
+@forward "components/alert/alert";
 @forward "components/blurb/blurb";
 @forward "components/button/button";
 @forward "components/cards/cards";
@@ -12,6 +13,7 @@
 @forward "components/people-list/people-list";
 @forward "components/profile/profile";
 @forward "components/section/section";
+@forward "components/site-alert/site-alert";
 @forward "components/social-nav/social-nav";
 @forward "assets/styles/global/global";
 
