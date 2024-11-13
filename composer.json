@@ -66,6 +66,7 @@
         "drupal/disable_user_1_edit": "^1.6",
         "drupal/email_username": "^1.0",
         "drupal/field_group": "^3.4",
+        "drupal/file_resup": "^2.0",
         "drupal/google_tag": "^2.0",
         "drupal/imagecache_external": "^3.0",
         "drupal/key": "^1.19",

@@ -42,6 +42,8 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_resup: 0
+  file_resup_media_library: 0
   filter: 0
   google_tag: 0
   image: 0
