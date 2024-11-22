@@ -1,0 +1,11 @@
+uuid: a88483a5-0ed4-4676-8186-32640de95525
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hls_video
+id: media.hls_video
+target_entity_type_id: media
+target_bundle: hls_video
+default_langcode: site_default
+language_alterable: false
