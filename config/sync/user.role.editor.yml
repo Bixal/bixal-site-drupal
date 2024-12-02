@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.bixaler
     - node.type.blog
+    - node.type.case_study
     - node.type.contract_vehicle
     - node.type.landing_page
     - taxonomy.vocabulary.certifications
@@ -41,6 +42,7 @@ permissions:
   - 'administer mainnavcta menu items'
   - 'create bixaler content'
   - 'create blog content'
+  - 'create case_study content'
   - 'create contract_vehicle content'
   - 'create landing_page content'
   - 'create media'
@@ -52,6 +54,7 @@ permissions:
   - 'create url aliases'
   - 'delete any bixaler content'
   - 'delete any blog content'
+  - 'delete any case_study content'
   - 'delete any contract_vehicle content'
   - 'delete any landing_page content'
   - 'delete any media'
@@ -62,6 +65,7 @@ permissions:
   - 'delete terms in team'
   - 'edit any bixaler content'
   - 'edit any blog content'
+  - 'edit any case_study content'
   - 'edit any contract_vehicle content'
   - 'edit any landing_page content'
   - 'edit terms in certifications'

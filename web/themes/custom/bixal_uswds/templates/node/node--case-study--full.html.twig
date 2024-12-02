@@ -73,6 +73,8 @@
     heading_type: "h1",
     prefix: content.field_client | field_value,
     title: node.label,
+    prefix_below: 1,
+    prefix_label: 'Client',
 } only %}
 
 {% set main_body %}
@@ -95,11 +97,11 @@
 {% include "@components/section/section.html.twig" with {
     variant: "accent-cool",
     title: 'Impact' | t,
-    body: content.field_introduction | field_value
+    body: content.field_impact | field_value
 } only %}
 
 {% include "@components/section/section.html.twig" with {
     variant: "primary-alt",
     title: 'Conclusion' | t,
-    body: content.field_introduction | field_value
+    body: content.field_conclusion | field_value
 } only %}

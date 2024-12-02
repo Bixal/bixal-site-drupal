@@ -1,0 +1,32 @@
+uuid: 89538217-2bd1-4d8c-a553-b9afdeb624d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.hls_video.field_media_media_remote
+    - media.type.hls_video
+  module:
+    - media_remote_hls
+id: media.hls_video.default
+targetEntityType: media
+bundle: hls_video
+mode: default
+content:
+  field_media_media_remote:
+    type: media_remote_hls
+    label: hidden
+    settings:
+      width: '960'
+      height: '600'
+      autoplay: '1'
+      formatter_class: Drupal\media_remote_hls\Plugin\Field\FieldFormatter\MediaRemoteHLSFormatter
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

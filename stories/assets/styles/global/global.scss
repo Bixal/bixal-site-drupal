@@ -142,6 +142,13 @@ h6 {
   }
 }
 
+.bix-title-prefix-label {
+  @extend .bix-title-prefix;
+  border-left: none;
+  border-right: none;
+  padding: 0px;
+}
+
 dl {
   line-height: 1.75;
   margin-top: units(2);

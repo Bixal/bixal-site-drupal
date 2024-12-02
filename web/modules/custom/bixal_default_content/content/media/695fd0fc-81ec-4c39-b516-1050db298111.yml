@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 695fd0fc-81ec-4c39-b516-1050db298111
+  bundle: hls_video
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'HLS video from https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'
+  created:
+    -
+      value: 1732300628
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_media_remote:
+    -
+      value: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'

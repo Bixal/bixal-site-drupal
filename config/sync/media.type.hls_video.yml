@@ -1,0 +1,15 @@
+uuid: 158e198c-4114-492e-af2b-fd53e6f5780a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_remote
+id: hls_video
+label: 'HLS Video'
+description: 'Remote video using the HLS protocol'
+source: media_remote
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_media_remote
+field_map: {  }
