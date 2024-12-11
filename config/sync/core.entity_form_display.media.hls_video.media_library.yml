@@ -1,0 +1,28 @@
+uuid: 278bae80-6c7d-48db-a6a9-93b6dc62bdba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.hls_video.field_media_media_remote
+    - media.type.hls_video
+id: media.hls_video.media_library
+targetEntityType: media
+bundle: hls_video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_media_remote: true
+  langcode: true
+  path: true
+  status: true
+  uid: true

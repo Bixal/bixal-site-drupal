@@ -4,6 +4,9 @@
   *
   * Available variables:
   * - prefix: Optional string. Contains title prefix with borders on the side.
+  * - prefix_below: Opt boolean. If true, the prefix will show under the title.
+  * - prefix_label: Optional string. Adds a label to prefix seperated by a |
+                    and removes the borders from the sides.
   * - heading_type: String heading type for title.
   * - title: String title of section.
   * - description: String body text, can include paragraphs.
@@ -33,12 +36,18 @@
     #}
   <div class="bix-container">
     {% block header %}
+      {% if prefix_below %}
+        {% include "@partials/section-title.html.twig" %}
+      {% endif %}
       {% if prefix %}
-        <div class="bix-title-prefix">
-          {{ prefix }}
+        <div class="bix-title-prefix{% if prefix_label %}-label{% endif %}">
+          {% if prefix_label %}{{ prefix_label }}&nbsp;<span aria-hidden="true">|</span>&nbsp;{% endif %}{{ prefix }}
         </div>
       {% endif %}
-      {% include "@partials/section-title.html.twig" %}
+      {% if not prefix_below  %}
+        {% include "@partials/section-title.html.twig" %}
+      {% endif %}
+
     {% endblock %}
 
     {% block description %}

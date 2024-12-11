@@ -11,6 +11,8 @@ export default {
   args: {
     center_content: false,
     prefix: "Who we are",
+    prefix_below: 0,
+    prefix_label: '',
     heading_type: "h2",
     title:
       "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",

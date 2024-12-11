@@ -46,3 +46,5 @@ c844a0df1fb652429755003179a5177c|Matt Poole|feature/BSD-305-dep-update|Tue Oct 1
 56ccb5a257914e0eced9c581db3dc19d|Matt Poole|release/1.5.0|Wed Oct 16 09:17:37 EDT 2024|./composer.sh update
 835eac30efa74f467f99dea027b5e553|Matt Poole|feature/BSD-329-site-wide-alert-be|Fri Nov  1 15:48:57 EDT 2024|./composer.sh require drupal/sitewide_alert
 79be0192ea4e882a1cf2b73eb098c76e|Matt Poole|feature/BSD-342-update-deps|Wed Nov 13 14:23:04 EST 2024|./composer.sh update
+7ba32a3b2d2e71420c79a194217d54ff|Matt Poole|feature/BSD-348-update-deps|Fri Nov 22 10:45:45 EST 2024|./composer.sh update
+fa3ebb6ff574f4eb1ae36967973062ed|John Franklin|feature/BSD-298-enable-hls-video|Fri Nov 22 11:45:43 EST 2024|./composer.sh require drupal/media_remote_hls

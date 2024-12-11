@@ -47,21 +47,22 @@ if (isset($lando_info->database)) {
 if (isset($lando_info->cache->type)) {
   switch ($lando_info->cache->type) {
     case 'redis':
-      require 'settings.redis.php';
-      if (function_exists('_settings_redis')) {
-        _settings_redis(
+      require_once 'settings.redis.php';
+      if (function_exists('_drupal_env_settings_redis')) {
+        _drupal_env_settings_redis(
           $settings,
           $lando_info->cache->internal_connection->host,
-          $lando_info->cache->internal_connection->port
+          $lando_info->cache->internal_connection->port,
+          'PhpRedis',
         );
       }
       break;
 
     case 'memcached':
-      require 'settings.memcache.php';
-      if (function_exists('_settings_memcache')) {
-        $memcache_host = implode(':', (array)$lando_info->cache->internal_connection);
-        _settings_memcache($settings, $memcache_host);
+      require_once 'settings.memcache.php';
+      if (function_exists('_drupal_env_settings_memcache')) {
+        $memcache_host = implode(':', (array) $lando_info->cache->internal_connection);
+        _drupal_env_settings_memcache($settings, $memcache_host);
       }
       break;
 
