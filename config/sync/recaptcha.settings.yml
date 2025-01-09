@@ -1,6 +1,6 @@
 _core:
   default_config_hash: ByOVf1cU9r5NkZ4ieBJ7k9sUid6jb03ojMN1gjJ0-OU
-site_key: 6LeF1UgaAAAAACr6bP08beiNRUepZHWtICv_PLIQ
+site_key: 6LfH1LIqAAAAACvGsKyYIZj3f4yHu3DH7jyN2dBX
 secret_key: 'Set by env variable RECAPTCHA_SECRET_KEY'
 verify_hostname: false
 use_globally: false
@@ -8,4 +8,4 @@ widget:
   theme: light
   type: image
   size: ''
-  noscript: true
+  noscript: false
