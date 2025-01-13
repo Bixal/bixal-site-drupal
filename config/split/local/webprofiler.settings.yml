@@ -1,6 +1,7 @@
 _core:
   default_config_hash: l23AWlsVwlhblRhggKqahd8SBZzQDs5_GsFuCKgDItg
 exclude_paths: "/contextual/*\r\n/toolbar/*\r\n/edit/*\r\n*.js\r\n*.css"
+exclude_toolbar: /media/oembed
 intercept_redirects: false
 purge_on_cache_clear: true
 active_toolbar_items:
@@ -29,6 +30,7 @@ active_toolbar_items:
   translations: '0'
 query_sort: source
 query_highlight: 5
+query_detailed_output_threshold: 1000
 ide: 'phpstorm://open?file=%f&line=%l'
 ide_remote_path: ''
 ide_local_path: ''
