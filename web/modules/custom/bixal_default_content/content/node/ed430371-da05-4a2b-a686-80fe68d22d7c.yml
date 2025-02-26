@@ -14,7 +14,6 @@ _meta:
     da97ce7c-48ef-46cd-a1f4-06b89acbefef: media
     22bc94fd-97f5-4df1-83a9-bed00b4beabb: media
     6f99ae85-b406-4b92-aa13-879e256ce37a: media
-    dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932: media
     e8144e45-ac70-47a4-9e47-ed0cdf183ea7: media
     ea3450a1-cc31-45f4-b7bb-73759d81f803: media
     b452f031-e9c0-41af-b118-163283806eb8: media
@@ -571,33 +570,6 @@ default:
                           field_title:
                             -
                               value: Health
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 7971dd5b-5f81-40e5-857d-6aa94ae628cf
-                          bundle: description_list
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706794198
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_description_list_items:
-                            -
-                              value: 'United States Agency for International Development'
-                          field_image:
-                            -
-                              entity: dea38d28-dbaf-4ff5-a1ff-4c5a6b8e1932
-                          field_title:
-                            -
-                              value: 'International Development'
                     -
                       entity:
                         _meta:
