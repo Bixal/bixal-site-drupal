@@ -25,12 +25,24 @@
       width: 100%;
     }
 
-    .bix-input--textarea, .bix-input[name=name] {
+    .bix-input--textarea,
+    .bix-input[name="name"] {
       grid-column: 1 / -1;
     }
   }
+}
 
-  &__actions {
-    grid-row-start: 4;
-  }
+.captcha,
+.bix-contact__actions {
+  grid-column: 1 / -1;
+}
+
+.captcha {
+  margin-bottom: units(1);
+}
+
+.captcha__description {
+  font-size: size("sans", "xs");
+  line-height: 1.1;
+  margin-top: units(1);
 }
