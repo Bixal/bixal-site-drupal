@@ -76,6 +76,7 @@
         "drupal/media_remote_hls": "^1.0",
         "drupal/menu_admin_per_menu": "^1.5",
         "drupal/metatag": "^2.0",
+        "drupal/openid_connect": "^1.4",
         "drupal/override_node_options": "^2.7",
         "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.12",
