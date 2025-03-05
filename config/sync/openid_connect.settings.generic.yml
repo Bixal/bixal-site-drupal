@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: FJ7FfwlYzcbFfG0AqVPlqsLJIRhkzS1Rv6eO1vssSkM
+enabled: true
+settings:
+  client_id: OVERRIDDEN_BY_SETTINGS
+  client_secret: OVERRIDDEN_BY_SETTINGS
+  authorization_endpoint: 'https://login.microsoftonline.com/31448150-d5ea-4e0e-bf63-51be057306d3/oauth2/v2.0/authorize'
+  token_endpoint: 'https://login.microsoftonline.com/31448150-d5ea-4e0e-bf63-51be057306d3/oauth2/v2.0/token'
+  userinfo_endpoint: 'https://example.com/oauth2/UserInfo'
+  redirect_url: ''
