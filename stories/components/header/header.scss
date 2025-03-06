@@ -103,6 +103,10 @@
   @include at-media-max("desktop") {
     background-color: var(--c-primary-alt);
     color: color("white");
+    max-height: calc(100vh - 88px); // 88px offset the header
+    overflow-y: auto;
+    // Limits scrolling to active nav to avoid accidentally scrolling content.
+    overscroll-behavior-y: contain;
     position: absolute;
     top: 100%;
     left: 0;
@@ -128,7 +132,7 @@
   }
 
   &__item {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 
     @include at-media-max("desktop") {
       border-top: 1px solid rgba(white, 0.2);
