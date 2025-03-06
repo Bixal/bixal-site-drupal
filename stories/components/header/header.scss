@@ -23,15 +23,14 @@
 .bix-site-nav__toggle {
   background-color: #fff;
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
+  height: px-to-rem(40px);
   margin: 0;
   padding: 0;
   position: relative;
   text-transform: uppercase;
-  width: 40px;
+  width: px-to-rem(40px);
 
   @include at-media("desktop") {
     display: none;
@@ -43,16 +42,15 @@
 }
 
 .bix-toggle-icon {
-  height: 1px;
+  height: px-to-rem(1px);
   left: 5px;
   position: absolute;
   top: 12px;
-  width: 30px;
+  width: px-to-rem(30px);
 
   &__line {
     background-color: #000;
-    border-radius: 10%;
-    height: 3px;
+    height: px-to-rem(3px);
     left: 0;
     position: absolute;
     top: 0;
@@ -164,8 +162,8 @@
     @include at-media("desktop") {
       background-color: var(--c-accent-cool-alt);
       content: "";
-      height: 2px;
-      width: 52px;
+      height: px-to-rem(2px);
+      width: px-to-rem(52px);
       position: absolute;
       top: 100%;
       left: 50%;
