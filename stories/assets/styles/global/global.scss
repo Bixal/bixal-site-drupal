@@ -17,28 +17,44 @@ $font-ui: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
 $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 
 :root {
+  //
   // Theme colors
+  //
   --c-primary: #{$c-blue--dark};
   --c-primary-alt: #{$c-purple};
+
   --c-accent-cool: #{$c-blue--light};
   --c-accent-cool-alt: #{$c-teal};
+
   --c-accent-warm: #{$c-orange};
   --c-accent-warm-alt: #{$c-red-orange};
   --c-accent-warm-dark: #{$c-maroon};
+
   --c-accent-vivid: #{$c-green};
+
   --c-base: #{$c-gray};
+
+  //
   // State colors
-  // Info - Closest USWDS color is blue-cool-10v.
+  //
   --c-info: var(--c-accent-cool);
+  // Used this color tool to find the closest USWDS token:
+  // https://civicactions.github.io/uswds-color-tool/
   --c-info-dark: #{color("blue-cool-20v")};
   --c-info-darker: #{color("blue-cool-30v")};
+
   // Warning
   --c-warning: #{$c-yellow};
+
   // Error
   --c-error: #{color("orange-warm-50v")};
+
   // Urgent
   --c-urgent: #{color("orange-warm-70v")};
+
+  //
   // Fonts
+  //
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 }
