@@ -146,8 +146,11 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-decoration: none;
+    outline-color: inherit;
+    outline-offset: px-to-rem(2px);
 
     @include at-media("desktop") {
+      outline-color: revert;
       padding-top: units(1);
       padding-bottom: units(1);
 
