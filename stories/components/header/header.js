@@ -2,6 +2,11 @@ import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const menuTrigger = document.querySelector("[data-menu-toggle]");
+
+  if (!menuTrigger) {
+    return;
+  }
+
   const menuTarget = document.querySelector("[data-menu-target]");
   const menuLabel = menuTrigger.querySelector(".bix-toggle-icon__text");
 
@@ -16,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menuLabel.textContent = labelOpen;
     Toggle.show(menuTrigger, menuTarget);
   }
-  
+
   /**
    * Hide menu and revert text label to default state.
    */
@@ -79,4 +84,3 @@ window.addEventListener("DOMContentLoaded", () => {
 
   init();
 });
-
