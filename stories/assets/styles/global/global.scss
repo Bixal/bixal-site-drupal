@@ -264,6 +264,7 @@ address {
   outline-offset: 2px;
   padding: units(2) units(1);
   transition: background-color 0.2s ease-in-out;
+  width: 100%;
 
   &::placeholder {
     font-weight: 600;
@@ -310,6 +311,7 @@ $project-active-uswds-breakpoints: ();
 
 .bix-grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: units(1);
 
   &--halves {
