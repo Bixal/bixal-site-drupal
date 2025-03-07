@@ -237,7 +237,21 @@ address {
   width: 85%;
 }
 
+// ==========================================================================
 // Form elements
+// ==========================================================================
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-size: size("ui", "2xs");
+  letter-spacing: px-to-rem(0.5px);
+  text-transform: uppercase;
+}
 
 .bix-input {
   border: 1px solid currentColor;
