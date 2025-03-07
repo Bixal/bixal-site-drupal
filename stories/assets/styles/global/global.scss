@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:list";
+
 @use "uswds-core" as *;
 @use "../utils/mixins/heading-border" as *;
 
@@ -283,4 +286,79 @@ address {
   font-weight: font-weight(800);
   line-height: 1.2;
   margin: 0;
+}
+
+// ==========================================================================
+// Grid
+// @TODO: Separate into it's own component if we need a full 12-column grid.
+// ==========================================================================
+
+// The project's active USWDS breakpoints;
+$project-active-uswds-breakpoints: ();
+
+// If it's enabled, we'll add it to the list.
+@each $breakpoint, $size in $theme-utility-breakpoints-complete {
+  @if $size {
+    $project-active-uswds-breakpoints: append(
+      $project-active-uswds-breakpoints,
+      $breakpoint
+    );
+  }
+}
+// @debug $project-active-uswds-breakpoints;
+// @return "mobile-lg" "tablet" "desktop"
+
+.bix-grid {
+  display: grid;
+  gap: units(1);
+
+  &--halves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--thirds {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--fourths {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @each $breakpoint in $project-active-uswds-breakpoints {
+    &\:#{$breakpoint}--halves {
+      @include at-media($breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &\:#{$breakpoint}--thirds {
+      @include at-media($breakpoint) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &\:#{$breakpoint}--fourths {
+      @include at-media($breakpoint) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  // Will output:
+  // &\:tablet--fourths {
+  //   @include at-media("tablet") {
+  //     …
+  //   }
+  // }
+
+  // &\:desktop--halves {
+  //   @include at-media("desktop") {
+  //     …
+  //   }
+  // }
+  // etc…
+
+  &__item--full {
+    grid-column: 1 / -1;
+  }
 }
