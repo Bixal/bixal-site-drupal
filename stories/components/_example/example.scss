@@ -1,0 +1,9 @@
+@use "uswds-core" as *;
+
+.bix-example {
+  color: var(--c-primary);
+
+  &__title {
+    font-size: size("heading", 18);
+  }
+}
