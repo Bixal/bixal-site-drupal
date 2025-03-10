@@ -16,12 +16,6 @@ export const Link = {
   },
 };
 
-export const Secondary = {
-  args: {
-    variant: "secondary",
-  },
-};
-
 export const Inverse = {
   args: {
     variant: "inverse",

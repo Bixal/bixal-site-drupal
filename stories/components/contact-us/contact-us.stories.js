@@ -64,7 +64,7 @@ export default {
       {
         type: "reset",
         label: "Reset",
-        variant: "secondary",
+        variant: "unstyled",
       },
     ],
   },

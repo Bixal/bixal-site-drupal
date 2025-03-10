@@ -46,21 +46,10 @@
   border: none;
   border-radius: 0;
   appearance: none;
-  padding: 0;
 
   &:hover,
   &:focus {
     background: none;
     color: color("ink");
-  }
-}
-
-.bix-button--secondary {
-  border-color: var(--c-base);
-  color: var(--c-base-darkest);
-
-  &:hover,
-  &:focus {
-    background-color: var(--c-base-darkest);
   }
 }

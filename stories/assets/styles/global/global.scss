@@ -34,8 +34,8 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-base-lighter: #{color("gray-2")};
   --c-base-lightest: #{color("gray-1")};
   --c-base-dark: #{color("gray-10")};
-  --c-base-darker: #{color("gray-40")};
-  --c-base-darkest: #{color("gray-70")};
+  --c-base-darker: #{color("gray-30")};
+  --c-base-darkest: #{color("gray-80")};
   // State colors
   // Info - Closest USWDS color is blue-cool-10v.
   --c-info: var(--c-accent-cool);
