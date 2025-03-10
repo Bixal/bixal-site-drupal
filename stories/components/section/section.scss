@@ -39,8 +39,16 @@
     }
   }
 
-  legend {
+  legend,
+  .bix-button {
     color: inherit;
+  }
+
+  .bix-button--unstyled {
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
   }
 }
 
