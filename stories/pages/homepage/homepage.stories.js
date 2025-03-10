@@ -10,7 +10,7 @@ import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 import "../../components/description-list/description-list.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactContent from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -24,8 +24,7 @@ export const Default = {
     header: HeaderContent,
     hero: {
       variant: "image-inline",
-      image:
-        "/static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
+      image: "/static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
       title: "This is Bixal.",
       description:
         "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
@@ -39,8 +38,7 @@ export const Default = {
     },
     whatWeDo: {
       variant: "primary",
-      image:
-        "/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
+      image: "/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
       prefix: "What we do",
       title:
         "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
@@ -63,8 +61,7 @@ export const Default = {
     workWithUs: {
       variant: "tall",
       center_content: true,
-      image:
-        "/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
+      image: "/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
       prefix: "Work with us",
       title:
         "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.",
@@ -74,6 +71,7 @@ export const Default = {
         icon: "arrow-right",
       },
     },
-    footerContent: FooterContent.default.args
+    contactContent: ContactContent.default.args,
+    footerContent: FooterContent.default.args,
   },
 };

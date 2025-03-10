@@ -4,7 +4,7 @@
   @include at-media("desktop") {
     background-image: url("/static/img-contact-1124f113171200a67715b157b11c6c19.jpg");
     background-position: 130% 0%;
-    background-size: 50%;
+    background-size: 50% 100%;
     background-repeat: no-repeat;
   }
 
@@ -29,6 +29,12 @@
     .bix-input[name="name"] {
       grid-column: 1 / -1;
     }
+  }
+}
+
+.bix-contact-form {
+  @include at-media("desktop") {
+    max-width: 45%;
   }
 }
 
