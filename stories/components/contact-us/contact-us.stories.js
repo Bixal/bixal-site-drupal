@@ -15,7 +15,7 @@ export default {
     section_prefix: "Contact",
     section_variant: "primary",
     section_title: "How can we help? <br /> We'd love to hear from you.",
-    hint: `<p>Required fields are marked with an asterisk (<abbr title="required" class="bix-hint bix-hint--required">*</abbr>).</p>`,
+    hint: `<p>Required fields are marked with an asterisk&nbsp;(<abbr title="required" class="bix-hint bix-hint--required">*</abbr>).</p>`,
     form: {
       grid: "bix-grid bix-grid:tablet--halves",
       items: [
