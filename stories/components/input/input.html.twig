@@ -25,6 +25,11 @@
   {% if label %}
     <label class="bix-label" for="{{ id }}">
       {{ label }}
+
+      {% if required %}
+        {% include "@components/input/_required-hint.html.twig" %}
+      {% endif %}
+
     </label>
   {% else %}
     ⚠️ Input is missing a label for accessibility.
@@ -36,8 +41,8 @@
 
 
   {% if type != "textarea" %}
-    <input{{ attributes }}/>
+    <input{{ attributes }}/>{{ children }}
   {% else %}
-    <textarea{{ attributes }} id="input-type-textarea" name="input-type-textarea"></textarea>
+    <textarea{{ attributes }} id="input-type-textarea" name="input-type-textarea"></textarea>{{ children }}
   {% endif %}
 </div>
