@@ -58,7 +58,6 @@ export default {
         type: "submit",
         label: "Submit",
         variant: "inverse",
-        icon: "arrow-right",
       },
       // For demo purposes only.
       {
