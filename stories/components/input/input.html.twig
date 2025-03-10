@@ -1,0 +1,43 @@
+{#
+  /**
+  * Title
+  *
+  * Available variables:
+  * - variable_name: description.
+  **/
+#}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set input_classes = [
+  "bix-input",
+  (type ? "bix-input--" ~ type),
+] | merge(additional_classes | default([])) %}
+
+{% set attributes = attributes.addClass(input_classes)
+  .setAttribute('aria-describedby', id)
+  .setAttribute('id', id)
+  .setAttribute('placeholder', placeholder | default('') ) %}
+
+<div class="form-group" data-test-id="">
+  {% if label %}
+    <label class="bix-label" for="{{ id }}">
+      {{ label }}
+    </label>
+  {% else %}
+    ⚠️ Input is missing a label for accessibility.
+  {% endif %}
+
+  {% if id is empty%}
+    ⚠️ Input is missing an ID for accessibility.
+  {% endif %}
+
+
+  {% if type != "textarea" %}
+    <input{{ attributes }}/>
+  {% else %}
+    <textarea{{ attributes }} id="input-type-textarea" name="input-type-textarea"></textarea>
+  {% endif %}
+</div>
