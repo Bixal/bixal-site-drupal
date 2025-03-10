@@ -321,33 +321,33 @@ $project-active-uswds-breakpoints: ();
   gap: units(1);
 
   &--halves {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
   }
 
   &--thirds {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33.33%);
   }
 
   &--fourths {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
   }
 
   @each $breakpoint in $project-active-uswds-breakpoints {
     &\:#{$breakpoint}--halves {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50%);
       }
     }
 
     &\:#{$breakpoint}--thirds {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 33.33%);
       }
     }
 
     &\:#{$breakpoint}--fourths {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 25%);
       }
     }
   }
