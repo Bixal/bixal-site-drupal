@@ -30,6 +30,12 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-accent-warm-dark: #{$c-maroon};
   --c-accent-vivid: #{$c-green};
   --c-base: #{$c-gray};
+  --c-base-light: #{color("gray-3")};
+  --c-base-lighter: #{color("gray-2")};
+  --c-base-lightest: #{color("gray-1")};
+  --c-base-dark: #{color("gray-10")};
+  --c-base-darker: #{color("gray-40")};
+  --c-base-darkest: #{color("gray-70")};
   // State colors
   // Info - Closest USWDS color is blue-cool-10v.
   --c-info: var(--c-accent-cool);
@@ -259,7 +265,7 @@ label {
 .bix-input {
   border: 1px solid currentColor;
   border-radius: 3px;
-  font-size: px-to-rem(14px);
+  font-size: px-to-rem(16px);
   margin-bottom: units(1);
   outline-offset: 2px;
   padding: units(2) units(1);

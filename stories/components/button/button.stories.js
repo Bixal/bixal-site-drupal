@@ -16,6 +16,12 @@ export const Link = {
   },
 };
 
+export const Secondary = {
+  args: {
+    variant: "secondary",
+  },
+};
+
 export const Inverse = {
   args: {
     variant: "inverse",
@@ -29,14 +35,14 @@ export const Unstyled = {
   args: {
     variant: "unstyled",
   },
-}
+};
 
 export const Next = {
   args: {
     label: "Next",
-    icon: "arrow-right"
+    icon: "arrow-right",
   },
-}
+};
 
 export const Previous = {
   args: {
@@ -44,4 +50,4 @@ export const Previous = {
     icon: "arrow-left",
     icon_before: true,
   },
-}
+};

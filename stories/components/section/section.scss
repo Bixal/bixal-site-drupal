@@ -28,18 +28,11 @@
   background-color: var(--c-base);
 }
 
-.bix-section--primary {
-  background-color: var(--c-primary);
-  color: color("white");
-
+.bix-section--primary,
+.bix-section--primary-alt {
   .bix-input {
     background-color: transparent;
     color: inherit;
-
-    &:focus,
-    &:active {
-      background-color: color-mix(in srgb, var(--c-primary) 5%, black 30%);
-    }
 
     &::placeholder {
       color: rgba(white, 0.6);
@@ -48,25 +41,29 @@
 
   legend {
     color: inherit;
+  }
+
+  .bix-button--secondary {
+    border-color: var(--c-base-darker);
+    color: var(--c-base-dark);
+  }
+}
+
+.bix-section--primary {
+  background-color: var(--c-primary);
+  color: color("white");
+
+  .bix-input {
+    &:focus,
+    &:active {
+      background-color: color-mix(in srgb, var(--c-primary) 5%, black 30%);
+    }
   }
 }
 
 .bix-section--primary-alt {
   background-color: var(--c-primary-alt);
   color: color("white");
-
-  .bix-input {
-    background-color: transparent;
-    color: inherit;
-
-    &::placeholder {
-      color: rgba(white, 0.6);
-    }
-  }
-
-  legend {
-    color: inherit;
-  }
 }
 
 .bix-section--accent-cool {

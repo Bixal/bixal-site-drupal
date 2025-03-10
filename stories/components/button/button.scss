@@ -54,3 +54,13 @@
     color: color("ink");
   }
 }
+
+.bix-button--secondary {
+  border-color: var(--c-base);
+  color: var(--c-base-darkest);
+
+  &:hover,
+  &:focus {
+    background-color: var(--c-base-darkest);
+  }
+}

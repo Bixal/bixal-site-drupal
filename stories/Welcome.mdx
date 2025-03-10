@@ -30,7 +30,7 @@ export const RightArrow = () => (
 
   </div>
 
-  <h2>About</h2>
+<h2>About</h2>
 
   <div className="sb-section">
 
@@ -81,31 +81,36 @@ export const RightArrow = () => (
     title="Base"
     subtitle="Grayscale colors"
     colors={{
-      White: '#FFFFFF',
-      "Base - USWDS Gray 4": '#F3F3F3',
-      Black: "#000"
+      White: "#FFFFFF",
+      "Base lightest": "var(--c-base-lightest)",
+      "Base lighter": "var(--c-base-lighter)",
+      "Base light": "var(--c-base-light)",
+      Base: "var(--c-base)",
+      "Base dark": "var(--c-base-dark)",
+      "Base darker": "var(--c-base-darker)",
+      "Base darkest": "var(--c-base-darkest)",
+      Black: "#000",
     }}
   />
   <ColorItem
     title="Primary"
     colors={{
-      primary: '#162D6A',
-      "primary-alt": '#7d0096'
+      primary: "#162D6A",
+      "primary-alt": "#7d0096",
     }}
   />
   <ColorItem
     title="Accent"
     colors={{
-      cool: '#bee9f7',
-      "cool-alt": '#05C5BC',
-      vivid: '#DEEC1C',
-      warm: '#FDA307',
-      "warm-alt": '#E02F00',
-      "warm-dark": '#55052A'
+      cool: "#bee9f7",
+      "cool-alt": "#05C5BC",
+      vivid: "#DEEC1C",
+      warm: "#FDA307",
+      "warm-alt": "#E02F00",
+      "warm-dark": "#55052A",
     }}
   />
 </ColorPalette>
-
 
 <style>
   {`
