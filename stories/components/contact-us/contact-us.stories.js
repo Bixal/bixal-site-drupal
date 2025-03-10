@@ -11,6 +11,7 @@ export default {
   title: "Components/Contact Us",
   component: ContactUs,
   args: {
+    section_additional_classes: ["bix-contact"],
     section_prefix: "Contact",
     section_variant: "primary",
     section_title: "How can we help? <br /> We'd love to hear from you.",
@@ -43,7 +44,7 @@ export default {
         },
       ],
     },
-    captcha: `{{ CAPTCHA }}`,
+    captcha: `<p>This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.</p>`,
     actions: [
       {
         type: "submit",
@@ -55,7 +56,7 @@ export default {
       {
         type: "reset",
         label: "Reset",
-        variant: "inverse",
+        variant: "secondary",
       },
     ],
   },
