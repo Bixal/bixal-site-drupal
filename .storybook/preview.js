@@ -12,9 +12,15 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ['Components', 'Pages', ['Base'], '*']
-      }
-    }
+        order: [
+          "Components",
+          ["Example Component", "Form", "Typography", "*"],
+          "Pages",
+          ["Base"],
+          "*",
+        ],
+      },
+    },
   },
 };
 
