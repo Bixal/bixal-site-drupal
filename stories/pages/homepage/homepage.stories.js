@@ -10,7 +10,7 @@ import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 import "../../components/description-list/description-list.stories";
-import * as ContactContent from "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -71,7 +71,7 @@ export const Default = {
         icon: "arrow-right",
       },
     },
-    contactContent: ContactContent.default.args,
+    contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };
