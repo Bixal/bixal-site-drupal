@@ -60,11 +60,11 @@
     }
   }
 
-  &:hover &__face--front, &:focus-within &__face--front {
+  &:hover &__face--front {
     transform: rotateY(-180deg);
   }
 
-  &:hover &__face--back, &:focus-within &__face--back {
+  &:hover &__face--back {
     transform: rotateY(0deg);
   }
 
