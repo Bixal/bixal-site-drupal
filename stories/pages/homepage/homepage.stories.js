@@ -1,7 +1,6 @@
 import Homepage from "./homepage.html.twig";
 
 import HeaderContent from "../../components/header/header.content.json";
-import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
 import "../../components/header/header.stories";
@@ -52,13 +51,6 @@ export const Default = {
         icon: "arrow-right",
         href: "#",
       },
-    },
-    flipCards: FlipCardContent,
-    clientsAndPartners: {
-      prefix: "Our clients and partners",
-      title:
-        "We work with leading government agencies and organizations who seek to create real change.",
-      collections: DescriptionListCollectionContent,
     },
     workWithUs: {
       variant: "tall",
