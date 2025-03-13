@@ -11,10 +11,18 @@
 **/
 #}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set graphic_list_classes = [
+  "bix-graphic-list",
+] | merge(additional_classes | default([])) %}
+
 {% set heading_type = heading_type | default("h3") %}
 
 {% if items %}
-<div class="bix-graphic-list">
+<div {{ attributes.addClass(graphic_list_classes) }}>
   {% for item in items %}
     <div class="bix-graphic-list__item">
       <div class="bix-graphic-list__image">
