@@ -133,7 +133,7 @@ function template_preprocess_site_wrapper_footer(array &$variables): void {
   }
   $variables['socialNav'] = [
     'variant' => NULL,
-    'aria_label' => t('Social links'),
+    'aria_label' => t('Bixal social links'),
     'items' => [
       [
         "href" => "https://www.linkedIn.com/company/bixal",
