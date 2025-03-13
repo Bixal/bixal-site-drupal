@@ -15,12 +15,6 @@
 .bix-description-list {
   --_description-color: var(--description-color, currentColor);
 
-  &__heading {
-    margin-top: units("05");
-    margin-bottom: units("05");
-    min-height: units(6);
-  }
-
   dd {
     position: relative;
 
@@ -34,6 +28,7 @@
 
   &__media {
     position: relative;
+    margin-bottom: units(2);
 
     &::before {
       content: "";
@@ -44,6 +39,13 @@
       background: var(--_description-color);
       left: 11px;
     }
+  }
+
+  &__heading {
+    margin-top: units("05");
+    margin-bottom: units("05");
+    line-height: 1.2;
+    min-height: units(6);
   }
 }
 

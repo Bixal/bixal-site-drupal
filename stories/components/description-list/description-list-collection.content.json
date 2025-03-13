@@ -2,7 +2,7 @@
   "collections": [
     {
       "variant": "accent-vivid",
-      "image": "<img src=\"static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp\" height=\"155px\" alt=\"\">",
+      "image": "<img src=\"https://www.bixal.com/sites/default/files/styles/large/public/2024-01/health.webp?itok=etHLuR9v\" height=\"155px\" alt=\"\">",
       "title": "Health",
       "items": [
         "Department of Health and Human Services",
@@ -10,12 +10,6 @@
         "National Institutes of Health",
         "National Library of Medicine"
       ]
-    },
-    {
-      "variant": "accent-cool-alt",
-      "image": "<img src=\"static/00c17f077e6046c2065a20cb466e1049/09633/international.webp\" height=\"155px\" alt=\"\">",
-      "title": "International Development",
-      "items": ["United States Agency for International Development"]
     },
     {
       "variant": "accent-warm",

@@ -8,7 +8,10 @@
 ] %}
 
 <dl{{ attributes.addClass(classes).addClass(additional_classes) }}>
+  {% if image %}
   {{ image }}
+  {% endif %}
+
   {% if title %}
     <dt class="bix-description-list__heading">
       {{ title }}

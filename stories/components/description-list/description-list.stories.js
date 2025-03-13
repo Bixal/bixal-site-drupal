@@ -20,7 +20,7 @@ export const AccentCool = {
 export const AccentCoolAlt = {
   args: {
     variant: "accent-cool-alt",
-    title: "International Devleopment",
+    title: "International Development",
     items: ["United States Agency for International Development"],
   },
 };
