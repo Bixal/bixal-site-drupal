@@ -1,0 +1,25 @@
+uuid: 286a7311-f650-4685-919a-785c3f252470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.graphic_list_section.field_graphic_lists
+    - paragraphs.paragraphs_type.graphic_list_section
+  module:
+    - entity_reference_revisions
+id: paragraph.graphic_list_section.default
+targetEntityType: paragraph
+bundle: graphic_list_section
+mode: default
+content:
+  field_graphic_lists:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  search_api_excerpt: true
