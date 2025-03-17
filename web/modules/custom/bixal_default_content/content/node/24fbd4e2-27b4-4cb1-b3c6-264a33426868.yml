@@ -280,6 +280,9 @@ default:
                   field_blurb_collection_variant:
                     -
                       value: three-up
+                  field_featured:
+                    -
+                      value: false
           field_title:
             -
               value: 'How we work'
