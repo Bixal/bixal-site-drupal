@@ -16,7 +16,7 @@ const data = {
         class: ["first", "page-item"],
         "aria-label": "Go to first page",
       },
-      text: "First",
+      text: "1",
     },
     pages: {
       1: {
@@ -74,29 +74,33 @@ const data = {
         },
         text: "7",
       },
+      8: {
+        href: "https://example.com/page/8",
+        attributes: {
+          class: ["page-item"],
+          "aria-label": "Go to page 8",
+        },
+        text: "8",
+      },
+      9: {
+        href: "https://example.com/page/9",
+        attributes: {
+          class: ["page-item"],
+          "aria-label": "Go to page 9",
+        },
+        text: "9",
+      },
     },
-    // next: {
-    //   href: "https://example.com/page/5",
-    //   attributes: {
-    //     class: ["next", "page-item"],
-    //     "aria-label": "Go to next page",
-    //   },
-    //   text: "Next",
-    // },
     last: {
-      href: "https://example.com/page/7",
+      href: "https://example.com/page/9",
       attributes: {
         class: ["last", "page-item"],
         "aria-label": "Go to last page",
       },
-      text: "Last",
+      text: "9",
     },
   },
   current: 1,
-  ellipses: {
-    previous: true,
-    next: true,
-  },
 };
 
 export const Default = {
