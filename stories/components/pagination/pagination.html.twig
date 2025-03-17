@@ -19,6 +19,8 @@
 #}
 
 
+{% import "./_pagination-macros.html.twig" as pagination %}
+
 {% set pager_ranges = {
   'default': range(current - 1, current + 1),
   'first_five': range(1, 5),
@@ -37,6 +39,25 @@
   <nav class="usa-pagination pager" aria-label="{{ 'Pagination'|t }}">
 
     <ul class="usa-pagination__list pager__items js-pager__items">
+
+
+      {% if items.previous and current > 1 %}
+        <li class="usa-pagination__item pager__item pager__item--previous">
+          <a class="usa-pagination__link usa-pagination__previous-page"
+            href="{{ items.previous.href }}"
+            title="{{ 'Go to previous page'|t }}"
+            rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}
+            aria-label="{{ 'Previous page'|t }}">
+
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#navigate_before"></use>
+            </svg>
+
+            <span class="usa-pagination__link-text">{{ 'Previous'|t }}</span>
+          </a>
+        </li>
+      {% endif %}
+
       {# List all items if 7 pages or less. #}
       {% if items.pages|length <= 7 %}
         {% for key, item in items.pages %}
@@ -180,6 +201,24 @@
         {% endif %}
 
       {% endif %}
+
+
+      {% if items.next and current != items.pages|length %}
+      <li class="usa-pagination__item pager__item pager__item--next 666">
+        <a class="usa-pagination__link usa-pagination__next-page"
+            href="{{ items.next.href }}"
+            title="{{ 'Go to next page'|t }}"
+            rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}
+            aria-label="{{ 'Next page'|t }}">
+
+          <span class="usa-pagination__link-text">{{ 'Next'|t }}</span>
+
+          <svg class="usa-icon" aria-hidden="true" role="img">
+            <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#navigate_next"></use>
+          </svg>
+        </a>
+      </li>
+    {% endif %}
     </ul>
   </nav>
 {% endif %}

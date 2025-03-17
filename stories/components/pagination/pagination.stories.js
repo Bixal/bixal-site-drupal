@@ -18,6 +18,14 @@ const data = {
       },
       text: "1",
     },
+    previous: {
+      // href: "https://example.com/page/3",
+      attributes: {
+        class: ["previous", "page-item"],
+        "aria-label": "Go to previous page",
+      },
+      text: "Previous",
+    },
     pages: {
       1: {
         href: "https://example.com/page/1",
@@ -90,6 +98,14 @@ const data = {
         },
         text: "9",
       },
+    },
+    next: {
+      // href: "https://example.com/page/5",
+      attributes: {
+        class: ["next", "page-item"],
+        "aria-label": "Go to next page",
+      },
+      text: "Next",
     },
     last: {
       href: "https://example.com/page/9",
