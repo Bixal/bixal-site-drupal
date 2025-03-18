@@ -12,6 +12,7 @@ import "../base/base.stories";
 import "../../components/blurb/blurb.stories";
 import "../../components/emphasis-block/emphasis-block.stories";
 
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
 // @TODO: Hero images should be webp.
@@ -21,8 +22,7 @@ export const Default = {
     hero: {
       variant: "image-bg",
       title: "Careers",
-      image:
-        "/static/72fb0e52a06fe7d036d793de33f62208/careers-hero.jpg",
+      image: "/static/72fb0e52a06fe7d036d793de33f62208/careers-hero.jpg",
     },
     intro: {
       title: "How can you improve the lives of people today?",
@@ -74,6 +74,7 @@ export const Default = {
     featuredJobs: {
       blocks: EmphasisBlockCollectionContent,
     },
-    footerContent: FooterContent.default.args
+    contactContent: ContactUs.default.args,
+    footerContent: FooterContent.default.args,
   },
 };
