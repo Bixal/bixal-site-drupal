@@ -374,6 +374,9 @@ default:
                   field_blurb_collection_variant:
                     -
                       value: two-up
+                  field_featured:
+                    -
+                      value: false
           field_prefix_title:
             -
               value: 'Our Core Values'
