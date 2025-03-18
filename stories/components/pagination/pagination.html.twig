@@ -79,7 +79,8 @@
       {% elseif current <= 4 and items.pages|length >= 7 %}
 
         {% for item in pager_ranges.first_five %}
-          <li
+          {{ pagination.button(current, item) }}
+          {# <li
             class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
             {% set aria_label = 'Page @item'|t({'@item': item}) %}
             <a
@@ -90,14 +91,11 @@
               {% if current == key %}aria-current="page"{% endif %}>
               {{- item -}}
             </a>
-          </li>
+          </li> #}
         {% endfor %}
 
         {# Add an ellipsis if there are further next pages. #}
-        <li
-          class="usa-pagination__item pager__item pager__item--ellipsis usa-pagination__overflow 555"
-          role="presentation">&hellip;
-        </li>
+        {{ pagination.overflow() }}
 
         {# Print last item if we are not on the last page. #}
         {% if items.last %}
@@ -127,10 +125,7 @@
         </li>
         {% endif %}
 
-        <li
-          class="usa-pagination__item pager__item pager__item--ellipsis usa-pagination__overflow 555"
-          role="presentation">&hellip;
-        </li>
+        {{ pagination.overflow() }}
 
         {% for item in pager_ranges.last_five %}
           <li
@@ -163,30 +158,13 @@
         </li>
         {% endif %}
 
-        <li
-          class="usa-pagination__item pager__item pager__item--ellipsis usa-pagination__overflow 555"
-          role="presentation">&hellip;
-        </li>
+        {{ pagination.overflow() }}
 
         {% for item in pager_ranges.default %}
-          <li
-            class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
-            {% set aria_label = 'Page @item'|t({'@item': item}) %}
-            <a
-              class="usa-pagination__button"
-              href="{{ item.href }}"
-              aria-label="{{ aria_label }}"
-              {{ item.attributes|without('href', 'title', 'aria-label') }}
-              {% if current == key %}aria-current="page"{% endif %}>
-              {{- item -}}
-            </a>
-          </li>
+          {{ pagination.button(current, item) }}
         {% endfor %}
 
-        <li
-          class="usa-pagination__item pager__item pager__item--ellipsis usa-pagination__overflow 555"
-          role="presentation">&hellip;
-        </li>
+        {{ pagination.overflow() }}
 
         {% if items.last %}
           <li class="usa-pagination__item pager__item pager__item--last 777">
@@ -201,7 +179,6 @@
         {% endif %}
 
       {% endif %}
-
 
       {% if items.next and current != items.pages|length %}
       <li class="usa-pagination__item pager__item pager__item--next 666">

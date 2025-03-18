@@ -1,0 +1,37 @@
+{% macro button(current, item) %}
+
+
+<li
+  class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
+
+  {#
+  /**
+    * Filters from JS drupal twig extension aren't the same as in Drupal.
+    *
+    * Example:
+    * {% set aria_label = 'Page @item'|t({'@item': item}) %}
+    *
+    * They only return the input without modifying. See:
+    *   - https://github.com/JohnAlbin/drupal-twig-extensions?tab=readme-ov-file#filters
+    *   - https://github.com/JohnAlbin/drupal-twig-extensions/issues/14
+  **/
+  #}
+  {% set aria_label = 'Page ' ~ item %}
+
+  <a
+    class="usa-pagination__button"
+    href="{{ item.href }}"
+    aria-label="{{ aria_label }}"
+    {{ item.attributes|without('href', 'title', 'aria-label') }}
+    {% if current == item %}aria-current="page"{% endif %}>
+    {{- item -}}
+  </a>
+</li>
+{% endmacro %}
+
+{# Ellipsis #}
+{% macro overflow() %}
+<li class="usa-pagination__item usa-pagination__overflow" role="presentation">
+  &hellip;
+</li>
+{% endmacro %}
