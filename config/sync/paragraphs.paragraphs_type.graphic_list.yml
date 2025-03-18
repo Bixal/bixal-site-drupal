@@ -1,0 +1,10 @@
+uuid: 6bfcea1d-3f45-47eb-8eb8-97722e27ec5a
+langcode: en
+status: true
+dependencies: {  }
+id: graphic_list
+label: 'Graphic List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

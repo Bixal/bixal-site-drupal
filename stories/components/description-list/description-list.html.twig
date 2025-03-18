@@ -1,13 +1,28 @@
+{#
+/**
+  * Description list
+  *
+  * Available variables:
+  * - variant: Optional string for variant classes.
+  *     Accepts: "", "primary-alt", "accent-cool", "accent-cool-alt", "accent-warm", "accent-vivid"
+  * - image (object, optional): The image object to display.
+  * - title (string, optional): Title of the description list. Defaults to "Health" if not provided.
+  * - items (array): Array of strings to display in definition list.
+**/
+#}
+
 {% extends "@components/description-list/description-list-base.html.twig" %}
 
 {# Image is decorative and needs to be hidden to avoid a11y issue. #}
-{% set image %}
-{% include "@partials/media-image.html.twig" with {
-    'image': image | default('<img src="static/8e16af4c76a75560bbd0719081f3c93b/09633/business-finance.webp" height="155px" alt="">'),
-    'additional_classes': ['bix-description-list__media'],
-    'aria_hidden': true
-  } %}
-{% endset %}
+{% if image %}
+  {% set image %}
+    {% include "@partials/media-image.html.twig" with {
+      'image': image,
+      'additional_classes': ['bix-description-list__media'],
+      'aria_hidden': true
+    } %}
+  {% endset %}
+{% endif %}
 
 {% if title is empty %}
   {% set title = 'Health' %}

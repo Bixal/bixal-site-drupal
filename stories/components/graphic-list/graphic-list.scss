@@ -1,0 +1,36 @@
+@use "uswds-core" as *;
+
+.bix-graphic-list {
+  display: flex;
+  flex-direction: column;
+  gap: units(3);
+
+  @include at-media("desktop") {
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    @include at-media("mobile-lg") {
+      display: flex;
+      flex: 1 0 100%;
+      flex-flow: row nowrap;
+      column-gap: units(3);
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+  }
+
+  &__title {
+    margin-top: units(2);
+  }
+
+  dt {
+    padding-left: 0;
+  }
+
+  &__body {
+    flex-grow: 1;
+  }
+}

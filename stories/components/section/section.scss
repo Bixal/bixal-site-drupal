@@ -45,6 +45,10 @@
       color: rgba(white, 0.6);
     }
   }
+
+  legend {
+    color: inherit;
+  }
 }
 
 .bix-section--primary-alt {
@@ -58,6 +62,10 @@
     &::placeholder {
       color: rgba(white, 0.6);
     }
+  }
+
+  legend {
+    color: inherit;
   }
 }
 

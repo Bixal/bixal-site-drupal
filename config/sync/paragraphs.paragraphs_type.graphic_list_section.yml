@@ -1,0 +1,10 @@
+uuid: d762043b-cabf-42c3-b4d4-a3144288c076
+langcode: en
+status: true
+dependencies: {  }
+id: graphic_list_section
+label: 'Graphic List  Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

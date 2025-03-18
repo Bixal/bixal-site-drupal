@@ -7,12 +7,11 @@ _meta:
   depends:
     65cf3a30-9202-4e32-b263-eeade9e421ac: media
     aa1d7e14-37a5-4677-ba05-b0162937197b: media
+    640588a2-9696-4017-8381-37232afe0939: media
     1dde9e85-a7dd-43ca-987e-a31ec0006606: media
     c87a540c-ed48-4a27-9275-0e53d5cfe00b: media
-    640588a2-9696-4017-8381-37232afe0939: media
-    22d96a9d-0d32-4320-8293-296d9dc00f97: media
     da97ce7c-48ef-46cd-a1f4-06b89acbefef: media
-    22bc94fd-97f5-4df1-83a9-bed00b4beabb: media
+    22d96a9d-0d32-4320-8293-296d9dc00f97: media
     6f99ae85-b406-4b92-aa13-879e256ce37a: media
     e8144e45-ac70-47a4-9e47-ed0cdf183ea7: media
     ea3450a1-cc31-45f4-b7bb-73759d81f803: media
@@ -226,8 +225,8 @@ default:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
-                  uuid: f9cec748-751c-4198-ba97-bfb1998de04f
-                  bundle: flip_cards
+                  uuid: 23351f0f-efb8-4de7-bb81-bb25f00de092
+                  bundle: graphic_list_section
                   default_langcode: en
                 default:
                   status:
@@ -235,18 +234,18 @@ default:
                       value: true
                   created:
                     -
-                      value: 1706794984
+                      value: 1742221333
                   behavior_settings:
                     -
                       value: {  }
-                  field_cards:
+                  field_graphic_lists:
                     -
                       entity:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: e46c17b5-918c-4abb-a0d9-38d80f8d100d
-                          bundle: flip_card
+                          uuid: 17222339-0a97-4318-9273-182e232c0aa7
+                          bundle: graphic_list
                           default_langcode: en
                         default:
                           status:
@@ -254,89 +253,73 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706794984
+                              value: 1742221333
                           behavior_settings:
                             -
                               value: {  }
-                          field_card_variant:
+                          field_description_list:
                             -
-                              value: accent-warm
-                          field_description:
-                            -
-                              value: 'We take pride in developing fully integrated and research-based marketing, branding, and communication strategies for our clients.'
-                          field_image:
-                            -
-                              entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
-                          field_title:
-                            -
-                              value: 'Strategic Communications'
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 7c676dce-8ece-42f7-bfb8-c6cd899911d8
-                          bundle: flip_card
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706795023
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_card_variant:
-                            -
-                              value: accent-cool
-                          field_description:
-                            -
-                              value: 'We want to know what propels people forward. Our approach allows us to solve real-life problems by having a clear and holistic understanding of the needs of users.'
-                          field_image:
-                            -
-                              entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
-                          field_title:
-                            -
-                              value: 'Human-Centered Design'
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: 6e5d0075-8c7a-471f-b6d8-78986bd6cfec
-                          bundle: flip_card
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706795044
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_card_variant:
-                            -
-                              value: primary
-                          field_description:
-                            -
-                              value: 'We like to focus on small improvements before rushing to the finish line. Applying agile methodologies allows us to respond to customer reactions every step of the way.'
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 7e3b120f-66d8-434d-bd50-0fe3998ad997
+                                  bundle: description_list_collection
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1742316377
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_description_lists:
+                                    -
+                                      entity:
+                                        _meta:
+                                          version: '1.0'
+                                          entity_type: paragraph
+                                          uuid: 28301ecd-3c96-4fe0-b1b1-cdf7b9b5ddab
+                                          bundle: description_list
+                                          default_langcode: en
+                                        default:
+                                          status:
+                                            -
+                                              value: true
+                                          created:
+                                            -
+                                              value: 1742316377
+                                          behavior_settings:
+                                            -
+                                              value: {  }
+                                          field_description_list_items:
+                                            -
+                                              value: 'Accessibility compliance and optimization.'
+                                            -
+                                              value: 'Customer and stakeholder experience research and design.'
+                                            -
+                                              value: 'Employee and operational experience and service design.'
+                                            -
+                                              value: 'Multimedia design.'
+                                          field_title:
+                                            -
+                                              value: 'Enhancing Public Employee Experiences'
                           field_image:
                             -
                               entity: 640588a2-9696-4017-8381-37232afe0939
                           field_title:
                             -
-                              value: 'Agile Development'
+                              value: 'People: Designing the Human Experience (HX)'
                     -
                       entity:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: 2ec97ec0-f7f1-444c-b4f9-26ed51283617
-                          bundle: flip_card
+                          uuid: 9241b4c3-95f5-454b-8712-f465555ac52f
+                          bundle: graphic_list
                           default_langcode: en
                         default:
                           status:
@@ -344,29 +327,27 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706795070
+                              value: 1742221370
                           behavior_settings:
                             -
                               value: {  }
-                          field_card_variant:
-                            -
-                              value: accent-cool-alt
-                          field_description:
-                            -
-                              value: 'Our human-centered approach to learning and knowledge management empowers people and organizations to make a positive impact in the workplace and in society.'
                           field_image:
                             -
-                              entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
+                              entity: 1dde9e85-a7dd-43ca-987e-a31ec0006606
                           field_title:
                             -
-                              value: 'Modernized Learning'
+                              value: 'Content: Creating User-Centric Content Strategies to Drive Effective Communications and Engagement'
+                          field_wysiwyg:
+                            -
+                              value: '<h4>Engaging Audiences and Stakeholders</h4><ul><li>Brand development and marketing.</li><li>Content strategy and implementation.</li><li>Stakeholder and audience engagement.</li><li>Strategic, data-driven communications.</li><li>Writing and editing.</li></ul>'
+                              format: html_text
                     -
                       entity:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: 90cc8aa1-007a-4066-ab12-d8065b0ba082
-                          bundle: flip_card
+                          uuid: 8c9218b0-c7f3-4460-838e-a5eabc579b40
+                          bundle: graphic_list
                           default_langcode: en
                         default:
                           status:
@@ -374,29 +355,55 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706795104
+                              value: 1742221394
                           behavior_settings:
                             -
                               value: {  }
-                          field_card_variant:
+                          field_image:
                             -
-                              value: primary-alt
-                          field_description:
+                              entity: c87a540c-ed48-4a27-9275-0e53d5cfe00b
+                          field_title:
                             -
-                              value: 'We offer analytical knowledge and methodologies to identify new patterns and opportunities to solve challenging problems and enable more effective decision making.'
+                              value: 'Technology: Developing Scalable and Secure Technology Solutions'
+                          field_wysiwyg:
+                            -
+                              value: '<h3>Building Scalable and Secure Solutions</h3><ul><li>Agile software development.</li><li>Automated testing and DevSecOps.</li><li>Cloud and shared services optimization.</li><li>Cybersecurity and security engineering.</li><li>Data pipelines and systems architecture.</li></ul>'
+                              format: html_text
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: c76f8f91-2ad6-4408-8c44-e3fa423c9ac8
+                          bundle: graphic_list
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1742221433
+                          behavior_settings:
+                            -
+                              value: {  }
                           field_image:
                             -
                               entity: da97ce7c-48ef-46cd-a1f4-06b89acbefef
                           field_title:
                             -
-                              value: 'Data Science and Analytics'
+                              value: ' Data: Advancing Data Analytics and Evaluation for Decision-Making'
+                          field_wysiwyg:
+                            -
+                              value: '<h3>Unlocking Insights for Smarter Decisions</h3><ul><li>AI/ML integration for decision-making.</li><li>Data engineering, science, analytics, and operations.</li><li>Data interoperability optimization.</li><li>Data strategy and governance.</li><li>Digital marketing analytics.</li><li>Impact assessment and monitoring, evaluation, and learning (MEL).</li></ul>'
+                              format: html_text
                     -
                       entity:
                         _meta:
                           version: '1.0'
                           entity_type: paragraph
-                          uuid: a873ba33-6937-402e-b9da-378e9889791f
-                          bundle: flip_card
+                          uuid: 9dae4c57-6bd1-4918-b0d3-9c768b0051da
+                          bundle: graphic_list
                           default_langcode: en
                         default:
                           status:
@@ -404,76 +411,29 @@ default:
                               value: true
                           created:
                             -
-                              value: 1706795138
+                              value: 1742221456
                           behavior_settings:
                             -
                               value: {  }
-                          field_card_variant:
-                            -
-                              value: accent-warm-dark
-                          field_description:
-                            -
-                              value: 'A client-focused approach to successfully migrate to the cloud and modernize the technology infrastructure to improve performance and security while reducing costs.'
                           field_image:
                             -
-                              entity: 22bc94fd-97f5-4df1-83a9-bed00b4beabb
+                              entity: 22d96a9d-0d32-4320-8293-296d9dc00f97
                           field_title:
                             -
-                              value: 'Cloud Computing'
+                              value: 'Processes: Accelerating Organizational Transformation and Learning'
+                          field_wysiwyg:
+                            -
+                              value: '<h3>Optimizing Government Operations</h3><ul><li>Agile transformation and change management.</li><li>Digital transformation strategy.</li><li>Knowledge management.</li><li>Learning and talent development.</li><li>Organizational development.</li><li>Organizational learning and adaptive management.</li></ul>'
+                              format: html_text
+          field_prefix_title:
             -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: 0cfe6bf9-9a72-4b32-b860-4e696abcc451
-                  bundle: section
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1706795222
-                  behavior_settings:
-                    -
-                      value: {  }
-                  field_button:
-                    -
-                      entity:
-                        _meta:
-                          version: '1.0'
-                          entity_type: paragraph
-                          uuid: cb322157-646e-47c0-8516-a141289bd5ae
-                          bundle: button
-                          default_langcode: en
-                        default:
-                          status:
-                            -
-                              value: true
-                          created:
-                            -
-                              value: 1706795222
-                          behavior_settings:
-                            -
-                              value: {  }
-                          field_icon:
-                            -
-                              value: arrow-right
-                          field_link:
-                            -
-                              uri: 'https://google.com'
-                              title: 'View our contract vehicles'
-                              options: {  }
-                  field_center_content:
-                    -
-                      value: true
-                  field_title:
-                    -
-                      value: 'Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services.'
+              value: 'Our expertise'
           field_section_variant:
             -
               value: base
+          field_title:
+            -
+              value: 'We provide federal agencies with integrated, outcome-driven solutions across five core disciplines:'
     -
       entity:
         _meta:
