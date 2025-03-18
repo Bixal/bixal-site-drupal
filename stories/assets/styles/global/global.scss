@@ -82,6 +82,7 @@ h6 {
   line-height: 1.2;
   margin: 0;
   transition: font-size 0.25s;
+  text-wrap-style: balance;
 }
 
 h1 {
@@ -96,7 +97,7 @@ h1 {
 
 h2 {
   @include heading-border;
-  font-size: px-to-rem(24px);
+  font-size: px-to-rem(28px);
   font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: units(4);
@@ -109,20 +110,28 @@ h2 {
 
 h3 {
   font-family: var(--font-ui);
-  font-size: px-to-rem(22px);
+  font-size: px-to-rem(24px);
   letter-spacing: -0.5px;
   margin-top: units(3);
+
+  @include at-media("tablet") {
+    font-size: px-to-rem(30px);
+  }
 }
 
 h4 {
-  font-size: px-to-rem(22px);
+  font-size: px-to-rem(20px);
   letter-spacing: -0.5px;
   margin-top: units(2);
+
+  @include at-media("tablet") {
+    font-size: px-to-rem(24px);
+  }
 }
 
 h5 {
   font-family: var(--font-ui);
-  font-size: px-to-rem(22px);
+  font-size: px-to-rem(20px);
   letter-spacing: -0.5px;
   margin-top: units(2);
 }

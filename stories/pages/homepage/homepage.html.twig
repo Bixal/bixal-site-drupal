@@ -2,9 +2,9 @@
 
 {% block content %}
   {% include "@components/section/section.html.twig" with whoWeAre %}
+  {% include "@pages/homepage/_our-expertise.html.twig" with expertise %}
   {% include "@components/section/section.html.twig" with whatWeDo %}
-
-  {% include "@pages/homepage/_core-services.html.twig" %}
+  {% include "@pages/homepage/_core-services.html.twig" with coreServices %}
   {% include "@pages/homepage/_clients-and-partners.html.twig" with clientsAndPartners %}
   {% include "@components/section/section.html.twig" with workWithUs %}
 {% endblock %}

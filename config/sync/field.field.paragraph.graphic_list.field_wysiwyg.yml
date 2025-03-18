@@ -1,0 +1,22 @@
+uuid: 09b9b848-11a5-4111-9b3e-3c2e56500b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wysiwyg
+    - paragraphs.paragraphs_type.graphic_list
+  module:
+    - text
+id: paragraph.graphic_list.field_wysiwyg
+field_name: field_wysiwyg
+entity_type: paragraph
+bundle: graphic_list
+label: WYSIWYG
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

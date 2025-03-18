@@ -1,7 +1,6 @@
 import Homepage from "./homepage.html.twig";
 
 import HeaderContent from "../../components/header/header.content.json";
-import FlipCardContent from "../../components/cards/flip-card.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
 import "../../components/header/header.stories";
@@ -9,6 +8,9 @@ import "../../components/section/section.stories";
 import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
+
+import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
+
 import "../../components/description-list/description-list.stories";
 import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
@@ -31,10 +33,17 @@ export const Default = {
     },
     whoWeAre: {
       prefix: "Who we are",
+      variant: "base",
       title:
         "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",
       description:
         "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
+    },
+    expertise: {
+      prefix: "Our expertise",
+      title:
+        "We provide federal agencies with integrated, outcome-driven solutions across five core disciplines:",
+      disciplines: GraphicListContent.default.args,
     },
     whatWeDo: {
       variant: "primary",
@@ -51,7 +60,17 @@ export const Default = {
         href: "#",
       },
     },
-    flipCards: FlipCardContent,
+    coreServices: {
+      center_content: true,
+      variant: "base",
+      title:
+        "Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services.",
+      cta: {
+        label: "View our contract vehicles",
+        href: "#",
+        icon: "arrow-right",
+      },
+    },
     clientsAndPartners: {
       prefix: "Our clients and partners",
       title:
