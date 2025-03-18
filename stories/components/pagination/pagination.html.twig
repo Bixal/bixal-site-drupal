@@ -18,13 +18,13 @@
 **/
 #}
 
-
 {% import "./_pagination-macros.html.twig" as pagination %}
 
+{% set total_pages = items.pages|length %}
 {% set pager_ranges = {
   'default': range(current - 1, current + 1),
   'first_five': range(1, 5),
-  'last_five': range(items.pages|length - 4, items.pages|length)
+  'last_five': range(total_pages - 4, total_pages)
 } %}
 
 {% if items.first.attributes is empty %}
@@ -39,59 +39,23 @@
   <nav class="usa-pagination pager" aria-label="{{ 'Pagination'|t }}">
 
     <ul class="usa-pagination__list pager__items js-pager__items">
-
-
       {% if items.previous and current > 1 %}
-        <li class="usa-pagination__item pager__item pager__item--previous">
-          <a class="usa-pagination__link usa-pagination__previous-page"
-            href="{{ items.previous.href }}"
-            title="{{ 'Go to previous page'|t }}"
-            rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}
-            aria-label="{{ 'Previous page'|t }}">
-
-            <svg class="usa-icon" aria-hidden="true" role="img">
-              <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#navigate_before"></use>
-            </svg>
-
-            <span class="usa-pagination__link-text">{{ 'Previous'|t }}</span>
-          </a>
-        </li>
+        {% set direction = items.previous %}
+        {{ pagination.link(direction, direction.icon_placement, direction.icon) }}
       {% endif %}
 
-      {# List all items if 7 pages or less. #}
-      {% if items.pages|length <= 7 %}
+      {# 1. List all items if 7 pages or less. #}
+      {% if total_pages <= 7 %}
         {% for key, item in items.pages %}
-          <li
-            class="usa-pagination__item usa-pagination__page-no pager__item{{ current == key ? ' is-active' : '' }}">
-            {% set aria_label = 'Page @key'|t({'@key': key}) %}
-            <a
-              class="usa-pagination__button"
-              href="{{ item.href }}"
-              aria-label="{{ aria_label }}"
-              {{ item.attributes|without('href', 'title', 'aria-label') }}
-              {% if current == key %}aria-current="page"{% endif %}>
-              {{- key -}}
-            </a>
-          </li>
+          {{ pagination.button(current, item, key) }}
         {% endfor %}
-      {# Get the first five pages of a large dataset. #}
+
+      {# 2. Get the first five pages of a large dataset. #}
       {# Example: 1, 2, 3, *4*, 5 … 8 #}
-      {% elseif current <= 4 and items.pages|length >= 7 %}
+      {% elseif current <= 4 and total_pages >= 7 %}
 
         {% for item in pager_ranges.first_five %}
-          {{ pagination.button(current, item) }}
-          {# <li
-            class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
-            {% set aria_label = 'Page @item'|t({'@item': item}) %}
-            <a
-              class="usa-pagination__button"
-              href="{{ item.href }}"
-              aria-label="{{ aria_label }}"
-              {{ item.attributes|without('href', 'title', 'aria-label') }}
-              {% if current == key %}aria-current="page"{% endif %}>
-              {{- item -}}
-            </a>
-          </li> #}
+          {{ pagination.button(current, items.pages[item], item) }}
         {% endfor %}
 
         {# Add an ellipsis if there are further next pages. #}
@@ -99,103 +63,49 @@
 
         {# Print last item if we are not on the last page. #}
         {% if items.last %}
-          <li class="usa-pagination__item pager__item pager__item--last 777">
-            <a
-              class="usa-pagination__button"
-              href="{{ items.last.href }}"
-              title="{{ 'Go to last page'|t }}"{{ items.last.attributes|without('href', 'title') }}
-              aria-label="{{ 'Last page'|t }}">
-              <span class="usa-pagination__link-text">{{ items.last.text|t }}</span>
-            </a>
-          </li>
+          {{ pagination.button(current, items.last) }}
         {% endif %}
-      {# Get the last five pages when close to the end of dataset. #}
+
+      {# 3. Get the last five pages when close to the end of dataset. #}
       {# Example: 1 … 4, *5*, 6, 7, 8 #}
-      {% elseif current >= items.pages|length - 3 %}
+      {% elseif current >= total_pages - 3 %}
 
         {% if items.first %}
-        <li class="usa-pagination__item pager__item pager__item--last 777">
-          <a
-            class="usa-pagination__button"
-            href="{{ items.first.href }}"
-            title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}
-            aria-label="{{ 'first page'|t }}">
-            <span class="usa-pagination__link-text">{{ items.first.text|t }}</span>
-          </a>
-        </li>
+        {{ pagination.button(current, items.first) }}
         {% endif %}
 
         {{ pagination.overflow() }}
 
         {% for item in pager_ranges.last_five %}
-          <li
-            class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
-            {% set aria_label = 'Page @item'|t({'@item': item}) %}
-            <a
-              class="usa-pagination__button"
-              href="{{ item.href }}"
-              aria-label="{{ aria_label }}"
-              {{ item.attributes|without('href', 'title', 'aria-label') }}
-              {% if current == key %}aria-current="page"{% endif %}>
-              {{- item -}}
-            </a>
-          </li>
+          {{ pagination.button(current, items.pages[item], item) }}
         {% endfor %}
 
-      {# Default case: Current -1, Current, Current + 1 #}
+      {# 4. Default case: Current -1, Current, Current + 1 #}
       {# Example: 1 … 4, *5*, 6 … 9 #}
       {% else %}
 
         {% if items.first %}
-        <li class="usa-pagination__item pager__item pager__item--last 777">
-          <a
-            class="usa-pagination__button"
-            href="{{ items.first.href }}"
-            title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}
-            aria-label="{{ 'first page'|t }}">
-            <span class="usa-pagination__link-text">{{ items.first.text|t }}</span>
-          </a>
-        </li>
+        {{ pagination.button(current, items.first) }}
         {% endif %}
 
         {{ pagination.overflow() }}
 
-        {% for item in pager_ranges.default %}
-          {{ pagination.button(current, item) }}
+        {% for key, item in pager_ranges.default %}
+          {{ pagination.button(current, items.pages[item], item) }}
         {% endfor %}
 
         {{ pagination.overflow() }}
 
         {% if items.last %}
-          <li class="usa-pagination__item pager__item pager__item--last 777">
-            <a
-              class="usa-pagination__button"
-              href="{{ items.last.href }}"
-              title="{{ 'Go to last page'|t }}"{{ items.last.attributes|without('href', 'title') }}
-              aria-label="{{ 'Last page'|t }}">
-              <span class="usa-pagination__link-text">{{ items.last.text|t }}</span>
-            </a>
-          </li>
+          {{ pagination.button(current, items.last) }}
         {% endif %}
 
       {% endif %}
 
-      {% if items.next and current != items.pages|length %}
-      <li class="usa-pagination__item pager__item pager__item--next 666">
-        <a class="usa-pagination__link usa-pagination__next-page"
-            href="{{ items.next.href }}"
-            title="{{ 'Go to next page'|t }}"
-            rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}
-            aria-label="{{ 'Next page'|t }}">
-
-          <span class="usa-pagination__link-text">{{ 'Next'|t }}</span>
-
-          <svg class="usa-icon" aria-hidden="true" role="img">
-            <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#navigate_next"></use>
-          </svg>
-        </a>
-      </li>
-    {% endif %}
+      {% if items.next and current != total_pages %}
+      {% set direction = items.next %}
+      {{ pagination.link(direction, direction.icon_placement, direction.icon) }}
+      {% endif %}
     </ul>
   </nav>
 {% endif %}

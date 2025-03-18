@@ -1,8 +1,8 @@
-{% macro button(current, item) %}
-
+{# Button for page number #}
+{% macro button(current, item, key) %}
 
 <li
-  class="usa-pagination__item usa-pagination__page-no pager__item{{ current == item ? ' is-active' : '' }}">
+  class="usa-pagination__item usa-pagination__page-no pager__item{{ current == key ? ' is-active' : '' }}">
 
   {#
   /**
@@ -16,15 +16,15 @@
     *   - https://github.com/JohnAlbin/drupal-twig-extensions/issues/14
   **/
   #}
-  {% set aria_label = 'Page ' ~ item %}
 
+  {% set aria_label = item.attributes["aria-label"] %}
   <a
     class="usa-pagination__button"
     href="{{ item.href }}"
     aria-label="{{ aria_label }}"
     {{ item.attributes|without('href', 'title', 'aria-label') }}
-    {% if current == item %}aria-current="page"{% endif %}>
-    {{- item -}}
+    {% if current == key %}aria-current="page"{% endif %}>
+    {{- item.text -}}
   </a>
 </li>
 {% endmacro %}
@@ -33,5 +33,29 @@
 {% macro overflow() %}
 <li class="usa-pagination__item usa-pagination__overflow" role="presentation">
   &hellip;
+</li>
+{% endmacro %}
+
+{# Previous and Next links #}
+{% macro link(direction, icon_placement, icon) %}
+
+{% set icon = "icons/" ~ direction.icon ~ ".svg" %}
+
+<li class="usa-pagination__item usa-pagination__arrow">
+  <a class="usa-pagination__link"
+    href="{{ direction.href }}"
+    {{ direction.attributes|without('href', 'title') }}
+    aria-label="{{ direction.attributes["aria-label"] }}">
+
+    {% if icon_placement == "before" %}
+    <span aria-hidden="true">{{ source(icon) }}</span>
+    {% endif %}
+
+    <span class="usa-pagination__link-text">{{ direction.text }}</span>
+
+    {% if icon_placement == "after" %}
+    <span aria-hidden="true">{{ source(icon) }}</span>
+    {% endif %}
+  </a>
 </li>
 {% endmacro %}
