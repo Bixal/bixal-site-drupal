@@ -40,6 +40,6 @@
     "storybook": "^7.6.10",
     "stylelint": "^15.11.0",
     "stylelint-prettier": "^4.1.0",
-    "vite-plugin-twig-drupal": "^1.2.1"
+    "vite-plugin-twig-drupal": "^1.6.0"
   }
 }
