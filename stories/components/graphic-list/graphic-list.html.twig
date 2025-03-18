@@ -37,7 +37,7 @@
             </{{heading_type}}>
           {% endif %}
 
-          {{ item.body }}
+          {{ item.body | raw }}
         </div>
       </div>
     {% endfor %}
