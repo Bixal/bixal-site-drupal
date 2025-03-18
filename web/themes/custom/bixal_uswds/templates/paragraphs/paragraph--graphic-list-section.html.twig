@@ -39,13 +39,17 @@
  */
 #}
 {% extends  "paragraph--default.html.twig" %}
-{# Pulling card data from paragraphs into a twig array to 
+{# Pulling card data from paragraphs into a twig array to
   utilize in the card group component #}
 {% set items = [] %}
 {% for item in content.field_graphic_lists| field_value %}
+  {% set body %}
+    {{ drupal_field('field_wysiwyg', 'paragraph', item['#paragraph'].id())| field_value }}
+    {{ drupal_field('field_description_list', 'paragraph', item['#paragraph'].id())| field_value }}
+  {% endset %}
   {% set items = items|merge([
-      { title: item['#paragraph'].field_title.value,
-        body: item['#paragraph'].field_wysiwyg.value,
+      { title: drupal_field('field_title', 'paragraph', item['#paragraph'].id())| field_value,
+        body:  body,
         image_src: file_url(item['#paragraph'].field_image.entity.field_media_image.entity.uri.getString()),
        }
       ]) %}

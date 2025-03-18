@@ -1,0 +1,79 @@
+uuid: 73f10a1e-3a81-48ec-a693-20d98bd3ff15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_list
+    - paragraphs.paragraphs_type.description_list_collection
+    - paragraphs.paragraphs_type.graphic_list
+  module:
+    - entity_reference_revisions
+id: paragraph.graphic_list.field_description_list
+field_name: field_description_list
+entity_type: paragraph
+bundle: graphic_list
+label: 'Description List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      description_list_collection: description_list_collection
+    negate: 0
+    target_bundles_drag_drop:
+      address:
+        weight: 18
+        enabled: false
+      blurb:
+        weight: 19
+        enabled: false
+      blurb_collection:
+        weight: 20
+        enabled: false
+      button:
+        weight: 21
+        enabled: false
+      description_list:
+        weight: 22
+        enabled: false
+      description_list_collection:
+        weight: 23
+        enabled: true
+      emphasis_block:
+        weight: 24
+        enabled: false
+      emphasis_block_collection:
+        weight: 25
+        enabled: false
+      flip_card:
+        weight: 26
+        enabled: false
+      flip_cards:
+        weight: 27
+        enabled: false
+      graphic_list:
+        weight: 28
+        enabled: false
+      graphic_list_section:
+        weight: 29
+        enabled: false
+      job_listing:
+        weight: 30
+        enabled: false
+      people_list:
+        weight: 31
+        enabled: false
+      section:
+        weight: 32
+        enabled: false
+      view_embed:
+        weight: 33
+        enabled: false
+      wysiwyg:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions
