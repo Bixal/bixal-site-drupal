@@ -257,16 +257,62 @@ default:
                           behavior_settings:
                             -
                               value: {  }
+                          field_description_list:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 7e3b120f-66d8-434d-bd50-0fe3998ad997
+                                  bundle: description_list_collection
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1742316377
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_description_lists:
+                                    -
+                                      entity:
+                                        _meta:
+                                          version: '1.0'
+                                          entity_type: paragraph
+                                          uuid: 28301ecd-3c96-4fe0-b1b1-cdf7b9b5ddab
+                                          bundle: description_list
+                                          default_langcode: en
+                                        default:
+                                          status:
+                                            -
+                                              value: true
+                                          created:
+                                            -
+                                              value: 1742316377
+                                          behavior_settings:
+                                            -
+                                              value: {  }
+                                          field_description_list_items:
+                                            -
+                                              value: 'Accessibility compliance and optimization.'
+                                            -
+                                              value: 'Customer and stakeholder experience research and design.'
+                                            -
+                                              value: 'Employee and operational experience and service design.'
+                                            -
+                                              value: 'Multimedia design.'
+                                          field_title:
+                                            -
+                                              value: 'Enhancing Public Employee Experiences'
                           field_image:
                             -
                               entity: 640588a2-9696-4017-8381-37232afe0939
                           field_title:
                             -
                               value: 'People: Designing the Human Experience (HX)'
-                          field_wysiwyg:
-                            -
-                              value: '<h3>Enhancing Public Employee Experiences</h3><ul><li>Accessibility compliance and optimization.</li><li>Customer and stakeholder experience research and design.</li><li>Employee and operational experience and service design.</li><li>Multimedia design.</li></ul>'
-                              format: html_text
                     -
                       entity:
                         _meta:
@@ -293,7 +339,7 @@ default:
                               value: 'Content: Creating User-Centric Content Strategies to Drive Effective Communications and Engagement'
                           field_wysiwyg:
                             -
-                              value: '<h3>Engaging Audiences and Stakeholders</h3><ul><li>Brand development and marketing.</li><li>Content strategy and implementation.</li><li>Stakeholder and audience engagement.</li><li>Strategic, data-driven communications.</li><li>Writing and editing.</li></ul>'
+                              value: '<h4>Engaging Audiences and Stakeholders</h4><ul><li>Brand development and marketing.</li><li>Content strategy and implementation.</li><li>Stakeholder and audience engagement.</li><li>Strategic, data-driven communications.</li><li>Writing and editing.</li></ul>'
                               format: html_text
                     -
                       entity:
