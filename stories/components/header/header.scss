@@ -23,15 +23,14 @@
 .bix-site-nav__toggle {
   background-color: #fff;
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
+  height: px-to-rem(40px);
   margin: 0;
   padding: 0;
   position: relative;
   text-transform: uppercase;
-  width: 40px;
+  width: px-to-rem(40px);
 
   @include at-media("desktop") {
     display: none;
@@ -43,16 +42,15 @@
 }
 
 .bix-toggle-icon {
-  height: 1px;
+  height: px-to-rem(1px);
   left: 5px;
   position: absolute;
   top: 12px;
-  width: 30px;
+  width: px-to-rem(30px);
 
   &__line {
     background-color: #000;
-    border-radius: 10%;
-    height: 3px;
+    height: px-to-rem(3px);
     left: 0;
     position: absolute;
     top: 0;
@@ -105,6 +103,10 @@
   @include at-media-max("desktop") {
     background-color: var(--c-primary-alt);
     color: color("white");
+    max-height: calc(100vh - 88px); // 88px offset the header
+    overflow-y: auto;
+    // Limits scrolling to active nav to avoid accidentally scrolling content.
+    overscroll-behavior-y: contain;
     position: absolute;
     top: 100%;
     left: 0;
@@ -130,7 +132,7 @@
   }
 
   &__item {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 
     @include at-media-max("desktop") {
       border-top: 1px solid rgba(white, 0.2);
@@ -144,8 +146,11 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-decoration: none;
+    outline-color: inherit;
+    outline-offset: px-to-rem(2px);
 
     @include at-media("desktop") {
+      outline-color: revert;
       padding-top: units(1);
       padding-bottom: units(1);
 
@@ -164,8 +169,8 @@
     @include at-media("desktop") {
       background-color: var(--c-accent-cool-alt);
       content: "";
-      height: 2px;
-      width: 52px;
+      height: px-to-rem(2px);
+      width: px-to-rem(52px);
       position: absolute;
       top: 100%;
       left: 50%;

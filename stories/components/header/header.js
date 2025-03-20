@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menuLabel.textContent = labelOpen;
     Toggle.show(menuTrigger, menuTarget);
   }
-  
+
   /**
    * Hide menu and revert text label to default state.
    */
@@ -26,14 +26,21 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-   * Close menu when user hits escape key.
+   * Close dropdown if the focus moves away or user hits escape.
    *
    * @param {Event} event
    */
-  function handleEscape(event) {
+  function handleKeyboard(event) {
     const isActive = Toggle.checkActive(menuTarget);
 
-    if (event.key === "Escape" && isActive) {
+    if (!isActive) {
+      return;
+    }
+
+    if (
+      !menuTarget.contains(document.activeElement) ||
+      (event.key === "Escape" && isActive)
+    ) {
       closeMenu();
     }
   }
@@ -74,9 +81,8 @@ window.addEventListener("DOMContentLoaded", () => {
     handleResize(desktopBreakpoint);
     menuTrigger.addEventListener("click", handleClick);
     desktopBreakpoint.addEventListener("change", handleResize);
-    document.addEventListener("keyup", handleEscape);
+    document.addEventListener("keyup", handleKeyboard);
   }
 
   init();
 });
-
