@@ -112,7 +112,7 @@ h3 {
 
 h4 {
   font-size: px-to-rem(20px);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.25px;
   margin-top: units(2);
 
   @include at-media("tablet") {

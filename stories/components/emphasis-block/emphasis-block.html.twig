@@ -1,4 +1,13 @@
-<div class="bix-emphasis-block">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set emphasis_block_classes = [
+  "bix-emphasis-block",
+  (variant ? "bix-emphasis-block--" ~ variant)
+] | merge(additional_classes | default([])) %}
+
+<div {{ attributes.addClass(emphasis_block_classes) }}>
   {% if prefix %}
   <p class="bix-emphasis-block__prefix">
     {{ prefix }}

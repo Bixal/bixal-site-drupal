@@ -1,0 +1,53 @@
+@use "uswds-core" as *;
+
+.bix-project-metadata {
+  @include at-media("tablet") {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: units(3);
+    align-items: stretch;
+  }
+
+  > * {
+    background-color: var(--c-base);
+    padding: units("105") units(1);
+
+    @include at-media("tablet") {
+      flex: 1 1 50%;
+    }
+  }
+
+  .bix-project-domain {
+    flex-shrink: 2;
+  }
+
+  .bix-emphasis-block {
+    height: 100%;
+  }
+}
+
+.bix-case-study__subsection {
+  margin-top: units(10);
+
+  h2 ~ h2 {
+    margin-top: units(10);
+  }
+}
+
+.bix-case-breakdown {
+  font-size: 1rem;
+
+  @include at-media("tablet") {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: units(3);
+
+    > * {
+      flex: 1 1 33.33%;
+    }
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}

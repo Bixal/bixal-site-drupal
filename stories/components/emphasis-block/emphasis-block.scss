@@ -28,10 +28,20 @@
 }
 
 .bix-emphasis-block {
-  --_link-bg-color: var(--link-bg-color, rgba(125, 0, 150, 0.5));
+  --_emphasis-text-color: var(--emphasis-text-color, #{color("ink")});
+  --_emphasis-background-color: var(--emphasis-background-color, --c-base);
+  --_emphasis-link-bg-color: var(
+    --emphasis-link-bg-color,
+    rgba(125, 0, 150, 0.5)
+  );
+  --_emphasis-border-color: var(
+    --emphasis-border-color,
+    oklch(from var(--_emphasis-text-color) l c h / 0.2)
+  );
 
   align-items: center;
-  background-color: var(--c-base);
+  background-color: var(--_emphasis-background-color);
+  color: var(--_emphasis-text-color);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -43,9 +53,8 @@
   }
 
   &__prefix {
-    --_border-color: color-mix(in srgb, black, white 75%);
-    border-left: 2px solid var(--_border-color);
-    border-right: 2px solid var(--_border-color);
+    border-left: 2px solid var(--_emphasis-border-color);
+    border-right: 2px solid var(--_emphasis-border-color);
     font-weight: 700;
     font-size: px-to-rem(16px);
     line-height: 1;
@@ -69,7 +78,7 @@
   }
 
   &__link {
-    box-shadow: var(--_link-bg-color) 0px -2px 0px inset;
+    box-shadow: var() 0px -2px 0px inset;
     text-decoration: none;
     padding-left: units("05");
     padding-right: units("05");
@@ -77,7 +86,41 @@
 
     &:hover,
     &:focus {
-      box-shadow: var(--_link-bg-color) 0px -100px 0px inset;
+      box-shadow: var(--_emphasis-link-bg-color) 0px -100px 0px inset;
     }
   }
+}
+
+.bix-emphasis-block--base {
+  --emphasis-background-color: var(--c-base);
+}
+
+.bix-emphasis-block--primary {
+  --emphasis-text-color: #ffffff;
+  --emphasis-background-color: var(--c-primary);
+  --emphasis-link-bg-color: oklch(from var(--c-accent-cool-alt) l c h / 0.6);
+}
+
+.bix-emphasis-block--primary-alt {
+  --emphasis-text-color: #ffffff;
+  --emphasis-background-color: var(--c-primary-alt);
+  --emphasis-link-bg-color: oklch(from var(--c-primary) l c h / 0.6);
+}
+
+.bix-emphasis-block--accent-cool {
+  --emphasis-background-color: var(--c-accent-cool);
+}
+
+.bix-emphasis-block--accent-cool-alt {
+  --emphasis-background-color: var(--c-accent-cool-alt);
+}
+
+.bix-emphasis-block--accent-warm {
+  --emphasis-background-color: var(--c-accent-warm);
+  --emphasis-link-bg-color: oklch(from var(--c-primary-alt) l c h / 0.6);
+}
+
+.bix-emphasis-block--accent-vivid {
+  --emphasis-background-color: var(--c-accent-vivid);
+  --emphasis-link-bg-color: oklch(from var(--c-accent-warm) l c h / 0.8);
 }

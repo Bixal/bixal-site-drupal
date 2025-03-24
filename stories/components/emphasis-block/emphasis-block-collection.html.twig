@@ -1,4 +1,13 @@
-<div class="bix-emphasis-blocks">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set emphasis_blocks_classes = [
+  "bix-emphasis-blocks",
+  (variant ? "bix-emphasis-block--" ~ variant)
+] | merge(additional_classes | default([])) %}
+
+<div {{ attributes.addClass(emphasis_blocks_classes) }}>
   <div class="bix-emphasis-blocks__body">
     {% for block in blocks %}
     {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}

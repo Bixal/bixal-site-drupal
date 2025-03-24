@@ -48,6 +48,10 @@
         {% include "@partials/section-title.html.twig" %}
       {% endif %}
 
+      {% if subtitle %}
+        <div class="bix-subtitle">{{ subtitle }}</div>
+      {% endif %}
+
     {% endblock %}
 
     {% block description %}
