@@ -16,21 +16,13 @@
       flex: 1 1 50%;
     }
   }
-
-  .bix-project-domain {
-    flex-shrink: 2;
-  }
-
-  .bix-emphasis-block {
-    height: 100%;
-  }
 }
 
 .bix-case-study__subsection {
-  margin-top: units(10);
+  margin-block-start: units(10);
 
   h2 ~ h2 {
-    margin-top: units(10);
+    margin-block-start: units(10);
   }
 }
 
