@@ -12,9 +12,12 @@ export default {
   title: "Components/Footer",
   component: Footer,
   args: {
-    socialNav: SocialNav.default.args,
-    ...FooterContent
-  }
+    socialNav: {
+      ...SocialNav.default.args,
+      aria_label: "Bixal social links",
+    },
+    ...FooterContent,
+  },
 };
 
 export const Default = {};

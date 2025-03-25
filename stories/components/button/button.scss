@@ -12,7 +12,6 @@
   line-height: 1;
   outline-color: var(--c-accent-cool-alt);
   padding: units(2) units(3);
-  text-decoration: none;
   transition: 0.2s ease-in;
 
   &:hover,
@@ -25,6 +24,10 @@
   svg {
     fill: currentColor;
   }
+}
+
+a.bix-button {
+  text-decoration: revert;
 }
 
 .bix-button--icon-before {
