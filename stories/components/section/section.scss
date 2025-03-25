@@ -97,13 +97,13 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   min-height: px-to-rem(300px);
-  padding-top: units(5);
-  padding-bottom: units(5);
+  padding-block-start: units(5);
+  padding-block-end: units(5);
 
   @include at-media("desktop") {
     min-height: px-to-rem(600px);
-    padding-top: px-to-rem(160px);
-    padding-bottom: px-to-rem(160px);
+    padding-block-start: px-to-rem(160px);
+    padding-block-end: px-to-rem(160px);
   }
 }
 
