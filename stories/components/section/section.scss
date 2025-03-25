@@ -1,17 +1,19 @@
 @use "uswds-core" as *;
 
-// @TODO Create mixin.
 .bix-section {
-  padding-top: units(5);
-  padding-bottom: units(5);
+  --_section-background-color: var(--section-background-color, none);
+
+  background-color: var(--_section-background-color);
+  padding-block-start: units(5);
+  padding-block-end: units(5);
 
   @include at-media("tablet") {
-    padding-top: units(10);
-    padding-bottom: units(10);
+    padding-block-start: units(10);
+    padding-block-end: units(10);
   }
 
   .bix-section__title:not(:first-of-type) {
-    margin-top: units(8);
+    margin-block-start: units(8);
   }
 
   &__body p {
@@ -20,16 +22,17 @@
   }
 
   &__footer {
-    margin-top: units(6);
+    margin-block-start: units(6);
   }
 }
 
 .bix-section--base {
-  background-color: var(--c-base);
+  --section-background-color: var(--c-base);
 }
 
 .bix-section--primary {
-  background-color: var(--c-primary);
+  --section-background-color: var(--c-primary);
+
   color: color("white");
 
   .bix-input {
@@ -52,7 +55,8 @@
 }
 
 .bix-section--primary-alt {
-  background-color: var(--c-primary-alt);
+  --section-background-color: var(--c-primary-alt);
+
   color: color("white");
 
   .bix-input {
@@ -70,7 +74,7 @@
 }
 
 .bix-section--accent-cool {
-  background-color: var(--c-accent-cool);
+  --section-background-color: var(--c-accent-cool);
 }
 
 .bix-section--center-content {
