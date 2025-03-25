@@ -75,7 +75,8 @@ export const RightArrow = () => (
   </div>
 </div>
 
-<h2>Colors</h2>
+## Colors
+
 <ColorPalette>
   <ColorItem
     title="Base"
@@ -95,8 +96,8 @@ export const RightArrow = () => (
   <ColorItem
     title="Primary"
     colors={{
-      primary: "#162D6A",
-      "primary-alt": "#7d0096",
+      primary: "var(--c-primary)",
+      "primary-alt": "var(--c-primary-alt)",
     }}
   />
   <ColorItem
@@ -108,6 +109,38 @@ export const RightArrow = () => (
       warm: "#FDA307",
       "warm-alt": "#E02F00",
       "warm-dark": "#55052A",
+    }}
+  />
+</ColorPalette>
+
+### State colors
+
+<ColorPalette>
+  <ColorItem
+    title="Info"
+    subtitle="Informational states"
+    colors={{
+      Info: "var(--c-info)",
+      "Info dark": "var(--c-info-dark)",
+      "Info darker": "var(--c-info-darker)",
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    colors={{
+      Warning: "var(--c-warning)",
+    }}
+  />
+  <ColorItem
+    title="Error"
+    colors={{
+      Error: "var(--c-error)",
+    }}
+  />
+  <ColorItem
+    title="Urgent"
+    colors={{
+      Urgent: "var(--c-urgent)",
     }}
   />
 </ColorPalette>
