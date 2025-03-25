@@ -118,11 +118,11 @@ export const Alternative = {
           <div class="bix-project-metadata">
             <div className="bix-project-metadata__item">
               <dl class="bix-description-list bix-description-list--accent-cool-alt">
-                <dt class="bix-description-list__heading">Partners</dt>
+                <dt>Partners</dt>
                 <dd>U.S. Department of Homeland Security (DHS)</dd>
                 <dd>Federal Emergency Management Agency (FEMA)</dd>
                 <dt>Domain</dt>
-                <dd class="">FEMA.gov</dd>
+                <dd>FEMA.gov</dd>
               </dl>
             </div>
             <div class="bix-project-metadata__item">
@@ -213,10 +213,19 @@ export const Alternative = {
         variant: "accent-cool",
         center_content: true,
         heading_type: "h2",
-        prefix: "The Outcome",
+        prefix: "Impact",
         title: "A more consistent voice",
         description:
           "<p>Bixal’s team provided an improved approach to FEMA’s video library and assisted the agency in building a more consistent voice for their brand with more in-depth and engaging narratives.</p>",
+      },
+      {
+        variant: "primary-alt",
+        heading_type: "h2",
+        prefix: "Conclusion",
+        title:
+          "An easier way for state and local partners to adhere to WIOA's provisions",
+        description:
+          "<p>Bixal’s work for ED and DOL made it much easier for state and local partners to adhere to WIOA's provisions, facilitated the creation of more and better career paths for all Americans, in particular those facing significant hurdles to employment, and demonstrated how well federal agencies can work for the people they serve when they lead with human-centered design and an ethos of constant improvement.</p>",
       },
     ],
   },

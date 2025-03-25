@@ -172,6 +172,10 @@ dd {
 
 dt {
   font-family: var(--font-heading);
+
+  ~ dt {
+    margin-top: units("105");
+  }
 }
 
 dd {

@@ -15,6 +15,12 @@
 .bix-description-list {
   --_description-color: var(--description-color, currentColor);
 
+  &__heading {
+    margin-top: units("05");
+    margin-bottom: units("05");
+    line-height: 1.2;
+  }
+
   dd {
     position: relative;
 
@@ -23,6 +29,13 @@
       color: var(--_description-color);
       position: absolute;
       left: 8px;
+    }
+  }
+
+  // Only set header height on lists with images.
+  &:has(.bix-description-list__media) dt {
+    @include at-media("tablet") {
+      min-height: units(4);
     }
   }
 
@@ -39,13 +52,6 @@
       background: var(--_description-color);
       left: 11px;
     }
-  }
-
-  &__heading {
-    margin-top: units("05");
-    margin-bottom: units("05");
-    line-height: 1.2;
-    min-height: units(6);
   }
 }
 
