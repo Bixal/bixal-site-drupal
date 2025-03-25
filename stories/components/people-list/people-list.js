@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!filterItems) {
     return;
   }
-  
+
   const footer = document.querySelector(".bix-people__footer");
 
   /**
@@ -75,14 +75,38 @@ window.addEventListener("DOMContentLoaded", () => {
     footer.setAttribute("hidden", "");
   }
 
+  function toggleDropdown(event) {
+    Toggle.toggle(event);
+
+    if (!Toggle.isActive) {
+      const selectedItem = target.querySelector('input[type="radio"]:checked');
+      selectedItem.focus();
+      return;
+    }
+
+    trigger.focus();
+  }
+
   /**
    * Hides menu initially and then uses Toggle utility to show/hide.
    */
   function init() {
     target.setAttribute("hidden", "");
 
-    trigger.addEventListener("click", Toggle.toggle);
+    document.addEventListener("keydown", (event) => {
+      const hasChildFocus = target.contains(document.activeElement);
+
+      if (
+        (event.key === "Escape" && !target.hasAttribute("hidden")) ||
+        !hasChildFocus
+      ) {
+        Toggle.hide(trigger, target);
+      }
+    });
+
+    trigger.addEventListener("click", toggleDropdown);
     target.addEventListener("click", filterContent);
+
     // Add a click event to the 'View All' button.
     if (footer) {
       footer.children[0].addEventListener("click", removeContentLimit);
