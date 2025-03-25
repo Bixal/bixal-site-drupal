@@ -62,10 +62,4 @@ function toggle(event) {
   }
 }
 
-export {
-  activeClass,
-  checkActive,
-  show,
-  hide,
-  toggle,
-};
+export { activeClass, checkActive, show, hide, toggle, isActive };
