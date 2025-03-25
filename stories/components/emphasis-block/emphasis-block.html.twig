@@ -1,3 +1,19 @@
+{#
+/**
+  * Emphasis block
+  *
+  * Available variables:
+  * - variant (string, optional): The component modifier, available options:
+  *     base, accent-cool, accent-cool-alt, accent-vivid, accent-warm, primary, primary-alt.
+  *     These modifiers also work on the collection.
+  * - additional_classes (array, optional): Additional  classes for component.
+  * - prefix (string, optional): Prefix text before the title.
+  * - title (string): The main title.
+  * - href (string, optional): The URL for the title link.
+  * - postfix (string, optional): Text after the title.
+**/
+#}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -28,5 +44,7 @@
 
     {% if href %}</a>{% endif %}
   </h4>
+  {% if postfix %}
   <div class="bix-emphasis-block__postfix">{{ postfix }}</div>
+  {% endif %}
 </div>
