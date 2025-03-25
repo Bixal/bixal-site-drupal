@@ -17,6 +17,23 @@ window.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".bix-people__footer");
 
   /**
+   * Get the total visible count of people and update a screen reader only message with the current visible count.
+   *
+   * @returns {void}
+   */
+  function setVisibleCount() {
+    const totalVisibleItems = document.querySelectorAll(
+      ".bix-person:not([hidden])",
+    ).length;
+
+    const srOnlyVisibleCount = document.querySelector(
+      "[data-total-visible-count]",
+    );
+
+    srOnlyVisibleCount.textContent = totalVisibleItems;
+  }
+
+  /**
    * Basic content filtering.
    *
    * @param {Event} event
@@ -54,6 +71,8 @@ window.addEventListener("DOMContentLoaded", () => {
       }
       person.setAttribute("hidden", "");
     });
+
+    setVisibleCount();
   }
 
   /**
@@ -92,6 +111,8 @@ window.addEventListener("DOMContentLoaded", () => {
    */
   function init() {
     target.setAttribute("hidden", "");
+
+    setVisibleCount();
 
     document.addEventListener("keydown", (event) => {
       const hasChildFocus = target.contains(document.activeElement);

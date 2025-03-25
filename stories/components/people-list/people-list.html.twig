@@ -48,28 +48,37 @@
       </button>
 
       {% if filter_options %}
-        <div
+        <p class="" aria-live="polite">
+          {{ "Total number of visible items "|t }}
+          <span data-total-visible-count></span>
+        </p>
+
+        <fieldset
           id="bix-filter-dropdown"
           class="bix-filter__dropdown-options"
           data-dropdown-options>
+          <ol>
           {% for option in filter_options %}
-            <label
-              for="{{ option | lower }}"
-              class="bix-filter__dropdown-option">
+            <li class="bix-filter__dropdown-option">
               <input
                 type="radio"
                 name="filter"
                 id="{{ option | lower }}"
                 value="{{ option | lower }}"
                 {{ loop.first ? "checked" }}>
-              {{ option | capitalize }}
-            </label>
+              <label
+                for="{{ option | lower }}"
+                class="bix-filter__dropdown-option">
+                {{ option | capitalize }}
+              </label>
+            </li>
           {% endfor %}
-        </div>
+          </ol>
+        </fieldset>
       {% endif %}
     </div>
     {% if filter_content %}
-      <ul class="bix-people-list">
+      <ul class="bix-people-list" aria-live="polite">
         {% for item in filter_content %}
           <li
             class="bix-people-list__item bix-person{% if loop.index > 20 %} view-all-only{% endif %}"
@@ -85,7 +94,7 @@
                 <img
                   src="{{ item.image | default("https://placehold.co/325x325") }}"
                   aria-hidden="true">
-                <div class="bix-person__overlay">
+                <div class="bix-person__overlay" aria-hidden="true">
                   View all
 
                   {# @TODO: Allow aria-hidden to be configurable. #}
