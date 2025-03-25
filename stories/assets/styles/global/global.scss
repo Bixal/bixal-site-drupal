@@ -239,6 +239,10 @@ address {
   margin-bottom: units(3);
 }
 
+.sr-only {
+  @include sr-only;
+}
+
 .bix-container {
   height: 100%;
   margin: 0 auto;
