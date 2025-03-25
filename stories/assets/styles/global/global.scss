@@ -211,7 +211,8 @@ li:not(#toolbar-administration li) {
   }
 }
 
-a {
+a,
+a.bix-button {
   color: inherit;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
