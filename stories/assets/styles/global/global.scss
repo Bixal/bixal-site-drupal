@@ -193,7 +193,7 @@ ol {
   }
 }
 
-li:not(#toolbar-administration li) {
+li:with(:not(#toolbar-administration li)) {
   margin-bottom: units(1);
 }
 
