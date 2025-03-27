@@ -1,0 +1,33 @@
+<p>{{ 'Required fields are marked with an asterisk'|t }}&nbsp;(<abbr title="required" class="bix-hint bix-hint--required">*</abbr>).</p>
+<div class="bix-grid bix-grid:tablet--halves">
+  <div class="bix-grid__item bix-grid__item--full">
+    <div class="form-group" data-test-id="">
+      {{ form.name }}
+    </div>
+  </div>
+  <div class="bix-grid__item">
+    <div class="form-group" data-test-id="">
+      {{ form.mail }}
+    </div>
+  </div>
+  <div class="bix-grid__item">
+    <div class="form-group" data-test-id="">
+      {{ form.field_company }}
+    </div>
+  </div>
+  <div class="bix-grid__item bix-grid__item--full">
+    <div class="form-group" data-test-id="">
+      {{ form.message }}
+    </div>
+  </div>
+
+  <div class="bix-grid__item--full">
+    {{ form.captcha }}
+  </div>
+  <div class="bix-contact__actions">
+    {{ form.actions}}
+  </div>
+
+</div>
+
+{{ form|without('name', 'mail', 'field_company', 'message', 'captcha', 'actions') }}

@@ -12,7 +12,7 @@ import "../../components/cards/cards.stories";
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
 
 import "../../components/description-list/description-list.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -90,6 +90,7 @@ export const Default = {
         icon: "arrow-right",
       },
     },
+    contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };
