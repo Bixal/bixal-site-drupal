@@ -1,8 +1,8 @@
 _core:
   default_config_hash: 0y_QHS2RsEHVusPnhiEqDUshLy8-YqDaXtafZJdYjXA
-show_on_admin: 0
+show_on_admin: false
 alert_styles: "info|Info\r\nwarning|Warning\r\nurgent|Urgent"
 display_order: ascending
+automatic_refresh: false
 refresh_interval: 15
-automatic_refresh: 0
 cache_max_age: 300
