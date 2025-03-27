@@ -216,7 +216,7 @@ ol {
   }
 }
 
-li:not(#toolbar-administration li) {
+li:with(:not(#toolbar-administration li)) {
   margin-bottom: units(1);
 }
 
@@ -260,6 +260,10 @@ figure {
 address {
   font-style: normal;
   margin-bottom: units(3);
+}
+
+.sr-only {
+  @include sr-only;
 }
 
 .bix-container {
