@@ -94,7 +94,7 @@
         "drupal/upgrade_status": "^4.3",
         "drupal/view_unpublished": "^1.2",
         "drupal/webprofiler": "^10.1",
-        "drupal/xmlsitemap": "^1.5",
+        "drupal/xmlsitemap": "^2.0@beta",
         "drush/drush": "*",
         "jjj/chosen": "2.2.1",
         "mattsqd/drupal-env": "dev-main",

@@ -55,3 +55,4 @@ fa3ebb6ff574f4eb1ae36967973062ed|John Franklin|feature/BSD-298-enable-hls-video|
 bcddba84bc19a7997d7c4276c8c99f3a|Matt Poole|feature/BSD-389-update-deps|Tue Mar 18 13:32:59 EDT 2025|./composer.sh update
 32f4aa2f9aa50f25f4637899fd424c1a|Matt Poole|feature/BSD-399-update-deps|Thu Mar 27 15:36:30 EDT 2025|./composer.sh update
 257ca10ff457e9c8f81a423c97caf7bb|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 15:58:20 EDT 2025|./composer.sh require drupal/sitewide_alert:^3.0
+c2343dc811921e7d3cb46b08fd17e71c|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 16:45:19 EDT 2025|./composer.sh require drupal/xmlsitemap:^2.0@beta
