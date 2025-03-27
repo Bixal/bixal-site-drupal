@@ -32,8 +32,6 @@
  *
  * @see https://wiki.php.net/rfc/expectations
  */
-assert_options(ASSERT_ACTIVE, TRUE);
-\Drupal\Component\Assertion\Handle::register();
 
 $settings['hash_salt'] = 'Qk7573nlBIeA6Nzz-SKhX3WLy0lFoSrBX0h62HvROAAePPuWb0vFFj8z8JsjfAAeM0FR5FomkA';
 

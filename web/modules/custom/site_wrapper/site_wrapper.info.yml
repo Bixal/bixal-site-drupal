@@ -2,4 +2,4 @@ name: 'Site Wrapper'
 type: module
 description: 'Provides non-page content for the site, like headers and footers.'
 package: Custom
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
