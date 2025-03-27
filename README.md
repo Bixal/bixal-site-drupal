@@ -115,10 +115,18 @@ It's important that you always use `lando composer` or `./composer.sh` instead o
 
 [Storybook](https://storybook.js.org/) for this project can be found by:
 
-- Docker version: http://storybook.bixalcom.lndo.site/
-- Local version:
-  - ./sb.sh
-  - This should automatically open it in your browser.
+**Docker URL**
+
+http://storybook.bixalcom.lndo.site/
+
+**Local version**
+
+```bash
+# Run in terminal.
+./sb.sh
+```
+
+This should automatically open it in your browser.
 
 ### Handy Commands for Development
 
