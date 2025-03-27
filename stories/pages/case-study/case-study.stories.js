@@ -8,6 +8,10 @@ import "../../components/emphasis-block/emphasis-block.stories";
 import "../../components/description-list/description-list.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
+import codeIcon from "@uswds/uswds/img/usa-icons/code.svg";
+import supportIcon from "@uswds/uswds/img/usa-icons/support_agent.svg";
+import graphIcon from "@uswds/uswds/img/usa-icons/assessment.svg";
+
 import "./case-studies.scss";
 
 export default {
@@ -198,10 +202,36 @@ export const Alternative = {
                 We chose to use animation in this piece to allow our team to explore a rich visual branding experience while using repeatable storytelling approaches new to the FEMA video portfolio. Our team recognized that visual storytelling, a proven way to capture the attention of, and engage, key audiences, could be the perfect way to spread FEMA’s message and connect with the American public.
               </p>
 
+
               <h2>Delivering the Solution</h2>
               <p>
                 The Bixal team created both storytelling and multimedia templates for FEMA’s team to build on and ensure consistency with future use. We also aligned our project’s objectives with FEMA’s broader strategic communications goals to deliver a collection of videos that the FEMA team could integrate into ongoing marketing campaigns and relevant seasonal outreach (i.e., hurricane season). These videos now serve as a means for continued brand building and leverage other FEMA opportunities to promote greater agency awareness throughout the year.
               </p>
+
+              <div class="bix-grid bix-grid--thirds">
+                <div className="item">
+                  <img src="${codeIcon}" alt="" height="75" width="75" />
+                  <h3>Technology</h3>
+                  <p>
+                    Drupal 9, USAJOBS API, React.js, Leaflet Map API
+                  </p>
+                </div>
+                <div className="item">
+                  <img src="${supportIcon}" alt="" height="75" width="75" />
+                  <h3>Methodology</h3>
+                  <p>
+                    We used Agile methodology and Scrum framework.
+                  </p>
+                </div>
+                <div className="item">
+                  <img src="${graphIcon}" alt="" height="75" width="75" />
+                  <h3>Customer Support</h3>
+                  <p>
+                    To support customers, we developed a go-to-market project plan and social media toolkit for the product launch.
+                  </p>
+                </div>
+              </div>
+
               <p>
                 “Building a Resilient Nation” is the first in a series of short-format multimedia video pieces the Bixal team conceived, developed, produced and delivered for FEMA. We used the video as an opportunity to share not only FEMA’s mission but also their 2018-2022 Strategic Plan.
               </p>
@@ -210,7 +240,7 @@ export const Alternative = {
         `,
       },
       {
-        variant: "accent-cool",
+        variant: "base",
         center_content: true,
         heading_type: "h2",
         prefix: "Impact",
