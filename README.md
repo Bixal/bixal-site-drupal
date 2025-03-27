@@ -44,6 +44,13 @@ More guidance on git branches and commit style in [robo.yml](https://github.com/
 
 ### Starting the Environment
 
+#### Prerequisites
+
+- php@8.1
+- lando
+
+#### Installing
+
 First time:
 
 ```
