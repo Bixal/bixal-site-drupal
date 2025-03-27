@@ -1,0 +1,13 @@
+A single USWDS icon.
+
+{% set icon_path = "/assets/img/sprite.svg" %}
+{% set icon_name = ""|default("assessment") %}
+
+<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+  <use href="{{ icon_path }}#{{ icon_name }}></use>
+</svg>
+
+
+<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+  <use href="/assets/img/sprite.svg#assessment"></use>
+</svg>
