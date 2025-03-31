@@ -4,45 +4,28 @@
   @include at-media("desktop") {
     background-image: url("/static/img-contact-1124f113171200a67715b157b11c6c19.jpg");
     background-position: 130% 0%;
-    background-size: 50%;
+    background-size: 50% 100%;
     background-repeat: no-repeat;
   }
 
-  &__content {
-    @include at-media("desktop") {
-      max-width: 45%;
-    }
-  }
-
-  &__form {
-    @include at-media("tablet") {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: units(1);
-    }
-
-    .bix-input {
-      width: 100%;
-    }
-
-    .bix-input--textarea,
-    .bix-input[name="name"] {
-      grid-column: 1 / -1;
-    }
+  &__actions {
+    display: flex;
+    gap: units(1);
   }
 }
 
-.captcha,
-.bix-contact__actions {
-  grid-column: 1 / -1;
+.bix-contact-form {
+  @include at-media("desktop") {
+    max-width: 45%;
+  }
 }
 
 .captcha {
   margin-bottom: units(1);
-}
 
-.captcha__description {
-  font-size: size("sans", "xs");
-  line-height: 1.1;
-  margin-top: units(1);
+  &__description {
+    font-size: size("sans", "xs");
+    line-height: 1.1;
+    margin-top: units(1);
+  }
 }

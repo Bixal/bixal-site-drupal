@@ -74,3 +74,15 @@ function bixal_uswds_preprocess_page(&$vars) {
     $vars['add_section_wrapper'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function bixal_uswds_theme($existing, $type, $theme, $path) {
+  return [
+    'contact_message_site_wide_form' => [
+      'render element' => 'form',
+      'path' => $path . '/templates/form',
+    ],
+  ];
+}

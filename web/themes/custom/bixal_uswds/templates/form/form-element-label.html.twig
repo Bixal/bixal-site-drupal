@@ -24,5 +24,10 @@
 ] %}
 
 {% if title is not empty or required -%}
-  <label{{ attributes.addClass(classes) }}>{{ title }}</label>
+  <label{{ attributes.addClass(classes) }}>
+    {{ title }}
+    {% if required %}
+      <abbr title="required" class="bix-hint bix-hint--required">*</abbr>
+    {% endif %}
+  </label>
 {%- endif %}

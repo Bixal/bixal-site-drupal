@@ -2,6 +2,11 @@ import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const menuTrigger = document.querySelector("[data-menu-toggle]");
+
+  if (!menuTrigger) {
+    return;
+  }
+
   const menuTarget = document.querySelector("[data-menu-target]");
   const menuLabel = menuTrigger.querySelector(".bix-toggle-icon__text");
 

@@ -1,8 +1,7 @@
 import ContractVehicle from "./contract-vehicle.html.twig";
 
 import * as Header from "../../components/header/header.stories";
-import "../../components/contact-us/contact-us.stories";
-import "../../components/footer/footer.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
 export default {
@@ -76,6 +75,7 @@ export default {
         `,
       },
     ],
+    contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };

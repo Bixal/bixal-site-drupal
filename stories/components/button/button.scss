@@ -34,11 +34,10 @@ a.bix-button {
   flex-direction: row-reverse;
 }
 
-.bix-button--inverse {
+.bix-button.bix-button--inverse {
   color: color("white");
 
-  &:hover,
-  &:focus {
+  &:is(:focus, :hover) {
     background-color: color("white");
     color: color("ink");
     outline-offset: 3px;
@@ -49,7 +48,9 @@ a.bix-button {
   border: none;
   border-radius: 0;
   appearance: none;
-  padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: px-to-rem(1px);
+  text-underline-offset: px-to-rem(2px);
 
   &:hover,
   &:focus {
