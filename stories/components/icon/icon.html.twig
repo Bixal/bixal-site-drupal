@@ -1,13 +1,28 @@
-A single USWDS icon.
+{#
+/**
+  * USA Icon component
+  *
+  * Available variables:
+  * - icon_path (string, optional): The path to the USWDS SVG sprite. StorybookJS resolves via `staticDirs` option.
+  * - icon_name(string, optional): The name of the icon. Defaults to "assessment."
+  * - icon_size(string, optional): The size of the icon.
+**/
+#}
 
-{% set icon_path = "/assets/img/sprite.svg" %}
-{% set icon_name = ""|default("assessment") %}
 
-<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-  <use href="{{ icon_path }}#{{ icon_name }}></use>
-</svg>
+{% set icon_path = icon_path|default("img/sprite.svg") %}
+{% set icon_name = icon_name|default("assessment") %}
+{% set icon_size = icon_size|default("") %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 
-<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-  <use href="/assets/img/sprite.svg#assessment"></use>
+{% set icon_classes = [
+  "usa-icon",
+  (icon_size ? "usa-icon--size-" ~ icon_size),
+]| merge(additional_classes | default([])) %}
+
+<svg {{ attributes.addClass(icon_classes) }} aria-hidden="true" focusable="false" role="img">
+  <use href="{{ icon_path }}#{{ icon_name }}"></use>
 </svg>
