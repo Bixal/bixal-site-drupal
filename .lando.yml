@@ -31,11 +31,11 @@ tooling:
   watch:
     service: node
     cmd:
-      - "cd web/themes/custom/bixal_uswds/ && gulp watch"
+      - 'cd web/themes/custom/bixal_uswds/ && gulp watch'
   gulp:
     service: node
     cmd:
-      - "cd web/themes/custom/bixal_uswds/ && gulp"
+      - 'cd web/themes/custom/bixal_uswds/ && gulp'
   build_node:
     service: node
     cmd:
