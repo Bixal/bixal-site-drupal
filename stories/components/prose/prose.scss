@@ -1,0 +1,15 @@
+@use "uswds-core" as *;
+
+.bix-prose {
+  > * {
+    max-width: 70ch;
+  }
+
+  :is(h3) {
+    margin-block-start: units(10);
+  }
+
+  p {
+    text-wrap-style: pretty;
+  }
+}
