@@ -4,7 +4,7 @@
 {% block content %}
   {% embed "@components/section/section.html.twig" %}
     {% block header %}
-      <h2>{{ blog.title }}</h2>
+      <h1>{{ blog.title }}</h1>
       <time datetime="{{ date | date(" m-d-Y") }}">
         {{ blog.date }}
       </time>

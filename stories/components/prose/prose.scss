@@ -5,7 +5,7 @@
     max-width: 70ch;
   }
 
-  :is(h3) {
+  :is(h2, h3) {
     margin-block-start: units(10);
   }
 

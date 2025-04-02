@@ -12,7 +12,7 @@ export default {
 export const Default = {
   args: {
     content: `
-      <h3>Introduction</h3>
+      <h2>Introduction</h2>
       <p>
         At Bixal, we employ a learner-driven approach to product creation, grounded in an Agile mindset that prioritizes meaningful outcomes over quick fixes. By integrating agility with our commitment to human-centered design (HCD) philosophy, we craft adaptable solutions that respond to real-time client feedback. This ensures government employees can acquire and apply new skills while navigating evolving policies, compliance requirements, and technological advancements. Our approach focuses on practical application and continuous improvement, empowering teams to thrive and learn in an ever-changing environment.
       </p>
@@ -22,7 +22,7 @@ export const Default = {
       <p>
         But how exactly does this learner-centered Modern Responsiveness approach sync with instructional design?
       </p>
-      <h3>Traditional Instructional Design Frameworks</h3>
+      <h2>Traditional Instructional Design Frameworks</h2>
       <p>
         Depending on the project, learning teams might follow frameworks such as the ADDIE Model (Analysis, Design, Development, Implementation, Evaluation), the SAM approach (Successive Approximation Model), or Design Thinking for Training and Development. Each of these frameworks has unique strengths, and each can be successful when aligned with the right team and project goals. Our flexibility in selecting and adapting models allows us to create tailored solutions that align with the needs of our clients.
       </p>
@@ -43,14 +43,14 @@ export const Default = {
           <strong>Evaluation:</strong> Assessing the effectiveness of the solution and identifying areas for improvement.
         </li>
       </ul>
-      <h3>Where Traditional Methods Fall Short</h3>
+      <h2>Where Traditional Methods Fall Short</h2>
       <p>
         In our experience, traditional instructional design frameworks often stagnate during the research, design, and development phases. The desire to craft a perfect solution can lead to extended deliberations on whether enough research has been conducted or which design option is the most appropriate.
       </p>
       <p>
         The problem with that is every moment stuck in these phases is time that the learning solutions aren’t supporting learners or even soliciting their feedback. Our Modern Responsiveness approach addresses this by embedding an iteration stage that generally begins during the research phase. This rapid prototyping allows for early and often testing and improvement, which ultimately allows us to shorten the time-to-delivery (or rather, time-to-impact) and ensure we are refining the solution based on stakeholder feedback (i.e., delivering something people actually need).
       </p>
-      <h3>Modern Responsiveness: Our Commitment to Continuous Improvement</h3>
+      <h2>Modern Responsiveness: Our Commitment to Continuous Improvement</h2>
       <p>
         Modern Responsiveness is Bixal’s approach to breaking free from traditional phase constraints and embracing a more fluid, flexible, and dynamic workflow. This allows us to adapt and move forward without compromising quality.
       </p>
@@ -73,11 +73,11 @@ export const Default = {
       <p>
         By adhering to these stages, we produce functional, learner-centered products without straying from Agile principles. This approach allows us to stay flexible, continuously improve, and rapidly deliver solutions that genuinely meet user needs.
       </p>
-      <h3>Agile Instructional Design in Action</h3>
+      <h2>Agile Instructional Design in Action</h2>
       <p>
         As an example of how this works in practice, while conducting initial research on a project we worked on for a federal agency, we identified potential design elements and content themes for product management modules for a group of IT leaders. This led to helpful feedback during an exploratory meeting. Based on this early input, we immediately created initial prototypes and mockups and had them validated by SMEs, stakeholders, and end-learners. This iterative process allowed us to refine our solutions and incorporate real-time feedback. As a result, we increased our ability to progress and over deliver.
       </p>
-      <h3>Conclusion: Agile Instructional Design</h3>
+      <h2>Conclusion: Agile Instructional Design</h2>
       <p>
         Bixal’s Modern Responsiveness approach embraces change and drives exceptional results as project demands and stakeholder expectations evolve. By overlapping traditional phases of work, we foster a culture of continuous feedback that keeps our team adaptable and effective. This strategy enables us to create impactful learning solutions that are both transformative and flexible. Our focus on collaboration, iterative progress, and rapid responsiveness to new information allows us to consistently exceed expectations. The result is learning experiences that meet real-world client needs, delivering value and relevance today and into the future.
       </p>`,
