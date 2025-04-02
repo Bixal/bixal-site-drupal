@@ -12,14 +12,6 @@ export default {
 export const Default = {
   args: {
     content: `
-      <h2>
-        Bixal’s Approach to Agile Learning: Introducing the Modern Responsiveness Approach
-      </h2>
-      <time datetime="{{ date | date(" m-d-Y") }}">
-        December 10, 2024
-      </time>
-      <div>By DJ Neace, Instructional Designer</div>
-
       <h3>Introduction</h3>
       <p>
         At Bixal, we employ a learner-driven approach to product creation, grounded in an Agile mindset that prioritizes meaningful outcomes over quick fixes. By integrating agility with our commitment to human-centered design (HCD) philosophy, we craft adaptable solutions that respond to real-time client feedback. This ensures government employees can acquire and apply new skills while navigating evolving policies, compliance requirements, and technological advancements. Our approach focuses on practical application and continuous improvement, empowering teams to thrive and learn in an ever-changing environment.
@@ -88,10 +80,6 @@ export const Default = {
       <h3>Conclusion: Agile Instructional Design</h3>
       <p>
         Bixal’s Modern Responsiveness approach embraces change and drives exceptional results as project demands and stakeholder expectations evolve. By overlapping traditional phases of work, we foster a culture of continuous feedback that keeps our team adaptable and effective. This strategy enables us to create impactful learning solutions that are both transformative and flexible. Our focus on collaboration, iterative progress, and rapid responsiveness to new information allows us to consistently exceed expectations. The result is learning experiences that meet real-world client needs, delivering value and relevance today and into the future.
-      </p>
-      <div>
-        <em>Content manager, Ewa Beaujon, contributed to the writing of this article.</em>
-      </div>
-    `,
+      </p>`,
   },
 };
