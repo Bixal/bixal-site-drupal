@@ -102,7 +102,6 @@ h6 {
 h1 {
   font-size: px-to-rem(32px);
   margin-bottom: units(2);
-  text-wrap: balance;
 
   @include at-media("tablet") {
     font-size: px-to-rem(64px);
