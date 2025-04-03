@@ -56,6 +56,8 @@ For subsequent starts, you can just:
 lando start
 ```
 
+You'll be able to visit the local site at https://bixalcom.lndo.site.
+
 Change something in the .lando.yml config and/or you want to re-install front and back end dependencies?
 
 ```
