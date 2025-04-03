@@ -75,6 +75,13 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // poynter-gothic-text (400, 400 italic, 700, 700 italic)
 @import url("https://use.typekit.net/wfu7yyr.css");
 
+// View transitions
+//
+// Adds a nice transition to the page when navigating the website.
+@view-transition {
+  navigation: auto;
+}
+
 // ==========================================================================
 // Typopgrahy
 // ==========================================================================
