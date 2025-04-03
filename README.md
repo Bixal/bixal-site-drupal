@@ -46,7 +46,7 @@ More guidance on git branches and commit style in [robo.yml](https://github.com/
 
 #### Prerequisites
 
-- php@8.1
+- php@8.3
 - lando
 
 #### Installing
