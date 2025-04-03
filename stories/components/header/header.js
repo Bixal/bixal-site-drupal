@@ -72,8 +72,10 @@ window.addEventListener("DOMContentLoaded", () => {
    */
   function handleResize(breakpoint) {
     if (breakpoint.matches) {
+      document.removeEventListener("keyup", handleKeyboard);
       openMenu();
     } else {
+      document.addEventListener("keyup", handleKeyboard);
       closeMenu();
     }
   }
@@ -82,11 +84,9 @@ window.addEventListener("DOMContentLoaded", () => {
    * Add event listeners.
    */
   function init() {
-    // @TODO: Add a focus trap for A11Y.
     handleResize(desktopBreakpoint);
     menuTrigger.addEventListener("click", handleClick);
     desktopBreakpoint.addEventListener("change", handleResize);
-    document.addEventListener("keyup", handleKeyboard);
   }
 
   init();
