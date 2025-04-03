@@ -1,0 +1,11 @@
+uuid: 83c4c5e7-6186-430b-ad22-9bdb84dd4898
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.author
+label: Author
+description: 'Display a Bixaler as an author.'
+targetEntityType: node
+cache: true
