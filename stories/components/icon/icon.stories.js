@@ -17,6 +17,13 @@ export default {
     },
     color: { control: "color" },
   },
+  decorators: [
+    (Story, { args }) => `
+      <div style="color: ${args.color || "initial"}">
+        ${Story()}
+      </div>
+    `,
+  ],
 };
 
 // Default story
