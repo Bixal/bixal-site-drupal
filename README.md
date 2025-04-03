@@ -117,7 +117,19 @@ This is also available on all other environments.
 
 ### Handy Commands for Development
 
-- Run all the validation commands that the pipelines run without needing to push remotely `vendor/bin/robo validate:all`.
+#### Run validation
+
+Run all the validation commands that the pipelines run without needing to push remotely:
+
+```
+vendor/bin/robo validate:all
+```
+
+#### Copy storybook to Drupal theme
+
+```
+lando build_node
+```
 
 #### Configure Xdebug
 
