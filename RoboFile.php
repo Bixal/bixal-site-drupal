@@ -5,6 +5,7 @@ use Robo\Tasks;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Finder\Finder;
 
 /**
  * Custom RoboFile commands for this project.
@@ -182,6 +183,38 @@ class RoboFile extends Tasks
             ->push('origin', "v$semantic_version")
             ->run();
 
+        return new ResultData();
+    }
+
+    /**
+     * Ensure that all components are forwarded to Drupal.
+     *
+     * @command bixalcom:validate-components
+     *
+     * @aliases validate-components
+     *
+     * @return void
+     *
+     * @throws \Exception
+     */
+    public function validateComponents(InputInterface $input, OutputInterface $output): ResultData
+    {
+        $io = new SymfonyStyle($input, $output);
+        $io->info('Checking if all storybook components are forwarded to Drupal.');
+        $forward_file = './stories/_index.scss';
+        $forwards = file_get_contents($forward_file);
+        $finder =  Finder::create();
+        $missing_components = [];
+        foreach ($finder->in('stories/components')->name('*.scss')->files() as $file) {
+            $component = explode('/', $file->getPath(), 2)[1];
+            if (!str_contains($forwards, sprintf('@forward "%s/', $component))) {
+                $missing_components[] = $component;
+            }
+        }
+        if (!empty($missing_components)) {
+            throw new \Exception(sprintf('The following components created in storybook are not found in "%s": %s', $forward_file, implode(', ', $missing_components)));
+        }
+        $io->success('All storybook components are forwarded to Drupal.');
         return new ResultData();
     }
 
