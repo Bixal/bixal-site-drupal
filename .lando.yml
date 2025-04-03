@@ -17,7 +17,7 @@ services:
   cache:
     type: 'redis:6'
   node:
-    type: 'node:18'
+    type: 'node:22'
     build:
       - ./orch/build_node.sh
     scanner: false
@@ -39,4 +39,4 @@ tooling:
   build_node:
     service: node
     cmd:
-    - ./orch/build_node.sh
+      - ./orch/build_node.sh

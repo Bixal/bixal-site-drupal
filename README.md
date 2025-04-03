@@ -44,6 +44,13 @@ More guidance on git branches and commit style in [robo.yml](https://github.com/
 
 ### Starting the Environment
 
+#### Prerequisites
+
+- php@8.1
+- lando
+
+#### Installing
+
 First time:
 
 ```
@@ -110,10 +117,18 @@ This is also available on all other environments.
 
 [Storybook](https://storybook.js.org/) for this project can be found by:
 
-- Docker version: http://storybook.bixalcom.lndo.site/
-- Local version:
-  - ./sb.sh
-  - This should automatically open it in your browser.
+**Docker URL**
+
+http://storybook.bixalcom.lndo.site/
+
+**Local version**
+
+```bash
+# Run in terminal.
+./sb.sh
+```
+
+This should automatically open it in your browser.
 
 ### Handy Commands for Development
 
