@@ -68,12 +68,19 @@
 */
 #}
 
-<div class="bix-section">
-	<div class="bix-container">
-		{% if content.field_decorative_title| field_value is not empty %}
-				<h1 class="blog-title">{{node.label}}</h1>
-		{% endif %}
+{% set section_body %}
+  {% if content.field_decorative_title|field_value %}
+    <h1 class="blog-title">{{ label|field_value }}</h1>
+  {% endif %}
+  {{ content.field_date|field_value }}
+  {{ content.field_author|field_value }}
+  {% if content.body|field_value %}
+    {% include '@components/prose/prose.html.twig' with {
+      "content": content.body|field_value,
+    } %}
+  {% endif %}
+{% endset %}
 
-		{{ content|without('field_decorative_title') }}
-	</div>
-</div>
+{% include  "@components/section/section.html.twig" with {
+  body: section_body
+} %}

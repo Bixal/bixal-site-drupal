@@ -1,45 +1,24 @@
 {% extends "@pages/base/base.html.twig" %}
 
+
 {% block content %}
-<div class="bix-section">
-  <div class="bix-container">
-    <h2>
-      Insights and Expertise: Bixal’s Impactful Presentations at Drupal GovCon 2023
-    </h2>
-    <time datetime="{{ date | date(" m-d-Y") }}">
-      {{ date }}
-    </time>
-    <p>
-      Bixal was a sponsor of the recent Drupal GovCon held Nov. 1-2 in Bethesda, Maryland. We were excited to have so
-      many Bixalers attend this great event and even more excited to have several of them present.
-    </p>
-    <p>
-      Big thank you to Drupal4Gov for hosting this event and to all of our team members for presenting and attending!
-    </p>
-    <p>
-      Didn't get a chance to attend Drupal GovCon? Don't worry! You can watch our Bixalers' presentations:
-    </p>
-    <ol>
-      <li>
-        <a href="https://youtu.be/7Uc3pgpm7VU?si=tmeI5lChW3qoXkll">A KPI Framework To Make Your Next Drupal Migration
-          a Success</a>. (Nick Pistone)
-      </li>
-      <li>
-        <a href="https://youtu.be/Y765z09vdVU?si=WM3wBKRkVerTjACr">Gazing at the Stars: How To Take USWDS Beyond the
-          Limits</a>. (Ray Estrada and James Mejia)
-      </li>
-      <li>
-        <a href="https://youtu.be/DnAR2Z981qU?si=TgKlSlTBmjaFisOb">Revealing Insights: Transforming Drupal Data Into
-          Smart Decisions</a>. (Ivonne Carrillo)
-      </li>
-      <li>
-        <a href="https://youtu.be/BdWQ_0dO380?si=bhtuytMJodHRbPEi">Login.gov: Improving Government CX with SSO</a>.
-          (John Franklin)
-      </li>
-      <li>
-        <a href="https://youtu.be/LGcMeMXytHs?si=RUVVo9fVLBv0AhYZ">Development To Deploy</a>. (Matt Poole)
-      </li>
-    </ol>
-  </div>
-</div>
+  {% embed "@components/section/section.html.twig" %}
+    {% block header %}
+      <h1>{{ blog.title }}</h1>
+      <time datetime="{{ date | date(" m-d-Y") }}">
+        {{ blog.date }}
+      </time>
+      {% if blog.author %}
+      <div class="bix-author">
+        {{ blog.author }}
+      </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block description %}
+      {% include "@components/prose/prose.html.twig" with {
+        content: blog.content
+      } %}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
