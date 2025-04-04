@@ -24,7 +24,12 @@
       default_row_class ? 'views-row',
     ]
   %}
-  <div{{ row.attributes.addClass(row_classes) }}>
+
+  {% if row_classes[0] is empty %}
     {{- row.content -}}
-  </div>
+  {% else %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+  {% endif %}
 {% endfor %}
