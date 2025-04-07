@@ -15,9 +15,6 @@
   &[data-align="center"] {
     margin-inline: auto;
     width: fit-content;
-  }
-
-  :has(&[data-align="center"]) {
     text-align: center;
   }
 }
