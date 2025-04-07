@@ -63,6 +63,8 @@ For subsequent starts, you can just:
 lando start
 ```
 
+You'll be able to visit the local site at https://bixalcom.lndo.site.
+
 Change something in the .lando.yml config and/or you want to re-install front and back end dependencies?
 
 ```
@@ -132,7 +134,19 @@ This should automatically open it in your browser.
 
 ### Handy Commands for Development
 
-- Run all the validation commands that the pipelines run without needing to push remotely `vendor/bin/robo validate:all`.
+#### Run validation
+
+Run all the validation commands that the pipelines run without needing to push remotely:
+
+```
+vendor/bin/robo validate:all
+```
+
+#### Copy storybook to Drupal theme
+
+```
+lando build_node
+```
 
 #### Configure Xdebug
 
