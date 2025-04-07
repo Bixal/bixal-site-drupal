@@ -36,44 +36,44 @@ function bixal_uswds_form_alter(&$form, FormStateInterface $form_state, $form_id
     $form["basic"]["keys"]['#attributes']['placeholder'] = t('Enter search terms');
   }
   elseif ($form_id === 'contact_message_site_wide_form') {
+    $form['#theme'] = ['contact_message_site_wide_form'];
     foreach (Element::children($form) as $key) {
       $field =& $form[$key]['widget'][0]['value'];
+      $placeholder = '';
+      $title = '';
       switch ($key) {
         case 'field_company':
+          $placeholder = t('Acme Co');
+          // No break on purpose.
         case 'message':
-          $field['#title_display'] = 'form-no-label';
-          $field['#no_wrapper'] = 1;
           if ($key === 'message') {
-            $field['#placeholder'] = t('Want to find out more or interested in doing business with us? type message here...');
+            $placeholder = t('Want to find out more or interested in doing business with us? type message here…');
           }
-          else {
-            $field['#placeholder'] = $field['#title'];
-          }
-          if (!empty($field['#required'])) {
-            $field['#placeholder'] .= ' *';
-          }
+          $field['#no_wrapper'] = 1;
+          $field['#placeholder'] = $placeholder;
           break;
 
         case 'name':
+          $type = 'textfield';
+          $title = t('Name');
+          $placeholder = t('Jonathan Doe');
+          // No break on purpose.
         case 'mail':
+          if ($key === 'mail') {
+            $type = 'email';
+            $title = t('Email');
+            $placeholder = t('example@organization.com');
+          }
           $form[$key] = [
-            '#type' => 'textfield',
-            '#title' => $form[$key]['#title'],
-            '#title_display' => 'form-no-label',
+            '#type' => $type,
+            '#title' => $title,
             '#maxlength' => 255,
             '#required' => TRUE,
             '#default_value' => $form[$key]['#value'] ?? '',
-            '#placeholder' => $form[$key]['#title'],
+            '#placeholder' => $placeholder,
             '#no_wrapper' => 1,
             '#disabled' => !empty($form[$key]['#value']),
           ];
-          if ($key === 'mail') {
-            $form[$key]['#placeholder'] = t('Email');
-            $form[$key]['#type'] = 'email';
-          }
-          if (!empty($form[$key]['#required'])) {
-            $form[$key]['#placeholder'] .= ' *';
-          }
           break;
 
         case 'subject':
@@ -96,7 +96,7 @@ function bixal_uswds_form_alter(&$form, FormStateInterface $form_state, $form_id
     }
     unset($field);
 
-    $form['#attributes']['class'][] = 'bix-contact__form';
+    $form['#attributes']['class'] = ['bix-contact-form'];
   }
 
   // Add the USWDS form class.

@@ -2,7 +2,7 @@ import CaseStudy from "./case-study.html.twig";
 
 import * as Header from "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import "../../components/emphasis-block/emphasis-block.stories";
 import "../../components/description-list/description-list.stories";
@@ -103,6 +103,7 @@ export const Default = {
         `,
       },
     ],
+    contactContent: ContactUs.default.args,
   },
 };
 
@@ -260,21 +261,3 @@ export const Alternative = {
     ],
   },
 };
-
-{
-  /* <dl class="bix-description-list">
-  <dt>Services</dt>
-  <dd>Videography</dd>
-  <dd>Content Strategy</dd>
-  <dd>Branding Design</dd>
-</dl> */
-}
-
-{
-  /* <div class="bix-services">
-  <div class="bix-emphasis-block">
-    <p class="bix-emphasis-block__prefix">Services</p>
-    <div class="bix-emphasis-block__title">Videography ∙ Content Strategy ∙ Branding Design</div>
-  </div>
-</div> */
-}

@@ -4,7 +4,7 @@ import * as Header from "../../components/header/header.stories";
 import * as SocialNav from "../../components/social-nav/social-nav.stories";
 
 import "../../components/hero/hero.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 
 export default {
@@ -20,6 +20,7 @@ export const Default = {
       variant: "image-bg",
       title: "Hero title",
     },
-    socialNav: SocialNav.default.args
+    socialNav: SocialNav.default.args,
+    contactContent: ContactUs.default.args,
   },
 };

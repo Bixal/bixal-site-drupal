@@ -53,3 +53,4 @@ fa3ebb6ff574f4eb1ae36967973062ed|John Franklin|feature/BSD-298-enable-hls-video|
 61fa1fa6741024a11829e887aac84436|Matt Poole|feature/BSD-366-update-deps|Thu Feb 20 10:46:46 EST 2025|./composer.sh update
 4ed00e200a6e176d11d2e6e13c39cef0|Matt Poole|feature/BSD-371-update-deps|Wed Feb 26 16:42:45 EST 2025|./composer.sh update
 bcddba84bc19a7997d7c4276c8c99f3a|Matt Poole|feature/BSD-389-update-deps|Tue Mar 18 13:32:59 EDT 2025|./composer.sh update
+32f4aa2f9aa50f25f4637899fd424c1a|Matt Poole|feature/BSD-399-update-deps|Thu Mar 27 15:36:30 EDT 2025|./composer.sh update

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
+    - field.field.node.blog.field_author
     - field.field.node.blog.field_banner_image
     - field.field.node.blog.field_card_image
     - field.field.node.blog.field_date
@@ -22,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -30,9 +31,19 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_banner_image:
     type: media_library_widget
-    weight: 2
+    weight: 1
     region: content
     settings:
       media_types: {  }
@@ -41,7 +52,7 @@ content:
         show_edit: '1'
   field_card_image:
     type: media_library_widget
-    weight: 3
+    weight: 2
     region: content
     settings:
       media_types: {  }
@@ -50,13 +61,13 @@ content:
         show_edit: '1'
   field_date:
     type: datetime_default
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_decorative_title:
     type: string_textfield
-    weight: 1
+    weight: 3
     region: content
     settings:
       size: 60
@@ -64,13 +75,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true

@@ -2,16 +2,36 @@ import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const trigger = document.querySelector("[data-dropdown-toggle]");
+
   if (!trigger) {
     return;
   }
+
   const target = document.getElementById(trigger.getAttribute("aria-controls"));
-  // const filterOptions = target.querySelectorAll(".bix-filter__dropdown-option");
   const filterItems = document.querySelectorAll(".bix-person");
+
   if (!filterItems) {
     return;
   }
-  const footer = document.querySelector('.bix-people__footer');
+
+  const footer = document.querySelector(".bix-people__footer");
+
+  /**
+   * Get the total visible count of people and update a screen reader only message with the current visible count.
+   *
+   * @returns {void}
+   */
+  function setVisibleCount() {
+    const totalVisibleItems = document.querySelectorAll(
+      ".bix-person:not([hidden])",
+    ).length;
+
+    const srOnlyVisibleCount = document.querySelector(
+      "[data-total-visible-count]",
+    );
+
+    srOnlyVisibleCount.textContent = totalVisibleItems;
+  }
 
   /**
    * Basic content filtering.
@@ -19,14 +39,16 @@ window.addEventListener("DOMContentLoaded", () => {
    * @param {Event} event
    */
   function filterContent(event) {
-    const isOption = event.target.classList.contains("bix-filter__dropdown-option");
+    const isOption = event.target.classList.contains(
+      "bix-filter__dropdown-option",
+    );
 
     // Avoids having to set an even listener on *every* option.
     if (!isOption) {
       return;
     }
     // After a filter is chosen, hide the popup.
-    Toggle.hide(trigger, target)
+    Toggle.hide(trigger, target);
     // If a filter is chosen, show all results and hide the 'view all' button.
     removeContentLimit();
 
@@ -34,8 +56,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const chosenFilterValue = option.getAttribute("for");
 
     // @TODO: Check for scrollbar and adjust body padding to avoid screen "shake" when there are zero items.
-    [...filterItems].map(person => {
-      const bixalersFilterCategory = person.dataset.filterCategory.split('|||');
+    [...filterItems].map((person) => {
+      const bixalersFilterCategory = person.dataset.filterCategory.split("|||");
       person.removeAttribute("hidden");
       if (chosenFilterValue === "all") {
         return;
@@ -49,25 +71,39 @@ window.addEventListener("DOMContentLoaded", () => {
       }
       person.setAttribute("hidden", "");
     });
+
+    setVisibleCount();
   }
 
   /**
    * Remove content number limit.
    */
   function removeContentLimit() {
-    const footer = document.querySelector('.bix-people__footer');
+    const footer = document.querySelector(".bix-people__footer");
     if (!footer) {
       return;
     }
     const style = window.getComputedStyle(footer);
-    if (style.visibility === 'hidden') {
+    if (style.visibility === "hidden") {
       return;
     }
     const hiddenExtraItems = document.querySelectorAll(".view-all-only");
-    [...hiddenExtraItems].map(person => {
-      person.classList.remove('view-all-only');
+    [...hiddenExtraItems].map((person) => {
+      person.classList.remove("view-all-only");
     });
     footer.setAttribute("hidden", "");
+  }
+
+  function toggleDropdown(event) {
+    Toggle.toggle(event);
+
+    if (!Toggle.isActive) {
+      const selectedItem = target.querySelector('input[type="radio"]:checked');
+      selectedItem.focus();
+      return;
+    }
+
+    trigger.focus();
   }
 
   /**
@@ -76,8 +112,22 @@ window.addEventListener("DOMContentLoaded", () => {
   function init() {
     target.setAttribute("hidden", "");
 
-    trigger.addEventListener("click", Toggle.toggle);
+    setVisibleCount();
+
+    document.addEventListener("keydown", (event) => {
+      const hasChildFocus = target.contains(document.activeElement);
+
+      if (
+        (event.key === "Escape" && !target.hasAttribute("hidden")) ||
+        !hasChildFocus
+      ) {
+        Toggle.hide(trigger, target);
+      }
+    });
+
+    trigger.addEventListener("click", toggleDropdown);
     target.addEventListener("click", filterContent);
+
     // Add a click event to the 'View All' button.
     if (footer) {
       footer.children[0].addEventListener("click", removeContentLimit);
@@ -85,4 +135,4 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   init();
-})
+});

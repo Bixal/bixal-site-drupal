@@ -20,28 +20,48 @@ $font-ui: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
 $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 
 :root {
+  //
   // Theme colors
+  //
   --c-primary: #{$c-blue--dark};
   --c-primary-alt: #{$c-purple};
+
   --c-accent-cool: #{$c-blue--light};
   --c-accent-cool-alt: #{$c-teal};
+
   --c-accent-warm: #{$c-orange};
   --c-accent-warm-alt: #{$c-red-orange};
   --c-accent-warm-dark: #{$c-maroon};
+
   --c-accent-vivid: #{$c-green};
+
   --c-base: #{$c-gray};
+  --c-base-light: #{color("gray-3")};
+  --c-base-lighter: #{color("gray-2")};
+  --c-base-lightest: #{color("gray-1")};
+  --c-base-dark: #{color("gray-10")};
+  --c-base-darker: #{color("gray-30")};
+  --c-base-darkest: #{color("gray-80")};
   // State colors
-  // Info - Closest USWDS color is blue-cool-10v.
+  //
   --c-info: var(--c-accent-cool);
+  // Used this color tool to find the closest USWDS token:
+  // https://civicactions.github.io/uswds-color-tool/
   --c-info-dark: #{color("blue-cool-20v")};
   --c-info-darker: #{color("blue-cool-30v")};
+
   // Warning
   --c-warning: #{$c-yellow};
+
   // Error
   --c-error: #{color("orange-warm-50v")};
+
   // Urgent
   --c-urgent: #{color("orange-warm-70v")};
+
+  //
   // Fonts
+  //
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 }
@@ -54,6 +74,15 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // Novel pro (700 & 800)
 // poynter-gothic-text (400, 400 italic, 700, 700 italic)
 @import url("https://use.typekit.net/wfu7yyr.css");
+
+// View transitions
+//
+// Adds a nice transition to the page when navigating the website.
+@media not (prefers-reduced-motion) {
+  @view-transition {
+    navigation: auto;
+  }
+}
 
 // ==========================================================================
 // Typopgrahy
@@ -82,7 +111,6 @@ h6 {
 h1 {
   font-size: px-to-rem(32px);
   margin-bottom: units(2);
-  text-wrap: balance;
 
   @include at-media("tablet") {
     font-size: px-to-rem(64px);
@@ -200,7 +228,7 @@ ol {
   }
 }
 
-li:not(#toolbar-administration li) {
+li:with(:not(#toolbar-administration li)) {
   margin-bottom: units(1);
 }
 
@@ -247,6 +275,10 @@ address {
   margin-bottom: units(3);
 }
 
+.sr-only {
+  @include sr-only;
+}
+
 .bix-container {
   height: 100%;
   margin: 0 auto;
@@ -254,12 +286,26 @@ address {
   width: 85%;
 }
 
+// ==========================================================================
 // Form elements
+// ==========================================================================
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-size: size("ui", "2xs");
+  letter-spacing: px-to-rem(0.5px);
+  text-transform: uppercase;
+}
 
 .bix-input {
   border: 1px solid currentColor;
   border-radius: 3px;
-  font-size: px-to-rem(14px);
+  font-size: px-to-rem(16px);
   margin-bottom: units(1);
   outline-offset: 2px;
   padding: units(2) units(1);
@@ -284,7 +330,6 @@ address {
   color: color("white");
   font-family: $font-heading;
   font-weight: 800;
-  font-weight: font-weight(800);
   line-height: 1.2;
   margin: 0;
 }
@@ -315,33 +360,33 @@ $project-active-uswds-breakpoints: ();
   gap: units(1);
 
   &--halves {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
   }
 
   &--thirds {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33.33%);
   }
 
   &--fourths {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
   }
 
   @each $breakpoint in $project-active-uswds-breakpoints {
     &\:#{$breakpoint}--halves {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50%);
       }
     }
 
     &\:#{$breakpoint}--thirds {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 33.33%);
       }
     }
 
     &\:#{$breakpoint}--fourths {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 25%);
       }
     }
   }

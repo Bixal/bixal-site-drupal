@@ -44,6 +44,13 @@ More guidance on git branches and commit style in [robo.yml](https://github.com/
 
 ### Starting the Environment
 
+#### Prerequisites
+
+- php@8.3
+- lando
+
+#### Installing
+
 First time:
 
 ```
@@ -55,6 +62,8 @@ For subsequent starts, you can just:
 ```
 lando start
 ```
+
+You'll be able to visit the local site at https://bixalcom.lndo.site.
 
 Change something in the .lando.yml config and/or you want to re-install front and back end dependencies?
 
@@ -104,18 +113,40 @@ It's important that you always use `lando composer` or `./composer.sh` instead o
 
 ### Access story book
 
-[Storybook preview is available here →](https://sb.feature-bsd-286-remote-xcrmjai-tsvj5tw7p3f66.us.platformsh.site) 
+[Storybook preview is available here →](https://www.bixal.com/sb)
+
+This is also available on all other environments.
 
 [Storybook](https://storybook.js.org/) for this project can be found by:
 
-- Docker version: http://storybook.bixalcom.lndo.site/
-- Local version:
-  - ./sb.sh
-  - This should automatically open it in your browser.
+**Docker URL**
+
+http://storybook.bixalcom.lndo.site/
+
+**Local version**
+
+```bash
+# Run in terminal.
+./sb.sh
+```
+
+This should automatically open it in your browser.
 
 ### Handy Commands for Development
 
-- Run all the validation commands that the pipelines run without needing to push remotely `vendor/bin/robo validate:all`.
+#### Run validation
+
+Run all the validation commands that the pipelines run without needing to push remotely:
+
+```
+vendor/bin/robo validate:all
+```
+
+#### Copy storybook to Drupal theme
+
+```
+lando build_node
+```
 
 #### Configure Xdebug
 

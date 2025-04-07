@@ -1,0 +1,29 @@
+uuid: 2c3b223b-9f59-4024-90a1-085940d59bd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.bixaler
+    - node.type.blog
+id: node.blog.field_author
+field_name: field_author
+entity_type: node
+bundle: blog
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bixaler: bixaler
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

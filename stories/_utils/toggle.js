@@ -4,6 +4,7 @@
 
 const activeClass = "is-active";
 
+let isActive = false;
 
 /**
  * Check if element has active class.
@@ -50,9 +51,9 @@ function hide(trigger, target) {
  */
 function toggle(event) {
   const trigger = event.currentTarget;
-  const target = document.getElementById(trigger.getAttribute("aria-controls"))
+  const target = document.getElementById(trigger.getAttribute("aria-controls"));
 
-  const isActive = checkActive(trigger);
+  isActive = checkActive(trigger);
 
   if (!isActive) {
     show(trigger, target);
@@ -61,10 +62,4 @@ function toggle(event) {
   }
 }
 
-export {
-  activeClass,
-  checkActive,
-  show,
-  hide,
-  toggle,
-};
+export { activeClass, checkActive, show, hide, toggle, isActive };

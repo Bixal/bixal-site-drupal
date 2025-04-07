@@ -7,29 +7,26 @@
 }
 
 .bix-filter__dropdown {
+  margin-block-start: units(5);
   text-align: center;
   position: relative;
   z-index: 1;
 
   &-button {
     @extend %filter-base-text-styles;
-    border-bottom: 2px solid;
+    border-block-end: 2px solid;
     font-size: px-to-rem(16px);
-    margin-bottom: units(4);
-    padding-top: units(1);
-    padding-bottom: units(1);
+    margin-block-end: units(4);
+    padding-block-start: units(1);
+    padding-block-end: units(1);
 
     &.is-active {
       border-bottom-color: var(--c-accent-cool-alt);
-    }
 
-  }
-
-  &-button.is-active {
-
-    // Flip the caret vertically when active.
-    .bix-icon--caret {
-      transform: scaleY(-1);
+      // Flip the caret vertically when active.
+      .bix-icon--caret {
+        transform: scaleY(-1);
+      }
     }
   }
 
@@ -47,8 +44,6 @@
     // 1. USWDS `tablet` token is 640px.
     //    https://designsystem.digital.gov/design-tokens/spacing-units/
     @include at-media("tablet") {
-      columns: 3;
-      gap: units(4);
       margin-left: auto;
       margin-right: auto;
       max-width: units("tablet"); // 1
@@ -56,22 +51,33 @@
     }
   }
 
+  &-options ol {
+    columns: 3;
+    gap: units(4);
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0;
+  }
+
   &-option {
     cursor: pointer;
     display: block;
     line-height: 1;
-    margin-bottom: units(3);
+    margin-block-end: units(3);
     text-align: left;
     transition: color 0.25s;
   }
 
   &-option:last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   // Selected option.
-  &-option:has(input:checked) {
+  &-option input:checked + label,
+  &-option :is(:focus, :active, :hover) {
     color: var(--c-primary-alt);
+    text-decoration: underline;
   }
 
   // The radio button.
@@ -86,7 +92,8 @@
   grid-template-columns: repeat(auto-fill, minmax(140px, 244px));
   row-gap: units(7);
   list-style: none;
-  padding-left: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
   justify-content: center;
 }
 
@@ -134,14 +141,14 @@
   }
 
   &__details {
-    padding-top: units(2);
-    padding-right: units(2);
+    padding-block-start: units(2);
+    padding-inline-end: units(2);
   }
 
   &__name {
     font-size: px-to-rem(24px);
     letter-spacing: -0.33px;
-    margin-bottom: units("05");
+    margin-block-end: units("05");
   }
 
   &__role {
