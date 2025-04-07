@@ -1,0 +1,43 @@
+{#
+/**
+  * Video Component
+  *
+  * Displays hosted video content with the native `<video>` element.
+  *
+  * Available variables:
+  * - additional_classes (array, optional): Additional CSS classes.
+  * - video_src (string): URL of the video source.
+  * - center_content (boolean, optional): Whether to center the video.
+  * - poster (string, optional): URL of the video poster image
+  * - controls (boolean, optional): Boolean to show video controls, enabled by default.
+  * - description (string, optional): Description below the video.
+  **/
+**/
+#}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set video_classes = [
+  "bix-video",
+] | merge(additional_classes | default([])) %}
+
+
+{% set video_src = video_src %}
+
+<div {{ attributes.addClass(video_classes) }} {% if center_content %}data-align="center"{% endif %}>
+  {% if video_src %}
+  <video class="bix-video__player" {% if poster %}poster="{{ poster }}"{% endif %} {% if controls|default(true) %}controls{% endif %}>
+    <source src="{{ video_src }}">
+  </video>
+  {% else %}
+    The <code>video_src</code> property is empty.
+  {% endif %}
+
+  {% if video_src and description %}
+    <div class="bix-video__description">
+      {{ description }}
+    </div>
+  {% endif %}
+</div>
