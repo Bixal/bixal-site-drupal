@@ -5,14 +5,6 @@ const browsersync = require("browser-sync").create();
 const uglifyes = require("uglify-es");
 const composer = require("gulp-uglify/composer");
 const uglify = composer(uglifyes, console);
-// These are required to build Sass here.
-const csso = require("postcss-csso");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sourcemaps = require("gulp-sourcemaps");
-const rename = require("gulp-rename");
-const replace = require("gulp-replace");
-const sass = require("gulp-sass")(require("sass-embedded"));
 const log = console.log;
 const colors = {
   red: "\x1b[31m%s\x1b[0m",
@@ -20,6 +12,24 @@ const colors = {
   yellow: "\x1b[33m%s\x1b[0m",
 };
 // End required to build Sass.
+
+/**
+ * USWDS version
+ */
+// Use version 3.
+uswds.settings.version = 3;
+
+/**
+ * Custom path settings
+ * Set as many as you need
+ * see https://designsystem.digital.gov/documentation/getting-started/developers/phase-two-compile/#step-4-create-path-settings-and-export-compile-functions
+ */
+uswds.paths.dist.theme = "./src/sass";
+uswds.paths.dist.css = "./dist/css";
+uswds.paths.dist.img = "./dist/assets/img";
+uswds.paths.dist.fonts = "./dist/assets/fonts";
+uswds.paths.dist.js = "./dist/js";
+uswds.paths.src.projectSass = "./src/sass";
 
 const settings = {
   sass: {
@@ -95,64 +105,9 @@ function browserSync(done) {
   done();
 }
 
-// These are required to build Sass here.
-let getSrcFrom = (key) => {
-  if (uswds.paths.src[key]) {
-    return uswds.paths.src[key];
-  }
-  return uswds.paths.src.defaults[`v${uswds.settings.version}`][key];
-};
-
-function handleError(error) {
-  log(error.message);
-  return this.emit("end");
-}
-
 function logVersion() {
   log(colors.blue, `uswds.version: ${uswds.settings.version}`);
   return Promise.resolve("logged version");
-}
-
-function buildSass() {
-  let uswdsPath = "uswds";
-  if (uswds.settings.version === 3) {
-    uswdsPath = "@uswds/uswds";
-  }
-
-  const pkg = require(`./node_modules/${uswdsPath}/package.json`).version;
-
-  log(colors.blue, `Compiling with USWDS ${pkg}`);
-  const buildSettings = {
-    plugins: [
-      autoprefixer({
-        cascade: false,
-        grid: true,
-        overrideBrowserslist: uswds.settings.compile.browserslist,
-      }),
-      csso({ forceMediaMerge: false }),
-    ],
-    includes: [
-      // 1. local theme files
-      uswds.paths.dist.theme,
-      // 2. uswds organization directory (npm packages)
-      getSrcFrom("uswds"),
-      // 3. v2 packages directory
-      `${getSrcFrom("sass")}/packages`.replaceAll("//", "/"),
-      // 4. local uswds package
-      getSrcFrom("sass"),
-    ],
-  };
-
-  return src([`${uswds.paths.dist.theme}/*.scss`.replaceAll("//", "/")])
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.init({ largeFile: true }))
-    .pipe(
-      sass({ includePaths: buildSettings.includes }).on("error", handleError),
-    )
-    .pipe(replace(/\buswds @version\b/g, `based on uswds v${pkg}`))
-    .pipe(postcss(buildSettings.plugins))
-    .pipe(sourcemaps.write("."))
-    .pipe(dest(uswds.paths.dist.css));
 }
 
 function watchSass() {
@@ -161,28 +116,10 @@ function watchSass() {
       `${uswds.paths.dist.theme}/**/*.scss`.replaceAll("//", "/"),
       `${uswds.paths.src.projectSass}/**/*.scss`.replaceAll("//", "/"),
     ],
-    buildSass,
+    uswds.compileSass,
   );
 }
 // End required to build Sass.
-
-/**
- * USWDS version
- */
-// Use version 3.
-uswds.settings.version = 3;
-
-/**
- * Custom path settings
- * Set as many as you need
- * see https://designsystem.digital.gov/documentation/getting-started/developers/phase-two-compile/#step-4-create-path-settings-and-export-compile-functions
- */
-uswds.paths.dist.theme = "./src/sass";
-uswds.paths.dist.css = "./dist/css";
-uswds.paths.dist.img = "./dist/assets/img";
-uswds.paths.dist.fonts = "./dist/assets/fonts";
-uswds.paths.dist.js = "./dist/js";
-uswds.paths.src.projectSass = "./src/sass";
 
 /**
  * Exports
@@ -197,16 +134,16 @@ uswds.paths.src.projectSass = "./src/sass";
 exports.watch = parallel(
   watchCompFiles,
   logVersion,
-  buildSass,
+  uswds.compileSass,
   watchSass,
   browserSync,
   watchJSTwigFiles,
 );
 exports.update = uswds.updateUswds;
 exports.copyAssets = uswds.copyAssets;
-exports.compileSass = series(logVersion, buildSass);
+exports.compileSass = uswds.compileSass;
 exports.compile = series(
   logVersion,
-  parallel(buildSass, uswds.compileIcons, buildJS, uswds.copyAssets),
+  parallel(exports.compileSass, uswds.compileIcons, buildJS, uswds.copyAssets),
 );
 exports.default = this.compile;
