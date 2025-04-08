@@ -26,17 +26,22 @@
   }
 }
 
-.bix-case-breakdown {
+.bix-highlights {
+  --highlight-color: var(--c-primary);
+
+  margin-block-start: units(8);
   font-size: 1rem;
 
-  @include at-media("tablet") {
-    display: flex;
-    flex-flow: row nowrap;
-    column-gap: units(3);
+  svg {
+    @include u-circle(10);
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 1rem;
+  }
 
-    > * {
-      flex: 1 1 33.33%;
-    }
+  h3 {
+    // font-size: font-size("body", "lg");
+    // margin-block-start: units(1);
   }
 
   p {

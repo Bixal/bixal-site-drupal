@@ -357,7 +357,7 @@ $project-active-uswds-breakpoints: ();
 .bix-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: units(1);
+  gap: units(2);
 
   &--halves {
     grid-template-columns: repeat(2, 50%);
@@ -380,7 +380,7 @@ $project-active-uswds-breakpoints: ();
 
     &\:#{$breakpoint}--thirds {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(3, 33.33%);
+        grid-template-columns: repeat(3, minmax(33.33%, 1fr));
       }
     }
 

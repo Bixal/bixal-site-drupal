@@ -3,14 +3,11 @@ import CaseStudy from "./case-study.html.twig";
 import * as Header from "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
 import * as ContactUs from "../../components/contact-us/contact-us.stories";
+import Icon from "../../components/icon/icon.stories";
 import "../../components/footer/footer.stories";
 import "../../components/emphasis-block/emphasis-block.stories";
 import "../../components/description-list/description-list.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
-
-import codeIcon from "@uswds/uswds/img/usa-icons/code.svg";
-import supportIcon from "@uswds/uswds/img/usa-icons/support_agent.svg";
-import graphIcon from "@uswds/uswds/img/usa-icons/assessment.svg";
 
 import "./case-studies.scss";
 
@@ -153,7 +150,7 @@ export const Alternative = {
 
           <div class="bix-case-study__subsection">
             <h2>At a glance</h2>
-            <div class="bix-case-breakdown">
+            <div class="bix-highlights bix-grid bix-grid:tablet--thirds">
               <div>
                 <h3>Challenge</h3>
                 <p>
@@ -209,23 +206,29 @@ export const Alternative = {
                 The Bixal team created both storytelling and multimedia templates for FEMA’s team to build on and ensure consistency with future use. We also aligned our project’s objectives with FEMA’s broader strategic communications goals to deliver a collection of videos that the FEMA team could integrate into ongoing marketing campaigns and relevant seasonal outreach (i.e., hurricane season). These videos now serve as a means for continued brand building and leverage other FEMA opportunities to promote greater agency awareness throughout the year.
               </p>
 
-              <div class="bix-grid bix-grid--thirds">
-                <div className="item">
-                  <img src="${codeIcon}" alt="" height="75" width="75" />
+              <div class="bix-highlights bix-grid bix-grid:tablet--thirds">
+                <div class="item">
+                  ${Icon.component({ icon_name: "code", icon_size: "8" })}
                   <h3>Technology</h3>
                   <p>
                     Drupal 9, USAJOBS API, React.js, Leaflet Map API
                   </p>
                 </div>
                 <div className="item">
-                  <img src="${supportIcon}" alt="" height="75" width="75" />
+                  ${Icon.component({
+                    icon_name: "assessment",
+                    icon_size: "8",
+                  })}
                   <h3>Methodology</h3>
                   <p>
                     We used Agile methodology and Scrum framework.
                   </p>
                 </div>
                 <div className="item">
-                  <img src="${graphIcon}" alt="" height="75" width="75" />
+                  ${Icon.component({
+                    icon_name: "support_agent",
+                    icon_size: "8",
+                  })}
                   <h3>Customer Support</h3>
                   <p>
                     To support customers, we developed a go-to-market project plan and social media toolkit for the product launch.
@@ -259,5 +262,6 @@ export const Alternative = {
           "<p>Bixal’s work for ED and DOL made it much easier for state and local partners to adhere to WIOA's provisions, facilitated the creation of more and better career paths for all Americans, in particular those facing significant hurdles to employment, and demonstrated how well federal agencies can work for the people they serve when they lead with human-centered design and an ethos of constant improvement.</p>",
       },
     ],
+    contactContent: ContactUs.default.args,
   },
 };
