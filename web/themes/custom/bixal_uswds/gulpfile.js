@@ -1,9 +1,9 @@
 const uswds = require("@uswds/compile");
-const {parallel, watch, series, src, dest} = require('gulp');
+const { parallel, watch, series, src, dest } = require("gulp");
 const gulp = require("gulp");
-const browsersync = require('browser-sync').create();
-const uglifyes = require('uglify-es');
-const composer = require('gulp-uglify/composer');
+const browsersync = require("browser-sync").create();
+const uglifyes = require("uglify-es");
+const composer = require("gulp-uglify/composer");
 const uglify = composer(uglifyes, console);
 // These are required to build Sass here.
 const csso = require("postcss-csso");
@@ -23,38 +23,30 @@ const colors = {
 
 const settings = {
   sass: {
-    src: ['./src/sass/**/*.scss']
+    src: ["./src/sass/**/*.scss"],
   },
   js: {
-    dest: './dist/js',
-    minDest: './dist/js/min',
-    minSrc: './src/js/**/*.js',
-    src: './src/js/**/*.js'
-  }
-}
+    dest: "./dist/js",
+    minDest: "./dist/js/min",
+    minSrc: "./src/js/**/*.js",
+    src: "./src/js/**/*.js",
+  },
+};
 
 // JS build function.
 function buildJS() {
-  return src(settings.js.src)
-    .pipe(uglify())
-    .pipe(gulp.dest(settings.js.dest))
+  return src(settings.js.src).pipe(uglify()).pipe(gulp.dest(settings.js.dest));
 }
 
 // Watch changes on JS and twig files and trigger functions at the end.
 function watchJSTwigFiles() {
   watch(
-    [
-      './src/js/**/*.js',
-      './templates/**/*.html.twig'
-    ],
+    ["./src/js/**/*.js", "./templates/**/*.html.twig"],
     {
-      events: 'all',
-      ignoreInitial: false
+      events: "all",
+      ignoreInitial: false,
     },
-    series(
-      buildJS,
-      browserSyncReload
-    )
+    series(buildJS, browserSyncReload),
   );
 }
 
@@ -66,25 +58,22 @@ function browserSyncReload(done) {
 
 // Compile CSS from scss.
 function buildCompStyles() {
-  return src(settings.sass.src)
-    .pipe(browsersync.reload({
-      stream: true
-    }));
+  return src(settings.sass.src).pipe(
+    browsersync.reload({
+      stream: true,
+    }),
+  );
 }
 
 // Watch changes on sass files and trigger functions at the end.
 function watchCompFiles() {
   watch(
-    [
-      './src/sass/**/*.scss',
-    ],
+    ["./src/sass/**/*.scss"],
     {
-      events: 'all',
-      ignoreInitial: false
+      events: "all",
+      ignoreInitial: false,
     },
-    series(
-      buildCompStyles
-    )
+    series(buildCompStyles),
   );
 }
 
@@ -92,12 +81,12 @@ function watchCompFiles() {
 function browserSync(done) {
   browsersync.init({
     injectChanges: true,
-    logPrefix: 'BixalTheme (USWDS)',
-    baseDir: './',
+    logPrefix: "BixalTheme (USWDS)",
+    baseDir: "./",
     open: false,
     notify: true,
-    proxy: 'bixalcom.lndo.site',
-    host: 'bixalcom.lndo.site',
+    proxy: "bixalcom.lndo.site",
+    host: "bixalcom.lndo.site",
     openBrowserAtStart: false,
     reloadOnRestart: true,
     port: 32677,
@@ -158,7 +147,7 @@ function buildSass() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(
-      sass({ includePaths: buildSettings.includes }).on("error", handleError)
+      sass({ includePaths: buildSettings.includes }).on("error", handleError),
     )
     .pipe(replace(/\buswds @version\b/g, `based on uswds v${pkg}`))
     .pipe(postcss(buildSettings.plugins))
@@ -172,7 +161,7 @@ function watchSass() {
       `${uswds.paths.dist.theme}/**/*.scss`.replaceAll("//", "/"),
       `${uswds.paths.src.projectSass}/**/*.scss`.replaceAll("//", "/"),
     ],
-    buildSass
+    buildSass,
   );
 }
 // End required to build Sass.
@@ -188,12 +177,12 @@ uswds.settings.version = 3;
  * Set as many as you need
  * see https://designsystem.digital.gov/documentation/getting-started/developers/phase-two-compile/#step-4-create-path-settings-and-export-compile-functions
  */
-uswds.paths.dist.theme = './src/sass';
-uswds.paths.dist.css = './dist/css';
-uswds.paths.dist.img = './dist/assets/img';
-uswds.paths.dist.fonts = './dist/assets/fonts';
-uswds.paths.dist.js = './dist/js';
-uswds.paths.src.projectSass = './src/sass';
+uswds.paths.dist.theme = "./src/sass";
+uswds.paths.dist.css = "./dist/css";
+uswds.paths.dist.img = "./dist/assets/img";
+uswds.paths.dist.fonts = "./dist/assets/fonts";
+uswds.paths.dist.js = "./dist/js";
+uswds.paths.src.projectSass = "./src/sass";
 
 /**
  * Exports
@@ -205,9 +194,19 @@ uswds.paths.src.projectSass = './src/sass';
 // exports.init = uswds.init;
 
 // Various compile functions.
-exports.watch = parallel(watchCompFiles, logVersion, buildSass, watchSass, browserSync, watchJSTwigFiles);
+exports.watch = parallel(
+  watchCompFiles,
+  logVersion,
+  buildSass,
+  watchSass,
+  browserSync,
+  watchJSTwigFiles,
+);
 exports.update = uswds.updateUswds;
 exports.copyAssets = uswds.copyAssets;
 exports.compileSass = series(logVersion, buildSass);
-exports.compile = series(logVersion, parallel(buildSass, uswds.compileIcons, buildJS, uswds.copyAssets));
+exports.compile = series(
+  logVersion,
+  parallel(buildSass, uswds.compileIcons, buildJS, uswds.copyAssets),
+);
 exports.default = this.compile;
