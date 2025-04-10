@@ -192,7 +192,8 @@
     },
     "autoload": {
         "psr-4": {
-            "RoboEnv\\": "./RoboEnv/"
+            "RoboEnv\\": "./RoboEnv/",
+            "Drush\\": "./vendor/drush/drush/src-symfony-compatibility/v6/"
         }
     }
 }
