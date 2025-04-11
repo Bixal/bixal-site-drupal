@@ -205,7 +205,7 @@ Or a USWDS mixin...
   // https://designsystem.digital.gov/utilities/font-size-and-family/
   // https://designsystem.digital.gov/design-tokens/typesetting/font-family/
   // Set some reasonable typography defaults.
-  $theme-font-type-sans: "source-sans-pro",
+  $theme-font-type-sans: "system",
   // Default paragraph width - none = 100%
   $theme-text-measure: none,
   // Default font sizes.
