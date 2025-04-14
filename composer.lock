@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4195fc9dd55e86628339ebe0d4279b3b",
+    "content-hash": "73d71971f235a80f0513eef3ae101293",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3624,6 +3624,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/media_library_edit",
                 "issues": "https://www.drupal.org/project/issues/media_library_edit"
+            }
+        },
+        {
+            "name": "drupal/media_remote",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_remote.git",
+                "reference": "1.9.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_remote-1.9.1.zip",
+                "reference": "1.9.1",
+                "shasum": "d89d423029af38bb8c6e4c7027824df50d50f97e"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.9.1",
+                    "datestamp": "1729150362",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "lullabot",
+                    "homepage": "https://www.drupal.org/user/3815489"
+                },
+                {
+                    "name": "marcoscano",
+                    "homepage": "https://www.drupal.org/user/1288796"
+                }
+            ],
+            "description": "Provides Media integration for remote content (non-OEmbed).",
+            "homepage": "https://www.drupal.org/project/media_remote",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_remote",
+                "issues": "http://drupal.org/project/issues/media_remote"
             }
         },
         {
