@@ -24,13 +24,13 @@
   {% set button_type = element["#button_type"] %}
 {% endif %}
 
-{# Set various classes to adhere to USWDS form classes. #}
+{# Set USWDS and Bixal theme classes. #}
 {% set classes = [
   type in ['checkbox', 'radio'] ? 'usa-' ~ type ~ '__input',
   type in ['password', 'password_confirm', 'text', 'tel', 'number', 'url', 'email', 'date', 'time'] ? 'usa-input',
   type in ['file', 'managed_file'] ? 'usa-file-input',
-  type == 'submit' ? 'usa-button',
-  button_type == 'reset' ? 'usa-button--secondary',
+  type == 'submit' ? 'bix-button',
+  button_type == 'reset' ? 'bix-button bix-button--unstyled',
   type == 'range' ? 'usa-range',
   time_picker_style == 'html5_time_picker' ? 'width-card-lg is-html5-time-picker',
   form_id == 'search_form' ? 'maxw-card tablet:maxw-mobile-lg',
