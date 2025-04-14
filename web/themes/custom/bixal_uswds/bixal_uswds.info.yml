@@ -36,3 +36,8 @@ libraries-override:
   olivero/tabs:
     js:
       js/tabs.js: false
+
+  node/drupal.node.preview:
+    css:
+      theme:
+        css/node/node.preview.css: false
