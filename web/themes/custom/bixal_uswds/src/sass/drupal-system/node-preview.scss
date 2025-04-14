@@ -10,6 +10,7 @@
   width: 100%;
   padding: 20px 10px;
 
+  // 610px
   @media screen and (min-width: 38.125em) {
     // The Drupal CSS variable for the admin toolbar height.
     top: var(--drupal-displace-offset-top);
