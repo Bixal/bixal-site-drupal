@@ -57,3 +57,4 @@ bcddba84bc19a7997d7c4276c8c99f3a|Matt Poole|feature/BSD-389-update-deps|Tue Mar 
 257ca10ff457e9c8f81a423c97caf7bb|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 15:58:20 EDT 2025|./composer.sh require drupal/sitewide_alert:^3.0
 c2343dc811921e7d3cb46b08fd17e71c|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 16:45:19 EDT 2025|./composer.sh require drupal/xmlsitemap:^2.0@beta
 66e402bbdc6ed898197203c0ef90ed6b|Matt Poole|feature/BSD-273-d11-upgrade|Thu Apr 10 09:57:48 EDT 2025|./composer.sh update
+54f150b4d1ae04b57a30358d798294a1|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 11:23:56 EDT 2025|./composer.sh remove drupal/media_remote_hls

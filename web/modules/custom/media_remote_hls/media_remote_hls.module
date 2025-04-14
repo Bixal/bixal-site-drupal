@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Legacy hooks for Media Remote HLS.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function media_remote_hls_theme() {
+  return [
+    'media_remote_hls' => [
+      'variables' => [
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+        'autoplay' => NULL,
+      ],
+    ],
+  ];
+}
