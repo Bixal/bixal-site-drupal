@@ -59,7 +59,7 @@
         "drupal/cookies": "^1.2",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
-        "drupal/core-recommended": "^10.1",
+        "drupal/core-recommended": "^11.1",
         "drupal/decorative_image_widget": "^1.0",
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
@@ -93,7 +93,7 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^4.3",
         "drupal/view_unpublished": "^1.2",
-        "drupal/webprofiler": "^10.1",
+        "drupal/webprofiler": "^11.1",
         "drupal/xmlsitemap": "^2.0@beta",
         "drush/drush": "*",
         "jjj/chosen": "2.2.1",
@@ -188,7 +188,7 @@
         "patches-file": "composer.patches.json"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1"
+        "drupal/core-dev": "^11.1"
     },
     "autoload": {
         "psr-4": {
