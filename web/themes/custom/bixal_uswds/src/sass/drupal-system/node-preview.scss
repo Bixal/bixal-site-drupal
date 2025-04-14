@@ -1,0 +1,30 @@
+@use "uswds-core" as *;
+
+.node-preview-container {
+  @include u-shadow(2);
+  background-color: color("white");
+  position: sticky;
+  top: 0;
+  z-index: 499;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 10px;
+
+  @media screen and (min-width: 38.125em) {
+    // The Drupal CSS variable for the admin toolbar height.
+    top: var(--drupal-displace-offset-top);
+  }
+}
+
+.node-preview-form-select {
+  display: flex;
+
+  @include at-media("mobile") {
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  label {
+    display: inline-flex;
+  }
+}
