@@ -29,5 +29,5 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'mp4 webm m4v'
   max_filesize: ''
-  description_field: false
+  description_field: true
 field_type: file

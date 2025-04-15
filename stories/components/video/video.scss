@@ -1,0 +1,20 @@
+@use "uswds-core" as *;
+
+.bix-video {
+  font-size: 1rem;
+  margin-block-end: units(6);
+
+  video {
+    max-width: 100%;
+  }
+
+  &__description {
+    margin-block-start: units("05");
+  }
+
+  &[data-align="center"] {
+    margin-inline: auto;
+    width: fit-content;
+    text-align: center;
+  }
+}
