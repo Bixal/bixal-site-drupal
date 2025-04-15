@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fcfebc78-56cc-4f99-9557-22c91c0ac653
+  bundle: image
+  default_langcode: en
+  depends:
+    1a262100-a726-4d32-abc4-c2d6936dbcb5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 400x400test.png
+  created:
+    -
+      value: 1744728270
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1a262100-a726-4d32-abc4-c2d6936dbcb5
+      alt: Testing
+      title: ''
+      width: 400
+      height: 400
