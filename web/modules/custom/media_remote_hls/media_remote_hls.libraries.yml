@@ -1,0 +1,6 @@
+videojs:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/video.js/8.19.1/video.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/video.js/8.19.1/video-js.min.css: { type: external, minified: true }

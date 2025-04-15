@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d5288ffa-a705-4f18-9410-fc7233014ce3
+  bundle: video
+  default_langcode: en
+  depends:
+    c1a83ba8-325a-40fe-8206-55e3db845d5b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: file_example_MP4_640_3MG.mp4
+  created:
+    -
+      value: 1744123403
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_video_file:
+    -
+      entity: c1a83ba8-325a-40fe-8206-55e3db845d5b
+      display: true
+      description: 'Smaller than full width, does not scale wider'

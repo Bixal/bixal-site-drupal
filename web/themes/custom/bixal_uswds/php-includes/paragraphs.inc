@@ -70,11 +70,11 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
       case "people_list":
         // Load nodes of type bixaler.
         $entity_query = \Drupal::entityQuery('node');
-        $entity_query->condition('type', 'bixaler')
+        $results = $entity_query->condition('type', 'bixaler')
           ->accessCheck(TRUE)
           ->condition('status', NodeInterface::PUBLISHED)
-          ->sort('title', 'ASC');
-        $results = $entity_query->execute();
+          ->sort('title', 'ASC')
+          ->execute();
         $nodes = Node::loadMultiple($results);
         if (empty($nodes)) {
           return;

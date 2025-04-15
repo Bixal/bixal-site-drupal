@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e519e02d-3fd1-4367-96ba-c38238b30a2c
+  bundle: blog
+  default_langcode: en
+  depends:
+    c69649c8-1616-4b37-8f25-e83d0fdf16e8: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'A video'
+  created:
+    -
+      value: 1744055826
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /blog/video
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pulvinar velit. Morbi tempus suscipit purus sit amet malesuada. Pellentesque elit orci, elementum nec arcu ut, pulvinar consectetur ligula. Pellentesque leo purus, vehicula tempus risus eu, pulvinar scelerisque felis. Praesent risus tellus, facilisis vitae justo sit amet, rhoncus faucibus nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sollicitudin in diam eu viverra. Curabitur vitae neque lobortis dolor euismod mollis. Aenean a facilisis justo. Etiam accumsan ante placerat, vehicula erat eget, pharetra lacus. Ut viverra pretium blandit. Praesent malesuada, nulla suscipit feugiat semper, erat lorem ullamcorper lorem, nec consequat arcu quam a nulla. Aliquam ut imperdiet massa, nec tempus lectus. In interdum sodales sapien vitae commodo. Sed pretium dolor non ipsum mollis, semper semper nibh posuere. Praesent vitae ornare tortor.</p><p>Etiam feugiat leo imperdiet erat imperdiet consequat. Suspendisse vitae lorem est. Ut tristique dui quis velit tempor cursus. In hendrerit, purus at efficitur vehicula, nisi quam bibendum nunc, auctor tempor metus ipsum eleifend orci. Fusce rutrum faucibus ante in blandit. Suspendisse lobortis ac risus at sagittis. Cras sit amet tellus eget dui tincidunt consectetur. Phasellus nec lacinia ipsum, sed bibendum purus. Quisque varius facilisis tellus, non convallis nisl interdum blandit. Aliquam vitae quam id mi ultrices ornare. Suspendisse molestie leo elit, eu tincidunt nunc mattis sed.</p><drupal-media data-entity-type="media" data-entity-uuid="d5288ffa-a705-4f18-9410-fc7233014ce3">&nbsp;</drupal-media><p>Curabitur convallis orci vel metus tempus dapibus. Maecenas scelerisque bibendum euismod. Cras luctus rutrum metus, quis ornare nunc ullamcorper ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin aliquet vestibulum lacus non iaculis. Maecenas id nisi placerat, fermentum felis in, posuere mauris. Proin nec ante nec nisi volutpat luctus. Sed at ultricies turpis. Cras vel mauris semper, aliquet massa id, fermentum eros.</p><drupal-media data-entity-type="media" data-entity-uuid="68bf2e29-d15e-4a88-a2ba-9b4b2ed04d0d">&nbsp;</drupal-media><p>Aenean dignissim id purus non facilisis. Nulla quis tortor condimentum, pharetra mauris nec, faucibus ex. Donec maximus dui elit, in rutrum felis finibus ut. Vestibulum maximus massa porta, dapibus dolor at, vulputate enim. In eu augue elit. Donec posuere ligula sed eros feugiat sollicitudin. Donec pulvinar sodales augue, id facilisis lectus semper vitae. Maecenas ultrices cursus ipsum id dapibus. Sed et orci scelerisque, lobortis erat et, tristique diam. Vivamus posuere metus vitae finibus volutpat.</p><p>Sed luctus nibh nec neque ultricies, condimentum eleifend urna maximus. Cras ultrices nec felis in tincidunt. Cras sit amet urna a dui suscipit placerat. Suspendisse potenti. Nam euismod turpis pellentesque, vehicula lacus non, dapibus nibh. Nam ac posuere tellus, at congue dui. Nunc mattis sed lectus in molestie. Mauris a orci odio. Nunc vitae tincidunt sem, et ornare eros. Praesent molestie aliquet ante, molestie tempus erat tincidunt vehicula. Donec tincidunt sit amet ipsum ac porttitor. Nulla eu malesuada justo, vel ullamcorper velit.</p>'
+      format: html_text
+      summary: ''
+  field_banner_image:
+    -
+      entity: c69649c8-1616-4b37-8f25-e83d0fdf16e8
+  field_date:
+    -
+      value: '2025-04-07'
+  field_decorative_title:
+    -
+      value: 'Blog and News'

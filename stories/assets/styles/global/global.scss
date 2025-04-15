@@ -77,7 +77,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
 // View transitions
 //
 // Adds a nice transition to the page when navigating the website.
-@media not (prefers-reduced-motion) {
+@media (prefers-reduced-motion: no-preference) {
   @view-transition {
     navigation: auto;
   }
