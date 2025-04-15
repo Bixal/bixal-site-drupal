@@ -15,6 +15,5 @@
 #}
 {% include "@components/video/video.html.twig" with {
   video_src: files.0.source_attributes.src,
-  center_content: true,
   description: files.0.file._referringItem.get('description').value,
 } %}
