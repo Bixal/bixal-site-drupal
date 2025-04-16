@@ -36,3 +36,15 @@ libraries-override:
   olivero/tabs:
     js:
       js/tabs.js: false
+
+  node/drupal.node.preview:
+    css:
+      theme:
+        # This override is an override of the base theme. When overriding an
+        # override, the full path to the file doing the override must be used.
+        # So css/node.preview.css is the original file from the node module,
+        # which was replaced with css/node/node.preview.css from the stable
+        # theme. But when overrides are applied, they put the full path to the
+        # file instead of the relative path.
+        # @see LibraryDiscoveryParser::applyLibrariesOverride().
+        /themes/contrib/stable/css/node/node.preview.css: false
