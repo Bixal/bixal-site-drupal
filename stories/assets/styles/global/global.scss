@@ -64,6 +64,27 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   //
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
+
+  //
+  // Media
+  //
+  --media-spacing: #{units(3)};
+
+  // The left and right spacing. Use margin-inline to set.
+  //
+  // @example:
+  // img {
+  //   margin-inline: var(--media-spacing-x);
+  // }
+  --media-spacing-x: var(--media-spacing);
+  //
+  // The top and bottom spacing. Use margin-block to set.
+  //
+  // @example:
+  // img {
+  //   margin-block: var(--media-spacing-y);
+  // }
+  --media-spacing-y: var(--media-spacing);
 }
 
 // Modern normalize - CSS Reset.
@@ -250,12 +271,17 @@ p {
     hyphens: auto;
   }
 
-  margin-top: units(3);
-  margin-bottom: units(3);
+  margin-block: units(3);
+}
+
+hr {
+  clear: both;
 }
 
 img {
+  font-style: italic; // For images that fail to load.
   max-width: 100%;
+  height: auto;
   vertical-align: middle; // Remove extra space from images.
 }
 
@@ -279,6 +305,53 @@ address {
   margin: 0 auto;
   max-width: 1350px;
   width: 85%;
+
+  // Clears floats from children.
+  &:has(.align-left, .align-right, .align-center) {
+    display: flow-root;
+  }
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.align-left {
+  margin-block: var(--media-spacing-y);
+
+  @include at-media("tablet") {
+    float: left;
+    margin-inline-end: var(--media-spacing);
+  }
+}
+
+// 1. Prevents floats from affecting its ability to center.
+.align-center {
+  display: flow-root; // 1
+  margin-block: var(--media-spacing-y);
+  margin-inline: auto;
+  max-width: max-content;
+
+  &:has(.bix-video) {
+    margin-block-end: 0;
+  }
+}
+
+.align-right {
+  margin-block: var(--media-spacing-y);
+
+  @include at-media("tablet") {
+    float: right;
+    margin-inline-start: var(--media-spacing);
+  }
 }
 
 // ==========================================================================
