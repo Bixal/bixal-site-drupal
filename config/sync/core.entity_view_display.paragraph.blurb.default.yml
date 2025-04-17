@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.blurb.field_image
     - field.field.paragraph.blurb.field_link
     - field.field.paragraph.blurb.field_title
+    - image.style.webp
     - paragraphs.paragraphs_type.blurb
   module:
     - datetime
@@ -39,7 +40,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: webp
       image_loading:
         attribute: lazy
     third_party_settings: {  }
