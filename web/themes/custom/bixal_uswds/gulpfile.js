@@ -144,6 +144,7 @@ exports.copyAssets = uswds.copyAssets;
 exports.compileSass = uswds.compileSass;
 exports.compile = series(
   logVersion,
-  parallel(exports.compileSass, uswds.compileIcons, buildJS, uswds.copyAssets),
+  uswds.copyAssets, // Assets need to be moved before compiling and moving icons.
+  parallel(exports.compileSass, uswds.compileIcons, buildJS),
 );
 exports.default = this.compile;
