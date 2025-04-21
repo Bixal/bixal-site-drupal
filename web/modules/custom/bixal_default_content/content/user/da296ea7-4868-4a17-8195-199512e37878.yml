@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: da296ea7-4868-4a17-8195-199512e37878
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: siteadmin@bixal.com
+  pass:
+    -
+      value: $2y$10$ujGJjUnR5Xyae6Xd6u3JGeJhvyzAmpagFWSJaFj2l0pWtHKbmhLOq
+      existing: ''
+      pre_hashed: true
+  mail:
+    -
+      value: siteadmin@bixal.com
+  timezone:
+    -
+      value: America/New_York
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1743430968
+  access:
+    -
+      value: 1743431821
+  login:
+    -
+      value: 1743431366
+  init:
+    -
+      value: siteadmin@bixal.com
+  roles:
+    -
+      target_id: site_admin
+  role_change:
+    -
+      target_id: __role_delegation_empty_field_value__
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0

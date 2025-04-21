@@ -12,7 +12,6 @@
   line-height: 1;
   outline-color: var(--c-accent-cool-alt);
   padding: units(2) units(3);
-  text-decoration: none;
   transition: 0.2s ease-in;
 
   &:hover,
@@ -27,15 +26,18 @@
   }
 }
 
+a.bix-button {
+  text-decoration: revert;
+}
+
 .bix-button--icon-before {
   flex-direction: row-reverse;
 }
 
-.bix-button--inverse {
+.bix-button.bix-button--inverse {
   color: color("white");
 
-  &:hover,
-  &:focus {
+  &:is(:focus, :hover) {
     background-color: color("white");
     color: color("ink");
     outline-offset: 3px;
@@ -46,7 +48,9 @@
   border: none;
   border-radius: 0;
   appearance: none;
-  padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: px-to-rem(1px);
+  text-underline-offset: px-to-rem(2px);
 
   &:hover,
   &:focus {

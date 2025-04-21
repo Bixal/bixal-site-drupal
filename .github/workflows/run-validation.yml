@@ -46,22 +46,9 @@ jobs:
             -   name: Validate a change to any branch
                 if: github.event_name == 'push'
                 run: |
-                    # Initialize status variables to 0
-                    status1=0
-                    status2=0
-                    status3=0
-
-                    # Run all commands and capture their exit statuses
-                    vendor/bin/robo validate:branch-name || status1=$? || status1=0
-                    vendor/bin/robo validate:composer-lock || status3=$? || status3=0
-                    vendor/bin/robo validate:coding-standards || status2=$? || status2=0
-
-                    # Exit with a non-zero status if any command failed
-                    if [ "$status1" -ne 0 ] || [ "$status2" -ne 0 ] || [ "$status3" -ne 0 ]; then
-                      exit 1
-                    fi
+                    ROBO_VALIDATE_BRANCH_NAME=${{ github.head_ref }} vendor/bin/robo validate:all non_pr
 
             -   name: Validate pull requests
                 if: github.event_name == 'pull_request'
                 run: |
-                    vendor/bin/robo validate:commit-messages --target-branch="${{ github.base_ref }}" --current-branch="${{ github.head_ref }}"
+                    ROBO_VALIDATE_TARGET_BRANCH="${{ github.base_ref }}" ROBO_VALIDATE_CURRENT_BRANCH="${{ github.head_ref }}" vendor/bin/robo validate:all only_pr

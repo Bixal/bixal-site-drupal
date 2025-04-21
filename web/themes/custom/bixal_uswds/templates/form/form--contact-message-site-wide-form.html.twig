@@ -10,19 +10,15 @@
  * @see template_preprocess_form()
  */
 #}
-<section id="contact" class="bix-contact bix-section bix-section--primary" aria-label="Contact us">
+<section id="contact" class="bix-section  bix-section--primary bix-contact">
   <div class="bix-container">
-    <div class="bix-contact__content">
-      <div class="contact__overview">
-        <div class="bix-title-prefix">{% if on_full_form_page %}<h1>{% endif %}Contact{% if on_full_form_page %}</h1>{% endif %}</div>
-        <h2>
-          {{ 'How can we help?'|t }}<br />
-          {{ 'We\'d love to hear from you.'|t }}
-        </h2>
-      </div>
-      <form{{ attributes }}>
-        {{ children }}
-      </form>
-    </div>
+    <div class="bix-title-prefix">{% if on_full_form_page %}<h1>{% endif %}Contact{% if on_full_form_page %}</h1>{% endif %}</div>
+    <h2 class="bix-section__title">
+      {{ 'How can we help?'|t }}<br />
+      {{ 'We\'d love to hear from you.'|t }}
+    </h2>
+    <form{{ attributes }}>
+      {{ children }}
+    </form>
   </div>
 </section>

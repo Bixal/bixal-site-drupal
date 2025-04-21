@@ -73,13 +73,15 @@
     &:after {
       content: "";
       display: block;
-      border-bottom: 1px solid var(--c-accent-warm);
+      border-bottom: 2px solid var(--c-accent-warm);
       padding-top: units(3);
       width: px-to-rem(200px);
     }
   }
 
-  &__specialties,  &__certifications, &__languages {
+  &__specialties,
+  &__certifications,
+  &__languages {
     margin-bottom: units(8);
   }
 }

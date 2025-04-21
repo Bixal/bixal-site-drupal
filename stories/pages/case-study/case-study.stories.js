@@ -2,7 +2,7 @@ import CaseStudy from "./case-study.html.twig";
 
 import * as Header from "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -91,6 +91,7 @@ export const Default = {
         `,
       },
     ],
+    contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };

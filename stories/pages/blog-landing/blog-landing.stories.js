@@ -6,7 +6,7 @@ import BlurbCollectionContent from "../../components/blurb/blurb-collection.cont
 import "../../components/header/header.stories";
 import "../../components/hero/hero.stories";
 import "../../components/blurb/blurb.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import "../../components/social-nav/social-nav.stories";
 
@@ -27,6 +27,7 @@ export const Default = {
         "/static/0af8355f1979d79ddb8e2b9ab90b3a49/blog-and-news-header.png",
     },
     blurbs: BlurbCollectionContent,
-    footerContent: FooterContent.default.args
+    contactContent: ContactUs.default.args,
+    footerContent: FooterContent.default.args,
   },
 };

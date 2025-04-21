@@ -12,7 +12,7 @@ import "../../components/cards/cards.stories";
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
 
 import "../../components/description-list/description-list.stories";
-import "../../components/contact-us/contact-us.stories";
+import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -26,7 +26,8 @@ export const Default = {
     header: HeaderContent,
     hero: {
       variant: "image-inline",
-      image: "/static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
+      image:
+        "https://www.bixal.com/sites/default/files/2025-04/Bixal%20Hero%20Image-opt.webp",
       title: "This is Bixal.",
       description:
         "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
@@ -47,7 +48,8 @@ export const Default = {
     },
     whatWeDo: {
       variant: "primary",
-      image: "/static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
+      image:
+        "https://www.bixal.com/sites/default/files/2025-04/What%20We%20Do%20Banner.webp",
       prefix: "What we do",
       title:
         "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
@@ -80,7 +82,8 @@ export const Default = {
     workWithUs: {
       variant: "tall",
       center_content: true,
-      image: "/static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
+      image:
+        "https://www.bixal.com/sites/default/files/2025-04/Work%20With%20Us.webp",
       prefix: "Work with us",
       title:
         "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.",
@@ -90,6 +93,7 @@ export const Default = {
         icon: "arrow-right",
       },
     },
+    contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };

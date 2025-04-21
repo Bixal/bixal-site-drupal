@@ -2,6 +2,11 @@ import * as Toggle from "../../_utils/toggle.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const menuTrigger = document.querySelector("[data-menu-toggle]");
+
+  if (!menuTrigger) {
+    return;
+  }
+
   const menuTarget = document.querySelector("[data-menu-target]");
   const menuLabel = menuTrigger.querySelector(".bix-toggle-icon__text");
 
@@ -16,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menuLabel.textContent = labelOpen;
     Toggle.show(menuTrigger, menuTarget);
   }
-  
+
   /**
    * Hide menu and revert text label to default state.
    */
@@ -26,14 +31,21 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-   * Close menu when user hits escape key.
+   * Close dropdown if the focus moves away or user hits escape.
    *
    * @param {Event} event
    */
-  function handleEscape(event) {
+  function handleKeyboard(event) {
     const isActive = Toggle.checkActive(menuTarget);
 
-    if (event.key === "Escape" && isActive) {
+    if (!isActive) {
+      return;
+    }
+
+    if (
+      !menuTarget.contains(document.activeElement) ||
+      (event.key === "Escape" && isActive)
+    ) {
       closeMenu();
     }
   }
@@ -60,8 +72,10 @@ window.addEventListener("DOMContentLoaded", () => {
    */
   function handleResize(breakpoint) {
     if (breakpoint.matches) {
+      document.removeEventListener("keyup", handleKeyboard);
       openMenu();
     } else {
+      document.addEventListener("keyup", handleKeyboard);
       closeMenu();
     }
   }
@@ -70,13 +84,10 @@ window.addEventListener("DOMContentLoaded", () => {
    * Add event listeners.
    */
   function init() {
-    // @TODO: Add a focus trap for A11Y.
     handleResize(desktopBreakpoint);
     menuTrigger.addEventListener("click", handleClick);
     desktopBreakpoint.addEventListener("change", handleResize);
-    document.addEventListener("keyup", handleEscape);
   }
 
   init();
 });
-

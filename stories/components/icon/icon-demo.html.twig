@@ -1,0 +1,36 @@
+<style>
+  .icon-demo {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 20ch), 1fr)
+    );
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon-demo__item {
+    border: 1px solid lightgray;
+    margin-block-end: -1px;
+    margin-inline-end: -1px;
+    padding: 2rem 1.5rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-family: monospace;
+    margin-block: 0;
+  }
+</style>
+
+<div class="icon-demo">
+  {% for icon in icons %}
+    <div class="icon-demo__item">
+      {% include "@components/icon/icon.html.twig" with {
+        icon_name: icon.name,
+      } %}
+      <p>{{ icon.name }}</p>
+    </div>
+  {% endfor %}
+</div>
