@@ -1,6 +1,6 @@
 const uswds = require("@uswds/compile");
 const { parallel, watch, series, src, dest } = require("gulp");
-const gulp = require("gulp");
+const del = require("del");
 const browsersync = require("browser-sync").create();
 const uglifyes = require("uglify-es");
 const composer = require("gulp-uglify/composer");
@@ -45,7 +45,7 @@ const settings = {
 
 // JS build function.
 function buildJS() {
-  return src(settings.js.src).pipe(uglify()).pipe(gulp.dest(settings.js.dest));
+  return src(settings.js.src).pipe(uglify()).pipe(dest(settings.js.dest));
 }
 
 // Watch changes on JS and twig files and trigger functions at the end.
@@ -121,6 +121,13 @@ function watchSass() {
 }
 // End required to build Sass.
 
+// Remove the compiled assets. This will help show errors early if the build
+// process is broken and the site is simply using the old files.
+function clean() {
+  log(colors.blue, 'Clearing out the dist folder')
+  return del('dist/**', {force:true});
+}
+
 /**
  * Exports
  * Add as many as you need
@@ -144,6 +151,8 @@ exports.copyAssets = uswds.copyAssets;
 exports.compileSass = uswds.compileSass;
 exports.compile = series(
   logVersion,
-  parallel(exports.compileSass, uswds.compileIcons, buildJS, uswds.copyAssets),
+  clean,
+  uswds.copyAssets, // Assets need to be moved before compiling and moving icons.
+  parallel(exports.compileSass, uswds.compileIcons, buildJS),
 );
 exports.default = this.compile;
