@@ -1,6 +1,6 @@
 const uswds = require("@uswds/compile");
 const { parallel, watch, series, src, dest } = require("gulp");
-const del = require("del");
+const { deleteAsync } = require("del");
 const browsersync = require("browser-sync").create();
 const uglifyes = require("uglify-es");
 const composer = require("gulp-uglify/composer");
@@ -125,7 +125,7 @@ function watchSass() {
 // process is broken and the site is simply using the old files.
 function clean() {
   log(colors.blue, 'Clearing out the dist folder')
-  return del('dist/**', {force:true});
+  return deleteAsync('dist/**');
 }
 
 /**
