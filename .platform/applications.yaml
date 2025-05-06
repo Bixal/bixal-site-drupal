@@ -125,7 +125,7 @@ bixalcom:
       $PLATFORM_APP_DIR/orch/build.sh
 
       # Install storybook into the ./sb directory.
-      if [[ "${PLATFORM_ENVIRONMENT_TYPE}" != "production" ]]; then
+      if [ "${PLATFORM_ENVIRONMENT_TYPE}" != "production" ]; then
         echo "Installing StoryBook"
         npm install
         npx storybook build --output-dir sb
