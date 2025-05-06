@@ -131,7 +131,7 @@ bixalcom:
         npx storybook build --output-dir sb
         rm -r "$PLATFORM_APP_DIR/node_modules"
       else
-        echo "Skipping StoryBook installation.
+        echo "Skipping StoryBook installation."
       fi
 
     # The deploy hook runs after your application has been deployed and started.
