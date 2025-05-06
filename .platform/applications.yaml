@@ -218,6 +218,8 @@ bixalcom:
         passthru: true
         index: ["index.html"]
         allow: true
+        headers:
+          X-Robots-Tag: noindex, nofollow
 
   crons:
     # Run Drupal's cron tasks every 60 minutes.
