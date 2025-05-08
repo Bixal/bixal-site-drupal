@@ -1,0 +1,55 @@
+// Based on this guidance:
+// https://github.com/jfeltkamp/cookiesjsr/blob/master/README.md#styling
+body #cookiesjsr {
+  --c-cookie-color-primary: var(--c-base-darkest);
+
+  --banner-bg-color: var(--c-cookie-color-primary);
+  --btn-bg-color: var(--c-cookie-color-primary);
+  --layer-bg-dark: var(--c-cookie-color-primary);
+
+  --switch-handle-color: var(--c-cookie-color-primary);
+
+  // Cookie settings popup.
+  --layer-tab-active-bg-color: var(--c-base-light);
+  --layer-tab-active-font-color: var(--c-cookie-color-primary);
+  --btn-inv-font-color: var(--c-cookie-color-primary);
+  --btn-prime-font-color: var(--c-cookie-color-primary);
+  --btn-inv-border-color: var(--c-cookie-color-primary);
+  --btn-prime-inv-border-color: var(--c-cookie-color-primary);
+  --btn-prime-inv-bg-color: var(--c-cookie-color-primary);
+  --layer-font-light: var(--c-cookie-color-primary);
+}
+
+.cookiesjsr-banner--info {
+  margin-block-end: 0;
+}
+
+.cookiesjsr-btn {
+  border-width: 1px;
+  border-radius: 0.5rem;
+  text-transform: none;
+}
+
+.cookiesjsr-btn:is(:hover, :focus, :active) {
+  --btn-prime-bg-color: #000;
+  --btn-prime-border-color: #000;
+  --btn-prime-font-color: white;
+  // Buttons in cookie settings.
+  --btn-inv-bg-color: #000;
+  --btn-inv-font-color: white;
+  transform: none;
+}
+
+.cookiesjsr-btn.cookiesjsr-settings:is(:hover, :focus, :active) {
+  --btn-bg-color: #000;
+  --btn-border-color: #000;
+}
+
+.cookiesjsr-btn.important.invert:is(:hover, :focus, :active) {
+  --btn-prime-inv-font-color: white;
+  --btn-prime-inv-bg-color: #000;
+}
+
+.cookiesjsr-links.links--row li:before {
+  background-color: currentColor;
+}
