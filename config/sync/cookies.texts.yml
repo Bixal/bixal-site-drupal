@@ -1,7 +1,7 @@
 _core:
   default_config_hash: PpB_t3-mnEd5Lckhxc9rfquSMa0CndPslGvJZlcg61E
 langcode: en
-bannerText: 'We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose "ACCEPT ALL", you consent to the use of all cookies. You can accept and reject individual cookie types and revoke your consent for the future at any time at "Settings".'
+bannerText: 'We use our own and third-party cookies on this website to ensure the best experience. If you continue to use the site, we''ll assume you''re fine with using cookies. You can choose which cookies to accept or reject and change your mind later in "Settings."'
 privacyPolicy: 'Privacy policy'
 privacyUri: /node/29
 imprint: Imprint
