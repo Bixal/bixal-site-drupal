@@ -115,7 +115,8 @@ It's important that you always use `lando composer` or `./composer.sh` instead o
 
 [Storybook preview is available here →](https://www.bixal.com/sb)
 
-This is also available on all other environments.
+> [!NOTE]
+> We have environments for: dev, stage, and prod. They are manually created and require access to Platform.sh.
 
 [Storybook](https://storybook.js.org/) for this project can be found by:
 
