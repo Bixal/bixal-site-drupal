@@ -125,9 +125,14 @@ bixalcom:
       $PLATFORM_APP_DIR/orch/build.sh
 
       # Install storybook into the ./sb directory.
-      npm install
-      npx storybook build --output-dir sb
-      rm -r $PLATFORM_APP_DIR/node_modules
+      if [ "${PLATFORM_ENVIRONMENT_TYPE}" != "production" ]; then
+        echo "Installing StoryBook"
+        npm install
+        npx storybook build --output-dir sb
+        rm -r "$PLATFORM_APP_DIR/node_modules"
+      else
+        echo "Skipping StoryBook installation."
+      fi
 
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
@@ -213,6 +218,8 @@ bixalcom:
         passthru: true
         index: ["index.html"]
         allow: true
+        headers:
+          X-Robots-Tag: noindex, nofollow
 
   crons:
     # Run Drupal's cron tasks every 60 minutes.
