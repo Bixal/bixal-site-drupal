@@ -62,3 +62,4 @@ bc7c36cc4ec59fa6961d4909ac0dbde7|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 
 72b53c0e03ea7fb6e3ca35bb013badf1|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 13:45:00 EDT 2025|./composer.sh update -W
 2055ccadf712f4fbd775fb60dbbc3d97|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 18:04:33 UTC 2025|./composer.sh require drupal/webprofiler:^11.1
 5912eba060de6726559f8a263dbda868|Matt Poole|feature/BSD-345-video-styles|Mon Apr 14 16:10:57 EDT 2025|./composer.sh require drupal/edit_media_modal
+bf896680a95fc921c0150e7d668d2aef|Matt Poole|feature/BSD-442-update-deps|Tue May  6 10:58:40 EDT 2025|./composer.sh update
