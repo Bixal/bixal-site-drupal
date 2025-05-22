@@ -32,16 +32,16 @@ bixalcom:
       - xdebug
 
   variables:
+    # Only user defined variables can change the build tree ID to so that
+    # builds will not be re-used. See https://devcenter.upsun.com/posts/get-more-control-over-your-environments-with-build-variables/
+    # What happened was build hooks looked at PLATFORM_ENVIRONMENT_TYPE,
+    # because the same build was created on dev or stage, it would be re-used
+    # and the build hook that did not build story book would not be called.
+    ENV_TYPE_VISIBLE:
+      value: ${PLATFORM_ENVIRONMENT_TYPE}
+      visible_build: true
     env:
       N_PREFIX: /app/.global
-      # Only user defined variables can change the build tree ID to so that
-      # builds will not be re-used. See https://devcenter.upsun.com/posts/get-more-control-over-your-environments-with-build-variables/
-      # What happened was build hooks looked at PLATFORM_ENVIRONMENT_TYPE,
-      # because the same build was created on dev or stage, it would be re-used
-      # and the build hook that did not build story book would not be called.
-      ENV_TYPE_VISIBLE:
-        value: ${PLATFORM_ENVIRONMENT_TYPE}
-        visible_build: true
     php:
       post_max_size: '300M'
       upload_max_filesize: '300M'
