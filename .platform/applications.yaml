@@ -136,6 +136,7 @@ bixalcom:
       echo ""
       echo "ENV_TYPE_VISIBLE: ${ENV_TYPE_VISIBLE}"
       echo "PLATFORM_ENVIRONMENT_TYPE: ${PLATFORM_ENVIRONMENT_TYPE}"
+      echo "ENV_TYPE_VISIBLE_DOT: ${ENV_TYPE_VISIBLE_DOT}"
   
       # Install storybook into the ./sb directory.
       # ENV_TYPE_VISIBLE is a copy of PLATFORM_ENVIRONMENT_TYPE that is made
