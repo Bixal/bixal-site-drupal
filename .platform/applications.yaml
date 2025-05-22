@@ -124,8 +124,14 @@ bixalcom:
       # PHP / Drupal build process.
       $PLATFORM_APP_DIR/orch/build.sh
 
+      echo "Relevant environment variables and their values:"
+      echo ""
+      echo "ENV_TYPE_VISIBLE: ${ENV_TYPE_VISIBLE}"
+  
       # Install storybook into the ./sb directory.
-      if [ "${PLATFORM_ENVIRONMENT_TYPE}" != "production" ]; then
+      # ENV_TYPE_VISIBLE is a copy of PLATFORM_ENVIRONMENT_TYPE that is made
+      # visible to build so this is always run on different env types.
+      if [ "${ENV_TYPE_VISIBLE}" != "production" ]; then
         echo "Installing StoryBook"
         npm install
         npx storybook build --output-dir sb
