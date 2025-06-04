@@ -27,7 +27,7 @@
 // Hero with background image
 // ==========================================================================
 %hero-gradient-overlay {
-  content: '';
+  content: "";
   background-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.48) 0%,
@@ -42,7 +42,7 @@
 }
 
 .bix-hero--image-bg {
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
@@ -111,5 +111,4 @@
       letter-spacing: -2.4px;
     }
   }
-
 }
