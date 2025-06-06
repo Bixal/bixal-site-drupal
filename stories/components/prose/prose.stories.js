@@ -24,6 +24,26 @@ export const Default = {
       <p>
         Our Modern Responsiveness framework, a proprietary instructional design methodology, puts learners at the center by integrating HCD principles and the iterative nature of Agile. This approach ensures every solution we deliver is relevant, actionable, and immediately applicable to real-world challenges. Leveraging Agile allows us to help our clients adapt quickly in response to changing circumstances, providing timely and effective learning experiences that drive continuous growth and development.
       </p>
+      <blockquote>
+        <ul>
+          <li>
+            <strong>Research:</strong> Gaining a deep understanding of the problem, the
+          audience, and the context.
+          </li>
+          <li>
+            <strong>Design and Development:</strong> Conceptualizing and structuring the
+          learning experience.
+          </li>
+          <li>
+            <strong>Research:</strong> Implementing and scaling the solution to achieve
+          measurable impact.
+          </li>
+          <li>
+          <strong>Evaluation:</strong> Assessing the effectiveness of the solution and
+          identifying areas for improvement.
+          </li>
+        </ul>
+      </blockquote>
       <p>
         But how exactly does this learner-centered Modern Responsiveness approach sync with instructional design?
       </p>
