@@ -295,6 +295,49 @@ address {
   margin-bottom: units(3);
 }
 
+// Styling for the CKEditor blockquote. It doesn't include the `<cite>` element.
+// Quote CSS entities from https://www.toptal.com/designers/htmlarrows/.
+blockquote {
+  display: flex;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  margin-block: units(6) units(5);
+  max-width: 45ch !important;
+  text-align: center;
+
+  &::before,
+  &::after {
+    font-size: size("heading", "xl");
+    height: 1ex;
+    line-height: 1;
+  }
+
+  &::before {
+    content: "\201C"; // Left double quote.
+    align-self: start;
+  }
+
+  &::after {
+    content: "\201D"; // Right double quote.
+    align-self: end;
+  }
+
+  p {
+    text-wrap-style: balance !important;
+  }
+
+  @include at-media("tablet") {
+    font-size: size("heading", "xl");
+
+    &::before,
+    &::after {
+      font-size: size("heading", "3xl");
+      height: 1ex;
+      line-height: 1;
+    }
+  }
+}
+
 .sr-only {
   @include sr-only;
 }
