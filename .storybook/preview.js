@@ -1,3 +1,4 @@
+import "./docs.css";
 import "../stories/assets/styles/global/global.scss";
 
 /** @type { import('@storybook/html').Preview } */
