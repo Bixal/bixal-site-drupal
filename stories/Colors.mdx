@@ -1,0 +1,71 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="Base"
+    subtitle="Grayscale colors"
+    colors={{
+      White: "#FFFFFF",
+      "Base lightest": "var(--c-base-lightest)",
+      "Base lighter": "var(--c-base-lighter)",
+      "Base light": "var(--c-base-light)",
+      Base: "var(--c-base)",
+      "Base dark": "var(--c-base-dark)",
+      "Base darker": "var(--c-base-darker)",
+      "Base darkest": "var(--c-base-darkest)",
+      Black: "#000",
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    colors={{
+      primary: "var(--c-primary)",
+      "primary-alt": "var(--c-primary-alt)",
+    }}
+  />
+  <ColorItem
+    title="Accent"
+    colors={{
+      cool: "#bee9f7",
+      "cool-alt": "#05C5BC",
+      vivid: "#DEEC1C",
+      warm: "#FDA307",
+      "warm-alt": "#E02F00",
+      "warm-dark": "#55052A",
+    }}
+  />
+</ColorPalette>
+
+### State colors
+
+<ColorPalette>
+  <ColorItem
+    title="Info"
+    subtitle="Informational states"
+    colors={{
+      Info: "var(--c-info)",
+      "Info dark": "var(--c-info-dark)",
+      "Info darker": "var(--c-info-darker)",
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    colors={{
+      Warning: "var(--c-warning)",
+    }}
+  />
+  <ColorItem
+    title="Error"
+    colors={{
+      Error: "var(--c-error)",
+    }}
+  />
+  <ColorItem
+    title="Urgent"
+    colors={{
+      Urgent: "var(--c-urgent)",
+    }}
+  />
+</ColorPalette>

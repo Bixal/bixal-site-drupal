@@ -1,4 +1,4 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import { Meta } from "@storybook/blocks";
 
 import Github from "./assets/github.svg";
 
@@ -22,125 +22,40 @@ export const RightArrow = () => (
 
 <Meta title="Welcome" />
 
+# Bixal Site Components
+
+Component library for the Bixal website.
+
+## About
+
 <div className="sb-container">
-  <div className='sb-section-title'>
-    # Bixal Site Components
-
-    Component library for Bixal website.
-
-  </div>
-
-<h2>About</h2>
-
   <div className="sb-section">
-
     <div className="sb-section-item">
       <h3 className="sb-section-item-heading">Twig templating</h3>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
-        href="https://github.com/larowlan/vite-plugin-twig-drupal"
-        target="_blank"
-        rel="noreferrer">Vite twig plugin on GitHub <RightArrow /></a>
-      <a
-        href="https://www.drupal.org/docs/develop/coding-standards/twig-coding-standards"
-        target="_blank"
-        rel="noreferrer">Drupal twig coding standards <RightArrow /></a>
+
+    We're using the vite drupal twig plugin to get a similar experience to using twig in an actual Drupal project.
+    It's an identical solution, but close enough to help us easily re-use templates in Drupal.
+
+      - [Vite twig plugin on GitHub <RightArrow />](https://github.com/larowlan/vite-plugin-twig-drupal)
+      - [Drupal twig coding standards <RightArrow />](https://www.drupal.org/docs/develop/coding-standards/twig-coding-standards)
     </div>
     <div className="sb-section-item">
       <h3 className="sb-section-item-heading">Style with SASS & USWDS</h3>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
-        href="https://designsystem.digital.gov/components"
-        target="_blank"
-        rel="noreferrer">USWDS Components <RightArrow /></a>
-      <a
-        href="https://designsystem.digital.gov/design-tokens/"
-        target="_blank"
-        rel="noreferrer">USWDS Tokens <RightArrow /></a>
+
+      Components are styled with CSS custom properties, USWDS tokens, and SASS. Favor custom properties to create customizable components.
+
+
+      - [USWDS Components <RightArrow />](https://designsystem.digital.gov/components)
+      - [USWDS Tokens <RightArrow />](https://designsystem.digital.gov/design-tokens/)
+
     </div>
     <div className="sb-section-item">
-      <div>
-        <h3 className="sb-section-item-heading">Load assets and resources</h3>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the
-        `staticDirs` configuration option to specify folders to load when
-        starting Storybook.</p>
-        <a
-          href="https://storybook.js.org/docs/html/configure/images-and-assets"
-          target="_blank"
-          rel="noreferrer"
-        >Learn more at storybook.js.org<RightArrow /></a>
-      </div>
+      <h3 className="sb-section-item-heading">Load assets and resources</h3>
+
+        To link static files (like fonts) to your projects and stories, use the `staticDirs` configuration option to specify folders to load when starting Storybook.
+
+      - [Learn more at storybook.js.org <RightArrow />](https://storybook.js.org/docs/html/configure/images-and-assets)
     </div>
 
   </div>
 </div>
-
-## Colors
-
-<ColorPalette>
-  <ColorItem
-    title="Base"
-    subtitle="Grayscale colors"
-    colors={{
-      White: "#FFFFFF",
-      "Base lightest": "var(--c-base-lightest)",
-      "Base lighter": "var(--c-base-lighter)",
-      "Base light": "var(--c-base-light)",
-      Base: "var(--c-base)",
-      "Base dark": "var(--c-base-dark)",
-      "Base darker": "var(--c-base-darker)",
-      "Base darkest": "var(--c-base-darkest)",
-      Black: "#000",
-    }}
-  />
-  <ColorItem
-    title="Primary"
-    colors={{
-      primary: "var(--c-primary)",
-      "primary-alt": "var(--c-primary-alt)",
-    }}
-  />
-  <ColorItem
-    title="Accent"
-    colors={{
-      cool: "#bee9f7",
-      "cool-alt": "#05C5BC",
-      vivid: "#DEEC1C",
-      warm: "#FDA307",
-      "warm-alt": "#E02F00",
-      "warm-dark": "#55052A",
-    }}
-  />
-</ColorPalette>
-
-### State colors
-
-<ColorPalette>
-  <ColorItem
-    title="Info"
-    subtitle="Informational states"
-    colors={{
-      Info: "var(--c-info)",
-      "Info dark": "var(--c-info-dark)",
-      "Info darker": "var(--c-info-darker)",
-    }}
-  />
-  <ColorItem
-    title="Warning"
-    colors={{
-      Warning: "var(--c-warning)",
-    }}
-  />
-  <ColorItem
-    title="Error"
-    colors={{
-      Error: "var(--c-error)",
-    }}
-  />
-  <ColorItem
-    title="Urgent"
-    colors={{
-      Urgent: "var(--c-urgent)",
-    }}
-  />
-</ColorPalette>
