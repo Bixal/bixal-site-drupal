@@ -2,22 +2,27 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set classes = [
+{% set dlAttributes = create_attribute() %}
+
+{% set dLclasses = [
   'bix-description-list',
   (variant ? 'bix-description-list--' ~ variant | clean_class),
 ] %}
 
-<dl{{ attributes.addClass(classes).addClass(additional_classes) }}>
-  {% if image %}
-  {{ image }}
-  {% endif %}
+<div {{ attributes.addClass(classes).addClass(additional_classes | default([])) }}>
+  {{ content.contextual_links }}
+  <dl {{ ulAttributes.addClass(dLclasses) }}>
+    {% if image %}
+    {{ image }}
+    {% endif %}
 
-  {% if title %}
-    <dt class="bix-description-list__heading">
-      {{ title }}
-    </dt>
-  {% endif %}
+    {% if title %}
+      <dt class="bix-description-list__heading">
+        {{ title }}
+      </dt>
+    {% endif %}
 
-  {{ items }}
+    {{ items }}
 
-</dl>
+  </dl>
+</div>
