@@ -2,6 +2,8 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 
 <Meta title="Colors" />
 
+# Colors
+
 <ColorPalette>
   <ColorItem
     title="Base"
@@ -9,31 +11,31 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
     colors={{
       White: "#FFFFFF",
       "Base lightest": "#FCFCFC",
-      "Base lighter": "var(--c-base-lighter)",
-      "Base light": "var(--c-base-light)",
-      Base: "var(--c-base)",
-      "Base dark": "var(--c-base-dark)",
-      "Base darker": "var(--c-base-darker)",
-      "Base darkest": "var(--c-base-darkest)",
+      "Base lighter": "#F9F9F9",
+      "Base light": "#F6F6F6",
+      Base: "#F3F3F3",
+      "Base dark": "#E6E6E6",
+      "Base darker": "#ADADAD",
+      "Base darkest": "#2E2E2E",
       Black: "#000",
     }}
   />
   <ColorItem
     title="Primary"
     colors={{
-      primary: "var(--c-primary)",
-      "primary-alt": "var(--c-primary-alt)",
+      Primary: "#162D6A",
+      "Primary Alt": "#7D0096",
     }}
   />
   <ColorItem
     title="Accent"
     colors={{
-      cool: "#bee9f7",
-      "cool-alt": "#05C5BC",
-      vivid: "#DEEC1C",
-      warm: "#FDA307",
-      "warm-alt": "#E02F00",
-      "warm-dark": "#55052A",
+      Cool: "#BEE9F7",
+      "Cool Alt": "#05C5BC",
+      Vivid: "#DEEC1C",
+      Warm: "#FDA307",
+      "Warm Alt": "#E02F00",
+      "Warm Dark": "#55052A",
     }}
   />
 </ColorPalette>
@@ -45,27 +47,38 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
     title="Info"
     subtitle="Informational states"
     colors={{
-      Info: "var(--c-info)",
-      "Info dark": "var(--c-info-dark)",
-      "Info darker": "var(--c-info-darker)",
+      Info: "#BEE9F7",
+      "Info Dark": "#97D5EA",
+      "Info Darker": "#57B8DC",
     }}
   />
   <ColorItem
     title="Warning"
     colors={{
-      Warning: "var(--c-warning)",
+      Warning: "#FACE00",
     }}
   />
   <ColorItem
     title="Error"
     colors={{
-      Error: "var(--c-error)",
+      Error: "#D04901",
     }}
   />
   <ColorItem
     title="Urgent"
     colors={{
-      Urgent: "var(--c-urgent)",
+      Urgent: "#792312",
     }}
   />
 </ColorPalette>
+
+## Styling with CSS Vars
+
+Colors are available as CSS custom properties in `global.scss`. They're prefixed like so `c-COLOR_NAME`, for example:
+
+```css
+/* your-custom-styles.scss */
+body {
+  background-color: var(--c-base-lighter);
+}
+```
