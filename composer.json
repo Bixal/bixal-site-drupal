@@ -79,6 +79,7 @@
         "drupal/metatag": "^2.0",
         "drupal/override_node_options": "^2.7",
         "drupal/paragraphs": "^1.16",
+        "drupal/paragraphs_edit": "^3.0",
         "drupal/pathauto": "^1.12",
         "drupal/phpmailer_smtp": "^2.2",
         "drupal/recaptcha": "^3.2",
