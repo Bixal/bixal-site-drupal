@@ -18,6 +18,7 @@ use GuzzleHttp\Exception\RequestException;
  */
 function bixal_uswds_preprocess_paragraph(&$vars) {
   // Define the $paragraph.
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $vars['elements']['#paragraph'];
   // Check for a $paragraph bundle.
   if (!empty($paragraph->bundle())) {
@@ -168,6 +169,33 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         // Reset cache.
         $vars['#cache']['tags'][] = "node_list:bixaler";
 
+        break;
+
+      case 'images':
+        /** @var \Drupal\file\Plugin\Field\FieldType\FileFieldItemList $image_field */
+        $image_field = $paragraph->get('field_image_upload');
+        if ($image_field->isEmpty()) {
+          break;
+        }
+        // Create a render array of the image and add the URL or width from the
+        // the other fields.
+        $image_field_render_array = $image_field->view();
+        $width_field = $paragraph->get('field_width');
+        if (!$width_field->isEmpty()) {
+          $width = $width_field->getString();
+          $image_field_value = $image_field->first()->getValue();
+          // If a height and width is set, update the height so it's the same
+          // scale as the new width.
+          if (!empty($image_field_value['height']) && !empty($image_field_value['width'])) {
+            $image_field_render_array[0]['#item_attributes']['height'] = floor($image_field_value['height'] * ($width / $image_field_value['width']));
+          }
+          $image_field_render_array[0]['#item_attributes']['width'] = $width;
+        }
+        $url_field = $paragraph->get('field_url');
+        if (!$url_field->isEmpty()) {
+          $image_field_render_array[0]['#url'] = $url_field->getString();
+        }
+        $vars['image'] = $image_field_render_array;
         break;
 
       case "job_listing":
