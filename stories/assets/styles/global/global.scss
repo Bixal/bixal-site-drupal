@@ -295,6 +295,39 @@ address {
   margin-bottom: units(3);
 }
 
+// Styling for the CKEditor blockquote. It doesn't include the `<cite>` element.
+blockquote {
+  font-weight: 800;
+  margin-block: units(6) units(5);
+  max-width: 45ch !important;
+
+  p {
+    text-wrap-style: balance !important;
+  }
+
+  @include at-media("tablet") {
+    font-size: size("heading", "xl");
+
+    &::before,
+    &::after {
+      font-size: size("heading", "3xl");
+      height: 1ex;
+      line-height: 1;
+    }
+  }
+}
+
+blockquote,
+blockquote + cite {
+  max-width: 45ch !important;
+  margin-inline: units(5);
+  font-family: var(--font-heading);
+}
+
+blockquote + cite {
+  font-style: normal;
+}
+
 .sr-only {
   @include sr-only;
 }
