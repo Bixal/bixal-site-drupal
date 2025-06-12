@@ -1,4 +1,9 @@
-<div class="bix-emphasis-block">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+<div{{ attributes.addClass("bix-emphasis-block") }}>
+  {{ content.contextual_links }}
   {% if prefix %}
   <p class="bix-emphasis-block__prefix">
     {{ prefix }}

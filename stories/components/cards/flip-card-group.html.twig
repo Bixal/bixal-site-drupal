@@ -1,4 +1,9 @@
-<div class="bix-flip-card-group">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+<div{{ attributes.addClass('bix-flip-card-group').addClass(additional_classes | default([])) }}>
+  {{ content.contextual_links }}
   {% for card in flip_cards %}
   <div class="bix-card-flip bix-card-flip--{{ card.variant | default("accent-warm") }}">
     <div class="bix-card-flip__face bix-card-flip__face--front">

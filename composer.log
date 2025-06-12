@@ -65,3 +65,4 @@ bc7c36cc4ec59fa6961d4909ac0dbde7|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 
 bf896680a95fc921c0150e7d668d2aef|Matt Poole|feature/BSD-442-update-deps|Tue May  6 10:58:40 EDT 2025|./composer.sh update
 f660d7b815055040a6e2fed0f1ccb40c|Matt Poole|feature/BSD-447-update-deps|Wed May 21 14:29:28 EDT 2025|./composer.sh update
 e4e13e73fc664a8bfc8eac24df0a5b15|Matt Poole|feature/BSD-463-footer-updates|Thu Jun 12 10:04:24 EDT 2025|./composer.sh require drupal/svg_image:^3.2
+cf193c0a9a0293ac4bd269975d0cff3a|Matt Poole|feature/BSD-455-editable-paragraphs|Thu Jun 12 13:53:28 EDT 2025|./composer.sh require drupal/paragraphs_edit

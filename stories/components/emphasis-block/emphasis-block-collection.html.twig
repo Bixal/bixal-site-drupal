@@ -1,8 +1,20 @@
-<div class="bix-emphasis-blocks">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set emphasis_classes = [
+  "bix-emphasis-blocks",
+] | merge(additional_classes | default([])) %}
+
+<div{{ attributes.addClass(emphasis_classes | default([])) }}>
+  {{ content.contextual_links }}
   <div class="bix-emphasis-blocks__body">
-    {% for block in blocks %}
-    {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}
-  {% endfor %}
+    {% if blocks %}
+      {% for block in blocks %}
+        {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}
+      {% endfor %}
+    {% endif %}
+    {{ blocks_content }}
   </div>
 
   <div class="bix-emphasis-blocks__footer">

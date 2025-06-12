@@ -8,10 +8,12 @@
   *
   */
 #}
+{% extends  "paragraph--default.html.twig" %}
 
 {% set display_name = content.field_view_name.0['#entity'].field_display_name.0.value %}
 {% set machine_name = content.field_view_name.0['#entity'].field_machine_name.0.value %}
 
 {% block content %}
+  {{ content.contextual_links }}
   {{ drupal_view(machine_name, display_name) }}
 {% endblock %}

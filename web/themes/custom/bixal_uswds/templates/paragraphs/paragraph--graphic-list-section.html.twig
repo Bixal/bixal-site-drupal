@@ -47,6 +47,7 @@
     {{ drupal_field('field_wysiwyg', 'paragraph', item['#paragraph'].id())| field_value }}
     {{ drupal_field('field_description_list', 'paragraph', item['#paragraph'].id())| field_value }}
   {% endset %}
+
   {% set items = items|merge([
       { title: drupal_field('field_title', 'paragraph', item['#paragraph'].id())| field_value,
         body:  body,
