@@ -1,3 +1,4 @@
+import "./docs.css";
 import "../stories/assets/styles/global/global.scss";
 
 /** @type { import('@storybook/html').Preview } */
@@ -13,6 +14,7 @@ const preview = {
     options: {
       storySort: {
         order: [
+          "Welcome",
           "Components",
           ["Example Component", "Form", "Typography", "*"],
           "Pages",
