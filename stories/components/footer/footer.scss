@@ -156,10 +156,21 @@
   ul {
     padding-left: 0;
   }
+}
 
-  img {
-    margin-top: units("05");
-    margin-bottom: units(1);
+.accreditations-logos {
+  --logo-spacing: #{units(1)};
+
+  align-items: start;
+  display: flex;
+  row-gap: var(--logo-spacing);
+  flex-flow: column;
+
+  @include at-media("mobile") {
+    align-items: center;
+    column-gap: var(--logo-spacing);
+    row-gap: 0;
+    flex-flow: row;
   }
 }
 

@@ -84,6 +84,7 @@ module:
   seckit: 0
   site_wrapper: 0
   sitewide_alert: 0
+  svg_image: 0
   svg_image_field: 0
   system: 0
   taxonomy: 0

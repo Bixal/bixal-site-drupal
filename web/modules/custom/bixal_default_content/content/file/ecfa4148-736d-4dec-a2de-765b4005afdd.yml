@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 63a7579d-b46c-46fd-82ba-666092fb4767
+  uuid: ecfa4148-736d-4dec-a2de-765b4005afdd
   default_langcode: en
 default:
   uid:
@@ -9,19 +9,19 @@ default:
       target_id: 1
   filename:
     -
-      value: iso-certified.svg
+      value: association_certified_bronze_badge.svg
   uri:
     -
-      value: 'public://accreditations/iso-certified.svg'
+      value: 'public://2025-06/association_certified_bronze_badge.svg'
   filemime:
     -
       value: image/svg+xml
   filesize:
     -
-      value: 27097
+      value: 27414
   status:
     -
       value: true
   created:
     -
-      value: 1728677424
+      value: 1749746881
