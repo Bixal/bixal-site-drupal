@@ -89,6 +89,7 @@
         "drupal/seckit": "^2.0",
         "drupal/sitewide_alert": "^3.0",
         "drupal/stable": "^2.0",
+        "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
