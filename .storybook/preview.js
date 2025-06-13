@@ -4,6 +4,12 @@ import "../stories/assets/styles/global/global.scss";
 /** @type { import('@storybook/html').Preview } */
 const preview = {
   parameters: {
+    a11y: {
+      context: "body.sb-show-main",
+      options: {
+        runOnly: ["wcag21aa", "section508", "best-practice"],
+      },
+    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
