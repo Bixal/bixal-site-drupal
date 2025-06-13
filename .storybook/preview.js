@@ -7,7 +7,15 @@ const preview = {
     a11y: {
       context: "body.sb-show-main",
       options: {
-        runOnly: ["wcag2aa", "wcag21aa", "section508", "best-practice"],
+        // Includes all rules from WCAG 2.1 AA and lower, Section 508, and best practices.
+        runOnly: [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21a",
+          "wcag21aa",
+          "section508",
+          "best-practice",
+        ],
       },
     },
     actions: { argTypesRegex: "^on[A-Z].*" },
