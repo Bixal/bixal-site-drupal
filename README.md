@@ -1,16 +1,90 @@
-# Bixal.com
+# Bixal.com - Drupal site
 
-## Remote
+## Remote Environments
 
-The remote environments are hosted in platform.sh. See the ./.platform directory and .platform.app.yaml file for the configuration.
+> [!NOTE]
+> We have environments for: dev, stage, and prod. They are manually created and require access to Platform.sh.
 
-## Working with the local
+The remote environments are hosted in platform.sh. See the `./.platform` directory and `.platform.app.yaml` file for the configuration.
+
+### Website
+
+- **[Production](https://www.bixal.com/)**
+- **[Staging](https://bixaldev:xAYwUBE2IB0yupf@stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site/)**
+- **[Development](https://bixaldev:xAYwUBE2IB0yupf@develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site/)**
+
+### Storybook
+
+For UI component previews:
+
+- Production: N/A
+- **[Staging](https://bixaldev:xAYwUBE2IB0yupf@stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site/sb)**
+- **[Development](https://bixaldev:xAYwUBE2IB0yupf@develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site/sb)**
+
+> [!CAUTION]
+> **HIT REFRESH AFTER CLICKING.** Story book will not load because the basic auth credentials are in the URL.
+
+## Getting Started
+
+### Prerequisites
+
+- php@8.3
+- lando
+- node LTS
+
+### Working with Local Environment
 
 The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal-env/wiki) and the [Drupal Env Lando](https://github.com/mattsqd/drupal-env-lando/wiki) packages.
 
-## Branching
+#### First Time Setup
 
-Use the following naming for your git branches.
+```
+./robo.sh lando:init
+```
+
+#### Starting/Stopping the Environment
+
+
+**Starting**
+
+For future sessions, you can start lando:
+
+```
+lando start
+```
+
+**Stopping**
+
+Run the following command to stop the environment:
+```
+lando stop
+```
+
+
+You'll be able to visit the local site at: https://bixalcom.lndo.site.
+
+#### Rebuilding / Reinstalling Dependencies
+
+Change something in the `.lando.yml` config and/or you want to re-install front and back end dependencies?
+
+
+**Rebuild environment and reinstall front and backend dependencies:**
+
+```
+lando rebuild -y
+```
+
+**Re-install front and back end dependencies ONLY** (faster):
+
+```
+lando build
+```
+
+## Git Workflow
+
+### Branch Naming Convention
+
+Use the following naming for your git branches:
 
 ```sh
 feature/BSD-[ISSUE_NO]-[LOWER_CASE_DESCRIPTION]
@@ -22,109 +96,104 @@ feature/BSD-[ISSUE_NO]-[LOWER_CASE_DESCRIPTION]
 feature/BSD-64-robo-validate
 ```
 
-## Commit style
+### Commit style
 
 ```sh
 BSD fixes #64: Fixed coding standards issues.
 ```
 
-Also acceptable:
+The following keywords are also acceptable:
 
-- close, closes, closed
-- fix, fixes, fixed
-- resolve, resolves, resolved
+- `close`, `closes`, `closed`
+- `fix`, `fixes`, `fixed`
+- `resolve`, `resolves`, `resolved`
 
-Example:
+**Example**
 
 ```
 BSD closes #64: Fixed coding standards issues.
 ```
 
-More guidance on git branches and commit style in [robo.yml](https://github.com/Bixal/bixal-site-drupal/blob/develop/robo.yml)
+More guidance on git branching and commit style in [robo.yml](https://github.com/Bixal/bixal-site-drupal/blob/develop/robo.yml) config.
 
-### Starting the Environment
 
-#### Prerequisites
+## Development Commands
 
-- php@8.3
-- lando
-
-#### Installing
-
-First time:
-
-```
-./robo.sh lando:init
-```
-
-For subsequent starts, you can just:
-
-```
-lando start
-```
-
-You'll be able to visit the local site at https://bixalcom.lndo.site.
-
-Change something in the .lando.yml config and/or you want to re-install front and back end dependencies?
-
-```
-lando rebuild -y
-```
-
-Re-install front and back end dependencies
-
-```
-lando build
-```
-
-### Installing Drupal
+### Installing Drupal with Sample Content
 
 ```
 lando si
 ```
 
-This will install all the sample content we have created in `web/modules/custom/bixal_default_content`. In order to export new content here, create it locally and run `lando export-content`.
+This installs all the sample content defined in `web/modules/custom/bixal_default_content`.
 
-### Running Drush
+To export new content from your local, create it locally and run:
 
 ```
-./drush.sh <your command>
+lando export-content
 ```
 
-### Running Composer
+### Running Drush Commands
+
+```
+./drush.sh <your_command>
+```
+
+**Example**
+
+```
+# Clear cache
+./drush.sh cr
+```
+
+### Running Composer Commands
+
+By default, Lando runs Composer commands within its Docker containers. This often times out, so we recommend using your local Composer instead.
+
 
 ```
 ./composer.sh
 ```
 
-Using it this way allows you to use your local to run the composer command instead of Docker which often times out when using docker. To use your local composer:
+**Local Composer Setup**
 
-- Install brew https://brew.sh/
-- Install composer `brew install composer`
-- The above will install php 8.3, we want to use 8.1 `brew unlink php@8.3 && brew link php@8.1`
-- Set the local to use your composer: `echo 'BIN_PATH_COMPOSER="composer"' >> .env`
+1. Install [homebrew](https://brew.sh/):
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+2. Install composer:
+    ```
+    brew install composer
+    ```
 
-### Composer.log
+    > [!NOTE]
+    > Make sure the installed PHP matches the project version.
+3. Set the local to use your composer:
+    ```
+    echo 'BIN_PATH_COMPOSER="composer"' >> .env
+    ```
 
-There is a composer.log that is modified everytime you do something that changes the composer.lock file.
-It's important that you always use `lando composer` or `./composer.sh` instead of plain `composer` to run composer commands. Otherwise, an entry in composer.log will not be made.
 
-- Do not put multiple of the same command in composer.log. If you apply to patches, just leave the last `composer update --patch`
+#### Composer.log Management
 
-### Access story book
+The `composer.log` is modified every time you do something that changes the `composer.lock` file.
 
-[Storybook preview is available here →](https://www.bixal.com/sb)
+**Always** use `lando composer` or `./composer.sh` to run composer commands to make sure an entry is made in `composer.log`.
 
-> [!NOTE]
-> We have environments for: dev, stage, and prod. They are manually created and require access to Platform.sh.
+Avoid duplicate entries of the same command in `composer.log`. If you apply to patches, just leave the last `composer update --patch`
 
-[Storybook](https://storybook.js.org/) for this project can be found by:
 
-**Docker URL**
+#### Accessing Storybook
 
-http://storybook.bixalcom.lndo.site/
+[Storybook](https://storybook.js.org/) gives us a preview of UI components.
 
-**Local version**
+**Run locally**
+
+```
+npm run storybook:local
+```
+
+Alternatively:
 
 ```bash
 # Run in terminal.
@@ -133,9 +202,9 @@ http://storybook.bixalcom.lndo.site/
 
 This should automatically open it in your browser.
 
-### Handy Commands for Development
+## Handy Commands for Development
 
-#### Run validation
+### Run Validation Checks
 
 Run all the validation commands that the pipelines run without needing to push remotely:
 
@@ -143,12 +212,12 @@ Run all the validation commands that the pipelines run without needing to push r
 vendor/bin/robo validate:all
 ```
 
-#### Copy storybook to Drupal theme
+### Copy storybook to Drupal theme
 
 ```
 lando build_node
 ```
 
-#### Configure Xdebug
+### Configure Xdebug
 
 https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
