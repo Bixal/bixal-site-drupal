@@ -80,6 +80,19 @@ lando rebuild -y
 lando build
 ```
 
+## Testing Guidelines
+
+### Accessibility Testing
+
+Accessibility is a core requirement to our work. Our baseline is:
+
+- [`WCAG 2.1 AA`](https://www.w3.org/TR/WCAG21/)
+- [`Section 508`](https://www.section508.gov/manage/laws-and-policies/)
+
+Additionally we follow Deque's [Best Practice rules](https://dequeuniversity.com/rules/axe/4.4/#best-practices-rules). These rules are defined in our Storybook's `preview.js`.
+
+You should still test manually to ensure a fully accessible experience. See Bixal's [A11Y Checklist](https://library.bixal.com/books/frontend-practice/page/frontend-accessibility-checklist) for full testing instructions.
+
 ## Git Workflow
 
 ### Branch Naming Convention
@@ -182,12 +195,30 @@ The `composer.log` is modified every time you do something that changes the `com
 
 Avoid duplicate entries of the same command in `composer.log`. If you apply to patches, just leave the last `composer update --patch`
 
+#### Run Validation Checks
 
-#### Accessing Storybook
+Run all the validation commands that the pipelines run without needing to push remotely:
+
+```
+vendor/bin/robo validate:all
+```
+
+#### Copy storybook to Drupal theme
+
+```
+lando build_node
+```
+
+#### Configure Xdebug
+
+https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
+
+
+## Storybook
 
 [Storybook](https://storybook.js.org/) gives us a preview of UI components.
 
-**Run locally**
+### Run locally
 
 ```
 npm run storybook:local
@@ -202,22 +233,8 @@ Alternatively:
 
 This should automatically open it in your browser.
 
-## Handy Commands for Development
-
-### Run Validation Checks
-
-Run all the validation commands that the pipelines run without needing to push remotely:
-
-```
-vendor/bin/robo validate:all
-```
-
-### Copy storybook to Drupal theme
+### Copy Storybook to Drupal Theme
 
 ```
 lando build_node
 ```
-
-### Configure Xdebug
-
-https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
