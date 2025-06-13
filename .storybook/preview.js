@@ -7,7 +7,7 @@ const preview = {
     a11y: {
       context: "body.sb-show-main",
       options: {
-        runOnly: ["wcag21aa", "section508", "best-practice"],
+        runOnly: ["wcag2aa", "wcag21aa", "section508", "best-practice"],
       },
     },
     actions: { argTypesRegex: "^on[A-Z].*" },
