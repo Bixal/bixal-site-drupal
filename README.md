@@ -7,19 +7,9 @@
 
 The remote environments are hosted in platform.sh. See the `./.platform` directory and `.platform.app.yaml` file for the configuration.
 
-### Website
+**Website & Storybook**
 
-- **[Production](https://www.bixal.com/)**
-- **[Staging](https://bixaldev:xAYwUBE2IB0yupf@stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site/)**
-- **[Development](https://bixaldev:xAYwUBE2IB0yupf@develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site/)**
-
-### Storybook
-
-For UI component previews:
-
-- Production: N/A
-- **[Staging](https://bixaldev:xAYwUBE2IB0yupf@stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site/sb)**
-- **[Development](https://bixaldev:xAYwUBE2IB0yupf@develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site/sb)**
+Links to environments can be found in [SharePoint 🔒](https://bixal365-my.sharepoint.com/:x:/g/personal/matt_poole_bixal_com/EZSBrtLS97FEmvngEIZejM8B2lXO7RtiJRoE7m3-mUbRlw?e=nQkA85).
 
 > [!CAUTION]
 > **HIT REFRESH AFTER CLICKING.** Story book will not load because the basic auth credentials are in the URL.
