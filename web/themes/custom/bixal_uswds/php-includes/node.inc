@@ -78,12 +78,12 @@ function bixal_uswds_theme_suggestions_node_alter(&$suggestions, array $vars): v
 
     // Custom theme suggestion for bx_collection.
     if ($view_mode === 'bx_collection') {
-      $suggestions[] = $vars['theme_hook_original'] . '__' . 'uswds_collection';
+      $suggestions[] = $vars['theme_hook_original'] . '__uswds_collection';
     }
 
     // Custom theme suggestion for bx_card.
     if ($view_mode === 'bx_card') {
-      $suggestions[] = $vars['theme_hook_original'] . '__' . 'uswds_card';
+      $suggestions[] = $vars['theme_hook_original'] . '__uswds_card';
     }
   }
 }
