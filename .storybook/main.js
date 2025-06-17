@@ -9,14 +9,13 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook/html-vite",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
+  docs: {},
   staticDirs: ["../stories/assets", "../node_modules/@uswds/uswds/dist"],
   async viteFinal(config, { configType }) {
     // This allows starting this in a sub dir:
