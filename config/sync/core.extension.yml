@@ -70,6 +70,7 @@ module:
   options: 0
   override_node_options: 0
   page_cache: 0
+  paragraphs_edit: 0
   path: 0
   path_alias: 0
   phpmailer_smtp: 0
@@ -84,6 +85,7 @@ module:
   seckit: 0
   site_wrapper: 0
   sitewide_alert: 0
+  svg_image: 0
   svg_image_field: 0
   system: 0
   taxonomy: 0

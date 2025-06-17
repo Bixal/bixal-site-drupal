@@ -27,7 +27,7 @@
 
 <section
     {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
-
+  {{ content.contextual_links }}
   {#
     /**
       ? The `bix-container` can appear *without* content, for sections like homepage flip grids.

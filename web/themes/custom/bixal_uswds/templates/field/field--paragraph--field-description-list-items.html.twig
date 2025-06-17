@@ -41,5 +41,8 @@
 
 
       {% for item in items %}
-        <dd>{{ item.content }}</dd>
+        <dd>
+          {{ content.contextual_links }}
+          {{ item.content }}
+        </dd>
       {% endfor %}

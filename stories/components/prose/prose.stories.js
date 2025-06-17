@@ -16,9 +16,34 @@ export const Default = {
       <p>
         At Bixal, we employ a learner-driven approach to product creation, grounded in an Agile mindset that prioritizes meaningful outcomes over quick fixes. By integrating agility with our commitment to human-centered design (HCD) philosophy, we craft adaptable solutions that respond to real-time client feedback. This ensures government employees can acquire and apply new skills while navigating evolving policies, compliance requirements, and technological advancements. Our approach focuses on practical application and continuous improvement, empowering teams to thrive and learn in an ever-changing environment.
       </p>
+      <blockquote>
+        <p>
+          Moving from static reports to actionable insights helps agencies deliver smarter, faster, and more efficient government services.
+        </p>
+      </blockquote>
       <p>
         Our Modern Responsiveness framework, a proprietary instructional design methodology, puts learners at the center by integrating HCD principles and the iterative nature of Agile. This approach ensures every solution we deliver is relevant, actionable, and immediately applicable to real-world challenges. Leveraging Agile allows us to help our clients adapt quickly in response to changing circumstances, providing timely and effective learning experiences that drive continuous growth and development.
       </p>
+      <blockquote>
+        <ul>
+          <li>
+            <strong>Research:</strong> Gaining a deep understanding of the problem, the
+          audience, and the context.
+          </li>
+          <li>
+            <strong>Design and Development:</strong> Conceptualizing and structuring the
+          learning experience.
+          </li>
+          <li>
+            <strong>Research:</strong> Implementing and scaling the solution to achieve
+          measurable impact.
+          </li>
+          <li>
+          <strong>Evaluation:</strong> Assessing the effectiveness of the solution and
+          identifying areas for improvement.
+          </li>
+        </ul>
+      </blockquote>
       <p>
         But how exactly does this learner-centered Modern Responsiveness approach sync with instructional design?
       </p>
@@ -26,6 +51,13 @@ export const Default = {
       <p>
         Depending on the project, learning teams might follow frameworks such as the ADDIE Model (Analysis, Design, Development, Implementation, Evaluation), the SAM approach (Successive Approximation Model), or Design Thinking for Training and Development. Each of these frameworks has unique strengths, and each can be successful when aligned with the right team and project goals. Our flexibility in selecting and adapting models allows us to create tailored solutions that align with the needs of our clients.
       </p>
+      <blockquote>
+        <p>
+          It’s not about standing still and becoming safe. If anybody wants to keep
+          creating they have to be about change.
+        </p>
+      </blockquote>
+      <cite>—Miles Davis</cite>
       <p>
         When we break down these methodologies into high-level categories, we typically see four core stages emerge:
       </p>

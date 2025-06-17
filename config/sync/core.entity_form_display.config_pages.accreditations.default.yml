@@ -5,10 +5,10 @@ dependencies:
   config:
     - config_pages.type.accreditations
     - field.field.config_pages.accreditations.field_links
-    - field.field.config_pages.accreditations.field_logos
+    - field.field.config_pages.accreditations.field_logos_paragraph
   module:
     - link
-    - svg_image_field
+    - paragraphs
 id: config_pages.accreditations.default
 targetEntityType: config_pages
 bundle: accreditations
@@ -22,14 +22,23 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_logos:
-    type: svg_image_field_widget
-    weight: 1
+  field_logos_paragraph:
+    type: paragraphs
+    weight: 4
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_max_width: 300
-      preview_image_max_height: 300
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
 hidden:
   label: true
