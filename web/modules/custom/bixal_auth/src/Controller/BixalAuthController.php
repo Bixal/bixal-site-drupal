@@ -25,7 +25,7 @@ final class BixalAuthController extends ControllerBase {
     }
 
     // Users with roles besides 'authenticated'.
-    if (count($this->currentUser()->getRoles()) > 1) {
+    if (count($this->currentUser()->getRoles()) > 1 || $this->currentUser()->id() == '1') {
       $url = Url::fromRoute('system.admin_content');
     }
     else {
