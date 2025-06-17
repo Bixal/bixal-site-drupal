@@ -9,7 +9,6 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook/html-vite",
