@@ -20,8 +20,8 @@ function bixal_uswds_theme_suggestions_block_alter(&$suggestions, array $vars): 
       // Add region-specific block theme suggestions.
       $region = $block->getRegion();
       $suggestions[] = 'block__region__' . $region;
-      $suggestions[] = 'block__region__' . $region . '__' . 'plugin_id' . '__' . $vars['elements']['#plugin_id'];
-      $suggestions[] = 'block__region__' . $region . '__' . 'id' . '__' . $vars['elements']['#id'];
+      $suggestions[] = 'block__region__' . $region . '__plugin_id__' . $vars['elements']['#plugin_id'];
+      $suggestions[] = 'block__region__' . $region . '__id__' . $vars['elements']['#id'];
     }
   }
 }
