@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override to display a personal contact form.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+{% extends "@components/section/section.html.twig" %}
+
+{% set prefix = "Personal Contact Form"|t %}
+{% set title = "Contact"|t %}
+{% set heading_type = "h1" %}
+
+{% set body %}
+  <form{{ attributes }}>
+    <p>{{ 'Required fields are marked with an asterisk'|t }}&nbsp;(<abbr title="required" class="bix-hint bix-hint--required">*</abbr>).</p>
+
+    {{ children }}
+  </form>
+{% endset %}
