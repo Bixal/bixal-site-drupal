@@ -26,7 +26,7 @@
 
 {# Set USWDS and Bixal theme classes. #}
 {% set classes = [
-  type in ['checkbox', 'radio'] ? 'usa-' ~ type ~ '__input',
+  type in ['checkbox', 'radio'] ? 'bix-' ~ type ~ '__input',
   type in ['password', 'password_confirm', 'text', 'tel', 'number', 'url', 'email', 'date', 'time'] ? 'usa-input',
   type in ['file', 'managed_file'] ? 'usa-file-input',
   type == 'submit' ? 'bix-button',

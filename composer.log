@@ -67,3 +67,5 @@ f660d7b815055040a6e2fed0f1ccb40c|Matt Poole|feature/BSD-447-update-deps|Wed May 
 e4e13e73fc664a8bfc8eac24df0a5b15|Matt Poole|feature/BSD-463-footer-updates|Thu Jun 12 10:04:24 EDT 2025|./composer.sh require drupal/svg_image:^3.2
 cf193c0a9a0293ac4bd269975d0cff3a|Matt Poole|feature/BSD-455-editable-paragraphs|Thu Jun 12 13:53:28 EDT 2025|./composer.sh require drupal/paragraphs_edit
 570205bc2ad27e39db7b326441efa946|Matt Poole|feature/BSD-473-update-deps|Mon Jun 16 13:45:48 EDT 2025|./composer.sh update
+b2295ef5afc91edb2a49ba52e9cc27cb|Matt Poole|HEAD|Tue Jun 17 09:49:05 EDT 2025|./composer.sh require drupal/openid_connect:^3.0@alpha
+247eb262a481f09f0a2b7501839d30c4|Matt Poole|feature/BSD-136-sso-support|Tue Jun 17 13:19:34 EDT 2025|./composer.sh require drupal/webform:^6.3@beta
