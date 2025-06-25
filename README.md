@@ -9,7 +9,7 @@ The remote environments are hosted in platform.sh. See the `./.platform` directo
 
 **Website & Storybook**
 
-Links to environments can be found in [SharePoint 🔒](https://bixal365-my.sharepoint.com/:x:/g/personal/matt_poole_bixal_com/EZSBrtLS97FEmvngEIZejM8B2lXO7RtiJRoE7m3-mUbRlw?e=nQkA85).
+Links to environments can be found in [SharePoint 🔒](https://bixal365.sharepoint.com/:x:/s/Dev/ETDXL_cyD11Ahbtub5L-658BuyLzJ9Hky_LmvkkAcDsEZQ?e=wIKXpt).
 
 > [!CAUTION]
 > **HIT REFRESH AFTER CLICKING.** Story book will not load because the basic auth credentials are in the URL.
@@ -58,16 +58,16 @@ You'll be able to visit the local site at: https://bixalcom.lndo.site.
 Change something in the `.lando.yml` config and/or you want to re-install front and back end dependencies?
 
 
-**Rebuild environment and reinstall front and backend dependencies:**
+**Start Fresh:**
 
 ```
-lando rebuild -y
+lando rebuild -y && lando si
 ```
 
-**Re-install front and back end dependencies ONLY** (faster):
+**Re-install front end dependencies ONLY**:
 
 ```
-lando build
+lando build_node
 ```
 
 ## Testing Guidelines
@@ -190,7 +190,7 @@ Avoid duplicate entries of the same command in `composer.log`. If you apply to p
 Run all the validation commands that the pipelines run without needing to push remotely:
 
 ```
-vendor/bin/robo validate:all
+./robo.sh validate:all
 ```
 
 #### Copy storybook to Drupal theme
