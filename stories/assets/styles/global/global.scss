@@ -402,11 +402,18 @@ label {
   text-transform: uppercase;
 }
 
+// Links to editable fields, like in `/user/3/contact` "Name, Email, and To."
+.form-type-item {
+  font-size: px-to-rem(16px);
+  margin-block-end: units(2);
+}
+
 .bix-input {
+  accent-color: var(--c-primary);
   border: 1px solid currentColor;
   border-radius: 3px;
   font-size: px-to-rem(16px);
-  margin-bottom: units(1);
+  margin-block-end: units(1);
   outline-offset: 2px;
   padding: units(2) units(1);
   transition: background-color 0.2s ease-in-out;
@@ -417,6 +424,19 @@ label {
     text-transform: uppercase;
     letter-spacing: 0.6px;
     word-spacing: 2px;
+  }
+}
+
+.bix-checkbox,
+.bix-radio {
+  align-items: first baseline;
+  column-gap: units(1);
+  display: flex;
+  margin-block-end: units(1);
+
+  .bix-input {
+    flex-basis: 0;
+    margin-block-end: 0;
   }
 }
 
