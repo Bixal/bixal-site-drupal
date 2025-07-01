@@ -12,18 +12,18 @@
       "label": "Contract Vehicles"
     },
     {
-      "label": "Careers"
+      "label": "About Bixal"
     },
     {
       "label": "Blog",
       "current": true
     },
     {
-      "label": "About Bixal"
+      "label": "Careers"
     }
   ],
   "cta": {
-    "label": "Join Us",
+    "label": "Contact Us",
     "href": "javascript:void(0)"
   }
 }
