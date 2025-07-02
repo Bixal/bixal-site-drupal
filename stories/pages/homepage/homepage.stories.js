@@ -9,6 +9,8 @@ import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 
+import SBALogo from "../../assets/static/SBA-Logo-Stacked-Reverse-RGB.svg";
+
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
 
 import "../../components/description-list/description-list.stories";
@@ -44,56 +46,59 @@ export const Default = {
       prefix: "Our expertise",
       title:
         "We provide federal agencies with integrated, outcome-driven solutions across five core disciplines:",
-      disciplines: GraphicListContent.default.args,
+      disciplines: GraphicListContent.Background.args,
+      cta: {
+        label: "Check out our results",
+        // variant: "inverse",
+        // icon: "arrow-right",
+        href: "#",
+      },
     },
-    whatWeDo: {
+    choose: {
       variant: "primary",
-      image:
-        "https://www.bixal.com/sites/default/files/2025-04/What%20We%20Do%20Banner.webp",
-      prefix: "What we do",
-      title:
-        "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
-      description:
-        "<p>We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.</p>",
+      image: "",
+      title: "Why government agencies choose Bixal",
+      description: `
+        <ul>
+          <li>Proven results across 20+ federal agencies</li>
+          <li>On multiple federal contract vehicles for faster onboarding</li>
+          <li>Seamless integration with your systems and teams</li>
+          <li>Immediate fixes combined with long-term capacity building</li>
+          <li>Small-business agility with federal-scale impact</li>
+        </ul>
+        <div class="logo-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); align-items: center; justify-items: center;">
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+          <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
+        </div>
+      `,
       cta: {
-        label: "Explore case studies",
         variant: "inverse",
-        icon: "arrow-right",
+        label: "See our contract vehicles",
         href: "#",
       },
-    },
-    coreServices: {
-      center_content: true,
-      variant: "base",
-      title:
-        "Government agencies can work with us through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services.",
-      cta: {
-        label: "View our contract vehicles",
-        href: "#",
-        icon: "arrow-right",
-      },
-    },
-    clientsAndPartners: {
-      prefix: "Our clients and partners",
-      title:
-        "We work with leading government agencies and organizations who seek to create real change.",
-      collections: DescriptionListCollectionContent,
     },
     workWithUs: {
-      variant: "tall",
-      center_content: true,
-      image:
-        "https://www.bixal.com/sites/default/files/2025-04/Work%20With%20Us.webp",
-      prefix: "Work with us",
-      title:
-        "Bixal is filled with incredibly smart, creative, and passionate people. If you’re interested in joining our team, drop us a line or check out our careers page.",
+      // center_content: true,
+      title: "Let's work together",
+      description:
+        "We're ready to meet you where you are and deliver forward-ready solutions—faster onboarding, leaner operations, and services the public can trust.",
       cta: {
-        label: "Join our team",
+        label: "Contact Us",
         href: "#",
-        icon: "arrow-right",
       },
     },
-    contactContent: ContactUs.default.args,
+    // This will need to be refactored or removed since Contact is simplified.
+    // contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
 };

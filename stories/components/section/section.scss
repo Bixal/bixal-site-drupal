@@ -104,3 +104,9 @@
 .bix-section--tall {
   min-height: px-to-rem(960px);
 }
+
+.bix-section--full-bleed {
+  .bix-section__footer {
+    text-align: center;
+  }
+}

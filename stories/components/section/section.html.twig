@@ -36,18 +36,19 @@
     #}
   <div class="bix-container">
     {% block header %}
-      {% if prefix_below %}
-        {% include "@partials/section-title.html.twig" %}
-      {% endif %}
-      {% if prefix %}
-        <div class="bix-title-prefix{% if prefix_label %}-label{% endif %}">
-          {% if prefix_label %}{{ prefix_label }}&nbsp;<span aria-hidden="true">|</span>&nbsp;{% endif %}{{ prefix }}
-        </div>
-      {% endif %}
-      {% if not prefix_below  %}
-        {% include "@partials/section-title.html.twig" %}
-      {% endif %}
-
+      <div class="bix-section__header">
+        {% if prefix_below %}
+          {% include "@partials/section-title.html.twig" %}
+        {% endif %}
+        {% if prefix %}
+          <div class="bix-title-prefix{% if prefix_label %}-label{% endif %}">
+            {% if prefix_label %}{{ prefix_label }}&nbsp;<span aria-hidden="true">|</span>&nbsp;{% endif %}{{ prefix }}
+          </div>
+        {% endif %}
+        {% if not prefix_below  %}
+          {% include "@partials/section-title.html.twig" %}
+        {% endif %}
+      </div>
     {% endblock %}
 
     {% block description %}
