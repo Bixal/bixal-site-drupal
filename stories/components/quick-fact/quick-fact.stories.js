@@ -53,6 +53,7 @@ export const CollectionHalves = {
 
 export const CollectionThirds = {
   args: {
+    variant: "accent-cool",
     layout: "thirds",
     items: items,
   },

@@ -1,6 +1,9 @@
 {% extends "@pages/base/base.html.twig" %}
 
+
 {% block content %}
+
+  {% include "@pages/homepage/_facts.html.twig" with facts %}
   {# {% include "@components/section/section.html.twig" with whoWeAre %} #}
   {% include "@pages/homepage/_our-expertise.html.twig" with expertise %}
   {% include "@pages/homepage/_choose-bixal.html.twig" with choose %}

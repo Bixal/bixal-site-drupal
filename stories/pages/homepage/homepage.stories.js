@@ -4,6 +4,7 @@ import HeaderContent from "../../components/header/header.content.json";
 import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
 import "../../components/header/header.stories";
+import * as QuickFacts from "../../components/quick-fact/quick-fact.stories";
 import "../../components/section/section.stories";
 import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
@@ -14,7 +15,7 @@ import SBALogo from "../../assets/static/SBA-Logo-Stacked-Reverse-RGB.svg";
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
 
 import "../../components/description-list/description-list.stories";
-import * as ContactUs from "../../components/contact-us/contact-us.stories";
+// import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
@@ -27,12 +28,23 @@ export const Default = {
   args: {
     header: HeaderContent,
     hero: {
-      variant: "image-inline",
-      image:
-        "https://www.bixal.com/sites/default/files/2025-04/Bixal%20Hero%20Image-opt.webp",
-      title: "This is Bixal.",
-      description:
-        "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
+      variant: "primary",
+      image: "",
+      prefix: "Smart solutions. Lean Delivery. Real Impact.",
+      title: "We help government agencies deliver",
+      heading_type: "h1",
+      description: `
+        <p>Federal agencies turn to us when they need to move fast, reduce complexity, and deliver services the public can use and trust.
+        </p>
+        <p>Whether it's Al readiness, content strategy, data modernization, or service delivery, we bring clarity, structure, and speed to move missions forward.</p>
+      `,
+      cta: {
+        label: "See how we help federal teams",
+        variant: "inverse",
+      },
+    },
+    facts: {
+      ...QuickFacts.CollectionThirds.args,
     },
     whoWeAre: {
       prefix: "Who we are",
@@ -46,6 +58,8 @@ export const Default = {
       prefix: "Our expertise",
       title:
         "We provide federal agencies with integrated, outcome-driven solutions across five core disciplines:",
+      description:
+        "<p>We partner with agencies to solve today’s challenges, scale what works, and build the capacity to stay ready for what’s next.</p><br />",
       disciplines: GraphicListContent.Background.args,
       cta: {
         label: "Check out our results",
