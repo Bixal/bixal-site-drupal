@@ -1,87 +1,98 @@
 import GraphicList from "./graphic-list.html.twig";
 import "./graphic-list.scss";
-import DescriptionList from "../description-list/description-list.html.twig";
+
+import "../../components/icon/icon.stories";
 
 const graphicListContent = {
   items: [
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-08/RGB_bixal_B_people.png",
+      icon: {
+        name: "security",
+        size: 9,
+      },
       heading_type: "h3",
-      title: "People: Designing the Human Experience (HX)",
+      title: "Build modern, secure, and scalable platforms",
       body: `
-      ${DescriptionList({
-        title: "Enhancing Public Employee Experiences",
-        items: [
-          "Accessibility compliance and optimization.",
-          "Customer and stakeholder experience research and design.",
-          "Employee and operational experience and service design.",
-          "Multimedia design.",
-        ],
-      })}`,
+      <p>
+        Modernize platforms that government agencies can easily deploy, sustain, and scale.
+      </p>
+      <ul class="bix-list bix-list--inline">
+        <li>DevSecOps</li>
+        <li>Cloud migration</li>
+        <li>Automation/AI</li>
+        <li>Cybersecurity</li>
+        <li>Platform modernization</li>
+      </ul>
+      `,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_content.png",
-      title:
-        "Content: Creating User-Centric Content Strategies to Drive Effective Communications and Engagement",
+      icon: {
+        name: "insights",
+        size: 9,
+      },
+      title: "Turn complex data into actionable intelligence",
       body: `
-      ${DescriptionList({
-        title: "Engaging Audiences and Stakeholders",
-        items: [
-          "Brand development and marketing.",
-          "Content strategy and implementation.",
-          "Stakeholder and audience engagement.",
-          "Strategic, data-driven communications.",
-          "Writing and editing.",
-        ],
-      })}`,
+      <p>
+        Unlock smarter decisions through structured data, practical AI, and real-time analytics that support mission delivery.
+      </p>
+      <ul class="bix-list bix-list--inline">
+        <li>Data engineering</li>
+        <li>AI/ML</li>
+        <li>Dashboards</li>
+        <li>Interoperability</li>
+        <li>Impact evaluation</li>
+      </ul>
+      `,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_technology.png",
-      title: "Technology: Developing Scalable and Secure Technology Solutions",
+      icon: {
+        name: "sentiment_satisfied_alt",
+        size: 9,
+      },
+      title: "Design services people can actually use",
       body: `
-      ${DescriptionList({
-        title: "Building Scalable and Secure Solutions",
-        items: [
-          "Agile software development.",
-          "Automated testing and DevSecOps.",
-          "Cloud and shared services optimization.",
-          "Cybersecurity and security engineering.",
-          "Data pipelines and systems architecture.",
-        ],
-      })}`,
+        <p>Simplify user experiences and reduce friction, improving adoption, clarity, and public trust in government services.</p>
+        <ul class="bix-list bix-list--inline">
+          <li>Service delivery</li>
+          <li>CX/UX</li>
+          <li>Service optimization</li>
+          <li>Human-centered design</li>
+        </ul>
+      `,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_data.png",
-      title:
-        "Data: Advancing Data Analytics and Evaluation for Decision-Making",
+      icon: {
+        name: "campaign",
+        size: 9,
+      },
+      title: "Strategic content and communications",
       body: `
-      ${DescriptionList({
-        title: "Unlocking Insights for Smarter Decisions",
-        items: [
-          "AI/ML integration for decision-making.",
-          "Data engineering, science, analytics, and operations.",
-          "Data interoperability optimization.",
-          "Data strategy and governance.",
-          "Digital marketing analytics.",
-          "Impact assessment and monitoring, evaluation, and learning (MEL).",
-        ],
-      })}`,
+      <p>
+        Develop content, messaging, and campaigns that inform, engage, and drive action.
+      </p>
+      <ul class="bix-list bix-list--inline">
+        <li>Strategic content</li>
+        <li>Engagement strategy</li>
+        <li>Public campaigns</li>
+        <li>Targeted messaging</li>
+      </ul>
+      `,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_processes.png",
-      title: `Processes: Accelerating Organizational Transformation and Learning`,
+      icon: {
+        name: "school",
+        size: 9,
+      },
+      title: `Build workforce capacity for today and the future`,
       body: `
-      ${DescriptionList({
-        title: "Optimizing Government Operations",
-        items: [
-          "Agile transformation and change management.",
-          "Digital transformation strategy.",
-          "Knowledge management.",
-          "Learning and talent development.",
-          "Organizational development.",
-          "Organizational learning and adaptive management.",
-        ],
-      })}`,
+        <p>Support and equip teams to adapt, grow, and sustain mission delivery through change.</p>
+        <ul class="bix-list bix-list--inline">
+          <li>Change management</li>
+          <li>Agile ops</li>
+          <li>Capacity building</li>
+          <li>Performance optimization</li>
+        </ul>
+      `,
     },
   ],
 };
@@ -94,3 +105,10 @@ export default {
 };
 
 export const Default = {};
+
+export const Background = {
+  args: {
+    ...graphicListContent,
+    variant: "background",
+  },
+};

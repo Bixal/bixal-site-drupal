@@ -15,8 +15,10 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+
 {% set graphic_list_classes = [
   "bix-graphic-list",
+  (variant ? "bix-graphic-list--" ~ variant),
 ] | merge(additional_classes | default([])) %}
 
 {% set heading_type = heading_type | default("h3") %}
@@ -29,6 +31,11 @@
         <div class="bix-graphic-list__image">
           {% if item.image_src %}
             <img src="{{item.image_src}}" alt="">
+          {% elseif item.icon %}
+            {% include "@components/icon/icon.html.twig" with {
+              icon_name: item.icon.name,
+              icon_size: item.icon.size
+            } %}
           {% endif %}
         </div>
         <div class="bix-graphic-list__body">
