@@ -252,6 +252,16 @@ li:with(:not(#toolbar-administration li)) {
   column-gap: units(4);
 }
 
+.bix-list--inline {
+  display: flex;
+  flex-flow: row wrap;
+  padding-inline-start: 0;
+
+  > li:first-child::marker {
+    content: "";
+  }
+}
+
 .bix-list--thirds {
   @include at-media("tablet-lg") {
     columns: 3;
@@ -341,6 +351,20 @@ blockquote + cite {
   // Clears floats from children.
   &:has(.align-left, .align-right, .align-center) {
     display: flow-root;
+  }
+}
+
+.bix-section--full-bleed > .bix-container {
+  max-width: unset;
+  width: unset;
+  margin: unset;
+  display: grid;
+  grid-template-columns:
+    [full-bleed-start] 1fr [content-start] min(85%, 1350px)
+    [content-end] 1fr [full-bleed-end];
+
+  & > * {
+    grid-column: content;
   }
 }
 
