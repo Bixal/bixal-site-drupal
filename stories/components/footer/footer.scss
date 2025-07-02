@@ -25,7 +25,7 @@
     row-gap: units(3);
 
     @include at-media("desktop") {
-      grid-template-columns: 100px 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       column-gap: units(4);
     }
   }
@@ -139,6 +139,7 @@
 
   &__legal {
     display: flex;
+    flex-flow: row wrap;
     column-gap: units(2);
     font-size: px-to-rem(16px);
     margin-bottom: units(6);
@@ -147,6 +148,10 @@
       margin-right: units(8);
       margin-bottom: 0;
       order: -1;
+    }
+
+    .copyright {
+      width: 100%;
     }
   }
 }

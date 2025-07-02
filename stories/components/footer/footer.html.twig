@@ -1,29 +1,15 @@
 <footer id="site-footer" class="bix-site-footer">
   <section class="bix-container  bix-site-footer__primary">
     <div class="bix-site-footer__columns">
-      <div class="bix-site-footer__column bix-site-footer__column--logo">
-        <div class="bix-site-footer__logo">
-          <img role="presentation" aria-hidden="true" decoding="async" loading="lazy" src="/static/img-b-footer.png" alt="Bixal Logo letter B silhouette around a photo of a smiling child.">
-        </div>
+      <div class="bix-site-footer__column">
+        <h3 class="bix-site-footer__title">Work With Us</h3>
+        <p>Looking to join our team? Check out our <a href="javascript:void(0)">open positions</a>.</p>
       </div>
-      <div class="bix-site-footer__column bix-site-footer__column--collab">
-        <h3 class="bix-site-footer__title">
-          Work With Us
-        </h3>
-        <p>Looking to join our team? Check out our openings.</p>
-        <p>
-          {% include "@components/button/button.html.twig" with {
-          variant: "inverse",
-          label: "Learn more",
-          href: "/careers",
-          icon: "arrow-right"
-        } %}
-        </p>
-        <div>
-          <a href="/accessibility-statement">Accessibility Statement</a>
-          |
-          <a href="/privacy">Privacy Policy</a>
-        </div>
+      <div class="bix-site-footer__column bix-site-footer__column--accreditations">
+        <h3 class="bix-site-footer__title">Accreditations</h3>
+        Women-owned small business <br />
+        ISO 9001:2015 <br />
+        CMMI Level 3 <br />
       </div>
       <div class="bix-site-footer__column bix-site-footer__column--hq">
         <h3 class="bix-site-footer__title">Headquarters</h3>
@@ -35,56 +21,14 @@
           </p>
         </div>
       </div>
-      <div class="bix-site-footer__column bix-site-footer__column--accreditations">
-        <h3 class="bix-site-footer__title">Accreditations</h3>
-        {% if theme_hook_original %}
-          {{ config_pages_field('accreditations', 'field_links', 'full') }}
-          <div class="accreditations-logos">
-            {{ config_pages_field('accreditations', 'field_logos_paragraph', 'full') }}
-          </div>
-        {% else %}
-          <ul>
-            <li>
-              <a href="https://www.sba.gov/business-guide/grow-your-business/women-owned-businesses" rel="noopener noreferrer" target="_blank">
-                Women-owned small business
-              </a>
-            </li>
-            <li>
-              <a href="https://www.iso.org/standard/62085.html" rel="noopener noreferrer" target="_blank">
-                ISO 9001:2015
-              </a>
-            </li>
-            <li>
-              <a href="https://cmmiinstitute.com/learning/appraisals/levels" rel="noopener noreferrer" target="_blank">
-                CMMI Level 3
-              </a>
-            </li>
-          </ul>
-          <div class="accreditations-logos">
-            <img src="/static/7110e309c7dc3b7c2aa59397bde3793a/iso-certified.svg" alt="ISO certified logo">
-            <img width="100" src="/static/cmmi-maturity-level-3-color-small.png" alt="Capability Maturity Model Integration Level 3 logo">
-            <img width="75" alt="Drupal Certified Bronze Partner" src="https://www.bixal.com/sites/default/files/accreditations/association_certified_bronze_badge.svg">
-          </div>
-        {% endif %}
-      </div>
     </div>
   </section>
   <section id="bix-site-footer__secondary" class="bix-site-footer__secondary">
     <div class="bix-site-footer__secondary-container bix-container">
-      {{ legal_nav_cl }}
-      {% if nav %}
-        <nav class="bix-site-footer__secondary-nav" aria-label="Site links">
-          <ul class="bix-site-footer__secondary-nav-items">
-            {% for item in nav %}
-              <li class="bix-site-footer__secondary-nav__item">
-                <a class="{{ item.current ? "is-current" }}" href="{{ item.href | default("javascript:void(0)") }}">
-                  {{ item.label }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
+      {# {{ legal_nav_cl }} #}
+      <div>
+
+      </div>
       {{ footer_nav_cl }}
       <div class="bix-site-footer__legal">
         {% for item in legal %}
@@ -92,9 +36,10 @@
             {{ item.label }}
           </a>
         {% endfor %}
-        <span class="copyright">Copyright &copy;
+        <div class="copyright">Copyright &copy;
           {{ 'now' | date('Y') }}
-          Bixal</span>
+          Bixal
+        </div>
       </div>
       {% if socialNav %}
         {% include "@components/social-nav/social-nav.html.twig" with socialNav %}
