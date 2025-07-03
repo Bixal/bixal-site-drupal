@@ -1,7 +1,9 @@
+import "./homepage.scss";
+
 import Homepage from "./homepage.html.twig";
 
 import HeaderContent from "../../components/header/header.content.json";
-import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
+// import DescriptionListCollectionContent from "../../components/description-list/description-list-collection.content.json";
 
 import "../../components/header/header.stories";
 import * as QuickFacts from "../../components/quick-fact/quick-fact.stories";
@@ -80,7 +82,7 @@ export const Default = {
           <li>Immediate fixes combined with long-term capacity building</li>
           <li>Small-business agility with federal-scale impact</li>
         </ul>
-        <div class="logo-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); align-items: center; justify-items: center;">
+        <div class="logo-grid">
           <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
           <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
           <div className="logo-grid__item"><img src="${SBALogo}" alt="" width="75" /></div>
