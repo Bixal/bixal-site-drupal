@@ -26,7 +26,7 @@
   .bix-quick-fact__title {
     /* font-family: var(--font-heading); */
     /* font-weight: 700; */
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1;
     text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
     margin-block-end: 0;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .bix-quick-fact-collection--halves {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -56,10 +56,17 @@
       padding: 2rem;
     }
 
-    .bix-quick-fact__description {
-    font-size: 1.5rem;
+
+  }
+
+  @media screen and (min-width: 1200px) {
+    .bix-quick-fact__title {
+      font-size: 6rem;
     }
 
+    .bix-quick-fact__description {
+      font-size: 1.5rem;
+      }
   }
 </style>
 
