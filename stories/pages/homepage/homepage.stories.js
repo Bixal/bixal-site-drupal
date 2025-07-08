@@ -13,6 +13,7 @@ import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 
 import HeroImage from "../../assets/static/Bixal Corp Header Banner.png";
+import WorkWithUsImage from "../../assets/static/Bixal Corp Work With Us.png";
 import SBALogo from "../../assets/static/SBA-Logo-Stacked-Reverse-RGB.svg";
 
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
@@ -53,7 +54,7 @@ export const Default = {
       prefix: "Who we are",
       variant: "base",
       title:
-        "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",
+        "Bixal Is A Diverse Group Of Strategists, Designers, Engineers, And Thinkers.",
       description:
         "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
     },
@@ -72,7 +73,7 @@ export const Default = {
     choose: {
       variant: "primary",
       image: "",
-      title: "Why government agencies choose Bixal",
+      title: "Why Government Agencies Choose Bixal",
       description: `
         <ul>
           <li>Proven results across 20+ federal agencies</li>
@@ -104,7 +105,8 @@ export const Default = {
     },
     workWithUs: {
       // center_content: true,
-      title: "Let's work together",
+      image: WorkWithUsImage,
+      title: "Let's Work Together",
       description:
         "We're ready to meet you where you are and deliver forward-ready solutions—faster onboarding, leaner operations, and services the public can trust.",
       cta: {
