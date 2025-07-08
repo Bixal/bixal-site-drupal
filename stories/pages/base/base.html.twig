@@ -2,7 +2,9 @@
 
 <main id="main-content">
   {% if hero %}
-    {% include "@components/section/section.html.twig" with hero %}
+    {% block hero %}
+      {% include "@components/hero/hero.html.twig" with hero %}
+    {% endblock %}
   {% endif %}
 
   {% block content %}
