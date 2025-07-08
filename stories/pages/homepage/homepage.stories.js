@@ -12,6 +12,7 @@ import "../../components/button/button.stories";
 import "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 
+import HeroImage from "../../assets/static/Bixal Corp Header Banner.png";
 import SBALogo from "../../assets/static/SBA-Logo-Stacked-Reverse-RGB.svg";
 
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
@@ -31,9 +32,9 @@ export const Default = {
     header: HeaderContent,
     hero: {
       variant: "primary",
-      image: "",
+      image: HeroImage,
       prefix: "Smart solutions. Lean Delivery. Real Impact.",
-      title: "We help government agencies deliver",
+      title: "We Help Government Agencies Deliver",
       heading_type: "h1",
       description: `
         <p>Federal agencies turn to us when they need to move fast, reduce complexity, and deliver services the public can use and trust.
@@ -57,9 +58,7 @@ export const Default = {
         "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
     },
     expertise: {
-      prefix: "Our expertise",
-      title:
-        "We provide federal agencies with integrated, outcome-driven solutions across five core disciplines:",
+      title: "Our Expertise",
       description:
         "<p>We partner with agencies to solve today’s challenges, scale what works, and build the capacity to stay ready for what’s next.</p><br />",
       disciplines: GraphicListContent.Background.args,
