@@ -26,7 +26,7 @@
 ] | merge(additional_classes | default([])) %}
 
 <section
-    {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
+    {{ attributes.addClass(section_classes) }}{% if image %} style="--section-background-image: url('{{ image }}')"{% endif %}>
   {{ content.contextual_links }}
   {#
     /**

@@ -87,6 +87,7 @@
 }
 
 .bix-section--image-bg {
+  background-image: var(--section-background-image);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
