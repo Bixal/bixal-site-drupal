@@ -16,7 +16,7 @@ const graphicListContent = {
       <p>
         Modernize platforms that government agencies can easily deploy, sustain, and scale.
       </p>
-      <ul class="bix-list bix-list--inline">
+      <ul class="bix-list">
         <li>DevSecOps</li>
         <li>Cloud migration</li>
         <li>Automation/AI</li>
@@ -35,7 +35,7 @@ const graphicListContent = {
       <p>
         Unlock smarter decisions through structured data, practical AI, and real-time analytics that support mission delivery.
       </p>
-      <ul class="bix-list bix-list--inline">
+      <ul class="bix-list">
         <li>Data engineering</li>
         <li>AI/ML</li>
         <li>Dashboards</li>
@@ -52,7 +52,7 @@ const graphicListContent = {
       title: "Design services people can actually use",
       body: `
         <p>Simplify user experiences and reduce friction, improving adoption, clarity, and public trust in government services.</p>
-        <ul class="bix-list bix-list--inline">
+        <ul class="bix-list">
           <li>Service delivery</li>
           <li>CX/UX</li>
           <li>Service optimization</li>
@@ -70,7 +70,7 @@ const graphicListContent = {
       <p>
         Develop content, messaging, and campaigns that inform, engage, and drive action.
       </p>
-      <ul class="bix-list bix-list--inline">
+      <ul class="bix-list">
         <li>Strategic content</li>
         <li>Engagement strategy</li>
         <li>Public campaigns</li>
@@ -86,7 +86,7 @@ const graphicListContent = {
       title: `Build workforce capacity for today and the future`,
       body: `
         <p>Support and equip teams to adapt, grow, and sustain mission delivery through change.</p>
-        <ul class="bix-list bix-list--inline">
+        <ul class="bix-list">
           <li>Change management</li>
           <li>Agile ops</li>
           <li>Capacity building</li>
