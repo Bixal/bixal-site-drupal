@@ -40,15 +40,27 @@ export const Default = {
       description: `
         <p>Federal agencies turn to us when they need to move fast, reduce complexity, and deliver services the public can use and trust.
         </p>
-        <p>Whether it's Al readiness, content strategy, data modernization, or service delivery, we bring clarity, structure, and speed to move missions forward.</p>
+        <p>Whether it’s AI readiness, content strategy, data modernization, or service delivery, we bring clarity, structure, and speed to move missions forward.</p>
       `,
       cta: {
-        label: "See how we help federal teams",
+        label: "See How We Help Federal Teams",
         variant: "inverse",
       },
     },
     facts: {
       ...QuickFacts.CollectionThirds.args,
+    },
+    expertise: {
+      title: "Our Expertise",
+      description:
+        "<p>We partner with agencies to solve today’s challenges, scale what works, and build the capacity to stay ready for what’s next.</p><br />",
+      disciplines: GraphicListContent.Background.args,
+      cta: {
+        label: "Check Out Our Results",
+        // variant: "inverse",
+        // icon: "arrow-right",
+        href: "#",
+      },
     },
     whoWeAre: {
       prefix: "Who we are",
@@ -57,18 +69,6 @@ export const Default = {
         "Bixal Is A Diverse Group Of Strategists, Designers, Engineers, And Thinkers.",
       description:
         "<p>Our common belief is that everyone has the right to an effective government. Every day, we come to work focused on helping our federal partners deliver a better customer experience to the American public and communities around the world. We value kindness, humility, and collaboration. Our culture is felt the moment you walk in the door, and it is reflected across our entire team.</p>",
-    },
-    expertise: {
-      title: "Our Expertise",
-      description:
-        "<p>We partner with agencies to solve today’s challenges, scale what works, and build the capacity to stay ready for what’s next.</p><br />",
-      disciplines: GraphicListContent.Background.args,
-      cta: {
-        label: "Check out our results",
-        // variant: "inverse",
-        // icon: "arrow-right",
-        href: "#",
-      },
     },
     choose: {
       variant: "primary",
@@ -99,7 +99,7 @@ export const Default = {
       `,
       cta: {
         variant: "inverse",
-        label: "See our contract vehicles",
+        label: "See our contract Vehicles",
         href: "#",
       },
     },
@@ -108,7 +108,7 @@ export const Default = {
       image: WorkWithUsImage,
       title: "Let's Work Together",
       description:
-        "We're ready to meet you where you are and deliver forward-ready solutions—faster onboarding, leaner operations, and services the public can trust.",
+        "We’re ready to meet you where you are and deliver forward-ready solutions—faster onboarding, lean operations, and services the public can trust.",
       cta: {
         label: "Contact Us",
         href: "#",

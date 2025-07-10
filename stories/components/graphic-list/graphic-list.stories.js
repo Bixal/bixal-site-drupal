@@ -11,7 +11,7 @@ const graphicListContent = {
         size: 9,
       },
       heading_type: "h3",
-      title: "Build modern, secure, and scalable platforms",
+      title: "Develop modern, secure, and scalable platforms",
       body: `
       <p>
         Modernize platforms that government agencies can easily deploy, sustain, and scale.
@@ -38,6 +38,7 @@ const graphicListContent = {
       <ul class="bix-list">
         <li>Data engineering</li>
         <li>AI/ML</li>
+        <li>Analytics</li>
         <li>Dashboards</li>
         <li>Interoperability</li>
         <li>Impact evaluation</li>
@@ -49,7 +50,7 @@ const graphicListContent = {
         name: "sentiment_satisfied_alt",
         size: 9,
       },
-      title: "Design services people can actually use",
+      title: "Design clear and efficient public services",
       body: `
         <p>Simplify user experiences and reduce friction, improving adoption, clarity, and public trust in government services.</p>
         <ul class="bix-list">
@@ -65,16 +66,16 @@ const graphicListContent = {
         name: "campaign",
         size: 9,
       },
-      title: "Strategic content and communications",
+      title: "Engage through content and communications",
       body: `
       <p>
         Develop content, messaging, and campaigns that inform, engage, and drive action.
       </p>
       <ul class="bix-list">
         <li>Strategic content</li>
-        <li>Engagement strategy</li>
+        <li>Outreach & engagement</li>
         <li>Public campaigns</li>
-        <li>Targeted messaging</li>
+        <li>PR & media relations</li>
       </ul>
       `,
     },
@@ -83,9 +84,9 @@ const graphicListContent = {
         name: "school",
         size: 9,
       },
-      title: `Build workforce capacity for today and the future`,
+      title: `Strengthen workforce capacity`,
       body: `
-        <p>Support and equip teams to adapt, grow, and sustain mission delivery through change.</p>
+        <p>Build and equip teams to adapt, grow, and sustain mission delivery through any change.</p>
         <ul class="bix-list">
           <li>Change management</li>
           <li>Agile ops</li>
