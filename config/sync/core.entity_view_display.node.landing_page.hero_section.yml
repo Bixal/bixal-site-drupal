@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_variant
+    - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_paragraphs
     - node.type.landing_page
   module:
@@ -41,6 +42,7 @@ content:
     weight: 3
     region: content
 hidden:
+  field_metatags: true
   field_paragraphs: true
   langcode: true
   links: true
