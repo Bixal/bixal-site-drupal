@@ -39,10 +39,6 @@
                     "type": "zip"
                 }
             }
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:mpbixal/drupal-platform-lando.git"
         }
     ],
     "require": {
