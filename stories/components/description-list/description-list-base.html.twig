@@ -11,7 +11,7 @@
 
 <div {{ attributes.addClass(classes).addClass(additional_classes | default([])) }}>
   {{ content.contextual_links }}
-  <dl {{ ulAttributes.addClass(dLclasses) }}>
+  <dl {{ dlAttributes.addClass(dLclasses) }}>
     {% if image %}
     {{ image }}
     {% endif %}
