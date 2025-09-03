@@ -11,8 +11,7 @@ The remote environments are hosted in platform.sh. See the `./.platform` directo
 
 Links to environments can be found in [SharePoint 🔒](https://bixal365.sharepoint.com/:x:/s/Dev/ETDXL_cyD11Ahbtub5L-658BuyLzJ9Hky_LmvkkAcDsEZQ?e=wIKXpt).
 
-> [!CAUTION]
-> **HIT REFRESH AFTER CLICKING.** Story book will not load because the basic auth credentials are in the URL.
+> [!CAUTION] > **HIT REFRESH AFTER CLICKING.** Story book will not load because the basic auth credentials are in the URL.
 
 ## Getting Started
 
@@ -34,7 +33,6 @@ The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal
 
 #### Starting/Stopping the Environment
 
-
 **Starting**
 
 For future sessions, you can start lando:
@@ -46,17 +44,16 @@ lando start
 **Stopping**
 
 Run the following command to stop the environment:
+
 ```
 lando stop
 ```
-
 
 You'll be able to visit the local site at: https://bixalcom.lndo.site.
 
 #### Rebuilding / Reinstalling Dependencies
 
 Change something in the `.lando.yml` config and/or you want to re-install front and back end dependencies?
-
 
 **Start Fresh:**
 
@@ -119,7 +116,6 @@ BSD closes #64: Fixed coding standards issues.
 
 More guidance on git branching and commit style in [robo.yml](https://github.com/Bixal/bixal-site-drupal/blob/develop/robo.yml) config.
 
-
 ## Development Commands
 
 ### Installing Drupal with Sample Content
@@ -153,7 +149,6 @@ lando export-content
 
 By default, Lando runs Composer commands within its Docker containers. This often times out, so we recommend using your local Composer instead.
 
-
 ```
 ./composer.sh
 ```
@@ -161,21 +156,22 @@ By default, Lando runs Composer commands within its Docker containers. This ofte
 **Local Composer Setup**
 
 1. Install [homebrew](https://brew.sh/):
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 2. Install composer:
-    ```
-    brew install composer
-    ```
 
-    > [!NOTE]
-    > Make sure the installed PHP matches the project version.
+   ```
+   brew install composer
+   ```
+
+   > [!NOTE]
+   > Make sure the installed PHP matches the project version.
+
 3. Set the local to use your composer:
-    ```
-    echo 'BIN_PATH_COMPOSER="composer"' >> .env
-    ```
-
+   ```
+   echo 'BIN_PATH_COMPOSER="composer"' >> .env
+   ```
 
 #### Composer.log Management
 
@@ -195,6 +191,8 @@ Run all the validation commands that the pipelines run without needing to push r
 
 #### Copy storybook to Drupal theme
 
+Use this command to view changes from Storybook components.
+
 ```
 lando build_node
 ```
@@ -202,7 +200,6 @@ lando build_node
 #### Configure Xdebug
 
 https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
-
 
 ## Storybook
 
@@ -222,9 +219,3 @@ Alternatively:
 ```
 
 This should automatically open it in your browser.
-
-### Copy Storybook to Drupal Theme
-
-```
-lando build_node
-```
