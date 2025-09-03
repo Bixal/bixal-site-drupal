@@ -19,49 +19,48 @@
  *   - class: HTML classes.
  */
 #}
-<div data-drupal-messages>
+
+<div data-drupal-messages class="drupal-status-messages">
   {% block messages %}
     {% for type, messages in message_list %}
       {% set classes = [
         'messages',
         'messages--' ~ type,
-        'usa-alert',
-        'usa-alert--' ~ type,
-        type == 'status' ? 'usa-alert--success',
+        'bix-alert',
+        'bix-alert--' ~ type,
+        type == 'status' ? 'bix-alert--success',
       ] %}
 
-      <div role="contentinfo"
-           aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
-        {% if type == 'error' %}
-        <div role="alert">
-          {% endif %}
+      {% if style == 'urgent' %}
+        {% set icon = directory ~ '/dist/assets/img/usa-icons/error_outline.svg' %}
+      {% elseif style == 'warning' %}
+        {% set icon = directory ~ '/dist/assets/img/usa-icons/warning.svg' %}
+      {% elseif style == 'status' %}
+        {% set icon = directory ~ '/dist/assets/img/usa-icons/check_circle_outline.svg' %}
+      {% else %}
+        {% set icon = directory ~ '/dist/assets/img/usa-icons/info_outline.svg' %}
+      {% endif %}
 
-          {% if status_headings[type] %}
-            <h2 class="visually-hidden usa-alert__heading">{{ status_headings[type] }}</h2>
-          {% endif %}
-
+      {% embed "@components/alert/alert.html.twig" with {
+        variant: type,
+        additional_classes: classes,
+        title: status_headings[type],
+        icon: icon
+      } %}
+        {% block body %}
+          {# Show a list of messages or a single one. #}
           {% if messages|length > 1 %}
-          <div class="usa-alert__body">
-            <ul class="messages__list usa-list margin-top-0">
+            <ul class="messages__list bix-list">
               {% for message in messages %}
                 <li class="messages__item">{{ message }}</li>
               {% endfor %}
             </ul>
-          </div>
-
           {% else %}
-
-            <div class="usa-alert__body">
-              {{ messages|first }}
-            </div>
+            {{ messages|first }}
           {% endif %}
 
-          {% if type == 'error' %}
-        </div>
-        {% endif %}
-      </div>
-      {# Remove type specific classes. #}
-      {% set attributes = attributes.removeClass(classes) %}
+        {% endblock %}
+      {% endembed %}
     {% endfor %}
   {% endblock messages %}
 </div>
