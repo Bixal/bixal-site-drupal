@@ -8,6 +8,10 @@
   * - heading_type: Optional string for the type of header (h1-h6).
   * - title: Optional string for the alert header.
   * - text: A string of the alert body text.
+  *
+  * Accessibility
+  * If the alert is important (e.g., "urgent", "warning", "error"), we set a `role="alert"` for screen readers.
+  *
 **/
 #}
 
@@ -33,7 +37,8 @@
 <div{{ attributes.addClass(alert_classes) }}>
   <div class="bix-alert__body">
   {% if icon %}
-    <span class="bix-alert__icon">
+    {# Icon is hidden because its decorative. #}
+    <span class="bix-alert__icon" aria-hidden="true">
       {{ source(icon) }}
     </span>
   {% endif %}
@@ -44,6 +49,17 @@
   {% endif %}
     <div class="bix-alert__text">
       {% block body %}
+        {#
+        /**
+          * You can override the body to display a list of messages.
+          *
+          * @example
+          * {% embed '@components/alert/alert.html.twig' with { variant: 'info' } %}
+          *   {% block body %}<ul>...a bunch of list items</ul>{% endblock %}
+          * {% endembed %}
+          *
+        **/
+        #}
         {% if text %}{{ text }}{% endif %}
       {% endblock %}
     </div>
