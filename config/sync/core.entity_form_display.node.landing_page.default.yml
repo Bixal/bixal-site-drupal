@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_variant
+    - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_paragraphs
     - node.type.landing_page
   module:
     - field_group
     - media_library
     - media_library_edit
+    - metatag
     - paragraphs
     - path
 third_party_settings:
@@ -91,6 +93,14 @@ content:
     weight: 5
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_paragraphs:
     type: paragraphs

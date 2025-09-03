@@ -39,10 +39,6 @@
                     "type": "zip"
                 }
             }
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:mpbixal/drupal-platform-lando.git"
         }
     ],
     "require": {
@@ -73,6 +69,7 @@
         "drupal/key": "^1.19",
         "drupal/maillog": "1.x-dev@dev",
         "drupal/mailsystem": "^4.4",
+        "drupal/maxlength": "^3.1",
         "drupal/media_library_edit": "^3.0",
         "drupal/media_remote": "^1.9",
         "drupal/menu_admin_per_menu": "^1.5",

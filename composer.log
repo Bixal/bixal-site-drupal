@@ -70,3 +70,5 @@ cf193c0a9a0293ac4bd269975d0cff3a|Matt Poole|feature/BSD-455-editable-paragraphs|
 b2295ef5afc91edb2a49ba52e9cc27cb|Matt Poole|HEAD|Tue Jun 17 09:49:05 EDT 2025|./composer.sh require drupal/openid_connect:^3.0@alpha
 247eb262a481f09f0a2b7501839d30c4|Matt Poole|feature/BSD-136-sso-support|Tue Jun 17 13:19:34 EDT 2025|./composer.sh require drupal/webform:^6.3@beta
 cd46813173f87ca66c1e8c2d4221ea35|Matt Poole|feature/BSD-480-update-deps|Wed Jun 25 16:24:56 EDT 2025|./composer.sh update
+85a63b7c31d162217846c545b6ccce88|Matt Poole|feature/BSD-457-seo-tags|Thu Aug 28 14:07:17 EDT 2025|./composer.sh update --lock
+16cdcb75060c1dd563d330ed5efc8ca8|Matt Poole|feature/BSD-457-seo-tags|Wed Sep  3 14:34:02 EDT 2025|./composer.sh require drupal/maxlength

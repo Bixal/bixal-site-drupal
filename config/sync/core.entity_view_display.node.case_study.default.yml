@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.case_study.field_conclusion
     - field.field.node.case_study.field_impact
     - field.field.node.case_study.field_introduction
+    - field.field.node.case_study.field_metatags
     - field.field.node.case_study.field_solution
     - node.type.case_study
   module:
+    - metatag
     - text
     - user
 id: node.case_study.default
@@ -53,6 +55,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_solution:
     type: text_default
