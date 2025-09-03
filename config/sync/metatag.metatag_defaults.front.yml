@@ -8,4 +8,5 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  description: '[node:field_hero_description]'
   shortlink: '[site:url]'

@@ -219,3 +219,10 @@ Alternatively:
 ```
 
 This should automatically open it in your browser.
+
+## SEO
+
+We're using the following modules:
+
+- [**metatag**](https://www.drupal.org/project/metatag): To set SEO metags to set defaults and let content editors customize metatags.
+- [**maxlength**](https://www.drupal.org/project/maxlength): To limit metatag descriptions to `160` characters (recommended in the metatag module).

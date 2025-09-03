@@ -1,0 +1,21 @@
+uuid: b98ddc3e-819f-4324-8497-72daeb298f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.contract_vehicle
+  module:
+    - metatag
+id: node.contract_vehicle.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: contract_vehicle
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

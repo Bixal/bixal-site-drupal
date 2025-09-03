@@ -1,0 +1,8 @@
+uuid: 9e342530-0dee-427c-bfdc-51ac6b8320d5
+langcode: en
+status: true
+dependencies: {  }
+id: node__case_study
+label: 'Content: Case Study'
+tags:
+  description: '[node:field_introduction]'
