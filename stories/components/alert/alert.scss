@@ -9,8 +9,19 @@
   border-left: 4px solid var(--_alert-color);
 
   &__body {
-    padding: units(1.5) units(2.5);
-    padding-left: units(5);
+    padding: units(1) units(2.5);
+    padding-inline-start: units(5);
+    position: relative;
+  }
+
+  &__icon {
+    fill: var(--_alert-color);
+    position: absolute;
+    z-index: 1;
+    margin-inline-start: -1.9rem;
+    margin-block-start: 0.25rem;
+    width: units(2.5);
+    height: units(2.5);
   }
 }
 
@@ -24,4 +35,8 @@
 
 .bix-alert--error {
   --alert-color: var(--c-error);
+}
+
+.bix-alert--success {
+  --alert-color: var(--c-success);
 }
