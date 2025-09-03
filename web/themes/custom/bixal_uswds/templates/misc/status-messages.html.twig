@@ -21,46 +21,48 @@
 #}
 
 <div data-drupal-messages class="drupal-status-messages">
-  {% block messages %}
-    {% for type, messages in message_list %}
-      {% set classes = [
-        'messages',
-        'messages--' ~ type,
-        'bix-alert',
-        'bix-alert--' ~ type,
-        type == 'status' ? 'bix-alert--success',
-      ] %}
+  <div class="bix-container">
+    {% block messages %}
+      {% for type, messages in message_list %}
+        {% set classes = [
+          'messages',
+          'messages--' ~ type,
+          'bix-alert',
+          'bix-alert--' ~ type,
+          type == 'status' ? 'bix-alert--success',
+        ] %}
 
-      {% if style == 'urgent' %}
-        {% set icon = directory ~ '/dist/assets/img/usa-icons/error_outline.svg' %}
-      {% elseif style == 'warning' %}
-        {% set icon = directory ~ '/dist/assets/img/usa-icons/warning.svg' %}
-      {% elseif style == 'status' %}
-        {% set icon = directory ~ '/dist/assets/img/usa-icons/check_circle_outline.svg' %}
-      {% else %}
-        {% set icon = directory ~ '/dist/assets/img/usa-icons/info_outline.svg' %}
-      {% endif %}
+        {% if style == 'urgent' %}
+          {% set icon = directory ~ '/dist/assets/img/usa-icons/error_outline.svg' %}
+        {% elseif style == 'warning' %}
+          {% set icon = directory ~ '/dist/assets/img/usa-icons/warning.svg' %}
+        {% elseif style == 'status' %}
+          {% set icon = directory ~ '/dist/assets/img/usa-icons/check_circle_outline.svg' %}
+        {% else %}
+          {% set icon = directory ~ '/dist/assets/img/usa-icons/info_outline.svg' %}
+        {% endif %}
 
-      {% embed "@components/alert/alert.html.twig" with {
-        variant: type,
-        additional_classes: classes,
-        title: status_headings[type],
-        icon: icon
-      } %}
-        {% block body %}
-          {# Show a list of messages or a single one. #}
-          {% if messages|length > 1 %}
-            <ul class="messages__list bix-list">
-              {% for message in messages %}
-                <li class="messages__item">{{ message }}</li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            {{ messages|first }}
-          {% endif %}
+        {% embed "@components/alert/alert.html.twig" with {
+          variant: type,
+          additional_classes: classes,
+          title: status_headings[type],
+          icon: icon
+        } %}
+          {% block body %}
+            {# Show a list of messages or a single one. #}
+            {% if messages|length > 1 %}
+              <ul class="messages__list bix-list">
+                {% for message in messages %}
+                  <li class="messages__item">{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              {{ messages|first }}
+            {% endif %}
 
-        {% endblock %}
-      {% endembed %}
-    {% endfor %}
-  {% endblock messages %}
+          {% endblock %}
+        {% endembed %}
+      {% endfor %}
+    {% endblock messages %}
+  </div>
 </div>
