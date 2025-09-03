@@ -14,8 +14,15 @@
 
 {% set heading_type = heading_type | default("h4") %}
 
+{% set is_important = (variant|default("")) in ['urgent', 'warning', 'error'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{# For accessibility, highlight important alerts. #}
+{% if is_important %}
+  {% set attributes = attributes.setAttribute("role", "alert") %}
 {% endif %}
 
 {% set alert_classes = [
@@ -35,10 +42,10 @@
       {{ title }}
     </{{ heading_type }}>
   {% endif %}
-  {% if text %}
     <div class="bix-alert__text">
-      {{ text }}
+      {% block body %}
+        {% if text %}{{ text }}{% endif %}
+      {% endblock %}
     </div>
-  {% endif %}
   </div>
 </div>

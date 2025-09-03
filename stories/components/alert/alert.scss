@@ -23,6 +23,10 @@
     width: units(2.5);
     height: units(2.5);
   }
+
+  &:where(:not(:first-child)) {
+    margin-block-start: units(1);
+  }
 }
 
 .bix-alert--info {
