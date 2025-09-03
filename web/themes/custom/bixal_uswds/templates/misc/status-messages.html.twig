@@ -32,11 +32,11 @@
           type == 'status' ? 'bix-alert--success',
         ] %}
 
-        {% if style == 'urgent' %}
+        {% if type == 'urgent' %}
           {% set icon = directory ~ '/dist/assets/img/usa-icons/error_outline.svg' %}
-        {% elseif style == 'warning' %}
+        {% elseif type == 'warning' %}
           {% set icon = directory ~ '/dist/assets/img/usa-icons/warning.svg' %}
-        {% elseif style == 'status' %}
+        {% elseif type == 'status' %}
           {% set icon = directory ~ '/dist/assets/img/usa-icons/check_circle_outline.svg' %}
         {% else %}
           {% set icon = directory ~ '/dist/assets/img/usa-icons/info_outline.svg' %}
