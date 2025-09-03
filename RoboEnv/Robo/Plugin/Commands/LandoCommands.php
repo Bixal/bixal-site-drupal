@@ -38,7 +38,7 @@ class LandoCommands extends CommonCommands
     /**
      * {@inheritDoc}
      */
-    protected function getName(): string
+    public static function getName(): string
     {
         return 'lando';
     }
@@ -68,6 +68,18 @@ class LandoCommands extends CommonCommands
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public static function execCommand($inside = TRUE): string
+    {
+        if ($inside) {
+            return 'bash -c';
+        } else {
+            return 'lando exec';
+        }
+    }
+
+    /**
      * Toggles when Lando starts up, xdebug will now be on by default.
      *
      * When Xdebug is on and xdebug:always-connect has not set XDEBUG_SESSION=1,
@@ -79,7 +91,7 @@ class LandoCommands extends CommonCommands
      */
     public function xdebugToggleOnByDefault(): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $yml_file = $this->getLandoLocalYml();
         $yml_value =& $yml_file['config']['xdebug'];
         if ($yml_value === true) {
@@ -106,7 +118,7 @@ class LandoCommands extends CommonCommands
      */
     public function xdebugToggleAlwaysConnect(SymfonyStyle $io): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $yml_file = $this->getLandoLocalYml();
         $yml_value =& $yml_file['services']['appserver']['overrides']['environment']['XDEBUG_SESSION'];
         if ($yml_value === 1) {
@@ -183,16 +195,9 @@ class LandoCommands extends CommonCommands
     }
 
     /**
-     * Is Lando ready to start?
-     *
-     * @param bool $return
-     *   If true, returns false instead of an exception.
-     *
-     * @return bool
-     *
-     * @throws \Exception
+     * {@inheritDoc}
      */
-    protected function isLandoInit(bool $return = false): bool
+    protected function isInit(bool $return = false): bool
     {
         if (!$this->doesLandoFileExists($return)) {
             return false;
@@ -626,7 +631,7 @@ class LandoCommands extends CommonCommands
     public function landoAdminSetRequiredSharedServices(SymfonyStyle $io): void
     {
 
-        $this->isLandoInit();
+        $this->isInit();
         $io->warning('Drupal requirements for Web Servers: https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements');
         $this->setRecipeService($io, false, 'web', 'via', 'web server');
         $io->warning('Drupal requirements for Databases: https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements');
@@ -644,7 +649,7 @@ class LandoCommands extends CommonCommands
      */
     public function landoAdminSetOptionalSharedServices(SymfonyStyle $io): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $this->isDrupalInstalled($io);
         $rebuild_required = false;
         $status = $this->setOptionalService($io, 'shared', 'cache', 'cache', 'cache server', $service_type, $service_version);
@@ -691,81 +696,6 @@ class LandoCommands extends CommonCommands
     }
 
     /**
-     * Act when a shared service is modified.
-     *
-     * @param string $service_type
-     *   The Lando service name.
-     *
-     * @param bool|null $status
-     *   False if nothing changes. True if new service added. Null if service
-     *   removed.
-     *
-     * @return void
-     *
-     * @throws \Exception
-     */
-    protected function reactToSharedService(SymfonyStyle $io, string $service_type, bool|null $status = false): void
-    {
-        // Stayed the same.
-        if ($status === false) {
-            return;
-        }
-        $add = true;
-        // Service is being removed.
-        if ($status === null) {
-            $add = false;
-        }
-        $self = $this;
-        $add_or_remove_module = static function(string $project, array $additional_uninstall = []) use($add, $self, $io): void {
-            if ($add) {
-                $self->installDependencies($io, false, [$project => '']);
-            } else {
-                $additional_uninstall[] = $project;
-                foreach ($additional_uninstall as $project) {
-                    $self->uninstallDependency($io, $project);
-                }
-            }
-        };
-        switch ($service_type) {
-            case 'memcached':
-                $add_or_remove_module('drupal/memcache');
-                break;
-
-            case 'redis':
-                $add_or_remove_module('drupal/redis');
-                break;
-
-            case 'solr':
-                // Search API gets turned on at the same time as solr, uninstall
-                // it too.
-                $add_or_remove_module('drupal/search_api_solr', ['search_api']);
-                if ($add) {
-                    $this->yell('IMPORTANT MANUAL CONFIGURATION:');
-                    $this->yell("The Search API Solr module has been added and enabled, but you must manually create the core at /admin/config/search/search-api/add-server. Guidelines: The machine name MUST be 'default_solr_server'; The 'Solr Connector' MUST be 'standard'; 'Solr core' must be set, but the value does not matter; All other values can be updated as you see fit.");
-                    $this->enterToContinue($io, "Once the above has been completed, you can run the command `./robo.sh lando-admin:solr-config` to put the Solr configuration in place. Lando must be rebuilt before this can be run.");
-                }
-                break;
-
-            case 'elasticsearch':
-                // Search API gets turned on at the same time as
-                // elasticsearch_connector, uninstall it too.
-                $add_or_remove_module('drupal/elasticsearch_connector:@dev', ['search_api']);
-                if ($add) {
-                    $this->yell('IMPORTANT MANUAL CONFIGURATION:');
-                    $this->enterToContinue($io, "The Elasticsearch Connector module has been added and enabled, but you must manually create the core at /admin/config/search/search-api/add-server. Guidelines: The machine name MUST be 'default_elasticsearch_server'; The 'ElasticSearch Connector' MUST be 'standard'; 'ElasticSearch URL' must be set, but the value does not matter; All other values can be updated as you see fit.");
-                }
-                break;
-
-            case 'node':
-                if ($add) {
-                    $this->enterToContinue($io, 'If you need to take action during the build process, please edit the "./orch/build_node.sh" file. By default, this file will install deps with npm and run "gulp" on all custom themes that have a package.json.');
-                }
-                break;
-
-        }
-    }
-
-    /**
      * Sets the best recipe to use.
      *
      * @command lando-admin:set-recipe
@@ -774,7 +704,7 @@ class LandoCommands extends CommonCommands
      */
     public function landoAdminSetRecipe(): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $lando_yml = $this->getLandoYml();
         $lando_dist_yml = $this->getLandoDistYml();
         // https://docs.lando.dev/plugins/drupal/.
@@ -850,7 +780,7 @@ class LandoCommands extends CommonCommands
      */
     public function landoAdminSolrConfig(SymfonyStyle $io): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $this->isDrupalInstalled($io);
         $this->drush($io, ['search-api-solr:get-server-config', 'default_solr_server', 'solr-config.zip']);
         if ($this->taskDeleteDir('solr-conf')
@@ -864,7 +794,7 @@ class LandoCommands extends CommonCommands
             $lando_yml = $this->getLandoYml();
             $lando_yml['services']['search']['config']['dir'] = 'solr-conf';
             $this->saveLandoYml($lando_yml);
-            $this->rebuildRequired($io, true, 'the Solr configuration is now in place, you can commit the files in "solr-conf"');
+            $this->rebuildRequired($io, true, 'the Solr configuration is now in place, you can commit the files in "solr-conf"');;
         }
     }
 
@@ -880,7 +810,7 @@ class LandoCommands extends CommonCommands
     {
 
         $updated = false;
-        $this->isLandoInit();
+        $this->isInit();
         $lando_file_yml = $this->getLandoYml();
         $lando_local_yml = $this->getLandoLocalYml();
         $lando_dist_yml = $this->getLandoDistYml();
@@ -982,13 +912,13 @@ class LandoCommands extends CommonCommands
         if (!$this->landoReqs($io)) {
             throw new \Exception('Unable to find all requirements. Please re-run this command after installing');
         }
-        // Introduce the common shortcuts so one knows how they work and to
-        // configure them.
-        $this->introduceCommonShortcuts($io);
         // This will now be the default local environment, as many can be
         // installed. This allows the shortcuts like drush.sh to know which
         // environment to use.
         $this->setDefaultLocalEnvironment($this->getName());
+        // Introduce the common shortcuts so one knows how they work and to
+        // configure them.
+        $this->introduceCommonShortcuts($io);
         // Check if the original directory has been captured yet, if not this
         // is the original install. It does not matter if that directory
         // does not exist anymore, it will not be copied from just it's name
@@ -1024,7 +954,7 @@ class LandoCommands extends CommonCommands
      */
     public function landoSetPersonalServices(SymfonyStyle $io): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $rebuild_required = false;
         $status = $this->setOptionalService($io, 'personal', 'dbadmin', 'dbadmin', 'database admin tool', $service_type, $service_version);
         if (false !== $status) {
@@ -1091,7 +1021,7 @@ class LandoCommands extends CommonCommands
      */
     public function landoDuplicateProject(SymfonyStyle $io): void
     {
-        $this->isLandoInit();
+        $this->isInit();
         $lando_file_yml = $this->getLandoYml();
         $this->say('When creating a duplicate local environment, there are 2 options.');
         $this->say('');
@@ -1370,7 +1300,7 @@ class LandoCommands extends CommonCommands
                     'additional_config' => [
                         'build' => ['./orch/build_node.sh'],
                         'scanner' => false,
-                        'gulp-cli' => 'latest',
+                        'globals' => ['gulp-cli' => 'latest'],
                     ],
                 ],
             ],

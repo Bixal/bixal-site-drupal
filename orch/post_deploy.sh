@@ -17,7 +17,7 @@ if [ -n "$(drush status --fields=bootstrap)" ]; then
   if [ -n "$(drush pm-list --type=module --status=enabled --no-core | grep search_api)" ]; then
     # Make the site hash consistent so there isn't random records floating around.
     if [ -n "$(drush pm-list --type=module --status=enabled --no-core | grep search_api_solr)" ] && [ -n "${DRUPAL_SOLR_SITE_HASH}" ]; then
-      drush sset search_api_solr.site_hash "${DRUPAL_SOLR_SITE_HASH}"
+      drush state-set search_api_solr.site_hash "${DRUPAL_SOLR_SITE_HASH}"
     fi
     echo "Re-indexing Search API"
     drush search-api-reindex

@@ -16,26 +16,52 @@ if [ -z "$DRUPAL_ENV_LOCAL" ] && [ -z "$DRUPAL_ENV_REMOTE" ]; then
     echo ""
     echo "PHP must be installed locally."
     echo ""
-    echo "Possible PHP paths to use:"
-    whereis php
-    echo ""
-    echo "The following is the default version of PHP in your \$PATH. If PHP is already in your path and you want to use that version, just hit enter."
-    which php
-    echo ""
-    read -p "Please enter the path to PHP on your local machine: " custom_php_path
-    default_php_path=$(which php)
-    custom_php_path=${custom_php_path:-$default_php_path}
-    if ! builtin command -v $custom_php_path > /dev/null; then
-      echo "The path '$custom_php_path' does not exist"
-      exit 1
+    command="php"
+    default_php_path=$(which "$command") || :
+    if [ -n "$default_php_path" ]; then
+      echo "Possible PHP paths to use:"
+
+      # Run whereis and process the output
+      whereis_output=$(whereis $command)
+
+      # Split the output into its components
+      IFS=' ' read -r -a components <<< "$whereis_output"
+
+      # Print each component separately
+      for component in "${components[@]}"; do
+        if [[ "$component" == *":" ]]; then
+          # This is the command name or category
+          echo "$component"
+        elif [[ "$component" =~ /\.* ]]; then
+          # This is a file location
+          echo "  Path: $component"
+          echo "  Version: "`$component --version -v | head -n 1 | awk '/PHP/{print $2}'`
+          echo ""
+        fi
+      done
+      echo ""
+      echo "The following is the default version of PHP in your \$PATH, hit enter to continue or enter an alternate if desired."
+    else
+      echo "It seems PHP is not installed locally, please install now and enter the path."
     fi
-    echo ""
-    echo "You entered: $custom_php_path. This value will be written to .php.env, you can update the value at any time or delete the file to get this prompt again."
-    echo ""
-    echo "Your PHP version is:"
-    $custom_php_path --version
-    echo ""
-    echo "BIN_PATH_PHP=\"$custom_php_path\"" > .php.env
+    # A valid path to PHP must be entered to continue.
+    while true; do
+      echo ""
+      read -e -i "$default_php_path" -p "Please enter the path to PHP on your local machine: " custom_php_path
+      echo ""
+      custom_php_path=${custom_php_path:-$default_php_path}
+      if [[ -z "$custom_php_path" || ! $(command -v $custom_php_path) ]]; then
+        echo "The path '$custom_php_path' does not exist"
+      else
+        echo "You entered: $custom_php_path. This value will be written to .php.env, you can update the value at any time or delete the file to get this prompt again."
+        echo ""
+        echo "Your PHP version is:"
+        $custom_php_path --version
+        echo ""
+        echo "BIN_PATH_PHP=\"$custom_php_path\"" > .php.env
+        break;
+      fi
+    done
   fi
   . .php.env
 fi

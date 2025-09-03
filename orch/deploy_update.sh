@@ -16,8 +16,8 @@ if [ -n "$(drush status --fields=bootstrap)" ]; then
   drush deploy
   # Required if config splits is enabled.
   if [ "$(drush pm-list --type=module --status=enabled --no-core | grep 'config_split')" ] && [ -n "$(ls $(drush php:eval "echo realpath(Drupal\Core\Site\Settings::get('config_sync_directory'));")/*.yml 2>/dev/null)" ]; then
-    drush cr
-    drush cim -y
+    drush cache-rebuild
+    drush config-import -y
   fi
 else
   echo "Drupal is not installed, cannot update. Installing instead"
