@@ -3,6 +3,7 @@ import "./alert.scss";
 import infoIcon from "@uswds/uswds/img/usa-icons/info_outline.svg";
 import warningIcon from "@uswds/uswds/img/usa-icons/warning.svg";
 import errorIcon from "@uswds/uswds/img/usa-icons/error_outline.svg";
+import successIcon from "@uswds/uswds/img/usa-icons/check_circle_outline.svg";
 
 export default {
   title: "Components/Alert",
@@ -55,5 +56,14 @@ export const Error = {
     ...defaultContent,
     icon: errorIcon,
     variant: "error",
+  },
+};
+
+export const Success = {
+  args: {
+    title: null,
+    text: "Thank you for the submission!",
+    icon: successIcon,
+    variant: "success",
   },
 };

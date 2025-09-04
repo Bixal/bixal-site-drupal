@@ -191,6 +191,8 @@ Run all the validation commands that the pipelines run without needing to push r
 
 #### Copy storybook to Drupal theme
 
+Use this command to view changes from Storybook components.
+
 ```
 lando build_node
 ```
@@ -217,12 +219,6 @@ Alternatively:
 ```
 
 This should automatically open it in your browser.
-
-### Copy Storybook to Drupal Theme
-
-```
-lando build_node
-```
 
 ## SEO
 
