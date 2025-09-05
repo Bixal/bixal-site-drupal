@@ -12,6 +12,7 @@ legend > span,
 label,
 .usa-label {
   @include u-text("primary-dark");
+
   font-weight: font-weight("bold");
 }
 

@@ -6,7 +6,9 @@ details {
 
   > summary {
     @include u-bg("info-light");
+
     cursor: pointer;
+
     @include u-padding(2);
   }
 
@@ -16,7 +18,9 @@ details {
 
   > div {
     @include u-border(2px, "solid", "info-light");
+
     margin-top: 0;
+
     @include u-padding-x(3);
     @include u-padding-y(5);
   }

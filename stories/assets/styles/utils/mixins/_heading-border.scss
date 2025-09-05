@@ -29,6 +29,7 @@
     content: "";
     display: block;
     margin-top: units($margin-top);
+
     // Using clamp to avoid width override hacks.
     // Minimum width, ideal, and maximum allowed.
     width: clamp(px-to-rem(80px), px-to-rem(180px), 40%);

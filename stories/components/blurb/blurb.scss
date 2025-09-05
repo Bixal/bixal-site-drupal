@@ -48,6 +48,7 @@
   & > :first-child {
     @include at-media("tablet") {
       grid-column: 1 / -1;
+
       // If featured, it is stacked, no need for height.
       .bix-blurb__media img:is(:first-child) {
         height: auto;

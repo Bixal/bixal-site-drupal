@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 
 .bix-social-nav {
-  --_icon-color: var(--icon-color), currentColor;
+  --_icon-color: var(--icon-color), currentcolor;
 
   margin-top: units(3);
 
@@ -21,7 +21,7 @@
   }
 
   svg {
-    fill: currentColor;
+    fill: currentcolor;
     height: units(4);
     width: units(4);
   }

@@ -2,6 +2,7 @@
 
 .usa-collection__meta-item.usa-tag:not(.usa-tag--new) {
   color: color("white");
+
   @include u-bg("base-dark");
 }
 
