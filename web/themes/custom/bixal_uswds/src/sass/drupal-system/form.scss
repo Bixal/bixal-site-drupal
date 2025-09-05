@@ -3,7 +3,7 @@
 
 .usa-form {
   @include at-media("mobile-lg") {
-    @include u-maxw('tablet')
+    @include u-maxw("tablet");
   }
 }
 
@@ -11,12 +11,12 @@ legend,
 legend > span,
 label,
 .usa-label {
-  @include u-text('primary-dark');
+  @include u-text("primary-dark");
   font-weight: font-weight("bold");
 }
 
 .usa-fieldset {
-  @include u-margin-top('105');
+  @include u-margin-top("105");
 }
 
 .fieldset__description,

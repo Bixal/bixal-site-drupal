@@ -44,7 +44,6 @@
 }
 
 .bix-blurbs--featured {
-
   // First child span entire row, ex: Case Studies landing page.
   & > :first-child {
     @include at-media("tablet") {

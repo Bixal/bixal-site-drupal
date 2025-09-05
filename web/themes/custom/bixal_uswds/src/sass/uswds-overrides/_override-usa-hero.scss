@@ -6,12 +6,12 @@
   @include mixins.full-width();
 
   @include at-media("desktop-lg") {
-    min-height: units('mobile-lg');
+    min-height: units("mobile-lg");
   }
 }
 
 .usa-hero__heading {
-  @include u-font-family('ui');
+  @include u-font-family("ui");
   font-size: size("ui", 12);
-  @include u-text('accent-warm-light');
+  @include u-text("accent-warm-light");
 }

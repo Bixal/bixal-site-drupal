@@ -5,12 +5,12 @@ details {
   @include u-margin-bottom(4);
 
   > summary {
-    @include u-bg('info-light');
+    @include u-bg("info-light");
     cursor: pointer;
     @include u-padding(2);
   }
 
- > summary > * {
+  > summary > * {
     display: inline;
   }
 

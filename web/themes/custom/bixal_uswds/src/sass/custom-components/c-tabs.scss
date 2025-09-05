@@ -19,8 +19,8 @@
 .c-tabs__button {
   border-radius: 0;
   margin: 0;
-  @include u-text('primary');
-  @include u-bg('white');
+  @include u-text("primary");
+  @include u-bg("white");
   position: relative;
   cursor: pointer;
   border: 0;
@@ -35,8 +35,8 @@
 
   &:hover,
   &.active {
-    @include u-text('white');
-    @include u-bg('primary');
+    @include u-text("white");
+    @include u-bg("primary");
   }
 
   &:focus {

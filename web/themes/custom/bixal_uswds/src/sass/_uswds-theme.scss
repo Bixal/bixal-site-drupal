@@ -224,8 +224,7 @@ Or a USWDS mixin...
   //$margin-horizontal-manual-values: ('flag': 150px),
   //$width-manual-values: ('flag': 150px),
   // Turn on or off breakpoints
-  $theme-utility-breakpoints:
-    (
+  $theme-utility-breakpoints: (
       "card": false,
       // 160px
       "card-lg": false,
