@@ -12,8 +12,8 @@
 @import "https://use.typekit.net/gta8onn.css";
 
 // @TODO: Move to color partial
-$c-blue--dark: #162d6a;
-$c-blue--light: #bee9f7;
+$c-blue-dark: #162d6a;
+$c-blue-light: #bee9f7;
 $c-teal: #05c5bc;
 $c-purple: #7d0096;
 $c-green: #deec1c;
@@ -27,9 +27,9 @@ $font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
 
 :root {
   // Theme colors
-  --c-primary: #{$c-blue--dark};
+  --c-primary: #{$c-blue-dark};
   --c-primary-alt: #{$c-purple};
-  --c-accent-cool: #{$c-blue--light};
+  --c-accent-cool: #{$c-blue-light};
   --c-accent-cool-alt: #{$c-teal};
   --c-accent-warm: #{$c-orange};
   --c-accent-warm-alt: #{$c-red-orange};
