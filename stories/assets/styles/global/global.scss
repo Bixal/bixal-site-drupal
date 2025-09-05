@@ -18,9 +18,7 @@ $font-ui: "proxima-nova", "Proxima Nova", arial, helvetica, sans-serif;
 $font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
 
 :root {
-  //
   // Theme colors
-  //
   --c-primary: #{$c-blue--dark};
   --c-primary-alt: #{$c-purple};
   --c-accent-cool: #{$c-blue--light};
@@ -38,7 +36,6 @@ $font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
   --c-base-darkest: #{color("gray-80")};
 
   // State colors
-  //
   --c-info: var(--c-accent-cool);
 
   // Used this color tool to find the closest USWDS token:
@@ -58,28 +55,21 @@ $font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
   // Success
   --c-success: #{color("green-cool-40v")};
 
-  //
   // Fonts
-  //
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 
-  //
   // Media
-  //
   --media-spacing: #{units(3)};
 
   // The left and right spacing. Use margin-inline to set.
-  //
   // @example:
   // img {
   //   margin-inline: var(--media-spacing-x);
   // }
   --media-spacing-x: var(--media-spacing);
 
-  //
   // The top and bottom spacing. Use margin-block to set.
-  //
   // @example:
   // img {
   //   margin-block: var(--media-spacing-y);
