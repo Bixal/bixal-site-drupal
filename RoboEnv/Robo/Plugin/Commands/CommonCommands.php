@@ -5,6 +5,7 @@ namespace RoboEnv\Robo\Plugin\Commands;
 use Robo\Result;
 use Robo\Tasks;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Finder\Finder;
 
 /**
  * Run common orchestration tasks and provides shared helper methods.
@@ -153,6 +154,55 @@ class CommonCommands extends Tasks
     }
 
     /**
+     * Run an inline script inside the local environment.
+     *
+     * @param string $script
+     *
+     * @return bool
+     *
+     * @throws \Exception
+     */
+    public function commonRunScriptInApp(SymfonyStyle $io, string $script): bool {
+        return $this->_exec($this->getBinaryLocation($io, 'exec', '', false) . " '" . $script . "'")->wasSuccessful();
+    }
+
+    /**
+     * Install Drupal.
+     *
+     * @command common:site-install
+     * @aliases si
+     *
+     * @return void
+     */
+    public function commonSiteInstall(SymfonyStyle $io): void {
+        $this->commonRunScriptInApp($io, 'env DRUPAL_UPDATE_OR_INSTALL=install ./orch/deploy_install.sh; env DRUPAL_SOLR_SITE_HASH=abcdef ./orch/post_deploy.sh; drush uli;');
+    }
+
+    /**
+     * Update Drupal.
+     *
+     * @command common:site-update
+     * @aliases su
+     *
+     * @return void
+     */
+    public function commonSiteUpdate(SymfonyStyle $io): void {
+        $this->commonRunScriptInApp($io, 'env DRUPAL_UPDATE_OR_INSTALL=install ./orch/deploy_update.sh; env DRUPAL_SOLR_SITE_HASH=abcdef ./orch/post_deploy.sh; drush uli;');
+    }
+
+    /**
+     * Remove any extra added to bottom of settings.php.
+     *
+     * @command common:remove-settings-php-changes
+     *
+     * @return void
+     */
+    public function ddevRemoveSettingsPhpChanges(SymfonyStyle $io): void
+    {
+        $this->removeSettingsPhpChanges($io);
+    }
+
+    /**
      * Initialize the Drupal Environment.
      *
      * @command common-admin:init
@@ -224,9 +274,16 @@ class CommonCommands extends Tasks
             'lando' => [
                 'name' => 'Lando',
                 'installed' => $this->isDependencyInstalled('mattsqd/drupal-env-lando') ? 'Yes, installed' : 'Not installed',
-                'description' => 'https://lando.dev/ Push-button development environments hosted on your computer or in the cloud. Automate your developer workflow and share it with your team.',
+                'description' => "https://lando.dev/ Push-button development environments hosted on your computer or in the cloud. Automate your developer workflow and share it with your team.",
                 'package' => 'mattsqd/drupal-env-lando:dev-main',
                 'post_install_commands' => ['./robo.sh drupal-env-lando:scaffold', './robo.sh lando-admin:init'],
+            ],
+            'ddev' => [
+                'name' => 'DDEV',
+                'installed' => $this->isDependencyInstalled('mattsqd/drupal-env-ddev') ? 'Yes, installed' : 'Not installed',
+                'description' => 'https://ddev.com/ Docker-based PHP development environments. Container superpowers with zero required Docker skills: environments in minutes, multiple concurrent projects, and less time to deployment.',
+                'package' => 'mattsqd/drupal-env-ddev:dev-main',
+                'post_install_commands' => ['./robo.sh drupal-env-ddev:scaffold', './robo.sh ddev-admin:init'],
             ],
         ];
         $rows = [];
@@ -239,7 +296,12 @@ class CommonCommands extends Tasks
                 $options['description'],
             ];
         }
-        $io->table(['Name', 'Installed', 'Package', 'Post Install Commands', 'Description'], $rows);
+        $table = $io->createTable();
+        $table->setHeaders(['Name', 'Installed', 'Package', 'Post Install Commands', 'Description']);
+        $table->setRows($rows);
+        $table->setColumnMaxWidth(3, 10);
+        $table->setColumnMaxWidth(4, 25);
+        $table->render();
         $not_installed = array_filter($locals, static function (string $key) use ($locals) {
             return $locals[$key]['installed'] === 'Not installed';
         }, ARRAY_FILTER_USE_KEY);
@@ -397,6 +459,138 @@ class CommonCommands extends Tasks
                 $node_edit_choice = $io->confirm('Would you like to use the admin theme for node edit pages? Note that if one does not have the permission to view the admin theme, they will see the default theme.');
                 $this->drush($io, ['config-set', 'node.settings', 'use_admin_theme', (int) $node_edit_choice, '-y']);
             }
+        }
+    }
+
+    /**
+     * Dump aliases that allow easy access to shortcuts.
+     *
+     * @description Use shortcuts like `composer` instead of `./composer.sh`.
+     *
+     * @command common:shortcuts-aliases
+     *
+     * @return void
+     */
+    public function commonShortcutsAliases(SymfonyStyle $io): void
+    {
+        $finder = Finder::create()
+            ->files()
+            ->name('*.sh')
+            ->in(getcwd())
+            ->depth('== 0');
+
+        if ($finder->hasResults()) {
+            $shortcuts = [];
+            foreach ($finder as $file) {
+                $noExtension = substr($file->getRelativePathname(), 0, -3);
+                $shortcuts[] = sprintf(
+                    "alias %s='drupalenv_command %s'",
+                    $noExtension,
+                    $noExtension
+                );
+            }
+            $command = <<<'COMMAND'
+# Aliases added for drupal-env to allow easy access to shell scripts.
+drupalenv_command() {
+  local tool="$1"
+  shift
+  if [[ -x "./${tool}.sh" ]]; then
+    "./${tool}.sh" "$@"
+  else
+    command "$tool" "$@"
+  fi
+}
+COMMAND;
+
+            $io->warning(
+                'These will work for all projects, only add them once.'
+            );
+            $io->warning(
+                'This function is very simple. It looks for the corresponding .sh file in the current directory and calls it if found. If not, it will call the "global" version of the command.'
+            );
+            $io->block($command);
+            $io->block($shortcuts);
+            $io->block('# End aliases for drupal-env.');
+        } else {
+            $io->error(
+                'No .sh files found in the root directory, there are no aliases that can be made.'
+            );
+
+            return;
+        }
+        if (!$io->confirm(
+            'Would you like help adding these aliases to your shell?'
+        )) {
+            return;
+        }
+        $finder = Finder::create()
+            ->files()
+            ->in(getenv('HOME'))
+            ->ignoreDotFiles(false)
+            ->contains('alias ')
+            ->depth('== 0');
+
+        if ($finder->hasResults()) {
+            $aliasesFiles = [];
+            foreach ($finder as $file) {
+                $aliasesFiles[] = $file->getRealPath();
+            }
+            $io->info(
+                'Read more about aliases here https://en.wikipedia.org/wiki/Alias_(command)'
+            );
+            $io->info(
+                "The following files contain aliases already.\nAdd the above block of code to one of these files.\nAfter you edit the file, you may need to reload your shell or 'source' the file."
+            );
+            $io->block($aliasesFiles);
+        } else {
+            $io->warning(
+                'Unable to find any files that contain any aliases in your home directory. Please open a new terminal and type echo $SHELL.'
+            );
+        }
+    }
+
+    /**
+     * Prompt to switch your local environment.
+     *
+     * @description Switch between DDEV, Lando, etc.
+     *
+     * @command common:switch-local-env
+     *
+     * @return void
+     */
+    public function switchLocalEnvironment(SymfonyStyle $io): void
+    {
+        if (!$this->isDefaultLocalEnvironmentSet()) {
+            throw new \Exception('No local environment is set yet.');
+        }
+
+        $current_env_name = $this->getDefaultLocalEnvironment()['name'];
+        $io->note("Your current local environment is $current_env_name");
+        $namespace = 'RoboEnv\Robo\Plugin\Commands';
+        $baseClass = 'RoboEnv\Robo\Plugin\Commands\CommonCommands';
+
+        $matching = [];
+
+        foreach (get_declared_classes() as $class) {
+            if (str_starts_with($class, $namespace) && is_subclass_of($class, $baseClass)) {
+                $matching[] = $class;
+            }
+        }
+        if (count($matching) === 1) {
+            throw new \Exception('Only one local environment is available. Please run ./robo.sh common-admin:init to install another.');
+        }
+        $options = [];
+        foreach ($matching as $new_env_class) {
+            $new_env_name = call_user_func_array([$new_env_class, 'getName'], []);
+            if ($new_env_name !== $current_env_name) {
+                $options[$new_env_name] = $new_env_name;
+            }
+        }
+        $options[''] = 'Cancel';
+        $io->warning('Switching local environments will destroy your database, export your database if it is important.');
+        $new_env_name = $io->choice('Which local environment would you like to switch to?', $options);
+        if (strlen($new_env_name)) {
+            $this->_exec("vendor/bin/robo $new_env_name:init");
         }
     }
 

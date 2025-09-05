@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 ./orch/show_file.sh $0
 
 # Normally, XDEBUG_MODE=debug,develop but develop breaks the Drupal installation.
@@ -8,9 +10,7 @@ if [ -n "$XDEBUG_MODE" ]; then
   export XDEBUG_MODE=debug
 fi
 
-drush cr
-
-set -e
+drush cache-rebuild || :
 
 # If using Postgres, enable the pg_trgm extension which is required before
 # Drupal is installed.
@@ -45,19 +45,19 @@ if [ -n "$(ls $(drush php:eval "echo realpath(Drupal\Core\Site\Settings::get('co
       PROFILE=$(drupal_profile)
   fi
   echo "Installing a fresh Drupal site from configuration"
-  drush si -y --account-pass='admin' --existing-config ${PROFILE}
+  drush site-install -y --account-pass='admin' --existing-config ${PROFILE}
   # Required if config splits is enabled.
   if drush pm-list --type=module --status=enabled --no-core | grep 'config_split'; then
-    drush cr
-    drush cim -y
+    drush cache-rebuild
+    drush config-import -y
   fi
 else
   echo "Installing a fresh Drupal site without configuration"
-  drush si -y --account-pass='admin' $(drupal_profile)
+  drush site-install -y --account-pass='admin' $(drupal_profile)
 fi
 
 # Clear cache after installation
-drush cr
+drush cache-rebuild
 
 # Set the homepage.
 drush set-hp -y
