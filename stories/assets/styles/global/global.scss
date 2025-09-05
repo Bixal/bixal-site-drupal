@@ -236,7 +236,7 @@ ol {
   }
 }
 
-li:with(:not(#toolbar-administration li)) {
+li:where(:not(#toolbar-administration li)) {
   margin-bottom: units(1);
 }
 
