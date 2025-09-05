@@ -175,7 +175,7 @@ h6 {
   margin-top: units(2);
 }
 
-.bix-title-prefix {
+%bix-title-prefix {
   border-left: 2px solid var(--c-accent-cool-alt);
   border-right: 2px solid var(--c-accent-cool-alt);
   display: inline-flex;
@@ -193,8 +193,12 @@ h6 {
   }
 }
 
+.bix-title-prefix {
+  @extend %bix-title-prefix;
+}
+
 .bix-title-prefix-label {
-  @extend .bix-title-prefix;
+  @extend %bix-title-prefix;
 
   border-left: none;
   border-right: none;
