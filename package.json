@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "format:styles": "prettier './**/*.scss' --check",
+    "format:styles:fix": "prettier './**/*.scss' --write",
     "lint:styles": "stylelint './**/*.scss'",
     "lint:styles:fix": "stylelint './**/*.scss' --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
