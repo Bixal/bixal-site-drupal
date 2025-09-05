@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "lint:styles": "stylelint './**/*.scss'",
     "gulp": "gulp watch",
     "dev": "gulp",
     "build": "gulp build"
@@ -29,6 +30,10 @@
     "gulp": "5.0.1",
     "gulp-sourcemaps": "3.0.0",
     "gulp-uglify": "3.0.2",
+    "prettier": "3.6.2",
+    "stylelint": "16.23.1",
+    "stylelint-config-standard-scss": "15.0.1",
+    "stylelint-prettier": "5.0.3",
     "uglify-es": "3.3.9"
   }
 }

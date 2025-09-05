@@ -1,0 +1,5 @@
+web/themes/custom/bixal_uswds/src/sass/storybook-sass/**
+web/libraries/**
+web/modules/contrib/**
+web/core/**
+node_modules/**
