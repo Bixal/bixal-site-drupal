@@ -12,7 +12,6 @@ on:
 
 jobs:
   format:
-    name: "Formatting"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -27,7 +26,6 @@ jobs:
       - name: Lint Styles
         run: npm run format:styles
   lint:
-    name: "Linting"
     needs:
       - format
     runs-on: ubuntu-latest
