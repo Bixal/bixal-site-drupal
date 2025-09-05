@@ -2,7 +2,13 @@ name: Frontend formatting & linting
 
 on:
   push:
+    paths:
+      - "stories/**"
+      - "web/themes/custom/bixal_uswds/src/**"
   pull_request:
+    paths:
+      - "stories/**"
+      - "web/themes/custom/bixal_uswds/src/**"
 
 jobs:
   format:
