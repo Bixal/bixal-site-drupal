@@ -35,10 +35,6 @@
   @include at-media("desktop") {
     display: none;
   }
-
-  &--open .bix-toggle-icon__line {
-    transform: translateZ(0) rotate(-45deg);
-  }
 }
 
 .bix-toggle-icon {
@@ -63,16 +59,18 @@
 
   &__line:first-child {
     transform: translate3d(0, -3px, 0) rotate(0);
-
-    .is-active & {
-      transform: rotate(-45deg);
-    }
   }
 
   &__line:last-child {
     transform: translate3d(0, 3px, 0);
+  }
 
-    .is-active & {
+  .is-active &__line {
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+
+    &:last-child {
       transform: rotate(45deg);
     }
   }
