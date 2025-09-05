@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 
 /// Heading Border Mixin
-//
+// ==========================================================================
 /// A mixin that adds a fluid bottom border to headings. See `global.scss` for available color variables
 ///
 /// @param {String} $border-color [accent-cool-alt] - The border color set from global color variables. Defaults to `accent-cool-alt`.

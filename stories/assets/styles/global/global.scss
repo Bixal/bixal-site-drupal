@@ -461,7 +461,7 @@ $project-active-uswds-breakpoints: ();
 // If it's enabled, we'll add it to the list.
 @each $breakpoint, $size in $theme-utility-breakpoints-complete {
   @if $size {
-    $project-active-uswds-breakpoints: append(
+    $project-active-uswds-breakpoints: list.append(
       $project-active-uswds-breakpoints,
       $breakpoint
     );
