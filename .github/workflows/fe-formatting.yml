@@ -12,7 +12,7 @@ on:
 
 jobs:
   format:
-    name: "Frontend formatting"
+    name: "Formatting"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
       - name: Lint Styles
         run: npm run format:styles
   lint:
-    name: "Frontend linting"
+    name: "Linting"
     needs:
       - format
     runs-on: ubuntu-latest
