@@ -3,6 +3,14 @@
 @use "uswds-core" as *;
 @use "../utils/mixins/heading-border" as *;
 
+// Modern normalize - CSS Reset.
+@import "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css";
+
+// Typefaces:
+// Proxima Nova (400, 600, 700)
+// Novel pro (700 & 800)
+@import "https://use.typekit.net/gta8onn.css";
+
 // @TODO: Move to color partial
 $c-blue--dark: #162d6a;
 $c-blue--light: #bee9f7;
@@ -77,16 +85,7 @@ $font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
   --media-spacing-y: var(--media-spacing);
 }
 
-// Modern normalize - CSS Reset.
-@import "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css";
-
-// Typefaces:
-// Proxima Nova (400, 600, 700)
-// Novel pro (700 & 800)
-@import "https://use.typekit.net/gta8onn.css";
-
 // View transitions
-//
 // Adds a nice transition to the page when navigating the website.
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
