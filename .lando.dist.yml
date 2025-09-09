@@ -16,6 +16,7 @@ config:
 
 services:
   appserver:
+    primary: true,
     build:
       - "env COMPOSER_DEV=1 ./orch/build.sh"
     overrides:
