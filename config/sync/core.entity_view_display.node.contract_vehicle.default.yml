@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.contract_vehicle.field_information
     - field.field.node.contract_vehicle.field_key_points_of_contact
     - field.field.node.contract_vehicle.field_link_to_content
+    - field.field.node.contract_vehicle.field_metatags
     - node.type.contract_vehicle
   module:
     - entity_reference_revisions
     - link
+    - metatag
     - text
     - user
 id: node.contract_vehicle.default
@@ -61,6 +63,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_banner_image: true
