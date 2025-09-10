@@ -1,0 +1,22 @@
+name: "Publish Storybook"
+
+on:
+  push:
+    paths:
+      - "stories/**"
+
+jobs:
+  publish-sb:
+    name: "Publish storybook"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
