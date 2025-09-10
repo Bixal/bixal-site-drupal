@@ -58,3 +58,23 @@ Component library for the Bixal website.
 
   </div>
 </div>
+
+### Styling components
+
+Guidance for styling components.
+
+#### Using USWDS Mixins
+
+Avoid using USWDS mixins (e.g., `@include u-padding(3)`) directly in component styles. Instead, use design tokens, CSS custom properties, or theme utility classes provided in the project.
+
+**Why?**
+
+Using tokens and theme variables ensures consistent design, easier maintenance, and better compatibility with our Drupal theme.
+
+**How to style components:**
+
+- Use CSS custom properties (e.g., `var(--c-primary)`)
+- Use theme variables (see [`global.scss`](stories/assets/styles/global/global.scss))
+- Use project utility classes
+
+For questions, create an issue labeled "question" in GitHub.
