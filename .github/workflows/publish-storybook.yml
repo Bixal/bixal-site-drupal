@@ -1,9 +1,6 @@
 name: "Publish Storybook"
 
-on:
-  push:
-    paths:
-      - "stories/**"
+on: push
 
 jobs:
   publish-sb:
@@ -22,3 +19,4 @@ jobs:
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
