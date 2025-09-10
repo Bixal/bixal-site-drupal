@@ -5,6 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "format:styles": "prettier './**/*.scss' --check",
+    "format:styles:fix": "prettier './**/*.scss' --write",
+    "lint:styles": "stylelint './**/*.scss'",
+    "lint:styles:fix": "stylelint './**/*.scss' --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run storybook",
     "storybook": "storybook dev -p 80",
@@ -34,9 +38,11 @@
     "@storybook/icons": "1.4.0",
     "@storybook/test": "8.6.14",
     "@uswds/uswds": "3.13.0",
+    "prettier": "3.6.2",
     "sass": "1.89.2",
     "storybook": "8.6.14",
     "stylelint": "16.20.0",
+    "stylelint-config-standard-scss": "15.0.1",
     "stylelint-prettier": "5.0.3",
     "vite-plugin-twig-drupal": "1.6.0"
   }

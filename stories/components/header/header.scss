@@ -2,7 +2,7 @@
 
 .bix-site-header {
   background-color: color("white");
-  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px -4px rgb(0 0 0 / 10%);
   padding-top: units(3);
   padding-bottom: units(3);
   position: sticky;
@@ -35,10 +35,6 @@
   @include at-media("desktop") {
     display: none;
   }
-
-  &--open .bix-toggle-icon__line {
-    transform: translateZ(0) rotate(-45deg);
-  }
 }
 
 .bix-toggle-icon {
@@ -63,16 +59,18 @@
 
   &__line:first-child {
     transform: translate3d(0, -3px, 0) rotate(0);
-
-    .is-active & {
-      transform: rotate(-45deg);
-    }
   }
 
   &__line:last-child {
     transform: translate3d(0, 3px, 0);
+  }
 
-    .is-active & {
+  .is-active &__line {
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+
+    &:last-child {
       transform: rotate(45deg);
     }
   }
@@ -105,6 +103,7 @@
     color: color("white");
     max-height: calc(100vh - 88px); // 88px offset the header
     overflow-y: auto;
+
     // Limits scrolling to active nav to avoid accidentally scrolling content.
     overscroll-behavior-y: contain;
     position: absolute;
@@ -126,6 +125,7 @@
       flex-flow: row nowrap;
       font-size: px-to-rem(14px);
     }
+
     @media (min-width: 1300px) {
       column-gap: units(8);
     }
@@ -135,7 +135,7 @@
     margin-bottom: 0 !important;
 
     @include at-media-max("desktop") {
-      border-top: 1px solid rgba(white, 0.2);
+      border-top: 1px solid rgb(white, 0.2);
       padding: units(2) 7vw;
     }
   }

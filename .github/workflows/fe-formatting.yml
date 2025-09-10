@@ -1,0 +1,43 @@
+name: Frontend formatting & linting
+
+on:
+  push:
+    paths:
+      - "stories/**"
+      - "web/themes/custom/bixal_uswds/src/**"
+  pull_request:
+    paths:
+      - "stories/**"
+      - "web/themes/custom/bixal_uswds/src/**"
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - name: Install node dependencies
+        run: npm ci --timing
+      - name: Lint Styles
+        run: npm run format:styles
+  lint:
+    needs:
+      - format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - name: Install node dependencies
+        run: npm ci --timing
+      - name: Lint Styles
+        run: npm run lint:styles

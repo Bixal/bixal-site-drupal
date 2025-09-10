@@ -4,7 +4,7 @@
   align-items: first baseline;
   background-color: transparent;
   border-radius: units(1);
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   color: color("ink");
   column-gap: units(1);
   cursor: pointer;
@@ -22,7 +22,7 @@
   }
 
   svg {
-    fill: currentColor;
+    fill: currentcolor;
   }
 }
 
