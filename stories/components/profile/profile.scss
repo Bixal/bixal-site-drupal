@@ -38,6 +38,7 @@
   // Heading with orange border.
   &__heading--secondary {
     @include heading-border("accent-warm");
+
     font-size: px-to-rem(25px);
     letter-spacing: -0.35px;
     margin-top: 0;
@@ -70,7 +71,7 @@
     font-size: size("ui", "lg");
     line-height: 1;
 
-    &:after {
+    &::after {
       content: "";
       display: block;
       border-bottom: 2px solid var(--c-accent-warm);

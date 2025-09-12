@@ -9,7 +9,7 @@
   background-color: var(--_alert-color);
 
   &__icon svg {
-    fill: currentColor;
+    fill: currentcolor;
   }
 
   &__body {
@@ -27,5 +27,6 @@
 
 .bix-site-alert--urgent {
   --alert-color: var(--c-urgent);
+
   color: color("white");
 }

@@ -7,7 +7,6 @@ figure {
 }
 
 .is-wysiwyg {
-
   img {
     line-height: units(0);
     width: 100%;
@@ -22,6 +21,7 @@ figure {
   .align-left {
     @include at-media("tablet-lg") {
       @include u-margin-right(3);
+
       width: 50%;
     }
 
@@ -33,6 +33,7 @@ figure {
   .align-right {
     @include at-media("tablet-lg") {
       @include u-margin-left(3);
+
       width: 50%;
     }
 

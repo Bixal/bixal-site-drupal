@@ -1,12 +1,19 @@
 @use "sass:map";
 @use "sass:list";
-
 @use "uswds-core" as *;
 @use "../utils/mixins/heading-border" as *;
 
+// Modern normalize - CSS Reset.
+@import "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css";
+
+// Typefaces:
+// Proxima Nova (400, 600, 700)
+// Novel pro (700 & 800)
+@import "https://use.typekit.net/gta8onn.css";
+
 // @TODO: Move to color partial
-$c-blue--dark: #162d6a;
-$c-blue--light: #bee9f7;
+$c-blue-dark: #162d6a;
+$c-blue-light: #bee9f7;
 $c-teal: #05c5bc;
 $c-purple: #7d0096;
 $c-green: #deec1c;
@@ -15,26 +22,19 @@ $c-orange: #fda307;
 $c-yellow: color("yellow-20v");
 $c-red-orange: #e02f00;
 $c-gray: color("gray-4");
-
-$font-ui: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
-$font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
+$font-ui: "proxima-nova", "Proxima Nova", arial, helvetica, sans-serif;
+$font-heading: "novel-pro", georgia, times, "Times New Roman", serif;
 
 :root {
-  //
   // Theme colors
-  //
-  --c-primary: #{$c-blue--dark};
+  --c-primary: #{$c-blue-dark};
   --c-primary-alt: #{$c-purple};
-
-  --c-accent-cool: #{$c-blue--light};
+  --c-accent-cool: #{$c-blue-light};
   --c-accent-cool-alt: #{$c-teal};
-
   --c-accent-warm: #{$c-orange};
   --c-accent-warm-alt: #{$c-red-orange};
   --c-accent-warm-dark: #{$c-maroon};
-
   --c-accent-vivid: #{$c-green};
-
   --c-base: #{$c-gray};
   --c-base-light: #{color("gray-3")};
   --c-base-lighter: #{color("gray-2")};
@@ -42,9 +42,10 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --c-base-dark: #{color("gray-10")};
   --c-base-darker: #{color("gray-30")};
   --c-base-darkest: #{color("gray-80")};
+
   // State colors
-  //
   --c-info: var(--c-accent-cool);
+
   // Used this color tool to find the closest USWDS token:
   // https://civicactions.github.io/uswds-color-tool/
   --c-info-dark: #{color("blue-cool-20v")};
@@ -62,27 +63,21 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   // Success
   --c-success: #{color("green-cool-40v")};
 
-  //
   // Fonts
-  //
   --font-heading: #{$font-heading};
   --font-ui: #{$font-ui};
 
-  //
   // Media
-  //
   --media-spacing: #{units(3)};
 
   // The left and right spacing. Use margin-inline to set.
-  //
   // @example:
   // img {
   //   margin-inline: var(--media-spacing-x);
   // }
   --media-spacing-x: var(--media-spacing);
-  //
+
   // The top and bottom spacing. Use margin-block to set.
-  //
   // @example:
   // img {
   //   margin-block: var(--media-spacing-y);
@@ -90,16 +85,7 @@ $font-heading: "novel-pro", Georgia, Times, "Times New Roman", serif;
   --media-spacing-y: var(--media-spacing);
 }
 
-// Modern normalize - CSS Reset.
-@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css");
-
-// Typefaces:
-// Proxima Nova (400, 600, 700)
-// Novel pro (700 & 800)
-@import url("https://use.typekit.net/gta8onn.css");
-
 // View transitions
-//
 // Adds a nice transition to the page when navigating the website.
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
@@ -142,6 +128,7 @@ h1 {
 
 h2 {
   @include heading-border;
+
   font-size: px-to-rem(28px);
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -188,7 +175,7 @@ h6 {
   margin-top: units(2);
 }
 
-.bix-title-prefix {
+%bix-title-prefix {
   border-left: 2px solid var(--c-accent-cool-alt);
   border-right: 2px solid var(--c-accent-cool-alt);
   display: inline-flex;
@@ -200,16 +187,22 @@ h6 {
   margin: 14px 0;
   padding: 0 10px;
   text-transform: uppercase;
+
   h1 {
     all: unset;
   }
 }
 
+.bix-title-prefix {
+  @extend %bix-title-prefix;
+}
+
 .bix-title-prefix-label {
-  @extend .bix-title-prefix;
+  @extend %bix-title-prefix;
+
   border-left: none;
   border-right: none;
-  padding: 0px;
+  padding: 0;
 }
 
 dl {
@@ -247,7 +240,7 @@ ol {
   }
 }
 
-li:with(:not(#toolbar-administration li)) {
+li:where(:not(#toolbar-administration li)) {
   margin-bottom: units(1);
 }
 
@@ -413,7 +406,7 @@ label {
 
 .bix-input {
   accent-color: var(--c-primary);
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   border-radius: 3px;
   font-size: px-to-rem(16px);
   margin-block-end: units(1);
@@ -468,12 +461,13 @@ $project-active-uswds-breakpoints: ();
 // If it's enabled, we'll add it to the list.
 @each $breakpoint, $size in $theme-utility-breakpoints-complete {
   @if $size {
-    $project-active-uswds-breakpoints: append(
+    $project-active-uswds-breakpoints: list.append(
       $project-active-uswds-breakpoints,
       $breakpoint
     );
   }
 }
+
 // @debug $project-active-uswds-breakpoints;
 // @return "mobile-lg" "tablet" "desktop"
 
