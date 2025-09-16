@@ -11,6 +11,8 @@
     "format:styles:fix": "prettier './**/*.scss' --write",
     "lint:styles": "stylelint './**/*.scss'",
     "lint:styles:fix": "stylelint './**/*.scss' --fix",
+    "lint:js": "eslint",
+    "lint:js:fix": "eslint --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run storybook",
     "storybook": "storybook dev -p 80",
