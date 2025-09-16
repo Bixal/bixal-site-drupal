@@ -5,7 +5,8 @@ import DescriptionList from "../description-list/description-list.html.twig";
 const graphicListContent = {
   items: [
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-08/RGB_bixal_B_people.png",
+      image_src:
+        "https://www.bixal.com/sites/default/files/2024-08/RGB_bixal_B_people.png",
       heading_type: "h3",
       title: "People: Designing the Human Experience (HX)",
       body: `
@@ -20,7 +21,8 @@ const graphicListContent = {
       })}`,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_content.png",
+      image_src:
+        "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_content.png",
       title:
         "Content: Creating User-Centric Content Strategies to Drive Effective Communications and Engagement",
       body: `
@@ -36,7 +38,8 @@ const graphicListContent = {
       })}`,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_technology.png",
+      image_src:
+        "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_technology.png",
       title: "Technology: Developing Scalable and Secure Technology Solutions",
       body: `
       ${DescriptionList({
@@ -51,7 +54,8 @@ const graphicListContent = {
       })}`,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_data.png",
+      image_src:
+        "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_data.png",
       title:
         "Data: Advancing Data Analytics and Evaluation for Decision-Making",
       body: `
@@ -68,7 +72,8 @@ const graphicListContent = {
       })}`,
     },
     {
-      image_src: "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_processes.png",
+      image_src:
+        "https://www.bixal.com/sites/default/files/2024-09/RGB_bixal_B_processes.png",
       title: `Processes: Accelerating Organizational Transformation and Learning`,
       body: `
       ${DescriptionList({

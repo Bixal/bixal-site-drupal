@@ -16,7 +16,7 @@ const config = {
   },
   docs: {},
   staticDirs: ["../stories/assets", "../node_modules/@uswds/uswds/dist"],
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     // This allows starting this in a sub dir:
     // BASE_PATH=/sb npm run build-storybook
     config.base = process.env.BASE_PATH || config.base;

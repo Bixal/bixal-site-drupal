@@ -9,7 +9,7 @@ export default {
   title: "Components/Social nav",
   tags: ["autodocs"],
   component: SocialNav,
-  args: SocialNavContent
+  args: SocialNavContent,
 };
 
 export const Default = {};
