@@ -1,9 +1,11 @@
+import A11yTabs from "a11y-tabs";
+
 /**
  * a11y Tabs JS functions.
  * @file
  */
 // Always use "use strict";
-"use strict";
+("use strict");
 
 (function (Drupal, drupalSettings, once) {
   Drupal.behaviors.uswdsA11YTabsInit = {

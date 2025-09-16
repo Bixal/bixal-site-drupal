@@ -3,9 +3,8 @@ import "../../components/video/video.scss";
 
 export default {
   title: "Pages/Test/Media",
-  tags: ["autodocs"],
-  component: Images,
   tags: ["!autodocs"],
+  component: Images,
 };
 
 export const Default = {};
