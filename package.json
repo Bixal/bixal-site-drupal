@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "format:js": "prettier './**/*.js' --check",
+    "format:js:fix": "prettier './**/*.js' --write",
     "format:styles": "prettier './**/*.scss' --check",
     "format:styles:fix": "prettier './**/*.scss' --write",
     "lint:styles": "stylelint './**/*.scss'",
