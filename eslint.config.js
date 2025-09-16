@@ -1,15 +1,15 @@
 import { defineConfig } from "eslint/config";
-import eslintRecommended from "@eslint/js"; // Provides js.configs.recommended for flat config
-import globals from "globals"; // Standard globals sets
-import eslintConfigPrettier from "eslint-config-prettier"; // Disables stylistic rules conflicting with Prettier
+import eslintRecommended from "@eslint/js"; // Recommended base JS config.
+import globals from "globals"; // Standard globals sets, like browser and node globals.
+import eslintConfigPrettier from "eslint-config-prettier"; // Disables rules that conflict with Prettier.
 
 export default defineConfig([
   // Global ignore patterns.
   {
     ignores: [
-      "orch/**", // orchestration / scripts
-      "web/core/**", // Drupal core (do not lint vendor code)
-      "web/libraries/**", // Third-party front-end libs
+      "orch/**", // orchestration scripts
+      "web/core/**", // Drupal core
+      "web/libraries/**", // Third-party FE libs
       "**/modules/contrib/**", // Contrib modules anywhere
       "**/themes/contrib/**", // Contrib themes
       "**/dist/**", // Build outputs
