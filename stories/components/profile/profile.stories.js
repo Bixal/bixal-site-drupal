@@ -10,8 +10,8 @@ export default {
   component: Profile,
   args: {
     socialNav: SocialNav.default,
-    ...ProfileContent
-  }
+    ...ProfileContent,
+  },
 };
 
 export const Default = {};

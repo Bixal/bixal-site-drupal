@@ -23,29 +23,35 @@
 
       // This function replaces email protected innerhtml with the decoded email.
       function cfDecodeEmails() {
-        const emailtags = document.querySelectorAll('.__cf_email__')
+        const emailtags = document.querySelectorAll(".__cf_email__");
         emailtags.forEach((item) => {
-          const encodedString = item.dataset.cfemail
-          let email = "", r = parseInt(encodedString.substr(0, 2), 16), n, i;
+          const encodedString = item.dataset.cfemail;
+          let email = "",
+            r = parseInt(encodedString.substr(0, 2), 16),
+            n,
+            i;
           for (n = 2; encodedString.length - n; n += 2) {
             i = parseInt(encodedString.substr(n, 2), 16) ^ r;
             email += String.fromCharCode(i);
-            item.innerHTML = email
+            item.innerHTML = email;
           }
           let parent = item.parentElement;
 
           // Change the mailto to the email as well.
-          if (parent.tagName.toLowerCase() === 'a' && parent.href.includes('/cdn-cgi/l/email-protection')) {
-            parent.href = 'mailto: ' + email;
+          if (
+            parent.tagName.toLowerCase() === "a" &&
+            parent.href.includes("/cdn-cgi/l/email-protection")
+          ) {
+            parent.href = "mailto: " + email;
           }
-        })
+        });
       }
       cfDecodeEmails();
 
       // Remove <p>&nbsp;</p> function.
       function nbspCleaner(el) {
-        if (el.innerHTML === '&nbsp;' || el.innerHTML === '') {
-          el.parentNode.removeChild(el)
+        if (el.innerHTML === "&nbsp;" || el.innerHTML === "") {
+          el.parentNode.removeChild(el);
         }
       }
 
@@ -57,15 +63,15 @@
       // -------------------------------
 
       // Remove p tags that have a &nbsp, invoke nbspCleaner.
-      const elements = document.querySelectorAll('.node__content p');
-      elements.forEach(nbspCleaner)
+      const elements = document.querySelectorAll(".node__content p");
+      elements.forEach(nbspCleaner);
 
       // -------------------------------
 
       // Loop the main menu to find the is-active class and then add the USWDS3 class to it.
       const active_menu_items = once(
         "active-menu-item",
-        context.querySelectorAll(".usa-nav__menu-link")
+        context.querySelectorAll(".usa-nav__menu-link"),
       );
       const active_menu_item = [...active_menu_items];
       active_menu_item.forEach((item) => {
@@ -79,13 +85,11 @@
       // Inverse link
       const inverseLinkItems = once(
         "inverse-link",
-        context.querySelectorAll([
-          '.usa-summary-box a',
-        ])
+        context.querySelectorAll([".usa-summary-box a"]),
       );
       const inverseLinkItem = [...inverseLinkItems];
       inverseLinkItem.forEach((item) => {
-        item.classList.add('usa-summary-box__link');
+        item.classList.add("usa-summary-box__link");
       });
 
       // -------------------------------
@@ -96,14 +100,14 @@
       const body_link_items = once(
         "body-link",
         context.querySelectorAll([
-          '.usa-alert__body a',
-          '.node__content a',
-          '.node__meta a',
-        ])
+          ".usa-alert__body a",
+          ".node__content a",
+          ".node__meta a",
+        ]),
       );
       const body_link_item = [...body_link_items];
       body_link_item.forEach((item) => {
-        item.classList.add('usa-link');
+        item.classList.add("usa-link");
       });
 
       // -------------------------------
@@ -112,20 +116,19 @@
       // Select all the side navigation items on a given page.
       const sideMenuItems = once(
         "usa-current-sidenav",
-        context.querySelectorAll(".usa-sidenav__item > a")
+        context.querySelectorAll(".usa-sidenav__item > a"),
       );
       // Spread the array.
       const sideMenuItem = [...sideMenuItems];
       // Loop through any sidemenu items.
       sideMenuItem.forEach((item) => {
-        const href = item.getAttribute('href');
+        const href = item.getAttribute("href");
         if (href === current_path) {
           item.classList.add("usa-current");
         }
       });
 
       // -------------------------------
-
     },
   };
 })(Drupal, drupalSettings, once);
