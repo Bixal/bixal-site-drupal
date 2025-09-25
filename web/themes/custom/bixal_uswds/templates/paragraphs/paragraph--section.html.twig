@@ -53,20 +53,6 @@
 
 {% set cta = [] %}
 
-
-{% set button_paragraph = content.field_button.0['#paragraph'] %}
-{% set link_field = button_paragraph.field_link %}
-{% set href = link_field|first.getUrl().toString() %}
-{% if href %}
-  {% set cta = cta|merge(
-    { 'href': href,
-      'label': link_field|first.getTitle(),
-      'icon': button_paragraph.field_icon|first.getString(),
-      'variant': button_paragraph.field_button_variant|first.getString()
-    }
-  ) %}
-{% endif %}
-
 {% block paragraph %}
   {% include '@components/section/section.html.twig' with {
     'title': content.field_title | field_value,
@@ -74,7 +60,7 @@
     'description': content.field_description | field_value,
     'body': content.field_nested_paragraphs | field_value,
     'center_content': content.field_center_content.0['#markup'],
-    'cta': cta,
+    'cta': content.field_button.0['#paragraph'].field_link|first.getUrl().toString() ? drupal_entity('paragraph', content.field_button.0['#paragraph'].id()) : {},
     'image': bg_image
   } %}
 

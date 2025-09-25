@@ -61,11 +61,16 @@
     {{ body }}
 
     {% block footer %}
-      {% if cta.href %}
-        <div
-          class="bix-section__footer">
-          {# Avoid button inheriting section data. #}
-          {% include "@components/button/button.html.twig" with cta only %}
+      {% if cta %}
+        <div class="bix-section__footer">
+          {# If this is a render element, just render it. #}
+          {% if cta['#theme'] %}
+            {{ cta }}
+            {# If this is an array of properties, ie storybook, use a component. #}
+          {% elseif cta.href %}
+            {# Avoid button inheriting section data. #}
+            {% include "@components/button/button.html.twig" with cta only %}
+          {% endif %}
         </div>
       {% endif %}
     {% endblock %}
