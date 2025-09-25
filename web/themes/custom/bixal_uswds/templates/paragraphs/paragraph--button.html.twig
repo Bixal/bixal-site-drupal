@@ -47,12 +47,9 @@
 
 {% block paragraph %}
   {% include '@components/button/button.html.twig' with {
-      'href': content.field_link.0['#url'].uri,
-      'title': content.field_link.0['#title'],
-      'has_icon': content.field_has_icon['#items'].getString(),
-      'modifier': content.field_modifier.value ? 'bix-button--inverse' : '',
-
-      
+      'href': content.field_link['#items']|first.getUrl().toString(),
+      'label': content.field_link['#items']|first.getTitle(),
+      'icon': content.field_icon['#items']|first.getString(),
+      'variant': content.field_button_variant['#items']|first.getString(),
     } %}
-
 {% endblock paragraph %}
