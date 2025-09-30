@@ -1,0 +1,36 @@
+uuid: f8d78aa6-a18c-4177-8450-9df462bf5e7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.blurb_desktop_1x
+    - image.style.blurb_desktop_2x
+    - image.style.blurb_mobile_1x
+    - image.style.blurb_mobile_2x
+  theme:
+    - bixal_uswds
+id: blurb
+label: Blurb
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: blurb_desktop_1x
+    breakpoint_id: bixal_uswds.images.narrow_plus
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: blurb_desktop_2x
+    breakpoint_id: bixal_uswds.images.narrow_plus
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: blurb_mobile_1x
+    breakpoint_id: bixal_uswds.images.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: blurb_mobile_2x
+    breakpoint_id: bixal_uswds.images.small
+    multiplier: 2x
+breakpoint_group: bixal_uswds.images
+fallback_image_style: blurb_mobile_1x
