@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.contract_vehicle.field_information
     - field.field.node.contract_vehicle.field_key_points_of_contact
     - field.field.node.contract_vehicle.field_link_to_content
+    - field.field.node.contract_vehicle.field_metatags
     - node.type.contract_vehicle
   module:
     - link
@@ -42,5 +43,6 @@ hidden:
   field_general_overview: true
   field_information: true
   field_key_points_of_contact: true
+  field_metatags: true
   langcode: true
   search_api_excerpt: true

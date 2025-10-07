@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ecfa4148-736d-4dec-a2de-765b4005afdd
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: association_certified_bronze_badge.svg
+  uri:
+    -
+      value: 'public://2025-06/association_certified_bronze_badge.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 27414
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1749746881

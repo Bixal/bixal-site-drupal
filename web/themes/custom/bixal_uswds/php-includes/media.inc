@@ -29,12 +29,12 @@ function bixal_uswds_theme_suggestions_media_alter(&$suggestions, array $vars): 
     $image_field_type = $vars["elements"]["field_media_image"]["#field_type"];
     if ($image_field_type === 'image') {
       if (!empty($view_mode && in_array($view_mode, $ckeditor_view_modes))) {
-        $suggestions[] = $vars['theme_hook_original'] . '__' . 'image_ckeditor';
+        $suggestions[] = $vars['theme_hook_original'] . '__image_ckeditor';
       }
 
       // If in the array above, create a theme suggestion.
       if (!empty($view_mode && in_array($view_mode, $component_view_modes))) {
-        $suggestions[] = $vars['theme_hook_original'] . '__' . 'image_component';
+        $suggestions[] = $vars['theme_hook_original'] . '__image_component';
       }
     }
   }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.html_text
+    - filter.format.webform_default
   module:
     - captcha
     - contact
@@ -25,6 +26,7 @@ permissions:
   - 'access site-wide contact form'
   - 'skip CAPTCHA'
   - 'use text format html_text'
+  - 'use text format webform_default'
   - 'view all revisions'
   - 'view media'
   - 'view own unpublished content'

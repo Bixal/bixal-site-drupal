@@ -1,32 +1,5 @@
 @use "uswds-core" as *;
 
-.bix-emphasis-blocks {
-  // The grid container.
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: units(2);
-
-    @include at-media("tablet") {
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    .bix-emphasis-block {
-      @include at-media("tablet") {
-        width: calc(50% - #{units(1)});
-      }
-    }
-  }
-
-  &__footer {
-    display: flex;
-    justify-content: center;
-    margin-top: units(3);
-  }
-}
-
 .bix-emphasis-block {
   --_emphasis-text-color: var(--emphasis-text-color, #{color("ink")});
   --_emphasis-background-color: var(--emphasis-background-color, --c-base);
@@ -78,7 +51,7 @@
   }
 
   &__link {
-    box-shadow: var() 0px -2px 0px inset;
+    box-shadow: var(--_link-bg-color) 0 -2px 0 inset;
     text-decoration: none;
     padding-left: units("05");
     padding-right: units("05");
@@ -86,8 +59,37 @@
 
     &:hover,
     &:focus {
+      box-shadow: var(--_link-bg-color) 0 -100px 0 inset;
+    }
+  }
+}
+
+.bix-emphasis-blocks {
+  // The grid container.
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: units(2);
+
+    @include at-media("tablet") {
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: stretch;
       box-shadow: var(--_emphasis-link-bg-color) 0px -100px 0px inset;
     }
+
+    .bix-emphasis-block {
+      @include at-media("tablet") {
+        width: calc(50% - #{units(1)});
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: units(3);
+  }
   }
 }
 

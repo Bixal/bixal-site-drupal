@@ -38,17 +38,9 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
-{% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    {% block content %}
-      {{content.field_wysiwyg}}
-    {% endblock %}
-  </div>
-{% endblock paragraph %}
+{% block content %}
+  {{ content.contextual_links }}
+  {{ content.field_wysiwyg }}
+{% endblock content %}

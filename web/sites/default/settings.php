@@ -891,6 +891,14 @@ if (getenv('RECAPTCHA_SECRET_KEY')) {
   $config['recaptcha.settings']['secret_key'] = getenv('RECAPTCHA_SECRET_KEY');
 }
 
+if (getenv('OPENID_CONNECT_CLIENT_ID')) {
+  $config['openid_connect.client.office_365']['settings']['client_id'] = getenv('OPENID_CONNECT_CLIENT_ID');
+}
+
+if (getenv('OPENID_CONNECT_CLIENT_SECRET')) {
+  $config['openid_connect.client.office_365']['settings']['client_secret'] = getenv('OPENID_CONNECT_CLIENT_SECRET');
+}
+
 /**
  * Load local development override configuration, if available.
  *

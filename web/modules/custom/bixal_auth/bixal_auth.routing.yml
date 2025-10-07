@@ -1,0 +1,7 @@
+bixal_auth.login_landing:
+  path: '/login-landing'
+  defaults:
+    _title: 'Login Landing'
+    _controller: '\Drupal\bixal_auth\Controller\BixalAuthController'
+  requirements:
+    _permission: 'access content'

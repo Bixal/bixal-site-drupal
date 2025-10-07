@@ -1,0 +1,19 @@
+uuid: 0a40e85a-c721-4776-ad64-7324ab02df69
+langcode: en
+status: true
+dependencies: {  }
+id: office_365
+label: 'Office 365'
+plugin: generic
+settings:
+  client_id: OVERRIDDEN_BY_SETTINGS
+  client_secret: OVERRIDDEN_BY_SETTINGS
+  iss_allowed_domains: "https://bixalcom.lndo.site\r\nhttps://develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site\r\nhttps://stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site\r\nhttps://www.bixal.com"
+  issuer_url: ''
+  authorization_endpoint: 'https://login.microsoftonline.com/31448150-d5ea-4e0e-bf63-51be057306d3/oauth2/v2.0/authorize'
+  token_endpoint: 'https://login.microsoftonline.com/31448150-d5ea-4e0e-bf63-51be057306d3/oauth2/v2.0/token'
+  userinfo_endpoint: ''
+  end_session_endpoint: ''
+  scopes:
+    - openid
+    - email

@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.blog.field_card_image
     - field.field.node.blog.field_date
     - field.field.node.blog.field_decorative_title
+    - field.field.node.blog.field_metatags
     - node.type.blog
   module:
     - datetime
     - media_library
     - media_library_edit
+    - metatag
     - path
     - text
 id: node.blog.default
@@ -72,6 +74,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path

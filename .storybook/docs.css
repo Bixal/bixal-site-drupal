@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Documentation styles for MDX docs.
+   ========================================================================== */
+
+/*
+   Global
+   ========================================================================== */
+.sbdocs-wrapper {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+
+  h2 {
+    border-bottom: none;
+    margin-block-start: 3rem !important;
+    margin-block-end: 2rem !important;
+  }
+
+  p {
+    margin-block: 1.5rem;
+  }
+}
+
+.sb-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.sb-section-item,
+.sb-grid-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-section-item-heading {
+  padding-top: 1.5rem !important;
+  padding-bottom: 5px !important;
+  margin: 0 !important;
+}

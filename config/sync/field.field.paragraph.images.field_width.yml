@@ -1,0 +1,23 @@
+uuid: 054299f3-2c34-42e5-bf87-4bf4b9685abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.images
+id: paragraph.images.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: images
+label: Width
+description: 'An optional width in pixels to scale the image to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

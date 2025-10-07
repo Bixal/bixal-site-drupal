@@ -33,9 +33,6 @@
             <a href="tel:1.703.634.5701">703.634.5701</a>
             <a href="mailto:info@bixal.com">info@bixal.com</a>
           </p>
-
-          <h3 class="bix-site-footer__title">Washington, DC Office</h3>
-          <address>529 14th Street NW, Suite 814<br>Washington, DC 20045</address>
         </div>
       </div>
       <div class="bix-site-footer__column bix-site-footer__column--accreditations">
@@ -43,7 +40,7 @@
         {% if theme_hook_original %}
           {{ config_pages_field('accreditations', 'field_links', 'full') }}
           <div class="accreditations-logos">
-            {{ config_pages_field('accreditations', 'field_logos', 'full') }}
+            {{ config_pages_field('accreditations', 'field_logos_paragraph', 'full') }}
           </div>
         {% else %}
           <ul>
@@ -64,12 +61,9 @@
             </li>
           </ul>
           <div class="accreditations-logos">
-            <a href="https://www.iso.org/standard/62085.html" rel="noopener noreferrer" target="_blank">
-              <img src="/static/7110e309c7dc3b7c2aa59397bde3793a/iso-certified.svg" alt="ISO certified logo">
-            </a>
-            <a href="https://cmmiinstitute.com/learning/appraisals/levels" rel="noopener noreferrer" target="_blank">
-              <img src="/static/9f64d5381d0ca7afecdd062b1bac2a68/cmmi.svg" alt="Capability Maturity Model Integration Level 3 logo">
-            </a>
+            <img src="/static/7110e309c7dc3b7c2aa59397bde3793a/iso-certified.svg" alt="ISO certified logo">
+            <img width="100" src="/static/cmmi-maturity-level-3-color-small.png" alt="Capability Maturity Model Integration Level 3 logo">
+            <img width="75" alt="Drupal Certified Bronze Partner" src="https://www.bixal.com/sites/default/files/accreditations/association_certified_bronze_badge.svg">
           </div>
         {% endif %}
       </div>

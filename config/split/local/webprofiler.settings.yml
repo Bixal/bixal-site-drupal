@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: l23AWlsVwlhblRhggKqahd8SBZzQDs5_GsFuCKgDItg
+  default_config_hash: C6AdZBCR0WnfPK8ujj1079pWqBsd2gyKa2rQQHBfCe4
 exclude_paths: "/contextual/*\r\n/toolbar/*\r\n/edit/*\r\n*.js\r\n*.css"
 exclude_toolbar: /media/oembed
 intercept_redirects: false
@@ -11,7 +11,6 @@ active_toolbar_items:
   configs: configs
   database: database
   devel: devel
-  events: events
   extensions: extensions
   forms: forms
   memory: memory
@@ -23,6 +22,7 @@ active_toolbar_items:
   user: user
   views: views
   assets: '0'
+  events: '0'
   frontend: '0'
   http: '0'
   mail: '0'

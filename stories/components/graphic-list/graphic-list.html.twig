@@ -23,6 +23,7 @@
 
 {% if items %}
   <div {{ attributes.addClass(graphic_list_classes) }}>
+    {{ content.contextual_links }}
     {% for item in items %}
       <div class="bix-graphic-list__item">
         <div class="bix-graphic-list__image">

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_hls theme hook.
+ *
+ * Available variables:
+ * - url: (string) The full URL to this document.
+ * - width: (int) The width of the iframe, in pixels.
+ * - height: (int) The height of the iframe, in pixels.
+ * - autoplay: (string) Enables autoplay in the video tag.
+ */
+#}
+<video id="{{ id }}"
+  class="video-js vjs-default-skin"
+  controls
+  {{ autoplay }}
+  width={{ width }} height={{ height }}
+  data-setup="{}"
+>
+  <source src="{{ url }}" type="application/x-mpegURL">
+</video>

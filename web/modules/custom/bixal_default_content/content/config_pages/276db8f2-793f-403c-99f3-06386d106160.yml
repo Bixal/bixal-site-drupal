@@ -4,9 +4,9 @@ _meta:
   uuid: 276db8f2-793f-403c-99f3-06386d106160
   bundle: accreditations
   depends:
-    63a7579d-b46c-46fd-82ba-666092fb4767: file
-    6efaede2-cc20-4bca-b456-e6bf40b14306: file
-    06223de4-3425-4892-931e-2df4f3d616d3: file
+    1cce6d3e-4a5e-4af7-b51d-20744a29c9c5: file
+    bc62f90a-e394-4167-b2bf-c7294c71405a: file
+    ecfa4148-736d-4dec-a2de-765b4005afdd: file
 default:
   label:
     -
@@ -30,16 +30,85 @@ default:
       uri: 'https://cmmiinstitute.com/learning/appraisals/levels'
       title: 'CMMI Level 3 '
       options: {  }
-  field_logos:
+  field_logos_paragraph:
     -
-      entity: 63a7579d-b46c-46fd-82ba-666092fb4767
-      alt: 'ISO certified logo'
-      title: ''
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ffee981e-02e2-47ae-8c93-0b099f87b83e
+          bundle: images
+          default_langcode: und
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1749739645
+          behavior_settings:
+            -
+              value: {  }
+          field_image_upload:
+            -
+              entity: 1cce6d3e-4a5e-4af7-b51d-20744a29c9c5
+              alt: 'ISO certified logo'
+              title: ''
+              width: 0
+              height: 0
     -
-      entity: 6efaede2-cc20-4bca-b456-e6bf40b14306
-      alt: 'Capability Maturity Model Integration Level 3 logo'
-      title: ''
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 684b70f5-b713-47de-96a6-78103ba25a50
+          bundle: images
+          default_langcode: und
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1749739686
+          behavior_settings:
+            -
+              value: {  }
+          field_width:
+            -
+              value: 100
+          field_image_upload:
+            -
+              entity: bc62f90a-e394-4167-b2bf-c7294c71405a
+              alt: 'Capability Maturity Model Integration Level 3 logo'
+              title: ''
+              width: 145
+              height: 52
     -
-      entity: 06223de4-3425-4892-931e-2df4f3d616d3
-      alt: 'Drupal Certified Bronze Partner'
-      title: ''
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 230f6abf-02ad-488f-b398-b47258499392
+          bundle: images
+          default_langcode: und
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1749746875
+          behavior_settings:
+            -
+              value: {  }
+          field_width:
+            -
+              value: 75
+          field_image_upload:
+            -
+              entity: ecfa4148-736d-4dec-a2de-765b4005afdd
+              alt: 'Drupal Certified Bronze Partner'
+              title: ''
+              width: 0
+              height: 0

@@ -5,18 +5,22 @@ details {
   @include u-margin-bottom(4);
 
   > summary {
-    @include u-bg('info-light');
+    @include u-bg("info-light");
+
     cursor: pointer;
+
     @include u-padding(2);
   }
 
- > summary > * {
+  > summary > * {
     display: inline;
   }
 
   > div {
     @include u-border(2px, "solid", "info-light");
+
     margin-top: 0;
+
     @include u-padding-x(3);
     @include u-padding-y(5);
   }

@@ -1,0 +1,82 @@
+uuid: c461982e-86ae-4ad5-8e76-4736c2aaf967
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.accreditations
+    - field.storage.config_pages.field_logos_paragraph
+    - paragraphs.paragraphs_type.images
+  module:
+    - entity_reference_revisions
+id: config_pages.accreditations.field_logos_paragraph
+field_name: field_logos_paragraph
+entity_type: config_pages
+bundle: accreditations
+label: Logos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      images: images
+    negate: 0
+    target_bundles_drag_drop:
+      address:
+        weight: 19
+        enabled: false
+      blurb:
+        weight: 20
+        enabled: false
+      blurb_collection:
+        weight: 21
+        enabled: false
+      button:
+        weight: 22
+        enabled: false
+      description_list:
+        weight: 23
+        enabled: false
+      description_list_collection:
+        weight: 24
+        enabled: false
+      emphasis_block:
+        weight: 25
+        enabled: false
+      emphasis_block_collection:
+        weight: 26
+        enabled: false
+      flip_card:
+        weight: 27
+        enabled: false
+      flip_cards:
+        weight: 28
+        enabled: false
+      graphic_list:
+        weight: 29
+        enabled: false
+      graphic_list_section:
+        weight: 30
+        enabled: false
+      images:
+        weight: 31
+        enabled: true
+      job_listing:
+        weight: 32
+        enabled: false
+      people_list:
+        weight: 33
+        enabled: false
+      section:
+        weight: 34
+        enabled: false
+      view_embed:
+        weight: 35
+        enabled: false
+      wysiwyg:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

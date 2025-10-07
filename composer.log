@@ -54,3 +54,22 @@ fa3ebb6ff574f4eb1ae36967973062ed|John Franklin|feature/BSD-298-enable-hls-video|
 4ed00e200a6e176d11d2e6e13c39cef0|Matt Poole|feature/BSD-371-update-deps|Wed Feb 26 16:42:45 EST 2025|./composer.sh update
 bcddba84bc19a7997d7c4276c8c99f3a|Matt Poole|feature/BSD-389-update-deps|Tue Mar 18 13:32:59 EDT 2025|./composer.sh update
 32f4aa2f9aa50f25f4637899fd424c1a|Matt Poole|feature/BSD-399-update-deps|Thu Mar 27 15:36:30 EDT 2025|./composer.sh update
+257ca10ff457e9c8f81a423c97caf7bb|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 15:58:20 EDT 2025|./composer.sh require drupal/sitewide_alert:^3.0
+c2343dc811921e7d3cb46b08fd17e71c|Matt Poole|feature/BSD-273-d11-upgrade|Thu Mar 27 16:45:19 EDT 2025|./composer.sh require drupal/xmlsitemap:^2.0@beta
+66e402bbdc6ed898197203c0ef90ed6b|Matt Poole|feature/BSD-273-d11-upgrade|Thu Apr 10 09:57:48 EDT 2025|./composer.sh update
+54f150b4d1ae04b57a30358d798294a1|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 11:23:56 EDT 2025|./composer.sh remove drupal/media_remote_hls
+bc7c36cc4ec59fa6961d4909ac0dbde7|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 11:38:50 EDT 2025|./composer.sh require drupal/media_remote
+72b53c0e03ea7fb6e3ca35bb013badf1|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 13:45:00 EDT 2025|./composer.sh update -W
+2055ccadf712f4fbd775fb60dbbc3d97|Matt Poole|feature/BSD-273-d11-upgrade|Mon Apr 14 18:04:33 UTC 2025|./composer.sh require drupal/webprofiler:^11.1
+5912eba060de6726559f8a263dbda868|Matt Poole|feature/BSD-345-video-styles|Mon Apr 14 16:10:57 EDT 2025|./composer.sh require drupal/edit_media_modal
+bf896680a95fc921c0150e7d668d2aef|Matt Poole|feature/BSD-442-update-deps|Tue May  6 10:58:40 EDT 2025|./composer.sh update
+f660d7b815055040a6e2fed0f1ccb40c|Matt Poole|feature/BSD-447-update-deps|Wed May 21 14:29:28 EDT 2025|./composer.sh update
+e4e13e73fc664a8bfc8eac24df0a5b15|Matt Poole|feature/BSD-463-footer-updates|Thu Jun 12 10:04:24 EDT 2025|./composer.sh require drupal/svg_image:^3.2
+cf193c0a9a0293ac4bd269975d0cff3a|Matt Poole|feature/BSD-455-editable-paragraphs|Thu Jun 12 13:53:28 EDT 2025|./composer.sh require drupal/paragraphs_edit
+570205bc2ad27e39db7b326441efa946|Matt Poole|feature/BSD-473-update-deps|Mon Jun 16 13:45:48 EDT 2025|./composer.sh update
+b2295ef5afc91edb2a49ba52e9cc27cb|Matt Poole|HEAD|Tue Jun 17 09:49:05 EDT 2025|./composer.sh require drupal/openid_connect:^3.0@alpha
+247eb262a481f09f0a2b7501839d30c4|Matt Poole|feature/BSD-136-sso-support|Tue Jun 17 13:19:34 EDT 2025|./composer.sh require drupal/webform:^6.3@beta
+cd46813173f87ca66c1e8c2d4221ea35|Matt Poole|feature/BSD-480-update-deps|Wed Jun 25 16:24:56 EDT 2025|./composer.sh update
+85a63b7c31d162217846c545b6ccce88|Matt Poole|feature/BSD-457-seo-tags|Thu Aug 28 14:07:17 EDT 2025|./composer.sh update --lock
+16cdcb75060c1dd563d330ed5efc8ca8|Matt Poole|feature/BSD-457-seo-tags|Wed Sep  3 14:34:02 EDT 2025|./composer.sh require drupal/maxlength
+53f7a8b9a143f6e4b08ea24d3178460b|Matt Poole|feature/BSD-489-update-deps|Wed Sep  3 16:55:26 EDT 2025|./composer.sh update

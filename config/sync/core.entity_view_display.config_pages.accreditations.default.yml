@@ -5,10 +5,10 @@ dependencies:
   config:
     - config_pages.type.accreditations
     - field.field.config_pages.accreditations.field_links
-    - field.field.config_pages.accreditations.field_logos
+    - field.field.config_pages.accreditations.field_logos_paragraph
   module:
+    - entity_reference_revisions
     - link
-    - svg_image_field
 id: config_pages.accreditations.default
 targetEntityType: config_pages
 bundle: accreditations
@@ -26,22 +26,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_logos:
-    type: svg_image_field_formatter
+  field_logos_paragraph:
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
-      inline: false
-      apply_dimensions: false
-      width: 25
-      height: 25
-      enable_alt: true
-      enable_title: true
+      view_mode: default
       link: ''
-      force_fill: false
-      sanitize: true
-      sanitize_remote: false
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
 hidden:
   search_api_excerpt: true

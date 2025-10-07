@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.contract_vehicle.field_information
     - field.field.node.contract_vehicle.field_key_points_of_contact
     - field.field.node.contract_vehicle.field_link_to_content
+    - field.field.node.contract_vehicle.field_metatags
     - node.type.contract_vehicle
   module:
     - link
+    - metatag
     - paragraphs
     - path
     - text
@@ -77,6 +79,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   langcode:
     type: language_select

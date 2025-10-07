@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 191d9e25-abae-4e7d-a855-61942d0a7c13
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: file_example_MP4_1280_10MG.mp4
+  uri:
+    -
+      value: 'public://2025-04/file_example_MP4_1280_10MG_0.mp4'
+  filemime:
+    -
+      value: video/mp4
+  filesize:
+    -
+      value: 9840497
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1744123551

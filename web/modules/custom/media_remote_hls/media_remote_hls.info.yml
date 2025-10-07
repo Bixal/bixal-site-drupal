@@ -1,0 +1,14 @@
+name: Media Remote HLS
+type: module
+description: Allow embedding remote HLS streams
+package: Media
+core_version_requirement: ^10 || ^11
+dependencies:
+  - media_remote:media_remote
+libraries:
+  - media_remote_hls/videojs
+
+# Information added by Drupal.org packaging script on 2024-11-14
+version: '1.0.0'
+project: 'media_remote_hls'
+datestamp: 1731558230

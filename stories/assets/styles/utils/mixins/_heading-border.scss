@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 
 /// Heading Border Mixin
-//
+// ==========================================================================
 /// A mixin that adds a fluid bottom border to headings. See `global.scss` for available color variables
 ///
 /// @param {String} $border-color [accent-cool-alt] - The border color set from global color variables. Defaults to `accent-cool-alt`.
@@ -29,6 +29,7 @@
     content: "";
     display: block;
     margin-top: units($margin-top);
+
     // Using clamp to avoid width override hacks.
     // Minimum width, ideal, and maximum allowed.
     width: clamp(px-to-rem(80px), px-to-rem(180px), 40%);

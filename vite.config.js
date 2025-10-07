@@ -6,7 +6,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        includePaths: ["./node_modules/@uswds/uswds/packages"],
+        loadPaths: ["./node_modules/@uswds/uswds/packages"],
       },
     },
   },
@@ -19,5 +19,4 @@ export default defineConfig({
       },
     }),
   ],
-  framework: "react",
 });

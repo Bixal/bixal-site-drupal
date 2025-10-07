@@ -4,18 +4,29 @@
   *
   * Available variables:
   * - variant: String alert type: info, error, warning.
-  * - icon: String alert icon from USWDS: info, error, warning.
+  * - icon: String alert icon from USWDS: info, error, warning, and success.
   * - heading_type: Optional string for the type of header (h1-h6).
   * - title: Optional string for the alert header.
   * - text: A string of the alert body text.
+  *
+  * Accessibility
+  * If the alert is important (e.g., "urgent", "warning", "error"), we set a `role="alert"` for screen readers.
+  *
 **/
 #}
 
 
 {% set heading_type = heading_type | default("h4") %}
 
+{% set is_important = (variant|default("")) in ['urgent', 'warning', 'error'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{# For accessibility, highlight important alerts. #}
+{% if is_important %}
+  {% set attributes = attributes.setAttribute("role", "alert") %}
 {% endif %}
 
 {% set alert_classes = [
@@ -25,23 +36,32 @@
 
 <div{{ attributes.addClass(alert_classes) }}>
   <div class="bix-alert__body">
-
-
-  {% if title %}
-    <{{ heading_type }} class="bix-alert__heading">
-    {% if icon %}
-    <span class="bix-alert__icon">
+  {% if icon %}
+    {# Icon is hidden because its decorative. #}
+    <span class="bix-alert__icon" aria-hidden="true">
       {{ source(icon) }}
     </span>
-    {% endif %}
-
+  {% endif %}
+  {% if title %}
+    <{{ heading_type }} class="bix-alert__heading">
       {{ title }}
     </{{ heading_type }}>
   {% endif %}
-  {% if text %}
     <div class="bix-alert__text">
-      {{ text }}
+      {% block body %}
+        {#
+        /**
+          * You can override the body to display a list of messages.
+          *
+          * @example
+          * {% embed '@components/alert/alert.html.twig' with { variant: 'info' } %}
+          *   {% block body %}<ul>...a bunch of list items</ul>{% endblock %}
+          * {% endembed %}
+          *
+        **/
+        #}
+        {% if text %}{{ text }}{% endif %}
+      {% endblock %}
     </div>
-  {% endif %}
   </div>
 </div>

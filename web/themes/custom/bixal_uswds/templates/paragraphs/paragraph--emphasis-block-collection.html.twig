@@ -38,20 +38,7 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'component',
-  'bix-emphasis-blocks',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
 
-{% block paragraph %}
-  <div{{attributes.addClass(classes)}}>
-    <div class="bix-emphasis-blocks__body">
-      {% block content %}
-        {{ content.field_emphasis_blocks | field_value }}
-      {% endblock %}
-    </div>
-  </div>
-{% endblock paragraph %}
+{% include '@components/emphasis-block/emphasis-block-collection.html.twig' with {
+  'blocks_content': content.field_emphasis_blocks | field_value
+} %}

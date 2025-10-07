@@ -24,8 +24,19 @@ for dir in $directories; do
       echo -e "${green}Installing NPMs${NC}"
       npm install --prefer-offline
 
-      echo -e "${yellow}Gulp Build${NC}"
-      gulp
+      # Look for a gulpfile (could be .js, .ts, etc.)
+      if compgen -G "gulpfile.*" > /dev/null; then
+        echo -e "${yellow}Gulp build detected in $dir${NC}"
+
+        if [[ -x "node_modules/.bin/gulp" ]]; then
+          echo "Running local gulp..."
+          npx gulp
+        else
+          echo -e "${red}Gulp is not installed locally in $dir. Please run:${NC}"
+          echo "  npm install --save-dev gulp"
+          exit 1
+        fi
+      fi
     )
 done
 

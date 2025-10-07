@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 68bf2e29-d15e-4a88-a2ba-9b4b2ed04d0d
+  bundle: video
+  default_langcode: en
+  depends:
+    191d9e25-abae-4e7d-a855-61942d0a7c13: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'A nice name'
+  created:
+    -
+      value: 1744123551
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_video_file:
+    -
+      entity: 191d9e25-abae-4e7d-a855-61942d0a7c13
+      display: true
+      description: 'Larger than full width, does not go outside main wrapper'

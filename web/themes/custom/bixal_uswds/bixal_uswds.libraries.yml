@@ -1,7 +1,7 @@
 global:
   css:
     theme:
-      dist/css/styles.min.css: { minified: true }
+      dist/css/styles.css: { minified: true }
   js:
     # dist/js/uswds.min.js: { minified: true }
     dist/js/bx-global.js: { minified: true }

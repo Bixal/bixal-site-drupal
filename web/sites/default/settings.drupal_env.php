@@ -60,6 +60,9 @@ if (getenv('LANDO_INFO') !== FALSE) {
 elseif (getenv('PLATFORM_ENVIRONMENT_TYPE') !== FALSE) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
 }
+elseif (getenv('IS_DDEV_PROJECT') !== FALSE) {
+  include $app_root . '/' . $site_path . '/settings.drupal_env.ddev.php';
+}
 
 /**
  * Load local development override configuration, if available.

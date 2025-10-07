@@ -12,7 +12,7 @@ export default {
     center_content: false,
     prefix: "Who we are",
     prefix_below: 0,
-    prefix_label: '',
+    prefix_label: "",
     heading_type: "h2",
     title:
       "Bixal is a diverse group of strategists, designers, engineers, and thinkers.",
@@ -67,7 +67,8 @@ export const AccentCool = {
 export const BackgroundImage = {
   args: {
     additional_classes: ["bix-section--primary"],
-    image: "static/img-whatwedo-e68b3d20abd32c896d56b122063f7664.jpg",
+    image:
+      "https://www.bixal.com/sites/default/files/2025-04/What%20We%20Do%20Banner.webp",
     prefix: "What we do",
     title:
       "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
@@ -86,7 +87,8 @@ export const Tall = {
   args: {
     variant: "tall",
     center_content: true,
-    image: "static/img-careers-269d29ea5a43482c6c0b920bdd5e9d87.jpg",
+    image:
+      "https://www.bixal.com/sites/default/files/2025-04/Work%20With%20Us.webp",
     prefix: "What we do",
     title:
       "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",

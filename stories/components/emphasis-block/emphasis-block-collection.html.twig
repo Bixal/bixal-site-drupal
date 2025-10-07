@@ -9,9 +9,12 @@
 
 <div {{ attributes.addClass(emphasis_blocks_classes) }}>
   <div class="bix-emphasis-blocks__body">
-    {% for block in blocks %}
-    {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}
-  {% endfor %}
+    {% if blocks %}
+      {% for block in blocks %}
+        {% include "@components/emphasis-block/emphasis-block.html.twig" with block %}
+      {% endfor %}
+    {% endif %}
+    {{ blocks_content }}
   </div>
 
   <div class="bix-emphasis-blocks__footer">

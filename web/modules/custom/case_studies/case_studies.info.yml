@@ -2,6 +2,6 @@ name: "Case Studies Content"
 type: module
 description: "Provides static content for case studies pages"
 package: Custom
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - drupal:xmlsitemap

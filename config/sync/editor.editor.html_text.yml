@@ -27,6 +27,7 @@ settings:
       - code
       - codeBlock
       - insertTable
+      - horizontalLine
   plugins:
     ckeditor5_alignment:
       enabled_alignments:

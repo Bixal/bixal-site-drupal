@@ -1,0 +1,154 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+export const typography = {
+  type: {
+    headings: "var(--font-heading)",
+    ui: "var(--font-ui)",
+  },
+  weight: {
+    regular: "400",
+    semibold: "600",
+    bold: "700",
+    extrabold: "800",
+    black: "900",
+  },
+  size: {
+    body: 20,
+    mh1: 32,
+    mh2: 28,
+    mh3: 24,
+    mh4: 20,
+    mh5: 20,
+    mh6: 13.4,
+    h1: 64,
+    h2: 35,
+    h3: 30,
+    h4: 24,
+    h5: 20,
+    h6: 13.4,
+  },
+};
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+<Meta title="Fonts" />
+
+# Fonts
+
+Fonts are coming from our [Typekit](https://fonts.adobe.com/) license.
+
+## Headings
+
+**Font:** [Novel Pro](https://fonts.adobe.com/fonts/novel) and [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)
+
+**CSS Custom Property**: `--font-heading`
+
+**Weights:** 700 (bold) and 800(extra bold)
+
+### Sizes
+
+Heading sizes for mobile and desktop.
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh1),
+    Number(typography.size.h1),
+
+]}
+fontWeight={typography.weight.extrabold}
+sampleText="Heading one"
+fontFamily={typography.type.headings}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh2),
+    Number(typography.size.h2),
+
+]}
+fontWeight={typography.weight.bold}
+sampleText="Heading two"
+fontFamily={typography.type.headings}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh3),
+    Number(typography.size.h3),
+
+]}
+fontWeight={typography.weight.extrabold}
+sampleText="Heading three"
+fontFamily={typography.type.ui}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh4),
+    Number(typography.size.h4),
+
+]}
+fontWeight={typography.weight.extrabold}
+sampleText="Heading four"
+fontFamily={typography.type.headings}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh5),
+    Number(typography.size.h5),
+
+]}
+fontWeight={typography.weight.extrabold}
+sampleText="Heading five"
+fontFamily={typography.type.ui}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.mh6),
+    Number(typography.size.h6),
+
+]}
+fontWeight={typography.weight.extrabold}
+sampleText="Heading six"
+fontFamily={typography.type.headings}
+/>
+
+## UI
+
+**Font:** Proxima Nova
+
+**CSS Custom Property**: `--font-ui`
+
+**Weights:** 400 (regular), 600 (semibold), 700 (bold)
+
+### Body copy
+
+**Regular**
+
+<Typeset
+  fontSizes={[Number(typography.size.body)]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Semibold**
+
+<Typeset
+  fontSizes={[Number(typography.size.body)]}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Bold**
+
+<Typeset
+  fontSizes={[Number(typography.size.body)]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

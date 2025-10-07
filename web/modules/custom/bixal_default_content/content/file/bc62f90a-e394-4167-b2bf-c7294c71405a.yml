@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bc62f90a-e394-4167-b2bf-c7294c71405a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: cmmi-maturity-level-3-color-small.png
+  uri:
+    -
+      value: 'public://2025-06/cmmi-maturity-level-3-color-small.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 8873
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1749739707

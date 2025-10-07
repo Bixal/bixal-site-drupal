@@ -2,4 +2,4 @@ name: 'Bixal Captcha'
 type: module
 description: 'Alters captcha functionality.'
 package: Custom
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11

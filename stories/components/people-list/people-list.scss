@@ -14,11 +14,11 @@
 
   &-button {
     @extend %filter-base-text-styles;
+
     border-block-end: 2px solid;
     font-size: px-to-rem(16px);
     margin-block-end: units(4);
-    padding-block-start: units(1);
-    padding-block-end: units(1);
+    padding-block: units(1);
 
     &.is-active {
       border-bottom-color: var(--c-accent-cool-alt);
@@ -32,6 +32,7 @@
 
   &-options {
     @extend %filter-base-text-styles;
+
     background-color: color("white");
     border: 2px solid var(--c-base);
     font-size: px-to-rem(14px);
@@ -55,8 +56,7 @@
     columns: 3;
     gap: units(4);
     list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block: 0;
     padding: 0;
   }
 
@@ -105,21 +105,6 @@
   --_overlay-color: var(--overlay-color, gray);
   --_text-color: var(--text-color, #000);
 
-  &__link {
-    text-decoration: none;
-  }
-
-  &__link:hover,
-  &__link:focus {
-    .bix-person__overlay {
-      opacity: 1;
-    }
-  }
-
-  &__media {
-    position: relative;
-  }
-
   &__overlay {
     align-items: center;
     background-color: var(--_overlay-color);
@@ -134,6 +119,21 @@
     top: 0;
     transition: opacity 0.25s ease-in-out;
     width: 100%;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    .bix-person__overlay {
+      opacity: 1;
+    }
+  }
+
+  &__media {
+    position: relative;
   }
 
   &__overlay .bix-icon {

@@ -1,0 +1,4 @@
+adding:
+  user_login_display: replace
+removing:
+  user_login_display: below

@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 16b8de9e-4467-4b7c-b737-3c7af061352c
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: editor@bixal.com
+  pass:
+    -
+      value: $2y$10$Xib8/KjciwIXP0X4upT/pO2ma0bpKAwfRSjXlDW8ElnkdxWGb0Xrm
+      existing: ''
+      pre_hashed: true
+  mail:
+    -
+      value: editor@bixal.com
+  timezone:
+    -
+      value: America/New_York
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1743430939
+  access:
+    -
+      value: 0
+  login:
+    -
+      value: 0
+  init:
+    -
+      value: editor@bixal.com
+  roles:
+    -
+      target_id: editor
+  role_change:
+    -
+      target_id: __role_delegation_empty_field_value__
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0

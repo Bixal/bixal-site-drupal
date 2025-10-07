@@ -24,6 +24,7 @@
 ] | merge(additional_classes | default([])) %}
 
 <div {{ attributes.addClass(emphasis_block_classes) }}>
+  {{ content.contextual_links }}
   {% if prefix %}
   <p class="bix-emphasis-block__prefix">
     {{ prefix }}

@@ -22,6 +22,14 @@ command:
                     - ''
                     - 'After re-rewriting the history, you should --force-with-lease the push.'
                     - 'https://stackoverflow.com/questions/52823692/git-push-force-with-lease-vs-force#:~:text=%2D%2Dforce%2Dwith%2Dlease%20is%20a%20safer%20option%20that%20will,elses%20work%20by%20force%20pushing.'
+        # Used in 'validate:coding-standards'
+        # Requires https://github.com/squizlabs/PHP_CodeSniffer be installed.
+        coding-standards:
+          options:
+            similar-options:
+              standard: 'Drupal,DrupalPractice'
+              extensions: 'php,module,inc,install,test,profile,theme,css,info'
+              ignore: 'dist/*,*node_modules/*,*bower_components/*,*vendor/*,*.min.js,*.min.css'
         branch-name:
             options:
                 pattern: '/^feature\/{$project_id}-([\d]{1,})-(?!.*--)([a-z\d]{1})([a-z\d-]{3,})([a-z\d]{1})$/'

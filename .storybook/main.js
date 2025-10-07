@@ -14,9 +14,7 @@ const config = {
     name: "@storybook/html-vite",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
+  docs: {},
   staticDirs: ["../stories/assets", "../node_modules/@uswds/uswds/dist"],
   async viteFinal(config, { configType }) {
     // This allows starting this in a sub dir:

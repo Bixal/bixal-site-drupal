@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.blog.field_card_image
     - field.field.node.blog.field_date
     - field.field.node.blog.field_decorative_title
+    - field.field.node.blog.field_metatags
     - node.type.blog
   module:
     - datetime
+    - metatag
     - text
     - user
 id: node.blog.default
@@ -51,6 +53,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }

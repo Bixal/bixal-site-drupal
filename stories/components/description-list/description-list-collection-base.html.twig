@@ -2,6 +2,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-<div{{ attributes.addClass('bix-description-list-collection').addClass(additional_classes) }}>
+<div{{ attributes.addClass('bix-description-list-collection').addClass(additional_classes | default([])) }}>
+  {{ content.contextual_links }}
   {{ description_list_collection }}
 </div>
