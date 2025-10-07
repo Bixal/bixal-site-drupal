@@ -26,14 +26,14 @@
 ] | merge(additional_classes | default([])) %}
 
 <section
-    {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
+  {{ attributes.addClass(section_classes) }} {% if image %} style="background-image: url('{{ image }}')" {% endif %}>
   {{ content.contextual_links }}
   {#
-    /**
-      ? The `bix-container` can appear *without* content, for sections like homepage flip grids.
-      ? A side effect of this is that `bix-container` can appear empty on image only sections, ex: above "Careers - How we work"
-    **/
-    #}
+  /**
+    ? The `bix-container` can appear *without* content, for sections like homepage flip grids.
+    ? A side effect of this is that `bix-container` can appear empty on image only sections, ex: above "Careers - How we work"
+  **/
+  #}
   <div class="bix-container">
     {% block header %}
       {% if prefix_below %}
@@ -61,11 +61,16 @@
     {{ body }}
 
     {% block footer %}
-      {% if cta.label %}
-        <div
-            class="bix-section__footer">
-          {# Avoid button inheriting section data. #}
-          {% include "@components/button/button.html.twig" with cta only %}
+      {% if cta %}
+        <div class="bix-section__footer">
+          {# If this is a render element, just render it. #}
+          {% if cta['#theme'] %}
+            {{ cta }}
+            {# If this is an array of properties, ie storybook, use a component. #}
+          {% elseif cta.href %}
+            {# Avoid button inheriting section data. #}
+            {% include "@components/button/button.html.twig" with cta only %}
+          {% endif %}
         </div>
       {% endif %}
     {% endblock %}

@@ -53,23 +53,6 @@
 
 {% set cta = [] %}
 
-{% set href %}
-  {% if content.field_button.0['#paragraph'].field_link is not empty %}
-    {% if content.field_button.0['#paragraph'].field_link.0.url.external %}
-      {{ content.field_button.0['#paragraph'].field_link.uri }}
-    {% else %}
-      {{ path(content.field_button.0['#paragraph'].field_link.0.url.routeName, content.field_button.0['#paragraph'].field_link.0.url.routeParameters) }}
-    {% endif %}
-  {% endif %}
-{% endset %}
-{% set cta = cta|merge(
-  { 'href': href,
-    'label': content.field_button.0['#paragraph'].field_link.title,
-    'icon': content.field_button.0['#paragraph'].field_icon.0.value,
-    'variant': content.field_button.0['#paragraph'].field_button_variant.0.value
-  }
-) %}
-
 {% block paragraph %}
   {% include '@components/section/section.html.twig' with {
     'title': content.field_title | field_value,
@@ -77,7 +60,7 @@
     'description': content.field_description | field_value,
     'body': content.field_nested_paragraphs | field_value,
     'center_content': content.field_center_content.0['#markup'],
-    'cta': cta,
+    'cta': content.field_button.0['#paragraph'].field_link|first.getUrl().toString() ? drupal_entity('paragraph', content.field_button.0['#paragraph'].id()) : {},
     'image': bg_image
   } %}
 
