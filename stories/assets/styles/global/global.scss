@@ -205,6 +205,26 @@ h6 {
   padding: 0;
 }
 
+.text-primary {
+  color: var(--c-primary);
+}
+
+.text-primary-alt {
+  color: var(--c-primary-alt);
+}
+
+.text-accent-cool {
+  color: var(--c-accent-cool);
+}
+
+.text-accent-warm {
+  color: var(--c-accent-warm);
+}
+
+.text-accent-vivid {
+  color: var(--c-accent-vivid);
+}
+
 dl {
   line-height: 1.75;
   margin-top: units(2);
