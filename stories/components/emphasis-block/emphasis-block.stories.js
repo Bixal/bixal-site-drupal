@@ -7,14 +7,51 @@ import "./emphasis-block.scss";
 export default {
   title: "Components/Emphasis Block",
   component: EmphasisBlock,
-};
-
-export const Default = {
   args: {
+    variant: "",
     prefix: "Strategic Growth",
     href: "#",
     title: "Director, Business Development",
     postfix: "Washington D.C. Metro Area",
+    body: null,
+  },
+};
+
+export const Default = {};
+
+export const Primary = {
+  args: {
+    variant: "primary",
+  },
+};
+
+export const PrimaryAlt = {
+  args: {
+    variant: "primary-alt",
+  },
+};
+
+export const AccentCool = {
+  args: {
+    variant: "accent-cool",
+  },
+};
+
+export const AccentCoolAlt = {
+  args: {
+    variant: "accent-cool-alt",
+  },
+};
+
+export const AccentVivid = {
+  args: {
+    variant: "accent-vivid",
+  },
+};
+
+export const AccentWarm = {
+  args: {
+    variant: "accent-warm",
   },
 };
 
