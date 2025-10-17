@@ -77,10 +77,6 @@
   --emphasis-background-color: var(--c-accent-cool);
 }
 
-.bix-emphasis-block--accent-cool-alt {
-  --emphasis-background-color: var(--c-accent-cool-alt);
-}
-
 .bix-emphasis-block--accent-warm {
   --emphasis-background-color: var(--c-accent-warm);
   --emphasis-link-bg-color: oklch(from var(--c-primary-alt) l c h / 60%);
@@ -88,7 +84,7 @@
 
 .bix-emphasis-block--accent-vivid {
   --emphasis-background-color: var(--c-accent-vivid);
-  --emphasis-link-bg-color: oklch(from var(--c-accent-warm) l c h / );
+  --emphasis-link-bg-color: oklch(from var(--c-primary) l c h / 60%);
 }
 
 .bix-emphasis-blocks {

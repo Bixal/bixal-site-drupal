@@ -37,12 +37,6 @@ export const AccentCool = {
   },
 };
 
-export const AccentCoolAlt = {
-  args: {
-    variant: "accent-cool-alt",
-  },
-};
-
 export const AccentVivid = {
   args: {
     variant: "accent-vivid",
