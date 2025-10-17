@@ -15,6 +15,6 @@ export const All = {};
 
 export const Colors = {
   render: () => {
-    return brandColors.map(color => `<div class=text-${color}>${lorem} - ${color}</div>`).join("")
+    return brandColors.map(color => `<div class=text-${color}>${lorem} - "text-${color}"</div>`).join("")
   },
 }
