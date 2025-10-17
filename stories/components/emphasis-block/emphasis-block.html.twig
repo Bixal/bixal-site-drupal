@@ -1,12 +1,43 @@
+{#
+/**
+  * Emphasis Block Component
+  *
+  * A visually prominent block that highlights key content or calls-to-action.
+  * Centers content by default with optional color and text alignment options.
+  *
+  * Available variables:
+  * - title (string, required): The main heading text.
+  * - heading_type (string, optional): HTML heading element (h1-h6). Defaults to 'h3'.
+  * - prefix (string, optional): Small text label above the title.
+  * - postfix (string, optional): Small text label below the title.
+  * - href (string, optional): URL for the title. The title becomes clickable when provided.
+  * - body (string, optional): Additional paragraph content below the postfix.
+  * - variant (string, optional): Color theme. Options:
+  *   - 'primary': White text on dark blue background.
+  *   - 'primary-alt': White text on purple background.
+  *   - 'accent-cool': Dark text on light blue background.
+  *   - 'accent-warm': Dark text on orange background.
+  *   - 'accent-vivid': Dark text on bright green background.
+  * - align (string, optional): Text alignment. Options:
+  *   - 'left': Left-aligned content.
+  *   - 'center': Center-aligned content (default).
+  * - additional_classes (array, optional): Additional CSS classes for the wrapper.
+  *
+  * @see emphasis-block.scss for theming options.
+**/
+#}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set emphasis_block_classes = [
   "bix-emphasis-block",
-  (variant ? "bix-emphasis-block--" ~ variant)
+  (variant ? "bix-emphasis-block--" ~ variant),
+  "bix-emphasis-block--align-" ~ align|default("center")
 ] | merge(additional_classes | default([])) %}
 
+{% set heading_type = heading_type | default("h3") %}
 
 <div{{ attributes.addClass(emphasis_block_classes) }}>
   {{ content.contextual_links }}
@@ -15,8 +46,7 @@
     {{ prefix }}
   </p>
   {% endif %}
-  {# @TODO: Fix heading order, ex: use `h3`. #}
-  <h4 class="bix-emphasis-block__title">
+  <{{ heading_type }} class="bix-emphasis-block__title">
     {% if href %}
     <a
       rel="noreferrer"
@@ -29,6 +59,16 @@
     {{ title }}
 
     {% if href %}</a>{% endif %}
-  </h4>
+  </{{ heading_type }}>
+
+  {% if postfix %}
   <div class="bix-emphasis-block__postfix">{{ postfix }}</div>
+  {% endif %}
+
+  {% if body %}
+    {% block body %}
+      {{ body }}
+    {% endblock %}
+  {% endif %}
+
 </div>

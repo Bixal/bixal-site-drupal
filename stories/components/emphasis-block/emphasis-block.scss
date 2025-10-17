@@ -22,6 +22,8 @@
   justify-content: center;
   padding-block: units(3);
   padding-inline: units(6);
+  text-align: center;
+
   @include at-media("desktop") {
     padding: units(6) units(9);
   }
@@ -59,6 +61,12 @@
       box-shadow: var(--_emphasis-link-bg-color) 0 -100px 0 inset;
     }
   }
+}
+
+.bix-emphasis-block--align-left {
+  align-items: start;
+  justify-content: start;
+  text-align: start;
 }
 
 .bix-emphasis-block--primary {
