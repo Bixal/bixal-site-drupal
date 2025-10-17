@@ -23,10 +23,8 @@
     font-weight: 700;
     font-size: px-to-rem(16px);
     line-height: 1;
-    margin-top: units("05");
-    margin-bottom: units("05");
-    padding-left: units(2);
-    padding-right: units(2);
+    margin-block: units("05");
+    padding-inline: units(2);
     text-transform: uppercase;
   }
 
@@ -34,8 +32,7 @@
     line-height: 1.5;
     letter-spacing: -0.75px;
     font-family: var(--font-heading);
-    margin-top: units(1);
-    margin-bottom: units(2);
+    margin-block-start: units(1) units(2);
 
     @include at-media("desktop") {
       font-size: px-to-rem(30px);
@@ -45,8 +42,7 @@
   &__link {
     box-shadow: var(--_link-bg-color) 0 -2px 0 inset;
     text-decoration: none;
-    padding-left: units("05");
-    padding-right: units("05");
+    padding-inline: units("05");
     transition: box-shadow 0.25s;
 
     &:hover,
@@ -79,6 +75,6 @@
   &__footer {
     display: flex;
     justify-content: center;
-    margin-top: units(3);
+    margin-block-start: units(3);
   }
 }
