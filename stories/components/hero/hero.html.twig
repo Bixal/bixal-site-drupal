@@ -47,61 +47,60 @@
   {% if has_background_image %}
   style="--hero-image: url('{{ image }}')"
   {% endif %}>
-    <div class="bix-hero__container bix-container">
-      {% if image_inline and image %}
-        <div class="bix-hero__media">
-          <img src="{{ image }}" alt="" width="530px">
-        </div>
-      {% endif %}
-
-      {# Content wrapper for inline image variant. #}
-      {% if image_inline %}<div class="bix-hero__content">{% endif %}
-
-      {# Header section #}
-      <div class="bix-hero__header">
-        {% if eyebrow %}
-          <div class="bix-title-prefix">{{ eyebrow }}</div>
-        {% endif %}
-
-        {% if title %}
-        <{{ heading_type }} class="bix-hero__title">
-          {{ title | default("Hero title") }}
-        </{{ heading_type }}>
-        {% endif %}
-
-        {% if subtitle %}
-        <{{ sub_heading_type }} class="bix-hero__subtitle">
-          {{ subtitle }}
-        </{{ sub_heading_type }}>
-        {% endif %}
+  <div class="bix-hero__container bix-container">
+    {% if image_inline and image %}
+      <div class="bix-hero__media">
+        <img src="{{ image }}" alt="" width="530px">
       </div>
-      {# /Header #}
+    {% endif %}
 
-      {# Body #}
-      {% if description %}
-      <div class="bix-hero__body">
-        <p>
-          {{ description }}
-        </p>
-      </div>
+    {# Content wrapper for inline image variant. #}
+    {% if image_inline %}<div class="bix-hero__content">{% endif %}
+
+    {# Header section #}
+    <div class="bix-hero__header">
+      {% if eyebrow %}
+        <div class="bix-title-prefix">{{ eyebrow }}</div>
       {% endif %}
-      {# /Body #}
 
-      {# Footer #}
-      {% if cta_exists %}
-        <div class="bix-hero__footer">
-          <div class="bix-hero__cta">
-            <a href="{{ cta.href }}">
-              {{ cta.label }}
-              {{ source("icons/arrow-right.svg") }}
-            </a>
-          </div>
-        </div>
+      {% if title %}
+      <{{ heading_type }} class="bix-hero__title">
+        {{ title | default("Hero title") }}
+      </{{ heading_type }}>
       {% endif %}
-      {# /Footer #}
 
-      {# Content wrapper for inline image variant. #}
-      {% if image_inline %}</div>{% endif %}
+      {% if subtitle %}
+      <{{ sub_heading_type }} class="bix-hero__subtitle">
+        {{ subtitle }}
+      </{{ sub_heading_type }}>
+      {% endif %}
     </div>
+    {# /Header #}
+
+    {# Body #}
+    {% if description %}
+    <div class="bix-hero__body">
+      <p>
+        {{ description }}
+      </p>
+    </div>
+    {% endif %}
+    {# /Body #}
+
+    {# Footer #}
+    {% if cta_exists %}
+      <div class="bix-hero__footer">
+        <div class="bix-hero__cta">
+          <a href="{{ cta.href }}">
+            {{ cta.label }}
+            {{ source("icons/arrow-right.svg") }}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+    {# /Footer #}
+
+    {# Content wrapper for inline image variant. #}
+    {% if image_inline %}</div>{% endif %}
+  </div>
 </section>
-{# {% endif %} #}
