@@ -1,0 +1,21 @@
+uuid: 15bb9bae-f160-4fac-ad5b-675740a6dedd
+langcode: en
+status: true
+dependencies: {  }
+name: blurb_desktop_2x
+label: 'Blurb Desktop 2x'
+effects:
+  d6b08ff2-71a1-4d23-bbcb-591de64aebb8:
+    uuid: d6b08ff2-71a1-4d23-bbcb-591de64aebb8
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  5aa05521-aea9-47a8-ba0d-13173fd9968c:
+    uuid: 5aa05521-aea9-47a8-ba0d-13173fd9968c
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1334
+      height: 572
+      anchor: center-center

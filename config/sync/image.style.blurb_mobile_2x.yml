@@ -1,0 +1,21 @@
+uuid: 915b5bbe-7840-4850-b68c-ed3933e15d5a
+langcode: en
+status: true
+dependencies: {  }
+name: blurb_mobile_2x
+label: 'Blurb Mobile 2x'
+effects:
+  9b036a24-c746-4e06-93b9-bb6cbf5780f7:
+    uuid: 9b036a24-c746-4e06-93b9-bb6cbf5780f7
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  72403b5c-c662-4313-b1ab-94776f06423e:
+    uuid: 72403b5c-c662-4313-b1ab-94776f06423e
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1086
+      height: 572
+      anchor: center-center
