@@ -2,9 +2,6 @@
 @use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-hero {
-  align-items: center;
-  display: grid;
-  justify-content: center;
   padding: 40px 0;
 
   @include at-media("desktop") {
@@ -22,18 +19,34 @@
   }
 }
 
+.bix-hero--primary {
+  background-color: var(--c-primary);
+  color: white;
+}
+
+.bix-hero--primary-alt {
+  background-color: var(--c-primary-alt);
+  color: white;
+}
+
 // ==========================================================================
 // Hero with background image
 // ==========================================================================
 
 // Image styles set via scope in stories/components/hero/hero.html.twig.
 .bix-hero--image-bg {
-  min-height: 400px;
+  --hero-image: "";
 
-  .bix-hero__title {
-    color: color("white");
-    text-align: center;
-  }
+  background-image:
+    radial-gradient(circle, rgb(0 0 0 / 48%) 0%, rgb(0 0 0 / 0%) 100%),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: color("white");
+  place-content: center;
+  min-height: 400px;
+  text-align: center;
 
   @include at-media("desktop") {
     min-height: 600px;
@@ -55,7 +68,7 @@
       align-items: end;
     }
 
-    @include at-media("desktop") {
+    @include at-media("widescreen") {
       grid-template-columns: minmax(400px, 1fr) 4fr;
     }
   }

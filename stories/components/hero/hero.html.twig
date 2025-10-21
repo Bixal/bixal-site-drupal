@@ -1,54 +1,105 @@
 {#
 /**
-  * Hero component.
-  *
-  * Available variables:
-  * - variant: String component variant. Ex: "image-bg", "image-inline".
-  * - heading_type: String used to set heading type. Ex: "h2".
-  * - image: String of image url.
-  * - title: String of component title.
-  * - description: String for inline image variant.
-  * - cta:
-  *     - label: String of action label.
-  *     - href: String used in setting action href.
-**/
+ * Hero component.
+ *
+ * Available variables:
+ * - variant (string, optional): Component style. Options:
+ *      - "image-bg"
+ *      - "image-inline"
+ *      - "primary" (dark blue)
+ *      - "primary-alt" (purple)
+ * - heading_type (string, optional): HTML tag for main title. Defaults to "h1".
+ * - sub_heading_type (string, optional): HTML tag for subtitle. Defaults to "h2".
+ * - image (string, optional): Image URL for background or inline display.
+ * - title (string): Main heading text. Defaults to "Hero title".
+ * - eyebrow (string, optional): Small text above the main title.
+ * - subtitle (string, optional): Secondary heading below the main title.
+ * - description (string, optional): Body text content.
+ * - cta (object, optional): Call-to-action link.
+ *     - label (string): Link text.
+ *     - href (string): Link URL.
+ * - icon_base_path (string, optional): Path to icons folder. Defaults to "icons/".
+ * - icon (string, optional): Icon filename without extension. Defaults to "arrow-right".
+ * - additional_classes (array, optional): Extra CSS classes to add.
+ */
 #}
 
-{% set cta_exists = cta.label and cta.href %}
 {% set heading_type = heading_type | default("h1") %}
+{% set sub_heading_type = sub_heading_type | default("h2") %}
+{% set image_inline = variant == 'image-inline' %}
+{% set has_background_image = not image_inline and image %}
+{% set cta_exists = cta.label and cta.href %}
+{% set icon_base_path = icon_base_path | default("icons/") %}
+{% set icon_name = icon | default("arrow-right") %}
+{% set icon_path = icon_base_path  ~ icon_name ~ ".svg" %}
 
-{% if variant == "image-inline" %}
-  {% set image_inline = true %}
-{% else %}
-  {% set image_inline = false %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if not image_inline %}
+{% set hero_classes = [
+  "bix-hero",
+  (variant ? "bix-hero--" ~ variant),
+]|merge(additional_classes|default([])) %}
+
 <section
-  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}">
+  {{ attributes.addClass(hero_classes) }}
+  {% if has_background_image %}
+  style="--hero-image: url('{{ image }}')"
+  {% endif %}>
+    <div class="bix-hero__container bix-container">
+      {% if image_inline and image %}
+        <div class="bix-hero__media">
+          <img src="{{ image }}" alt="" width="530px">
+        </div>
+      {% endif %}
 
-  <style>
-    :scope {
-      background-image: radial-gradient(
-          circle,
-          rgb(0 0 0 / 48%) 0%,
-          rgb(0 0 0 / 0%) 100%
-        ), url('{{ image }}');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
+      {# Content wrapper for inline image variant. #}
+      {% if image_inline %}<div class="bix-hero__content">{% endif %}
 
-  <div class="bix-hero__container">
-    {% if title %}
-    <{{ heading_type }} class="bix-hero__title">
-      {{ title | default("Hero title") }}
-    </{{ heading_type }}>
-    {% endif %}
+      {# Header section #}
+      <div class="bix-hero__header">
+        {% if eyebrow %}
+          <div class="bix-title-prefix">{{ eyebrow }}</div>
+        {% endif %}
+
+        {% if title %}
+        <{{ heading_type }} class="bix-hero__title">
+          {{ title | default("Hero title") }}
+        </{{ heading_type }}>
+        {% endif %}
+
+        {% if subtitle %}
+        <{{ sub_heading_type }}>{{ subtitle }}</{{ sub_heading_type }}>
+        {% endif %}
+      </div>
+      {# /Header #}
+
+      {# Body #}
+      {% if description %}
+      <div class="bix-hero__body">
+        <p>
+          {{ description }}
+        </p>
+      </div>
+      {% endif %}
+      {# /Body #}
+
+      {# Footer #}
+      {% if cta_exists %}
+        <div class="bix-hero__footer">
+          <div class="bix-hero__cta">
+            <a href="{{ cta.href }}">
+              {{ cta.label }}
+              {{ source("icons/arrow-right.svg") }}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      {# /Footer #}
+
+      {# Content wrapper for inline image variant. #}
+      {% if image_inline %}</div>{% endif %}
     </div>
 </section>
-
-{% else %}
-  {% include "@components/hero/hero--image-inline.html.twig" %}
-{% endif %}
+{# {% endif %} #}

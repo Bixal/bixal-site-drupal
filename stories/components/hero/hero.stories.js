@@ -9,6 +9,30 @@ export default {
   args: Content,
 };
 
+const simpleHeroContent = {
+  eyebrow: "Case Study",
+  title: "FEMA's life-saving mission",
+  subtitle: "Educating the public on FEMA's life-saving mission through high-impact visual storytelling",
+}
+
+export const Default = {
+  args: simpleHeroContent
+};
+
+export const Primary = {
+  args: {
+    ...Default.args,
+    variant: "primary",
+  },
+};
+
+export const PrimaryAlt = {
+  args: {
+    ...Default.args,
+    variant: "primary-alt",
+  },
+};
+
 export const BackgroundImage = {
   args: {
     variant: "image-bg",
