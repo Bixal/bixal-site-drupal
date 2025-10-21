@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "chromatic": "chromatic --exit-zero-on-changes",
     "format:styles": "prettier './**/*.scss' --check",
     "format:styles:fix": "prettier './**/*.scss' --write",
     "lint:styles": "stylelint './**/*.scss'",
@@ -38,6 +39,7 @@
     "@storybook/icons": "1.4.0",
     "@storybook/test": "8.6.14",
     "@uswds/uswds": "3.13.0",
+    "chromatic": "13.1.4",
     "prettier": "3.6.2",
     "sass": "1.89.2",
     "storybook": "8.6.14",
