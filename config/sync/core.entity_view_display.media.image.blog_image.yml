@@ -5,21 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.media.blog_image
     - field.field.media.image.field_media_image
-    - image.style.blog_image
     - media.type.image
+    - responsive_image.styles.blurb
   module:
-    - image
+    - responsive_image
 id: media.image.blog_image
 targetEntityType: media
 bundle: image
 mode: blog_image
 content:
   field_media_image:
-    type: image
+    type: responsive_image
     label: visually_hidden
     settings:
-      image_link: ''
-      image_style: blog_image
+      responsive_image_style: blurb
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }
