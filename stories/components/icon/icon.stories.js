@@ -61,7 +61,7 @@ export const AllSizes = {
 export const CircleBase = {
   ...AllSizes,
   args: {
-    circle: true
+    circle: true,
   },
 };
 
@@ -69,7 +69,7 @@ export const CirclePrimary = {
   ...CircleBase,
   args: {
     ...CircleBase.args,
-    background: "primary"
+    background: "primary",
   },
 };
 
@@ -77,7 +77,7 @@ export const CirclePrimaryAlt = {
   ...CircleBase,
   args: {
     ...CircleBase.args,
-    background: "primary-alt"
+    background: "primary-alt",
   },
 };
 
@@ -85,7 +85,7 @@ export const CircleAccentCool = {
   ...CircleBase,
   args: {
     ...CircleBase.args,
-    background: "accent-cool"
+    background: "accent-cool",
   },
 };
 
@@ -93,7 +93,7 @@ export const CircleAccentWarm = {
   ...CircleBase,
   args: {
     ...CircleBase.args,
-    background: "accent-warm"
+    background: "accent-warm",
   },
 };
 
@@ -101,6 +101,6 @@ export const CircleAccentVivid = {
   ...CircleBase,
   args: {
     ...CircleBase.args,
-    background: "accent-vivid"
+    background: "accent-vivid",
   },
 };
