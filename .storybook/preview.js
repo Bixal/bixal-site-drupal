@@ -1,7 +1,7 @@
 import "./docs.css";
 import "../stories/assets/styles/global/global.scss";
 
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 const preview = {
   parameters: {
     a11y: {
