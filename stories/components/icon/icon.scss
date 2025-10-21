@@ -1,1 +1,55 @@
+@use "uswds-core" as *;
 @forward "usa-icon";
+
+.bix-icon {
+  --_icon-color: var(--icon-color, currentColor);
+
+  color: var(--_icon-color);
+}
+
+.bix-icon--circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+}
+
+.bix-icon--circle,
+:where([class*="bix-icon--bg-"]) {
+  --_icon-bg-color: var(--icon-bg-color, var(--c-base));
+
+  background-color: var(--_icon-bg-color);
+  box-sizing: content-box;
+  padding: 1rem;
+}
+
+// Scale padding based on icon size.
+// Use this approach in favor of container queries because of the need for multiple media queries ended up needing more CSS.
+@for $i from 3 through 9 {
+  :where([class*="bix-icon--bg-"], .bix-icon--circle).usa-icon--size-#{$i} {
+    padding: calc(0.12rem * $i);
+  }
+}
+
+.bix-icon--bg-primary {
+  --icon-bg-color: var(--c-primary);
+  --icon-color: var(--c-accent-cool);
+}
+
+.bix-icon--bg-primary-alt {
+  --icon-bg-color: var(--c-primary-alt);
+  --icon-color: var(--c-accent-warm);
+}
+
+.bix-icon--bg-accent-cool {
+  --icon-bg-color: var(--c-accent-cool);
+  --icon-color: var(--c-primary);
+}
+
+.bix-icon--bg-accent-warm {
+  --icon-bg-color: var(--c-accent-warm);
+  --icon-color: var(--c-accent-warm-dark);
+}
+
+.bix-icon--bg-accent-vivid {
+  --icon-bg-color: var(--c-accent-vivid);
+  --icon-color: var(--c-primary);
+}

@@ -7,6 +7,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         loadPaths: ["./node_modules/@uswds/uswds/packages"],
+        quietDeps: true, // Silences deprecations that aren't ours.
       },
     },
   },

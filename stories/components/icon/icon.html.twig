@@ -3,6 +3,8 @@
   * USA Icon component
   *
   * Available variables:
+  * - circle (boolean, optional): Round icon with padding.
+  * - background (string, optional): The brand background color, includes: "primary", "primary-alt", "accent-cool", "accent-warm", and "accent-vivid."
   * - icon_path (string, optional): The path to the USWDS SVG sprite. StorybookJS resolves via `staticDirs` option.
   * - icon_name(string, optional): The name of the icon. Defaults to "assessment."
   * - icon_size(string, optional): The size of the icon.
@@ -20,6 +22,9 @@
 
 {% set icon_classes = [
   "usa-icon",
+  "bix-icon",
+  (circle ? "bix-icon--circle"),
+  (background ? "bix-icon--bg-" ~ background),
   (icon_size ? "usa-icon--size-" ~ icon_size),
 ]| merge(additional_classes | default([])) %}
 

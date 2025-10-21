@@ -29,6 +29,13 @@ export default {
 // Default story
 export const Default = {};
 Default.args = {};
+Default.decorators = [
+  (Story, { args }) => `
+    <div style="color: ${args.color || "initial"};">
+      ${Story()}
+    </div>
+  `,
+];
 
 export const AllIcons = {
   args: {
@@ -38,6 +45,62 @@ export const AllIcons = {
   render: IconDemo,
 };
 
-export const AllSizes = () => {
-  return unitSizes.map((size) => Icon({ icon_size: size })).join("");
+export const AllSizes = {
+  decorators: [
+    (Story, { args }) => `
+      <div
+        style="color: ${args.color || "initial"}; display: flex; column-gap: 1rem; align-items: baseline;">
+        ${Story()}
+      </div>
+    `,
+  ],
+  render: (args) =>
+    unitSizes.map((size) => Icon({ ...args, icon_size: size })).join(""),
+};
+
+export const CircleBase = {
+  ...AllSizes,
+  args: {
+    circle: true
+  },
+};
+
+export const CirclePrimary = {
+  ...CircleBase,
+  args: {
+    ...CircleBase.args,
+    background: "primary"
+  },
+};
+
+export const CirclePrimaryAlt = {
+  ...CircleBase,
+  args: {
+    ...CircleBase.args,
+    background: "primary-alt"
+  },
+};
+
+export const CircleAccentCool = {
+  ...CircleBase,
+  args: {
+    ...CircleBase.args,
+    background: "accent-cool"
+  },
+};
+
+export const CircleAccentWarm = {
+  ...CircleBase,
+  args: {
+    ...CircleBase.args,
+    background: "accent-warm"
+  },
+};
+
+export const CircleAccentVivid = {
+  ...CircleBase,
+  args: {
+    ...CircleBase.args,
+    background: "accent-vivid"
+  },
 };
