@@ -25,8 +25,21 @@
 
 {% if not image_inline %}
 <section
-  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}"
-  style="background-image: url('{{ image }}')">
+  class="bix-hero {% if variant %}bix-hero--{{ variant }}{% endif %}">
+
+  <style>
+    :scope {
+      background-image: radial-gradient(
+          circle,
+          rgb(0 0 0 / 48%) 0%,
+          rgb(0 0 0 / 0%) 100%
+        ), url('{{ image }}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+
   <div class="bix-hero__container">
     {% if title %}
     <{{ heading_type }} class="bix-hero__title">
