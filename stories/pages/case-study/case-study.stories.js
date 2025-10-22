@@ -1,9 +1,8 @@
 import CaseStudy from "./case-study.html.twig";
 
 import * as Header from "../../components/header/header.stories";
-import "../../components/hero/hero.stories";
+import * as Hero from "../../components/hero/hero.stories";
 import * as ContactUs from "../../components/contact-us/contact-us.stories";
-import "../../components/footer/footer.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
 export default {
@@ -14,15 +13,7 @@ export default {
 export const Default = {
   args: {
     header: Header.default.args,
-    sections: [
-      {
-        variant: "primary-alt",
-        heading_type: "h1",
-        prefix: "Department of Labor and Education",
-        title:
-          "Working for Americans: Bixal helps transform WIOA state plan portal",
-      },
-      {
+    hero: Hero.PrimaryAlt.args,
         body: `
           <h2 class="bix-section__title">Introduction</h2>
           <p>
