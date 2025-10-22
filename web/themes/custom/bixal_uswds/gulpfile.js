@@ -124,8 +124,8 @@ function watchSass() {
 // Remove the compiled assets. This will help show errors early if the build
 // process is broken and the site is simply using the old files.
 function clean() {
-  log(colors.blue, 'Clearing out the dist folder')
-  return deleteAsync('dist/**');
+  log(colors.blue, "Clearing out the dist folder");
+  return deleteAsync("dist/**");
 }
 
 /**
