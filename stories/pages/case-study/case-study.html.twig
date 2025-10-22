@@ -7,5 +7,27 @@
   {% include "@pages/case-study/_case-study-glance.html.twig" with glance %}
 
   {% include "@pages/case-study/_case-study-highlight.html.twig" with highlight %}
-  {% endfor %}
+
+  <div class="bix-section">
+    <div class="bix-container">
+      <div class="bix-prose">
+        {{ body }}
+      </div>
+
+      <div class="case-study__features bix-grid bix-grid--gap-lg bix-grid:tablet--thirds margin-top-5">
+      {% for item in features %}
+        <div class="bix-grid__item">
+          {% include "@components/icon/icon.html.twig" with {
+            icon_name: item.icon.name,
+            circle: true,
+            icon_size: item.icon.size,
+            background: item.icon.background
+          } %}
+          <h3>{{ item.heading }}</h3>
+          <p>{{ item.body }}</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

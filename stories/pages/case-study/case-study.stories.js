@@ -6,6 +6,7 @@ import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
 import "../../components/emphasis-block/emphasis-block.stories";
+import "../../components/icon/icon.stories";
 
 export default {
   title: "Pages/Case Studies/Case Study",
@@ -68,33 +69,63 @@ export const Default = {
       title: "#PartofSomethingBigger",
       body: "From stakeholder interviews, the importance of their work generated the #PartofSomethingBigger theme. This theme was subsequently used to design the product and the corresponding copy and imagery displayed on HHS.gov/careers."
     },
-        body: `
-          <h2 class="bix-section__title">Introduction</h2>
-          <p>
-            The Workforce Innovation and Opportunity Act (WIOA) is designed to strengthen the public workforce system by expanding access to education and training, helping employers hire and retain skilled workers, and creating opportunities for Americans — especially those with significant barriers to employment—to thrive in high-quality careers.
-          </p>
-          <h2 class="bix-section__title">Challenge</h2>
-          <p>
-            WIOA requires all U.S. states, territories, and the District of Columbia to regularly submit State Plans outlining how the workforce development system will be implemented. The WIOA State Plan Portal facilitates this process from draft to publication, connecting state and local partners with several federal agencies, including the Departments of Education (ED), and Labor (DOL). Funding is contingent on states having approved plans.
-          </p>
-          <p>
-            In 2018, ED and DOL awarded Bixal the contract to streamline the submission process with a comprehensive upgrade of the platform. The legacy site lacked crucial functionalities, making WIOA compliance burdensome for stakeholders on all sides. Bixal and our federal partners committed to co-creating a robust, user-friendly platform that would remain nimble for years to come.
-          </p>
-          <h2 class="bix-section__title">Solution</h2>
-          <p>
-            Bixal began by auditing the user experience (UX) across the State Plan lifecycle, building a solid foundation for holistic UX that adheres to the highest standards of accessibility, in order to translate customer needs into optimized functionality and processes.
-          </p>
-          <strong>Key aspects of our solution included:</strong>
+    body: `
+      <h2>Introduction</h2>
+      <p>
+        The Workforce Innovation and Opportunity Act (WIOA) is designed to strengthen the public workforce system by expanding access to education and training, helping employers hire and retain skilled workers, and creating opportunities for Americans — especially those with significant barriers to employment—to thrive in high-quality careers.
+      </p>
+      <h2>Challenge</h2>
+      <p>
+        WIOA requires all U.S. states, territories, and the District of Columbia to regularly submit State Plans outlining how the workforce development system will be implemented. The WIOA State Plan Portal facilitates this process from draft to publication, connecting state and local partners with several federal agencies, including the Departments of Education (ED), and Labor (DOL). Funding is contingent on states having approved plans.
+      </p>
+      <p>
+        In 2018, ED and DOL awarded Bixal the contract to streamline the submission process with a comprehensive upgrade of the platform. The legacy site lacked crucial functionalities, making WIOA compliance burdensome for stakeholders on all sides. Bixal and our federal partners committed to co-creating a robust, user-friendly platform that would remain nimble for years to come.
+      </p>
+      <h2>Solution</h2>
+      <p>
+        Bixal began by auditing the user experience (UX) across the State Plan lifecycle, building a solid foundation for holistic UX that adheres to the highest standards of accessibility, in order to translate customer needs into optimized functionality and processes.
+      </p>
+      <strong>Key aspects of our solution included:</strong>
+      <ul>
+        <li>Building an application to manage creation, modification, and year-to-year traceability of thousands of requirements.</li>
+        <li>Developing templates for individual state plans, supported by rigorous, multi-tiered, role-based workflow.</li>
+        <li>Integrating nearly 60,000 pages of data into a single, easily navigable site.</li>
+        <li>Pivoting several times to meet new and emerging security and governance requirements, for example:
           <ul>
-            <li>Building an application to manage creation, modification, and year-to-year traceability of thousands of requirements.</li>
-            <li>Developing templates for individual state plans, supported by rigorous, multi-tiered, role-based workflow.</li>
-            <li>Integrating nearly 60,000 pages of data into a single, easily navigable site.</li>
-            <li>Pivoting several times to meet new and emerging security and governance requirements, for example:
-              <ul>
-                <li>Pivoted to Acquia cloud-based hosting as a service (PaaS) when the ED platform faced delays.</li>
-                <li>Integrated login.gov to comply with new OMB directive.</li>
-              </ul>
-            </li>
+            <li>Pivoted to Acquia cloud-based hosting as a service (PaaS) when the ED platform faced delays.</li>
+            <li>Integrated login.gov to comply with new OMB directive.</li>
+          </ul>
+        </li>
+      </ul>`,
+      features: [
+        {
+          icon: {
+            name: "code",
+            background: "primary",
+            size: 6,
+          },
+          heading: "Technology",
+          body: "Drupal 9, USAJOBS API, React.js, Leaflet Map API"
+        },
+        {
+          icon: {
+            name: "assessment",
+            background: "primary",
+            size: 6,
+          },
+          heading: "Methodology",
+          body: "We used Agile methodology and Scrum framework.",
+        },
+        {
+          icon: {
+            name: "support_agent",
+            background: "primary",
+            size: 6,
+          },
+          heading: "Customer Support",
+          body: "To support customers, we developed a go-to-market project plan and social media toolkit for the product launch."
+        },
+      ],
       impact: {
         variant: "base",
         prefix: "Impact",
