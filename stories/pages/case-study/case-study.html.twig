@@ -3,5 +3,9 @@
 {% block content %}
 
   {% include "@pages/case-study/_case-study-meta.html.twig" with meta %}
+
+  {% include "@pages/case-study/_case-study-glance.html.twig" with glance %}
+
+  {% include "@pages/case-study/_case-study-highlight.html.twig" with highlight %}
   {% endfor %}
 {% endblock %}

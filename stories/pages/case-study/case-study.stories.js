@@ -56,6 +56,18 @@ export const Default = {
         }
       ],
     },
+    glance: {
+      title: `At a glance`,
+      challenge: "Over the years, FEMA has built an extensive video library. Yet, the American public still was not engaging with its mission or messages. The agency wanted and needed a more cohesive way of telling its story to ensure the core outcome - reaching and educating the American public on its roles and responsibilities - was met.",
+      solution: "Our team recognized the opportunity to provide clearer messaging and better brand consistency through video storytelling, expanding the reach and deepening engagement with core audiences on the great work FEMA does.",
+      results: "Bixal created a cohesive, branded multimedia template library and produced multiple high-impact, Section 508 compliant videos that showcase FEMA’s life-saving work as part of a broader effort to share their message on the agency’s role after disasters strike. Our collaborative work on the animated piece — “Building a Resilient Nation” — won a 2020 Bronze Telly Award."
+    },
+    highlight: {
+      variant: "accent-vivid",
+      prefix: "Highlight",
+      title: "#PartofSomethingBigger",
+      body: "From stakeholder interviews, the importance of their work generated the #PartofSomethingBigger theme. This theme was subsequently used to design the product and the corresponding copy and imagery displayed on HHS.gov/careers."
+    },
         body: `
           <h2 class="bix-section__title">Introduction</h2>
           <p>
@@ -83,47 +95,22 @@ export const Default = {
                 <li>Integrated login.gov to comply with new OMB directive.</li>
               </ul>
             </li>
-          </ul>
-          `,
+      impact: {
+        variant: "base",
+        prefix: "Impact",
+        title: "A more consistent voice",
+        center_content: true,
+        body: "Bixal’s team provided an improved approach to FEMA’s video library and assisted the agency in building a more consistent voice for their brand with more in-depth and engaging narratives."
       },
-      {
-        variant: "accent-cool",
-        title: "Impact",
-        body: `
-          <strong>State Plan submission processes optimized:</strong>
-          <ul>
-            <li>Thousands of previously separate grant requirements for every state &mdash; spread across nine offices within five agencies, a total of 15 programs &mdash; streamline into a single grant process.</li>
-            <li>All plan elements from previous plan years (2016 and 2018) readily available for reference and knowledge management.
-              <ul>
-                <li>Complex workflow management controls who can view, comment, or edit portions of a State Plan based on role and plan status</li>
-              </ul>
-            </li>
-            <li>
-              The upgraded State Plan Portal gives federal teams shared visibility into workforce development needs in and across states and regions, allowing for integrated and comprehensive approaches in addressing businesses' and workers' needs.
-            </li>
-            <li>
-              Improved user experience, as reflected in consistently and enthusiastically positive stakeholder feedback.
-            </li>
-          </ul>
-          <strong>Upgraded functionality features of State Plan Portal include:</strong>
-          <ul>
-            <li>Multi-factor authentication.</li>
-            <li>Multi-tier moderation.</li>
-            <li>Overhauled reporting tools provide a reliable audit trail.</li>
-            <li>Dashboards meet users' changing needs.</li>
-          </ul>
-        `,
-      },
-      {
+      conclusion: {
         variant: "primary-alt",
         title: "Conclusion",
         body: `
           <p>
-            Bixal's work for ED and DOL made it much easier for state and local partners to adhere to WIOA's provisions, facilitated the created of more and better career paths for all Americans, in particular those facing significant hurdles to employment, and demonstrated how well federal agencies can work for the people they serve when they lead with human-centered design and an ethos of constant improvement.
+            This was not a simple application website. Bixal delivered a website telling the story of HHS employees and provided a refreshed user experience for potential HHS employees. Much research and engagement went into the discovery to deliver valuable results to the OHR.
         </p>
         `,
       },
-    ],
     contactContent: ContactUs.default.args,
     footerContent: FooterContent.default.args,
   },
