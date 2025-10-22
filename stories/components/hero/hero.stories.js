@@ -12,11 +12,12 @@ export default {
 const simpleHeroContent = {
   eyebrow: "Case Study",
   title: "FEMA's life-saving mission",
-  subtitle: "Educating the public on FEMA's life-saving mission through high-impact visual storytelling",
-}
+  subtitle:
+    "Educating the public on FEMA's life-saving mission through high-impact visual storytelling",
+};
 
 export const Default = {
-  args: simpleHeroContent
+  args: simpleHeroContent,
 };
 
 export const Primary = {
