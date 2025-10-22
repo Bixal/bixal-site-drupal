@@ -2,7 +2,6 @@
 
 {% block content %}
 
-  {% for section in sections %}
-    {% include "@components/section/section.html.twig" with section %}
+  {% include "@pages/case-study/_case-study-meta.html.twig" with meta %}
   {% endfor %}
 {% endblock %}

@@ -5,6 +5,8 @@ import * as Hero from "../../components/hero/hero.stories";
 import * as ContactUs from "../../components/contact-us/contact-us.stories";
 import * as FooterContent from "../../components/footer/footer.stories";
 
+import "../../components/emphasis-block/emphasis-block.stories";
+
 export default {
   title: "Pages/Case Studies/Case Study",
   component: CaseStudy,
@@ -14,6 +16,46 @@ export const Default = {
   args: {
     header: Header.default.args,
     hero: Hero.PrimaryAlt.args,
+    meta: {
+      additional_classes: ["case-study__meta"],
+      size: "sm",
+      "blocks": [
+        {
+          align: "left",
+          title: "Profile",
+          body: `
+          <h4>Partners</h4>
+          <ul>
+            <li>U.S. Department of Homeland Security (DHS)</li>
+            <li>Federal Emergency Management Agency (FEMA)</li>
+            
+          </ul>
+          <h4>Domain</h4>
+          <ul>
+            <li>FEMA.gov</li>
+          </ul>`
+        },
+        {
+          align: "left",
+          title: "Services",
+          prefix: null,
+          href: null,
+          postfix: null,
+          body: `
+          <ul>
+            <li>Agile Project Management</li>
+            <li>Content Strategy</li>
+            <li>Marketing Research</li>
+            <li>Copywriting</li>
+            <li>Accessibility/Section 508 Compliance</li>
+            <li>Web Modernization</li>
+            <li>Human-Centered Design and Customer Experience</li>
+            <li>Plain Language Writing</li>
+            <li>Drupal Web Development</li>
+          </ul>`
+        }
+      ],
+    },
         body: `
           <h2 class="bix-section__title">Introduction</h2>
           <p>
