@@ -3,3 +3,4 @@ web/libraries/**
 web/modules/contrib/**
 web/core/**
 node_modules/**
+storybook-static/**

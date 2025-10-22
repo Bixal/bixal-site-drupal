@@ -129,7 +129,7 @@ h1 {
 h2 {
   @include heading-border;
 
-  font-size: px-to-rem(28px);
+  font-size: px-to-rem(24px);
   font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: units(4);

@@ -2,9 +2,6 @@
 @use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-hero {
-  align-items: center;
-  display: grid;
-  justify-content: center;
   padding: 40px 0;
 
   @include at-media("desktop") {
@@ -13,54 +10,43 @@
 
   &__container {
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   &__body p:last-child {
-    margin-bottom: 0;
-    font-size: 1.6rem;
+    margin-block-end: 0;
+    font-size: size("body", "lg");
   }
+}
+
+.bix-hero--primary {
+  background-color: var(--c-primary);
+  color: white;
+}
+
+.bix-hero--primary-alt {
+  background-color: var(--c-primary-alt);
+  color: white;
 }
 
 // ==========================================================================
 // Hero with background image
 // ==========================================================================
-%hero-gradient-overlay {
-  content: "";
-  background-image: radial-gradient(
-    circle,
-    rgb(0 0 0 / 48%) 0%,
-    rgb(0 0 0 / 0%) 100%
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 
+// Image styles set via scope in stories/components/hero/hero.html.twig.
 .bix-hero--image-bg {
+  --hero-image: "";
+
+  background-image:
+    radial-gradient(circle, rgb(0 0 0 / 48%) 0%, rgb(0 0 0 / 0%) 100%),
+    var(--hero-image);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  color: color("white");
+  place-content: center;
   min-height: 400px;
-  overflow: hidden;
-  position: relative;
-
-  &::before {
-    @extend %hero-gradient-overlay;
-  }
-
-  .bix-hero__container {
-    z-index: 1;
-  }
-
-  .bix-hero__title {
-    color: color("white");
-    text-align: center;
-  }
+  text-align: center;
 
   @include at-media("desktop") {
     min-height: 600px;
@@ -82,14 +68,14 @@
       align-items: end;
     }
 
-    @include at-media("desktop") {
+    @include at-media("widescreen") {
       grid-template-columns: minmax(400px, 1fr) 4fr;
     }
   }
 
   .bix-hero__media {
     @include at-media-max("tablet-lg") {
-      margin-bottom: units(4);
+      margin-block-end: units(4);
     }
   }
 
