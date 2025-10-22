@@ -1,5 +1,15 @@
+# Build scripts
+orch/
+
+# Copied files
 web/themes/custom/bixal_uswds/src/sass/storybook-sass/**
+web/themes/custom/bixal_uswds/src/js/storybook-js/**
+
+# Drupal files
 web/libraries/**
 web/modules/contrib/**
+web/themes/contrib/**
 web/core/**
+
+# Node
 node_modules/**

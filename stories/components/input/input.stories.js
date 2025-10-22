@@ -1,7 +1,4 @@
 import Input from "./input.html.twig";
-// import "./example-component.scss";
-
-import infoIcon from "@uswds/uswds/img/usa-icons/info_outline.svg";
 
 export default {
   title: "Components/Form/Input",

@@ -40,8 +40,8 @@ export const AlignLeft = {
       <li>Plain Language Writing </li>
       <li>Drupal Web Development</li>
     </ul>
-    `
-  }
+    `,
+  },
 };
 
 export const Primary = {
@@ -50,7 +50,8 @@ export const Primary = {
     prefix: "Highlight",
     href: null,
     title: "#PartofSomethingBigger",
-    postfix: "From stakeholder interviews, the importance of their work generated the #PartofSomethingBigger theme. This theme was subsequently used to design the product and the corresponding copy and imagery displayed on HHS.gov/careers.",
+    postfix:
+      "From stakeholder interviews, the importance of their work generated the #PartofSomethingBigger theme. This theme was subsequently used to design the product and the corresponding copy and imagery displayed on HHS.gov/careers.",
   },
 };
 
