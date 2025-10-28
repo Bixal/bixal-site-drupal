@@ -1,0 +1,15 @@
+uuid: b1c76ad5-7d81-40e9-8137-f027106df677
+langcode: en
+status: true
+dependencies: {  }
+name: description_list
+label: 'Description list'
+effects:
+  ad6463b4-e449-4a12-8a19-37d1c56af210:
+    uuid: ad6463b4-e449-4a12-8a19-37d1c56af210
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 439
+      height: 222
+      anchor: center-center
