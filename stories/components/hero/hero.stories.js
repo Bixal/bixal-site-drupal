@@ -13,7 +13,7 @@ const simpleHeroContent = {
   eyebrow: "Case Study",
   title: "FEMA's life-saving mission",
   subtitle:
-    "Educating the public on FEMA's life-saving mission through high-impact visual storytelling",
+    "Testing the publish StorybookJS workfow.",
 };
 
 export const Default = {
