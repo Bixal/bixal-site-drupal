@@ -166,6 +166,15 @@
     @include at-media("tablet") {
       flex-flow: row;
     }
+
+    a ~ a::before {
+      display: inline-flex;
+      content: "|";
+      position: relative;
+      left: -0.5rem;
+      text-decoration: none;
+      pointer-events: none;
+    }
   }
 }
 
