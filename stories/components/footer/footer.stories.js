@@ -13,7 +13,7 @@ export default {
   args: {
     logo: {
       src: "/static/img-b-footer.png",
-      alt: "Bixal Logo letter B silhouette around a photo of a smiling child"
+      alt: "Bixal Logo letter B silhouette around a photo of a smiling child",
     },
     columns: [
       {
@@ -22,13 +22,13 @@ export default {
           <p>Looking to join our team? Check out our openings.</p>
           <p>
             ${Button({
-                variant: "inverse",
-                label: "Learn more",
-                href: "/careers",
-                icon: "arrow-right",
-              })}
+              variant: "inverse",
+              label: "Learn more",
+              href: "/careers",
+              icon: "arrow-right",
+            })}
           </p>
-        `
+        `,
       },
       {
         title: "Headquarters",
@@ -40,7 +40,7 @@ export default {
             <a href="tel:1.703.634.5701">703.634.5701</a>
             <a href="mailto:info@bixal.com">info@bixal.com</a>
           </p>
-        `
+        `,
       },
       {
         title: "Accreditations",
@@ -78,39 +78,39 @@ export default {
           <img width="100" src="/static/cmmi-maturity-level-3-color-small.png" alt="Capability Maturity Model Integration Level 3 logo">
           <img width="75" alt="Drupal Certified Bronze Partner" src="https://www.bixal.com/sites/default/files/accreditations/association_certified_bronze_badge.svg">
         </div>
-      </ul>`
+      </ul>`,
       },
     ],
     siteNav: [
       {
         label: "Our work",
-        href: "#"
+        href: "#",
       },
       {
         label: "Contract vehicles",
-        href: "#"
+        href: "#",
       },
       {
         label: "Careers",
-        href: "#"
+        href: "#",
       },
       {
         label: "Blog",
-        href: "#"
+        href: "#",
       },
       {
         label: "About Bixal",
-        href: "#"
+        href: "#",
       },
     ],
     legalNav: [
       {
         label: "Accessibility Statement",
-        href: "#"
+        href: "#",
       },
       {
         label: "Privacy Policy",
-        href: "#"
+        href: "#",
       },
     ],
     socialNav: {
@@ -125,6 +125,6 @@ export const Default = {};
 export const WithoutSiteNav = {
   args: {
     ...Default.args,
-    siteNav: null
-  }
+    siteNav: null,
+  },
 };
