@@ -121,3 +121,10 @@ export default {
 };
 
 export const Default = {};
+
+export const WithoutSiteNav = {
+  args: {
+    ...Default.args,
+    siteNav: null
+  }
+};

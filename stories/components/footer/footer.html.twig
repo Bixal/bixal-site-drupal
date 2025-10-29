@@ -56,7 +56,6 @@
         {% if legalNav %}
           {% for item in legalNav %}
             <a href="{{ item.href }}">{{ item.label }}</a>
-            {% if not loop.last %}|{% endif %}
           {% endfor %}
         {% else %}
           {{ legal_nav_cl }}
