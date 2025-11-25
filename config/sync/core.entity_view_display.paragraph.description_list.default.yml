@@ -7,10 +7,8 @@ dependencies:
     - field.field.paragraph.description_list.field_description_list_variant
     - field.field.paragraph.description_list.field_image
     - field.field.paragraph.description_list.field_title
-    - image.style.description_list
     - paragraphs.paragraphs_type.description_list
   module:
-    - media
     - options
 id: paragraph.description_list.default
 targetEntityType: paragraph
@@ -33,13 +31,11 @@ content:
     weight: 3
     region: content
   field_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: description_list
-      image_loading:
-        attribute: lazy
+      view_mode: description_list
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content
