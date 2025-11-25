@@ -75,3 +75,4 @@ cd46813173f87ca66c1e8c2d4221ea35|Matt Poole|feature/BSD-480-update-deps|Wed Jun 
 53f7a8b9a143f6e4b08ea24d3178460b|Matt Poole|feature/BSD-489-update-deps|Wed Sep  3 16:55:26 EDT 2025|./composer.sh update
 e99e6bb0c00922b7fc2730ef4325df42|Matt Poole|feature/BSD-520-update-deps|Thu Oct 23 09:33:52 EDT 2025|./composer.sh update
 e904de9a7612689ecf0f0c9d6385f7e0|James Mejia|feature/BSD-530-drupal-update|Tue Nov 25 10:26:23 CST 2025|./composer.sh update
+4bdc53e9bdf944fbe3f4ff340468bb8d|James Mejia|feature/BSD-530-drupal-update|Tue Nov 25 11:44:34 CST 2025|./composer.sh require drupal/media_remote_hls:^1.1
