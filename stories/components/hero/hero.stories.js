@@ -12,8 +12,7 @@ export default {
 const simpleHeroContent = {
   eyebrow: "Case Study",
   title: "FEMA's life-saving mission",
-  subtitle:
-    "Testing the publish StorybookJS workfow.",
+  subtitle: "Testing the publish StorybookJS workfow.",
 };
 
 export const Default = {
