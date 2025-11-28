@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import { defineConfig } from "eslint/config";
 import eslintRecommended from "@eslint/js"; // Recommended base JS config.
 import globals from "globals"; // Standard globals sets, like browser and node globals.
