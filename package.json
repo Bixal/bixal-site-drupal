@@ -34,6 +34,7 @@
   "homepage": "https://github.com/Bixal/bixal-site-drupal#readme",
   "devDependencies": {
     "@storybook/addon-a11y": "10.1.1",
+    "@storybook/addon-docs": "10.1.1",
     "@storybook/addon-links": "10.1.1",
     "@storybook/html-vite": "10.1.1",
     "@storybook/icons": "2.0.1",
@@ -41,6 +42,7 @@
     "chromatic": "13.3.4",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-storybook": "10.1.1",
     "globals": "16.5.0",
     "prettier": "3.7.1",
     "sass": "1.94.2",
@@ -48,8 +50,6 @@
     "stylelint": "16.26.1",
     "stylelint-config-standard-scss": "16.0.0",
     "stylelint-prettier": "5.0.3",
-    "vite-plugin-twig-drupal": "1.6.2",
-    "@storybook/addon-docs": "10.1.1",
-    "eslint-plugin-storybook": "10.1.1"
+    "vite-plugin-twig-drupal": "1.6.2"
   }
 }
