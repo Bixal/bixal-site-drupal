@@ -2,6 +2,7 @@
 @use "sass:list";
 @use "uswds-core" as *;
 @use "../utils/mixins/heading-border" as *;
+@forward "../utils/helpers";
 
 // Modern normalize - CSS Reset.
 @import "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css";
@@ -145,20 +146,12 @@ h3 {
   font-size: px-to-rem(24px);
   letter-spacing: -0.5px;
   margin-top: units(3);
-
-  @include at-media("tablet") {
-    font-size: px-to-rem(30px);
-  }
 }
 
 h4 {
   font-size: px-to-rem(20px);
   letter-spacing: -0.5px;
   margin-top: units(2);
-
-  @include at-media("tablet") {
-    font-size: px-to-rem(24px);
-  }
 }
 
 h5 {
@@ -281,6 +274,8 @@ a {
 }
 
 p {
+  text-wrap-style: pretty;
+
   // Improves readability in word breaks.
   &[lang="en"] {
     hyphens: auto;
@@ -494,14 +489,14 @@ $project-active-uswds-breakpoints: ();
 .bix-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: units(1);
+  gap: units(2);
 
   &--halves {
     grid-template-columns: repeat(2, 50%);
   }
 
   &--thirds {
-    grid-template-columns: repeat(3, 33.33%);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &--fourths {
@@ -517,7 +512,7 @@ $project-active-uswds-breakpoints: ();
 
     &\:#{$breakpoint}--thirds {
       @include at-media($breakpoint) {
-        grid-template-columns: repeat(3, 33.33%);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -545,4 +540,20 @@ $project-active-uswds-breakpoints: ();
   &__item--full {
     grid-column: 1 / -1;
   }
+}
+
+.bix-grid--gap-sm {
+  gap: units(1);
+}
+
+.bix-grid--gap-md {
+  gap: units(2);
+}
+
+.bix-grid--gap-lg {
+  gap: units(4);
+}
+
+.bix-grid--gap-xl {
+  gap: units(8);
 }
