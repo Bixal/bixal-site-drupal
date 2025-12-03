@@ -1,0 +1,40 @@
+id: contract_vehicle_landing_page_
+label: 'Contract vehicle landing page!'
+paragraphs:
+  -
+    bundle: section
+    data:
+      field_button:
+        plugin: nested_entities
+        data:
+          -
+            bundle: button
+      field_nested_paragraphs:
+        plugin: nested_entities
+        data:
+          -
+            bundle: wysiwyg
+            field_wysiwyg:
+              -
+                value: '<h2>A Focus on Federal</h2><p>Bixal partners with federal agencies and organizations for two reasons: We believe that everyone has the right to effective government, and we believe that our government has the potential to deliver on its promise of promoting the general welfare of all people. Helping federal agencies create tangible change—by providing an agile, people-first approach to fixing complex organizational issues—is what we do best. Our dedicated teams work with stakeholders to deliver powerful data-driven customer experiences through digital and communications solutions to real-life problems.</p>'
+                format: html_text
+          -
+            bundle: wysiwyg
+            field_wysiwyg:
+              -
+                value: '<h2>Capabilities</h2><p>There’s no better way to reach communities and transform organizations than with effective technology and digital communications. The services we offer start with meaningful dialogue to gain an understanding of user needs and institutional goals and end with effective, customer-centric solutions to even the most intricate of problems.</p>'
+                format: html_text
+          -
+            bundle: wysiwyg
+            field_wysiwyg:
+              -
+                value: '<h2>Contract Vehicles</h2><p>Government agencies can seek our services through several contract vehicles, which are designed to provide an efficient and effective way to procure a range of services—including IT, marketing and communications, administrative management, consulting services, and an array of other professional support products and services—for all contract types.</p>'
+                format: html_text
+          -
+            bundle: view_embed
+            field_view_name:
+              -
+                target_id: '1'
+      field_center_content:
+        -
+          value: 0

@@ -15,6 +15,7 @@ dependencies:
     - media_library_edit
     - metatag
     - paragraphs
+    - paragraphs_sets
     - path
 third_party_settings:
   field_group:
@@ -115,11 +116,18 @@ content:
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
+        convert: '0'
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings:
+      paragraphs_sets:
+        paragraphs_sets:
+          use_paragraphs_sets: true
+          sets_allowed: {  }
+          default_set: _none
   path:
     type: path
     weight: 5
