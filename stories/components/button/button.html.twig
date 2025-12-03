@@ -33,7 +33,7 @@
 ] | merge(additional_classes | default([])) %}
 
 {% set button_inner %}
-  {{ label | default((variant | capitalize | default("Default")) ~ " button")}}
+  {{ label | default("Learn more")}}
   {% if has_icon %}{{ source(icon_path) }}{% endif %}
 {% endset %}
 

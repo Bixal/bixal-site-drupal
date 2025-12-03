@@ -2,11 +2,9 @@
 // https://github.com/jfeltkamp/cookiesjsr/blob/master/README.md#styling
 body #cookiesjsr {
   --c-cookie-color-primary: var(--c-base-darkest);
-
   --banner-bg-color: var(--c-cookie-color-primary);
   --btn-bg-color: var(--c-cookie-color-primary);
   --layer-bg-dark: var(--c-cookie-color-primary);
-
   --switch-handle-color: var(--c-cookie-color-primary);
 
   // Cookie settings popup.
@@ -34,9 +32,11 @@ body #cookiesjsr {
   --btn-prime-bg-color: #000;
   --btn-prime-border-color: #000;
   --btn-prime-font-color: white;
+
   // Buttons in cookie settings.
   --btn-inv-bg-color: #000;
   --btn-inv-font-color: white;
+
   transform: none;
 }
 
@@ -50,6 +50,6 @@ body #cookiesjsr {
   --btn-prime-inv-bg-color: #000;
 }
 
-.cookiesjsr-links.links--row li:before {
-  background-color: currentColor;
+.cookiesjsr-links.links--row li::before {
+  background-color: currentcolor;
 }

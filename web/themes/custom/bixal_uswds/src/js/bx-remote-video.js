@@ -29,7 +29,7 @@
       // Get all video wrap elements.
       const iframeVideos = once(
         "iframe-videos",
-        context.querySelectorAll(".video-wrap")
+        context.querySelectorAll(".video-wrap"),
       );
       // Spread the array to get all iterable items.
       const iframeVideo = [...iframeVideos];
@@ -44,7 +44,7 @@
         // Set the new title with the data added.
         iframeItem.setAttribute(
           "title",
-          videoProvider + Drupal.t(" Video: ") + iframeTitle
+          videoProvider + Drupal.t(" Video: ") + iframeTitle,
         );
 
         // Get width and height of the iframe so we can set the aspect ratio.

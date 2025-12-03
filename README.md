@@ -189,6 +189,24 @@ Run all the validation commands that the pipelines run without needing to push r
 ./robo.sh validate:all
 ```
 
+To check and fix frontend styles run these commands:
+
+```
+npm run format:styles && npm run lint:styles
+```
+
+To automatically fix issues run:
+
+```
+npm run format:styles:fix
+```
+
+```
+npm run lint:styles:fix
+```
+
+Some problems might still need to be fixed by hand.
+
 #### Copy storybook to Drupal theme
 
 Use this command to view changes from Storybook components.

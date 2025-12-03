@@ -1,5 +1,100 @@
 @use "uswds-core" as *;
 
+.bix-emphasis-block {
+  --_emphasis-text-color: var(--emphasis-text-color, #{color("ink")});
+  --_emphasis-background-color: var(--emphasis-background-color, var(--c-base));
+  --_emphasis-link-bg-color: var(
+    --emphasis-link-bg-color,
+    rgb(125 0 150 / 50%)
+  );
+
+  // OKLCH allows for more accessible and easier color manipulation with vars.
+  --_emphasis-border-color: var(
+    --emphasis-border-color,
+    oklch(from var(--_emphasis-text-color) l c h / 20%)
+  );
+
+  align-items: center;
+  background-color: var(--_emphasis-background-color);
+  color: var(--_emphasis-text-color);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-block: units(3);
+  padding-inline: units(6);
+  text-align: center;
+
+  @include at-media("desktop") {
+    padding: units(6) units(9);
+  }
+
+  &__prefix {
+    border-left: 2px solid var(--_emphasis-border-color);
+    border-right: 2px solid var(--_emphasis-border-color);
+    font-weight: 700;
+    font-size: px-to-rem(16px);
+    line-height: 1;
+    margin-block: units("05");
+    padding-inline: units(2);
+    text-transform: uppercase;
+  }
+
+  &__title {
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+    font-family: var(--font-heading);
+    margin-block: units(1) units(2);
+
+    @include at-media("desktop") {
+      font-size: px-to-rem(30px);
+    }
+  }
+
+  &__link {
+    box-shadow: var(--_emphasis-link-bg-color) 0 -2px 0 inset;
+    text-decoration: none;
+    padding-inline: units("05");
+    transition: box-shadow 0.25s;
+
+    &:hover,
+    &:focus {
+      box-shadow: var(--_emphasis-link-bg-color) 0 -100px 0 inset;
+    }
+  }
+}
+
+.bix-emphasis-block--align-left {
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+}
+
+.bix-emphasis-block--primary {
+  --emphasis-text-color: white;
+  --emphasis-background-color: var(--c-primary);
+  --emphasis-link-bg-color: oklch(from var(--c-accent-cool-alt) l c h / 60%);
+}
+
+.bix-emphasis-block--primary-alt {
+  --emphasis-text-color: white;
+  --emphasis-background-color: var(--c-primary-alt);
+  --emphasis-link-bg-color: oklch(from var(--c-primary) l c h / 60%);
+}
+
+.bix-emphasis-block--accent-cool {
+  --emphasis-background-color: var(--c-accent-cool);
+}
+
+.bix-emphasis-block--accent-warm {
+  --emphasis-background-color: var(--c-accent-warm);
+  --emphasis-link-bg-color: oklch(from var(--c-primary-alt) l c h / 60%);
+}
+
+.bix-emphasis-block--accent-vivid {
+  --emphasis-background-color: var(--c-accent-vivid);
+  --emphasis-link-bg-color: oklch(from var(--c-primary) l c h / 60%);
+}
+
 .bix-emphasis-blocks {
   // The grid container.
   &__body {
@@ -23,61 +118,6 @@
   &__footer {
     display: flex;
     justify-content: center;
-    margin-top: units(3);
-  }
-}
-
-.bix-emphasis-block {
-  --_link-bg-color: var(--link-bg-color, rgba(125, 0, 150, 0.5));
-
-  align-items: center;
-  background-color: var(--c-base);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: units(3) units(6);
-  text-align: center;
-
-  @include at-media("desktop") {
-    padding: units(6) units(9);
-  }
-
-  &__prefix {
-    --_border-color: color-mix(in srgb, black, white 75%);
-    border-left: 2px solid var(--_border-color);
-    border-right: 2px solid var(--_border-color);
-    font-weight: 700;
-    font-size: px-to-rem(16px);
-    line-height: 1;
-    margin-top: units("05");
-    margin-bottom: units("05");
-    padding-left: units(2);
-    padding-right: units(2);
-    text-transform: uppercase;
-  }
-
-  &__title {
-    line-height: 1.5;
-    letter-spacing: -0.75px;
-    font-family: var(--font-heading);
-    margin-top: units(1);
-    margin-bottom: units(2);
-
-    @include at-media("desktop") {
-      font-size: px-to-rem(30px);
-    }
-  }
-
-  &__link {
-    box-shadow: var(--_link-bg-color) 0px -2px 0px inset;
-    text-decoration: none;
-    padding-left: units("05");
-    padding-right: units("05");
-    transition: box-shadow 0.25s;
-
-    &:hover,
-    &:focus {
-      box-shadow: var(--_link-bg-color) 0px -100px 0px inset;
-    }
+    margin-block-start: units(3);
   }
 }

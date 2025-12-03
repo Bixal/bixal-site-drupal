@@ -9,7 +9,7 @@
   }
 }
 
-.usa-navbar  {
+.usa-navbar {
   @include at-media-max("desktop") {
     height: units(10);
   }

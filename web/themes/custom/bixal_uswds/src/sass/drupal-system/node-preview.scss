@@ -2,6 +2,7 @@
 
 .node-preview-container {
   @include u-shadow(2);
+
   background-color: color("white");
   position: sticky;
   top: 0;

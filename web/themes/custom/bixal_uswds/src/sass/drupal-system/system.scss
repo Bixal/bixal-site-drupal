@@ -18,27 +18,36 @@
   }
 }
 
-//Missing tabs for d10 update
+// Missing tabs for d10 update
 .tabs.tabs--primary {
   .tabs__link {
     @include u-bg("gray-warm-5");
     @include u-border("1px", "solid", "gray-warm-10");
+
     color: #666;
+
     @include u-display("block");
     @include u-font-weight("bold");
+
     font-size: 15px;
+
     @include u-padding-x(2);
     @include u-padding-y(1);
     @include u-text-align("center");
+
     text-decoration: none;
     transition: color 0.3s;
+
     &:hover {
       background-color: #e5e5e5;
       text-decoration: underline;
     }
+
     &.is-active {
       background-color: color("gray-50");
+
       @include u-border("1px", "solid", "gray-50");
+
       color: color("white");
     }
   }
