@@ -75,6 +75,7 @@ module:
   override_node_options: 0
   page_cache: 0
   paragraphs_edit: 0
+  paragraphs_sets_plugins_ui: 0
   path: 0
   path_alias: 0
   phpmailer_smtp: 0
@@ -110,6 +111,7 @@ module:
   views: 10
   cookies_gtag: 11
   paragraphs: 11
+  paragraphs_sets: 12
   minimal: 1000
 theme:
   stark: 0
