@@ -61,10 +61,17 @@ Change something in the `.lando.yml` config and/or you want to re-install front 
 lando rebuild -y && lando si
 ```
 
-**Re-install front end dependencies ONLY**:
+**Re-install front end dependencies ONLY:**
 
 ```
 lando build_node
+```
+
+**Update dependencies:**
+Updates with dependencies included.
+
+```bash
+./composer.sh update -W
 ```
 
 ## Testing Guidelines
