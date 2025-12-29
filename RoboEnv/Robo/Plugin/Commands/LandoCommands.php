@@ -75,7 +75,7 @@ class LandoCommands extends CommonCommands
         if ($inside) {
             return 'bash -c';
         } else {
-            return 'lando exec appserver --';
+            return 'lando exec';
         }
     }
 
