@@ -67,6 +67,13 @@ lando rebuild -y && lando si
 lando build_node
 ```
 
+**Update dependencies:**
+Updates with dependencies included.
+
+```bash
+./composer.sh update -W
+```
+
 ## Testing Guidelines
 
 ### Accessibility Testing
