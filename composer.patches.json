@@ -1,5 +1,8 @@
 {
   "patches": {
+    "consolidation/robo": {
+      "https://github.com/consolidation/robo/pull/1184: Fix deprecation issue with Symfony Console #1184": "patches/robo-symfony-deprecations.patch"
+    },
     "drupal/core": {
       "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch"
     },
