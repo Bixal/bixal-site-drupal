@@ -4,7 +4,8 @@
       "https://github.com/consolidation/robo/pull/1184: Fix deprecation issue with Symfony Console #1184": "patches/robo-symfony-deprecations.patch"
     },
     "drupal/core": {
-      "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch"
+      "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch",
+      "/project/drupal/issues/3564735: Synthetic service (kernel)\" error during non-interactive install from existing config in Drupal 11.3": "patches/core-3564735-synthetic-service-kernel.patch"
     },
     "drupal/core-composer-scaffold": {
       "Disable drupal/core from scaffolding without being in composer.extra.drupal-scaffold.allowed-packages in that way one has more control of when new scaffolding is added.": "./patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch"
