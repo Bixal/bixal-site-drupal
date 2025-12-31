@@ -74,3 +74,7 @@ cd46813173f87ca66c1e8c2d4221ea35|Matt Poole|feature/BSD-480-update-deps|Wed Jun 
 16cdcb75060c1dd563d330ed5efc8ca8|Matt Poole|feature/BSD-457-seo-tags|Wed Sep  3 14:34:02 EDT 2025|./composer.sh require drupal/maxlength
 53f7a8b9a143f6e4b08ea24d3178460b|Matt Poole|feature/BSD-489-update-deps|Wed Sep  3 16:55:26 EDT 2025|./composer.sh update
 e99e6bb0c00922b7fc2730ef4325df42|Matt Poole|feature/BSD-520-update-deps|Thu Oct 23 09:33:52 EDT 2025|./composer.sh update
+37f4ad867f7dea5828132cb90ba232ad|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 12:13:12 EST 2025|./composer.sh require drupal/media_remote_hls:^1.1
+69fd2fe5753836b4367f8cd091a34b6a|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 12:15:55 EST 2025|./composer.sh require drupal/core-composer-scaffold:^11.1
+843ac1da600f05b8eb95449cef74ec0f|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 12:16:30 EST 2025|./composer.sh require drupal/core-project-message:^11.1
+08ab9e353b83667148755a037902e564|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 13:19:58 EST 2025|./composer.sh update -W
