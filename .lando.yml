@@ -20,7 +20,7 @@ services:
   cache:
     type: 'redis:6'
   node:
-    type: 'node:22'
+    type: 'node:24'
     build:
       - ./orch/build_node.sh
     scanner: false
