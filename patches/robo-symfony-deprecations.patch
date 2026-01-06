@@ -1,0 +1,58 @@
+From 4da8aea62867c2e22f9952a5e5bfc78d6b0f61aa Mon Sep 17 00:00:00 2001
+From: rsebboc <169465499+rsebboc@users.noreply.github.com>
+Date: Mon, 8 Dec 2025 14:38:56 +0000
+Subject: [PATCH] Enhance command registration compatibility with Symfony by
+ checking for addCommand method
+
+---
+ src/Robo.php           | 12 ++++++++++--
+ src/Runtime/Runner.php |  6 +++++-
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+
+diff --git a/src/Robo.php b/src/Robo.php
+index 25cb7884..20d4ea9e 100644
+--- a/src/Robo.php
++++ b/src/Robo.php
+@@ -547,7 +547,11 @@ protected static function registerSingle($app, $handler)
+         // If the instance is a Symfony Command, register it with
+         // the application
+         if ($instance instanceof Command) {
+-            $app->add($instance);
++            if (method_exists($app, 'addCommand')) {
++                $app->addCommand($instance);
++            } else {
++                $app->add($instance);
++            }
+             return $instance;
+         }
+
+@@ -555,7 +559,11 @@ protected static function registerSingle($app, $handler)
+         $commandFactory = $container->get('commandFactory');
+         $commandList = $commandFactory->createCommandsFromClass($instance);
+         foreach ($commandList as $command) {
+-            $app->add($command);
++            if (method_exists($app, 'addCommand')) {
++                $app->addCommand($command);
++            } else {
++                $app->add($command);
++            }
+         }
+         return $instance;
+     }
+diff --git a/src/Runtime/Runner.php b/src/Runtime/Runner.php
+index c345ba02..b8d8b9b3 100644
+--- a/src/Runtime/Runner.php
++++ b/src/Runtime/Runner.php
+@@ -353,7 +353,11 @@ public function registerCommandClass($app, $commandClass)
+         $commandFactory = $container->get('commandFactory');
+         $commandList = $commandFactory->createCommandsFromClass($roboCommandFileInstance);
+         foreach ($commandList as $command) {
+-            $app->add($command);
++            if (method_exists($app, 'addCommand')) {
++                $app->addCommand($command);
++            } else {
++                $app->add($command);
++            }
+         }
+         return $roboCommandFileInstance;
+     }

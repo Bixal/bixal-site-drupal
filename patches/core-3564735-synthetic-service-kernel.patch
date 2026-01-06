@@ -1,0 +1,26 @@
+From a7b70e012d087ab36f1192ee3759ac077448edde Mon Sep 17 00:00:00 2001
+From: MURATA Kazuko <murata@dgcircus.com>
+Date: Thu, 25 Dec 2025 10:23:28 +0900
+Subject: [PATCH] fix: #3564735 Synthetic service (kernel) error during
+ non-interactive install from existing config in Drupal 11.3
+
+---
+ core/lib/Drupal/Core/Config/ConfigImporter.php | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/core/lib/Drupal/Core/Config/ConfigImporter.php b/core/lib/Drupal/Core/Config/ConfigImporter.php
+index 8e80bdb77665..f3783beca3db 100644
+--- a/core/lib/Drupal/Core/Config/ConfigImporter.php
++++ b/core/lib/Drupal/Core/Config/ConfigImporter.php
+@@ -927,6 +927,9 @@ protected function processExtension(string $type, string $op, string|array $name
+         $this->processedSystemTheme = TRUE;
+       }
+       \Drupal::service('theme_installer')->$op($names);
++      // Installing a theme can also cause a kernel boot,
++      // so re-inject services as with modules.
++      $this->reInjectMe();
+     }
+     $this->setProcessedExtension($type, $op, $names);
+   }
+--
+GitLab

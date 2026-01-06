@@ -6,14 +6,14 @@
   "scripts": {
     "gulp": "gulp watch",
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp compile"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@uswds/uswds": "3.13.0",
     "a11y-tabs": "0.1.2",
-    "del": "8.0.0"
+    "del": "8.0.1"
   },
   "peerDependencies": {
     "sass-embedded-linux-arm64": "1.86.3"
@@ -29,9 +29,9 @@
     "gulp": "5.0.1",
     "gulp-sourcemaps": "3.0.0",
     "gulp-uglify": "3.0.2",
-    "prettier": "3.6.2",
-    "stylelint": "16.23.1",
-    "stylelint-config-standard-scss": "15.0.1",
+    "prettier": "3.7.4",
+    "stylelint": "16.26.1",
+    "stylelint-config-standard-scss": "16.0.0",
     "stylelint-prettier": "5.0.3",
     "uglify-es": "3.3.9"
   }
