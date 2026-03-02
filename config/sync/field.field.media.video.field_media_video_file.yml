@@ -10,9 +10,9 @@ dependencies:
     - file_resup
 third_party_settings:
   file_resup:
-    enabled: 1
+    enabled: true
     max_upload_size: '4 GB'
-    auto_upload: 0
+    auto_upload: false
 id: media.video.field_media_video_file
 field_name: field_media_video_file
 entity_type: media
