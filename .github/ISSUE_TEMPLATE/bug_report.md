@@ -4,6 +4,7 @@ about: Create a report to help us improve
 title: "bixal-site-drupal - bug: <short_description>"
 labels: ["bug", "needs triage"]
 assignees: ""
+type: bug
 ---
 
 ## Describe the bug

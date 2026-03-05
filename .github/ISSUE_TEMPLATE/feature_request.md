@@ -4,6 +4,7 @@ about: Suggest an idea for this project
 title: "bixal-site-drupal - feature request: <short_description>"
 labels: ["enhancement", "needs triage"]
 assignees: ""
+type: feature
 ---
 
 ## Summary
