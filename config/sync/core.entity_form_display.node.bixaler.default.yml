@@ -55,7 +55,7 @@ content:
       media_types: {  }
     third_party_settings:
       media_library_edit:
-        show_edit: '1'
+        show_edit: true
   field_languages:
     type: entity_reference_autocomplete_tags
     weight: 11
