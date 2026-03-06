@@ -179,7 +179,16 @@ dist
 # Ignore the bixal pa11y node repo that is init in the root dir.
 bixal-pa11y-node
 
-#### Added by Drupal Env project scaffolding ####
+/.editorconfig
+
+#### Appended to by mattsqd/drupal-env-lando. ####
+
+# Ignore .env files as they are personal
+/.lando.local.yml
+
+#### End of appended content by mattsqd/drupal-env-lando. ####
+
+#### Appended to by mattsqd/drupal-env. ####
 
 # Ignore .env files as they are personal
 /*.env
@@ -216,6 +225,7 @@ Thumbs.db
 # Visual Studio Code
 .vscode/*
 !.vscode/
+!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
@@ -229,11 +239,4 @@ roboConfDrupalEnv.local.yml
 # ./php.sh bin path
 .php.env
 
-#### End added by Drupal Env project scaffolding ####
-
-#### Added by Drupal Env Lando project scaffolding ####
-
-# Ignore .env files as they are personal
-/.lando.local.yml
-
-#### End added by Drupal Env Lando scaffolding ####
+#### End of appended content by mattsqd/drupal-env. ####

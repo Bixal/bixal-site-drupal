@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bef4fd7d45f4dcd048dde3f65f7ea97",
+    "content-hash": "f78e4de84899d49bce38c4fe1e567689",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7044,16 +7044,16 @@
         },
         {
             "name": "mattsqd/drupal-env",
-            "version": "dev-main",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattsqd/drupal-env.git",
-                "reference": "e364e467d648afcfd151e9c0a454d358e220365f"
+                "reference": "02e88675682e24bfc0150ec0055696e6d567c461"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattsqd/drupal-env/zipball/e364e467d648afcfd151e9c0a454d358e220365f",
-                "reference": "e364e467d648afcfd151e9c0a454d358e220365f",
+                "url": "https://api.github.com/repos/mattsqd/drupal-env/zipball/02e88675682e24bfc0150ec0055696e6d567c461",
+                "reference": "02e88675682e24bfc0150ec0055696e6d567c461",
                 "shasum": ""
             },
             "require": {
@@ -7061,18 +7061,26 @@
                 "drupal/core-composer-scaffold": "^10.0 || ^11.0",
                 "php": ">=8.2"
             },
+            "default-branch": true,
             "type": "robo-tasks",
             "extra": {
+                "drupal-env": {
+                    "file-mapping": {
+                        "[web-root]/.gitignore": "scaffolding/drupal_config/web-gitignore",
+                        "[project-root]/.gitignore": "scaffolding/drupal_config/root-gitignore-additions.txt",
+                        "[project-root]/.editorconfig": "scaffolding/ide_config/root-editorconfig",
+                        "[web-root]/sites/default/settings.php": {
+                            "path": "scaffolding/drupal_config/settings_additions.php",
+                            "comment_end": "",
+                            "comment_start": "//"
+                        }
+                    }
+                },
                 "drupal-scaffold": {
                     "file-mapping": {
                         "[project-root]/php.sh": {
                             "mode": "replace",
                             "path": "scaffolding/shortcuts/php.sh",
-                            "overwrite": true
-                        },
-                        "[web-root]/.gitignore": {
-                            "mode": "replace",
-                            "path": "scaffolding/drupal_config/web-gitignore",
                             "overwrite": true
                         },
                         "[project-root]/robo.sh": {
@@ -7085,10 +7093,6 @@
                             "path": "scaffolding/shortcuts/drush.sh",
                             "overwrite": true
                         },
-                        "[project-root]/.gitignore": {
-                            "append": "scaffolding/drupal_config/root-gitignore-additions.txt",
-                            "force-append": true
-                        },
                         "[project-root]/composer.sh": {
                             "mode": "replace",
                             "path": "scaffolding/shortcuts/composer.sh",
@@ -7098,10 +7102,6 @@
                             "mode": "replace",
                             "path": "scaffolding/Robo/RoboFile.php",
                             "overwrite": true
-                        },
-                        "[project-root]/.editorconfig": {
-                            "append": "scaffolding/ide_config/root-editorconfig",
-                            "force-append": true
                         },
                         "[project-root]/orch/build.sh": {
                             "mode": "replace",
@@ -7133,11 +7133,6 @@
                             "path": "scaffolding/orch/post_deploy.sh",
                             "overwrite": true
                         },
-                        "[project-root]/composer.patches.json": {
-                            "mode": "replace",
-                            "path": "scaffolding/composer/composer.patches.json",
-                            "overwrite": true
-                        },
                         "[project-root]/orch/deploy_update.sh": {
                             "mode": "replace",
                             "path": "scaffolding/orch/deploy_update.sh",
@@ -7152,10 +7147,6 @@
                             "mode": "replace",
                             "path": "scaffolding/orch/deploy_install.sh",
                             "overwrite": true
-                        },
-                        "[web-root]/sites/default/settings.php": {
-                            "append": "scaffolding/drupal_config/settings_additions.php",
-                            "force-append": true
                         },
                         "[web-root]/sites/default/settings.redis.php": {
                             "mode": "replace",
@@ -7216,11 +7207,6 @@
                             "mode": "replace",
                             "path": "scaffolding/drupal_config/settings.memcache.container_tags_db.php",
                             "overwrite": true
-                        },
-                        "[project-root]/patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch": {
-                            "mode": "replace",
-                            "path": "scaffolding/composer/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch",
-                            "overwrite": true
                         }
                     }
                 }
@@ -7243,40 +7229,42 @@
             "description": "Common functional for working with local and remote Drupal environments.",
             "support": {
                 "issues": "https://github.com/mattsqd/drupal-env/issues",
-                "source": "https://github.com/mattsqd/drupal-env/tree/main"
+                "source": "https://github.com/mattsqd/drupal-env/tree/2.x"
             },
-            "time": "2025-12-29T18:18:59+00:00"
+            "time": "2026-01-29T18:33:23+00:00"
         },
         {
             "name": "mattsqd/drupal-env-lando",
-            "version": "dev-main",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattsqd/drupal-env-lando.git",
-                "reference": "761bdc1ebab1d075647b7bc423f94828f17edc64"
+                "reference": "e0e104499e12203d92841caae15fbcd15aac7ce7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattsqd/drupal-env-lando/zipball/761bdc1ebab1d075647b7bc423f94828f17edc64",
-                "reference": "761bdc1ebab1d075647b7bc423f94828f17edc64",
+                "url": "https://api.github.com/repos/mattsqd/drupal-env-lando/zipball/e0e104499e12203d92841caae15fbcd15aac7ce7",
+                "reference": "e0e104499e12203d92841caae15fbcd15aac7ce7",
                 "shasum": ""
             },
             "require": {
                 "cocur/slugify": "^4.0.0",
                 "consolidation/robo": "^3.0 || ^4.0 || ^5.0",
                 "drupal/core-composer-scaffold": "^10.0 || ^11.0",
-                "mattsqd/drupal-env": "dev-main",
+                "mattsqd/drupal-env": "2.x-dev",
                 "php": ">=8.2"
             },
+            "default-branch": true,
             "type": "robo-tasks",
             "extra": {
+                "drupal-env": {
+                    "file-mapping": {
+                        "[project-root]/.gitignore": "scaffolding/gitignore-additions.txt"
+                    }
+                },
                 "drupal-scaffold": {
                     "gitignore": false,
                     "file-mapping": {
-                        "[project-root]/.gitignore": {
-                            "append": "scaffolding/gitignore-additions.txt",
-                            "force-append": true
-                        },
                         "[project-root]/.lando.dist.yml": {
                             "mode": "replace",
                             "path": "scaffolding/env_config/lando.dist.yml",
@@ -7318,9 +7306,9 @@
             "description": "Use Lando with the Drupal Env project.",
             "support": {
                 "issues": "https://github.com/mattsqd/drupal-env-lando/issues",
-                "source": "https://github.com/mattsqd/drupal-env-lando/tree/main"
+                "source": "https://github.com/mattsqd/drupal-env-lando/tree/2.x"
             },
-            "time": "2025-07-21T17:23:22+00:00"
+            "time": "2025-09-09T19:11:29+00:00"
         },
         {
             "name": "mattsqd/robovalidate",
@@ -9209,16 +9197,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.4.6",
+            "version": "v7.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "6d643a93b47398599124022eb24d97c153c12f27"
+                "reference": "e1e6770440fb9c9b0cf725f81d1361ad1835329d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/6d643a93b47398599124022eb24d97c153c12f27",
-                "reference": "6d643a93b47398599124022eb24d97c153c12f27",
+                "url": "https://api.github.com/repos/symfony/console/zipball/e1e6770440fb9c9b0cf725f81d1361ad1835329d",
+                "reference": "e1e6770440fb9c9b0cf725f81d1361ad1835329d",
                 "shasum": ""
             },
             "require": {
@@ -9283,7 +9271,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.4.6"
+                "source": "https://github.com/symfony/console/tree/v7.4.7"
             },
             "funding": [
                 {
@@ -9303,7 +9291,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-25T17:02:47+00:00"
+            "time": "2026-03-06T14:06:20+00:00"
         },
         {
             "name": "symfony/dependency-injection",

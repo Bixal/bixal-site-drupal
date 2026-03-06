@@ -100,8 +100,8 @@
         "drupal/xmlsitemap": "^2.0@beta",
         "drush/drush": "*",
         "jjj/chosen": "2.2.1",
-        "mattsqd/drupal-env": "dev-main",
-        "mattsqd/drupal-env-lando": "dev-main",
+        "mattsqd/drupal-env": "2.x@dev",
+        "mattsqd/drupal-env-lando": "2.x@dev",
         "mattsqd/robovalidate": "@alpha",
         "northernco/ckeditor5-anchor-drupal": "^0.5.0",
         "platformsh/config-reader": "^2.4"
@@ -126,7 +126,10 @@
     },
     "scripts": {
         "post-drupal-scaffold-cmd": [
-            "echo 'Allowing orchestration files to be executed...' & chmod -f +x ./orch/*.sh ./composer.sh ./php.sh ./robo.sh ./drush.sh"
+            "vendor/bin/robo drupal-env:drupal-scaffold-cmd post"
+        ],
+        "pre-drupal-scaffold-cmd": [
+            "vendor/bin/robo drupal-env:drupal-scaffold-cmd pre"
         ]
     },
     "extra": {
@@ -135,8 +138,21 @@
                 "web-root": "web/",
                 "project-root": "./"
             },
-            "gitignore": false,
-            "allowed-packages": []
+            "gitignore": true,
+            "allowed-packages": [
+                "mattsqd/drupal-env",
+                "mattsqd/drupal-env-lando"
+            ],
+            "file-mapping": {
+                "[web-root]/.eslintignore": false,
+                "[project-root]/RoboFile.php": false,
+                "[web-root]/robots.txt": false,
+                "[project-root]/orch/build_node.sh": false,
+                "[project-root]/orch/deploy_install.sh": false,
+                "[project-root]/.lando.dist.yml": false,
+                "[project-root]/lando-config/php.ini": false
+
+            }
         },
         "installer-paths": {
             "web/core": [
