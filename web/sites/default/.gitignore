@@ -1,0 +1,11 @@
+# Ignore drupal-core scaffolding.
+/default.services.yml
+/default.settings.php
+# Ignore drupal-env scaffolding.
+/settings.drupal_env.php
+/settings.lando.php
+/settings.memcache.container_pure.php
+/settings.memcache.container_tags_db.php
+/settings.memcache.php
+/settings.redis.container.php
+/settings.redis.php
