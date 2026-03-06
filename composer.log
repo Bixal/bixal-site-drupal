@@ -82,3 +82,4 @@ ad24c6b656ec4b54a38f3b346799a8a7|Matt Poole|develop|Fri Feb 27 10:57:50 EST 2026
 2b93fc6adcc4afb42e73b54adb04178c|Matt Poole|develop|Fri Feb 27 10:58:32 EST 2026|./composer.sh update
 8d1399b0b9905da5b74daed9bb14b65f|Matt Poole|feature/BSD-550-update-deps|Thu Mar  5 15:07:10 EST 2026|./composer.sh update drupal/core-* --with-all-dependencies
 b3d3c50531990d98901b7acac92d4b42|Matt Poole|feature/BSD-550-update-deps|Thu Mar  5 15:08:53 EST 2026|./composer.sh update
+313a990bb1959c4ee1a62f123f1cdd16|Matt Poole|feature/BSD-552-ddev|Fri Mar  6 13:37:40 EST 2026|./composer.sh update mattsqd/drupal-env* -W

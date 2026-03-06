@@ -2,7 +2,7 @@
 /static
 /icons
 
-#### Added by Drupal Env project scaffolding ####
+#### Appended to by mattsqd/drupal-env. ####
 
 /core
 /libraries
@@ -12,4 +12,4 @@
 /sites/simpletest
 /sites/*/settings.local.php
 
-#### End added by Drupal Env project scaffolding ####
+#### End of appended content by mattsqd/drupal-env. ####
