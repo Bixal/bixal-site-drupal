@@ -1,0 +1,6 @@
+# Ignore drupal-core scaffolding.
+/build.sh
+/deploy.sh
+/deploy_update.sh
+/post_deploy.sh
+/show_file.sh
