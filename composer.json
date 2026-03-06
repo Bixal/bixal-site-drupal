@@ -146,12 +146,10 @@
             "file-mapping": {
                 "[web-root]/.eslintignore": false,
                 "[project-root]/RoboFile.php": false,
-                "[web-root]/robots.txt": false,
                 "[project-root]/orch/build_node.sh": false,
                 "[project-root]/orch/deploy_install.sh": false,
                 "[project-root]/.lando.dist.yml": false,
                 "[project-root]/lando-config/php.ini": false
-
             }
         },
         "installer-paths": {
