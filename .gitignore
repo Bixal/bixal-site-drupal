@@ -246,3 +246,12 @@ roboConfDrupalEnv.local.yml
 /drush.sh
 /php.sh
 /robo.sh
+/.drupal-env-ddev-scaffolded
+#### Appended to by mattsqd/drupal-env-ddev. ####
+
+/.ddev/commands/host/phpmyadmin
+/.ddev/docker-compose.phpmyadmin.yaml
+/.ddev/docker-compose.phpmyadmin_norouter.yaml
+/.ddev/addon-metadata/phpmyadmin/manifest.yaml
+
+#### End of appended content by mattsqd/drupal-env-ddev. ####
