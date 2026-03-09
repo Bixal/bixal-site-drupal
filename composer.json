@@ -101,6 +101,7 @@
         "drush/drush": "*",
         "jjj/chosen": "2.2.1",
         "mattsqd/drupal-env": "2.x@dev",
+        "mattsqd/drupal-env-ddev": "2.x-dev",
         "mattsqd/drupal-env-lando": "2.x@dev",
         "mattsqd/robovalidate": "@alpha",
         "northernco/ckeditor5-anchor-drupal": "^0.5.0",
@@ -141,7 +142,8 @@
             "gitignore": true,
             "allowed-packages": [
                 "mattsqd/drupal-env",
-                "mattsqd/drupal-env-lando"
+                "mattsqd/drupal-env-lando",
+                "mattsqd/drupal-env-ddev"
             ],
             "file-mapping": {
                 "[web-root]/.eslintignore": false,

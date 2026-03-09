@@ -1,3 +1,5 @@
+# Ignore DDEV scaffolding.
+/settings.ddev.php
 # Ignore drupal-core scaffolding.
 /default.services.yml
 /default.settings.php
@@ -9,3 +11,4 @@
 /settings.memcache.php
 /settings.redis.container.php
 /settings.redis.php
+/settings.drupal_env.ddev.php
