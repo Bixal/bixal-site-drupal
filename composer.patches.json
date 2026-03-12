@@ -4,14 +4,12 @@
       "https://github.com/consolidation/robo/pull/1184: Fix deprecation issue with Symfony Console #1184": "patches/robo-symfony-deprecations.patch"
     },
     "drupal/core": {
-      "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch",
-      "/project/drupal/issues/3564735: Synthetic service (kernel)\" error during non-interactive install from existing config in Drupal 11.3": "patches/core-3564735-synthetic-service-kernel.patch"
+      "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch"
     },
     "drupal/core-composer-scaffold": {
       "Disable drupal/core from scaffolding without being in composer.extra.drupal-scaffold.allowed-packages in that way one has more control of when new scaffolding is added.": "./patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch"
     },
     "drupal/default_content": {
-      "/project/default_content/issues/3203014: BaseFieldOverride cause inconsistencies during export": "https://www.drupal.org/files/issues/2022-12-13/base_field_override_inconsistencies-3203014-9.patch",
       "/project/default_content/issues/2943458: Exporting passwords": "https://www.drupal.org/files/issues/2022-02-18/default_content-2943458-9.patch",
       "Created hook to exclude content from being exported": "patches/default_content-hook-exclude-content.patch"
     },
