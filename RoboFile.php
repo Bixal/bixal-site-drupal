@@ -218,4 +218,44 @@ class RoboFile extends Tasks
         return new ResultData();
     }
 
+    /**
+     * Utility: Export all content.
+     *
+     * @command drupal-project:export-content
+     *
+     * @aliases export-content
+     *
+     * @return \Robo\ResultData
+     *
+     * @throws \Exception
+     */
+    public function exportContent(
+        InputInterface $input,
+        OutputInterface $output,
+        array $opts = [
+            'path' => 'modules/custom/bixal_default_content',
+            'entities' => [
+                'node',
+                'menu_link_content',
+                'media',
+            ],
+        ]
+    ): ResultData
+    {
+        $path =  $opts['path'];
+        $entities = $opts['entities'];
+        $io = new SymfonyStyle($input, $output);
+        if (is_dir("web/$path/content")) {
+            $io->info('Removing existing default content exported.');
+            $this->_cleanDir("web/$path/content");
+        }
+        foreach ($entities as $entity) {
+            $io->info("Exporting $entity as default content");
+            $this->_exec("./drush.sh default-content:export-references $entity --folder=$path/content");
+        }
+        $io->info("Finished exporting default content to $path/content");
+
+        return new ResultData();
+    }
+
 }
