@@ -1,0 +1,7 @@
+# Ignore drupal-env scaffolding.
+/.editorconfig
+/CommonAbstract.php
+/CommonCommands.php
+/CommonTrait.php
+/LandoCommands.php
+/DdevCommands.php

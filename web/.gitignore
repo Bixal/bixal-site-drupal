@@ -1,8 +1,20 @@
+# Ignore drupal-core scaffolding.
+/.csslintrc
+/.eslintrc.json
+/.ht.router.php
+/.htaccess
+/example.gitignore
+/INSTALL.txt
+/README.md
+/index.php
+/robots.txt
+/update.php
+
 # Storybook assets pushed into Drupal.
 /static
 /icons
 
-#### Added by Drupal Env project scaffolding ####
+#### Appended to by mattsqd/drupal-env. ####
 
 /core
 /libraries
@@ -12,4 +24,4 @@
 /sites/simpletest
 /sites/*/settings.local.php
 
-#### End added by Drupal Env project scaffolding ####
+#### End of appended content by mattsqd/drupal-env. ####

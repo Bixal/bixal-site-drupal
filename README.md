@@ -18,25 +18,46 @@ Links to environments can be found in [SharePoint 🔒](https://bixal365.sharepo
 ### Prerequisites
 
 - php@8.3
-- lando
+- [Lando](https://lando.dev/) or [DDEV](https://ddev.com/)
 - node LTS
 
 ### Working with Local Environment
 
-The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal-env/wiki) and the [Drupal Env Lando](https://github.com/mattsqd/drupal-env-lando/wiki) packages.
+The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal-env/wiki), [Drupal Env Lando](https://github.com/mattsqd/drupal-env-lando/wiki), and [Drupal Env DDEV](https://github.com/mattsqd/drupal-env-ddev) packages.
 
 #### First Time Setup
 
+DDEV:
 ```
+ddev start
+./robo.sh ddev:init
+```
+Lando:
+```
+lando start
 ./robo.sh lando:init
+```
+
+#### Switching between DDEV and Lando
+
+```
+ddev poweroff
+./robo.sh lando:init
+```
+```
+lando poweroff
+./robo.sh ddev:init
 ```
 
 #### Starting/Stopping the Environment
 
 **Starting**
 
-For future sessions, you can start lando:
+For future sessions, you can start:
 
+```
+ddev start
+```
 ```
 lando start
 ```
@@ -46,10 +67,13 @@ lando start
 Run the following command to stop the environment:
 
 ```
+ddev stop
+```
+```
 lando stop
 ```
 
-You'll be able to visit the local site at: https://bixalcom.lndo.site.
+You'll be able to visit the local site at: https://bixalcom.ddev.site or https://bixalcom.lndo.site.
 
 #### Rebuilding / Reinstalling Dependencies
 
@@ -58,11 +82,17 @@ Change something in the `.lando.yml` config and/or you want to re-install front 
 **Start Fresh**
 
 ```
-lando rebuild -y && lando si
+ddev start && robo si
+```
+```
+lando rebuild -y && robo si
 ```
 
 **Re-install front end dependencies ONLY**
 
+```
+ddev exec './orch/build_node.sh;'
+```
 ```
 lando build_node
 ```
@@ -129,7 +159,7 @@ More guidance on git branching and commit style in [robo.yml](https://github.com
 ### Installing Drupal with Sample Content
 
 ```
-lando si
+./robo.sh si
 ```
 
 This installs all the sample content defined in `web/modules/custom/bixal_default_content`.
@@ -137,7 +167,7 @@ This installs all the sample content defined in `web/modules/custom/bixal_defaul
 To export new content from your local, create it locally and run:
 
 ```
-lando export-content
+./robo.sh export-content
 ```
 
 ### Running Drush Commands
@@ -219,6 +249,9 @@ Some problems might still need to be fixed by hand.
 
 Use this command to view changes from Storybook components.
 
+```
+ddev exec './orch/build_node.sh;'
+```
 ```
 lando build_node
 ```

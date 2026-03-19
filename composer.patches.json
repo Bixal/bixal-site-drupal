@@ -1,13 +1,10 @@
 {
   "patches": {
     "consolidation/robo": {
-      "https://github.com/consolidation/robo/pull/1184: Fix deprecation issue with Symfony Console #1184": "patches/robo-symfony-deprecations.patch"
+      "1185 - Fix: Add Symfony Console 7.4+ addCommand() compatibility": "patches/robo-1185.patch"
     },
     "drupal/core": {
       "[regression] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch"
-    },
-    "drupal/core-composer-scaffold": {
-      "Disable drupal/core from scaffolding without being in composer.extra.drupal-scaffold.allowed-packages in that way one has more control of when new scaffolding is added.": "./patches/drupal.core-composer-scaffold.implicit-drupal-core-disable.patch"
     },
     "drupal/default_content": {
       "/project/default_content/issues/2943458: Exporting passwords": "https://www.drupal.org/files/issues/2022-02-18/default_content-2943458-9.patch",
