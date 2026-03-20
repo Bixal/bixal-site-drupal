@@ -25,12 +25,15 @@ export const Default = {
   args: {
     header: HeaderContent,
     hero: {
-      variant: "image-inline",
-      image:
-        "https://www.bixal.com/sites/default/files/2025-04/Bixal%20Hero%20Image-opt.webp",
-      title: "This is Bixal.",
+      variant: "video",
+      video: "static/hero/B_Video.mp4",
+      title: "We are Bixal.",
       description:
-        "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
+        "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
+      cta: {
+        label: "Discover Bixal",
+        href: "javascript:void(0);",
+      },
     },
     whoWeAre: {
       prefix: "Who we are",
