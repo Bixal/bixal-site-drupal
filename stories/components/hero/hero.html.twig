@@ -48,14 +48,19 @@
   style="--hero-image: url('{{ image }}')"
   {% endif %}>
   <div class="bix-hero__container bix-container">
-    {% if image_inline and image %}
+    {% if image_inline and image or video %}
       <div class="bix-hero__media">
+        {% if image %}
         <img src="{{ image }}" alt="" width="530px">
+        {% endif %}
+        {% if video %}
+          <video src="{{ video }}" autoplay muted loop></video>
+        {% endif %}
       </div>
     {% endif %}
 
     {# Content wrapper for inline image variant. #}
-    {% if image_inline %}<div class="bix-hero__content">{% endif %}
+    {% if image_inline or video %}<div class="bix-hero__content">{% endif %}
 
     {# Header section #}
     <div class="bix-hero__header">

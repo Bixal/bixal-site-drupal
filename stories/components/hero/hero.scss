@@ -99,3 +99,42 @@
     }
   }
 }
+
+// ==========================================================================
+// Inline video hero - Ex: Homepage
+// ==========================================================================
+.bix-hero--video {
+  background-color: var(--c-primary);
+  background-image: linear-gradient(to top, var(--c-primary), #000 65%);
+  color: color("white");
+
+  @include at-media("tablet-lg") {
+    background-image: linear-gradient(to right, var(--c-primary), #000 65%);
+  }
+
+  .bix-hero__container {
+    @include at-media("tablet-lg") {
+      display: grid;
+      grid-template-columns: 4fr minmax(300px, 1fr);
+      column-gap: units(8);
+      align-items: end;
+    }
+
+    @include at-media("widescreen") {
+      grid-template-columns: 4fr minmax(400px, 1fr);
+    }
+  }
+
+  .bix-hero__media video {
+    object-fit: contain;
+    max-width: 50%;
+
+    @include at-media("tablet-lg") {
+      max-width: 100%;
+    }
+  }
+
+  .bix-hero__content {
+    order: -1;
+  }
+}
