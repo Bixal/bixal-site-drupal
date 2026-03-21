@@ -24,18 +24,28 @@
  */
 #}
 
+{# Attribute checks. #}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{# Heading checks. #}
 {% set heading_type = heading_type | default("h1") %}
 {% set sub_heading_type = sub_heading_type | default("h2") %}
+
+{# Media checks. #}
+{% set has_media = image or video %}
 {% set image_inline = variant == 'image-inline' %}
 {% set has_background_image = not image_inline and image %}
+{% if has_background_image %}
+  {% set attributes = attributes.setAttribute('style', '--hero-image: url(' ~ image ~ ')') %}
+{% endif %}
+
+{# Call-to-action checks. #}
 {% set cta_exists = cta.label and cta.href %}
 {% set icon_base_path = icon_base_path | default("icons/") %}
 {% set icon_name = icon | default("arrow-right") %}
 {% set icon_path = icon_base_path  ~ icon_name ~ ".svg" %}
-
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 
 {% set hero_classes = [
   "bix-hero",
