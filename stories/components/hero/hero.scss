@@ -54,22 +54,26 @@
 }
 
 // ==========================================================================
-// Inline image hero - Ex: Homepage
+/// Split Hero
+///
+/// Hero with media (image or video) and content side by side.
+/// Ex: Homepage
 // ==========================================================================
-.bix-hero--image-inline {
+.bix-hero--split {
   background-color: var(--c-primary);
+  background-image: linear-gradient(to top, var(--c-primary), #000 65%);
   color: color("white");
+
+  @include at-media("tablet-lg") {
+    background-image: linear-gradient(to left, var(--c-primary), #000 65%);
+  }
 
   .bix-hero__container {
     @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: minmax(300px, 1fr) 4fr;
+      grid-template-columns: minmax(300px, 30%) 4fr;
       column-gap: units(8);
       align-items: end;
-    }
-
-    @include at-media("widescreen") {
-      grid-template-columns: minmax(400px, 1fr) 4fr;
     }
   }
 
@@ -100,14 +104,9 @@
   }
 }
 
+// Split hero - media on the right.
 // ==========================================================================
-// Inline video hero - Ex: Homepage
-// ==========================================================================
-.bix-hero--video {
-  background-color: var(--c-primary);
-  background-image: linear-gradient(to top, var(--c-primary), #000 65%);
-  color: color("white");
-
+.bix-hero--split-right {
   @include at-media("tablet-lg") {
     background-image: linear-gradient(to right, var(--c-primary), #000 65%);
   }
@@ -118,10 +117,6 @@
       grid-template-columns: 4fr minmax(300px, 1fr);
       column-gap: units(8);
       align-items: end;
-    }
-
-    @include at-media("widescreen") {
-      grid-template-columns: 4fr minmax(400px, 1fr);
     }
   }
 

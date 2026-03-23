@@ -35,8 +35,8 @@
 
 {# Media checks. #}
 {% set has_media = image or video %}
-{% set image_inline = variant == 'image-inline' %}
-{% set has_background_image = not image_inline and image %}
+{% set media_position = media_position|default("left") %}
+{% set has_background_image = variant == "image-bg" and image %}
 {% if has_background_image %}
   {% set attributes = attributes.setAttribute('style', '--hero-image: url(' ~ image ~ ')') %}
 {% endif %}
@@ -50,72 +50,67 @@
 {% set hero_classes = [
   "bix-hero",
   (variant ? "bix-hero--" ~ variant),
+  (layout ? "bix-hero--" ~ layout),
+  (layout == "split" ? "bix-hero--split-" ~ media_position),
 ]|merge(additional_classes|default([])) %}
 
-<section
-  {{ attributes.addClass(hero_classes) }}
-  {% if has_background_image %}
-  style="--hero-image: url('{{ image }}')"
-  {% endif %}>
+<section {{ attributes.addClass(hero_classes) }}>
   <div class="bix-hero__container bix-container">
-    {% if image_inline and image or video %}
+    {% if has_media and layout == "split" %}
       <div class="bix-hero__media">
         {% if image %}
         <img src="{{ image }}" alt="" width="530px">
         {% endif %}
         {% if video %}
-          <video src="{{ video }}" autoplay muted loop></video>
+        <video src="{{ video }}" autoplay muted loop></video>
         {% endif %}
       </div>
     {% endif %}
 
-    {# Content wrapper for inline image variant. #}
-    {% if image_inline or video %}<div class="bix-hero__content">{% endif %}
+    <div class="bix-hero__content">
 
-    {# Header section #}
-    <div class="bix-hero__header">
-      {% if eyebrow %}
-        <div class="bix-title-prefix">{{ eyebrow }}</div>
-      {% endif %}
+      {# Header section #}
+      <div class="bix-hero__header">
+        {% if eyebrow %}
+          <div class="bix-title-prefix">{{ eyebrow }}</div>
+        {% endif %}
 
-      {% if title %}
-      <{{ heading_type }} class="bix-hero__title">
-        {{ title | default("Hero title") }}
-      </{{ heading_type }}>
-      {% endif %}
+        {% if title %}
+        <{{ heading_type }} class="bix-hero__title">
+          {{ title | default("Hero title") }}
+        </{{ heading_type }}>
+        {% endif %}
 
-      {% if subtitle %}
-      <{{ sub_heading_type }} class="bix-hero__subtitle">
-        {{ subtitle }}
-      </{{ sub_heading_type }}>
-      {% endif %}
-    </div>
-    {# /Header #}
-
-    {# Body #}
-    {% if description %}
-    <div class="bix-hero__body">
-      <p>
-        {{ description }}
-      </p>
-    </div>
-    {% endif %}
-    {# /Body #}
-
-    {# Footer #}
-    {% if cta_exists %}
-      <div class="bix-hero__footer">
-        <div class="bix-hero__cta">
-          <a href="{{ cta.href }}">
-            {{ cta.label }}
-            {{ source(icon_path) }}
-          </a>
-        </div>
+        {% if subtitle %}
+        <{{ sub_heading_type }} class="bix-hero__subtitle">
+          {{ subtitle }}
+        </{{ sub_heading_type }}>
+        {% endif %}
       </div>
-    {% endif %}
-    {# /Footer #}
+      {# /Header #}
 
-    {# Content wrapper for inline image variant. #}
-    {% if image_inline %}</div>{% endif %}
+      {# Body #}
+      {% if description %}
+      <div class="bix-hero__body">
+        <p>
+          {{ description }}
+        </p>
+      </div>
+      {% endif %}
+      {# /Body #}
+
+      {# Footer #}
+      {% if cta_exists %}
+        <div class="bix-hero__footer">
+          <div class="bix-hero__cta">
+            <a href="{{ cta.href }}">
+              {{ cta.label }}
+              {{ source(icon_path) }}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      {# /Footer #}
+    </div>
   </div>
 </section>

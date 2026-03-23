@@ -41,9 +41,10 @@ export const BackgroundImage = {
   },
 };
 
-export const InlineImage = {
+export const SplitLeft = {
   args: {
-    variant: "image-inline",
+    layout: "split",
+    media_position: null,
     image: "static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
     title: "This is Bixal.",
     description:
@@ -58,9 +59,33 @@ export const InlineImage = {
   },
 };
 
-export const Video = {
+export const SplitRight = {
   args: {
-    variant: "video",
+    layout: "split",
+    video: "static/hero/B_Video.mp4",
+    media_position: "right",
+    title: "We are Bixal.",
+    description:
+      "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
+    cta: {
+      label: "Discover Bixal",
+      href: "javascript:void(0);",
+    },
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["Primary", "Accent"],
+      defaultValue: "Primary",
+    },
+  },
+};
+
+export const SplitRightVideo = {
+  name: "Split Right / Video",
+  args: {
+    layout: "split",
+    media_position: "right",
     video: "static/hero/B_Video.mp4",
     title: "We are Bixal.",
     description:
