@@ -108,21 +108,27 @@
 // ==========================================================================
 .bix-hero--split-right {
   @include at-media("tablet-lg") {
-    background-image: linear-gradient(to right, var(--c-primary), #000 65%);
+    background-image: linear-gradient(
+      to right,
+      var(--c-primary),
+      oklch(from var(--c-primary) l c h / 20%) 10%,
+      oklch(from var(--c-primary) calc(l - 0.9) c h) 55%
+    );
   }
 
   .bix-hero__container {
     @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: 4fr minmax(300px, 1fr);
+      grid-template-columns: 55% minmax(300px, 40%);
       column-gap: units(8);
-      align-items: end;
+      align-items: center;
     }
   }
 
   .bix-hero__media video {
-    object-fit: contain;
+    object-fit: fill;
     max-width: 50%;
+    width: 100%;
 
     @include at-media("tablet-lg") {
       max-width: 100%;
