@@ -73,10 +73,29 @@ Avoid using USWDS mixins (e.g., `@include u-padding(3)`) directly in component s
 
 Using tokens and theme variables ensures consistent design, easier maintenance, and better compatibility with our Drupal theme.
 
-**How to style components:**
+**Creating themeable components:**
 
 - Use CSS custom properties (e.g., `var(--c-primary)`)
 - Use theme variables (see [`global.scss`](stories/assets/styles/global/global.scss))
 - Use project utility classes
+
+When creating themeable components, use the "private variable" pattern with underscore prefixes:
+
+```css
+.bix-component {
+  // Private variable (internal use) with fallback
+  --_component-color: var(--component-color, currentColor);
+
+  // Use the private variable in styles
+  .element {
+    color: var(--_component-color);
+  }
+}
+
+// Component variants set the public variable.
+.bix-component--primary {
+  --component-color: var(--c-primary);
+}
+```
 
 For questions, create an issue labeled "question" in GitHub.
