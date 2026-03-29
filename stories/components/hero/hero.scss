@@ -2,10 +2,17 @@
 @use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-hero {
-  padding: 40px 0;
+  --_hero-background-color: var(--hero-background-color, none);
+  --_hero-text-color: var(--hero-text-color, currentcolor);
+  --_hero-padding-y: var(--hero-padding-y, #{units(5)});
+  --_hero-padding-x: var(--hero-padding-x, 0);
+
+  background-color: var(--_hero-background-color);
+  color: var(--_hero-text-color);
+  padding: var(--_hero-padding-y) var(--_hero-padding-x);
 
   @include at-media("desktop") {
-    padding: 80px 0 90px;
+    --hero-padding-y: #{units(10)};
   }
 
   &__container {
@@ -13,20 +20,25 @@
     margin-inline: auto;
   }
 
+  &__body {
+    @include at-media("desktop") {
+      font-size: size("body", "lg");
+    }
+  }
+
   &__body p:last-child {
     margin-block-end: 0;
-    font-size: size("body", "lg");
   }
 }
 
 .bix-hero--primary {
-  background-color: var(--c-primary);
-  color: white;
+  --hero-background-color: var(--c-primary);
+  --hero-text-color: white;
 }
 
 .bix-hero--primary-alt {
-  background-color: var(--c-primary-alt);
-  color: white;
+  --hero-background-color: var(--c-primary-alt);
+  --hero-text-color: white;
 }
 
 // ==========================================================================
@@ -36,6 +48,7 @@
 // Image styles set via scope in stories/components/hero/hero.html.twig.
 .bix-hero--image-bg {
   --hero-image: "";
+  --hero-text-color: white;
 
   background-image:
     radial-gradient(circle, rgb(0 0 0 / 48%) 0%, rgb(0 0 0 / 0%) 100%),
@@ -43,7 +56,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: color("white");
   place-content: center;
   min-height: 400px;
   text-align: center;
@@ -60,20 +72,43 @@
 /// Ex: Homepage
 // ==========================================================================
 .bix-hero--split {
-  background-color: var(--c-primary);
-  background-image: linear-gradient(to top, var(--c-primary), #000 65%);
-  color: color("white");
+  --hero-background-color: var(--c-primary);
+  --hero-text-color: white;
+  --hero-split-media-column-width: minmax(300px, 40%);
+  --hero-split-copy-column-width: 55%;
+  --hero-split-gradient-start-color: var(--c-primary);
+  --hero-split-gradient-end-color: #000;
+  --hero-split-gradient-start-position: 0%;
+  --hero-split-gradient-end-position: 65%;
+
+  // Building the gradient.
+  --_hero-gradient-start: var(--hero-split-gradient-start-color)
+    var(--hero-split-gradient-start-position);
+  --_hero-gradient-end: var(--hero-split-gradient-end-color)
+    var(--hero-split-gradient-end-position);
+
+  background-image: linear-gradient(
+    to top,
+    var(--_hero-gradient-start),
+    var(--_hero-gradient-end)
+  );
 
   @include at-media("tablet-lg") {
-    background-image: linear-gradient(to left, var(--c-primary), #000 65%);
+    background-image: linear-gradient(
+      to left,
+      var(--_hero-gradient-start),
+      var(--_hero-gradient-end)
+    );
   }
 
   .bix-hero__container {
     @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: minmax(300px, 30%) 4fr;
+      grid-template-columns:
+        var(--hero-split-media-column-width)
+        var(--hero-split-copy-column-width);
       column-gap: units(8);
-      align-items: end;
+      align-items: center;
     }
   }
 
@@ -110,18 +145,18 @@
   @include at-media("tablet-lg") {
     background-image: linear-gradient(
       to right,
-      var(--c-primary),
-      oklch(from var(--c-primary) l c h / 20%) 10%,
-      oklch(from var(--c-primary) calc(l - 0.9) c h) 55%
+      var(--_hero-gradient-start),
+      var(--_hero-gradient-end)
     );
   }
 
   .bix-hero__container {
     @include at-media("tablet-lg") {
       display: grid;
-      grid-template-columns: 55% minmax(300px, 40%);
+      grid-template-columns:
+        var(--hero-split-copy-column-width)
+        var(--hero-split-media-column-width);
       column-gap: units(8);
-      align-items: center;
     }
   }
 

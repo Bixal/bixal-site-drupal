@@ -59,7 +59,7 @@
     {% if has_media and layout == "split" %}
       <div class="bix-hero__media">
         {% if image %}
-        <img src="{{ image }}" alt="" width="530px">
+        <img src="{{ image }}" alt="" aria-hidden="true" />
         {% endif %}
         {% if video %}
         <video src="{{ video }}" autoplay muted loop></video>
