@@ -62,7 +62,7 @@ export const SplitLeft = {
 export const SplitRight = {
   args: {
     layout: "split",
-    video: "static/hero/B_Video.mp4",
+    image: "static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
     media_position: "right",
     title: "We are Bixal.",
     description:
