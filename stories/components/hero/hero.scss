@@ -29,6 +29,10 @@
   &__body p:last-child {
     margin-block-end: 0;
   }
+
+  &__footer {
+    margin-block-start: units(3);
+  }
 }
 
 .bix-hero--primary {
@@ -118,13 +122,22 @@
     }
   }
 
-  .bix-hero__media img {
-    object-fit: contain;
+  .bix-hero__media :is(img, video) {
     max-width: 50%;
+    width: 100%;
 
     @include at-media("tablet-lg") {
       max-width: 100%;
     }
+  }
+
+  .bix-hero__media img {
+    object-fit: contain;
+  }
+
+  .bix-hero__media video {
+    clip-path: inset(2px); // Prevent video artifact in the top right corner.
+    object-fit: fill;
   }
 
   .bix-hero__title {
@@ -133,8 +146,8 @@
     font-size: px-to-rem(47px);
 
     @include at-media("desktop") {
-      font-size: 72px;
-      letter-spacing: -2.4px;
+      font-size: 70px;
+      letter-spacing: -2.5px;
     }
   }
 }
@@ -157,16 +170,6 @@
         var(--hero-split-copy-column-width)
         var(--hero-split-media-column-width);
       column-gap: units(8);
-    }
-  }
-
-  .bix-hero__media video {
-    object-fit: fill;
-    max-width: 50%;
-    width: 100%;
-
-    @include at-media("tablet-lg") {
-      max-width: 100%;
     }
   }
 

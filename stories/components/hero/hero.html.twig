@@ -103,10 +103,7 @@
       {% if cta_exists %}
         <div class="bix-hero__footer">
           <div class="bix-hero__cta">
-            <a href="{{ cta.href }}">
-              {{ cta.label }}
-              {{ source(icon_path) }}
-            </a>
+            {% include "@components/button/button.html.twig" ignore missing with cta %}
           </div>
         </div>
       {% endif %}

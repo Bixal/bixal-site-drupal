@@ -93,6 +93,7 @@ export const SplitRightVideo = {
     cta: {
       label: "Discover Bixal",
       href: "javascript:void(0);",
+      variant: "inverse",
     },
   },
   argTypes: {
