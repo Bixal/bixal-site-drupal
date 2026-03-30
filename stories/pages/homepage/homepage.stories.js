@@ -6,7 +6,7 @@ import DescriptionListCollectionContent from "../../components/description-list/
 import "../../components/header/header.stories";
 import "../../components/section/section.stories";
 import "../../components/button/button.stories";
-import "../../components/hero/hero.stories";
+import * as Hero from "../../components/hero/hero.stories";
 import "../../components/cards/cards.stories";
 
 import * as GraphicListContent from "../../components/graphic-list/graphic-list.stories";
@@ -24,18 +24,7 @@ export default {
 export const Default = {
   args: {
     header: HeaderContent,
-    hero: {
-      layout: "split",
-      video: "static/hero/B_Video.mp4",
-      media_position: "right",
-      title: "We are Bixal.",
-      description:
-        "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
-      cta: {
-        label: "Discover Bixal",
-        href: "javascript:void(0);",
-      },
-    },
+    hero: Hero.SplitRightVideo.args,
     whoWeAre: {
       prefix: "Who we are",
       variant: "base",

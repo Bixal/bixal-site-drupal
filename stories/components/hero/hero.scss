@@ -4,6 +4,7 @@
 .bix-hero {
   --_hero-background-color: var(--hero-background-color, none);
   --_hero-text-color: var(--hero-text-color, currentcolor);
+  --_hero-callout-color: var(--hero-callout-color, var(--c-accent-vivid));
   --_hero-padding-y: var(--hero-padding-y, #{units(5)});
   --_hero-padding-x: var(--hero-padding-x, 0);
 
@@ -12,12 +13,21 @@
   padding: var(--_hero-padding-y) var(--_hero-padding-x);
 
   @include at-media("desktop") {
-    --hero-padding-y: #{units(10)};
+    --hero-padding-y: #{units(5)};
   }
 
   &__container {
     max-width: 1400px;
     margin-inline: auto;
+  }
+
+  &__callout {
+    color: var(--_hero-callout-color);
+  }
+
+  &:has(.bix-hero__callout) .bix-hero__cta-button {
+    background-color: var(--_hero-callout-color);
+    color: var(--c-primary);
   }
 
   &__body {
@@ -31,18 +41,9 @@
   }
 
   &__footer {
-    margin-block-start: units(3);
+    font-size: size("body", "md");
+    margin-block-start: units(5);
   }
-}
-
-.bix-hero--primary {
-  --hero-background-color: var(--c-primary);
-  --hero-text-color: white;
-}
-
-.bix-hero--primary-alt {
-  --hero-background-color: var(--c-primary-alt);
-  --hero-text-color: white;
 }
 
 // ==========================================================================
@@ -78,8 +79,8 @@
 .bix-hero--split {
   --hero-background-color: var(--c-primary);
   --hero-text-color: white;
-  --hero-split-media-column-width: minmax(300px, 40%);
-  --hero-split-copy-column-width: 55%;
+  --hero-split-media-column-width: 45%;
+  --hero-split-copy-column-width: 1fr;
   --hero-split-gradient-start-color: var(--c-primary);
   --hero-split-gradient-end-color: #000;
   --hero-split-gradient-start-position: 0%;
@@ -97,7 +98,7 @@
     var(--_hero-gradient-end)
   );
 
-  @include at-media("tablet-lg") {
+  @include at-media("tablet") {
     background-image: linear-gradient(
       to left,
       var(--_hero-gradient-start),
@@ -106,7 +107,7 @@
   }
 
   .bix-hero__container {
-    @include at-media("tablet-lg") {
+    @include at-media("tablet") {
       display: grid;
       grid-template-columns:
         var(--hero-split-media-column-width)
@@ -117,27 +118,21 @@
   }
 
   .bix-hero__media {
-    @include at-media-max("tablet-lg") {
+    @include at-media-max("tablet") {
       margin-block-end: units(4);
     }
   }
 
   .bix-hero__media :is(img, video) {
-    max-width: 50%;
-    width: 100%;
-
-    @include at-media("tablet-lg") {
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
 
-  .bix-hero__media img {
+  .bix-hero__media :is(img, video) {
     object-fit: contain;
   }
 
   .bix-hero__media video {
     clip-path: inset(2px); // Prevent video artifact in the top right corner.
-    object-fit: fill;
   }
 
   .bix-hero__title {

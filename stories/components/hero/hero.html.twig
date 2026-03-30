@@ -5,22 +5,21 @@
  * Available variables:
  * - variant (string, optional): Component style. Options:
  *      - "image-bg"
- *      - "image-inline"
- *      - "primary" (dark blue)
- *      - "primary-alt" (purple)
+ *      - "split" (video/image on one side, text on the other)
  * - heading_type (string, optional): HTML tag for main title. Defaults to "h1".
  * - sub_heading_type (string, optional): HTML tag for subtitle. Defaults to "h2".
+ * - media_position (string, optional): Position of media when layout is "split". Options: "left" or "right". Defaults to "left".
  * - image (string, optional): Image URL for background or inline display.
+ * - video (string, optional): Video URL for inline display.
  * - title (string): Main heading text. Defaults to "Hero title".
+ * - title_callout (string, optional): Callout text within the main title.
  * - eyebrow (string, optional): Small text above the main title.
  * - subtitle (string, optional): Secondary heading below the main title.
  * - description (string, optional): Body text content.
- * - cta (object, optional): Call-to-action link.
+ * - cta (object, optional): Call-to-action link. Calls the button component with:
  *     - label (string): Link text.
  *     - href (string): Link URL.
- * - icon_base_path (string, optional): Path to icons folder. Defaults to "icons/".
- * - icon (string, optional): Icon filename without extension. Defaults to "arrow-right".
- * - additional_classes (array, optional): Extra CSS classes to add.
+ *     - additional_classes (array, optional): Extra CSS classes to add.
  */
 #}
 
@@ -30,8 +29,8 @@
 {% endif %}
 
 {# Heading checks. #}
-{% set heading_type = heading_type | default("h1") %}
-{% set sub_heading_type = sub_heading_type | default("h2") %}
+{% set heading_type = heading_type|default("h1") %}
+{% set sub_heading_type = sub_heading_type|default("h2") %}
 
 {# Media checks. #}
 {% set has_media = image or video %}
@@ -43,9 +42,6 @@
 
 {# Call-to-action checks. #}
 {% set cta_exists = cta.label and cta.href %}
-{% set icon_base_path = icon_base_path | default("icons/") %}
-{% set icon_name = icon | default("arrow-right") %}
-{% set icon_path = icon_base_path  ~ icon_name ~ ".svg" %}
 
 {% set hero_classes = [
   "bix-hero",
@@ -77,13 +73,16 @@
 
         {% if title %}
         <{{ heading_type }} class="bix-hero__title">
-          {{ title | default("Hero title") }}
+          {{ title|default("Hero title") }}
+          {% if title_callout %}
+            <span class="bix-hero__callout">{{ title_callout }}</span>
+          {% endif %}
         </{{ heading_type }}>
         {% endif %}
 
         {% if subtitle %}
         <{{ sub_heading_type }} class="bix-hero__subtitle">
-          {{ subtitle }}
+          {{ subtitle|default("Hero subtitle") }}
         </{{ sub_heading_type }}>
         {% endif %}
       </div>
@@ -103,6 +102,7 @@
       {% if cta_exists %}
         <div class="bix-hero__footer">
           <div class="bix-hero__cta">
+            {% set cta = cta|merge({'additional_classes': ["bix-hero__cta-button"]}) %}
             {% include "@components/button/button.html.twig" ignore missing with cta %}
           </div>
         </div>

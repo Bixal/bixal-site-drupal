@@ -20,20 +20,6 @@ export const Default = {
   args: simpleHeroContent,
 };
 
-export const Primary = {
-  args: {
-    ...Default.args,
-    variant: "primary",
-  },
-};
-
-export const PrimaryAlt = {
-  args: {
-    ...Default.args,
-    variant: "primary-alt",
-  },
-};
-
 export const BackgroundImage = {
   args: {
     variant: "image-bg",
@@ -70,6 +56,7 @@ export const SplitRight = {
     cta: {
       label: "Discover Bixal",
       href: "javascript:void(0);",
+      variant: "inverse",
     },
   },
   argTypes: {
@@ -87,13 +74,13 @@ export const SplitRightVideo = {
     layout: "split",
     media_position: "right",
     video: "static/hero/B_Video.mp4",
-    title: "We are Bixal.",
+    title: "We are ",
+    title_callout: "Bixal.",
     description:
       "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
     cta: {
       label: "Discover Bixal",
       href: "javascript:void(0);",
-      variant: "inverse",
     },
   },
   argTypes: {
