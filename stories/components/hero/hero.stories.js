@@ -2,6 +2,8 @@ import Hero from "./hero.html.twig";
 import Content from "./hero.content.json";
 import "./hero.scss";
 
+import { DecorativeVideo } from "../video/video.stories.js";
+
 export default {
   title: "Components/Hero",
   tags: ["autodocs"],
@@ -73,7 +75,7 @@ export const SplitRightVideo = {
   args: {
     layout: "split",
     media_position: "right",
-    video: "static/hero/B_Video.mp4",
+    video: DecorativeVideo.args,
     title: "We are ",
     title_callout: "Bixal.",
     description:

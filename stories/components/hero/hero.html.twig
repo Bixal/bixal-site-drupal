@@ -58,7 +58,7 @@
         <img src="{{ image }}" alt="" aria-hidden="true" />
         {% endif %}
         {% if video %}
-        <video src="{{ video }}" autoplay muted loop></video>
+          {% include "@components/video/video.html.twig" ignore missing with video %}
         {% endif %}
       </div>
     {% endif %}

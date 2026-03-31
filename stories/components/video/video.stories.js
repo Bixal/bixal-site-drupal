@@ -1,5 +1,11 @@
 import Video from "./video.html.twig";
 import "./video.scss";
+import { handleAutoplayVideos } from "../../_utils/videos";
+
+// Initialize video accessibility for Storybook
+window.addEventListener("DOMContentLoaded", () => {
+  handleAutoplayVideos();
+});
 
 // import infoIcon from "@uswds/uswds/img/usa-icons/info_outline.svg";
 
@@ -42,5 +48,20 @@ export const Poster = {
 export const HiddenControls = {
   args: {
     controls: false,
+  },
+};
+
+export const DecorativeVideo = {
+  args: {
+    video_src: "./static/hero/b_video.mp4",
+    decorative_video: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          '**Note:** For accessibility and user experience, decorative videos should be **5 seconds or less**. Videos are automatically paused for those who have enabled "Reduce Motion" in their system preferences.',
+      },
+    },
   },
 };
