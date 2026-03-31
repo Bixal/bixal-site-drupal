@@ -53,7 +53,7 @@ export const HiddenControls = {
 
 export const DecorativeVideo = {
   args: {
-    video_src: "/static/hero/B_Video.mp4",
+    video_src: "/static/hero/B_Video.webm",
     decorative_video: true,
   },
   parameters: {
