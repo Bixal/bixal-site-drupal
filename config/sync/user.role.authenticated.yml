@@ -9,6 +9,7 @@ dependencies:
     - captcha
     - contact
     - contextual
+    - editoria11y
     - filter
     - media
     - node
@@ -24,10 +25,13 @@ permissions:
   - 'access content'
   - 'access contextual links'
   - 'access site-wide contact form'
+  - 'mark as hidden in editoria11y'
+  - 'mark as ok in editoria11y'
   - 'skip CAPTCHA'
   - 'use text format html_text'
   - 'use text format webform_default'
   - 'view all revisions'
+  - 'view editoria11y checker'
   - 'view media'
   - 'view own unpublished content'
   - 'view published sitewide alert entities'
