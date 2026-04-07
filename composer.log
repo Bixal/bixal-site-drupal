@@ -78,11 +78,13 @@ e99e6bb0c00922b7fc2730ef4325df42|Matt Poole|feature/BSD-520-update-deps|Thu Oct 
 69fd2fe5753836b4367f8cd091a34b6a|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 12:15:55 EST 2025|./composer.sh require drupal/core-composer-scaffold:^11.1
 843ac1da600f05b8eb95449cef74ec0f|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 12:16:30 EST 2025|./composer.sh require drupal/core-project-message:^11.1
 08ab9e353b83667148755a037902e564|Matt Poole|feature/BSD-530-drupal-update|Mon Dec 29 13:19:58 EST 2025|./composer.sh update -W
-ad24c6b656ec4b54a38f3b346799a8a7|Matt Poole|develop|Fri Feb 27 10:57:50 EST 2026|./composer.sh update drupal/core-* --with-all-dependencies
-2b93fc6adcc4afb42e73b54adb04178c|Matt Poole|develop|Fri Feb 27 10:58:32 EST 2026|./composer.sh update
+ad24c6b656ec4b54a38f3b346799a8a7|Matt Poole|feature/BSD-546-update-deps|Fri Feb 27 10:57:50 EST 2026|./composer.sh update drupal/core-* --with-all-dependencies
+2b93fc6adcc4afb42e73b54adb04178c|Matt Poole|feature/BSD-546-update-deps|Fri Feb 27 10:58:32 EST 2026|./composer.sh update
 8d1399b0b9905da5b74daed9bb14b65f|Matt Poole|feature/BSD-550-update-deps|Thu Mar  5 15:07:10 EST 2026|./composer.sh update drupal/core-* --with-all-dependencies
 b3d3c50531990d98901b7acac92d4b42|Matt Poole|feature/BSD-550-update-deps|Thu Mar  5 15:08:53 EST 2026|./composer.sh update
 313a990bb1959c4ee1a62f123f1cdd16|Matt Poole|feature/BSD-552-ddev|Fri Mar  6 13:37:40 EST 2026|./composer.sh update mattsqd/drupal-env* -W
 6b6b6a5372a550c7edff91715e61c861|Matt Poole|feature/BSD-552-ddev|Mon Mar  9 09:08:34 EDT 2026|./composer.sh require -W mattsqd/drupal-env-ddev:2.x-dev --ansi
 c9b710210cfe5cc02387da6880641f48|Matt Poole|feature/BSD-552-ddev|Mon Mar  9 09:11:57 EDT 2026|./composer.sh update drupal/webprofiler -W
 295fcaac9f2f46dc81d56df126e949d6|Matt Poole|feature/BSD-552-ddev-local-install|Wed Mar 18 16:04:24 EDT 2026|./composer.sh update --lock
+a3e8b1ae1b6aa612180829d1a9f9293a|Matt Poole|feature/BSD-561-update-deps|Wed Apr  1 16:34:50 EDT 2026|./composer.sh update drupal/core-* -W
+56068d227744eac444001e3594b37976|Matt Poole|feature/BSD-561-update-deps|Wed Apr  1 16:35:42 EDT 2026|./composer.sh update -w
