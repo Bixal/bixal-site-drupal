@@ -1,6 +1,13 @@
 name: "Publish Storybook"
 
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - "web/themes/custom/**"
+      - "stories/**"
+      - ".storybook/**"
+      - "package.json"
+      - "package-lock.json"
 
 jobs:
   publish-sb:
