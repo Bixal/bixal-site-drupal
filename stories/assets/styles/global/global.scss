@@ -127,7 +127,6 @@ h1 {
 }
 
 h2 {
-  @include heading-border;
 
   font-size: px-to-rem(24px);
   font-weight: 700;
@@ -138,6 +137,10 @@ h2 {
     font-size: px-to-rem(35px);
     letter-spacing: -0.75px;
   }
+}
+
+h2:not(.bix-hero__decorative__title) {
+  @include heading-border;
 }
 
 h3 {
