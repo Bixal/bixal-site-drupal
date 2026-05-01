@@ -1,5 +1,4 @@
 import Hero from "./hero.html.twig";
-import Content from "./hero.content.json";
 import "./hero.scss";
 
 import { DecorativeVideo } from "../video/video.stories.js";
