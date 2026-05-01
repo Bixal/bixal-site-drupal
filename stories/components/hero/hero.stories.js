@@ -7,7 +7,19 @@ export default {
   title: "Components/Hero",
   tags: ["autodocs"],
   component: Hero,
-  args: Content,
+  args: {
+    variant: "",
+    eyebrow: "",
+    title: "Title",
+    subtitle: "",
+    description: "",
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["image-bg", "split"],
+    },
+  },
 };
 
 const simpleHeroContent = {
@@ -30,30 +42,26 @@ export const BackgroundImage = {
 
 export const SplitLeft = {
   args: {
-    layout: "split",
+    variant: "split",
     media_position: null,
     image: "static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
-    title: "This is Bixal.",
+    title: "We are Bixal.",
     description:
       "A mission-driven organization determined to improve people’s lives through human-centered strategies and transformative technologies. We deliver on this promise by partnering with leading federal agencies to conceive and create powerful data-driven customer experiences.",
   },
   argTypes: {
-    variant: {
+    media_position: {
       control: "select",
-      options: ["Primary", "Accent"],
-      defaultValue: "Primary",
+      options: ["left", "right"],
+      defaultValue: "left",
     },
   },
 };
 
 export const SplitRight = {
   args: {
-    layout: "split",
-    image: "static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
+    ...SplitLeft.args,
     media_position: "right",
-    title: "We are Bixal.",
-    description:
-      "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
     cta: {
       label: "Discover Bixal",
       href: "javascript:void(0);",
@@ -61,19 +69,15 @@ export const SplitRight = {
     },
   },
   argTypes: {
-    variant: {
-      control: "select",
-      options: ["Primary", "Accent"],
-      defaultValue: "Primary",
-    },
+    ...SplitLeft.argTypes,
   },
 };
 
 export const SplitRightVideo = {
   name: "Split Right / Video",
   args: {
-    layout: "split",
-    media_position: "right",
+    ...SplitRight.args,
+    image: null,
     video: DecorativeVideo.args,
     title: "We are ",
     title_callout: "Bixal.",
@@ -85,10 +89,6 @@ export const SplitRightVideo = {
     },
   },
   argTypes: {
-    variant: {
-      control: "select",
-      options: ["Primary", "Accent"],
-      defaultValue: "Primary",
-    },
+    ...SplitRight.argTypes,
   },
 };

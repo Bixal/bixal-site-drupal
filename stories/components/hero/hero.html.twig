@@ -46,13 +46,12 @@
 {% set hero_classes = [
   "bix-hero",
   (variant ? "bix-hero--" ~ variant),
-  (layout ? "bix-hero--" ~ layout),
   (layout == "split" ? "bix-hero--split-" ~ media_position),
 ]|merge(additional_classes|default([])) %}
 
 <section {{ attributes.addClass(hero_classes) }}>
   <div class="bix-hero__container bix-container">
-    {% if has_media and layout == "split" %}
+    {% if has_media and variant == "split" %}
       <div class="bix-hero__media">
         {% if image %}
         <img src="{{ image }}" alt="" aria-hidden="true" />
