@@ -11,8 +11,10 @@ export default {
     variant: "",
     eyebrow: "",
     title: "Title",
+    title_callout: "",
     subtitle: "",
     description: "",
+    image: "",
   },
   argTypes: {
     variant: {
@@ -43,7 +45,7 @@ export const BackgroundImage = {
 export const SplitLeft = {
   args: {
     variant: "split",
-    media_position: null,
+    media_position: null, // Hero uses left by default.
     image: "static/5fe5ae2fa9f9bc458b9dd0914c0b1c9a/ce7bb/img-b-hero-7.webp",
     title: "We are Bixal.",
     description:
@@ -68,9 +70,6 @@ export const SplitRight = {
       variant: "inverse",
     },
   },
-  argTypes: {
-    ...SplitLeft.argTypes,
-  },
 };
 
 export const SplitRightVideo = {
@@ -78,7 +77,7 @@ export const SplitRightVideo = {
   args: {
     ...SplitRight.args,
     image: null,
-    video: DecorativeVideo.args,
+    video: DecorativeVideo.args.video_src,
     title: "We are ",
     title_callout: "Bixal.",
     description:
