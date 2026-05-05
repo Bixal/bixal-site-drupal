@@ -82,10 +82,6 @@ export const SplitRightVideo = {
     title_callout: "Bixal.",
     description:
       "We partner with government agencies to modernize systems, turn data into insight, and design trusted, user-centered solutions that create lasting impact.",
-    cta: {
-      label: "Discover Bixal",
-      href: "javascript:void(0);",
-    },
   },
   argTypes: {
     ...SplitRight.argTypes,
