@@ -9,12 +9,20 @@ export default {
   component: Hero,
   args: {
     variant: "",
+    heading_type: "h1",
+    sub_heading_type: "h2",
     eyebrow: "",
     title: "Title",
     title_callout: "",
     subtitle: "",
     description: "",
     image: "",
+    cta: {
+      label: "",
+      href: "",
+      variant: [""],
+      additional_classes: [""],
+    },
   },
   argTypes: {
     variant: {
@@ -76,7 +84,7 @@ export const SplitRightVideo = {
   name: "Split Right / Video",
   args: {
     ...SplitRight.args,
-    image: null,
+    image: "",
     video: DecorativeVideo.args.video_src,
     title: "We are ",
     title_callout: "Bixal.",
