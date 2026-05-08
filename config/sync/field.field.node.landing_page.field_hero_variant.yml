@@ -12,7 +12,7 @@ field_name: field_hero_variant
 entity_type: node
 bundle: landing_page
 label: 'Hero Variant'
-description: ''
+description: "If choosing 'Image Background', 'Banner Media' must be an image."
 required: true
 translatable: false
 default_value: {  }
