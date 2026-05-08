@@ -24,6 +24,13 @@ remote_video:
   js:
     dist/js/bx-remote-video.js: { minified: true }
 
+accessible-videos:
+  js:
+    dist/js/bx-accessible-videos.js:
+      attributes:
+        minified: true
+        type: module
+
 storybook:
   js:
     dist/js/storybook-js/stories/_utils/toggle.js:
