@@ -913,5 +913,12 @@ if (getenv('OPENID_CONNECT_CLIENT_SECRET')) {
  * Keep this code block at the end of this file to take full effect.
  */
 #
+if (FALSE !== getenv('DRUPAL_ENV_LOCAL')) {
+  $config['config_split.config_split.local']['status'] = TRUE;
+}
+
+// Appended to by mattsqd/drupal-env.
 
 include $app_root . '/' . $site_path . '/settings.drupal_env.php';
+
+// End of appended content by mattsqd/drupal-env.

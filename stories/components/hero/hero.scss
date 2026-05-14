@@ -2,10 +2,18 @@
 @use "../../assets/styles/utils/mixins/heading-border" as *;
 
 .bix-hero {
-  padding: 40px 0;
+  --_hero-background-color: var(--hero-background-color, none);
+  --_hero-text-color: var(--hero-text-color, currentcolor);
+  --_hero-callout-color: var(--hero-callout-color, var(--c-accent-vivid));
+  --_hero-padding-y: var(--hero-padding-y, #{units(5)});
+  --_hero-padding-x: var(--hero-padding-x, 0);
+
+  background-color: var(--_hero-background-color);
+  color: var(--_hero-text-color);
+  padding: var(--_hero-padding-y) var(--_hero-padding-x);
 
   @include at-media("desktop") {
-    padding: 80px 0 90px;
+    --hero-padding-y: #{units(5)};
   }
 
   &__container {
@@ -13,20 +21,29 @@
     margin-inline: auto;
   }
 
+  &__callout {
+    color: var(--_hero-callout-color);
+  }
+
+  &:has(.bix-hero__callout) .bix-hero__cta-button {
+    background-color: var(--_hero-callout-color);
+    color: var(--c-primary);
+  }
+
+  &__body {
+    @include at-media("desktop") {
+      font-size: size("body", "lg");
+    }
+  }
+
   &__body p:last-child {
     margin-block-end: 0;
-    font-size: size("body", "lg");
   }
-}
 
-.bix-hero--primary {
-  background-color: var(--c-primary);
-  color: white;
-}
-
-.bix-hero--primary-alt {
-  background-color: var(--c-primary-alt);
-  color: white;
+  &__footer {
+    font-size: size("body", "md");
+    margin-block-start: units(5);
+  }
 }
 
 // ==========================================================================
@@ -36,6 +53,7 @@
 // Image styles set via scope in stories/components/hero/hero.html.twig.
 .bix-hero--image-bg {
   --hero-image: "";
+  --hero-text-color: white;
 
   background-image:
     radial-gradient(circle, rgb(0 0 0 / 48%) 0%, rgb(0 0 0 / 0%) 100%),
@@ -43,7 +61,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: color("white");
   place-content: center;
   min-height: 400px;
   text-align: center;
@@ -54,38 +71,68 @@
 }
 
 // ==========================================================================
-// Inline image hero - Ex: Homepage
+/// Split Hero
+///
+/// Hero with media (image or video) and content side by side.
+/// Ex: Homepage
 // ==========================================================================
-.bix-hero--image-inline {
-  background-color: var(--c-primary);
-  color: color("white");
+.bix-hero--split {
+  --hero-background-color: var(--c-primary);
+  --hero-text-color: white;
+  --hero-split-media-column-width: 45%;
+  --hero-split-copy-column-width: 1fr;
+  --hero-split-gradient-start-color: var(--c-primary);
+  --hero-split-gradient-end-color: #000;
+  --hero-split-gradient-start-position: 0%;
+  --hero-split-gradient-end-position: 65%;
+
+  // Building the gradient.
+  --_hero-gradient-start: var(--hero-split-gradient-start-color)
+    var(--hero-split-gradient-start-position);
+  --_hero-gradient-end: var(--hero-split-gradient-end-color)
+    var(--hero-split-gradient-end-position);
+
+  background-image: linear-gradient(
+    to top,
+    var(--_hero-gradient-start),
+    var(--_hero-gradient-end)
+  );
+
+  @include at-media("tablet") {
+    background-image: linear-gradient(
+      to left,
+      var(--_hero-gradient-start),
+      var(--_hero-gradient-end)
+    );
+  }
 
   .bix-hero__container {
-    @include at-media("tablet-lg") {
+    @include at-media("tablet") {
       display: grid;
-      grid-template-columns: minmax(300px, 1fr) 4fr;
+      grid-template-columns:
+        var(--hero-split-media-column-width)
+        var(--hero-split-copy-column-width);
       column-gap: units(8);
-      align-items: end;
-    }
-
-    @include at-media("widescreen") {
-      grid-template-columns: minmax(400px, 1fr) 4fr;
+      align-items: center;
     }
   }
 
   .bix-hero__media {
-    @include at-media-max("tablet-lg") {
+    @include at-media-max("tablet") {
       margin-block-end: units(4);
     }
   }
 
-  .bix-hero__media img {
-    object-fit: contain;
-    max-width: 50%;
+  .bix-hero__media :is(img, video) {
+    max-width: 100%;
+  }
 
-    @include at-media("tablet-lg") {
-      max-width: 100%;
-    }
+  .bix-hero__media :is(img, video) {
+    object-fit: contain;
+  }
+
+  .bix-hero__media video {
+    clip-path: inset(2px); // Prevent video artifact in the top right corner.
   }
 
   .bix-hero__title {
@@ -94,8 +141,34 @@
     font-size: px-to-rem(47px);
 
     @include at-media("desktop") {
-      font-size: 72px;
-      letter-spacing: -2.4px;
+      font-size: 70px;
+      letter-spacing: -2.5px;
     }
+  }
+}
+
+// Split hero - media on the right.
+// ==========================================================================
+.bix-hero--split-right {
+  @include at-media("tablet-lg") {
+    background-image: linear-gradient(
+      to right,
+      var(--_hero-gradient-start),
+      var(--_hero-gradient-end)
+    );
+  }
+
+  .bix-hero__container {
+    @include at-media("tablet-lg") {
+      display: grid;
+      grid-template-columns:
+        var(--hero-split-copy-column-width)
+        var(--hero-split-media-column-width);
+      column-gap: units(8);
+    }
+  }
+
+  .bix-hero__content {
+    order: -1;
   }
 }

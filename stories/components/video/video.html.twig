@@ -7,9 +7,13 @@
   * Available variables:
   * - additional_classes (array, optional): Additional CSS classes.
   * - video_src (string): URL of the video source.
+  * - decorative_video (boolean, optional): Whether the video is decorative. If true, the video will autoplay, loop, and be muted, and controls will be hidden.
   * - center_content (boolean, optional): Whether to center the video.
   * - poster (string, optional): URL of the video poster image
   * - controls (boolean, optional): Boolean to show video controls, enabled by default.
+  * - autoplay (boolean, optional): Boolean to enable autoplay, disabled by default.
+  * - muted (boolean, optional): Boolean to mute the video, disabled by default.
+  * - loop (boolean, optional): Boolean to loop the video, disabled by default.
   * - description (string, optional): Description below the video.
   **/
 **/
@@ -17,12 +21,27 @@
 
 {% if attributes is empty %}
   {% set video_attributes = {} %}
-  {% if controls|default(true) %}
-    {% set video_attributes = video_attributes|merge({'controls': 'controls'}) %}
+  {% if controls|default(true) and decorative_video != true %}
+    {% set video_attributes = video_attributes|merge({'controls': true}) %}
   {% endif %}
   {% if poster %}
     {% set video_attributes = video_attributes|merge({'poster': poster}) %}
   {% endif %}
+  {% if autoplay or decorative_video %}
+    {% set video_attributes = video_attributes|merge({'autoplay': true}) %}
+    {{ attach_library('bixal_uswds/accessible-videos') }}
+  {% endif %}
+  {% if muted or decorative_video %}
+    {% set video_attributes = video_attributes|merge({'muted': true}) %}
+  {% endif %}
+  {% if loop or decorative_video %}
+    {% set video_attributes = video_attributes|merge({'loop': true}) %}
+  {% endif %}
+  {% if playsinline or decorative_video %}
+    {# Plays inline for mobile devices instead of fullscreen. #}
+    {% set video_attributes = video_attributes|merge({'playsinline': true}) %}
+  {% endif %}
+  {# Now create the Attribute object from the plain object #}
   {% set attributes = create_attribute(video_attributes) %}
 {% endif %}
 

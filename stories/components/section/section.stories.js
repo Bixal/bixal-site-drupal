@@ -71,7 +71,7 @@ export const BackgroundImage = {
       "https://www.bixal.com/sites/default/files/2025-04/What%20We%20Do%20Banner.webp",
     prefix: "What we do",
     title:
-      "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
+      "The work we do helps our clients unite stakeholders, optimize resources, and better serve the public all over the world.",
     description:
       "We take a people-absolutely-first approach to solving complex organizational challenges and gracefully balance cutting-edge technical chops with a deep sense of empathy and understanding. We relentlessly focus on outcomes and weave it all together with a unique agility that permeates across everything we do.",
     cta: {
@@ -90,8 +90,7 @@ export const Tall = {
     image:
       "https://www.bixal.com/sites/default/files/2025-04/Work%20With%20Us.webp",
     prefix: "What we do",
-    title:
-      "The work we do helps our clients unite stakeholders, optimize resources, and better serve citizens all over the world.",
+    title: BackgroundImage.args.title,
     description: null,
     cta: {
       href: "javascript:void(0)",

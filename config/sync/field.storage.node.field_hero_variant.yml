@@ -13,10 +13,13 @@ settings:
   allowed_values:
     -
       value: image-inline
-      label: 'Image Inline'
+      label: 'Media on Left'
     -
       value: image-bg
       label: 'Image Background'
+    -
+      value: split_right
+      label: 'Media on Right'
   allowed_values_function: ''
 module: options
 locked: false

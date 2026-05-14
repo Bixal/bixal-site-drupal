@@ -77,10 +77,10 @@
 ] %}
 
 {% if content.field_decorative_title| field_value is not empty %}
-  {% set decorative_title = true %}
+  {% set heading_type = 'h2' %}
   {% set title = content.field_decorative_title | field_value %}
 {% else %}
-  {% set decorative_title = false %}
+  {% set heading_type = 'h1' %}
   {% set title = node.title.value %}
 {% endif %}
 
@@ -94,7 +94,7 @@
     'title': title,
     'image' : image,
     'variant' : 'image-bg',
-    'decorative_title': decorative_title ,
+    'heading_type': heading_type,
   } %}
 
 </div>

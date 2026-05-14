@@ -20,8 +20,8 @@ export const Inverse = {
   args: {
     variant: "inverse",
   },
-  parameters: {
-    backgrounds: { default: "dark" },
+  globals: {
+    backgrounds: { value: "dark" },
   },
 };
 

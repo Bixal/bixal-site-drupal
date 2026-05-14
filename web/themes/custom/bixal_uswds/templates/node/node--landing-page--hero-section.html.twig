@@ -77,16 +77,34 @@
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
-  {% set image = content.field_banner_image['#object'].field_banner_image.entity.field_media_image.entity.uri.getString()|default('') %}
+  {% set image = content.field_banner_image['#object'].field_banner_image.entity.field_media_image|file_uri %}
   {% if image %}
     {% set image = image|image_style('webp') %}
   {% endif %}
-  {% include "@components/hero/hero.html.twig" with {
-    'title': node.title.value,
-    'image' : image,
-    'variant' : content.field_hero_variant['#items'].getString(),
-    'description' : content.field_hero_description | field_value,
-    'image_inline': content.field_hero_variant['#items'].getString() == 'image-inline',
-  } %}
+  {% set video = content.field_banner_image['#object'].field_banner_image.entity.field_media_video_file|file_url %}
+  {# Compute variant and media_position #}
+  {% set hero_variant = content.field_hero_variant['#items'].getString() %}
+  {% if hero_variant == 'image-inline' %}
+    {% set variant = 'split' %}
+    {% set media_position = 'left' %}
+  {% elseif hero_variant == 'split_right' %}
+    {% set variant = 'split' %}
+    {% set media_position = 'right' %}
+  {% else %}
+    {% set variant = hero_variant %}
+    {% set media_position = '' %}
+  {% endif %}
+
+  {% if variant == 'image-bg' and video %}
+    <i>Unable to use videos and background images, please choose an image instead.</i>
+  {% else  %}
+    {% include "@components/hero/hero.html.twig" with {
+      'title': node.title.value,
+      'image' : image,
+      'variant' : variant,
+      'media_position': media_position,
+      'description' : content.field_hero_description | field_value,
+    } %}
+  {% endif %}
 
 </div>
