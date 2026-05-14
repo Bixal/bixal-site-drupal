@@ -5,13 +5,14 @@ dependencies:
   config:
     - field.storage.node.field_banner_image
     - media.type.image
+    - media.type.video
     - node.type.landing_page
 id: node.landing_page.field_banner_image
 field_name: field_banner_image
 entity_type: node
 bundle: landing_page
-label: 'Banner Image'
-description: ''
+label: 'Banner Media'
+description: "It's highly recommended, if using a video, to use only <b>webm</b> format and have the duration be 5 seconds or less."
 required: true
 translatable: false
 default_value: {  }
@@ -21,9 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference
