@@ -160,6 +160,7 @@
       var(--_hero-gradient-end)
     );
   }
+
   // - The copy and media columns are now switched.
   .bix-hero__container {
     @include at-media("tablet") {
