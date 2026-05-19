@@ -150,21 +150,22 @@
 // Split hero - media on the right.
 // ==========================================================================
 .bix-hero--split-right {
-  @include at-media("tablet-lg") {
+  // Tablet is the first breakpoint that has columns instead of stacking.
+  // When media is on the right:
+  // - The gradient needs to switch directions.
+  @include at-media("tablet") {
     background-image: linear-gradient(
       to right,
       var(--_hero-gradient-start),
       var(--_hero-gradient-end)
     );
   }
-
+  // - The copy and media columns are now switched.
   .bix-hero__container {
-    @include at-media("tablet-lg") {
-      display: grid;
+    @include at-media("tablet") {
       grid-template-columns:
         var(--hero-split-copy-column-width)
         var(--hero-split-media-column-width);
-      column-gap: units(8);
     }
   }
 
