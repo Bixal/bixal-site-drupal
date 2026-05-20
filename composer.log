@@ -90,3 +90,5 @@ a3e8b1ae1b6aa612180829d1a9f9293a|Matt Poole|feature/BSD-561-update-deps|Wed Apr 
 56068d227744eac444001e3594b37976|Matt Poole|feature/BSD-561-update-deps|Wed Apr  1 16:35:42 EDT 2026|./composer.sh update -w
 a9edcea79fd6b3ceb77613f8046576f3|Matt Poole|feature/BSD-567-update-deps|Fri May  8 15:08:07 EDT 2026|./composer.sh update drupal/core-* -W
 0b10c398a58ef99ac530df56e14f9ae6|Matt Poole|feature/BSD-567-update-deps|Fri May  8 15:08:36 EDT 2026|./composer.sh update -w
+34673deaf9d924d5dd355e7515571084|Matt Poole|feature/BSD-572-update-deps|Wed May 20 15:38:04 EDT 2026|./composer.sh update drupal/core-* -W
+b6d9da006493c62ac9d6a48fc9480883|Matt Poole|feature/BSD-572-update-deps|Wed May 20 15:38:47 EDT 2026|./composer.sh update -w
