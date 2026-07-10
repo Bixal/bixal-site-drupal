@@ -180,6 +180,10 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
         // Create a render array of the image and add the URL or width from the
         // the other fields.
         $image_field_render_array = $image_field->view();
+        // Default the height and width to empty so it takes it's full space
+        // if not given. Very important if this is an SVG.
+        $image_field_render_array[0]['#attributes']['height'] = '';
+        $image_field_render_array[0]['#attributes']['width'] = '';
         $width_field = $paragraph->get('field_width');
         if (!$width_field->isEmpty()) {
           $width = $width_field->getString();
@@ -187,9 +191,9 @@ function bixal_uswds_preprocess_paragraph(&$vars) {
           // If a height and width is set, update the height so it's the same
           // scale as the new width.
           if (!empty($image_field_value['height']) && !empty($image_field_value['width'])) {
-            $image_field_render_array[0]['#item_attributes']['height'] = floor($image_field_value['height'] * ($width / $image_field_value['width']));
+            $image_field_render_array[0]['#attributes']['height'] = floor($image_field_value['height'] * ($width / $image_field_value['width']));
           }
-          $image_field_render_array[0]['#item_attributes']['width'] = $width;
+          $image_field_render_array[0]['#attributes']['width'] = $width;
         }
         $url_field = $paragraph->get('field_url');
         if (!$url_field->isEmpty()) {
