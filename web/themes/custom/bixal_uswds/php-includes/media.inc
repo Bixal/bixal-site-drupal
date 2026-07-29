@@ -39,3 +39,18 @@ function bixal_uswds_theme_suggestions_media_alter(&$suggestions, array $vars): 
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function bixal_uswds_preprocess_image(&$variables) {
+  // SVGs do not get a height and width, unset empty width and height so empty
+  // attributes are not used.
+  if (str_ends_with($variables['uri'] ?? '', '.svg')) {
+    foreach (['width', 'height'] as $attribute) {
+      if (empty($variables['attributes'][$attribute])) {
+        unset($variables['attributes'][$attribute]);
+      }
+    }
+  }
+}

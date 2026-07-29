@@ -38,6 +38,7 @@ module:
   dynamic_page_cache: 0
   edit_media_modal: 0
   editor: 0
+  editoria11y: 0
   email_username: 0
   entity_reference_revisions: 0
   externalauth: 0

@@ -61,6 +61,7 @@
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",
         "drupal/edit_media_modal": "^2.0",
+        "drupal/editoria11y": "^2.2",
         "drupal/email_username": "^1.0",
         "drupal/field_group": "^3.4",
         "drupal/file_resup": "^2.0",
@@ -115,12 +116,13 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true,
             "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": false
         },
         "sort-packages": true
