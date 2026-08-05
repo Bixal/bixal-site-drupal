@@ -97,3 +97,5 @@ bf1acb8add97c0a28c6fe260087c5636|Matt Poole|feature/BSD-563-accessibility-tracke
 aac650de6caa9551ceb34586438545ec|Matt Poole|feature/BSD-578-update-deps|Wed Jun 17 16:08:28 EDT 2026|./composer.sh update -w
 353045fad06d852abcc4c6adbfaa1e5d|Matt Poole|feature/BSD-578-update-deps|Thu Jul  9 09:20:06 EDT 2026|./composer.sh update drupal/core-* -W
 a0219d71ff5b571ca8d0446c3ba03a68|Matt Poole|feature/BSD-578-update-deps|Thu Jul  9 09:36:21 EDT 2026|./composer.sh update -w
+ef94fc8052557559e673950e0f8c29fe|Matt Poole|feature/BSD-583-update-deps|Wed Jul 29 16:03:58 EDT 2026|./composer.sh update drupal/core-* -W
+f3b6dba8f19469b27e7b84f5191f1850|Matt Poole|feature/BSD-583-update-deps|Wed Jul 29 16:04:16 EDT 2026|./composer.sh update -w
