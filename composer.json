@@ -63,7 +63,7 @@
         "drupal/edit_media_modal": "^2.0",
         "drupal/editoria11y": "^2.2",
         "drupal/email_username": "^1.0",
-        "drupal/field_group": "^3.4",
+        "drupal/field_group": "^4.0",
         "drupal/file_resup": "^2.0",
         "drupal/google_tag": "^2.0",
         "drupal/imagecache_external": "^3.0",
