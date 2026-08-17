@@ -100,3 +100,4 @@ a0219d71ff5b571ca8d0446c3ba03a68|Matt Poole|feature/BSD-578-update-deps|Thu Jul 
 ef94fc8052557559e673950e0f8c29fe|Matt Poole|feature/BSD-583-update-deps|Wed Jul 29 16:03:58 EDT 2026|./composer.sh update drupal/core-* -W
 f3b6dba8f19469b27e7b84f5191f1850|Matt Poole|feature/BSD-583-update-deps|Wed Jul 29 16:04:16 EDT 2026|./composer.sh update -w
 4b4bc1e8f07529fe1bd07390eeae1c08|Matt Poole|feature/BSD-586-field-group-4x|Wed Aug  5 16:42:01 EDT 2026|./composer.sh require drupal/field_group:^4.0
+9d979d895eb73b2f1ab3aa1333d831c6|Matt Poole|feature/BSD-590-config-pages-4x|Mon Aug 17 16:12:47 EDT 2026|./composer.sh require drupal/config_pages:^4.0
