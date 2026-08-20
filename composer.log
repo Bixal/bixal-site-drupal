@@ -105,3 +105,4 @@ f3b6dba8f19469b27e7b84f5191f1850|Matt Poole|feature/BSD-583-update-deps|Wed Jul 
 d19a19a5b31ee949c26256d62dd7c656|Matt Poole|feature/BSD-592-update-chosen-5x|Mon Aug 17 16:26:51 EDT 2026|./composer.sh remove jjj/chosen
 75d1b63db7edf3eeb6e200c2794eae59|Matt Poole|feature/BSD-592-update-chosen-5x|Mon Aug 17 16:27:55 EDT 2026|./composer.sh require noli42/chosen
 3dae2b8f579c6165218414dbc5fb835b|Matt Poole|feature/BSD-594-update-editoria11y-3x|Mon Aug 17 16:37:06 EDT 2026|./composer.sh require drupal/editoria11y:^3.0
+59c448b11178b93166aeeeb0c0700b4a|Matt Poole|feature/BSD-596-phpmailer-3x|Thu Aug 20 15:21:10 EDT 2026|./composer.sh require drupal/phpmailer_smtp:^3.0

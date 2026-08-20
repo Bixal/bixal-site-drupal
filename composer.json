@@ -81,7 +81,7 @@
         "drupal/paragraphs": "^1.16",
         "drupal/paragraphs_edit": "^3.0",
         "drupal/pathauto": "^1.12",
-        "drupal/phpmailer_smtp": "^2.2",
+        "drupal/phpmailer_smtp": "^3.0",
         "drupal/recaptcha": "^3.2",
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
