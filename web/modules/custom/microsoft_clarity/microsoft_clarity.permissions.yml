@@ -1,0 +1,4 @@
+administer microsoft clarity:
+  title: 'Administer Microsoft Clarity'
+  description: 'Configure which Microsoft Clarity project the site reports to.'
+  restrict access: true

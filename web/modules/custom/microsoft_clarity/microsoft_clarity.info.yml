@@ -1,0 +1,6 @@
+name: 'Microsoft Clarity'
+type: module
+description: 'Embeds Microsoft Clarity on front end pages.'
+package: Custom
+core_version_requirement: ^10 || ^11 || ^12
+configure: microsoft_clarity.settings

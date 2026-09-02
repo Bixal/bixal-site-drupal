@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Embeds the Microsoft Clarity tag on front end pages.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function microsoft_clarity_page_attachments(array &$attachments) {
+  // Keep Clarity off the administrative UI. It records full session replays,
+  // so on admin routes it would capture unpublished content, other users'
+  // data and whatever is typed into admin forms. No cache metadata is needed
+  // for this check: Dynamic Page Cache varies every item by 'route' already.
+  // @see \Drupal\dynamic_page_cache\EventSubscriber\DynamicPageCacheSubscriber::$cacheContexts
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+
+  $config = \Drupal::config('microsoft_clarity.settings');
+
+  $cacheable_metadata = CacheableMetadata::createFromRenderArray($attachments);
+  $cacheable_metadata->addCacheableDependency($config);
+  $cacheable_metadata->applyTo($attachments);
+
+  $project_id = trim((string) $config->get('project_id'));
+  if ($project_id === '') {
+    return;
+  }
+
+  $attachments['#attached']['library'][] = 'microsoft_clarity/microsoft_clarity';
+  $attachments['#attached']['drupalSettings']['microsoft_clarity'] = [
+    'projectId' => $project_id,
+  ];
+}

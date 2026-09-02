@@ -1,0 +1,6 @@
+microsoft_clarity:
+  header: true
+  js:
+    js/microsoft_clarity.js: { preprocess: false }
+  dependencies:
+    - core/drupalSettings
