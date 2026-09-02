@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Contains cookies_microsoft_clarity.module.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\cookies\Constants\CookiesConstants;
+
+/**
+ * Implements hook_help().
+ */
+function cookies_microsoft_clarity_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cookies_microsoft_clarity':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Submodule of COOKiES to manage Microsoft Clarity (by "microsoft_clarity" module) inside of COOKiES consent management.') . '</p>';
+      $output .= '<p>' . t('The Clarity tag is withheld until the visitor consents. On consent it is inserted and the decision is additionally passed to Microsoft through the Clarity Consent API v2, which Clarity requires for visitors from the EEA, UK and Switzerland.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function cookies_microsoft_clarity_page_attachments(&$page) {
+  if (!\Drupal::service('cookies.knock_out')->doKnockOut()) {
+    return;
+  }
+
+  $page['#attached']['library'][] = 'cookies_microsoft_clarity/microsoft_clarity';
+
+  // Clarity's ad_Storage signal covers advertising data, which the
+  // "microsoft_clarity" service (performance group) does not consent to. Set
+  // this to the id of a COOKiES service governing advertising to have
+  // ad_Storage follow that service instead.
+  $page['#attached']['drupalSettings']['cookiesMicrosoftClarity'] = [
+    'adStorageService' => NULL,
+  ];
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function cookies_microsoft_clarity_js_alter(&$javascript, AttachedAssetsInterface $assets) {
+  if (!\Drupal::service('cookies.knock_out')->doKnockOut()) {
+    return;
+  }
+
+  $module_path = \Drupal::service('extension.list.module')->getPath('microsoft_clarity');
+  $script = $module_path . '/js/microsoft_clarity.js';
+
+  if (!isset($javascript[$script])) {
+    return;
+  }
+
+  $javascript[$script]['preprocess'] = FALSE;
+  $javascript[$script]['attributes']['type'] = CookiesConstants::COOKIES_SCRIPT_KO_TYPE;
+  $javascript[$script]['attributes']['id'] = 'cookies_microsoft_clarity';
+  $javascript[$script]['attributes']['data-cookieconsent'] = 'microsoft_clarity';
+}
