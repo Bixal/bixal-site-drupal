@@ -28,11 +28,14 @@ The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal
 #### First Time Setup
 
 DDEV:
+
 ```
 ddev start
 ./robo.sh ddev:init
 ```
+
 Lando:
+
 ```
 lando start
 ./robo.sh lando:init
@@ -44,6 +47,7 @@ lando start
 ddev poweroff
 ./robo.sh lando:init
 ```
+
 ```
 lando poweroff
 ./robo.sh ddev:init
@@ -58,6 +62,7 @@ For future sessions, you can start:
 ```
 ddev start
 ```
+
 ```
 lando start
 ```
@@ -69,6 +74,7 @@ Run the following command to stop the environment:
 ```
 ddev stop
 ```
+
 ```
 lando stop
 ```
@@ -84,6 +90,7 @@ Change something in the `.lando.yml` config and/or you want to re-install front 
 ```
 ddev start && robo si
 ```
+
 ```
 lando rebuild -y && robo si
 ```
@@ -93,6 +100,7 @@ lando rebuild -y && robo si
 ```
 ddev exec './orch/build_node.sh;'
 ```
+
 ```
 lando build_node
 ```
@@ -183,6 +191,29 @@ To export new content from your local, create it locally and run:
 ./drush.sh cr
 ```
 
+### npm Workspaces
+
+This repo usees [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) to share and manage root and Drupal theme dependencies in a single place. Because of that, the nested `bixal_uswds` dependencies get hoisted to the root directory.
+
+**Running a workspace script**
+
+Use a `-w` with the workspace's `name` field (found in `bixal_uswds/package.json`).
+
+```bash
+# From root, run the `build` script in `bixal_uswds`.
+npm run build -w bixaldrop
+```
+
+With this setup, you can easily manage both package dependencies using this script:
+
+```bash
+npm run check-updates
+```
+
+**USWDS asset paths**
+
+The drupal theme uses [`uswds-compile`](https://github.com/uswds/uswds-compile/blob/develop/gulpfile.js), which assumes that USWDS will live inside the local `node_modules`. Now, the gulpfile will resolve to the new, hoisted, path in root to make sure assets are imported correctly.
+
 ### Running Composer Commands
 
 By default, Lando runs Composer commands within its Docker containers. This often times out, so we recommend using your local Composer instead.
@@ -252,6 +283,7 @@ Use this command to view changes from Storybook components.
 ```
 ddev exec './orch/build_node.sh;'
 ```
+
 ```
 lando build_node
 ```

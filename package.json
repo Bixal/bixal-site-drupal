@@ -2,6 +2,7 @@
   "name": "@bixal/site-drupal",
   "version": "1.0.0-beta",
   "description": "",
+  "private": true,
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -19,7 +20,9 @@
     "storybook": "storybook dev -p 80",
     "storybook:local": "storybook dev -p 5050",
     "build-storybook": "storybook build",
-    "static-sb": "npm run build-storybook && npx http-server storybook-static/"
+    "build-drupal-theme": "npm run build -w bixaldrop",
+    "static-sb": "npm run build-storybook && npx http-server storybook-static/",
+    "check-updates": "npx npm-check-updates --interactive --format group --workspaces"
   },
   "repository": {
     "type": "git",
@@ -34,23 +37,26 @@
   "homepage": "https://github.com/Bixal/bixal-site-drupal#readme",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@storybook/addon-a11y": "10.2.15",
-    "@storybook/addon-docs": "10.2.15",
-    "@storybook/addon-links": "10.2.15",
-    "@storybook/html-vite": "10.2.15",
-    "@storybook/icons": "2.0.1",
-    "@uswds/uswds": "3.13.0",
+    "@storybook/addon-a11y": "10.6.0",
+    "@storybook/addon-docs": "10.6.0",
+    "@storybook/addon-links": "10.6.0",
+    "@storybook/html-vite": "10.6.0",
+    "@storybook/icons": "2.1.0",
+    "@uswds/uswds": "3.14.0",
     "chromatic": "15.2.0",
-    "eslint": "10.0.2",
+    "eslint": "10.9.1",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-storybook": "10.2.15",
-    "globals": "17.4.0",
-    "prettier": "3.8.1",
-    "sass": "1.97.3",
-    "storybook": "10.2.15",
-    "stylelint": "17.4.0",
+    "eslint-plugin-storybook": "10.6.0",
+    "globals": "17.12.0",
+    "prettier": "3.9.6",
+    "sass": "1.103.1",
+    "storybook": "10.6.0",
+    "stylelint": "17.14.1",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-prettier": "5.0.3",
     "vite-plugin-twig-drupal": "1.6.2"
-  }
+  },
+  "workspaces": [
+    "web/themes/custom/bixal_uswds"
+  ]
 }

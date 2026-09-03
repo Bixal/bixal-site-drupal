@@ -1,3 +1,5 @@
+const path = require("path");
+const fs = require("fs");
 const uswds = require("@uswds/compile");
 const { parallel, watch, series, src, dest } = require("gulp");
 const { deleteAsync } = require("del");
@@ -13,6 +15,15 @@ const colors = {
 };
 // End required to build Sass.
 
+// With the monorepo, @uswds/uswds is hoisted to root `node_modules`, but
+// uswds-compile assumes it's local to this theme. We're redirecting to the new path now.
+const uswdsPackage = require.resolve.paths("@uswds/uswds");
+const resolvedUswdsDir = uswdsPackage.find((dir) =>
+  fs.existsSync(path.join(dir, "@uswds/uswds")),
+);
+const uswdsRoot = path.join(resolvedUswdsDir, "@uswds/uswds");
+const uswdsDist = path.join(uswdsRoot, "dist");
+
 /**
  * USWDS version
  */
@@ -24,6 +35,15 @@ uswds.settings.version = 3;
  * Set as many as you need
  * see https://designsystem.digital.gov/documentation/getting-started/developers/phase-two-compile/#step-4-create-path-settings-and-export-compile-functions
  */
+
+// Source paths updated after converting to monorepo.
+uswds.paths.src.uswds = path.dirname(uswdsDist);
+uswds.paths.src.fonts = `${uswdsDist}/fonts`;
+uswds.paths.src.img = `${uswdsDist}/img`;
+uswds.paths.src.js = `${uswdsDist}/js`;
+uswds.paths.src.theme = `${uswdsDist}/theme`;
+uswds.paths.src.sass = `${uswdsDist}/packages`;
+
 uswds.paths.dist.theme = "./src/sass";
 uswds.paths.dist.css = "./dist/css";
 uswds.paths.dist.img = "./dist/assets/img";
