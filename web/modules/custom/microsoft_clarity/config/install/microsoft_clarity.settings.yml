@@ -1,1 +1,4 @@
 project_id: ''
+excluded_roles: {  }
+excluded_paths: ''
+custom_tags: {  }

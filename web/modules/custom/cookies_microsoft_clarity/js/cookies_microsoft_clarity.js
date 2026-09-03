@@ -38,6 +38,12 @@
       ad_Storage: decision.ad ? 'granted' : 'denied',
       analytics_Storage: decision.analytics ? 'granted' : 'denied'
     });
+
+    // consentv2 alone only downgrades Clarity to its cookieless mode. On a
+    // withdrawal, erase the cookies it has already set (_clck and _clsk).
+    if (!decision.analytics) {
+      window.clarity('consent', false);
+    }
   }
 
   /**

@@ -5,3 +5,18 @@ microsoft_clarity.settings:
     project_id:
       type: string
       label: 'Clarity project ID'
+    excluded_roles:
+      type: sequence
+      label: 'Roles excluded from tracking'
+      sequence:
+        type: string
+        label: 'Role ID'
+    excluded_paths:
+      type: string
+      label: 'Paths excluded from tracking'
+    custom_tags:
+      type: sequence
+      label: 'Custom tags sent to Clarity'
+      sequence:
+        type: string
+        label: 'Tag name'
