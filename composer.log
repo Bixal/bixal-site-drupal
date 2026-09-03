@@ -101,3 +101,12 @@ ef94fc8052557559e673950e0f8c29fe|Matt Poole|feature/BSD-583-update-deps|Wed Jul 
 f3b6dba8f19469b27e7b84f5191f1850|Matt Poole|feature/BSD-583-update-deps|Wed Jul 29 16:04:16 EDT 2026|./composer.sh update -w
 4b4bc1e8f07529fe1bd07390eeae1c08|Matt Poole|feature/BSD-586-field-group-4x|Wed Aug  5 16:42:01 EDT 2026|./composer.sh require drupal/field_group:^4.0
 9d979d895eb73b2f1ab3aa1333d831c6|Matt Poole|feature/BSD-590-config-pages-4x|Mon Aug 17 16:12:47 EDT 2026|./composer.sh require drupal/config_pages:^4.0
+255fd62ead0513b57a026cd31f1edb44|Matt Poole|feature/BSD-592-update-chosen-5x|Mon Aug 17 16:25:16 EDT 2026|./composer.sh require drupal/chosen:^5.0 -W
+d19a19a5b31ee949c26256d62dd7c656|Matt Poole|feature/BSD-592-update-chosen-5x|Mon Aug 17 16:26:51 EDT 2026|./composer.sh remove jjj/chosen
+75d1b63db7edf3eeb6e200c2794eae59|Matt Poole|feature/BSD-592-update-chosen-5x|Mon Aug 17 16:27:55 EDT 2026|./composer.sh require noli42/chosen
+3dae2b8f579c6165218414dbc5fb835b|Matt Poole|feature/BSD-594-update-editoria11y-3x|Mon Aug 17 16:37:06 EDT 2026|./composer.sh require drupal/editoria11y:^3.0
+59c448b11178b93166aeeeb0c0700b4a|Matt Poole|feature/BSD-596-phpmailer-3x|Thu Aug 20 15:21:10 EDT 2026|./composer.sh require drupal/phpmailer_smtp:^3.0
+5b872482719d71e6d4b2f0b1c2c350e2|Matt Poole|feature/BSD-598-update-deps|Thu Aug 20 15:38:20 EDT 2026|./composer.sh update drupal/core-* -W
+1a7d77191b4bb0559a73b71ca91a4174|Matt Poole|feature/BSD-598-update-deps|Thu Aug 20 15:38:44 EDT 2026|./composer.sh update -w
+8e60599d1baa84e3bcd72baf7b56c93a|Matt Poole|feature/BSD-598-update-deps|Fri Aug 28 15:50:54 EDT 2026|./composer.sh update drupal/core-* -W
+c36721b8b1cd58ff45be4f77e54eb6c5|Matt Poole|feature/BSD-598-update-deps|Fri Aug 28 15:51:35 EDT 2026|./composer.sh update -w

@@ -28,14 +28,14 @@
         {
             "type": "package",
             "package": {
-                "name": "jjj/chosen",
-                "version": "2.2.1",
+                "name": "noli42/chosen",
+                "version": "3.1.4",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "chosen"
                 },
                 "dist": {
-                    "url": "https://github.com/JJJ/chosen/archive/refs/tags/2.2.1.zip",
+                    "url": "https://github.com/noli42/chosen/releases/download/3.1.4/chosen-assets-v3.1.4.zip",
                     "type": "zip"
                 }
             }
@@ -47,7 +47,7 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/anchor_link": "^3.0@beta",
         "drupal/autocomplete_deluxe": "^2.1",
-        "drupal/chosen": "^4.0",
+        "drupal/chosen": "^5.0",
         "drupal/components": "^3.0@beta",
         "drupal/config_ignore": "^3.3",
         "drupal/config_pages": "^4.0",
@@ -61,7 +61,7 @@
         "drupal/devel": "^5.1",
         "drupal/disable_user_1_edit": "^1.6",
         "drupal/edit_media_modal": "^2.0",
-        "drupal/editoria11y": "^2.2",
+        "drupal/editoria11y": "^3.0",
         "drupal/email_username": "^1.0",
         "drupal/field_group": "^4.0",
         "drupal/file_resup": "^2.0",
@@ -81,7 +81,7 @@
         "drupal/paragraphs": "^1.16",
         "drupal/paragraphs_edit": "^3.0",
         "drupal/pathauto": "^1.12",
-        "drupal/phpmailer_smtp": "^2.2",
+        "drupal/phpmailer_smtp": "^3.0",
         "drupal/recaptcha": "^3.2",
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
@@ -100,11 +100,11 @@
         "drupal/webprofiler": "^11.1",
         "drupal/xmlsitemap": "^2.0@beta",
         "drush/drush": "*",
-        "jjj/chosen": "2.2.1",
         "mattsqd/drupal-env": "2.x@dev",
         "mattsqd/drupal-env-ddev": "2.x-dev",
         "mattsqd/drupal-env-lando": "2.x@dev",
         "mattsqd/robovalidate": "@alpha",
+        "noli42/chosen": "^3.1",
         "northernco/ckeditor5-anchor-drupal": "^0.5.0",
         "platformsh/config-reader": "^2.4"
     },
