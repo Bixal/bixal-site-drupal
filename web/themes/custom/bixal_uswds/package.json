@@ -1,19 +1,32 @@
 {
-  "name": "BixalDrop",
+  "name": "bixaldrop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bixal's Drupal theme",
+  "license": "ISC",
+  "author": "Bixal",
+  "type": "commonjs",
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp watch",
     "dev": "gulp",
     "build": "gulp compile"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@uswds/uswds": "3.13.0",
+    "@uswds/uswds": "3.14.0",
     "a11y-tabs": "0.1.2",
     "del": "8.0.1"
+  },
+  "devDependencies": {
+    "@uswds/compile": "1.3.2",
+    "browser-sync": "3.0.4",
+    "gulp": "5.0.1",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-uglify": "3.0.2",
+    "prettier": "3.9.6",
+    "stylelint": "17.14.1",
+    "stylelint-config-standard-scss": "17.0.0",
+    "stylelint-prettier": "5.0.3",
+    "uglify-es": "3.3.9"
   },
   "peerDependencies": {
     "sass-embedded-linux-arm64": "1.86.3"
@@ -22,17 +35,5 @@
     "sass-embedded-linux-arm64": {
       "optional": true
     }
-  },
-  "devDependencies": {
-    "@uswds/compile": "1.2.2",
-    "browser-sync": "3.0.4",
-    "gulp": "5.0.1",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-uglify": "3.0.2",
-    "prettier": "3.8.1",
-    "stylelint": "17.4.0",
-    "stylelint-config-standard-scss": "17.0.0",
-    "stylelint-prettier": "5.0.3",
-    "uglify-es": "3.3.9"
   }
 }
