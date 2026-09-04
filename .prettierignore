@@ -10,6 +10,10 @@ web/libraries/**
 web/modules/contrib/**
 web/themes/contrib/**
 web/core/**
+web/sites/default/files/**
+
+# Vendor files
+web/modules/custom/cookies_microsoft_clarity/js/cookies_microsoft_clarity.js
 
 # Node
 node_modules/**
