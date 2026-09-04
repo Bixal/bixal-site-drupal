@@ -1,3 +1,5 @@
+// USWDS setting overrides.
+// https://designsystem.digital.gov/documentation/settings/
 @forward "uswds-core" with (
   $theme-show-notifications: false
 );
