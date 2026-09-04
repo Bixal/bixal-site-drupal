@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "sass:list";
-@use "uswds-core" as *;
+@use "uswds-overrides" as *;
 @use "../utils/mixins/heading-border" as *;
 
 // Modern normalize - CSS Reset.
