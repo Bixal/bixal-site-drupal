@@ -1,4 +1,6 @@
 pre-commit:
   commands:
-    validate:
+    validate:branch:
       run: ./robo.sh validate:branch-name
+    validate:commit:
+      run: ./robo.sh validate:commit-messages
