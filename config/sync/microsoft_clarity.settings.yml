@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: rcm9GewsyBTQZWwRQk5L2ohFv9v1kKPl9db_KfzmcGs
+project_id: y7j3xbhsep
+excluded_roles:
+  - authenticated
+excluded_paths: ''
+custom_tags: {  }

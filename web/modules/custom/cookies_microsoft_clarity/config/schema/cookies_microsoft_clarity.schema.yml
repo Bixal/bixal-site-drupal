@@ -1,0 +1,7 @@
+cookies_microsoft_clarity.settings:
+  type: config_object
+  label: 'COOKiES Microsoft Clarity settings'
+  mapping:
+    ad_storage_service:
+      type: string
+      label: 'COOKiES service governing Clarity ad storage'

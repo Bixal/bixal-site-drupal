@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Installation information for the 'COOKiES Microsoft Clarity' module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function cookies_microsoft_clarity_install() {
+  // Run after microsoft_clarity so that hook_js_alter() can knock out the
+  // library it attaches.
+  module_set_weight('cookies_microsoft_clarity', 11);
+}

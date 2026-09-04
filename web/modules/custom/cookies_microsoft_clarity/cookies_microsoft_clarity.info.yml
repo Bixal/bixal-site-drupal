@@ -1,0 +1,9 @@
+name: 'COOKiES Microsoft Clarity'
+type: module
+description: 'Submodule of COOKiES to manage Microsoft Clarity (by "microsoft_clarity" module) inside of COOKiES consent management.'
+core_version_requirement: ^11.1 || ^12
+package: 'COOKiES'
+configure: microsoft_clarity.settings
+dependencies:
+  - cookies:cookies
+  - drupal:microsoft_clarity

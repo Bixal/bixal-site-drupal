@@ -1,0 +1,5 @@
+microsoft_clarity.settings:
+  title: 'Microsoft Clarity'
+  description: 'Configure which Microsoft Clarity project the site reports to.'
+  route_name: microsoft_clarity.settings
+  parent: system.admin_config_services
