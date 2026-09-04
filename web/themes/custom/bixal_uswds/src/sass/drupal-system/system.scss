@@ -1,5 +1,5 @@
 // Include core in order to use USWDS mixins etc...
-@use "uswds-core" as *;
+@use "uswds" as *;
 
 // Removes any transition when the user has set their OS settings to prefer
 // reduced motion.
