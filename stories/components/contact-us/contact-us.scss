@@ -1,4 +1,4 @@
-@use "uswds" as *;
+@use "uswds-overrides" as *;
 
 .bix-contact {
   @include at-media("desktop") {

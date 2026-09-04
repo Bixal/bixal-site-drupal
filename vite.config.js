@@ -6,7 +6,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        loadPaths: ["./node_modules/@uswds/uswds/packages"],
+        loadPaths: [
+          "./node_modules/@uswds/uswds/packages",
+          "./stories/assets/styles/global",
+        ],
         quietDeps: true, // Silences deprecations that aren't ours.
       },
     },

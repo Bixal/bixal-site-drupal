@@ -1,4 +1,4 @@
-@use "uswds" as *;
+@use "uswds-overrides" as *;
 
 @mixin full-width() {
   margin: 0 -50vw;
