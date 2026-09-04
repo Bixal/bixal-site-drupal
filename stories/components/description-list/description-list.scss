@@ -1,4 +1,4 @@
-@use "uswds-core" as *;
+@use "uswds" as *;
 
 .bix-description-list-collection {
   @include at-media("mobile-lg") {

@@ -1,4 +1,4 @@
-@use "uswds-core" as *;
+@use "uswds" as *;
 
 .bix-emphasis-block {
   --_emphasis-text-color: var(--emphasis-text-color, #{color("ink")});
