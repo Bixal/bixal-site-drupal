@@ -39,7 +39,7 @@ for dir in $directories; do
         # walks up the tree the same way require() does.
         if npx --no-install gulp --version > /dev/null 2>&1; then
           echo "Running gulp..."
-          npx gulp
+          npx gulp compile
         else
           echo -e "${red}Gulp is not resolvable from $dir. Please run:${NC}"
           echo "  npm install"

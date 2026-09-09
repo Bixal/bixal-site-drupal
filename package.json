@@ -20,7 +20,6 @@
     "storybook": "storybook dev -p 80",
     "storybook:local": "storybook dev -p 5050",
     "build-storybook": "storybook build",
-    "build-drupal-theme": "npm run build -w bixaldrop",
     "static-sb": "npm run build-storybook && npx http-server storybook-static/",
     "check-updates": "npx npm-check-updates --interactive --format group --workspaces"
   },

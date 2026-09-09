@@ -7,8 +7,7 @@
   "type": "commonjs",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp watch",
-    "dev": "gulp",
+    "watch": "gulp watch",
     "build": "gulp compile"
   },
   "dependencies": {
