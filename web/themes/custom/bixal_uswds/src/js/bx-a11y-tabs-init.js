@@ -1,5 +1,3 @@
-import A11yTabs from "a11y-tabs";
-
 /**
  * a11y Tabs JS functions.
  * @file

@@ -32,6 +32,12 @@ const designSystemDir = path.dirname(
   require.resolve("@bixal/design-system/package.json"),
 );
 
+// a11y-tabs ships a UMD build that assigns `A11yTabs` to the global scope.
+// `bixal_uswds.libraries.yml` loads it ahead of bx-a11y-tabs-init.js, which
+// uses that global. Resolve it rather than hardcoding a node_modules path,
+// since npm hoists workspace dependencies to the repo root.
+const a11yTabsDist = require.resolve("a11y-tabs/dist/a11y-tabs.min.js");
+
 /**
  * USWDS version
  */
@@ -73,6 +79,7 @@ const settings = {
   js: {
     dest: "./dist/js",
     designSystemDest: "./dist/js/design-system",
+    vendorDest: "./dist/vendor/js",
     minDest: "./dist/js/min",
     minSrc: "./src/js/**/*.js",
     src: "./src/js/**/*.js",
@@ -82,6 +89,12 @@ const settings = {
 // JS build function.
 function buildJS() {
   return src(settings.js.src).pipe(uglify()).pipe(dest(settings.js.dest));
+}
+
+// Third-party browser JS that Drupal libraries load directly. Already
+// minified by its publisher, so it is copied as-is.
+function copyVendorJS() {
+  return src(a11yTabsDist).pipe(dest(settings.js.vendorDest));
 }
 
 // The design system's JS, minified into the theme's dist. Story files are
@@ -103,7 +116,6 @@ function watchJSTwigFiles() {
       "./src/js/**/*.js",
       "./templates/**/*.html.twig",
       `${designSystemDir}/**/*.js`,
-      `${designSystemDir}/**/*.twig`,
     ],
     {
       events: "all",
@@ -212,6 +224,7 @@ exports.compile = series(
     uswds.compileIcons,
     buildJS,
     buildDesignSystemJS,
+    copyVendorJS,
   ),
 );
 exports.default = this.compile;
