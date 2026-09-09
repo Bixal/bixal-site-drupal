@@ -5,9 +5,9 @@
 // Always use "use strict";
 "use strict";
 
-(function (Drupal, drupalSettings, once) {
+(function (Drupal, once) {
   Drupal.behaviors.uswdsGlobal = {
-    attach: function (context, settings) {
+    attach: function (context) {
       // Globals and functions.
       // Get current pathname from the url.
       const current_path = window.location.pathname;
@@ -131,4 +131,4 @@
       // -------------------------------
     },
   };
-})(Drupal, drupalSettings, once);
+})(Drupal, once);

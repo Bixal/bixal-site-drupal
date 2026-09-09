@@ -5,9 +5,9 @@
 // Always use "use strict";
 "use strict";
 
-(function (Drupal, drupalSettings, once) {
+(function (Drupal, once) {
   Drupal.behaviors.uswdsGlobal = {
-    attach: function (context, settings) {
+    attach: function (context) {
       // Calc avg / mean function.
       function calcAverage(array) {
         return (
@@ -46,4 +46,4 @@
       }
     },
   };
-})(Drupal, drupalSettings, once);
+})(Drupal, once);

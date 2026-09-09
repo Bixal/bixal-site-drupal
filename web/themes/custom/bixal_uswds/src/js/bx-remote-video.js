@@ -5,9 +5,9 @@
 // Always use "use strict";
 "use strict";
 
-(function (Drupal, drupalSettings, once) {
+(function (Drupal, once) {
   Drupal.behaviors.uswdsRemoteVideo = {
-    attach: function (context, settings) {
+    attach: function (context) {
       /**
        * The code in this file enhances the remote video
        * experience by making the iframe title unique as
@@ -55,4 +55,4 @@
       });
     },
   };
-})(Drupal, drupalSettings, once);
+})(Drupal, once);
