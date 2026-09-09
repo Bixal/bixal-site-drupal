@@ -11,6 +11,7 @@
     "build": "gulp compile"
   },
   "dependencies": {
+    "@bixal/design-system": "*",
     "@uswds/uswds": "3.14.0",
     "a11y-tabs": "0.1.2",
     "del": "8.0.1"

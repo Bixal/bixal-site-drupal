@@ -25,6 +25,19 @@ const uswdsScope = path.join(resolvedUswdsDir, "@uswds");
 const uswdsRoot = path.join(uswdsScope, "uswds");
 const uswdsDist = path.join(uswdsRoot, "dist");
 
+// The component library is a workspace package, so this theme compiles the same
+// Sass and JS sources Storybook does. Nothing is copied into the theme except
+// the Twig templates and image assets, which Drupal has to read at runtime.
+const designSystemDir = path.dirname(
+  require.resolve("@bixal/design-system/package.json"),
+);
+
+// a11y-tabs ships a UMD build that assigns `A11yTabs` to the global scope.
+// `bixal_uswds.libraries.yml` loads it ahead of bx-a11y-tabs-init.js, which
+// uses that global. Resolve it rather than hardcoding a node_modules path,
+// since npm hoists workspace dependencies to the repo root.
+const a11yTabsDist = require.resolve("a11y-tabs/dist/a11y-tabs.min.js");
+
 /**
  * USWDS version
  */
@@ -40,7 +53,12 @@ uswds.settings.version = 3;
 // Source paths updated after converting to monorepo.
 // `uswds` is the @uswds org directory; the Sass sources live in `packages/` at
 // the root of the @uswds/uswds package, not under `dist/`.
-uswds.paths.src.uswds = uswdsScope;
+// uswds-compile builds its Sass include list internally and offers no way to
+// extend it. `paths.src.uswds` is only ever read to populate that list (see
+// `@uswds/compile/gulpfile.js`), and nothing here imports through the `@uswds`
+// scope directory, so we spend that slot on the design system. That's what lets
+// `styles.scss` resolve `uswds-paths`, `uswds-settings` and `design-system`.
+uswds.paths.src.uswds = designSystemDir;
 uswds.paths.src.sass = path.join(uswdsRoot, "packages");
 uswds.paths.src.fonts = `${uswdsDist}/fonts`;
 uswds.paths.src.img = `${uswdsDist}/img`;
@@ -60,6 +78,8 @@ const settings = {
   },
   js: {
     dest: "./dist/js",
+    designSystemDest: "./dist/js/storybook-js/stories",
+    vendorDest: "./dist/vendor/js",
     minDest: "./dist/js/min",
     minSrc: "./src/js/**/*.js",
     src: "./src/js/**/*.js",
@@ -71,15 +91,45 @@ function buildJS() {
   return src(settings.js.src).pipe(uglify()).pipe(dest(settings.js.dest));
 }
 
+// Third-party browser JS that Drupal libraries load directly. Already
+// minified by its publisher, so it is copied as-is.
+function copyVendorJS() {
+  return src(a11yTabsDist).pipe(dest(settings.js.vendorDest));
+}
+
+// The design system's JS, minified into the theme's dist. Story files are
+// Storybook-only, so they never ship. `base` keeps the package's directory
+// structure, which `bixal_uswds.libraries.yml` points at.
+//
+// `storybook-js/stories` reads like a holdover from when these files were
+// copied into src/js, and it is - but it has to stay. Two things resolve it
+// as a literal string: bixal_uswds.libraries.yml, and the module-relative
+// import in src/js/bx-accessible-videos.js, which the browser resolves
+// against the served URL rather than through any build step. Renaming this
+// silently 404s that import, and only takes effect after a Drupal cache
+// rebuild.
+function buildDesignSystemJS() {
+  return src(
+    [`${designSystemDir}/**/*.js`, `!${designSystemDir}/**/*.stories.js`],
+    { base: designSystemDir },
+  )
+    .pipe(uglify())
+    .pipe(dest(settings.js.designSystemDest));
+}
+
 // Watch changes on JS and twig files and trigger functions at the end.
 function watchJSTwigFiles() {
   watch(
-    ["./src/js/**/*.js", "./templates/**/*.html.twig"],
+    [
+      "./src/js/**/*.js",
+      "./templates/**/*.html.twig",
+      `${designSystemDir}/**/*.js`,
+    ],
     {
       events: "all",
       ignoreInitial: false,
     },
-    series(buildJS, browserSyncReload),
+    series(parallel(buildJS, buildDesignSystemJS), browserSyncReload),
   );
 }
 
@@ -138,6 +188,7 @@ function watchSass() {
     [
       `${uswds.paths.dist.theme}/**/*.scss`.replaceAll("//", "/"),
       `${uswds.paths.src.projectSass}/**/*.scss`.replaceAll("//", "/"),
+      `${designSystemDir}/**/*.scss`,
     ],
     uswds.compileSass,
   );
@@ -176,6 +227,12 @@ exports.compile = series(
   logVersion,
   clean,
   uswds.copyAssets, // Assets need to be moved before compiling and moving icons.
-  parallel(exports.compileSass, uswds.compileIcons, buildJS),
+  parallel(
+    exports.compileSass,
+    uswds.compileIcons,
+    buildJS,
+    buildDesignSystemJS,
+    copyVendorJS,
+  ),
 );
 exports.default = this.compile;

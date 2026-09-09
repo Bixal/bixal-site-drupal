@@ -201,7 +201,7 @@ class RoboFile extends Tasks
     {
         $io = new SymfonyStyle($input, $output);
         $io->info('Checking if all storybook components are forwarded to Drupal.');
-        $forward_file = './stories/_index.scss';
+        $forward_file = './stories/_design-system.scss';
         $forwards = file_get_contents($forward_file);
         $finder =  Finder::create();
         $missing_components = [];

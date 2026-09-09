@@ -1,0 +1,9 @@
+// Where USWDS should look for its own image and font assets.
+
+// These are the only USWDS settings that differ per consumer, because they're
+// relative to wherever that consumer serves its compiled CSS from. Storybook
+// serves `@uswds/uswds/dist` at the web root (see `.storybook/main.js`
+// `staticDirs`), so the defaults below suit Storybook. The Drupal theme
+// overrides them in `styles.scss`, where the CSS lands in `dist/css/`.
+$image-path: "/img" !default;
+$font-path: "/fonts" !default;

@@ -1,4 +1,4 @@
-web/themes/custom/bixal_uswds/src/sass/storybook-sass/**
+web/themes/custom/bixal_uswds/storybook_components/**
 web/libraries/**
 web/modules/contrib/**
 web/core/**
