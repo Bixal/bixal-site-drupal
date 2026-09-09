@@ -58,7 +58,9 @@
   },
   "overrides": {
     "postcss": "8.5.28",
-    "esbuild": "0.28.2"
+    "esbuild": "0.28.2",
+    "twig": "3.0.0",
+    "locutus": "3.0.36"
   },
   "workspaces": [
     "stories",
