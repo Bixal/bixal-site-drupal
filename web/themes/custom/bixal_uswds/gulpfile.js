@@ -3,7 +3,6 @@ const fs = require("fs");
 const uswds = require("@uswds/compile");
 const { parallel, watch, series, src, dest } = require("gulp");
 const { deleteAsync } = require("del");
-const browsersync = require("browser-sync").create();
 const uglifyes = require("uglify-es");
 const composer = require("gulp-uglify/composer");
 const uglify = composer(uglifyes, console);
@@ -73,9 +72,6 @@ uswds.paths.dist.js = "./dist/js";
 uswds.paths.src.projectSass = "./src/sass";
 
 const settings = {
-  sass: {
-    src: ["./src/sass/**/*.scss"],
-  },
   js: {
     dest: "./dist/js",
     designSystemDest: "./dist/js/storybook-js/stories",
@@ -129,53 +125,8 @@ function watchJSTwigFiles() {
       events: "all",
       ignoreInitial: false,
     },
-    series(parallel(buildJS, buildDesignSystemJS), browserSyncReload),
+    parallel(buildJS, buildDesignSystemJS),
   );
-}
-
-// BrowserSync Reload
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
-
-// Compile CSS from scss.
-function buildCompStyles() {
-  return src(settings.sass.src).pipe(
-    browsersync.reload({
-      stream: true,
-    }),
-  );
-}
-
-// Watch changes on sass files and trigger functions at the end.
-function watchCompFiles() {
-  watch(
-    ["./src/sass/**/*.scss"],
-    {
-      events: "all",
-      ignoreInitial: false,
-    },
-    series(buildCompStyles),
-  );
-}
-
-// Init BrowserSync.
-function browserSync(done) {
-  browsersync.init({
-    injectChanges: true,
-    logPrefix: "BixalTheme (USWDS)",
-    baseDir: "./",
-    open: false,
-    notify: true,
-    proxy: "bixalcom.lndo.site",
-    host: "bixalcom.lndo.site",
-    openBrowserAtStart: false,
-    reloadOnRestart: true,
-    port: 32677,
-    ui: false,
-  });
-  done();
 }
 
 function logVersion() {
@@ -213,11 +164,9 @@ function clean() {
 
 // Various compile functions.
 exports.watch = parallel(
-  watchCompFiles,
   logVersion,
   uswds.compileSass,
   watchSass,
-  browserSync,
   watchJSTwigFiles,
 );
 exports.update = uswds.updateUswds;

@@ -43,18 +43,24 @@
     "@storybook/icons": "2.1.0",
     "@uswds/uswds": "3.14.0",
     "chromatic": "15.2.0",
-    "eslint": "10.9.1",
+    "eslint": "10.10.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-storybook": "10.6.0",
     "globals": "17.12.0",
     "prettier": "3.9.6",
-    "sass": "1.103.1",
-    "sass-embedded": "1.103.1",
+    "sass": "1.104.0",
+    "sass-embedded": "1.104.0",
     "storybook": "10.6.0",
-    "stylelint": "17.14.1",
+    "stylelint": "17.15.0",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-prettier": "5.0.3",
     "vite-plugin-twig-drupal": "1.6.2"
+  },
+  "overrides": {
+    "postcss": "8.5.28",
+    "esbuild": "0.28.2",
+    "twig": "3.0.0",
+    "locutus": "3.0.36"
   },
   "workspaces": [
     "stories",

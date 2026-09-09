@@ -5,13 +5,13 @@
 // Always use "use strict";
 ("use strict");
 
-(function (Drupal, drupalSettings, once) {
+(function (Drupal) {
   Drupal.behaviors.uswdsA11YTabsInit = {
-    attach: function (context, settings) {
+    attach: function () {
       // Initialize a11y tabs.
       window.addEventListener("DOMContentLoaded", () => {
         new A11yTabs(".c-tabs__list", '[role="tabpanel"]', 0);
       });
     },
   };
-})(Drupal, drupalSettings, once);
+})(Drupal);
