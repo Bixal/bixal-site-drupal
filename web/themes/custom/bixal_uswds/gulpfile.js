@@ -21,7 +21,8 @@ const uswdsPackage = require.resolve.paths("@uswds/uswds");
 const resolvedUswdsDir = uswdsPackage.find((dir) =>
   fs.existsSync(path.join(dir, "@uswds/uswds")),
 );
-const uswdsRoot = path.join(resolvedUswdsDir, "@uswds/uswds");
+const uswdsScope = path.join(resolvedUswdsDir, "@uswds");
+const uswdsRoot = path.join(uswdsScope, "uswds");
 const uswdsDist = path.join(uswdsRoot, "dist");
 
 /**
@@ -37,12 +38,14 @@ uswds.settings.version = 3;
  */
 
 // Source paths updated after converting to monorepo.
-uswds.paths.src.uswds = path.dirname(uswdsDist);
+// `uswds` is the @uswds org directory; the Sass sources live in `packages/` at
+// the root of the @uswds/uswds package, not under `dist/`.
+uswds.paths.src.uswds = uswdsScope;
+uswds.paths.src.sass = path.join(uswdsRoot, "packages");
 uswds.paths.src.fonts = `${uswdsDist}/fonts`;
 uswds.paths.src.img = `${uswdsDist}/img`;
 uswds.paths.src.js = `${uswdsDist}/js`;
 uswds.paths.src.theme = `${uswdsDist}/theme`;
-uswds.paths.src.sass = `${uswdsDist}/packages`;
 
 uswds.paths.dist.theme = "./src/sass";
 uswds.paths.dist.css = "./dist/css";
