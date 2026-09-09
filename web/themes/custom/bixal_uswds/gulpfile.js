@@ -78,7 +78,7 @@ const settings = {
   },
   js: {
     dest: "./dist/js",
-    designSystemDest: "./dist/js/design-system",
+    designSystemDest: "./dist/js/storybook-js/stories",
     vendorDest: "./dist/vendor/js",
     minDest: "./dist/js/min",
     minSrc: "./src/js/**/*.js",
@@ -100,6 +100,14 @@ function copyVendorJS() {
 // The design system's JS, minified into the theme's dist. Story files are
 // Storybook-only, so they never ship. `base` keeps the package's directory
 // structure, which `bixal_uswds.libraries.yml` points at.
+//
+// `storybook-js/stories` reads like a holdover from when these files were
+// copied into src/js, and it is - but it has to stay. Two things resolve it
+// as a literal string: bixal_uswds.libraries.yml, and the module-relative
+// import in src/js/bx-accessible-videos.js, which the browser resolves
+// against the served URL rather than through any build step. Renaming this
+// silently 404s that import, and only takes effect after a Drupal cache
+// rebuild.
 function buildDesignSystemJS() {
   return src(
     [`${designSystemDir}/**/*.js`, `!${designSystemDir}/**/*.stories.js`],

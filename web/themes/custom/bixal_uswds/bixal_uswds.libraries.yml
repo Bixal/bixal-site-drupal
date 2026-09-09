@@ -33,15 +33,15 @@ accessible-videos:
 
 storybook:
   js:
-    dist/js/design-system/_utils/toggle.js:
+    dist/js/storybook-js/stories/_utils/toggle.js:
       minified: true
       attributes:
         type: module
-    dist/js/design-system/components/header/header.js:
+    dist/js/storybook-js/stories/components/header/header.js:
       minified: true
       attributes:
         type: module
-    dist/js/design-system/components/people-list/people-list.js:
+    dist/js/storybook-js/stories/components/people-list/people-list.js:
       minified: true
       attributes:
         type: module

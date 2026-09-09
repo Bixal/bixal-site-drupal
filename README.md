@@ -297,7 +297,7 @@ keeping two copies of them:
 |                      | how the theme gets it                                                                 |
 | -------------------- | ------------------------------------------------------------------------------------- |
 | Sass                 | compiled from the package by the theme's gulp build                                   |
-| JS                   | minified from the package into `dist/js/design-system/`                               |
+| JS                   | minified from the package into `dist/js/storybook-js/stories/`                        |
 | Twig                 | copied to `storybook_components/`, because Drupal reads templates off disk at runtime |
 | icons, static images | copied to `web/icons/` and `web/static/`, served by the webserver                     |
 
