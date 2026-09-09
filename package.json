@@ -57,6 +57,7 @@
     "vite-plugin-twig-drupal": "1.6.2"
   },
   "workspaces": [
+    "stories",
     "web/themes/custom/bixal_uswds"
   ]
 }

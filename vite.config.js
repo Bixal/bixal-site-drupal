@@ -8,7 +8,9 @@ export default defineConfig({
       scss: {
         loadPaths: [
           "./node_modules/@uswds/uswds/packages",
-          "./stories/assets/styles/global",
+          // The design system's own root, so component stylesheets can resolve
+          // `uswds-settings` by name. The Drupal theme resolves it the same way.
+          "./stories",
         ],
         quietDeps: true, // Silences deprecations that aren't ours.
       },

@@ -25,6 +25,13 @@ const uswdsScope = path.join(resolvedUswdsDir, "@uswds");
 const uswdsRoot = path.join(uswdsScope, "uswds");
 const uswdsDist = path.join(uswdsRoot, "dist");
 
+// The component library is a workspace package, so this theme compiles the same
+// Sass and JS sources Storybook does. Nothing is copied into the theme except
+// the Twig templates and image assets, which Drupal has to read at runtime.
+const designSystemDir = path.dirname(
+  require.resolve("@bixal/design-system/package.json"),
+);
+
 /**
  * USWDS version
  */
@@ -40,7 +47,12 @@ uswds.settings.version = 3;
 // Source paths updated after converting to monorepo.
 // `uswds` is the @uswds org directory; the Sass sources live in `packages/` at
 // the root of the @uswds/uswds package, not under `dist/`.
-uswds.paths.src.uswds = uswdsScope;
+// uswds-compile builds its Sass include list internally and offers no way to
+// extend it. `paths.src.uswds` is only ever read to populate that list (see
+// `@uswds/compile/gulpfile.js`), and nothing here imports through the `@uswds`
+// scope directory, so we spend that slot on the design system. That's what lets
+// `styles.scss` resolve `uswds-paths`, `uswds-settings` and `design-system`.
+uswds.paths.src.uswds = designSystemDir;
 uswds.paths.src.sass = path.join(uswdsRoot, "packages");
 uswds.paths.src.fonts = `${uswdsDist}/fonts`;
 uswds.paths.src.img = `${uswdsDist}/img`;
@@ -60,6 +72,7 @@ const settings = {
   },
   js: {
     dest: "./dist/js",
+    designSystemDest: "./dist/js/design-system",
     minDest: "./dist/js/min",
     minSrc: "./src/js/**/*.js",
     src: "./src/js/**/*.js",
@@ -71,15 +84,32 @@ function buildJS() {
   return src(settings.js.src).pipe(uglify()).pipe(dest(settings.js.dest));
 }
 
+// The design system's JS, minified into the theme's dist. Story files are
+// Storybook-only, so they never ship. `base` keeps the package's directory
+// structure, which `bixal_uswds.libraries.yml` points at.
+function buildDesignSystemJS() {
+  return src(
+    [`${designSystemDir}/**/*.js`, `!${designSystemDir}/**/*.stories.js`],
+    { base: designSystemDir },
+  )
+    .pipe(uglify())
+    .pipe(dest(settings.js.designSystemDest));
+}
+
 // Watch changes on JS and twig files and trigger functions at the end.
 function watchJSTwigFiles() {
   watch(
-    ["./src/js/**/*.js", "./templates/**/*.html.twig"],
+    [
+      "./src/js/**/*.js",
+      "./templates/**/*.html.twig",
+      `${designSystemDir}/**/*.js`,
+      `${designSystemDir}/**/*.twig`,
+    ],
     {
       events: "all",
       ignoreInitial: false,
     },
-    series(buildJS, browserSyncReload),
+    series(parallel(buildJS, buildDesignSystemJS), browserSyncReload),
   );
 }
 
@@ -138,6 +168,7 @@ function watchSass() {
     [
       `${uswds.paths.dist.theme}/**/*.scss`.replaceAll("//", "/"),
       `${uswds.paths.src.projectSass}/**/*.scss`.replaceAll("//", "/"),
+      `${designSystemDir}/**/*.scss`,
     ],
     uswds.compileSass,
   );
@@ -176,6 +207,11 @@ exports.compile = series(
   logVersion,
   clean,
   uswds.copyAssets, // Assets need to be moved before compiling and moving icons.
-  parallel(exports.compileSass, uswds.compileIcons, buildJS),
+  parallel(
+    exports.compileSass,
+    uswds.compileIcons,
+    buildJS,
+    buildDesignSystemJS,
+  ),
 );
 exports.default = this.compile;

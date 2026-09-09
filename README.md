@@ -278,7 +278,7 @@ npm run lint:styles:fix
 
 Some problems might still need to be fixed by hand.
 
-#### Copy storybook to Drupal theme
+#### Build storybook components into the Drupal theme
 
 Use this command to view changes from Storybook components.
 
@@ -290,6 +290,20 @@ ddev exec './orch/build_node.sh;'
 lando build_node
 ```
 
+`stories/` is the `@bixal/design-system` npm workspace package, and the theme
+declares it as a dependency, so the two builds share their sources rather than
+keeping two copies of them:
+
+|                      | how the theme gets it                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------- |
+| Sass                 | compiled from the package by the theme's gulp build                                   |
+| JS                   | minified from the package into `dist/js/design-system/`                               |
+| Twig                 | copied to `storybook_components/`, because Drupal reads templates off disk at runtime |
+| icons, static images | copied to `web/icons/` and `web/static/`, served by the webserver                     |
+
+Only the runtime assets are copied (`orch/build_storybook_to_drupal.sh`); the
+production artifact drops `node_modules`, so those two have to be in the theme.
+
 #### Configure Xdebug
 
 https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
@@ -297,6 +311,17 @@ https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
 ## Storybook
 
 [Storybook](https://storybook.js.org/) gives us a preview of UI components.
+
+### USWDS settings
+
+USWDS settings live in **one** file, `stories/_uswds-settings.scss`, which every
+stylesheet in both builds loads with `@use "uswds-settings" as *`. Change a
+token there and Storybook and the site change together — that's the point, so
+please don't add a second `@use "uswds-core" with (...)` anywhere.
+
+The only per-consumer values are USWDS's asset paths, in
+`stories/_uswds-paths.scss`. The theme overrides those in
+`src/sass/styles.scss`, since its CSS is served from `dist/css/`.
 
 ### Run locally
 

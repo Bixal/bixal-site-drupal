@@ -1,0 +1,9 @@
+{
+  "name": "@bixal/design-system",
+  "version": "1.0.0",
+  "description": "Bixal's component library. Consumed by Storybook and by the bixal_uswds Drupal theme.",
+  "private": true,
+  "type": "module",
+  "license": "ISC",
+  "author": "Bixal"
+}
