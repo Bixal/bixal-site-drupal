@@ -127,18 +127,19 @@ bixalcom:
       echo "Relevant environment variables and their values:"
       echo ""
       echo "ENV_TYPE_VISIBLE: ${ENV_TYPE_VISIBLE}"
-  
+
       # Install storybook into the ./sb directory.
       # ENV_TYPE_VISIBLE is a copy of PLATFORM_ENVIRONMENT_TYPE that is made
       # visible to build so this is always run on different env types.
       if [ "${ENV_TYPE_VISIBLE}" != "production" ]; then
         echo "Installing StoryBook"
-        npm install
         npx storybook build --output-dir sb
-        rm -r "$PLATFORM_APP_DIR/node_modules"
       else
         echo "Skipping StoryBook installation."
       fi
+
+      # Clean up the npm install from build_node.sh.
+      rm -rf "$PLATFORM_APP_DIR/node_modules"
 
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
