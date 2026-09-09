@@ -204,6 +204,8 @@ Use a `-w` with the workspace's `name` field (found in `bixal_uswds/package.json
 npm run build -w bixaldrop
 ```
 
+This is not the entry point that should be used though, it is always `./orch/build_node.sh` which is used both locally and by Upsun.
+
 With this setup, you can easily manage both package dependencies using this script:
 
 ```bash
