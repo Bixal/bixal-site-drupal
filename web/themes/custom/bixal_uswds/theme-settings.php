@@ -18,7 +18,7 @@ function bixal_uswds_form_system_theme_settings_alter(&$form, FormStateInterface
     '#weight' => -1000,
   ];
 
-  // Custom setting to enable browserSync locally.
+  // Lets editors choose which time picker widget the theme renders.
   $form['theme_custom']['settings']['time_picker_style'] = [
     '#type' => 'select',
     '#required' => TRUE,

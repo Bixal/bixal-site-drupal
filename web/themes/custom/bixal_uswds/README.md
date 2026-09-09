@@ -16,7 +16,7 @@ It's imperative that you at least use USWDS compile which is in the `package.jso
 
 Once you setup Lando with the Lando file provided in the `example-settings` folder, cd into the theme folder and run `lando gulp`. That is all you need to do to start making CSS and USWDS theme updates.
 
-When you run lando gulp you will see 2 URLs that come up in terminal with a port number appended. If you visit one of these URLs, you will get automatic reloading on save via BrowserSync. Note that compiling USWDS CSS can take up to 30 seconds.
+`lando gulp` compiles the theme and then watches for changes, recompiling Sass and rebuilding JS on save. It does not reload the browser for you, so refresh the site yourself to pick up changes. Note that compiling USWDS CSS can take up to 30 seconds.
 
 ## Overview of things to keep in mind.
 
