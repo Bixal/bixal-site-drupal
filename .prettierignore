@@ -1,15 +1,21 @@
 # Build scripts
 orch/
 
-# Copied files
-web/themes/custom/bixal_uswds/src/sass/storybook-sass/**
-web/themes/custom/bixal_uswds/src/js/storybook-js/**
+# Copied files. Sass and JS are no longer copied into the theme (the theme
+# resolves them from the @bixal/design-system package), but the Twig templates
+# still are, and the copy briefly contains the other file types before they are
+# pruned.
+web/themes/custom/bixal_uswds/storybook_components/**
 
 # Drupal files
 web/libraries/**
 web/modules/contrib/**
 web/themes/contrib/**
 web/core/**
+web/sites/default/files/**
+
+# Vendor files
+web/modules/custom/cookies_microsoft_clarity/js/cookies_microsoft_clarity.js
 
 # Node
 node_modules/**

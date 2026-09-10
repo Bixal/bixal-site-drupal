@@ -1,0 +1,7 @@
+microsoft_clarity.settings:
+  path: '/admin/config/services/microsoft-clarity'
+  defaults:
+    _form: '\Drupal\microsoft_clarity\Form\SettingsForm'
+    _title: 'Microsoft Clarity'
+  requirements:
+    _permission: 'administer microsoft clarity'

@@ -1,0 +1,24 @@
+uuid: d7e9b642-52b5-4cc4-9639-ccdf56a511ed
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cookies_microsoft_clarity
+_core:
+  default_config_hash: Cq-6TCvYy6sVlQuulAM6GzupVn5GUcacEmex_A-oTdU
+id: microsoft_clarity
+label: 'Microsoft Clarity'
+group: performance
+info:
+  value: ''
+  format: full_html
+consentRequired: true
+purpose: ''
+placeholderMainText: 'This content is blocked because Microsoft Clarity cookies have not been accepted.'
+placeholderAcceptText: 'Only accept Microsoft Clarity cookies'
+processor: Microsoft
+processorContact: ''
+processorUrl: 'https://clarity.microsoft.com/'
+processorPrivacyPolicyUrl: 'https://privacy.microsoft.com/privacystatement'
+processorCookiePolicyUrl: 'https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies'

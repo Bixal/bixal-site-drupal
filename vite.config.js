@@ -6,7 +6,12 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        loadPaths: ["./node_modules/@uswds/uswds/packages"],
+        loadPaths: [
+          "./node_modules/@uswds/uswds/packages",
+          // The design system's own root, so component stylesheets can resolve
+          // `uswds-settings` by name. The Drupal theme resolves it the same way.
+          "./stories",
+        ],
         quietDeps: true, // Silences deprecations that aren't ours.
       },
     },

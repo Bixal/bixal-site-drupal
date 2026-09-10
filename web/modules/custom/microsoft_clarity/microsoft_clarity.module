@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Embeds Microsoft Clarity on front end pages.
+ *
+ * Hook implementations live in
+ * \Drupal\microsoft_clarity\Hook\MicrosoftClarityHooks.
+ */
+
+/**
+ * Returns the custom tags this module can send, keyed by tag name.
+ *
+ * This is the contract between the settings form, which offers the tags, and
+ * the page attachments hook, which resolves their values.
+ *
+ * @return array
+ *   Tag names mapped to their human readable labels.
+ *
+ * @see \Drupal\microsoft_clarity\Hook\MicrosoftClarityHooks::customTags()
+ */
+function _microsoft_clarity_available_tags(): array {
+  return [
+    'content_type' => t('Content type'),
+    'language' => t('Interface language'),
+    'route' => t('Route name'),
+  ];
+}

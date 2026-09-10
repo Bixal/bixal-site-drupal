@@ -1,84 +1,88 @@
-/*
- ***** Do not write any custom CSS on this file, this is for USWDS 3 settings only.
- ***** For all possible overrides, see https://designsystem.digital.gov/documentation/settings/
-----------------------------------------
-USWDS theme settings overrides
-----------------------------------------
+// USWDS settings — the single source of truth for both Storybook and the
+// Drupal theme. Every stylesheet in either build gets its USWDS functions,
+// mixins and tokens from this file, so a change here shows up in both.
+
+// USWDS theme settings reference.
+//  ***** Do not write any custom CSS on this file, this is for USWDS 3 settings only.
+//  ***** For all possible overrides, see https://designsystem.digital.gov/documentation/settings/
+// ----------------------------------------
+// USWDS theme settings overrides
+// ----------------------------------------
 // Grid settings reference
-----------------------------------------
-Grid container max-width
-----------------------------------------
-mobile
-mobile-lg
-tablet
-tablet-lg
-desktop
-desktop-lg
-widescreen
-----------------------------------------
+// ----------------------------------------
+// Grid container max-width
+// ----------------------------------------
+// mobile
+// mobile-lg
+// tablet
+// tablet-lg
+// desktop
+// desktop-lg
+// widescreen
+// ----------------------------------------
 // Units available for usage.
-example with USWDS units:
-.element {
-  padding-bottom: units('first value in the key pairs below')
-}
+// example with USWDS units:
+// .element {
+//   padding-bottom: units('first value in the key pairs below')
+// }
 
-Or a USWDS mixin...
+// Or a USWDS mixin...
 
-.element {
-  @include u-padding-bottom('3');
-}
+// .element {
+//   @include u-padding-bottom('3');
+// }
 
-"1px": 1px,
-"2px": 2px,
-"05": 0.25rem,
-1: 0.5rem,
-"105": 0.75rem,
-2: 1rem,
-"205": 1.25rem,
-3: 1.5rem,
-"neg-1px": -1px,
-"neg-2px": -2px,
-"neg-05": -0.25rem,
-"neg-1": -0.5rem,
-"neg-105": -0.75rem,
-"neg-2": -1rem,
-"neg-205": -1.25rem,
-"neg-3": -1.5rem,
-4: 2rem,
-5: 2.5rem,
-6: 3rem,
-7: 3.5rem,
-8: 4rem,
-9: 4.5rem,
-10: 5rem,
-15: 7.5rem,
-"neg-4": -2rem,
-"neg-5": -2.5rem,
-"neg-6": -3rem,
-"neg-7": -3.5rem,
-"neg-8": -4rem,
-"neg-9": -4.5rem,
-"neg-10": -5rem,
-"neg-15": -7.5rem,
-"card": 10rem,
-"card-lg": 15rem,
-"mobile": 20rem,
-"mobile-lg": 30rem,
-"tablet": 40rem,
-"tablet-lg": 55rem,
-"desktop": 64rem,
-"desktop-lg": 75rem,
-"widescreen": 87.5rem,
-0: 0,
-"auto": auto
-*/
+// "1px": 1px,
+// "2px": 2px,
+// "05": 0.25rem,
+// 1: 0.5rem,
+// "105": 0.75rem,
+// 2: 1rem,
+// "205": 1.25rem,
+// 3: 1.5rem,
+// "neg-1px": -1px,
+// "neg-2px": -2px,
+// "neg-05": -0.25rem,
+// "neg-1": -0.5rem,
+// "neg-105": -0.75rem,
+// "neg-2": -1rem,
+// "neg-205": -1.25rem,
+// "neg-3": -1.5rem,
+// 4: 2rem,
+// 5: 2.5rem,
+// 6: 3rem,
+// 7: 3.5rem,
+// 8: 4rem,
+// 9: 4.5rem,
+// 10: 5rem,
+// 15: 7.5rem,
+// "neg-4": -2rem,
+// "neg-5": -2.5rem,
+// "neg-6": -3rem,
+// "neg-7": -3.5rem,
+// "neg-8": -4rem,
+// "neg-9": -4.5rem,
+// "neg-10": -5rem,
+// "neg-15": -7.5rem,
+// "card": 10rem,
+// "card-lg": 15rem,
+// "mobile": 20rem,
+// "mobile-lg": 30rem,
+// "tablet": 40rem,
+// "tablet-lg": 55rem,
+// "desktop": 64rem,
+// "desktop-lg": 75rem,
+// "widescreen": 87.5rem,
+// 0: 0,
+// "auto": auto
 
 // ****** Do not write any custom CSS on this file ****** //
 
-@use "uswds-core" with (
+@use "./uswds-paths" as paths;
+@forward "uswds-core" with (
   // General settings.
-  $theme-image-path: "../assets/img",
-  $theme-font-path: "../../src/fonts",
+  $theme-image-path: paths.$image-path,
+  $theme-font-path: paths.$font-path,
   $theme-show-notifications: false,
 
   // Color settings

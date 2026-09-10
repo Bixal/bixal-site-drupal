@@ -1,0 +1,6 @@
+microsoft_clarity:
+  js:
+    js/cookies_microsoft_clarity.js: { preprocess: false }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

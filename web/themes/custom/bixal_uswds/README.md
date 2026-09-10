@@ -16,7 +16,7 @@ It's imperative that you at least use USWDS compile which is in the `package.jso
 
 Once you setup Lando with the Lando file provided in the `example-settings` folder, cd into the theme folder and run `lando gulp`. That is all you need to do to start making CSS and USWDS theme updates.
 
-When you run lando gulp you will see 2 URLs that come up in terminal with a port number appended. If you visit one of these URLs, you will get automatic reloading on save via BrowserSync. Note that compiling USWDS CSS can take up to 30 seconds.
+`lando gulp` compiles the theme and then watches for changes, recompiling Sass and rebuilding JS on save. It does not reload the browser for you, so refresh the site yourself to pick up changes. Note that compiling USWDS CSS can take up to 30 seconds.
 
 ## Overview of things to keep in mind.
 
@@ -26,7 +26,7 @@ Keep theme Sass files lean and simple. That is to say, think before you write cu
 
 The old method in version 2 seemed to be to copy all those sass files from the `node_modules` folder and then modify those as you liked. There were many downsides to that method but now with USWDS 3, we do not need to do that anymore.
 
-At the heart of the theme is the file, `bixal_uswds/src/sass/_uswds-theme.scss`. This is where you will do any overrides from known settings from the aforementioned USWDS settings page. If you cannot find a setting for what you’d like to override, there are a few options in order of importance.
+At the heart of the theme is the file, `stories/_uswds-settings.scss`, in the `@bixal/design-system` package. This is where you will do any overrides from known settings from the aforementioned USWDS settings page. Storybook loads the same file, so a setting changed there applies to both. If you cannot find a setting for what you’d like to override, there are a few options in order of importance.
 
 - Search the USWDS documentation
 

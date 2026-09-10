@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Manages Microsoft Clarity inside of COOKiES consent management.
+ *
+ * Hook implementations live in
+ * \Drupal\cookies_microsoft_clarity\Hook\CookiesMicrosoftClarityHooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Form submission handler for the consent options.
+ *
+ * Added to the Microsoft Clarity settings form by
+ * CookiesMicrosoftClarityHooks::formMicrosoftClaritySettingsAlter(). It stays
+ * procedural because #submit handlers are stored in the form cache, which
+ * rules out binding a service instance.
+ *
+ * @param array $form
+ *   The form structure.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
+ */
+function _cookies_microsoft_clarity_settings_submit(array &$form, FormStateInterface $form_state) {
+  \Drupal::configFactory()
+    ->getEditable('cookies_microsoft_clarity.settings')
+    ->set('ad_storage_service', (string) $form_state->getValue('ad_storage_service'))
+    ->save();
+}

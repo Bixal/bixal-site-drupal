@@ -1,7 +1,8 @@
 /*
 ----------------------------------------
 USWDS THEME CUSTOM STYLES
-This is for anything not covered in /bixal_uswds/src/sass/_uswds-theme.scss
+This is for anything not covered by the USWDS settings, which live in the
+`@bixal/design-system` package (see `stories/_uswds-settings.scss`).
 For example a custom component that is not part of USWDS.
 */
 
@@ -11,6 +12,6 @@ For example a custom component that is not part of USWDS.
 @use "custom-components";
 @use "uswds-overrides";
 @use "drupal-system";
-@use "storybook-sass";
+@use "design-system";
 
 // ****** Do not write any custom CSS on this file ****** //

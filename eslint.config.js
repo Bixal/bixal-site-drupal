@@ -39,6 +39,9 @@ export default defineConfig([
         drupalSettings: "readonly",
         once: "readonly",
         context: "readonly",
+        // Provided by dist/vendor/js/a11y-tabs.min.js, see
+        // `bixal_uswds.libraries.yml`.
+        A11yTabs: "readonly",
       },
     },
     extends: [eslintRecommended.configs.recommended, eslintConfigPrettier],

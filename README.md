@@ -28,11 +28,14 @@ The local environment is based on [Drupal Env](https://github.com/mattsqd/drupal
 #### First Time Setup
 
 DDEV:
+
 ```
 ddev start
 ./robo.sh ddev:init
 ```
+
 Lando:
+
 ```
 lando start
 ./robo.sh lando:init
@@ -44,6 +47,7 @@ lando start
 ddev poweroff
 ./robo.sh lando:init
 ```
+
 ```
 lando poweroff
 ./robo.sh ddev:init
@@ -58,6 +62,7 @@ For future sessions, you can start:
 ```
 ddev start
 ```
+
 ```
 lando start
 ```
@@ -69,6 +74,7 @@ Run the following command to stop the environment:
 ```
 ddev stop
 ```
+
 ```
 lando stop
 ```
@@ -84,6 +90,7 @@ Change something in the `.lando.yml` config and/or you want to re-install front 
 ```
 ddev start && robo si
 ```
+
 ```
 lando rebuild -y && robo si
 ```
@@ -93,6 +100,7 @@ lando rebuild -y && robo si
 ```
 ddev exec './orch/build_node.sh;'
 ```
+
 ```
 lando build_node
 ```
@@ -183,6 +191,31 @@ To export new content from your local, create it locally and run:
 ./drush.sh cr
 ```
 
+### npm Workspaces
+
+This repo usees [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) to share and manage root and Drupal theme dependencies in a single place. Because of that, the nested `bixal_uswds` dependencies get hoisted to the root directory.
+
+**Running a workspace script**
+
+Use a `-w` with the workspace's `name` field (found in `bixal_uswds/package.json`).
+
+```bash
+# From root, run the `build` script in `bixal_uswds`.
+npm run build -w bixaldrop
+```
+
+This is not the entry point that should be used though, it is always `./orch/build_node.sh` which is used both locally and by Upsun.
+
+With this setup, you can easily manage both package dependencies using this script:
+
+```bash
+npm run check-updates
+```
+
+**USWDS asset paths**
+
+The drupal theme uses [`uswds-compile`](https://github.com/uswds/uswds-compile/blob/develop/gulpfile.js), which assumes that USWDS will live inside the local `node_modules`. Now, the gulpfile will resolve to the new, hoisted, path in root to make sure assets are imported correctly.
+
 ### Running Composer Commands
 
 By default, Lando runs Composer commands within its Docker containers. This often times out, so we recommend using your local Composer instead.
@@ -245,16 +278,31 @@ npm run lint:styles:fix
 
 Some problems might still need to be fixed by hand.
 
-#### Copy storybook to Drupal theme
+#### Build storybook components into the Drupal theme
 
 Use this command to view changes from Storybook components.
 
 ```
 ddev exec './orch/build_node.sh;'
 ```
+
 ```
 lando build_node
 ```
+
+`stories/` is the `@bixal/design-system` npm workspace package, and the theme
+declares it as a dependency, so the two builds share their sources rather than
+keeping two copies of them:
+
+|                      | how the theme gets it                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------- |
+| Sass                 | compiled from the package by the theme's gulp build                                   |
+| JS                   | minified from the package into `dist/js/storybook-js/stories/`                        |
+| Twig                 | copied to `storybook_components/`, because Drupal reads templates off disk at runtime |
+| icons, static images | copied to `web/icons/` and `web/static/`, served by the webserver                     |
+
+Only the runtime assets are copied (`orch/build_storybook_to_drupal.sh`); the
+production artifact drops `node_modules`, so those two have to be in the theme.
 
 #### Configure Xdebug
 
@@ -263,6 +311,17 @@ https://github.com/mattsqd/drupal-env-lando/wiki/XDebug-(Personal)
 ## Storybook
 
 [Storybook](https://storybook.js.org/) gives us a preview of UI components.
+
+### USWDS settings
+
+USWDS settings live in **one** file, `stories/_uswds-settings.scss`, which every
+stylesheet in both builds loads with `@use "uswds-settings" as *`. Change a
+token there and Storybook and the site change together — that's the point, so
+please don't add a second `@use "uswds-core" with (...)` anywhere.
+
+The only per-consumer values are USWDS's asset paths, in
+`stories/_uswds-paths.scss`. The theme overrides those in
+`src/sass/styles.scss`, since its CSS is served from `dist/css/`.
 
 ### Run locally
 

@@ -1,0 +1,4 @@
+administer microsoft clarity:
+  title: 'Administer Microsoft Clarity'
+  description: 'Configure the Microsoft Clarity settings.'
+  restrict access: true

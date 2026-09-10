@@ -1,7 +1,16 @@
 // ****** Do not write any custom CSS on this file ****** //
 
-// Theme settings overrides.
-@forward "uswds-theme";
+// Point USWDS at this theme's compiled asset locations, relative to
+// `dist/css/`. This has to come first: it configures the design system's path
+// settings before anything else loads them.
+@use "uswds-paths" with (
+  $image-path: "../assets/img",
+  $font-path: "../../src/fonts"
+);
+
+// USWDS settings. These live in the `@bixal/design-system` package so that
+// Storybook and this theme compile against identical values.
+@forward "uswds-settings";
 
 // USWDS individual components
 // to include everything, just code it as @forward "uswds";
