@@ -8,6 +8,7 @@ plugin: generic
 settings:
   client_id: OVERRIDDEN_BY_SETTINGS
   client_secret: OVERRIDDEN_BY_SETTINGS
+  provider_slug: ''
   iss_allowed_domains: "https://bixalcom.lndo.site\r\nhttps://develop-sr3snxi-tsvj5tw7p3f66.us.platformsh.site\r\nhttps://stage-y77w3ti-tsvj5tw7p3f66.us.platformsh.site\r\nhttps://www.bixal.com"
   prompt:
     - login
@@ -19,4 +20,3 @@ settings:
   scopes:
     - openid
     - email
-  provider_slug: ''
