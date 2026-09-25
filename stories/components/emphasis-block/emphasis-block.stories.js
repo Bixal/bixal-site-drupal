@@ -83,3 +83,11 @@ export const EmphasisBlockCollection = {
   args: EmphasisBlockCollectionContent,
   render: EmphasisBlockCollectionTemplate,
 };
+
+export const EmphasisBlockCollectionSmall = {
+  args: {
+    ...EmphasisBlockCollectionContent,
+    size: "sm",
+  },
+  render: EmphasisBlockCollectionTemplate,
+};
