@@ -4,9 +4,10 @@
 
 {% set emphasis_classes = [
   "bix-emphasis-blocks",
-] | merge(additional_classes | default([])) %}
+  (size ? "bix-emphasis-blocks--" ~ size),
+]|merge(additional_classes|default([])) %}
 
-<div{{ attributes.addClass(emphasis_classes | default([])) }}>
+<div{{ attributes.addClass(emphasis_classes|default([])) }}>
   {{ content.contextual_links }}
   <div class="bix-emphasis-blocks__body">
     {% if blocks %}
