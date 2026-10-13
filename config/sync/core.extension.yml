@@ -86,6 +86,9 @@ module:
   redis: 0
   responsive_image: 0
   role_delegation: 0
+  schema_article: 0
+  schema_metatag: 0
+  schema_organization: 0
   seckit: 0
   site_wrapper: 0
   sitewide_alert: 0

@@ -116,3 +116,4 @@ a6d0656c248dec29152337eed97f8f2f|Matt Poole|feature/BSD-619-update-deps|Wed Sep 
 53ab9abe6eccd4fbd33c30c4b0aa426b|Matt Poole|feature/BSD-619-update-deps|Wed Sep 23 14:11:50 EDT 2026|./composer.sh update
 654b61ee16333f4b71a9431de728d57b|Matt Poole|feature/BSD-626-update-deps|Wed Oct  7 16:07:06 EDT 2026|./composer.sh update drupal/core-* -W
 67aee60091845ce261d078405ccfc6d8|Matt Poole|feature/BSD-626-update-deps|Wed Oct  7 16:25:01 EDT 2026|./composer.sh update -w
+58db7703808884d04cf1a8f17b1633b4|Matt Poole|feature/BSD-624-blog-schema|Tue Oct 13 10:34:00 EDT 2026|./composer.sh require drupal/schema_metatag

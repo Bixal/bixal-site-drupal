@@ -8,4 +8,10 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
+  schema_article_publisher: 'a:3:{s:3:"@id";s:21:"https://www.bixal.com";s:4:"name";s:5:"Bixal";s:3:"url";s:21:"https://www.bixal.com";}'
+  schema_organization_id: '[site:url]#organization'
+  schema_organization_logo: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:5:"False";s:3:"url";s:44:"[site:url]themes/custom/bixal_uswds/logo.svg";s:5:"width";s:3:"120";s:6:"height";s:2:"24";}'
+  schema_organization_name: Bixal
+  schema_organization_same_as: 'https://www.linkedin.com/company/bixal, https://www.facebook.com/bixal'
+  schema_organization_type: Organization
   title: '[current-page:title] | [site:name]'

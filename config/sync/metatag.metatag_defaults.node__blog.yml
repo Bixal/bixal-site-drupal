@@ -1,0 +1,14 @@
+uuid: 2bc28c58-e5be-45a0-b710-e08c55e6ae8e
+langcode: en
+status: true
+dependencies: {  }
+id: node__blog
+label: 'Content: Blog'
+tags:
+  schema_article_author: 'a:3:{s:5:"@type";s:6:"Person";s:4:"name";s:32:"[node:field_author:entity:title]";s:3:"url";s:30:"[node:field_author:entity:url]";}'
+  schema_article_date_modified: '[node:changed:html_datetime]'
+  schema_article_date_published: '[node:field_date:date:html_datetime]'
+  schema_article_headline: '[node:title]'
+  schema_article_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:5:"False";s:3:"url";s:59:"[node:field_banner_image:entity:field_media_image:webp:url]";s:5:"width";s:61:"[node:field_banner_image:entity:field_media_image:webp:width]";s:6:"height";s:62:"[node:field_banner_image:entity:field_media_image:webp:height]";}'
+  schema_article_publisher: 'a:4:{s:5:"@type";s:12:"Organization";s:3:"@id";s:36:"[site:url]#organization#organization";s:4:"name";s:5:"Bixal";s:3:"url";s:10:"[site:url]";}'
+  schema_article_type: BlogPosting

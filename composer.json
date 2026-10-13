@@ -86,6 +86,7 @@
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/role_delegation": "^1.2",
+        "drupal/schema_metatag": "^3.1",
         "drupal/search_api_solr": "^4.3",
         "drupal/seckit": "^2.0",
         "drupal/sitewide_alert": "^3.0",
