@@ -181,6 +181,11 @@ bixal-pa11y-node
 
 /.editorconfig
 
+# Ensure npm.log is NOT ignored.
+!/npm.log
+# ./npm.sh ddev or local choice
+.npm.env
+
 #### Appended to by mattsqd/drupal-env-lando. ####
 
 # Ignore .env files as they are personal
@@ -192,9 +197,8 @@ bixal-pa11y-node
 
 # Ignore .env files as they are personal
 /*.env
-# Ensure composer.log and npm.log are NOT ignored.
+# Ensure composer.log is NOT ignored.
 !/composer.log
-!/npm.log
 # Mount directories created for platform.sh
 /tmp
 /private
@@ -239,8 +243,6 @@ Thumbs.db
 roboConfDrupalEnv.local.yml
 # ./php.sh bin path
 .php.env
-# ./npm.sh ddev or local choice
-.npm.env
 
 #### End of appended content by mattsqd/drupal-env. ####
 
