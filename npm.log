@@ -1,2 +1,3 @@
 834bede7fdeb26a6f8488828326d3c40|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 09:59:31 EDT 2026|(lockfile repair: backfilled resolved/integrity for 565 entries from the registry, then ./npm.sh install -D npm-check-updates)
 055fd06ed64108589ead46cdafa647ca|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 10:37:50 EDT 2026|./npm.sh run deps:minor:apply
+9090aa663e64c2198f511945f7de2dd3|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 10:57:09 EDT 2026|./npm.sh uninstall uglify-es -w web/themes/custom/bixal_uswds
