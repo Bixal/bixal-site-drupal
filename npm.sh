@@ -39,12 +39,6 @@ if [ -z "$DRUPAL_ENV_LOCAL" ] && [ -z "$DRUPAL_ENV_REMOTE" ] && [ "$NPM_RUN_IN" 
   npm_command=(ddev "$tool")
 fi
 
-EXIT_STATUS=0
-
-set -x
-"${npm_command[@]}" "$@" || EXIT_STATUS=$?
-{ set +x; } 2>/dev/null
-
 # Support MacOS and Linux.
 md5_for()
 {
@@ -55,17 +49,21 @@ md5_for()
   fi
 }
 
-# Same as composer.sh: if package-lock.json changed, record the command that
-# changed it in npm.log. The hash is of the lockfile diff, so re-running
-# commands that leave the diff unchanged does not add duplicate entries.
+lock_before=$(md5_for "$(cat package-lock.json 2>/dev/null)")
+
+EXIT_STATUS=0
+
+set -x
+"${npm_command[@]}" "$@" || EXIT_STATUS=$?
+{ set +x; } 2>/dev/null
+
+# Like composer.sh, record commands that change package-lock.json in npm.log.
+# Unlike composer.sh, only the command that actually changed the file is
+# logged, so a lockfile edited by other means is never attributed to whatever
+# command happens to run next. The hash is of the lockfile diff against git.
 if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]; then
-  if [[ -n $(git diff --name-only package-lock.json) ]]; then
+  if [[ "$lock_before" != "$(md5_for "$(cat package-lock.json 2>/dev/null)")" ]]; then
     hash=$(md5_for "$(git diff package-lock.json)")
-    touch npm.log
-    last_hash=$(tail -1 npm.log | sed 's/|.*//')
-    if [[ "$last_hash" = "$hash" ]]; then
-      exit "${EXIT_STATUS}"
-    fi
     branch=$(git rev-parse --abbrev-ref HEAD)
     if [[ "$branch" = 'HEAD' ]]; then
       for location in rebase-merge rebase-apply; do
