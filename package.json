@@ -21,7 +21,11 @@
     "storybook:local": "storybook dev -p 5050",
     "build-storybook": "storybook build",
     "static-sb": "npm run build-storybook && npx http-server storybook-static/",
-    "check-updates": "npx npm-check-updates --interactive --format group --workspaces"
+    "deps:minor": "ncu --workspaces --cooldown 7 --target minor",
+    "deps:minor:apply": "ncu --workspaces --cooldown 7 --target minor --upgrade && npm install",
+    "deps:major": "ncu --workspaces --cooldown 7 --target latest --configFileName .ncurc.major.mjs",
+    "deps:security": "./orch/deps_security.sh",
+    "deps:verify": "./orch/build_node.sh && npm run lint:js && npm run lint:styles && npm run build-storybook"
   },
   "repository": {
     "type": "git",
@@ -47,6 +51,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-storybook": "10.6.0",
     "globals": "17.12.0",
+    "npm-check-updates": "23.1.0",
     "prettier": "3.9.6",
     "sass": "1.104.0",
     "sass-embedded": "1.104.0",
@@ -65,5 +70,12 @@
   "workspaces": [
     "stories",
     "web/themes/custom/bixal_uswds"
-  ]
+  ],
+  "engines": {
+    "npm": ">=11.19.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher": false,
+    "esbuild": false
+  }
 }
