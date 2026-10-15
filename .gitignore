@@ -181,6 +181,11 @@ bixal-pa11y-node
 
 /.editorconfig
 
+# Ensure npm.log is NOT ignored.
+!/npm.log
+# ./npm.sh ddev or local choice
+.npm.env
+
 #### Appended to by mattsqd/drupal-env-lando. ####
 
 # Ignore .env files as they are personal
