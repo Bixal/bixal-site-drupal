@@ -77,6 +77,7 @@ if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]; then
       done
     fi
     echo -e "$hash|$(git config user.name)|$branch|$(date)|./$tool.sh $*" >> npm.log
+    echo "package-lock.json changed, recorded './$tool.sh $*' in npm.log."
   fi
 fi
 
