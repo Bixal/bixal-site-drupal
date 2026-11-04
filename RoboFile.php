@@ -350,8 +350,13 @@ class RoboFile extends Tasks
                 throw new \Exception('No capture is stopped, start one with --stop.');
             }
             if ($opts['abort']) {
-                $this->captureCleanup($state);
-                $io->success('The stopped capture and its backups were deleted.');
+                try {
+                    $this->captureRestoreStart($io, $state);
+                } finally {
+                    $this->captureCleanup($io, $state);
+                }
+                $io->success("The database is back to how it was before --stop, and the backups were deleted.\n"
+                    . 'If code was updated since, revert it or run ./robo.sh common:site-update.');
                 return;
             }
             $pathspec = $this->pathspec($state['config_dirs']);
@@ -361,13 +366,12 @@ class RoboFile extends Tasks
             try {
                 $this->captureUpdateHooks($io, $state);
             } catch (\Throwable $e) {
-                ConfigSplitGroups::setCurrent(null);
-                $io->note("The backups are kept. To try again, fix the problem, discard the partial export with:\n"
+                $this->captureRestoreAfterFailure($io, $state, "The database is back to how it was before --stop and the backups are kept. To try again, fix the problem, discard the partial export with:\n"
                     . "git restore --staged --worktree -- $pathspec && git clean -fd -- $pathspec\n"
                     . 'then run --continue again. Otherwise run --abort.');
                 throw $e;
             }
-            $this->captureCleanup($state);
+            $this->captureCleanup($io, $state);
             $this->captureFinish($io);
             return;
         }
@@ -380,7 +384,13 @@ class RoboFile extends Tasks
         $state = $this->captureBackups($io);
 
         if ($opts['stop']) {
-            ConfigSplitGroups::setCurrent(null);
+            // So the site works as before while code is updated by hand.
+            try {
+                $this->captureRestoreStart($io, $state);
+            } catch (\Throwable $e) {
+                $this->captureCleanup($io, $state);
+                throw $e;
+            }
             file_put_contents(self::CAPTURE_STATE_FILE, json_encode($state, JSON_PRETTY_PRINT));
             $io->success("Backups are taken. Update code yourself, for example with composer require or composer update, then run:\n"
                 . "./robo.sh config:update-capture --continue\n"
@@ -396,8 +406,11 @@ class RoboFile extends Tasks
                 $this->execOrFail($composer);
             }
             $this->captureUpdateHooks($io, $state);
+        } catch (\Throwable $e) {
+            $this->captureRestoreAfterFailure($io, $state, 'The database is back to how it was before the capture. Code changes are kept, revert them or run ./robo.sh common:site-update.');
+            throw $e;
         } finally {
-            $this->captureCleanup($state);
+            $this->captureCleanup($io, $state);
         }
         $this->captureFinish($io);
     }
@@ -449,7 +462,15 @@ class RoboFile extends Tasks
         }
         $io->info("No un-committed config changes are present.");
 
-        $state = ['groups' => array_keys(ConfigSplitGroups::groups()), 'ids' => [], 'config_dirs' => $config_dirs];
+        $start = ConfigSplitGroups::current();
+        $state = [
+            // First, so its backup can put the site back how it started.
+            'groups' => array_values(array_unique([$start, ...array_keys(ConfigSplitGroups::groups())])),
+            'start_group' => $start,
+            'ids' => [],
+            'backed_up' => [],
+            'config_dirs' => $config_dirs,
+        ];
         foreach ($state['groups'] as $group) {
             $state['ids'][$group] = "config-update-capture-$group-" . date('YmdHis');
         }
@@ -457,6 +478,11 @@ class RoboFile extends Tasks
             mkdir(self::CAPTURE_DIR);
         }
         try {
+            // Persist cache in the database until cleanup, so each backup holds
+            // its own cache. Redis, memcache and APCu are not restored with a
+            // backup and would keep another database's cache, and drush cr
+            // after each restore can fail on new code before updb has run.
+            $this->captureDatabaseCache($io, true);
             foreach ($state['groups'] as $group) {
                 $io->section("Back up the '$group' split group on the current code");
                 ConfigSplitGroups::setCurrent($group);
@@ -468,9 +494,11 @@ class RoboFile extends Tasks
                 // phase as if an update hook made it.
                 $this->assertConfigInSync("The '$group' split group's config does not import cleanly, fix it before capturing updates");
                 $this->execOrFail($this->dbCommand('backup', $state['ids'][$group], self::CAPTURE_DIR));
+                $state['backed_up'][] = $group;
             }
         } catch (\Throwable $e) {
-            $this->captureCleanup($state);
+            $this->captureRestoreAfterFailure($io, $state, 'The database is back to how it was before the capture.');
+            $this->captureCleanup($io, $state);
             throw $e;
         }
         return $state;
@@ -516,7 +544,7 @@ class RoboFile extends Tasks
     }
 
     /**
-     * Return the site to the default split group once config is captured.
+     * Update the site on the split group it started on, after captureCleanup().
      *
      * @param \Symfony\Component\Console\Style\SymfonyStyle $io
      *
@@ -526,27 +554,170 @@ class RoboFile extends Tasks
      */
     protected function captureFinish(SymfonyStyle $io): void
     {
-        $io->section("Return the site to the default '" . ConfigSplitGroups::default() . "' split group");
+        $io->section("Update the site on the '" . ConfigSplitGroups::current() . "' split group it started on");
         $this->execOrFail('./robo.sh common:site-update');
         $io->success('Config changes from update hooks are staged in git, review them with: git diff --cached');
     }
 
     /**
-     * Delete the backups and state, and go back to the default split group.
+     * Restore the backup of the split group the site started on.
      *
+     * Config was in sync when the capture started, so this backup is the
+     * site as it started. Without it, the backups failed on the first group's
+     * import, which changed nothing since config was in sync.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     * @param array $state
+     *    From captureBackups().
+     *
+     * @return void
+     *
+     * @throws \Exception
+     */
+    protected function captureRestoreStart(SymfonyStyle $io, array $state): void
+    {
+        $start = $state['start_group'];
+        $io->section("Return the site to the '$start' split group it started on");
+        $this->captureSetStartGroup($io, $state);
+        if (in_array($start, $state['backed_up'], true)) {
+            $this->execOrFail($this->dbCommand('restore', $state['ids'][$start], self::CAPTURE_DIR));
+        }
+    }
+
+    /**
+     * Restore the starting split group after a failure, without hiding it.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     * @param array $state
+     *    From captureBackups().
+     * @param string $note
+     *    Shown once the database is restored.
+     *
+     * @return void
+     */
+    protected function captureRestoreAfterFailure(SymfonyStyle $io, array $state, string $note): void
+    {
+        try {
+            $this->captureRestoreStart($io, $state);
+            $io->note($note);
+        } catch (\Throwable $restore_error) {
+            // The original failure is thrown by the caller.
+            $io->error("Could not put the database back how it started: {$restore_error->getMessage()}");
+        }
+    }
+
+    /**
+     * Switch back to the split group the site started on.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
      * @param array $state
      *    From captureBackups().
      *
      * @return void
      */
-    protected function captureCleanup(array $state): void
+    protected function captureSetStartGroup(SymfonyStyle $io, array $state): void
     {
-        ConfigSplitGroups::setCurrent(null);
-        foreach ($state['ids'] as $id) {
-            $this->_exec($this->dbCommand('delete', $id, self::CAPTURE_DIR));
+        $start = $state['start_group'];
+        // Only said once, when it changes.
+        if (ConfigSplitGroups::current() !== $start) {
+            $io->info("Switched back to the '$start' split group it started on.");
+        }
+        // Without a split_group.current file when it started on the default.
+        ConfigSplitGroups::setCurrent($start === ConfigSplitGroups::default() ? null : $start);
+    }
+
+    /**
+     * Delete the backups and state, go back to the starting split group and
+     * the site's own cache backend.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     * @param array $state
+     *    From captureBackups().
+     *
+     * @return void
+     */
+    protected function captureCleanup(SymfonyStyle $io, array $state): void
+    {
+        $this->captureSetStartGroup($io, $state);
+        foreach ($state['backed_up'] as $group) {
+            $this->_exec($this->dbCommand('delete', $state['ids'][$group], self::CAPTURE_DIR));
         }
         if (is_dir(self::CAPTURE_DIR)) {
             $this->_deleteDir(self::CAPTURE_DIR);
+        }
+        $this->captureDatabaseCache($io, false);
+    }
+
+    /**
+     * Start and end of what captureDatabaseCache() appends.
+     *
+     * The same as DrupalEnvCommandsBase::append() would use.
+     */
+    const array CAPTURE_SETTINGS_MARKERS = [
+        "\n// Appended to by config:update-capture.\n\n",
+        "\n// End of appended content by config:update-capture.\n",
+    ];
+
+    /**
+     * Cache in the database during a capture, or go back to the site's own.
+     *
+     * Database backups otherwise do not restore the cache when it is kept in
+     * Redis or memcache, leaving the site with the cache of another database.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     * @param bool $enable
+     *    True to cache in the database, false to remove that again.
+     *
+     * @return void
+     *
+     * @throws \Exception
+     *    When enabling, if settings.local.php is not loaded or the cache is
+     *    still not in the database.
+     */
+    protected function captureDatabaseCache(SymfonyStyle $io, bool $enable): void
+    {
+        // The web root as DrupalEnvCommandsBase::append() finds it.
+        $composer_json = json_decode(file_get_contents('composer.json'), true);
+        $web_root = trim($composer_json['extra']['drupal-scaffold']['locations']['web-root'] ?? 'web', '/');
+        $file = "$web_root/sites/default/settings.local.php";
+        // settings.drupal_env.php creates and loads it only on local
+        // environments, so it exists once drush has bootstrapped.
+        if (!is_file($file)) {
+            if ($enable) {
+                throw new \Exception("$file is needed to cache in the database during the capture, it is only loaded on local environments.");
+            }
+            return;
+        }
+        [$start, $end] = self::CAPTURE_SETTINGS_MARKERS;
+        $original = file_get_contents($file);
+        // Removed first, so it is never appended twice.
+        $contents = preg_replace('/' . preg_quote($start, '/') . '.*?' . preg_quote($end, '/') . '/s', '', $original);
+        if ($enable) {
+            $snippet = preg_replace('/^<\?php\s*/', '', file_get_contents('RoboEnv/scripts/settings.cache-database.php'));
+            $contents .= $start . $snippet . $end;
+        } elseif ($contents === $original) {
+            return;
+        }
+        $io->section($enable ? 'Cache in the database during the capture' : "Go back to the site's own cache backend");
+        file_put_contents($file, $contents);
+
+        // Clear what the backend now in use has from before. drush cr builds
+        // the container from code, so a stale cached one does not matter.
+        if (!$this->taskExec('./drush.sh cr')->run()->wasSuccessful()) {
+            if ($enable) {
+                throw new \Exception('Could not clear the cache after switching to the database cache.');
+            }
+            // Likely new code on a database that has not been updated yet.
+            $io->warning('Could not clear the cache. Revert the code or run ./drush.sh updb, then ./drush.sh cr.');
+            return;
+        }
+        if ($enable) {
+            // Check that nothing loaded after the appended settings changed
+            // the cache again.
+            $backend = $this->execOrFail('./drush.sh php:script RoboEnv/scripts/cache-backend.php 2>/dev/null', false);
+            if ($backend !== 'cache.backend.database') {
+                throw new \Exception("The cache is still in '$backend', check that nothing after the appended settings in $file changes the cache.");
+            }
         }
     }
 
