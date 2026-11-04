@@ -1,5 +1,15 @@
 # Automatically Generated from 'robo validate:init-robo-yml'.
 # See ./vendor/mattsqd/robovalidate/robo.example.yml for additional context.
+
+# Config split groups: the splits that are active together. settings.php
+# chooses the group for each environment, see RoboEnv\ConfigSplitGroups.
+config_split_groups:
+    # Used locally unless switched with ./robo.sh config:split-group.
+    default: local
+    groups:
+        local: [local]
+        production: [production]
+
 command:
     validate:
         options:

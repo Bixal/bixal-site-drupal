@@ -913,9 +913,26 @@ if (getenv('OPENID_CONNECT_CLIENT_SECRET')) {
  * Keep this code block at the end of this file to take full effect.
  */
 #
-if (FALSE !== getenv('DRUPAL_ENV_LOCAL')) {
-  $config['config_split.config_split.local']['status'] = TRUE;
+
+/**
+ * Enable the config split group for this environment.
+ *
+ * Groups and the default group are defined in robo.yml. Locally, the group
+ * can be switched with ./robo.sh config:split-group.
+ */
+$split_group = NULL;
+if (FALSE !== getenv('PLATFORM_BRANCH')) {
+  $split_group = getenv('PLATFORM_BRANCH') === 'main' ? 'production' : NULL;
 }
+elseif (FALSE !== getenv('DRUPAL_ENV_LOCAL')) {
+  // Show errors from here on. settings.local.php sets this too, but is
+  // included too late to show errors thrown in settings.php.
+  $config['system.logging']['error_level'] = 'verbose';
+  $split_group = \RoboEnv\ConfigSplitGroups::current();
+  // This will be set later to the appropriate value by other settings files.
+  unset($config['system.logging']['error_level']);
+}
+\RoboEnv\ConfigSplitGroups::enable($config, $split_group);
 
 // Appended to by mattsqd/drupal-env.
 

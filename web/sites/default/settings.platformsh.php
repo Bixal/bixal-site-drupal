@@ -9,11 +9,6 @@ use Platformsh\ConfigReader\Config;
 
 $platformsh = new Config();
 
-// Enable production only config split.
-if ($platformsh->branch == 'main') {
-  $config['config_split.config_split.production']['status'] = TRUE;
-}
-
 // Configure the database.
 if ($platformsh->hasRelationship('database')) {
   $creds = $platformsh->credentials('database');
