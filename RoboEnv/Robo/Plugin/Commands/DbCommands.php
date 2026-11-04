@@ -3,6 +3,7 @@
 namespace RoboEnv\Robo\Plugin\Commands;
 
 use Robo\Tasks;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Back up and restore the local database.
@@ -13,8 +14,6 @@ use Robo\Tasks;
  */
 class DbCommands extends Tasks
 {
-    use CommonTrait;
-
     /**
      * Back up the database.
      *
@@ -107,7 +106,17 @@ class DbCommands extends Tasks
      */
     protected function isDdev(): bool
     {
-        return $this->getDefaultLocalEnvironment()['name'] === 'ddev';
+        // Read the drupal-env config directly instead of using CommonTrait.
+        // That trait is scaffolded (gitignored), and Robo loads every class
+        // in this directory during the drupal-scaffold pre hook, before it
+        // exists, so depending on it here is a fatal error on a fresh clone.
+        $file = 'roboConfDrupalEnv.local.yml';
+        $config = file_exists($file) ? (Yaml::parseFile($file) ?? []) : [];
+        $name = $config['flags']['common']['defaultLocalEnvironment']['name'] ?? null;
+        if ($name === null) {
+            throw new \Exception('Cannot call this until the local environment has been initialized.');
+        }
+        return $name === 'ddev';
     }
 
     /**
