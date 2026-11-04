@@ -431,6 +431,14 @@ class RoboFile extends Tasks
             throw new \Exception('Drupal is not installed, install the site on the current code before capturing updates.');
         }
         $io->info("Drupal is installed");
+        // Otherwise updb on the new code would also run these, and their
+        // config changes would be captured as if the new code made them.
+        $pending = json_decode($this->execOrFail('./drush.sh updatedb:status --format=json 2>/dev/null', false) ?: '[]', true);
+        if ($pending) {
+            $names = array_map(fn($update) => "{$update['module']}: {$update['update_id']}", $pending);
+            throw new \Exception("Database updates are pending on the current code, run ./drush.sh updb, export and commit any config changes before capturing updates:\n" . implode("\n", $names));
+        }
+        $io->info("No database updates are pending.");
         // Importing each group would otherwise overwrite unexported changes.
         $this->assertConfigInSync('Config differs from the sync directory, export or import it before capturing updates');
         $io->info("Config is clean / in sync.");
