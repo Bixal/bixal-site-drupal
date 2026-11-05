@@ -121,3 +121,24 @@
     margin-block-start: units(3);
   }
 }
+
+// Used in Case Study pages for meta information.
+.bix-emphasis-blocks--sm {
+  font-size: 1rem;
+
+  .bix-emphasis-block {
+    padding: units(3);
+  }
+
+  .bix-emphasis-block__title {
+    font-size: size("body", "lg");
+  }
+
+  h4 {
+    font-size: size("body", "sm");
+  }
+
+  h5 {
+    font-size: size("body", "xs");
+  }
+}
