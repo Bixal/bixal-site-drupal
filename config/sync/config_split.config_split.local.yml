@@ -11,7 +11,10 @@ no_patching: false
 storage: folder
 folder: ../config/split/local
 module:
+  field_ui: 0
   tracer: 0
+  views_ui: 0
+  webform_ui: 0
   webprofiler: 0
 theme: {  }
 complete_list: {  }

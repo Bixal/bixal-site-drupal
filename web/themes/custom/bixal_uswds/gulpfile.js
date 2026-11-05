@@ -3,9 +3,7 @@ const fs = require("fs");
 const uswds = require("@uswds/compile");
 const { parallel, watch, series, src, dest } = require("gulp");
 const { deleteAsync } = require("del");
-const uglifyes = require("uglify-es");
-const composer = require("gulp-uglify/composer");
-const uglify = composer(uglifyes, console);
+const uglify = require("gulp-uglify");
 const log = console.log;
 const colors = {
   red: "\x1b[31m%s\x1b[0m",

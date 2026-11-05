@@ -181,6 +181,16 @@ bixal-pa11y-node
 
 /.editorconfig
 
+# Current config split group, see ./robo.sh config:split-group.
+/split_group.current
+# Backups and state of ./robo.sh config:update-capture --stop.
+/.config-update-capture/
+
+# Ensure npm.log is NOT ignored.
+!/npm.log
+# ./npm.sh ddev or local choice
+.npm.env
+
 #### Appended to by mattsqd/drupal-env-lando. ####
 
 # Ignore .env files as they are personal

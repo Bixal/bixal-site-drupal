@@ -8,4 +8,4 @@ database:
   disk: 2048
 
 cache:
-  type: redis:6.2
+  type: redis:8.8

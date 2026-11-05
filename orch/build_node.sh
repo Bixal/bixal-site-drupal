@@ -20,8 +20,14 @@ set -e
 # are installed once, here, against the root lockfile. Running `npm install`
 # inside a theme instead would ignore that lockfile and build a private
 # node_modules that shadows the hoisted packages with stale versions.
+#
+# `npm ci` installs exactly what package-lock.json records and fails if it is
+# out of sync with package.json, so local, CI and Upsun builds all match. The
+# lockfile carries every tarball URL and integrity hash, so nothing is resolved
+# against (possibly stale) registry metadata. To change dependencies, use
+# `npm install` or the deps:* scripts and commit the lockfile.
 echo -e "${green}Installing NPMs (workspace root)${NC}"
-npm install --prefer-offline
+npm ci --prefer-offline
 
 # Loop through each directory found
 for dir in $directories; do
