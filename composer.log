@@ -119,3 +119,4 @@ a6d0656c248dec29152337eed97f8f2f|Matt Poole|feature/BSD-619-update-deps|Wed Sep 
 85f4726e1f23ce38dd2e1b13e444838d|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 11:02:13 EDT 2026|./composer.sh update drupal/core-* -W
 68d985508946b8f9e419f5cc9bf23648|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 13:32:20 EDT 2026|./composer.sh update
 7e858fc9c600eb79f4215fc910d2ea74|Matt Poole|feature/BSD-632-update-deps|Wed Nov  4 16:41:02 EST 2026|./composer.sh update
+c30d804e5d7072245149f3e7989e47c0|Matt Poole|feature/BSD-588-replace-contact-with-contrib|Mon Nov  9 16:29:45 EST 2026|./composer.sh require drupal/contact:^1.0
