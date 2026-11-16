@@ -209,7 +209,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         },
-        "patches-file": "composer.patches.json"
+        "patches-file": "composer.patches.json",
+        "composer-exit-on-patch-failure": true
     },
     "require-dev": {
         "drupal/core-dev": "^11.1"
