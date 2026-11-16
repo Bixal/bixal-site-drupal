@@ -7,6 +7,13 @@ use Robo\Tasks;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Finder\Finder;
 
+// CommonTrait is scaffolded by drupal-env, but composer runs robo before
+// scaffolding (pre-drupal-scaffold-cmd), so on a fresh install it is not there
+// yet. Load the copy it is scaffolded from instead.
+if (!trait_exists(CommonTrait::class)) {
+    require_once __DIR__ . '/vendor/mattsqd/drupal-env/scaffolding/Robo/CommonTrait.php';
+}
+
 /**
  * Custom RoboFile commands for this project.
  *
