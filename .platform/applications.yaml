@@ -124,6 +124,12 @@ bixalcom:
       # PHP / Drupal build process.
       $PLATFORM_APP_DIR/orch/build.sh
 
+      # Fail the build if the Drupal installer is still present.
+      if [ -f "$PLATFORM_APP_DIR/web/core/install.php" ]; then
+        echo "ERROR: web/core/install.php still exists after build.sh. Failing build."
+        exit 1
+      fi
+
       echo "Relevant environment variables and their values:"
       echo ""
       echo "ENV_TYPE_VISIBLE: ${ENV_TYPE_VISIBLE}"
