@@ -3,3 +3,4 @@
 9090aa663e64c2198f511945f7de2dd3|Matt Poole|feature/BSD-628-update-deps|Thu Oct 15 10:57:09 EDT 2026|./npm.sh uninstall uglify-es -w web/themes/custom/bixal_uswds
 fde0bc0de733ef55cf49e80b4f974342|Matt Poole|feature/BSD-632-update-deps|Wed Nov  4 16:44:25 EST 2026|./npm.sh run deps:security
 572ddf7c91b554d6f8dd8146e3c047e9|Matt Poole|feature/BSD-632-update-deps|Wed Nov  4 16:47:26 EST 2026|./npm.sh install
+500ede69bf185fc0ae4f1f9791f35d12|Matt Poole|feature/BSD-643-update-deps|Mon Nov 16 15:43:25 EST 2026|./npm.sh run deps:minor:apply

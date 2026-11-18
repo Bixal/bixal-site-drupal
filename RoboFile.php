@@ -1,10 +1,18 @@
 <?php
 
 use RoboEnv\ConfigSplitGroups;
+use RoboEnv\Robo\Plugin\Commands\CommonTrait;
 use Robo\ResultData;
 use Robo\Tasks;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Finder\Finder;
+
+// CommonTrait is scaffolded by drupal-env, but composer runs robo before
+// scaffolding (pre-drupal-scaffold-cmd), so on a fresh install it is not there
+// yet. Load the copy it is scaffolded from instead.
+if (!trait_exists(CommonTrait::class)) {
+    require_once __DIR__ . '/vendor/mattsqd/drupal-env/scaffolding/Robo/CommonTrait.php';
+}
 
 /**
  * Custom RoboFile commands for this project.
@@ -13,6 +21,9 @@ use Symfony\Component\Finder\Finder;
  */
 class RoboFile extends Tasks
 {
+    // For getBinaryLocation(), it has no commands of its own.
+    use CommonTrait;
+
     /**
      * Placeholder for your own project's commands.
      *
@@ -387,6 +398,8 @@ class RoboFile extends Tasks
             // So the site works as before while code is updated by hand.
             try {
                 $this->captureRestoreStart($io, $state);
+                // Set now, since the update is run by hand.
+                $this->exitOnPatchFailure($io);
             } catch (\Throwable $e) {
                 $this->captureCleanup($io, $state);
                 throw $e;
@@ -398,8 +411,12 @@ class RoboFile extends Tasks
             return;
         }
 
+        // Found now, since it cannot be once a failed update breaks vendor.
+        // The same fallback as common:composer.
+        $this->composerBin = $this->getBinaryLocation($io, 'composer', 'docker run --rm -i --tty -v $PWD:/app composer:2');
         try {
             $io->section('Update code');
+            $this->exitOnPatchFailure($io);
             if ($opts['ask']) {
                 $this->askUpdateCommands($io);
             } else {
@@ -407,12 +424,46 @@ class RoboFile extends Tasks
             }
             $this->captureUpdateHooks($io, $state);
         } catch (\Throwable $e) {
-            $this->captureRestoreAfterFailure($io, $state, 'The database is back to how it was before the capture. Code changes are kept, revert them or run ./robo.sh common:site-update.');
+            $this->captureRepairAutoloader($io);
+            if ($this->captureRestoreAfterFailure($io, $state, 'The database is back to how it was before the capture. Code changes are kept, revert them or run ./robo.sh common:site-update.')) {
+                $this->captureCleanup($io, $state);
+            } else {
+                // Kept as if stopped, so the backups are not lost.
+                file_put_contents(self::CAPTURE_STATE_FILE, json_encode($state, JSON_PRETTY_PRINT));
+                $io->warning("The backups are kept, since the database could not be put back. Get the code working, for example with composer install, then run:\n"
+                    . "./robo.sh config:update-capture --abort\n"
+                    . 'Or, with the code updated the way you want it: ./robo.sh config:update-capture --continue');
+            }
             throw $e;
-        } finally {
-            $this->captureCleanup($io, $state);
         }
+        $this->captureCleanup($io, $state);
         $this->captureFinish($io);
+    }
+
+    /**
+     * How to run composer without ./composer.sh, which needs vendor to work.
+     */
+    protected ?string $composerBin = null;
+
+    /**
+     * Get robo starting again after a composer command failed part way.
+     *
+     * Composer may stop after removing packages but before writing the
+     * autoloader, for example on a failed patch. Every ./robo.sh, ./composer.sh
+     * and ./drush.sh then fails on a missing file, including the restore.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     *
+     * @return void
+     */
+    protected function captureRepairAutoloader(SymfonyStyle $io): void
+    {
+        if ($this->composerBin === null || $this->taskExec('./robo.sh --version')->printOutput(false)->run()->wasSuccessful()) {
+            return;
+        }
+        $io->note('The failed update left vendor without a working autoloader, writing it again.');
+        // Reported by the restore that follows if this does not fix it.
+        $this->_exec("$this->composerBin dump-autoload");
     }
 
     /**
@@ -437,6 +488,23 @@ class RoboFile extends Tasks
      */
     protected function captureBackups(SymfonyStyle $io): array
     {
+        // Otherwise the update would also pick up composer.json changes that
+        // were never locked.
+        try {
+            $this->execOrFail('./composer.sh validate --no-check-all --no-check-publish');
+        } catch (\Exception $e) {
+            throw new \Exception('composer.json is not valid or composer.lock is out of date with it, fix that and commit the result before capturing updates.', 0, $e);
+        }
+        $io->info('composer.lock is up to date.');
+        // So the backups are taken on the locked code. Otherwise the update
+        // would also install what is missing, and its update hooks would be
+        // captured as if the update made them.
+        try {
+            $this->execOrFail('./composer.sh install');
+        } catch (\Exception $e) {
+            throw new \Exception('composer install fails on the current code, fix that before capturing updates.', 0, $e);
+        }
+        $io->info('Installed code matches composer.lock.');
         // Drush may exit non-zero when it cannot bootstrap, so only the output
         // is checked.
         $bootstrap = $this->taskExec('./drush.sh status --field=bootstrap 2>/dev/null')->printOutput(false)->run();
@@ -593,16 +661,19 @@ class RoboFile extends Tasks
      * @param string $note
      *    Shown once the database is restored.
      *
-     * @return void
+     * @return bool
+     *    False if the database could not be restored.
      */
-    protected function captureRestoreAfterFailure(SymfonyStyle $io, array $state, string $note): void
+    protected function captureRestoreAfterFailure(SymfonyStyle $io, array $state, string $note): bool
     {
         try {
             $this->captureRestoreStart($io, $state);
             $io->note($note);
+            return true;
         } catch (\Throwable $restore_error) {
             // The original failure is thrown by the caller.
             $io->error("Could not put the database back how it started: {$restore_error->getMessage()}");
+            return false;
         }
     }
 
@@ -785,6 +856,8 @@ class RoboFile extends Tasks
                 if (!$this->taskExec($command)->run()->wasSuccessful()) {
                     $io->error("Command failed: $command");
                     $failed = true;
+                    // So the next command can run.
+                    $this->captureRepairAutoloader($io);
                 }
             } catch (\InvalidArgumentException $e) {
                 $io->error($e->getMessage());
@@ -822,6 +895,35 @@ class RoboFile extends Tasks
             throw new \InvalidArgumentException('The command must not contain &, | or ;.');
         }
         return $command;
+    }
+
+    /**
+     * Make composer fail when a patch does not apply, on composer-patches 1.x.
+     *
+     * 1.x only warns about a failed patch unless this is set, so the update
+     * would be captured without the patch. 2.x always fails.
+     *
+     * @param \Symfony\Component\Console\Style\SymfonyStyle $io
+     *
+     * @throws \Exception
+     */
+    protected function exitOnPatchFailure(SymfonyStyle $io): void
+    {
+        $composer_json = json_decode(file_get_contents('composer.json'), true);
+        if (($composer_json['extra']['composer-exit-on-patch-failure'] ?? false) === true) {
+            return;
+        }
+        $lock = is_file('composer.lock') ? json_decode(file_get_contents('composer.lock'), true) : [];
+        foreach (array_merge($lock['packages'] ?? [], $lock['packages-dev'] ?? []) as $package) {
+            if ($package['name'] === 'cweagans/composer-patches' && str_starts_with(ltrim($package['version'], 'v'), '1.')) {
+                $io->note('cweagans/composer-patches is on 1.x, setting extra.composer-exit-on-patch-failure so a failed patch stops the update.');
+                $this->execOrFail('./composer.sh config --json extra.composer-exit-on-patch-failure true');
+                // extra is part of the lock's hash, so the lock is now out of
+                // date, which the next capture would refuse.
+                $this->execOrFail('./composer.sh update --lock');
+                return;
+            }
+        }
     }
 
     /**
