@@ -13,6 +13,11 @@ else
     exit 1
 fi
 
+# Remove the Drupal installer so it can't be accessed on deployed sites.
+if [ -f web/core/install.php ]; then
+    rm web/core/install.php
+fi
+
 # TODO: Add in support for incremental DB backups with cron and s3.
 #if [ ! -z "$AWS_ACCESS_KEY_ID" ] && [ ! -z "$AWS_SECRET_ACCESS_KEY" ]; then
 #    pip install futures
