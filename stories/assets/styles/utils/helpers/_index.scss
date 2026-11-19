@@ -1,0 +1,72 @@
+@use "uswds-core" as *;
+@use "uswds-utilities/src/styles/functions" as *;
+@use "uswds-utilities/src/styles/palettes" as *;
+
+$margins-and-padding: map-collect(get-palettes($margin-palettes));
+
+/// Helper utilities for margin and padding spacing.
+///
+/// @description
+/// A lightweight alternative to the full USWDS utilities package (198KB).
+/// Generates utility classes for consistent spacing using USWDS units.
+///
+/// It's leaner than importing the whole utils package, see weight here:
+/// https://designsystem.digital.gov/components/packages/#:~:text=%2C%20usa%2Dprose-,uswds%2Dutilities,198%20KB,-%E2%80%94
+///
+/// @example scss - Generated classes
+///   .margin-top-1 { margin-block-start: units(1); }
+///   .padding-x-3 { padding-inline: units(3); }
+///
+/// @output Utility classes for margin and padding based on USWDS utils.
+/// https://designsystem.digital.gov/utilities/margin-and-padding/
+/// @since 1.0.0
+
+@each $unit, $value in $margins-and-padding {
+  /// Margin top utility class
+  /// @name margin-top-#{$unit}
+  .margin-top-#{$unit} {
+    margin-block-start: #{$value};
+  }
+
+  /// Margin bottom utility class
+  /// @name margin-bottom-#{$unit}
+  .margin-bottom-#{$unit} {
+    margin-block-end: #{$value};
+  }
+
+  /// Margin vertical (top and bottom) utility class
+  /// @name margin-y-#{$unit}
+  .margin-y-#{$unit} {
+    margin-block: #{$value};
+  }
+
+  /// Margin horizontal (left and right) utility class
+  /// @name margin-x-#{$unit}
+  .margin-x-#{$unit} {
+    margin-inline: #{$value};
+  }
+
+  /// Padding top utility class
+  /// @name padding-top-#{$unit}
+  .padding-top-#{$unit} {
+    padding-block-start: #{$value};
+  }
+
+  /// Padding bottom utility class
+  /// @name padding-bottom-#{$unit}
+  .padding-bottom-#{$unit} {
+    padding-block-end: #{$value};
+  }
+
+  /// Padding vertical (top and bottom) utility class
+  /// @name padding-y-#{$unit}
+  .padding-y-#{$unit} {
+    padding-block: #{$value};
+  }
+
+  /// Padding horizontal (left and right) utility class
+  /// @name padding-x-#{$unit}
+  .padding-x-#{$unit} {
+    padding-inline: #{$value};
+  }
+}
